@@ -8,6 +8,9 @@
 
 #define STDITEMS "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie"
 
+// MEDICALITEMS is used in addition to STDITEMS for units without backpacks
+#define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
+
 //Class t1_units : config.bin{
 class CfgPatches
 {
@@ -1119,6 +1122,7 @@ class CfgVehicles
 		respawnmagazines[] = {"ACE_M84","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen"};
 		linkedItems[] = {"H_PilotHelmetHeli_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
 		respawnLinkedItems[] = {"H_PilotHelmetHeli_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
+		// Todo: Evaluate wrt MEDICALITEMS mismatch
 		items[] = {"ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACRE_PRC148",STDITEMS};
 		respawnItems[] = {"ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACRE_PRC148",STDITEMS};
 		camouflage = 1.4;
@@ -1306,16 +1310,16 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Special";
-		displayName = "T1 Scout TL";
+		displayName = "T1 Scout TL [MM DLC]";
 		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
 		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
 		magazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Laserbatteries","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
 		respawnmagazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Laserbatteries","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
-		linkedItems[] = {"V_Chestrig_oli","H_Booniehat_mcamo","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"V_Chestrig_oli","H_Booniehat_mcamo","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		backpack = "T1_Kitbag_camo_Lead";
-		items[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS,"rhsusf_acc_rotex5_grey"};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS,"rhsusf_acc_rotex5_grey"};
+		linkedItems[] = {"V_Chestrig_oli","H_Booniehat_mcamo","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch","B_UavTerminal"};
+		respawnLinkedItems[] = {"V_Chestrig_oli","H_Booniehat_mcamo","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch","B_UavTerminal"};
+		backpack = "B_Static_Designator_01_weapon_F";
+		items[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS,"rhsusf_acc_rotex5_grey","ACE_Vector",MEDICALITEMS,"rhs_googles_clear"};
+		respawnItems[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS,"rhsusf_acc_rotex5_grey","ACE_Vector",MEDICALITEMS,"rhs_googles_clear"};
 		camouflage = 0.6;
 	};
 	class T1_Crewman_Standard_F: T1_Soldier_F

@@ -2339,14 +2339,16 @@ class CfgWeapons
 			};
 		};
 	};
-	class Rangefinder;
-	class ACE_NVG_Gen4: Rangefinder
+	/*
+	class NVGoggles;
+	class ACE_NVG_Gen4: NVGoggles
 	{
 		class ItemInfo
 		{
 			modelOff = "";
 		};
 	};
+	*/
 	class hgun_Pistol_heavy_01_F;
 	class T1_hgun_Pistol_heavy_01_snds_F: hgun_Pistol_heavy_01_F
 	{

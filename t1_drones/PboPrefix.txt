@@ -1,0 +1,4 @@
+t1_drones
+prefix=t1_drones
+Mikero=DePbo.dll
+Pbo Type is: Arma

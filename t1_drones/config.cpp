@@ -51,10 +51,10 @@ class CfgVehicles
 				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
 				count = 130;
 			};
-			class _xx_hlc_100Rnd_762x51_M_M60E4
+			class _xx_rhs_200rnd_556x45_M_SAW
 			{
-				magazine = "hlc_100Rnd_762x51_M_M60E4";
-				count = 40;
+				magazine = "rhs_200rnd_556x45_M_SAW";
+				count = 30;
 			};
 			class _xx_BWA3_120Rnd_762x51
 			{
@@ -212,10 +212,10 @@ class CfgVehicles
 				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
 				count = 130;
 			};
-			class _xx_hlc_100Rnd_762x51_M_M60E4
+			class _xx_hlc_rhs_200rnd_556x45_M_SAW
 			{
-				magazine = "hlc_100Rnd_762x51_M_M60E4";
-				count = 40;
+				magazine = "rhs_200rnd_556x45_M_SAW";
+				count = 30;
 			};
 			class _xx_BWA3_120Rnd_762x51
 			{

@@ -1034,8 +1034,8 @@ class CfgVehicles
 		magazines[] = {"ACE_M84","BWA3_20Rnd_762x51_G28_SD","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","BWA3_40Rnd_46x30_MP7_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnmagazines[] = {"ACE_M84","BWA3_20Rnd_762x51_G28_SD","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","BWA3_40Rnd_46x30_MP7_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		backpack = "T1_Kitbag_camo_SF_Marksman";
-		items[] = {STDITEMS,"ACE_RangeCard"};
-		respawnItems[] = {STDITEMS,"ACE_RangeCard"};
+		items[] = {STDITEMS,"ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
+		respawnItems[] = {STDITEMS,"ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
 		camouflage = 0.8;
 	};
 	class T1_SF_Explosive_Standard_F: T1_Soldier_F
@@ -1154,8 +1154,8 @@ class CfgVehicles
 		magazines[] = {"ACE_M84","BWA3_20Rnd_762x51_G28_SD","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","BWA3_40Rnd_46x30_MP7_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		respawnmagazines[] = {"ACE_M84","BWA3_20Rnd_762x51_G28_SD","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","BWA3_40Rnd_46x30_MP7_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
 		backpack = "T1_Kitbag_camo_SF_Marksman";
-		items[] = {STDITEMS,"ACE_RangeCard"};
-		respawnItems[] = {STDITEMS,"ACE_RangeCard"};
+		items[] = {STDITEMS,"ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
+		respawnItems[] = {STDITEMS,"ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
 		camouflage = 0.8;
 	};
 	class T1_Diver_Explosive_Standard_F: T1_Diver_Soldier_F
@@ -1310,8 +1310,8 @@ class CfgVehicles
 		respawnmagazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","APERSTripMine_Wire_Mag","APERSTripMine_Wire_Mag"};
 		linkedItems[] = {"T1_V_PlateCarrier2_Standard","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_Standard","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		items[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_Kestrel","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine",STDITEMS};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_Kestrel","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine",STDITEMS};
+		items[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_ATragMX","ACE_Kestrel4500","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine",STDITEMS};
+		respawnItems[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_ATragMX","ACE_Kestrel4500","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine",STDITEMS};
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};
@@ -1333,8 +1333,8 @@ class CfgVehicles
 		respawnmagazines[] = {"HandGrenade","HandGrenade","ACE_M84","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","BWA3_40Rnd_46x30_MP7_SD","SmokeShell"};
 		linkedItems[] = {"T1_V_PlateCarrier2_Standard","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_Standard","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		items[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_Kestrel","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine",STDITEMS,"ACE_Kestrel"};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_Kestrel","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine",STDITEMS,"ACE_Kestrel"};
+		items[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine",STDITEMS,"ACE_ATragMX","ACE_Kestrel4500"};
+		respawnItems[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine",STDITEMS,"ACE_ATragMX","ACE_Kestrel4500"};
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};

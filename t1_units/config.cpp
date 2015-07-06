@@ -1410,6 +1410,12 @@ class CfgVehicles
 		backpack = "T1_Kitbag_camo";
 		items[] = {"ACRE_PRC148","ACE_IR_Strobe_Item",STDITEMS,"ACE_SpareBarrel"};
 		respawnItems[] = {"ACRE_PRC148","ACE_IR_Strobe_Item",STDITEMS,"ACE_SpareBarrel"};
+		class altloadout1 {
+			description = ".338 MG DLC";
+			weapons[] = {"MMG_02_camo_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
+			magazines[] = {"11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","BWA3_120Rnd_762x51","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag"};
+			items[] = {"ACRE_PRC148","ACE_IR_Strobe_Item","optic_Hamr","BWA3_acc_LLM01_irlaser","bipod_01_F_mtp",STDITEMS,"ACE_SpareBarrel"};
+		};
 	};
 	class T1_Specialist_AMG_Standard_F: T1_Soldier_F
 	{

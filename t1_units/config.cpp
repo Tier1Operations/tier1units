@@ -1413,7 +1413,7 @@ class CfgVehicles
 		class altloadout1 {
 			description = ".338 MG DLC";
 			weapons[] = {"MMG_02_camo_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-			magazines[] = {"11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","BWA3_120Rnd_762x51","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag"};
+			magazines[] = {"11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag"};
 			items[] = {"ACRE_PRC148","ACE_IR_Strobe_Item","optic_Hamr","BWA3_acc_LLM01_irlaser",STDITEMS,"ACE_SpareBarrel"};
 		};
 	};

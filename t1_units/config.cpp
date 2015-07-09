@@ -956,9 +956,9 @@ class CfgVehicles
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_hlc_100Rnd_762x51_M_M60E4
+			class _xx_BWA3_120Rnd_762x51
 			{
-				magazine = "hlc_100Rnd_762x51_M_M60E4";
+				magazine = "BWA3_120Rnd_762x51";
 				count = 3;
 			};
 		};
@@ -991,7 +991,7 @@ class CfgVehicles
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_hlc_100Rnd_762x51_M_M60E4
+			class _xx_BWA3_120Rnd_762x51
 			{
 				count = 2;
 				magazine = "BWA3_120Rnd_762x51";

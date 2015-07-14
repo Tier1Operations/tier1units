@@ -16,11 +16,121 @@ class CfgPatches
 {
 	class t1_units
 	{
-		units[] = {"T1_Kitbag_camo_SF_Marksman","T1_Kitbag_camo_Lead","T1_Kitbag_camo_Lead_Trainer","T1_Carryall_camo_AMG","T1_Carryall_camo_AAA","T1_Carryall_camo_AAT","T1_Kitbag_camo_AA","T1_Kitbag_camo_AT","T1_Kitbag_camo_AR","T1_Carryall_camo_PLSgt_JTAC","T1_Carryall_camo_PLEOD","T1_Carryall_camo_Exp","T1_Carryall_camo_Exp_SF","T1_Kitbag_camo_Repair","T1_Carryall_camo","T1_Kitbag_camo_cls","T1_Kitbag_camo_medic","T1_Kitbag_camo_ws","T1_Kitbag_camo","T1_Platoon_Sgt_Standard_F","T1_Platoon_EOD_Standard_F","T1_Platoon_Medic_Standard_F","T1_Platoon_Lead_Standard_F","T1_Section_AT_Standard_F","T1_Section_WS_Standard_F","T1_Section_AAR_Standard_F","T1_Section_AR_Standard_F","T1_Section_CLS_Standard_F","T1_Section_Sgt_Standard_F","T1_Section_Lead_Standard_F","T1_Sentinel_Driver_Standard_F","T1_Sentinel_Gunner_Standard_F","T1_Sentinel_Commander_Standard_F","T1_Crew_Commander_Standard_F","T1_Crewman_Standard_F","T1_Scout_TL_Standard_F","T1_Scout_Standard_F","T1_Specialist_AMG_Standard_F","T1_Specialist_MG_Standard_F","T1_Specialist_AAA_Standard_F","T1_Specialist_AA_Standard_F","T1_Specialist_AAT_Standard_F","T1_Specialist_AT_Standard_F","T1_Sniper_Standard_F","T1_Spotter_Standard_F","T1_Pilot_Night_F","T1_Pilot_Camo_F","T1_Pilot_BlackCamo_F","T1_Pilot_Black_F","T1_Pilot_Standard_F","T1_Diver_AR_Standard_F","T1_Diver_AT_Standard_F","T1_Diver_FTL_Standard_F","T1_Diver_Medic_Standard_F","T1_Diver_Explosive_Standard_F","T1_Diver_Marksman_SOS_Standard_F","T1_Diver_Soldier_F","T1_SF_AR_Standard_F","T1_SF_AT_Standard_F","T1_SF_FTL_Standard_F","T1_SF_Medic_Standard_F","T1_SF_Explosive_Standard_F","T1_SF_Marksman_SOS_Standard_F","T1_Soldier_F","T1_Instructor_Polo_Orange_F","T1_Instructor_Polo_Black_F","T1_B_MRAP_01_hmg_Woodland_F","T1_B_MRAP_01_gmg_Woodland_F","T1_B_MRAP_01_Woodland_F","T1_Heli_Light_01_armed_BlackCamo_F","T1_Heli_Light_01_BlackCamo_F","T1_Heli_Light_01_armed_Black_F","T1_Heli_Light_01_Black_F","T1_Heli_Light_01_armed_Night_F","T1_Heli_Light_01_Night_F","T1_Heli_Light_01_armed_Camo_F","T1_Heli_Light_01_Camo_F","T1_Kitbag_camo_medic_sf","T1_Kitbag_camo_Section_AT","T1_section_ammobox","T1_support_ammobox","T1_eod_ammobox"};
-		weapons[] = {"T1_V_PlateCarrier2_Standard","T1_U_Pilot_Night","T1_U_Pilot_Camo","T1_U_Pilot_BlackCamo","T1_U_Pilot_Black","T1_U_Pilot_Standard","T1_U_Instructor_Polo_Orange","T1_U_Instructor_Polo_Black","T1_U_Sniper_Standard","T1_U_Diver_Standard","T1_U_Squad_Standard","T1_rhs_m4a1_m320_Hamr_pointer_F","T1_rhs_m4a1_m320_Hamr_pointer_SD_F","T1_rhs_weap_m4a1_grip_Hamr_pointer_F","T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","T1_LMG_BWA3_MG5_Hamr_pointer_F","T1_rhs_weap_m249_pip_L_Hamr","T1_LMG_hlc_M60E4_Hamr","T1_srifle_LRR_SOS_pointer_F","T1_srifle_EBR_DMS_pointer_F","BWA3_G28_Assault_SOS_pointer_sd","T1_BWA3_MP7_LLM01_snds_F","T1_hgun_Pistol_heavy_01_snds_F"};
+		units[] = {"T1_Kitbag_camo_SF_Marksman",
+			"T1_Kitbag_camo_Lead",
+			"T1_Kitbag_camo_Lead_Trainer",
+			"T1_Carryall_camo_AMG",
+			"T1_Carryall_camo_AAA",
+			"T1_Carryall_camo_AAT",
+			"T1_Kitbag_camo_AA",
+			"T1_Kitbag_camo_AT",
+			"T1_Kitbag_camo_AR",
+			"T1_Carryall_camo_PLSgt_JTAC",
+			"T1_Carryall_camo_PLEOD",
+			"T1_Carryall_camo_Exp",
+			"T1_Carryall_camo_Exp_SF",
+			"T1_Kitbag_camo_Repair",
+			"T1_Carryall_camo",
+			"T1_Kitbag_camo_cls",
+			"T1_Kitbag_camo_medic",
+			"T1_Kitbag_camo_ws",
+			"T1_Kitbag_camo",
+			"T1_Platoon_Sgt_Standard_F",
+			"T1_Platoon_EOD_Standard_F",
+			"T1_Platoon_Medic_Standard_F",
+			"T1_Platoon_Lead_Standard_F",
+			"T1_Section_AT_Standard_F",
+			"T1_Section_WS_Standard_F",
+			"T1_Section_AAR_Standard_F",
+			"T1_Section_AR_Standard_F",
+			"T1_Section_CLS_Standard_F",
+			"T1_Section_Sgt_Standard_F",
+			"T1_Section_Lead_Standard_F",
+			"T1_Sentinel_Driver_Standard_F",
+			"T1_Sentinel_Gunner_Standard_F",
+			"T1_Sentinel_Commander_Standard_F",
+			"T1_Crew_Commander_Standard_F",
+			"T1_Crewman_Standard_F",
+			"T1_Scout_TL_Standard_F",
+			"T1_Scout_Standard_F",
+			"T1_Specialist_AMG_Standard_F",
+			"T1_Specialist_MG_Standard_F",
+			"T1_Specialist_AAA_Standard_F",
+			"T1_Specialist_AA_Standard_F",
+			"T1_Specialist_AAT_Standard_F",
+			"T1_Specialist_AT_Standard_F",
+			"T1_Sniper_Standard_F",
+			"T1_Spotter_Standard_F",
+			"T1_Pilot_Night_F",
+			"T1_Pilot_Camo_F",
+			"T1_Pilot_BlackCamo_F",
+			"T1_Pilot_Black_F",
+			"T1_Pilot_Standard_F",
+			"T1_Diver_AR_Standard_F",
+			"T1_Diver_AT_Standard_F",
+			"T1_Diver_FTL_Standard_F",
+			"T1_Diver_Medic_Standard_F",
+			"T1_Diver_Explosive_Standard_F",
+			"T1_Diver_Marksman_SOS_Standard_F",
+			"T1_Diver_Soldier_F",
+			"T1_SF_AR_Standard_F",
+			"T1_SF_AT_Standard_F",
+			"T1_SF_FTL_Standard_F",
+			"T1_SF_Medic_Standard_F",
+			"T1_SF_Explosive_Standard_F",
+			"T1_SF_Marksman_SOS_Standard_F",
+			"T1_Soldier_F",
+			"T1_Instructor_Polo_Orange_F",
+			"T1_Instructor_Polo_Black_F",
+			"T1_B_MRAP_01_hmg_Woodland_F",
+			"T1_B_MRAP_01_gmg_Woodland_F",
+			"T1_B_MRAP_01_Woodland_F",
+			"T1_Heli_Light_01_armed_BlackCamo_F",
+			"T1_Heli_Light_01_BlackCamo_F",
+			"T1_Heli_Light_01_armed_Black_F",
+			"T1_Heli_Light_01_Black_F",
+			"T1_Heli_Light_01_armed_Night_F",
+			"T1_Heli_Light_01_Night_F",
+			"T1_Heli_Light_01_armed_Camo_F",
+			"T1_Heli_Light_01_Camo_F",
+			"T1_Kitbag_camo_medic_sf",
+			"T1_Kitbag_camo_Section_AT",
+			"T1_section_ammobox",
+			"T1_support_ammobox",
+			"T1_eod_ammobox"};
+		weapons[] = {"T1_V_PlateCarrier2_Standard",
+			"T1_U_Pilot_Night",
+			"T1_U_Pilot_Camo",
+			"T1_U_Pilot_BlackCamo",
+			"T1_U_Pilot_Black",
+			"T1_U_Pilot_Standard",
+			"T1_U_Instructor_Polo_Orange",
+			"T1_U_Instructor_Polo_Black",
+			"T1_U_Sniper_Standard",
+			"T1_U_Diver_Standard",
+			"T1_U_Squad_Standard",
+			"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_LMG_BWA3_MG5_Hamr_pointer_F",
+			"T1_rhs_weap_m249_pip_L_Hamr",
+			"T1_LMG_hlc_M60E4_Hamr",
+			"T1_srifle_LRR_SOS_pointer_F",
+			"T1_srifle_EBR_DMS_pointer_F",
+			"BWA3_G28_Assault_SOS_pointer_sd",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_hgun_Pistol_heavy_01_snds_F"};
 		magazines[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"hlcweapons_m60e4","BWA3_Weapons","BWA3_Weapons_t1fix","TIER1_LAW","ace_medical","BWA3_Kestrel","rhsusf_c_weapons","t1_556_sd_ammo"};
+		requiredAddons[] = {"hlcweapons_m60e4",
+			"BWA3_Weapons",
+			"BWA3_Weapons_t1fix",
+			"TIER1_LAW",
+			"ace_medical",
+			"BWA3_Kestrel",
+			"rhsusf_c_weapons",
+			"t1_556_sd_ammo"};
 	};
 };
 class CfgFactionClasses
@@ -1071,12 +1181,60 @@ class CfgVehicles
 		uniformClass = "T1_U_Instructor_Polo_Black";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\instructor\t1_poloinstructor_b_co.paa"};
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen"};
-		linkedItems[] = {"H_Cap_headphones","V_Rangemaster_belt","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"H_Cap_headphones","V_Rangemaster_belt","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		linkedItems[] = {"H_Cap_headphones",
+			"V_Rangemaster_belt",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"H_Cap_headphones",
+			"V_Rangemaster_belt",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
 		backpack = "T1_Kitbag_camo_Lead_Trainer";
 		items[] = {"ACRE_PRC148",STDITEMS};
 		respawnItems[] = {"ACRE_PRC148",STDITEMS};
@@ -1098,8 +1256,18 @@ class CfgVehicles
 		camouflage = 1.4;
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
-		linkedItems[] = {"T1_V_PlateCarrier2_Standard","H_HelmetB_light","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_Standard","H_HelmetB_light","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"T1_V_PlateCarrier2_Standard",
+			"H_HelmetB_light",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_Standard",
+			"H_HelmetB_light",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
 	};
 	class T1_SF_Marksman_SOS_Standard_F: T1_Soldier_F
 	{
@@ -1107,13 +1275,63 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF Marksman";
-		weapons[] = {"BWA3_G28_Assault_SOS_pointer_sd","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"BWA3_G28_Assault_SOS_pointer_sd","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","BWA3_20Rnd_762x51_G28_SD","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","BWA3_20Rnd_762x51_G28_SD","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
+		weapons[] = {"BWA3_G28_Assault_SOS_pointer_sd",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"BWA3_G28_Assault_SOS_pointer_sd",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"BWA3_20Rnd_762x51_G28_SD",
+			"BWA3_20Rnd_762x51_G28_AP",
+			"BWA3_20Rnd_762x51_G28_AP",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"BWA3_20Rnd_762x51_G28_SD",
+			"BWA3_20Rnd_762x51_G28_AP",
+			"BWA3_20Rnd_762x51_G28_AP",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
 		backpack = "T1_Kitbag_camo_SF_Marksman";
-		items[] = {STDITEMS,"ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
-		respawnItems[] = {STDITEMS,"ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
+		items[] = {STDITEMS,"ACE_RangeCard",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500"};
+		respawnItems[] = {STDITEMS,"ACE_RangeCard",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500"};
 		camouflage = 0.8;
 	};
 	class T1_SF_Explosive_Standard_F: T1_Soldier_F
@@ -1122,14 +1340,50 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF Explosive Specialist";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","SmokeShell","HandGrenade","HandGrenade"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","SmokeShell","HandGrenade","HandGrenade"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade"};
 		icon = "iconManExplosive";
 		backpack = "T1_Carryall_camo_Exp_SF";
-		items[] = {"ACE_M26_Clacker","ACE_DefusalKit",STDITEMS};
-		respawnItems[] = {"ACE_M26_Clacker","ACE_DefusalKit",STDITEMS};
+		items[] = {"ACE_M26_Clacker",
+			"ACE_DefusalKit",STDITEMS};
+		respawnItems[] = {"ACE_M26_Clacker",
+			"ACE_DefusalKit",STDITEMS};
 		canDeactivateMines = 1;
 		detectSkill = 80;
 		camouflage = 1.0;
@@ -1142,10 +1396,80 @@ class CfgVehicles
 		displayName = "T1 SF Medic";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","HandGrenade","HandGrenade"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","HandGrenade","HandGrenade"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"HandGrenade",
+			"HandGrenade"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"HandGrenade",
+			"HandGrenade"};
 		icon = "iconManMedic";
 		backpack = "T1_Kitbag_camo_medic_sf";
 		items[] = {STDITEMS};
@@ -1159,14 +1483,84 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF FTL";
-		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_SD_F","Throw","Put","Laserdesignator","M72_LAW"};
-		respawnWeapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_SD_F","Throw","Put","Laserdesignator","M72_LAW"};
-		magazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell"};
-		respawnmagazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell"};
+		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Laserdesignator",
+			"M72_LAW"};
+		respawnWeapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Laserdesignator",
+			"M72_LAW"};
+		magazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell"};
+		respawnmagazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell"};
 		icon = "iconManLeader";
 		backpack = "T1_Kitbag_camo_Lead_SF";
-		items[] = {"ACRE_PRC148","ACE_IR_Strobe_Item",STDITEMS};
-		respawnItems[] = {"ACRE_PRC148","ACE_IR_Strobe_Item",STDITEMS};
+		items[] = {"ACRE_PRC148",
+			"ACE_IR_Strobe_Item",STDITEMS};
+		respawnItems[] = {"ACRE_PRC148",
+			"ACE_IR_Strobe_Item",STDITEMS};
 		camouflage = 1.0;
 	};
 	class T1_SF_AT_Standard_F: T1_Soldier_F
@@ -1175,10 +1569,48 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF Radioman";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder","BWA3_RGW90"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder","BWA3_RGW90"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"BWA3_RGW90"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"BWA3_RGW90"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
 		items[] = {"ACRE_PRC148",STDITEMS};
 		respawnItems[] = {"ACRE_PRC148",STDITEMS};
 		icon = "iconManAT";
@@ -1191,10 +1623,28 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF AR";
-		weapons[] = {"T1_LMG_hlc_M60E4_Hamr","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		respawnweapons[] = {"T1_LMG_hlc_M60E4_Hamr","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","HandGrenade","SmokeShell","hlc_100Rnd_762x51_M_M60E4","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD"};
-		respawnmagazines[] = {"ACE_M84","HandGrenade","SmokeShell","hlc_100Rnd_762x51_M_M60E4","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD"};
+		weapons[] = {"T1_LMG_hlc_M60E4_Hamr",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnweapons[] = {"T1_LMG_hlc_M60E4_Hamr",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"HandGrenade",
+			"SmokeShell",
+			"hlc_100Rnd_762x51_M_M60E4",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD"};
+		respawnmagazines[] = {"ACE_M84",
+			"HandGrenade",
+			"SmokeShell",
+			"hlc_100Rnd_762x51_M_M60E4",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD"};
 		icon = "iconManMG";
 		backpack = "T1_Kitbag_camo_AR_SF";
 		items[] = {STDITEMS,"ACE_SpareBarrel"};
@@ -1207,19 +1657,36 @@ class CfgVehicles
 		uniformClass = "T1_U_Diver_Standard";
 		model = "\A3\characters_F\Common\diver_slotable";
 		modelsides[] = {3,1};
-		hiddenselections[] = {"Camo1","Camo2"};
-		hiddenselectionstextures[] = {"\A3\Characters_F\Common\Data\diver_suit_nato_co.paa","\A3\Characters_F\Common\Data\diver_equip_nato_co.paa"};
+		hiddenselections[] = {"Camo1",
+			"Camo2"};
+		hiddenselectionstextures[] = {"\A3\Characters_F\Common\Data\diver_suit_nato_co.paa",
+			"\A3\Characters_F\Common\Data\diver_equip_nato_co.paa"};
 		hiddenunderwaterselections[] = {"hide"};
-		hiddenunderwaterselectionstextures[] = {"\A3\characters_f\common\data\diver_equip_nato_co.paa","\A3\characters_f\common\data\diver_equip_nato_co.paa","\A3\characters_f\data\visors_ca.paa"};
-		shownunderwaterselections[] = {"unhide","unhide2"};
+		hiddenunderwaterselectionstextures[] = {"\A3\characters_f\common\data\diver_equip_nato_co.paa",
+			"\A3\characters_f\common\data\diver_equip_nato_co.paa",
+			"\A3\characters_f\data\visors_ca.paa"};
+		shownunderwaterselections[] = {"unhide",
+			"unhide2"};
 		camouflage = 1.0;
 		class Wounds
 		{
-			mat[] = {"A3\Characters_F\Common\Data\diver_suit.rvmat","A3\Characters_F\Common\Data\diver_suit_injury.rvmat","A3\Characters_F\Common\Data\diver_suit_injury.rvmat"};
+			mat[] = {"A3\Characters_F\Common\Data\diver_suit.rvmat",
+			"A3\Characters_F\Common\Data\diver_suit_injury.rvmat",
+			"A3\Characters_F\Common\Data\diver_suit_injury.rvmat"};
 			tex[] = {};
 		};
-		linkedItems[] = {"V_RebreatherB","G_Diving","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"V_RebreatherB","G_Diving","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
+		linkedItems[] = {"V_RebreatherB",
+			"G_Diving",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"V_RebreatherB",
+			"G_Diving",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
 	};
 	class T1_Diver_Marksman_SOS_Standard_F: T1_Diver_Soldier_F
 	{
@@ -1227,13 +1694,63 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Diver";
 		displayName = "T1 Diver Marksman";
-		weapons[] = {"BWA3_G28_Assault_SOS_pointer_sd","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"BWA3_G28_Assault_SOS_pointer_sd","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","BWA3_20Rnd_762x51_G28_SD","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","BWA3_20Rnd_762x51_G28_SD","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
+		weapons[] = {"BWA3_G28_Assault_SOS_pointer_sd",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"BWA3_G28_Assault_SOS_pointer_sd",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"BWA3_20Rnd_762x51_G28_SD",
+			"BWA3_20Rnd_762x51_G28_AP",
+			"BWA3_20Rnd_762x51_G28_AP",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"BWA3_20Rnd_762x51_G28_SD",
+			"BWA3_20Rnd_762x51_G28_AP",
+			"BWA3_20Rnd_762x51_G28_AP",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_20Rnd_762x51_G28",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
 		backpack = "T1_Kitbag_camo_SF_Marksman";
-		items[] = {STDITEMS,"ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
-		respawnItems[] = {STDITEMS,"ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
+		items[] = {STDITEMS,"ACE_RangeCard",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500"};
+		respawnItems[] = {STDITEMS,"ACE_RangeCard",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500"};
 		camouflage = 0.8;
 	};
 	class T1_Diver_Explosive_Standard_F: T1_Diver_Soldier_F
@@ -1242,14 +1759,50 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Diver";
 		displayName = "T1 Diver Explosive Specialist";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","SmokeShell","HandGrenade","HandGrenade"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","SmokeShell","HandGrenade","HandGrenade"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade"};
 		icon = "iconManExplosive";
 		backpack = "T1_Carryall_camo_Exp_SF";
-		items[] = {"ACE_M26_Clacker","ACE_DefusalKit",STDITEMS};
-		respawnItems[] = {"ACE_M26_Clacker","ACE_DefusalKit",STDITEMS};
+		items[] = {"ACE_M26_Clacker",
+			"ACE_DefusalKit",STDITEMS};
+		respawnItems[] = {"ACE_M26_Clacker",
+			"ACE_DefusalKit",STDITEMS};
 		canDeactivateMines = 1;
 		detectSkill = 80;
 		camouflage = 1.0;
@@ -1262,10 +1815,80 @@ class CfgVehicles
 		displayName = "T1 Diver Medic";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","HandGrenade","HandGrenade"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","HandGrenade","HandGrenade"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"HandGrenade",
+			"HandGrenade"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"HandGrenade",
+			"HandGrenade"};
 		icon = "iconManMedic";
 		backpack = "T1_Kitbag_camo_medic_sf";
 		items[] = {STDITEMS};
@@ -1279,14 +1902,84 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Diver";
 		displayName = "T1 Diver FTL";
-		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_SD_F","Throw","Put","Laserdesignator","M72_LAW"};
-		respawnWeapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_SD_F","Throw","Put","Laserdesignator","M72_LAW"};
-		magazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell"};
-		respawnmagazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_Smoke_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell"};
+		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Laserdesignator",
+			"M72_LAW"};
+		respawnWeapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Laserdesignator",
+			"M72_LAW"};
+		magazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell"};
+		respawnmagazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_Smoke_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell"};
 		icon = "iconManLeader";
 		backpack = "T1_Kitbag_camo_Lead_SF";
-		items[] = {"ACRE_PRC148","ACE_IR_Strobe_Item",STDITEMS};
-		respawnItems[] = {"ACRE_PRC148","ACE_IR_Strobe_Item",STDITEMS};
+		items[] = {"ACRE_PRC148",
+			"ACE_IR_Strobe_Item",STDITEMS};
+		respawnItems[] = {"ACRE_PRC148",
+			"ACE_IR_Strobe_Item",STDITEMS};
 		camouflage = 1.0;
 	};
 	class T1_Diver_AT_Standard_F: T1_Diver_Soldier_F
@@ -1295,10 +1988,48 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Diver";
 		displayName = "T1 Diver Radioman";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder","BWA3_RGW90"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","Throw","Put","Rangefinder","BWA3_RGW90"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"BWA3_RGW90"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"BWA3_RGW90"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
 		items[] = {"ACRE_PRC148",STDITEMS};
 		respawnItems[] = {"ACRE_PRC148",STDITEMS};
 		icon = "iconManAT";
@@ -1311,10 +2042,28 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Diver";
 		displayName = "T1 Diver AR";
-		weapons[] = {"T1_LMG_hlc_M60E4_Hamr","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		respawnweapons[] = {"T1_LMG_hlc_M60E4_Hamr","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","HandGrenade","SmokeShell","hlc_100Rnd_762x51_M_M60E4","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD"};
-		respawnmagazines[] = {"ACE_M84","HandGrenade","SmokeShell","hlc_100Rnd_762x51_M_M60E4","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD"};
+		weapons[] = {"T1_LMG_hlc_M60E4_Hamr",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnweapons[] = {"T1_LMG_hlc_M60E4_Hamr",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"HandGrenade",
+			"SmokeShell",
+			"hlc_100Rnd_762x51_M_M60E4",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD"};
+		respawnmagazines[] = {"ACE_M84",
+			"HandGrenade",
+			"SmokeShell",
+			"hlc_100Rnd_762x51_M_M60E4",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD"};
 		icon = "iconManMG";
 		backpack = "T1_Kitbag_camo_AR_SF";
 		items[] = {STDITEMS,"ACE_SpareBarrel"};
@@ -1331,15 +2080,69 @@ class CfgVehicles
 		model = "\A3\Characters_F\Common\coveralls.p3d";
 		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Data\coveralls_sage_co.paa"};
 		uniformClass = "T1_U_Pilot_Standard";
-		weapons[] = {"SMG_01_ACO_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"SMG_01_ACO_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen"};
-		linkedItems[] = {"H_PilotHelmetHeli_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"H_PilotHelmetHeli_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
+		weapons[] = {"SMG_01_ACO_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"SMG_01_ACO_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"30Rnd_45ACP_Mag_SMG_01",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		linkedItems[] = {"H_PilotHelmetHeli_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"H_PilotHelmetHeli_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
 		// Todo: Evaluate wrt MEDICALITEMS mismatch
-		items[] = {"ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACRE_PRC148",STDITEMS};
+		items[] = {"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine",
+			"ACRE_PRC148",STDITEMS};
+		respawnItems[] = {"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine",
+			"ACRE_PRC148",STDITEMS};
 		camouflage = 1.4;
 	};
 	class T1_Pilot_Black_F: T1_Pilot_Standard_F
@@ -1382,14 +2185,82 @@ class CfgVehicles
 		uniformAccessories[] = {};
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","T1_hgun_Pistol_heavy_01_snds_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","T1_hgun_Pistol_heavy_01_snds_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","APERSTripMine_Wire_Mag","APERSTripMine_Wire_Mag"};
-		respawnmagazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","APERSTripMine_Wire_Mag","APERSTripMine_Wire_Mag"};
-		linkedItems[] = {"T1_V_PlateCarrier2_Standard","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_Standard","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		items[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_ATragMX","ACE_Kestrel4500","ACE_RangeCard",STDITEMS};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148","ACE_ATragMX","ACE_Kestrel4500","ACE_RangeCard",STDITEMS};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_hgun_Pistol_heavy_01_snds_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_hgun_Pistol_heavy_01_snds_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"APERSTripMine_Wire_Mag",
+			"APERSTripMine_Wire_Mag"};
+		respawnmagazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"APERSTripMine_Wire_Mag",
+			"APERSTripMine_Wire_Mag"};
+		linkedItems[] = {"T1_V_PlateCarrier2_Standard",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_Standard",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		items[] = {"ACE_IR_Strobe_Item",
+			"ACE_DefusalKit",
+			"ACRE_PRC148",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",STDITEMS};
+		respawnItems[] = {"ACE_IR_Strobe_Item",
+			"ACE_DefusalKit",
+			"ACRE_PRC148",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",STDITEMS};
 		backpack = "T1_Kitbag_camo_Sniper";
 		camouflage = 0.3;
 		glassesEnabled = 0;
@@ -1406,14 +2277,66 @@ class CfgVehicles
 		uniformAccessories[] = {};
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
-		weapons[] = {"srifle_LRR_LRPS_F","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"srifle_LRR_LRPS_F","T1_BWA3_MP7_LLM01_snds_F","Throw","Put","Rangefinder"};
-		magazines[] = {"HandGrenade","HandGrenade","ACE_M84","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","BWA3_40Rnd_46x30_MP7_SD","SmokeShell"};
-		respawnmagazines[] = {"HandGrenade","HandGrenade","ACE_M84","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","7Rnd_408_Mag","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","BWA3_40Rnd_46x30_MP7_SD","SmokeShell"};
-		linkedItems[] = {"T1_V_PlateCarrier2_Standard","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_Standard","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		items[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148",STDITEMS,"ACE_ATragMX","ACE_Kestrel4500","ACE_RangeCard"};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACE_DefusalKit","ACRE_PRC148",STDITEMS,"ACE_ATragMX","ACE_Kestrel4500","ACE_RangeCard"};
+		weapons[] = {"srifle_LRR_LRPS_F",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"srifle_LRR_LRPS_F",
+			"T1_BWA3_MP7_LLM01_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD",
+			"BWA3_40Rnd_46x30_MP7_SD",
+			"SmokeShell"};
+		respawnmagazines[] = {"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"7Rnd_408_Mag",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7",
+			"BWA3_40Rnd_46x30_MP7_SD",
+			"BWA3_40Rnd_46x30_MP7_SD",
+			"SmokeShell"};
+		linkedItems[] = {"T1_V_PlateCarrier2_Standard",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_Standard",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		items[] = {"ACE_IR_Strobe_Item",
+			"ACE_DefusalKit",
+			"ACRE_PRC148",STDITEMS,"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard"};
+		respawnItems[] = {"ACE_IR_Strobe_Item",
+			"ACE_DefusalKit",
+			"ACRE_PRC148",STDITEMS,"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard"};
 		backpack = "T1_Kitbag_camo_Lead";
 		camouflage = 0.3;
 		glassesEnabled = 0;
@@ -1424,10 +2347,52 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AT Specialist";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","launch_Titan_short_F"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","launch_Titan_short_F"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen","Titan_AT"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen","Titan_AT"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"launch_Titan_short_F"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"launch_Titan_short_F"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Titan_AT"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Titan_AT"};
 		items[] = {STDITEMS,"ACRE_PRC148"};
 		respawnItems[] = {STDITEMS,"ACRE_PRC148"};
 		icon = "iconManAT";
@@ -1439,12 +2404,76 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AAT Specialist";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen"};
-		items[] = {"ACRE_PRC148",STDITEMS,"ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS,"ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		items[] = {"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine"};
+		respawnItems[] = {"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine"};
 		backpack = "T1_Carryall_camo_AAT";
 	};
 	class T1_Specialist_AA_Standard_F: T1_Soldier_F
@@ -1453,10 +2482,52 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AA Specialist";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","launch_Titan_F"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","launch_Titan_F"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen","Titan_AA"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen","Titan_AA"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"launch_Titan_F"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"launch_Titan_F"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Titan_AA"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Titan_AA"};
 		items[] = {STDITEMS,"ACRE_PRC148"};
 		respawnItems[] = {STDITEMS,"ACRE_PRC148"};
 		icon = "iconManAT";
@@ -1468,12 +2539,76 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AAA Specialist";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","SmokeShellGreen"};
-		items[] = {"ACRE_PRC148",STDITEMS,"ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS,"ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		items[] = {"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine"};
+		respawnItems[] = {"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine"};
 		backpack = "T1_Carryall_camo_AAA";
 	};
 	class T1_Specialist_MG_Standard_F: T1_Soldier_F
@@ -1482,20 +2617,60 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 MG Specialist";
-		weapons[] = {"T1_LMG_BWA3_MG5_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		respawnweapons[] = {"T1_LMG_BWA3_MG5_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","BWA3_120Rnd_762x51","BWA3_120Rnd_762x51","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell"};
-		respawnmagazines[] = {"ACE_M84","BWA3_120Rnd_762x51","BWA3_120Rnd_762x51","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell"};
+		weapons[] = {"T1_LMG_BWA3_MG5_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnweapons[] = {"T1_LMG_BWA3_MG5_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"BWA3_120Rnd_762x51",
+			"BWA3_120Rnd_762x51",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell"};
+		respawnmagazines[] = {"ACE_M84",
+			"BWA3_120Rnd_762x51",
+			"BWA3_120Rnd_762x51",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell"};
 		icon = "iconManMG";
 		backpack = "T1_Kitbag_camo_MG";
-		items[] = {"ACRE_PRC148","ACE_IR_Strobe_Item",STDITEMS,"ACE_SpareBarrel"};
-		respawnItems[] = {"ACRE_PRC148","ACE_IR_Strobe_Item",STDITEMS,"ACE_SpareBarrel"};
+		items[] = {"ACRE_PRC148",
+			"ACE_IR_Strobe_Item",STDITEMS,"ACE_SpareBarrel"};
+		respawnItems[] = {"ACRE_PRC148",
+			"ACE_IR_Strobe_Item",STDITEMS,"ACE_SpareBarrel"};
 		class altloadout1 {
 			description = ".338 MG DLC";
-			weapons[] = {"MMG_02_camo_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
+			weapons[] = {"MMG_02_camo_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
 			backpack = "T1_Kitbag_camo";
-			magazines[] = {"11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","SmokeShell","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag"};
-			items[] = {"ACRE_PRC148","ACE_IR_Strobe_Item","optic_Hamr","BWA3_acc_LLM01_irlaser",STDITEMS,"ACE_SpareBarrel"};
+			magazines[] = {"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"SmokeShell",
+			"130Rnd_338_Mag",
+			"130Rnd_338_Mag",
+			"130Rnd_338_Mag",
+			"130Rnd_338_Mag",
+			"130Rnd_338_Mag",
+			"130Rnd_338_Mag",
+			"130Rnd_338_Mag",
+			"130Rnd_338_Mag"};
+			items[] = {"ACRE_PRC148",
+			"ACE_IR_Strobe_Item",
+			"optic_Hamr",
+			"BWA3_acc_LLM01_irlaser",STDITEMS,"ACE_SpareBarrel"};
 		};
 	};
 	class T1_Specialist_AMG_Standard_F: T1_Soldier_F
@@ -1504,12 +2679,56 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AMG Specialist";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"HandGrenade","ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","BWA3_120Rnd_762x51"};
-		respawnmagazines[] = {"HandGrenade","ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","BWA3_120Rnd_762x51"};
-		items[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"HandGrenade",
+			"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"BWA3_120Rnd_762x51"};
+		respawnmagazines[] = {"HandGrenade",
+			"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"BWA3_120Rnd_762x51"};
+		items[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS};
+		respawnItems[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS};
 		backpack = "T1_Carryall_camo_AMG";
 	};
 	class T1_Scout_Standard_F: T1_Soldier_F
@@ -1518,15 +2737,63 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Scout";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Laserbatteries","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
-		respawnmagazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Laserbatteries","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
-		linkedItems[] = {"V_Chestrig_oli","H_Booniehat_mcamo","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"V_Chestrig_oli","H_Booniehat_mcamo","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Laserbatteries",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"};
+		respawnmagazines[] = {"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Laserbatteries",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"};
+		linkedItems[] = {"V_Chestrig_oli",
+			"H_Booniehat_mcamo",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"V_Chestrig_oli",
+			"H_Booniehat_mcamo",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
 		backpack = "T1_Kitbag_camo_Lead";
-		items[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS,};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS};
+		items[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS,};
+		respawnItems[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS};
 		camouflage = 0.6;
 	};
 	class T1_Scout_TL_Standard_F: T1_Soldier_F
@@ -1535,15 +2802,69 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Scout TL [MM DLC]";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Laserbatteries","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
-		respawnmagazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Laserbatteries","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","T1_30Rnd_556x45_Stanag_SD","T1_30Rnd_556x45_Stanag_SD","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
-		linkedItems[] = {"V_Chestrig_oli","H_Booniehat_mcamo","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch","B_UavTerminal"};
-		respawnLinkedItems[] = {"V_Chestrig_oli","H_Booniehat_mcamo","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch","B_UavTerminal"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Laserbatteries",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"};
+		respawnmagazines[] = {"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"Laserbatteries",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"};
+		linkedItems[] = {"V_Chestrig_oli",
+			"H_Booniehat_mcamo",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"B_UavTerminal"};
+		respawnLinkedItems[] = {"V_Chestrig_oli",
+			"H_Booniehat_mcamo",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"B_UavTerminal"};
 		backpack = "B_Static_Designator_01_weapon_F";
-		items[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS,"ACE_Vector",MEDICALITEMS,"rhs_googles_clear"};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS,"ACE_Vector",MEDICALITEMS,"rhs_googles_clear"};
+		items[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS,"ACE_Vector",MEDICALITEMS,"rhs_googles_clear"};
+		respawnItems[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS,"ACE_Vector",MEDICALITEMS,"rhs_googles_clear"};
 		camouflage = 0.6;
 	};
 	class T1_Crewman_Standard_F: T1_Soldier_F
@@ -1555,14 +2876,82 @@ class CfgVehicles
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen"};
-		linkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		items[] = {"BWA3_G_Combat_Clear","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"BWA3_G_Combat_Clear","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACRE_PRC148",STDITEMS};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		linkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		items[] = {"BWA3_G_Combat_Clear",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine",
+			"ACRE_PRC148",STDITEMS};
+		respawnItems[] = {"BWA3_G_Combat_Clear",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine",
+			"ACRE_PRC148",STDITEMS};
 	};
 	class T1_Crew_Commander_Standard_F: T1_Soldier_F
 	{
@@ -1573,14 +2962,88 @@ class CfgVehicles
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"Laserbatteries","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","B_IR_Grenade","B_IR_Grenade"};
-		respawnmagazines[] = {"Laserbatteries","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","B_IR_Grenade","B_IR_Grenade"};
-		linkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		items[] = {"BWA3_G_Combat_Clear","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"BWA3_G_Combat_Clear","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACRE_PRC148",STDITEMS};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"Laserbatteries",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"B_IR_Grenade",
+			"B_IR_Grenade"};
+		respawnmagazines[] = {"Laserbatteries",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"B_IR_Grenade",
+			"B_IR_Grenade"};
+		linkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		items[] = {"BWA3_G_Combat_Clear",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine",
+			"ACRE_PRC148",STDITEMS};
+		respawnItems[] = {"BWA3_G_Combat_Clear",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_fieldDressing",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_morphine",
+			"ACE_epinephrine",
+			"ACRE_PRC148",STDITEMS};
 	};
 	class T1_Sentinel_Commander_Standard_F: T1_Soldier_F
 	{
@@ -1591,12 +3054,58 @@ class CfgVehicles
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","B_IR_Grenade","B_IR_Grenade"};
-		respawnmagazines[] = {"ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","B_IR_Grenade","B_IR_Grenade"};
-		linkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"B_IR_Grenade",
+			"B_IR_Grenade"};
+		respawnmagazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"B_IR_Grenade",
+			"B_IR_Grenade"};
+		linkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
 		items[] = {"ACRE_PRC148",STDITEMS};
 		respawnItems[] = {"ACRE_PRC148",STDITEMS};
 		backpack = "T1_Kitbag_camo_Repair";
@@ -1612,12 +3121,52 @@ class CfgVehicles
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen"};
-		linkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		linkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
 		items[] = {"ACRE_PRC148",STDITEMS};
 		respawnItems[] = {"ACRE_PRC148",STDITEMS};
 		backpack = "T1_Kitbag_camo_Repair";
@@ -1633,12 +3182,52 @@ class CfgVehicles
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen"};
-		respawnmagazines[] = {"ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen"};
-		linkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {"V_BandollierB_rgr","H_HelmetCrew_B","ACE_NVG_Gen4","ItemMap","ItemCompass","ItemWatch"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen"};
+		linkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
+		respawnLinkedItems[] = {"V_BandollierB_rgr",
+			"H_HelmetCrew_B",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"};
 		items[] = {"ACRE_PRC148",STDITEMS};
 		respawnItems[] = {"ACRE_PRC148",STDITEMS};
 		backpack = "T1_Kitbag_camo_medic";
@@ -1650,12 +3239,100 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Section";
 		displayName = "Section Leader";
-		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator","M72_LAW"};
-		respawnWeapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator","M72_LAW"};
-		magazines[] = {"Laserbatteries","ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","B_IR_Grenade"};
-		respawnmagazines[] = {"Laserbatteries","ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","B_IR_Grenade"};
-		items[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS};
+		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator",
+			"M72_LAW"};
+		respawnWeapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator",
+			"M72_LAW"};
+		magazines[] = {"Laserbatteries",
+			"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"B_IR_Grenade"};
+		respawnmagazines[] = {"Laserbatteries",
+			"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"B_IR_Grenade"};
+		items[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS};
+		respawnItems[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS};
 		icon = "iconManLeader";
 		backpack = "T1_Kitbag_camo_Lead";
 	};
@@ -1665,12 +3342,100 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Section";
 		displayName = "Section Sergeant";
-		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator","M72_LAW"};
-		respawnWeapons[] = {"Laserbatteries","T1_rhs_m4a1_m320_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator","M72_LAW"};
-		magazines[] = {"Laserbatteries","ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","B_IR_Grenade"};
-		respawnmagazines[] = {"ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","HandGrenade","HandGrenade","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","B_IR_Grenade"};
-		items[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS};
+		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator",
+			"M72_LAW"};
+		respawnWeapons[] = {"Laserbatteries",
+			"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator",
+			"M72_LAW"};
+		magazines[] = {"Laserbatteries",
+			"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"B_IR_Grenade"};
+		respawnmagazines[] = {"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"B_IR_Grenade"};
+		items[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS};
+		respawnItems[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS};
 		icon = "iconManLeader";
 		backpack = "T1_Kitbag_camo_Lead";
 	};
@@ -1680,10 +3445,76 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Section";
 		displayName = "Combat Life Saver";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","M72_LAW"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","M72_LAW"};
-		magazines[] = {"HandGrenade","HandGrenade","ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen"};
-		respawnmagazines[] = {"HandGrenade","HandGrenade","ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"M72_LAW"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"M72_LAW"};
+		magazines[] = {"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen"};
+		respawnmagazines[] = {"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen"};
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
 		icon = "iconManMedic";
@@ -1696,10 +3527,26 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Section";
 		displayName = "Automatic Rifleman";
-		weapons[] = {"T1_rhs_weap_m249_pip_L_Hamr","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m249_pip_L_Hamr","Throw","Put","Rangefinder"};
-		magazines[] = {"ACE_M84","rhs_200rnd_556x45_M_SAW","HandGrenade","HandGrenade","SmokeShell","SmokeShell"};
-		respawnmagazines[] = {"ACE_M84","rhs_200rnd_556x45_M_SAW","HandGrenade","HandGrenade","SmokeShell","SmokeShell"};
+		weapons[] = {"T1_rhs_weap_m249_pip_L_Hamr",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m249_pip_L_Hamr",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"ACE_M84",
+			"rhs_200rnd_556x45_M_SAW",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell"};
+		respawnmagazines[] = {"ACE_M84",
+			"rhs_200rnd_556x45_M_SAW",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell"};
 		icon = "iconManMG";
 		backpack = "T1_Kitbag_camo_AR";
 		items[] = {STDITEMS};
@@ -1711,10 +3558,48 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Section";
 		displayName = "Asst. Automatic Rifleman";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","Throw","Put","Rangefinder","M72_LAW"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","Throw","Put","Rangefinder","M72_LAW"};
-		magazines[] = {"ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","HandGrenade","HandGrenade","SmokeShell","SmokeShell"};
-		respawnmagazines[] = {"ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","HandGrenade","HandGrenade","SmokeShell","SmokeShell"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"M72_LAW"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"M72_LAW"};
+		magazines[] = {"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell"};
+		respawnmagazines[] = {"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell"};
 		backpack = "T1_Kitbag_camo_AAR";
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
@@ -1725,10 +3610,50 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Section";
 		displayName = "Weapon Specialist";
-		weapons[] = {"T1_srifle_EBR_DMS_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","BWA3_RGW90"};
-		respawnWeapons[] = {"T1_srifle_EBR_DMS_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","BWA3_RGW90"};
-		magazines[] = {"SmokeShell","HandGrenade","ACE_M84","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
-		respawnmagazines[] = {"SmokeShell","HandGrenade","ACE_M84","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
+		weapons[] = {"T1_srifle_EBR_DMS_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"BWA3_RGW90"};
+		respawnWeapons[] = {"T1_srifle_EBR_DMS_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"BWA3_RGW90"};
+		magazines[] = {"SmokeShell",
+			"HandGrenade",
+			"ACE_M84",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"};
+		respawnmagazines[] = {"SmokeShell",
+			"HandGrenade",
+			"ACE_M84",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"};
 		icon = "iconManAT";
 		backpack = "T1_Kitbag_camo_ws";
 		items[] = {STDITEMS,"ACE_RangeCard"};
@@ -1740,10 +3665,56 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Section";
 		displayName = "Rifleman AT";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","BWA3_RGW90"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder","BWA3_RGW90"};
-		magazines[] = {"SmokeShell","SmokeShell","HandGrenade","HandGrenade","ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
-		respawnmagazines[] = {"SmokeShell","SmokeShell","HandGrenade","HandGrenade","ACE_M84","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"BWA3_RGW90"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder",
+			"BWA3_RGW90"};
+		magazines[] = {"SmokeShell",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"};
+		respawnmagazines[] = {"SmokeShell",
+			"SmokeShell",
+			"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag"};
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
 		icon = "iconManAT";
@@ -1755,12 +3726,74 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Lead";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"ACE_M84","Laserbatteries","HandGrenade","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","SmokeShellGreen","SmokeShellYellow","SmokeShellYellow","SmokeShellOrange","SmokeShellOrange","SmokeShellBlue","SmokeShellBlue","B_IR_Grenade"};
-		respawnmagazines[] = {"ACE_M84","Laserbatteries","HandGrenade","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","SmokeShellGreen","SmokeShellYellow","SmokeShellYellow","SmokeShellOrange","SmokeShellOrange","SmokeShellBlue","SmokeShellBlue","B_IR_Grenade"};
-		items[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACE_IR_Strobe_Item","ACRE_PRC148",STDITEMS};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"HandGrenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShellYellow",
+			"SmokeShellYellow",
+			"SmokeShellOrange",
+			"SmokeShellOrange",
+			"SmokeShellBlue",
+			"SmokeShellBlue",
+			"B_IR_Grenade"};
+		respawnmagazines[] = {"ACE_M84",
+			"Laserbatteries",
+			"HandGrenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShellYellow",
+			"SmokeShellYellow",
+			"SmokeShellOrange",
+			"SmokeShellOrange",
+			"SmokeShellBlue",
+			"SmokeShellBlue",
+			"B_IR_Grenade"};
+		items[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS};
+		respawnItems[] = {"ACE_IR_Strobe_Item",
+			"ACRE_PRC148",STDITEMS};
 		icon = "iconManLeader";
 		backpack = "T1_Kitbag_camo_Lead";
 	};
@@ -1770,12 +3803,84 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Platoon";
 		displayName = "Medic";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Rangefinder"};
-		magazines[] = {"HandGrenade","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","SmokeShellGreen","SmokeShellGreen","SmokeShellGreen","SmokeShell","SmokeShell","SmokeShell","SmokeShell"};
-		respawnmagazines[] = {"HandGrenade","ACE_M84","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","SmokeShellGreen","SmokeShellGreen","SmokeShellGreen","SmokeShell","SmokeShell","SmokeShell","SmokeShell"};
-		items[] = {"ACRE_PRC148",STDITEMS,"ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine"};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS,"ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Rangefinder"};
+		magazines[] = {"HandGrenade",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell"};
+		respawnmagazines[] = {"HandGrenade",
+			"ACE_M84",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShellGreen",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell"};
+		items[] = {"ACRE_PRC148",STDITEMS,"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine"};
+		respawnItems[] = {"ACRE_PRC148",STDITEMS,"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine"};
 		icon = "iconManMedic";
 		backpack = "T1_Kitbag_camo_medic";
 		attendant = 1;
@@ -1786,12 +3891,52 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Platoon";
 		displayName = "Platoon EOD";
-		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"HandGrenade","HandGrenade","ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","B_IR_Grenade"};
-		respawnmagazines[] = {"HandGrenade","HandGrenade","ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellGreen","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","B_IR_Grenade"};
-		items[] = {"ACRE_PRC148",STDITEMS,"ACE_M26_Clacker","ACE_DefusalKit"};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS,"ACE_M26_Clacker","ACE_DefusalKit"};
+		weapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"B_IR_Grenade"};
+		respawnmagazines[] = {"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"B_IR_Grenade"};
+		items[] = {"ACRE_PRC148",STDITEMS,"ACE_M26_Clacker",
+			"ACE_DefusalKit"};
+		respawnItems[] = {"ACRE_PRC148",STDITEMS,"ACE_M26_Clacker",
+			"ACE_DefusalKit"};
 		icon = "iconManExplosive";
 		backpack = "T1_Carryall_camo_PLEOD";
 		engineer = 1;
@@ -1804,12 +3949,66 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Sergeant";
-		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		respawnWeapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F","hgun_Pistol_heavy_01_F","Throw","Put","Laserdesignator"};
-		magazines[] = {"HandGrenade","ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellRed","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell"};
-		respawnmagazines[] = {"HandGrenade","ACE_M84","Laserbatteries","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","SmokeShell","SmokeShellRed","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell"};
-		items[] = {"ACRE_PRC148","B_UavTerminal",STDITEMS};
-		respawnItems[] = {"ACRE_PRC148","B_UavTerminal",STDITEMS};
+		weapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		respawnWeapons[] = {"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"hgun_Pistol_heavy_01_F",
+			"Throw",
+			"Put",
+			"Laserdesignator"};
+		magazines[] = {"HandGrenade",
+			"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellRed",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell"};
+		respawnmagazines[] = {"HandGrenade",
+			"ACE_M84",
+			"Laserbatteries",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"11Rnd_45ACP_Mag",
+			"11Rnd_45ACP_Mag",
+			"SmokeShell",
+			"SmokeShellRed",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell"};
+		items[] = {"ACRE_PRC148",
+			"B_UavTerminal",STDITEMS};
+		respawnItems[] = {"ACRE_PRC148",
+			"B_UavTerminal",STDITEMS};
 		backpack = "T1_Carryall_camo_PLSgt_JTAC";
 	};
 	class B_Heli_Light_01_F;
@@ -2514,21 +4713,27 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units";
 		displayName = "T1 Hunter";
-		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\hunter\t1_hunter_woodland_base_co.paa","\t1_units\data\vehicles\hunter\t1_hunter_woodland_adds_co.paa",""};
+		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\hunter\t1_hunter_woodland_base_co.paa",
+			"\t1_units\data\vehicles\hunter\t1_hunter_woodland_adds_co.paa",
+			""};
 	};
 	class T1_B_MRAP_01_gmg_Woodland_F: B_MRAP_01_gmg_F
 	{
 		scope = 2;
 		faction = "T1_Units";
 		displayName = "T1 Hunter GMG";
-		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\hunter\t1_hunter_woodland_base_co.paa","\t1_units\data\vehicles\hunter\t1_hunter_woodland_adds_co.paa","\t1_units\data\vehicles\hunter\t1_hunter_woodland_turret_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\hunter\t1_hunter_woodland_base_co.paa",
+			"\t1_units\data\vehicles\hunter\t1_hunter_woodland_adds_co.paa",
+			"\t1_units\data\vehicles\hunter\t1_hunter_woodland_turret_co.paa"};
 	};
 	class T1_B_MRAP_01_hmg_Woodland_F: B_MRAP_01_hmg_F
 	{
 		scope = 2;
 		faction = "T1_Units";
 		displayName = "T1 Hunter HMG";
-		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\hunter\t1_hunter_woodland_base_co.paa","\t1_units\data\vehicles\hunter\t1_hunter_woodland_adds_co.paa","\t1_units\data\vehicles\hunter\t1_hunter_woodland_turret_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\hunter\t1_hunter_woodland_base_co.paa",
+			"\t1_units\data\vehicles\hunter\t1_hunter_woodland_adds_co.paa",
+			"\t1_units\data\vehicles\hunter\t1_hunter_woodland_turret_co.paa"};
 	};
 };
 class CfgWeapons
@@ -2544,7 +4749,8 @@ class CfgWeapons
 			{
 				class Snip
 				{
-					visionMode[] = {"Normal","NVG"};
+					visionMode[] = {"Normal",
+			"NVG"};
 				};
 			};
 		};
@@ -2557,7 +4763,8 @@ class CfgWeapons
 			{
 				class Snip
 				{
-					visionMode[] = {"Normal","NVG"};
+					visionMode[] = {"Normal",
+			"NVG"};
 				};
 			};
 		};
@@ -2570,7 +4777,8 @@ class CfgWeapons
 			{
 				class Snip
 				{
-					visionMode[] = {"Normal","NVG"};
+					visionMode[] = {"Normal",
+			"NVG"};
 				};
 			};
 		};
@@ -2584,7 +4792,8 @@ class CfgWeapons
 			{
 				class Scope
 				{
-					visionMode[] = {"Normal","NVG"};
+					visionMode[] = {"Normal",
+			"NVG"};
 				};
 			};
 		};

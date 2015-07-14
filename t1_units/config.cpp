@@ -128,7 +128,6 @@ class CfgPatches
 			"BWA3_Weapons_t1fix",
 			"TIER1_LAW",
 			"ace_medical",
-			"BWA3_Kestrel",
 			"rhsusf_c_weapons",
 			"t1_556_sd_ammo"};
 	};

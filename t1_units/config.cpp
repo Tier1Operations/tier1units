@@ -2763,7 +2763,8 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"Laserdesignator",
+			"launch_Titan_F"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",

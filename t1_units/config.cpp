@@ -118,17 +118,20 @@ class CfgPatches
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"T1_LMG_BWA3_MG5_Hamr_pointer_F",
 			"T1_rhs_weap_m249_pip_L_Hamr",
-			"T1_LMG_hlc_M60E4_Hamr",
+			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
 			"T1_srifle_LRR_SOS_pointer_F",
-			"T1_srifle_EBR_DMS_pointer_F",
+			"T1_45KO_ABR_camo_green_DMS_pointer_F",
 			"BWA3_G28_Assault_SOS_pointer_sd",
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"T1_hgun_Pistol_heavy_01_snds_F"
 		};
 		magazines[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {
-			"hlcweapons_m60e4",
+		requiredAddons[] = {			
+			"45KO_SO_weapons_ABR",
+			"t1_45KO_fix",
+			"iansky_opt",
+			"ace_flashsuppressors",
 			"BWA3_Weapons",
 			"BWA3_Weapons_t1fix",
 			"TIER1_LAW",
@@ -253,10 +256,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{			
-			class _xx_hlc_100Rnd_762x51_M_M60E4
+			class _xx_t1_100Rnd_762x51_Box
 			{
 				count = 1;
-				magazine = "hlc_100Rnd_762x51_M_M60E4";
+				magazine = "t1_100Rnd_762x51_Box";
 			};
 		};
 		class TransportItems
@@ -376,10 +379,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{			
-			class _xx_hlc_100Rnd_762x51_M_M60E4
+			class _xx_t1_100Rnd_762x51_Box
 			{
 				count = 1;
-				magazine = "hlc_100Rnd_762x51_M_M60E4";
+				magazine = "t1_100Rnd_762x51_Box";
 			};
 		};
 		class TransportItems
@@ -484,10 +487,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
 		class TransportMagazines
 		{			
-			class _xx_hlc_100Rnd_762x51_M_M60E4
+			class _xx_t1_100Rnd_762x51_Box
 			{
 				count = 1;
-				magazine = "hlc_100Rnd_762x51_M_M60E4";
+				magazine = "t1_100Rnd_762x51_Box";
 			};
 		};
 		class TransportItems
@@ -696,10 +699,10 @@ class CfgVehicles
 				count = 4;
 				magazine = "DemoCharge_Remote_Mag";
 			};
-			class _xx_hlc_100Rnd_762x51_M_M60E4
+			class _xx_t1_100Rnd_762x51_Box
 			{
 				count = 1;
-				magazine = "hlc_100Rnd_762x51_M_M60E4";
+				magazine = "t1_100Rnd_762x51_Box";
 			};
 		};
 		class TransportItems
@@ -911,10 +914,10 @@ class CfgVehicles
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_hlc_100Rnd_762x51_M_M60E4
+			class _xx_t1_100Rnd_762x51_Box
 			{
 				count = 1;
-				magazine = "hlc_100Rnd_762x51_M_M60E4";
+				magazine = "t1_100Rnd_762x51_Box";
 			};
 		};
 		class TransportItems
@@ -1693,14 +1696,14 @@ class CfgVehicles
 		vehicleClass = "SF";
 		displayName = "T1 SF AR";
 		weapons[] = {
-			"T1_LMG_hlc_M60E4_Hamr",
+			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
 			"Rangefinder"
 		};
 		respawnweapons[] = {
-			"T1_LMG_hlc_M60E4_Hamr",
+			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
@@ -1710,7 +1713,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"hlc_100Rnd_762x51_M_M60E4",
+			"t1_100Rnd_762x51_Box",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD"
 		};
@@ -1718,7 +1721,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"hlc_100Rnd_762x51_M_M60E4",
+			"t1_100Rnd_762x51_Box",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD"
 		};
@@ -2182,14 +2185,14 @@ class CfgVehicles
 		vehicleClass = "Diver";
 		displayName = "T1 Diver AR";
 		weapons[] = {
-			"T1_LMG_hlc_M60E4_Hamr",
+			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
 			"Rangefinder"
 		};
 		respawnweapons[] = {
-			"T1_LMG_hlc_M60E4_Hamr",
+			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
@@ -2199,7 +2202,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"hlc_100Rnd_762x51_M_M60E4",
+			"t1_100Rnd_762x51_Box",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD"
 		};
@@ -2207,7 +2210,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"hlc_100Rnd_762x51_M_M60E4",
+			"t1_100Rnd_762x51_Box",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD"
 		};
@@ -4009,7 +4012,7 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Weapon Specialist";
 		weapons[] = {
-			"T1_srifle_EBR_DMS_pointer_F",
+			"T1_45KO_ABR_camo_green_DMS_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4017,7 +4020,7 @@ class CfgVehicles
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
-			"T1_srifle_EBR_DMS_pointer_F",
+			"T1_45KO_ABR_camo_green_DMS_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -5297,8 +5300,8 @@ class CfgWeapons
 			};
 		};
 	};
-	class srifle_EBR_F;
-	class T1_srifle_EBR_DMS_pointer_F: srifle_EBR_F
+	class 45KO_ABR_camo_green_F;
+	class T1_45KO_ABR_camo_green_DMS_pointer_F: 45KO_ABR_camo_green_F
 	{
 		class LinkedItems
 		{
@@ -5370,15 +5373,25 @@ class CfgWeapons
 			};
 		};
 	};
-	class hlc_lmg_M60E4;
-	class T1_LMG_hlc_M60E4_Hamr: hlc_lmg_M60E4
+	class 45KO_zafir_black;
+	class T1_45KO_zafir_black_Hamr_pointer_sd_F: 45KO_zafir_black
 	{
 		class LinkedItems
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "iansky_specterdr";
 				slot = "CowsSlot";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "ACE_muzzle_mzls_B";
+				slot = "MuzzleSlot";
+			}
+			class LinkedItemsAcc
+			{
+				item = "BWA3_acc_LLM01_irlaser";
+				slot = "PointerSlot";
 			};
 		};
 	};

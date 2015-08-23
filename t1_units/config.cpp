@@ -5272,6 +5272,22 @@ class CfgWeapons
 				};
 			};
 		};
+	};	
+	class iansky_specterdr: ItemCore
+	{
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			class OpticsModes
+			{
+				class DRScope
+				{
+					visionMode[] = {
+			"Normal",
+			"NVG"
+		};
+				};
+			};
+		};
 	};
 	/*
 	class NVGoggles;

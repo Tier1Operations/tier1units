@@ -5216,10 +5216,7 @@ class CfgWeapons
 			{
 				class Snip
 				{
-					visionMode[] = {
-			"Normal",
-			"NVG"
-		};
+					visionMode[] = {};
 				};
 			};
 		};
@@ -5232,10 +5229,7 @@ class CfgWeapons
 			{
 				class Snip
 				{
-					visionMode[] = {
-			"Normal",
-			"NVG"
-		};
+					visionMode[] = {};
 				};
 			};
 		};
@@ -5248,10 +5242,7 @@ class CfgWeapons
 			{
 				class Snip
 				{
-					visionMode[] = {
-			"Normal",
-			"NVG"
-		};
+					visionMode[] = {};
 				};
 			};
 		};
@@ -5265,10 +5256,7 @@ class CfgWeapons
 			{
 				class Scope
 				{
-					visionMode[] = {
-			"Normal",
-			"NVG"
-		};
+					visionMode[] = {};
 				};
 			};
 		};
@@ -5281,10 +5269,7 @@ class CfgWeapons
 			{
 				class DRScope
 				{
-					visionMode[] = {
-			"Normal",
-			"NVG"
-		};
+					visionMode[] = {};
 				};
 			};
 		};

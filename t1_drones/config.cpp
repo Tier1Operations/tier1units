@@ -126,6 +126,16 @@ class CfgVehicles
 				magazine = "Titan_AA";
 				count = 12;
 			};
+			class _xx_tf47_m3maaws_HEAT
+			{
+				magazine = "tf47_m3maaws_HEAT";
+				count = 10;
+			};
+			class _xx_tf47_m3maaws_HE
+			{
+				magazine = "tf47_m3maaws_HE";
+				count = 10;
+			};
 		};
 		class TransportItems
 		{
@@ -291,6 +301,16 @@ class CfgVehicles
 			{
 				magazine = "Titan_AA";
 				count = 12;
+			};
+			class _xx_tf47_m3maaws_HEAT
+			{
+				magazine = "tf47_m3maaws_HEAT";
+				count = 10;
+			};
+			class _xx_tf47_m3maaws_HE
+			{
+				magazine = "tf47_m3maaws_HE";
+				count = 10;
 			};
 		};
 		class TransportItems

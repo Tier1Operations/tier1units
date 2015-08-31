@@ -128,8 +128,7 @@ class CfgPatches
 			"T1_45KO_ABR_camo_green_DMS_pointer_F",
 			"BWA3_G28_Assault_SOS_pointer_sd",
 			"T1_BWA3_MP7_LLM01_snds_F",
-			"T1_hgun_Pistol_heavy_01_snds_F",
-			"T1_tf47_m3maaw_optic"
+			"T1_hgun_Pistol_heavy_01_snds_F"
 		};
 		magazines[] = {};
 		requiredVersion = 0.1;
@@ -1243,15 +1242,7 @@ class CfgVehicles
 				count = 1;
 				name = "BWA3_G_Combat_Clear";
 			};
-		};
-		class TransportWeapons
-		{
-			class _xx_M72_LAW
-			{
-				weapon = "M72_LAW";
-				count = 1;
-			};
-		};
+		};		
 	};
 	class B_RangeMaster_F;
 	class T1_Instructor_Polo_Black_F: B_RangeMaster_F
@@ -2756,14 +2747,14 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"T1_tf47_m3maaw_optic"
+			"tf47_m3maaws_optic"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"T1_tf47_m3maaw_optic"
+			"tf47_m3maaws_optic"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -4173,7 +4164,6 @@ class CfgVehicles
 		displayName = "Weapon Specialist";
 		weapons[] = {
 			"T1_45KO_ABR_camo_green_DMS_pointer_F",
-			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4181,7 +4171,6 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"T1_45KO_ABR_camo_green_DMS_pointer_F",
-			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4201,9 +4190,7 @@ class CfgVehicles
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag"
+			"20Rnd_762x51_Mag"
 		};
 		respawnmagazines[] = {
 			"SmokeShell",
@@ -4219,9 +4206,7 @@ class CfgVehicles
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag"
+			"20Rnd_762x51_Mag"
 		};
 		icon = "iconManAT";
 		backpack = "T1_Kitbag_camo_ws";
@@ -5666,18 +5651,6 @@ class CfgWeapons
 				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
-		};
-	};
-	class tf47_m3maaw;
-	class T1_tf47_m3maaw_optic: tf47_m3maaw
-	{
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				item = "tf47_optic_m3maaws";
-				slot = "CowsSlot";
-			};			
 		};
 	};
 	class UniformItem;

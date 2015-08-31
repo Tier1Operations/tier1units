@@ -26,6 +26,7 @@ class CfgPatches
 			"T1_Kitbag_camo_AA",
 			"T1_Kitbag_camo_AT",
 			"T1_Kitbag_camo_AR",
+			"T1_Kitbag_camo_Scout_Lead",
 			"T1_Carryall_camo_PLSgt_JTAC",
 			"T1_Carryall_camo_PLEOD",
 			"T1_Carryall_camo_Exp",
@@ -114,7 +115,7 @@ class CfgPatches
 			"T1_U_Squad_Standard",
 			"T1_rhs_m4a1_m320_Hamr_pointer_F",
 			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"T1_LMG_BWA3_MG5_Hamr_pointer_F",
 			"T1_rhs_weap_m249_pip_L_Hamr",
@@ -328,6 +329,40 @@ class CfgVehicles
 				magazine = "7Rnd_408_Mag";
 			};
 		};
+		class TransportItems
+		{
+			class _xx_ACE_fieldDressing
+			{
+				count = 9;
+				name = "ACE_fieldDressing";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 3;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 1;
+				name = "ACE_epinephrine";
+			};
+			class _xx_BWA3_G_Combat_Clear
+			{
+				count = 1;
+				name = "BWA3_G_Combat_Clear";
+			};
+			class _xx_ACE_Vector
+			{
+				count = 1;
+				name = "ACE_Vector";
+			};
+		};
+	};
+	class T1_Kitbag_camo_Scout_Lead: B_Kitbag_Base
+	{
+		scope = 2;
+		displayName = "Kitbag Lead (T1 Camo)";
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};		
 		class TransportItems
 		{
 			class _xx_ACE_fieldDressing
@@ -1155,14 +1190,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\instructor\t1_poloinstructor_b_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -1517,8 +1552,7 @@ class CfgVehicles
 			"M72_LAW"
 		};
 		magazines[] = {
-			"ACE_M84",
-			"Laserbatteries",
+			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -1550,8 +1584,7 @@ class CfgVehicles
 			"1Rnd_SmokeRed_Grenade_shell"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
-			"Laserbatteries",
+			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2007,7 +2040,6 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"Laserbatteries",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2040,7 +2072,6 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"Laserbatteries",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2507,7 +2538,7 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AT Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -2515,7 +2546,7 @@ class CfgVehicles
 			"launch_Titan_short_F"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -2572,14 +2603,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AAT Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -2587,7 +2618,6 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"Laserbatteries",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2606,7 +2636,6 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"Laserbatteries",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2662,7 +2691,7 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AA Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -2670,7 +2699,7 @@ class CfgVehicles
 			"launch_Titan_F"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -2727,7 +2756,7 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AAA Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -2735,7 +2764,7 @@ class CfgVehicles
 			"launch_Titan_F"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -2743,7 +2772,6 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"Laserbatteries",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2762,7 +2790,6 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"Laserbatteries",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2898,14 +2925,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AMG Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -2914,7 +2941,6 @@ class CfgVehicles
 		magazines[] = {
 			"HandGrenade",
 			"ACE_M84",
-			"Laserbatteries",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2934,7 +2960,6 @@ class CfgVehicles
 		respawnmagazines[] = {
 			"HandGrenade",
 			"ACE_M84",
-			"Laserbatteries",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2959,12 +2984,12 @@ class CfgVehicles
 			"ACRE_PRC148",STDITEMS};
 		backpack = "T1_Carryall_camo_AMG";
 	};
-	class T1_Scout_Standard_F: T1_Soldier_F
+	class T1_Scout_TL_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Special";
-		displayName = "T1 Scout";
+		displayName = "T1 Scout TL";
 		weapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"hgun_Pistol_heavy_01_F",
@@ -3029,7 +3054,7 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
-		backpack = "T1_Kitbag_camo_Sniper";
+		backpack = "T1_Kitbag_camo_Scout_Lead";
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACRE_PRC148",STDITEMS,};
@@ -3038,12 +3063,12 @@ class CfgVehicles
 			"ACRE_PRC148",STDITEMS};
 		camouflage = 0.6;
 	};
-	class T1_Scout_TL_Standard_F: T1_Soldier_F
+	class T1_Scout_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Special";
-		displayName = "T1 Scout TL [MM DLC]";
+		displayName = "T1 Scout [MM DLC]";
 		weapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"hgun_Pistol_heavy_01_F",
@@ -3135,14 +3160,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3235,21 +3260,20 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		magazines[] = {
-			"Laserbatteries",
+		magazines[] = {			
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3266,7 +3290,6 @@ class CfgVehicles
 			"B_IR_Grenade"
 		};
 		respawnmagazines[] = {
-			"Laserbatteries",
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3341,22 +3364,21 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		magazines[] = {
-			"ACE_M84",
-			"Laserbatteries",
+			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3372,8 +3394,7 @@ class CfgVehicles
 			"B_IR_Grenade"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
-			"Laserbatteries",
+			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3420,14 +3441,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3493,14 +3514,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3577,8 +3598,7 @@ class CfgVehicles
 			"ACE_Vector",
 			"M72_LAW"
 		};
-		magazines[] = {
-			"Laserbatteries",
+		magazines[] = {			
 			"ACE_M84",
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3618,8 +3638,7 @@ class CfgVehicles
 			"1Rnd_SmokeRed_Grenade_shell",
 			"B_IR_Grenade"
 		};
-		respawnmagazines[] = {
-			"Laserbatteries",
+		respawnmagazines[] = {			
 			"ACE_M84",
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3682,8 +3701,7 @@ class CfgVehicles
 			"ACE_Vector",
 			"M72_LAW"
 		};
-		respawnWeapons[] = {
-			"Laserbatteries",
+		respawnWeapons[] = {			
 			"T1_rhs_m4a1_m320_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
@@ -3691,8 +3709,7 @@ class CfgVehicles
 			"ACE_Vector",
 			"M72_LAW"
 		};
-		magazines[] = {
-			"Laserbatteries",
+		magazines[] = {			
 			"ACE_M84",
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3788,7 +3805,7 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Combat Life Saver";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3796,7 +3813,7 @@ class CfgVehicles
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3917,14 +3934,14 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Asst. Automatic Rifleman";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4040,7 +4057,7 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Rifleman AT";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4048,7 +4065,7 @@ class CfgVehicles
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4109,22 +4126,21 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Platoon Lead";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		magazines[] = {
-			"ACE_M84",
-			"Laserbatteries",
+			"ACE_M84",			
 			"HandGrenade",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -4152,8 +4168,7 @@ class CfgVehicles
 			"B_IR_Grenade"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
-			"Laserbatteries",
+			"ACE_M84",			
 			"HandGrenade",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -4196,14 +4211,14 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Medic";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4296,14 +4311,14 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Platoon EOD";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4312,8 +4327,7 @@ class CfgVehicles
 		magazines[] = {
 			"HandGrenade",
 			"HandGrenade",
-			"ACE_M84",
-			"Laserbatteries",
+			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -4330,8 +4344,7 @@ class CfgVehicles
 		respawnmagazines[] = {
 			"HandGrenade",
 			"HandGrenade",
-			"ACE_M84",
-			"Laserbatteries",
+			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -4380,9 +4393,9 @@ class CfgVehicles
 			"Laserdesignator"
 		};
 		magazines[] = {
-			"HandGrenade",
-			"ACE_M84",
 			"Laserbatteries",
+			"HandGrenade",
+			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -4405,9 +4418,9 @@ class CfgVehicles
 			"1Rnd_SmokeRed_Grenade_shell"
 		};
 		respawnmagazines[] = {
-			"HandGrenade",
-			"ACE_M84",
 			"Laserbatteries",
+			"HandGrenade",
+			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -4889,9 +4902,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_T1_rhs_weap_m4a1_grip_Hamr_pointer_F
+			class _xx_T1_rhs_weap_m4a1_Hamr_pointer_F
 			{
-				weapon = "T1_rhs_weap_m4a1_grip_Hamr_pointer_F";
+				weapon = "T1_rhs_weap_m4a1_Hamr_pointer_F";
 				count = 1;
 			};
 			class _xx_BWA3_RGW90
@@ -5003,9 +5016,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_T1_rhs_weap_m4a1_grip_Hamr_pointer_F
+			class _xx_T1_rhs_weap_m4a1_Hamr_pointer_F
 			{
-				weapon = "T1_rhs_weap_m4a1_grip_Hamr_pointer_F";
+				weapon = "T1_rhs_weap_m4a1_Hamr_pointer_F";
 				count = 1;
 			};
 			class _xx_BWA3_RGW90
@@ -5117,9 +5130,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_T1_rhs_weap_m4a1_grip_Hamr_pointer_F
+			class _xx_T1_rhs_weap_m4a1_Hamr_pointer_F
 			{
-				weapon = "T1_rhs_weap_m4a1_grip_Hamr_pointer_F";
+				weapon = "T1_rhs_weap_m4a1_Hamr_pointer_F";
 				count = 1;
 			};
 			class _xx_BWA3_RGW90
@@ -5390,8 +5403,8 @@ class CfgWeapons
 			};
 		};
 	};
-	class rhs_weap_m4a1_grip;
-	class T1_rhs_weap_m4a1_grip_Hamr_pointer_F: rhs_weap_m4a1_grip
+	class rhs_weap_m4a1;
+	class T1_rhs_weap_m4a1_Hamr_pointer_F: rhs_weap_m4a1
 	{
 		class LinkedItems
 		{
@@ -5424,6 +5437,7 @@ class CfgWeapons
 			};
 		};
 	};	
+	class rhs_weap_m4a1_grip;
 	class T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F: rhs_weap_m4a1_grip
 	{
 		class LinkedItems

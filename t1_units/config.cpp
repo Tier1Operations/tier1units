@@ -2914,7 +2914,7 @@ class CfgVehicles
 			"ACRE_PRC148",
 			"ACE_IR_Strobe_Item",
 			"iansky_specterdr",
-			"BWA3_acc_LLM01_irlaser",STDITEMS,"ACE_SpareBarrel"
+			"acc_pointer_IR",STDITEMS,"ACE_SpareBarrel"
 		};
 		};
 	};
@@ -5291,7 +5291,7 @@ class CfgWeapons
 			};
 			class LinkedItemsAcc
 			{
-				item = "BWA3_acc_LLM01_irlaser";
+				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
 		};
@@ -5313,7 +5313,7 @@ class CfgWeapons
 			};
 			class LinkedItemsAcc
 			{
-				item = "BWA3_acc_LLM01_irlaser";
+				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
 		};
@@ -5347,7 +5347,7 @@ class CfgWeapons
 			};
 			class LinkedItemsAcc
 			{
-				item = "BWA3_acc_LLM01_irlaser";
+				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
 		};
@@ -5369,7 +5369,7 @@ class CfgWeapons
 			}
 			class LinkedItemsAcc
 			{
-				item = "BWA3_acc_LLM01_irlaser";
+				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
 		};
@@ -5398,7 +5398,7 @@ class CfgWeapons
 			};
 			class LinkedItemsAcc
 			{
-				item = "BWA3_acc_LLM01_irlaser";
+				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
 		};
@@ -5415,7 +5415,7 @@ class CfgWeapons
 			};
 			class LinkedItemsAcc
 			{
-				item = "BWA3_acc_LLM01_irlaser";
+				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
 		};
@@ -5432,7 +5432,7 @@ class CfgWeapons
 			};
 			class LinkedItemsAcc
 			{
-				item = "BWA3_acc_LLM01_irlaser";
+				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
 		};
@@ -5454,7 +5454,7 @@ class CfgWeapons
 			}
 			class LinkedItemsAcc
 			{
-				item = "BWA3_acc_LLM01_irlaser";
+				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
 		};
@@ -5475,7 +5475,7 @@ class CfgWeapons
 			}
 			class LinkedItemsAcc
 			{
-				item = "BWA3_acc_LLM01_irlaser";
+				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
 		};

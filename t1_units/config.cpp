@@ -241,12 +241,7 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "BWA3_G_Combat_Clear";
-			};
-			class _xx_ACE_Vector
-			{
-				count = 1;
-				name = "ACE_Vector";
-			};
+			};			
 		};
 	};
 	class T1_Kitbag_camo_Lead_SF: B_Kitbag_Base
@@ -283,12 +278,7 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "BWA3_G_Combat_Clear";
-			};
-			class _xx_ACE_Vector
-			{
-				count = 1;
-				name = "ACE_Vector";
-			};
+			};			
 		};
 	};
 	class T1_Kitbag_camo_Lead_Trainer: B_Kitbag_Base
@@ -317,12 +307,7 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "BWA3_G_Combat_Clear";
-			};
-			class _xx_ACE_Vector
-			{
-				count = 1;
-				name = "ACE_Vector";
-			};
+			};			
 			class _xx_ACE_Kestrel
 			{
 				count = 1;
@@ -621,12 +606,7 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "BWA3_G_Combat_Clear";
-			};
-			class _xx_ACE_Vector
-			{
-				count = 1;
-				name = "ACE_Vector";
-			};
+			};			
 		};
 	};
 	class T1_Carryall_camo_Exp: T1_Carryall_camo
@@ -781,12 +761,7 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "BWA3_G_Combat_Clear";
-			};
-			class _xx_ACE_Vector
-			{
-				count = 1;
-				name = "ACE_Vector";
-			};
+			};			
 		};
 	};
 	class T1_Carryall_camo_PLSgt_JTAC: T1_Carryall_camo
@@ -1036,12 +1011,7 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "BWA3_G_Combat_Clear";
-			};
-			class _xx_ACE_Vector
-			{
-				count = 1;
-				name = "ACE_Vector";
-			};
+			};			
 		};
 	};
 	class T1_Carryall_camo_AAA: T1_Carryall_camo
@@ -1137,12 +1107,7 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "BWA3_G_Combat_Clear";
-			};
-			class _xx_ACE_Vector
-			{
-				count = 1;
-				name = "ACE_Vector";
-			};
+			};			
 		};
 	};
 	class T1_Kitbag_camo_Section_AT: T1_Kitbag_camo
@@ -1194,14 +1159,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -1304,14 +1269,14 @@ class CfgVehicles
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"BWA3_G28_Assault_SOS_pointer_sd",
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -1380,13 +1345,13 @@ class CfgVehicles
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -1446,13 +1411,13 @@ class CfgVehicles
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -1541,14 +1506,14 @@ class CfgVehicles
 			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Laserdesignator",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Laserdesignator",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		magazines[] = {
@@ -1637,14 +1602,14 @@ class CfgVehicles
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		magazines[] = {
@@ -1700,14 +1665,14 @@ class CfgVehicles
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnweapons[] = {
 			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -1793,14 +1758,14 @@ class CfgVehicles
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"BWA3_G28_Assault_SOS_pointer_sd",
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -1869,13 +1834,13 @@ class CfgVehicles
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -1935,13 +1900,13 @@ class CfgVehicles
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -2030,14 +1995,14 @@ class CfgVehicles
 			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Laserdesignator",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Laserdesignator",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		magazines[] = {
@@ -2126,14 +2091,14 @@ class CfgVehicles
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		magazines[] = {
@@ -2189,14 +2154,14 @@ class CfgVehicles
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnweapons[] = {
 			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
 			"T1_BWA3_MP7_LLM01_snds_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -2235,14 +2200,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"SMG_01_ACO_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -2546,7 +2511,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"launch_Titan_short_F"
 		};
 		respawnWeapons[] = {
@@ -2554,7 +2519,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"launch_Titan_short_F"
 		};
 		magazines[] = {
@@ -2611,14 +2576,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -2701,7 +2666,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"launch_Titan_F"
 		};
 		respawnWeapons[] = {
@@ -2709,7 +2674,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"launch_Titan_F"
 		};
 		magazines[] = {
@@ -2766,7 +2731,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator",
+			"ACE_Vector",
 			"launch_Titan_F"
 		};
 		respawnWeapons[] = {
@@ -2774,7 +2739,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -2857,14 +2822,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnweapons[] = {
 			"T1_LMG_BWA3_MG5_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -2901,7 +2866,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 			backpack = "T1_Kitbag_camo";
 			magazines[] = {
@@ -2921,7 +2886,7 @@ class CfgVehicles
 			items[] = {
 			"ACRE_PRC148",
 			"ACE_IR_Strobe_Item",
-			"optic_Hamr",
+			"iansky_specterdr",
 			"BWA3_acc_LLM01_irlaser",STDITEMS,"ACE_SpareBarrel"
 		};
 		};
@@ -2937,14 +2902,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"HandGrenade",
@@ -3064,7 +3029,7 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
-		backpack = "T1_Kitbag_camo_Lead";
+		backpack = "T1_Kitbag_camo_Sniper";
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACRE_PRC148",STDITEMS,};
@@ -3174,14 +3139,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -3274,14 +3239,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"Laserbatteries",
@@ -3380,14 +3345,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -3459,14 +3424,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -3532,14 +3497,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -3601,7 +3566,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
@@ -3609,7 +3574,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		magazines[] = {
@@ -3714,7 +3679,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
@@ -3723,7 +3688,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		magazines[] = {
@@ -3827,7 +3792,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
@@ -3835,7 +3800,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		magazines[] = {
@@ -3916,13 +3881,13 @@ class CfgVehicles
 			"T1_rhs_weap_m249_pip_L_Hamr",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m249_pip_L_Hamr",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -3955,14 +3920,14 @@ class CfgVehicles
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"M72_LAW"
 		};
 		magazines[] = {
@@ -4016,7 +3981,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
@@ -4024,7 +3989,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		magazines[] = {
@@ -4079,7 +4044,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
@@ -4087,7 +4052,7 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder",
+			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		magazines[] = {
@@ -4148,14 +4113,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -4235,14 +4200,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Rangefinder"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"HandGrenade",
@@ -4335,14 +4300,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"Laserdesignator"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"HandGrenade",
@@ -5381,7 +5346,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdr";
+				item = "iansky_specterdrkf";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle
@@ -5403,7 +5368,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "iansky_specterdr";
 				slot = "CowsSlot";
 			};
 		};
@@ -5415,7 +5380,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "iansky_specterdr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -5432,7 +5397,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "iansky_specterdr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -5449,7 +5414,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "iansky_specterdr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -5465,7 +5430,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "iansky_specterdrkf";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle
@@ -5486,7 +5451,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "iansky_specterdrkf";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle

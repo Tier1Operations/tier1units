@@ -1078,18 +1078,14 @@ class CfgVehicles
 	class T1_Carryall_camo_AAT: T1_Carryall_camo
 	{
 		scope = 1;
+		maximumLoad = 600;
 		class TransportMagazines
 		{
 			class _xx_Titan_AT
 			{
 				magazine = "Titan_AT";
-				count = 3;
-			};
-			class _xx_Titan_AP
-			{
-				magazine = "Titan_AP";
-				count = 1;
-			};
+				count = 4;
+			};			
 		};
 		class TransportItems
 		{
@@ -4863,6 +4859,16 @@ class CfgVehicles
 			{
 				magazine = "Titan_AA";
 				count = 12;
+			};
+			class _xx_tf47_m3maaws_HEAT
+			{
+				magazine = "tf47_m3maaws_HEAT";
+				count = 10;
+			};
+			class _xx_tf47_m3maaws_HE
+			{
+				magazine = "tf47_m3maaws_HE";
+				count = 10;
 			};
 		};
 		class TransportItems

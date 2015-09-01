@@ -3353,11 +3353,21 @@ class CfgVehicles
 		backpack = "B_Static_Designator_01_weapon_F";
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS,"ACE_Vector",MEDICALITEMS,"rhs_googles_clear"
+			"ACRE_PRC148",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",
+			STDITEMS,
+			MEDICALITEMS,
+			"rhs_googles_clear"
 		};
-		respawnItems[] = {
+		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS,"ACE_Vector",MEDICALITEMS,"rhs_googles_clear"
+			"ACRE_PRC148",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",
+			STDITEMS,
+			MEDICALITEMS,
+			"rhs_googles_clear"
 		};
 		camouflage = 0.6;
 	};

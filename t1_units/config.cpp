@@ -3161,14 +3161,14 @@ class CfgVehicles
 		displayName = "T1 Scout TL";
 		weapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
-			"hgun_Pistol_heavy_01_F",
+			"rhs_weap_tr8",
 			"Throw",
 			"Put",
 			"ACE_MX2A"
 		};
 		respawnWeapons[] = {
 			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
-			"hgun_Pistol_heavy_01_F",
+			"rhs_weap_tr8",
 			"Throw",
 			"Put",
 			"ACE_MX2A"
@@ -3186,9 +3186,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag"
+			"T1_30Rnd_556x45_Stanag_SD"
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
@@ -3203,9 +3201,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag"
+			"T1_30Rnd_556x45_Stanag_SD"
 		};
 		linkedItems[] = {
 			"V_Chestrig_oli",

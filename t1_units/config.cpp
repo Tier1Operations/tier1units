@@ -3160,14 +3160,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Scout TL";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
 			"rhs_weap_tr8",
 			"Throw",
 			"Put",
 			"ACE_MX2A"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
 			"rhs_weap_tr8",
 			"Throw",
 			"Put",
@@ -3186,7 +3186,11 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD"
+			"T1_30Rnd_556x45_Stanag_SD",
+			"ACE_HuntIR_M203",
+			"ACE_HuntIR_M203",
+			"ACE_HuntIR_M203",
+			"ACE_HuntIR_M203"
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
@@ -3201,7 +3205,11 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD"
+			"T1_30Rnd_556x45_Stanag_SD",
+			"ACE_HuntIR_M203",
+			"ACE_HuntIR_M203",
+			"ACE_HuntIR_M203",
+			"ACE_HuntIR_M203"
 		};
 		linkedItems[] = {
 			"V_Chestrig_oli",
@@ -3224,10 +3232,16 @@ class CfgVehicles
 		backpack = "T1_Kitbag_camo_Scout_Lead";
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS,};
+			"ACRE_PRC148",
+			"ACE_HuntIR_monitor",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			"ACE_HuntIR_monitor",
+			STDITEMS
+		};
 		camouflage = 0.6;
 	};
 	class T1_Scout_Standard_F: T1_Soldier_F

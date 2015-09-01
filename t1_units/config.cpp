@@ -3294,13 +3294,10 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"HandGrenade",
-			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Laserbatteries",
 			"Chemlight_blue",
-			"ACE_M84",
-			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
@@ -3314,13 +3311,10 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
-			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"Laserbatteries",
 			"Chemlight_blue",
-			"ACE_M84",
-			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",

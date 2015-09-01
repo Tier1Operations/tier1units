@@ -3195,7 +3195,18 @@ class CfgVehicles
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
-			"ACE_HuntIR_M203"
+			"ACE_HuntIR_M203",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeBlue_Grenade_shell",
+			"1Rnd_SmokeBlue_Grenade_shell",
+			"1Rnd_SmokePurple_Grenade_shell",
+			"1Rnd_SmokePurple_Grenade_shell",
+			"UGL_FlareCIR_F"
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
@@ -3214,7 +3225,18 @@ class CfgVehicles
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
-			"ACE_HuntIR_M203"
+			"ACE_HuntIR_M203",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeRed_Grenade_shell",
+			"1Rnd_SmokeBlue_Grenade_shell",
+			"1Rnd_SmokeBlue_Grenade_shell",
+			"1Rnd_SmokePurple_Grenade_shell",
+			"1Rnd_SmokePurple_Grenade_shell",
+			"UGL_FlareCIR_F"
 		};
 		linkedItems[] = {
 			"V_Chestrig_oli",

@@ -3209,7 +3209,8 @@ class CfgVehicles
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
-			"ItemWatch"
+			"ItemWatch",
+			"B_UavTerminal"
 		};
 		respawnLinkedItems[] = {
 			"V_Chestrig_oli",
@@ -3217,7 +3218,8 @@ class CfgVehicles
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
-			"ItemWatch"
+			"ItemWatch",
+			"B_UavTerminal"
 		};
 		backpack = "T1_Kitbag_camo_Scout_Lead";
 		items[] = {

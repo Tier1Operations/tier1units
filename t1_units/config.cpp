@@ -128,7 +128,8 @@ class CfgPatches
 			"T1_45KO_ABR_camo_green_DMS_pointer_F",
 			"BWA3_G28_Assault_SOS_pointer_sd",
 			"T1_BWA3_MP7_LLM01_snds_F",
-			"T1_hgun_Pistol_heavy_01_snds_F"
+			"T1_hgun_Pistol_heavy_01_snds_F",
+			"T1_recon_mmrifle_dlc_F"
 		};
 		magazines[] = {};
 		requiredVersion = 0.1;
@@ -3278,14 +3279,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Scout [MM DLC]";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_recon_mmrifle_dlc_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_recon_mmrifle_dlc_F",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3299,15 +3300,15 @@ class CfgVehicles
 			"Laserbatteries",
 			"Chemlight_blue",
 			"ACE_M84",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag"
 		};
@@ -3319,15 +3320,15 @@ class CfgVehicles
 			"Laserbatteries",
 			"Chemlight_blue",
 			"ACE_M84",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag"
 		};
@@ -5691,6 +5692,33 @@ class CfgWeapons
 			{
 				item = "acc_pointer_IR";
 				slot = "PointerSlot";
+			};
+		};
+	};
+	class srifle_DMR_03_woodland_F;
+	class T1_recon_mmrifle_dlc_F : srifle_DMR_03_woodland_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_AMS_khk";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_B";
+				slot = "MuzzleSlot";
+			};
+			class LinkedItemsAcc
+			{
+				item = "acc_pointer_IR";
+				slot = "PointerSlot";
+			};
+			class LinkedItemsUnder
+			{
+				item = "bipod_01_F_mtp";
+				slot = "UnderBarrelSlot";
 			};
 		};
 	};

@@ -400,6 +400,11 @@ class CfgVehicles
 				count = 1;
 				name = "Laserdesignator";
 			};
+			class lr_radio
+			{
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
 		};
 	};
 	class T1_Kitbag_camo_SF_Marksman: B_Kitbag_Base
@@ -3232,13 +3237,11 @@ class CfgVehicles
 		backpack = "T1_Kitbag_camo_Scout_Lead";
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
 			"ACE_HuntIR_monitor",
 			STDITEMS
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
 			"ACE_HuntIR_monitor",
 			STDITEMS
 		};

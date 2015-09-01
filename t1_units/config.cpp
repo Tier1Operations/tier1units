@@ -3263,11 +3263,13 @@ class CfgVehicles
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_HuntIR_monitor",
+			"ACE_RangeCard",
 			STDITEMS
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_HuntIR_monitor",
+			"ACE_RangeCard",
 			STDITEMS
 		};
 		camouflage = 0.6;

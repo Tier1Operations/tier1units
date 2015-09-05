@@ -3356,7 +3356,7 @@ class CfgVehicles
 			MEDICALITEMS,
 			"rhs_googles_clear"
 		};
-		items[] = {
+		respawnitems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACRE_PRC148",
 			"ACE_Kestrel4500",

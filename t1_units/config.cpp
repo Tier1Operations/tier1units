@@ -120,7 +120,7 @@ class CfgPatches
 			"T1_rhs_m4a1_m320_Hamr_pointer_F",
 			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
 			"T1_rhs_weap_m4a1_Hamr_pointer_F",
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"T1_LMG_BWA3_MG5_Hamr_pointer_F",
 			"T1_rhs_weap_m249_pip_L_Hamr",
 			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
@@ -1447,13 +1447,13 @@ class CfgVehicles
 		vehicleClass = "SF";
 		displayName = "T1 SF Explosive Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1513,13 +1513,13 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1702,14 +1702,14 @@ class CfgVehicles
 		vehicleClass = "SF";
 		displayName = "T1 SF Radioman";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -1934,13 +1934,13 @@ class CfgVehicles
 		vehicleClass = "Diver";
 		displayName = "T1 Diver Explosive Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2000,13 +2000,13 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2189,14 +2189,14 @@ class CfgVehicles
 		vehicleClass = "Diver";
 		displayName = "T1 Diver Radioman";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2416,14 +2416,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"T1_hgun_Pistol_heavy_01_snds_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F",
+			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
 			"T1_hgun_Pistol_heavy_01_snds_F",
 			"Throw",
 			"Put",
@@ -5657,9 +5657,8 @@ class CfgWeapons
 				slot = "PointerSlot";
 			};
 		};
-	};	
-	class rhs_weap_m4a1_grip;
-	class T1_rhs_weap_m4a1_grip_Hamr_pointer_SD_F: rhs_weap_m4a1_grip
+	};		
+	class T1_rhs_weap_m4a1_Hamr_pointer_SD_F: rhs_weap_m4a1
 	{
 		class LinkedItems
 		{

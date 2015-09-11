@@ -117,19 +117,19 @@ class CfgPatches
 			"T1_U_Sniper_Standard",
 			"T1_U_Diver_Standard",
 			"T1_U_Squad_Standard",
-			"T1_rhs_m4a1_m320_Hamr_pointer_F",
-			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
-			"T1_LMG_BWA3_MG5_Hamr_pointer_F",
-			"T1_rhs_weap_m249_pip_L_Hamr",
-			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
-			"T1_srifle_LRR_SOS_pointer_F",
-			"T1_45KO_ABR_camo_green_DMS_pointer_F",
-			"BWA3_G28_Assault_SOS_pointer_sd",
-			"T1_BWA3_MP7_LLM01_snds_F",
-			"T1_hgun_Pistol_heavy_01_snds_F",
-			"T1_recon_mmrifle_dlc_F"
+			"T1_weap_rifle_gl",
+			"T1_weap_rifle_gl_sd",
+			"T1_weap_rifle",
+			"T1_weap_rifle_sd",
+			"T1_weap_mmg",
+			"T1_weap_lmg",
+			"T1_weap_mmg_sf",
+			"T1_weap_sierra",
+			"T1_weap_marksman",
+			"T1_weap_marksman_sf",
+			"T1_weap_sidearm_m",
+			"T1_weap_sidearm_l",
+			"T1_weap_romeo_mmdlc"
 		};
 		magazines[] = {};
 		requiredVersion = 0.1;
@@ -1260,14 +1260,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\instructor\t1_poloinstructor_b_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -1370,15 +1370,15 @@ class CfgVehicles
 		vehicleClass = "SF";
 		displayName = "T1 SF Marksman";
 		weapons[] = {
-			"BWA3_G28_Assault_SOS_pointer_sd",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_marksman_sf",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"BWA3_G28_Assault_SOS_pointer_sd",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_marksman_sf",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1449,13 +1449,13 @@ class CfgVehicles
 		vehicleClass = "SF";
 		displayName = "T1 SF Explosive Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1519,13 +1519,13 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1614,14 +1614,14 @@ class CfgVehicles
 		vehicleClass = "SF";
 		displayName = "T1 SF FTL";
 		weapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
 			"ACE_MX2A",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
 			"ACE_MX2A",
@@ -1712,14 +1712,14 @@ class CfgVehicles
 		vehicleClass = "SF";
 		displayName = "T1 SF Radioman";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -1774,15 +1774,15 @@ class CfgVehicles
 		vehicleClass = "SF";
 		displayName = "T1 SF AR";
 		weapons[] = {
-			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_mmg_sf",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnweapons[] = {
-			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_mmg_sf",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1867,15 +1867,15 @@ class CfgVehicles
 		vehicleClass = "Diver";
 		displayName = "T1 Diver Marksman";
 		weapons[] = {
-			"BWA3_G28_Assault_SOS_pointer_sd",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_marksman_sf",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"BWA3_G28_Assault_SOS_pointer_sd",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_marksman_sf",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1946,13 +1946,13 @@ class CfgVehicles
 		vehicleClass = "Diver";
 		displayName = "T1 Diver Explosive Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2016,13 +2016,13 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2111,14 +2111,14 @@ class CfgVehicles
 		vehicleClass = "Diver";
 		displayName = "T1 Diver FTL";
 		weapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2209,14 +2209,14 @@ class CfgVehicles
 		vehicleClass = "Diver";
 		displayName = "T1 Diver Radioman";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
+			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2271,15 +2271,15 @@ class CfgVehicles
 		vehicleClass = "Diver";
 		displayName = "T1 Diver AR";
 		weapons[] = {
-			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_mmg_sf",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnweapons[] = {
-			"T1_45KO_zafir_black_Hamr_pointer_sd_F",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_mmg_sf",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2440,15 +2440,15 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
-			"T1_hgun_Pistol_heavy_01_snds_F",
+			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_SD_F",
-			"T1_hgun_Pistol_heavy_01_snds_F",
+			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -2551,14 +2551,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
 			"srifle_LRR_LRPS_F",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"Rangefinder"
 		};
 		respawnWeapons[] = {
 			"srifle_LRR_LRPS_F",
-			"T1_BWA3_MP7_LLM01_snds_F",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"Rangefinder"
@@ -2640,14 +2640,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AT Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"launch_Titan_short_F"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2699,13 +2699,13 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AAT Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2785,14 +2785,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Medium AT Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"tf47_m3maaws_optic"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2844,13 +2844,13 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Medium AAT Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2930,14 +2930,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AA Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"launch_Titan_F"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2989,14 +2989,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AAA Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"launch_Titan_F"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3076,13 +3076,13 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 MG Specialist";
 		weapons[] = {
-			"T1_LMG_BWA3_MG5_Hamr_pointer_F",
+			"T1_weap_mmg",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnweapons[] = {
-			"T1_LMG_BWA3_MG5_Hamr_pointer_F",
+			"T1_weap_mmg",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3156,13 +3156,13 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AMG Specialist";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3220,14 +3220,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Scout TL";
 		weapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"T1_weap_rifle_gl_sd",
 			"rhs_weap_tr8",
 			"Throw",
 			"Put",
 			"ACE_MX2A"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_SD_F",
+			"T1_weap_rifle_gl_sd",
 			"rhs_weap_tr8",
 			"Throw",
 			"Put",
@@ -3335,14 +3335,14 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Scout [MM DLC]";
 		weapons[] = {
-			"T1_recon_mmrifle_dlc_F",
+			"T1_weap_romeo_mmdlc",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
-			"T1_recon_mmrifle_dlc_F",
+			"T1_weap_romeo_mmdlc",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3431,14 +3431,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3535,14 +3535,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3643,14 +3643,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3720,14 +3720,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3793,14 +3793,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3862,7 +3862,7 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Section Leader";
 		weapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"T1_weap_rifle_gl",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3870,7 +3870,7 @@ class CfgVehicles
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"T1_weap_rifle_gl",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3977,7 +3977,7 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Section Sergeant";
 		weapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"T1_weap_rifle_gl",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -3985,7 +3985,7 @@ class CfgVehicles
 			"M72_LAW"
 		};
 		respawnWeapons[] = {			
-			"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"T1_weap_rifle_gl",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4092,7 +4092,7 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Combat Life Saver";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4100,7 +4100,7 @@ class CfgVehicles
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4182,13 +4182,13 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Automatic Rifleman";
 		weapons[] = {
-			"T1_rhs_weap_m249_pip_L_Hamr",
+			"T1_weap_lmg",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m249_pip_L_Hamr",
+			"T1_weap_lmg",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -4221,14 +4221,14 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Asst. Automatic Rifleman";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"M72_LAW"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4281,14 +4281,14 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Weapon Specialist";
 		weapons[] = {
-			"T1_45KO_ABR_camo_green_DMS_pointer_F",
+			"T1_weap_marksman",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
-			"T1_45KO_ABR_camo_green_DMS_pointer_F",
+			"T1_weap_marksman",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4338,7 +4338,7 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Rifleman AT";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4346,7 +4346,7 @@ class CfgVehicles
 			"BWA3_RGW90"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4407,14 +4407,14 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Platoon Lead";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4496,14 +4496,14 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Medic";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4596,14 +4596,14 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Platoon EOD";
 		weapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_weap_m4a1_Hamr_pointer_F",
+			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -4664,14 +4664,14 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Platoon Sergeant";
 		weapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"T1_weap_rifle_gl",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
-			"T1_rhs_m4a1_m320_Hamr_pointer_F",
+			"T1_weap_rifle_gl",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
@@ -5201,9 +5201,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_T1_rhs_weap_m4a1_Hamr_pointer_F
+			class _xx_T1_weap_rifle
 			{
-				weapon = "T1_rhs_weap_m4a1_Hamr_pointer_F";
+				weapon = "T1_weap_rifle";
 				count = 1;
 			};
 			class _xx_BWA3_RGW90
@@ -5315,9 +5315,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_T1_rhs_weap_m4a1_Hamr_pointer_F
+			class _xx_T1_weap_rifle
 			{
-				weapon = "T1_rhs_weap_m4a1_Hamr_pointer_F";
+				weapon = "T1_weap_rifle";
 				count = 1;
 			};
 			class _xx_BWA3_RGW90
@@ -5429,9 +5429,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_T1_rhs_weap_m4a1_Hamr_pointer_F
+			class _xx_T1_weap_rifle
 			{
-				weapon = "T1_rhs_weap_m4a1_Hamr_pointer_F";
+				weapon = "T1_weap_rifle";
 				count = 1;
 			};
 			class _xx_BWA3_RGW90
@@ -5562,7 +5562,7 @@ class CfgWeapons
 	};
 	*/
 	class hgun_Pistol_heavy_01_F;
-	class T1_hgun_Pistol_heavy_01_snds_F: hgun_Pistol_heavy_01_F
+	class T1_weap_sidearm_l: hgun_Pistol_heavy_01_F
 	{
 		class LinkedItems
 		{
@@ -5579,7 +5579,7 @@ class CfgWeapons
 		};
 	};
 	class 45KO_ABR_camo_green_F;
-	class T1_45KO_ABR_camo_green_DMS_pointer_F: 45KO_ABR_camo_green_F
+	class T1_weap_marksman: 45KO_ABR_camo_green_F
 	{
 		class LinkedItems
 		{
@@ -5596,7 +5596,7 @@ class CfgWeapons
 		};
 	};
 	class BWA3_G28_Assault;
-	class BWA3_G28_Assault_SOS_pointer_sd: BWA3_G28_Assault
+	class T1_weap_marksman_sf: BWA3_G28_Assault
 	{
 		class LinkedItems
 		{
@@ -5618,7 +5618,7 @@ class CfgWeapons
 		};
 	};
 	class srifle_LRR_F;
-	class T1_srifle_LRR_SOS_pointer_F: srifle_LRR_F
+	class T1_weap_sierra: srifle_LRR_F
 	{
 		class LinkedItems
 		{
@@ -5630,7 +5630,7 @@ class CfgWeapons
 		};
 	};
 	class BWA3_MP7;
-	class T1_BWA3_MP7_LLM01_snds_F: BWA3_MP7
+	class T1_weap_sidearm_m: BWA3_MP7
 	{
 		class LinkedItems
 		{
@@ -5652,7 +5652,7 @@ class CfgWeapons
 		};
 	};
 	class 45KO_zafir_black;
-	class T1_45KO_zafir_black_Hamr_pointer_sd_F: 45KO_zafir_black
+	class T1_weap_mmg_sf: 45KO_zafir_black
 	{
 		class LinkedItems
 		{
@@ -5674,7 +5674,7 @@ class CfgWeapons
 		};
 	};
 	class rhs_weap_m249_pip_L;
-	class T1_rhs_weap_m249_pip_L_Hamr: rhs_weap_m249_pip_L
+	class T1_weap_lmg: rhs_weap_m249_pip_L
 	{
 		class LinkedItems
 		{
@@ -5686,7 +5686,7 @@ class CfgWeapons
 		};
 	};
 	class BWA3_MG5;
-	class T1_LMG_BWA3_MG5_Hamr_pointer_F: BWA3_MG5
+	class T1_weap_mmg: BWA3_MG5
 	{
 		class LinkedItems
 		{
@@ -5703,7 +5703,7 @@ class CfgWeapons
 		};
 	};
 	class rhs_weap_m4a1;
-	class T1_rhs_weap_m4a1_Hamr_pointer_F: rhs_weap_m4a1
+	class T1_weap_rifle: rhs_weap_m4a1
 	{
 		class LinkedItems
 		{
@@ -5720,7 +5720,7 @@ class CfgWeapons
 		};
 	};
 	class rhs_m4a1_m320;
-	class T1_rhs_m4a1_m320_Hamr_pointer_F: rhs_m4a1_m320
+	class T1_weap_rifle_gl: rhs_m4a1_m320
 	{
 		class LinkedItems
 		{
@@ -5736,7 +5736,7 @@ class CfgWeapons
 			};
 		};
 	};		
-	class T1_rhs_weap_m4a1_Hamr_pointer_SD_F: rhs_weap_m4a1
+	class T1_weap_rifle_sd: rhs_weap_m4a1
 	{
 		class LinkedItems
 		{
@@ -5757,7 +5757,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class T1_rhs_m4a1_m320_Hamr_pointer_SD_F: rhs_m4a1_m320
+	class T1_weap_rifle_gl_sd: rhs_m4a1_m320
 	{
 		class LinkedItems
 		{
@@ -5779,7 +5779,7 @@ class CfgWeapons
 		};
 	};
 	class srifle_DMR_03_woodland_F;
-	class T1_recon_mmrifle_dlc_F : srifle_DMR_03_woodland_F
+	class T1_weap_romeo_mmdlc : srifle_DMR_03_woodland_F
 	{
 		class LinkedItems
 		{

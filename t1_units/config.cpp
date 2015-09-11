@@ -9,7 +9,7 @@
 #define STDITEMS "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie"
 
 // MEDICALITEMS is used in addition to STDITEMS for units without backpacks
-#define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
+#define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
 
 //Class t1_units : config.bin{
 class CfgPatches
@@ -200,10 +200,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -229,10 +229,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -266,10 +266,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -295,10 +295,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -337,10 +337,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -371,10 +371,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};		
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -423,10 +423,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -455,10 +455,10 @@ class CfgVehicles
 		scope = 1;
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -489,10 +489,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 50;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -531,10 +531,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 30;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -563,10 +563,10 @@ class CfgVehicles
 		scope = 1;
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 45;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -606,10 +606,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_carryall_camo_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -638,10 +638,10 @@ class CfgVehicles
 				name = "ToolKit";
 				count = 1;
 			};
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -693,10 +693,10 @@ class CfgVehicles
 				count = 1;
 				name = "MineDetector";
 			};
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -743,10 +743,10 @@ class CfgVehicles
 				count = 1;
 				name = "MineDetector";
 			};
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -793,10 +793,10 @@ class CfgVehicles
 				count = 1;
 				name = "MineDetector";
 			};
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -833,10 +833,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -873,10 +873,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{			
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -913,10 +913,10 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_SpareBarrel";
 			};
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -948,10 +948,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{			
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -983,10 +983,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1023,10 +1023,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1058,10 +1058,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1165,10 +1165,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1201,10 +1201,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1228,10 +1228,10 @@ class CfgVehicles
 		scope = 1;
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 9;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1429,12 +1429,14 @@ class CfgVehicles
 		};
 		backpack = "T1_Kitbag_camo_SF_Marksman";
 		items[] = {
-			STDITEMS,"ACE_RangeCard",
+			STDITEMS,
+			"ACE_RangeCard",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500"
 		};
 		respawnItems[] = {
-			STDITEMS,"ACE_RangeCard",
+			STDITEMS,
+			"ACE_RangeCard",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500"
 		};
@@ -1496,10 +1498,14 @@ class CfgVehicles
 		backpack = "T1_Carryall_camo_Exp_SF";
 		items[] = {
 			"ACE_M26_Clacker",
-			"ACE_DefusalKit",STDITEMS};
+			"ACE_DefusalKit",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACE_M26_Clacker",
-			"ACE_DefusalKit",STDITEMS};
+			"ACE_DefusalKit",
+			STDITEMS
+		};
 		canDeactivateMines = 1;
 		detectSkill = 80;
 		camouflage = 1.0;
@@ -1689,10 +1695,14 @@ class CfgVehicles
 		backpack = "T1_Kitbag_camo_Lead_SF";
 		items[] = {
 			"ACRE_PRC148",
-			"ACE_IR_Strobe_Item",STDITEMS};
+			"ACE_IR_Strobe_Item",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACRE_PRC148",
-			"ACE_IR_Strobe_Item",STDITEMS};
+			"ACE_IR_Strobe_Item",
+			STDITEMS
+		};
 		camouflage = 1.0;
 	};
 	class T1_SF_AT_Standard_F: T1_Soldier_F
@@ -1916,12 +1926,14 @@ class CfgVehicles
 		};
 		backpack = "T1_Kitbag_camo_SF_Marksman";
 		items[] = {
-			STDITEMS,"ACE_RangeCard",
+			STDITEMS,
+			"ACE_RangeCard",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500"
 		};
 		respawnItems[] = {
-			STDITEMS,"ACE_RangeCard",
+			STDITEMS,
+			"ACE_RangeCard",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500"
 		};
@@ -1983,10 +1995,14 @@ class CfgVehicles
 		backpack = "T1_Carryall_camo_Exp_SF";
 		items[] = {
 			"ACE_M26_Clacker",
-			"ACE_DefusalKit",STDITEMS};
+			"ACE_DefusalKit",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACE_M26_Clacker",
-			"ACE_DefusalKit",STDITEMS};
+			"ACE_DefusalKit",
+			STDITEMS
+		};
 		canDeactivateMines = 1;
 		detectSkill = 80;
 		camouflage = 1.0;
@@ -2176,10 +2192,14 @@ class CfgVehicles
 		backpack = "T1_Kitbag_camo_Lead_SF";
 		items[] = {
 			"ACRE_PRC148",
-			"ACE_IR_Strobe_Item",STDITEMS};
+			"ACE_IR_Strobe_Item",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACRE_PRC148",
-			"ACE_IR_Strobe_Item",STDITEMS};
+			"ACE_IR_Strobe_Item",
+			STDITEMS
+		};
 		camouflage = 1.0;
 	};
 	class T1_Diver_AT_Standard_F: T1_Diver_Soldier_F
@@ -2354,25 +2374,29 @@ class CfgVehicles
 		};
 		// Todo: Evaluate wrt MEDICALITEMS mismatch
 		items[] = {
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_epinephrine",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		respawnItems[] = {
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_epinephrine",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		camouflage = 1.4;
 	};
 	class T1_Pilot_Black_F: T1_Pilot_Standard_F
@@ -2497,14 +2521,18 @@ class CfgVehicles
 			"ACRE_PRC148",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
-			"ACE_RangeCard",STDITEMS};
+			"ACE_RangeCard",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
 			"ACRE_PRC148",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
-			"ACE_RangeCard",STDITEMS};
+			"ACE_RangeCard",
+			STDITEMS
+		};
 		backpack = "T1_Kitbag_camo_Sniper";
 		camouflage = 0.3;
 		glassesEnabled = 0;
@@ -2586,14 +2614,18 @@ class CfgVehicles
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			"ACRE_PRC148",STDITEMS,"ACE_ATragMX",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard"
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			"ACRE_PRC148",STDITEMS,"ACE_ATragMX",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard"
 		};
@@ -2711,30 +2743,34 @@ class CfgVehicles
 			"SmokeShellGreen"
 		};
 		items[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_epinephrine"
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
@@ -2852,30 +2888,34 @@ class CfgVehicles
 			"SmokeShellGreen"
 		};
 		items[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_epinephrine"
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
@@ -2994,30 +3034,34 @@ class CfgVehicles
 			"SmokeShellGreen"
 		};
 		items[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_epinephrine"
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
@@ -3061,11 +3105,15 @@ class CfgVehicles
 		backpack = "T1_Kitbag_camo_MG";
 		items[] = {
 			"ACRE_PRC148",
-			"ACE_IR_Strobe_Item",STDITEMS,"ACE_SpareBarrel"
+			"ACE_IR_Strobe_Item",
+			STDITEMS,
+			"ACE_SpareBarrel"
 		};
 		respawnItems[] = {
 			"ACRE_PRC148",
-			"ACE_IR_Strobe_Item",STDITEMS,"ACE_SpareBarrel"
+			"ACE_IR_Strobe_Item",
+			STDITEMS,
+			"ACE_SpareBarrel"
 		};
 		class altloadout1 {
 			description = ".338 MG DLC";
@@ -3095,7 +3143,9 @@ class CfgVehicles
 			"ACRE_PRC148",
 			"ACE_IR_Strobe_Item",
 			"iansky_specterdr",
-			"acc_pointer_IR",STDITEMS,"ACE_SpareBarrel"
+			"acc_pointer_IR",
+			STDITEMS,
+			"ACE_SpareBarrel"
 		};
 		};
 	};
@@ -3153,10 +3203,14 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		backpack = "T1_Carryall_camo_AMG";
 	};
 	class T1_Scout_TL_Standard_F: T1_Soldier_F
@@ -3436,36 +3490,40 @@ class CfgVehicles
 		};
 		items[] = {
 			"BWA3_G_Combat_Clear",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_epinephrine",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"BWA3_G_Combat_Clear",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_epinephrine",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 	};
 	class T1_Crew_Commander_Standard_F: T1_Soldier_F
 	{
@@ -3540,36 +3598,40 @@ class CfgVehicles
 		};
 		items[] = {
 			"BWA3_G_Combat_Clear",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_epinephrine",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"BWA3_G_Combat_Clear",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
-			"ACE_fieldDressing",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
+			"ACE_quikclot",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_morphine",
 			"ACE_epinephrine",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 	};
 	class T1_Sentinel_Commander_Standard_F: T1_Soldier_F
 	{
@@ -3897,10 +3959,14 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		icon = "iconManLeader";
 		backpack = "T1_Kitbag_camo_Lead";
 	};
@@ -4008,10 +4074,14 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		icon = "iconManLeader";
 		backpack = "T1_Kitbag_camo_Lead";
 	};
@@ -4408,10 +4478,14 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",STDITEMS};
+			"ACRE_PRC148",
+			STDITEMS
+		};
 		icon = "iconManLeader";
 		backpack = "T1_Kitbag_camo_Lead";
 	};
@@ -4655,10 +4729,14 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACRE_PRC148",
-			"B_UavTerminal",STDITEMS};
+			"B_UavTerminal",
+			STDITEMS
+		};
 		respawnItems[] = {
 			"ACRE_PRC148",
-			"B_UavTerminal",STDITEMS};
+			"B_UavTerminal",
+			STDITEMS
+		};
 		backpack = "T1_Carryall_camo_PLSgt_JTAC";
 	};
 	class B_Heli_Light_01_F;
@@ -4782,10 +4860,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 80;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -4906,10 +4984,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 40;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -5100,10 +5178,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 50;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -5214,10 +5292,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 50;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{
@@ -5328,10 +5406,10 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class _xx_ACE_quikclot
 			{
 				count = 50;
-				name = "ACE_fieldDressing";
+				name = "ACE_quikclot";
 			};
 			class _xx_ACE_morphine
 			{

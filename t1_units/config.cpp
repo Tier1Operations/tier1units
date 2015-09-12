@@ -131,7 +131,9 @@ class CfgPatches
 			"T1_weap_sidearm_l",
 			"T1_weap_romeo_mmdlc"
 		};
-		magazines[] = {};
+		magazines[] = {
+			"t1_100Rnd_762x51_Box"
+		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
 			"45KO_SO_weapons_ABR",
@@ -156,6 +158,27 @@ class CfgFactionClasses
 		side = 1;
 		priority = 10;
 		icon = "\t1_units\data\cfgFactionClasses_T1_ca.paa";
+	};
+};
+class CfgMagazines
+{
+	class CA_Magazine;
+	
+	class t1_100Rnd_762x51_Box: CA_Magazine
+	{
+		author = "Tier1 Operations";
+		scope = 2;
+		displayName = "7.62x51mm 100Rnd Box";
+		descriptionShort = "7.62x51mm 100Rnd Box";
+		picture = "\A3\Weapons_F_Beta\Data\UI\m_150Rnd_762x51_CA.paa";
+		count = 100;
+		type = "2*		256";
+		ammo = "B_762x51_Tracer_Red";
+		initSpeed = 860;
+		tracersEvery = 5;
+		lastRoundsTracer = 4;
+		nameSound = "mgun";
+		mass = 67;
 	};
 };
 class CfgVehicleClasses

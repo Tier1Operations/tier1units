@@ -1172,11 +1172,6 @@ class CfgVehicles
 				count = 1;
 				name = "rhs_goggles_clear";
 			};
-			class _xx_ACE_Vector
-			{
-				count = 1;
-				name = "ACE_Vector";
-			};
 		};
 	};
 	class T1_Kitbag_camo_MG: T1_Kitbag_camo

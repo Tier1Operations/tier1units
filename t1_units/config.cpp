@@ -137,7 +137,6 @@ class CfgPatches
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
 			"45KO_SO_weapons_ABR",
-			"t1_45KO_fix",
 			"iansky_opt",
 			"ace_flashsuppressors",
 			"BWA3_Weapons",
@@ -5680,9 +5679,34 @@ class CfgWeapons
 			};
 		};
 	};
-	class 45KO_zafir_black;
+	
+	class Rifle_Long_Base_F;
+	class LMG_Zafir_F: Rifle_Long_Base_F
+	{
+		magazines[] += {"t1_100Rnd_762x51_Box"};
+		class WeaponSlotsInfo;
+		class Single;
+		class FullAuto;
+	};
+	class 45KO_zafir_black: LMG_Zafir_F	{
+		class WeaponSlotsInfo;
+		class Single;
+		class FullAuto;
+	};
 	class T1_weap_mmg_sf: 45KO_zafir_black
 	{
+		displayName = "Negev NG7 NATO (Black)";
+		dispersion = 0.00032;
+		ACE_Overheating_JamChance[] = {0, 0.00010, 0.0005, 0.0025};
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+			mass = 168;
+		};
+		class Single: Single {
+			dispersion = 0.00032;
+		};		
+		class FullAuto: FullAuto {	
+			dispersion = 0.00032;
+		};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -5747,7 +5771,7 @@ class CfgWeapons
 				slot = "PointerSlot";
 			};
 		};
-	};
+	};	
 	class rhs_m4a1_m320;
 	class T1_weap_rifle_gl: rhs_m4a1_m320
 	{

@@ -4767,7 +4767,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		faction = "T1_Units";
-		displayName = "T1 MH9";
+		displayName = "T1 MH9 (Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\MH9\t1_mh9_camo_co.paa"};
 		crew = "T1_Pilot_Camo_F";
 	};
@@ -4775,7 +4775,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		faction = "T1_Units";
-		displayName = "T1 AH9";
+		displayName = "T1 AH9 (Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\MH9\t1_mh9_camo_co.paa"};
 		crew = "T1_Pilot_Camo_F";
 	};
@@ -4783,7 +4783,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		faction = "T1_Units";
-		displayName = "T1 MH9";
+		displayName = "T1 MH9 (Night)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\MH9\t1_mh9_night_co.paa"};
 		crew = "T1_Pilot_Night_F";
 	};
@@ -4791,7 +4791,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		faction = "T1_Units";
-		displayName = "T1 AH9";
+		displayName = "T1 AH9 (Night)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\MH9\t1_mh9_night_co.paa"};
 		crew = "T1_Pilot_Night_F";
 	};
@@ -4799,7 +4799,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		faction = "T1_Units";
-		displayName = "T1 MH9";
+		displayName = "T1 MH9 (black)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\MH9\t1_mh9_black_co.paa"};
 		crew = "T1_Pilot_Black_F";
 	};
@@ -4807,7 +4807,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		faction = "T1_Units";
-		displayName = "T1 AH9";
+		displayName = "T1 AH9 (black)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\MH9\t1_mh9_black_co.paa"};
 		crew = "T1_Pilot_Black_F";
 	};
@@ -4815,7 +4815,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		faction = "T1_Units";
-		displayName = "T1 MH9";
+		displayName = "T1 MH9 (Black Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\MH9\t1_mh9_BlackCamo_co.paa"};
 		crew = "T1_Pilot_BlackCamo_F";
 	};
@@ -4823,7 +4823,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		faction = "T1_Units";
-		displayName = "T1 AH9";
+		displayName = "T1 AH9 (Black Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\vehicles\MH9\t1_mh9_BlackCamo_co.paa"};
 		crew = "T1_Pilot_BlackCamo_F";
 	};

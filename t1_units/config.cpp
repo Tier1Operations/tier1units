@@ -5609,6 +5609,7 @@ class CfgWeapons
 	class 45KO_ABR_camo_green_F;
 	class T1_weap_marksman: 45KO_ABR_camo_green_F
 	{
+		displayName = "Mk14 Mod 1 EBR (Green)";
 		class LinkedItems
 		{
 			class LinkedItemsOptic

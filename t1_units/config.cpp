@@ -141,7 +141,7 @@ class CfgPatches
 			"ace_flashsuppressors",
 			"BWA3_Weapons",
 			"BWA3_Weapons_t1fix",
-			"TIER1_LAW",
+			"t1_law",
 			"ace_medical",
 			"rhsusf_c_weapons",
 			"t1_556_sd_ammo",
@@ -1640,14 +1640,14 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_MX2A",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
 			"ACE_MX2A",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		magazines[] = {
 			"ACE_M84",			
@@ -2137,14 +2137,14 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -3889,7 +3889,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl",
@@ -3897,7 +3897,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		magazines[] = {			
 			"ACE_M84",
@@ -4004,7 +4004,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		respawnWeapons[] = {			
 			"T1_weap_rifle_gl",
@@ -4012,7 +4012,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		magazines[] = {			
 			"ACE_M84",
@@ -4119,7 +4119,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
@@ -4127,7 +4127,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		magazines[] = {
 			"HandGrenade",
@@ -4247,14 +4247,14 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"M72_LAW"
+			"HAFM_LAW"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -4920,9 +4920,9 @@ class CfgVehicles
 				weapon = "BWA3_RGW90";
 				count = 1;
 			};
-			class _xx_M72_LAW
+			class _xx_HAFM_LAW
 			{
-				weapon = "M72_LAW";
+				weapon = "HAFM_LAW";
 				count = 7;
 			};
 		};
@@ -5039,9 +5039,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_M72_LAW
+			class _xx_HAFM_LAW
 			{
-				weapon = "M72_LAW";
+				weapon = "HAFM_LAW";
 				count = 2;
 			};
 		};
@@ -5233,9 +5233,9 @@ class CfgVehicles
 				weapon = "BWA3_RGW90";
 				count = 1;
 			};
-			class _xx_M72_LAW
+			class _xx_HAFM_LAW
 			{
-				weapon = "M72_LAW";
+				weapon = "HAFM_LAW";
 				count = 3;
 			};
 		};
@@ -5347,9 +5347,9 @@ class CfgVehicles
 				weapon = "BWA3_RGW90";
 				count = 1;
 			};
-			class _xx_M72_LAW
+			class _xx_HAFM_LAW
 			{
-				weapon = "M72_LAW";
+				weapon = "HAFM_LAW";
 				count = 3;
 			};
 		};
@@ -5461,9 +5461,9 @@ class CfgVehicles
 				weapon = "BWA3_RGW90";
 				count = 1;
 			};
-			class _xx_M72_LAW
+			class _xx_HAFM_LAW
 			{
-				weapon = "M72_LAW";
+				weapon = "HAFM_LAW";
 				count = 3;
 			};
 		};

@@ -5546,20 +5546,6 @@ class CfgWeapons
 			};
 		};
 	};	
-	class optic_Hamr;
-	class BWA3_optic_24x72: optic_Hamr
-	{
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			class OpticsModes
-			{
-				class Scope
-				{
-					visionMode[] = {};
-				};
-			};
-		};
-	};	
 	class iansky_specterdr: ItemCore
 	{
 		class ItemInfo: InventoryOpticsItem_Base_F

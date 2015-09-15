@@ -182,9 +182,9 @@ class CfgVehicles
 				weapon = "BWA3_RGW90";
 				count = 5;
 			};
-			class _xx_M72_LAW
+			class _xx_HAFM_LAW
 			{
-				weapon = "M72_LAW";
+				weapon = "HAFM_LAW";
 				count = 14;
 			};
 		};
@@ -358,9 +358,9 @@ class CfgVehicles
 				weapon = "BWA3_RGW90";
 				count = 5;
 			};
-			class _xx_M72_LAW
+			class _xx_HAFM_LAW
 			{
-				weapon = "M72_LAW";
+				weapon = "HAFM_LAW";
 				count = 14;
 			};
 		};

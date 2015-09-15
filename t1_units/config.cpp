@@ -136,7 +136,6 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
-			"iansky_opt",
 			"ace_flashsuppressors",
 			"ace_medical",
 			"rhsusf_c_weapons",
@@ -3158,7 +3157,7 @@ class CfgVehicles
 			items[] = {
 			"ACRE_PRC148",
 			"ACE_IR_Strobe_Item",
-			"iansky_specterdr",
+			"optic_Hamr",
 			"acc_pointer_IR",
 			STDITEMS,
 			"ACE_SpareBarrel"
@@ -5509,19 +5508,6 @@ class CfgWeapons
 			};
 		};
 	};	
-	class iansky_specterdr: ItemCore
-	{
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			class OpticsModes
-			{
-				class DRScope
-				{
-					visionMode[] = {};
-				};
-			};
-		};
-	};
 	/*
 	class NVGoggles;
 	class ACE_NVG_Gen4: NVGoggles
@@ -5630,7 +5616,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdrkf";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle
@@ -5652,7 +5638,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdr";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 		};
@@ -5681,7 +5667,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdr";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -5698,7 +5684,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdr";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc
@@ -5714,7 +5700,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdrkf";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle
@@ -5735,7 +5721,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdrkf";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle

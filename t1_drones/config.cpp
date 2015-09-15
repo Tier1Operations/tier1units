@@ -177,9 +177,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_BWA3_RGW90
+			class _xx_tf47_at4_hp
 			{
-				weapon = "BWA3_RGW90";
+				weapon = "tf47_at4_hp";
 				count = 5;
 			};
 			class _xx_HAFM_LAW
@@ -353,9 +353,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_BWA3_RGW90
+			class _xx_tf47_at4_hp
 			{
-				weapon = "BWA3_RGW90";
+				weapon = "tf47_at4_hp";
 				count = 5;
 			};
 			class _xx_HAFM_LAW

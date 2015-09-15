@@ -1738,14 +1738,14 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_hp"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_hp"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -2235,14 +2235,14 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_hp"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_hp"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -4307,14 +4307,14 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_hp"
 		};
 		respawnWeapons[] = {
 			"T1_weap_marksman",
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_hp"
 		};
 		magazines[] = {
 			"SmokeShell",
@@ -4365,7 +4365,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_hp"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
@@ -4373,7 +4373,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_hp"
 		};
 		magazines[] = {
 			"SmokeShell",
@@ -4915,9 +4915,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_BWA3_RGW90
+			class _xx_tf47_at4_hp
 			{
-				weapon = "BWA3_RGW90";
+				weapon = "tf47_at4_hp";
 				count = 1;
 			};
 			class _xx_HAFM_LAW
@@ -5228,9 +5228,9 @@ class CfgVehicles
 				weapon = "T1_weap_rifle";
 				count = 1;
 			};
-			class _xx_BWA3_RGW90
+			class _xx_tf47_at4_hp
 			{
-				weapon = "BWA3_RGW90";
+				weapon = "tf47_at4_hp";
 				count = 1;
 			};
 			class _xx_HAFM_LAW
@@ -5342,9 +5342,9 @@ class CfgVehicles
 				weapon = "T1_weap_rifle";
 				count = 1;
 			};
-			class _xx_BWA3_RGW90
+			class _xx_tf47_at4_hp
 			{
-				weapon = "BWA3_RGW90";
+				weapon = "tf47_at4_hp";
 				count = 1;
 			};
 			class _xx_HAFM_LAW
@@ -5456,9 +5456,9 @@ class CfgVehicles
 				weapon = "T1_weap_rifle";
 				count = 1;
 			};
-			class _xx_BWA3_RGW90
+			class _xx_tf47_at4_hp
 			{
-				weapon = "BWA3_RGW90";
+				weapon = "tf47_at4_hp";
 				count = 1;
 			};
 			class _xx_HAFM_LAW

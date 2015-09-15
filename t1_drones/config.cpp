@@ -56,10 +56,10 @@ class CfgVehicles
 				magazine = "rhs_200rnd_556x45_M_SAW";
 				count = 30;
 			};
-			class _xx_BWA3_120Rnd_762x51
+			class _xx_rhsusf_100Rnd_762x51_m993
 			{
-				magazine = "BWA3_120Rnd_762x51";
-				count = 20;
+				magazine = "rhsusf_100Rnd_762x51_m993";
+				count = 24;
 			};
 			class _xx_20Rnd_762x51_Mag
 			{

@@ -1178,10 +1178,10 @@ class CfgVehicles
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_BWA3_120Rnd_762x51
+			class _xx_mgammo
 			{
-				magazine = "BWA3_120Rnd_762x51";
-				count = 3;
+				magazine = "rhsusf_100Rnd_762x51_m993";
+				count = 5;
 			};
 		};
 		class TransportItems
@@ -1214,10 +1214,10 @@ class CfgVehicles
 		maximumLoad = 600;
 		class TransportMagazines
 		{
-			class _xx_BWA3_120Rnd_762x51
+			class _xx_mgammo
 			{
-				count = 5;
-				magazine = "BWA3_120Rnd_762x51";
+				count = 8;
+				magazine = "rhsusf_100Rnd_762x51_m993";
 			};
 		};
 		class TransportItems
@@ -3106,15 +3106,17 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"BWA3_120Rnd_762x51",
-			"BWA3_120Rnd_762x51",
+			"rhsusf_100Rnd_762x51_m993",
+			"rhsusf_100Rnd_762x51_m993",
+			"rhsusf_100Rnd_762x51_m993",
 			"HandGrenade",
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"BWA3_120Rnd_762x51",
-			"BWA3_120Rnd_762x51",
+			"rhsusf_100Rnd_762x51_m993",
+			"rhsusf_100Rnd_762x51_m993",
+			"rhsusf_100Rnd_762x51_m993",
 			"HandGrenade",
 			"SmokeShell"
 		};
@@ -3199,7 +3201,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"BWA3_120Rnd_762x51"
+			"rhsusf_100Rnd_762x51_m993",
+			"rhsusf_100Rnd_762x51_m993"
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
@@ -3216,7 +3219,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"BWA3_120Rnd_762x51"
+			"rhsusf_100Rnd_762x51_m993",
+			"rhsusf_100Rnd_762x51_m993"
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
@@ -4925,10 +4929,10 @@ class CfgVehicles
 				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
 				count = 48;
 			};
-			class _xx_BWA3_120Rnd_762x51
+			class _xx_mgammo
 			{
-				magazine = "BWA3_120Rnd_762x51";
-				count = 32;
+				magazine = "rhsusf_100Rnd_762x51_m993";
+				count = 40;
 			};
 			class _xx_7Rnd_408_Mag
 			{
@@ -5657,14 +5661,14 @@ class CfgWeapons
 			};
 		};
 	};
-	class BWA3_MG5;
-	class T1_weap_mmg: BWA3_MG5
+	class rhs_weap_m240B;
+	class T1_weap_mmg: rhs_weap_m240B
 	{
 		class LinkedItems
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdr";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc

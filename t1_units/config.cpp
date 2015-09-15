@@ -1639,15 +1639,13 @@ class CfgVehicles
 			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
-			"ACE_MX2A",
-			"HAFM_LAW"
+			"ACE_MX2A"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
-			"ACE_MX2A",
-			"HAFM_LAW"
+			"ACE_MX2A"
 		};
 		magazines[] = {
 			"ACE_M84",			
@@ -2136,15 +2134,13 @@ class CfgVehicles
 			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl_sd",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -3888,16 +3884,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		magazines[] = {			
 			"ACE_M84",
@@ -4003,16 +3997,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {			
 			"T1_weap_rifle_gl",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		magazines[] = {			
 			"ACE_M84",
@@ -4118,16 +4110,14 @@ class CfgVehicles
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
 			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"HandGrenade",
@@ -4246,15 +4236,13 @@ class CfgVehicles
 			"T1_weap_rifle",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"HAFM_LAW"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -4920,11 +4908,6 @@ class CfgVehicles
 				weapon = "tf47_at4_hp";
 				count = 1;
 			};
-			class _xx_HAFM_LAW
-			{
-				weapon = "HAFM_LAW";
-				count = 7;
-			};
 		};
 		class TransportBackpacks{};
 	};
@@ -5039,11 +5022,6 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_HAFM_LAW
-			{
-				weapon = "HAFM_LAW";
-				count = 2;
-			};
 		};
 		class TransportBackpacks
 		{
@@ -5233,11 +5211,6 @@ class CfgVehicles
 				weapon = "tf47_at4_hp";
 				count = 1;
 			};
-			class _xx_HAFM_LAW
-			{
-				weapon = "HAFM_LAW";
-				count = 3;
-			};
 		};
 	};
 	class MRAP_01_gmg_base_F;
@@ -5347,11 +5320,6 @@ class CfgVehicles
 				weapon = "tf47_at4_hp";
 				count = 1;
 			};
-			class _xx_HAFM_LAW
-			{
-				weapon = "HAFM_LAW";
-				count = 3;
-			};
 		};
 	};
 	class MRAP_01_hmg_base_F;
@@ -5460,11 +5428,6 @@ class CfgVehicles
 			{
 				weapon = "tf47_at4_hp";
 				count = 1;
-			};
-			class _xx_HAFM_LAW
-			{
-				weapon = "HAFM_LAW";
-				count = 3;
 			};
 		};
 	};

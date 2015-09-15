@@ -136,7 +136,6 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
-			"45KO_SO_weapons_ABR",
 			"iansky_opt",
 			"ace_flashsuppressors",
 			"BWA3_Weapons",
@@ -5549,10 +5548,10 @@ class CfgWeapons
 			};
 		};
 	};
-	class 45KO_ABR_camo_green_F;
-	class T1_weap_marksman: 45KO_ABR_camo_green_F
+	class srifle_EBR_F;
+	class T1_weap_marksman: srifle_EBR_F
 	{
-		displayName = "Mk14 Mod 1 EBR (Green)";
+		displayName = "Mk14 Mod 1 EBR";
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -5632,12 +5631,7 @@ class CfgWeapons
 		class Single;
 		class FullAuto;
 	};
-	class 45KO_zafir_black: LMG_Zafir_F	{
-		class WeaponSlotsInfo;
-		class Single;
-		class FullAuto;
-	};
-	class T1_weap_mmg_sf: 45KO_zafir_black
+	class T1_weap_mmg_sf: LMG_Zafir_F
 	{
 		displayName = "Negev NG7 NATO (Black)";
 		dispersion = 0.00032;

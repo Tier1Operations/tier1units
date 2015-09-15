@@ -138,7 +138,6 @@ class CfgPatches
 		requiredAddons[] = {			
 			"iansky_opt",
 			"ace_flashsuppressors",
-			"t1_law",
 			"ace_medical",
 			"rhsusf_c_weapons",
 			"t1_556_sd_ammo",

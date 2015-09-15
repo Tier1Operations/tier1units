@@ -1406,18 +1406,18 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"BWA3_20Rnd_762x51_G28_SD",
-			"BWA3_20Rnd_762x51_G28_AP",
-			"BWA3_20Rnd_762x51_G28_AP",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
@@ -1428,18 +1428,18 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"BWA3_20Rnd_762x51_G28_SD",
-			"BWA3_20Rnd_762x51_G28_AP",
-			"BWA3_20Rnd_762x51_G28_AP",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
@@ -1901,18 +1901,18 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"BWA3_20Rnd_762x51_G28_SD",
-			"BWA3_20Rnd_762x51_G28_AP",
-			"BWA3_20Rnd_762x51_G28_AP",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
@@ -1923,18 +1923,18 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"BWA3_20Rnd_762x51_G28_SD",
-			"BWA3_20Rnd_762x51_G28_AP",
-			"BWA3_20Rnd_762x51_G28_AP",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
-			"BWA3_20Rnd_762x51_G28",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
@@ -5570,8 +5570,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class BWA3_G28_Assault;
-	class T1_weap_marksman_sf: BWA3_G28_Assault
+	class T1_weap_marksman_sf: T1_weap_marksman
 	{
 		class LinkedItems
 		{
@@ -5582,7 +5581,7 @@ class CfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "BWA3_muzzle_snds_G28";
+				item = "muzzle_snds_B";
 				slot = "MuzzleSlot";
 			};
 			class LinkedItemsAcc

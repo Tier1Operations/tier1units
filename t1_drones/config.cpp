@@ -172,11 +172,6 @@ class CfgVehicles
 				weapon = "tf47_at4_hp";
 				count = 5;
 			};
-			class _xx_HAFM_LAW
-			{
-				weapon = "HAFM_LAW";
-				count = 14;
-			};
 		};
 		class TransportBackpacks
 		{

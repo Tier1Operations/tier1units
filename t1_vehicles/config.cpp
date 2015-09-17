@@ -25,7 +25,7 @@ class CfgPatches
 			"t1_heli_medium_rockets",
 			"t1_heli_medium_at",
 			"t1_heli_heavy_trans",
-			"t1_heli_medium_missiles",
+			"t1_heli_heavy_attack",
 			"t1_fighterjet_oneseat",
 			"t1_fighterjet_twoseat",
 			"t1_support_light",
@@ -149,7 +149,7 @@ class CfgVehicles {
 	};
 	// helo attack heavy: USA Army-W AH-64D multi-role
 	class RHS_AH64D_wd;
-	class t1_heli_medium_missiles : RHS_AH64D_wd {
+	class t1_heli_heavy_attack : RHS_AH64D_wd {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};

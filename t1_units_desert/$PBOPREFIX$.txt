@@ -1,0 +1,5 @@
+///////<HEADER>///////
+prefix=t1_units_desert
+Pbo Type is: Arma Addon
+Sha: '19B70F1AA68CBA6C3887A55DF3C94246EBDB0AE9'
+//////</HEADER>//////

@@ -27,7 +27,9 @@ class CfgPatches
 			"t1_heli_heavy_trans",
 			"t1_heli_medium_missiles",
 			"t1_fighterjet_oneseat",
-			"t1_fighterjet_twoseat"
+			"t1_fighterjet_twoseat",
+			"t1_support_light",
+			"t1_support_heavy"
 		};
 		weapons[] = {};
 		magazines[] = {};
@@ -148,6 +150,15 @@ class CfgVehicles {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
+	
+	class t1_support_light : UK3CB_BAF_Coyote_Logistics_L134A1_W {
+		faction = "T1_Units";
+		crew = "T1_Soldier_F";
+	}
+	class t1_support_heavy : B_APC_Tracked_01_CRV_F {
+		faction = "T1_Units";
+		crew = "T1_Crewman_Standard_F";
+	}
 };
 /* The following is reference material:
 

@@ -143,23 +143,27 @@ class CfgVehicles {
 	class t1_heli_medium_rockets : RHS_UH1Y {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
+		vehicleClass = "Air";
 	};
 	class UH1Y_TOW;
 	class t1_heli_medium_at : UH1Y_TOW {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
+		vehicleClass = "Air";
 	};
 	// helo transport heavy: USA Army-W CH-47F
 	class RHS_CH_47F;
 	class t1_heli_heavy_trans : RHS_CH_47F {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
+		vehicleClass = "Air";
 	};
 	// helo attack heavy: USA Army-W AH-64D multi-role
 	class RHS_AH64D_wd;
 	class t1_heli_heavy_attack : RHS_AH64D_wd {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
+		vehicleClass = "Air";
 	};
 	// jet: NATO F/A-18E
 	class JS_JC_FA18E;
@@ -183,6 +187,7 @@ class CfgVehicles {
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
 	}
+	// TODO: Make a derivative of "B_Slingload_01_Ammo_F" that has all service types.
 };
 /* The following is reference material:
 

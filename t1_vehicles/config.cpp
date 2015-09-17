@@ -85,76 +85,92 @@ class CfgVehicleClasses
 class CfgVehicles {
 	// car: USA Army-W M1025A2 M2
 	// I'm including the unarmed and mk19 variants
+	class rhsusf_m1025_w_s;
 	class t1_car_light : rhsusf_m1025_w_s {
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
 	};
+	class rhsusf_m1025_w_s_m2;
 	class t1_car_light_mg : rhsusf_m1025_w_s_m2 {
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
 	};
+	class rhsusf_m1025_w_s_Mk19;
 	class t1_car_light_gl : rhsusf_m1025_w_s_Mk19 {
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
 	};
 	// APC: NATO Namer
+	class B_APC_Tracked_01_rcws_F;
 	class t1_apc : B_APC_Tracked_01_rcws_F {
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
 	};
 	// IFV: NATO Patria AMV
+	class B_APC_Wheeled_01_cannon_F;
 	class t1_ifv_wheeled : B_APC_Wheeled_01_cannon_F {
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
 	};
 	// 	tank: NATO Merkava MK IV M
+	class B_MBT_01_cannon_F;
 	class t1_tank : B_MBT_01_cannon_F {
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
 	};
 	// helo transport light: NATO MH-6M Little Bird
+	class MELB_MH6M;
 	class t1_heli_light_trans : MELB_MH6M {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
 	// helo attack light: NATO AH-6M-M Little Bird
+	class MELB_AH6M_M;
 	class t1_heli_light_attack : MELB_AH6M_M {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
 	// helo transport medium: USA USMC-W UH-1Y FFAR/MG  /  NATO UH-1Y TOW
+	class RHS_UH1Y;
 	class t1_heli_medium_rockets : RHS_UH1Y {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
+	class UH1Y_TOW;
 	class t1_heli_medium_at : UH1Y_TOW {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
 	// helo transport heavy: USA Army-W CH-47F
+	class RHS_CH_47F;
 	class t1_heli_heavy_trans : RHS_CH_47F {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
 	// helo attack heavy: USA Army-W AH-64D multi-role
+	class RHS_AH64D_wd;
 	class t1_heli_medium_missiles : RHS_AH64D_wd {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
 	// jet: NATO F/A-18E
+	class JS_JC_FA18E;
 	class t1_fighterjet_oneseat : JS_JC_FA18E {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
+	class JS_JC_FA18F;
 	class t1_fighterjet_twoseat : JS_JC_FA18F {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
 	
+	class UK3CB_BAF_Coyote_Logistics_L134A1_W;
 	class t1_support_light : UK3CB_BAF_Coyote_Logistics_L134A1_W {
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
 	}
+	class B_APC_Tracked_01_CRV_F;
 	class t1_support_heavy : B_APC_Tracked_01_CRV_F {
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";

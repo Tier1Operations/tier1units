@@ -112,7 +112,6 @@ class CfgPatches
 			"T1_weap_lmg",
 			"T1_weap_mmg_sf",
 			"T1_weap_sierra",
-			"T1_weap_marksman",
 			"T1_weap_marksman_sf",
 			"T1_weap_sidearm_m",
 			"T1_weap_sidearm_l",
@@ -5045,24 +5044,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class 45KO_ABR_camo_green_F;
-	class T1_weap_marksman: 45KO_ABR_camo_green_F
-	{
-		displayName = "Mk14 Mod 1 EBR (Green)";
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				item = "optic_DMS";
-				slot = "CowsSlot";
-			};
-			class LinkedItemsAcc
-			{
-				item = "acc_pointer_IR";
-				slot = "PointerSlot";
-			};
-		};
-	};
+
 	class BWA3_G28_Assault;
 	class T1_weap_marksman_sf: BWA3_G28_Assault
 	{

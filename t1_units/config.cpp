@@ -4769,11 +4769,6 @@ class CfgVehicles
 			class _xx_11Rnd_45ACP_Mag
 			{
 				magazine = "11Rnd_45ACP_Mag";
-				count = 16;
-			};
-			class _xx_11Rnd_45ACP_Mag
-			{
-				magazine = "11Rnd_45ACP_Mag";
 				count = 8;
 			};
 			class _xx_HandGrenade

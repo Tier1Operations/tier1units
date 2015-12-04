@@ -37,14 +37,12 @@ class CfgPatches
 			"T1_Carryall_camo",
 			"T1_Kitbag_camo_cls",
 			"T1_Kitbag_camo_medic",
-			"T1_Kitbag_camo_ws",
 			"T1_Kitbag_camo",
 			"T1_Platoon_Sgt_Standard_F",
 			"T1_Platoon_EOD_Standard_F",
 			"T1_Platoon_Medic_Standard_F",
 			"T1_Platoon_Lead_Standard_F",
 			"T1_Section_AT_Standard_F",
-			"T1_Section_WS_Standard_F",
 			"T1_Section_AAR_Standard_F",
 			"T1_Section_AR_Standard_F",
 			"T1_Section_CLS_Standard_F",
@@ -114,7 +112,6 @@ class CfgPatches
 			"T1_weap_lmg",
 			"T1_weap_mmg_sf",
 			"T1_weap_sierra",
-			"T1_weap_marksman",
 			"T1_weap_marksman_sf",
 			"T1_weap_sidearm_m",
 			"T1_weap_sidearm_l",
@@ -458,38 +455,6 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_Kestrel";
-			};
-		};
-	};
-	class T1_Kitbag_camo_ws: T1_Kitbag_camo
-	{
-		scope = 1;
-		class TransportItems
-		{
-			class _xx_ACE_quikclot
-			{
-				count = 9;
-				name = "ACE_quikclot";
-			};
-			class _xx_ACE_morphine
-			{
-				count = 3;
-				name = "ACE_morphine";
-			};
-			class _xx_ACE_epinephrine
-			{
-				count = 1;
-				name = "ACE_epinephrine";
-			};
-			class _xx_ACE_Kestrel
-			{
-				count = 1;
-				name = "ACE_Kestrel";
-			};
-			class _xx_rhs_goggles_clear
-			{
-				count = 1;
-				name = "rhs_goggles_clear";
 			};
 		};
 	};
@@ -4272,63 +4237,6 @@ class CfgVehicles
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
 	};
-	class T1_Section_WS_Standard_F: T1_Soldier_F
-	{
-		scope = 2;
-		faction = "T1_Units";
-		vehicleClass = "Section";
-		displayName = "Weapon Specialist";
-		weapons[] = {
-			"T1_weap_marksman",
-			"Throw",
-			"Put",
-			"ACE_Vector",
-			"tf47_at4_hp"
-		};
-		respawnWeapons[] = {
-			"T1_weap_marksman",
-			"Throw",
-			"Put",
-			"ACE_Vector",
-			"tf47_at4_hp"
-		};
-		magazines[] = {
-			"SmokeShell",
-			"HandGrenade",
-			"ACE_M84",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag"
-		};
-		respawnmagazines[] = {
-			"SmokeShell",
-			"HandGrenade",
-			"ACE_M84",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag",
-			"20Rnd_762x51_Mag"
-		};
-		icon = "iconManAT";
-		backpack = "T1_Kitbag_camo_ws";
-		items[] = {STDITEMS,"ACE_RangeCard"};
-		respawnItems[] = {STDITEMS,"ACE_RangeCard"};
-	};
 	class T1_Section_AT_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
@@ -5100,24 +5008,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class srifle_EBR_F;
-	class T1_weap_marksman: srifle_EBR_F
-	{
-		displayName = "Mk14 Mod 1 EBR";
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				item = "optic_DMS";
-				slot = "CowsSlot";
-			};
-			class LinkedItemsAcc
-			{
-				item = "acc_pointer_IR";
-				slot = "PointerSlot";
-			};
-		};
-	};
+
 	class T1_weap_marksman_sf: T1_weap_marksman
 	{
 		class LinkedItems

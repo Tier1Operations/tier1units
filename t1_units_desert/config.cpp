@@ -11,7 +11,7 @@ class CfgPatches
 {
 	class t1_units_desert
 	{
-		units[] = {"T1_Kitbag_camo_Lead_desert","T1_Kitbag_camo_desert","T1_Carryall_camo_PLSgt_JTAC","T1_Carryall_camo_PLEOD_desert","T1_Kitbag_camo_medic_desert","T1_Kitbag_camo_cls_desert","T1_Kitbag_camo_ws_desert","T1_Kitbag_camo_Section_AT_desert","T1_Kitbag_camo_AR_desert","T1_Carryall_camo_AMG_desert","T1_Specialist_AMG_Standard_Desert_F","T1_Carryall_camo_AAA_desert","T1_Kitbag_camo_AA_desert","T1_Carryall_camo_AAT_desert","T1_Kitbag_camo_AT_desert","T1_Kitbag_camo_medic_sf_desert","T1_Carryall_camo_Exp_SF_desert","T1_Kitbag_camo_SF_Marksman_desert","T1_Soldier_Desert_F","T1_Section_Lead_Standard_Desert_F","T1_Section_Sgt_Standard_Desert_F","T1_Section_AR_Standard_Desert_F","T1_Section_AAR_Standard_Desert_F","T1_Section_AT_Standard_Desert_F","T1_Section_WS_Standard_Desert_F","T1_Section_CLS_Standard_Desert_F","T1_Platoon_Lead_Standard_Desert_F","T1_Platoon_Medic_Standard_Desert_F","T1_Platoon_EOD_Standard_Desert_F","T1_Platoon_Sgt_Standard_Desert_F","T1_SF_Marksman_SOS_Standard_Desert_F","T1_SF_Explosive_Standard_Desert_F","T1_SF_Medic_Standard_Desert_F","T1_SF_FTL_Standard_Desert_F","T1_SF_AT_Standard_Desert_F","T1_SF_AR_Standard_Desert_F","T1_Spotter_Standard_Desert_F","T1_Sniper_Standard_Desert_F","T1_Specialist_AT_Standard_Desert_F","T1_Specialist_AAT_Standard_D","T1_Specialist_AA_Standard_Desert_F","T1_Specialist_AAA_Standard_Desert_F","T1_Specialist_MG_Standard_Desert_F","T1_Specialist_AMG_Standard_Desert_F","T1_Scout_Standard_Desert_F","T1_Scout_TL_Standard_Desert_F","T1_B_MRAP_01_hmg_DesertPlain_F","T1_B_MRAP_01_gmg_DesertPlain_F","T1_B_MRAP_01_DesertPlain_F","T1_B_MRAP_01_hmg_Desert_F","T1_B_MRAP_01_gmg_Desert_F","T1_B_MRAP_01_Desert_F"};
+		units[] = {"T1_Kitbag_camo_Lead_desert","T1_Kitbag_camo_desert","T1_Carryall_camo_PLSgt_JTAC","T1_Carryall_camo_PLEOD_desert","T1_Kitbag_camo_medic_desert","T1_Kitbag_camo_cls_desert","T1_Kitbag_camo_ws_desert","T1_Kitbag_camo_Section_AT_desert","T1_Kitbag_camo_AR_desert","T1_Carryall_camo_AMG_desert","T1_Specialist_AMG_Standard_Desert_F","T1_Carryall_camo_AAA_desert","T1_Kitbag_camo_AA_desert","T1_Carryall_camo_AAT_desert","T1_Kitbag_camo_AT_desert","T1_Kitbag_camo_medic_sf_desert","T1_Carryall_camo_Exp_SF_desert","T1_Kitbag_camo_SF_Marksman_desert","T1_Soldier_Desert_F","T1_Section_Lead_Standard_Desert_F","T1_Section_Sgt_Standard_Desert_F","T1_Section_AR_Standard_Desert_F","T1_Section_AAR_Standard_Desert_F","T1_Section_AT_Standard_Desert_F","T1_Section_CLS_Standard_Desert_F","T1_Platoon_Lead_Standard_Desert_F","T1_Platoon_Medic_Standard_Desert_F","T1_Platoon_EOD_Standard_Desert_F","T1_Platoon_Sgt_Standard_Desert_F","T1_SF_Marksman_SOS_Standard_Desert_F","T1_SF_Explosive_Standard_Desert_F","T1_SF_Medic_Standard_Desert_F","T1_SF_FTL_Standard_Desert_F","T1_SF_AT_Standard_Desert_F","T1_SF_AR_Standard_Desert_F","T1_Spotter_Standard_Desert_F","T1_Sniper_Standard_Desert_F","T1_Specialist_AT_Standard_Desert_F","T1_Specialist_AAT_Standard_D","T1_Specialist_AA_Standard_Desert_F","T1_Specialist_AAA_Standard_Desert_F","T1_Specialist_MG_Standard_Desert_F","T1_Specialist_AMG_Standard_Desert_F","T1_Scout_Standard_Desert_F","T1_Scout_TL_Standard_Desert_F","T1_B_MRAP_01_hmg_DesertPlain_F","T1_B_MRAP_01_gmg_DesertPlain_F","T1_B_MRAP_01_DesertPlain_F","T1_B_MRAP_01_hmg_Desert_F","T1_B_MRAP_01_gmg_Desert_F","T1_B_MRAP_01_Desert_F"};
 		weapons[] = {"T1_U_Sniper_Standard_desert","T1_U_Medic_Standard_desert","T1_U_Squad_Standard_desert","T1_V_PlateCarrier2_desert","T1_V_PlateCarrier2_medic_desert","T1_H_HelmetB_desert"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"t1_units"};
@@ -85,13 +85,6 @@ class CfgVehicles
 	};
 	class T1_Kitbag_camo_cls;
 	class T1_Kitbag_camo_cls_desert: T1_Kitbag_camo_cls
-	{
-		scope = 1;
-		displayName = "Kitbag (T1 Desert)";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\t1_kitbag_desert_co.paa"};
-	};
-	class T1_Kitbag_camo_ws;
-	class T1_Kitbag_camo_ws_desert: T1_Kitbag_camo_ws
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 Desert)";
@@ -233,18 +226,6 @@ class CfgVehicles
 		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Section_AT_desert";
-	};
-	class T1_Section_WS_Standard_F;
-	class T1_Section_WS_Standard_Desert_F: T1_Section_WS_Standard_F
-	{
-		scope = 2;
-		faction = "T1_Units_Desert";
-		vehicleClass = "Section";
-		uniformClass = "T1_U_Squad_Standard_desert";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		backpack = "T1_Kitbag_camo_ws_desert";
 	};
 	class T1_Section_CLS_Standard_F;
 	class T1_Section_CLS_Standard_Desert_F: T1_Section_CLS_Standard_F

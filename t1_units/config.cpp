@@ -5008,9 +5008,10 @@ class CfgWeapons
 			};
 		};
 	};
-
-	class T1_weap_marksman_sf: T1_weap_marksman
+    class srifle_EBR_F;
+	class T1_weap_marksman_sf: srifle_EBR_F
 	{
+        displayName = "Mk14 Mod 1 EBR";
 		class LinkedItems
 		{
 			class LinkedItemsOptic

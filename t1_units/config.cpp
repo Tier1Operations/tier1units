@@ -835,16 +835,6 @@ class CfgVehicles
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_SatchelCarge_Remote_Mag
-			{
-				count = 1;
-				magazine = "SatchelCharge_Remote_Mag";
-			};
-			class _xx_DemoCharge_Remote_Mag
-			{
-				count = 2;
-				magazine = "DemoCharge_Remote_Mag";
-			};
 		};
 		class TransportItems
 		{
@@ -872,6 +862,10 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_Vector";
+			};
+			class lr_radio {
+				count = 1;
+				name = "ACRE_PRC117F";
 			};
 		};
 	};
@@ -4604,14 +4598,12 @@ class CfgVehicles
 		displayName = "Platoon Sergeant";
 		weapons[] = {
 			"T1_weap_rifle_gl",
-			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl",
-			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -4619,22 +4611,20 @@ class CfgVehicles
 		magazines[] = {
 			"Laserbatteries",
 			"HandGrenade",
-			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"SmokeShell",
-			"SmokeShellRed",
-			"1Rnd_SmokeRed_Grenade_shell",
+			"Chemlight_blue",
+			"UGL_FlareCIR_F",
+			"UGL_FlareCIR_F",
+			"3Rnd_HE_Grenade_shell",
+			"3Rnd_HE_Grenade_shell",
+			"3Rnd_HE_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
@@ -4644,22 +4634,20 @@ class CfgVehicles
 		respawnmagazines[] = {
 			"Laserbatteries",
 			"HandGrenade",
-			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"SmokeShell",
-			"SmokeShellRed",
-			"1Rnd_SmokeRed_Grenade_shell",
+			"Chemlight_blue",
+			"UGL_FlareCIR_F",
+			"UGL_FlareCIR_F",
+			"3Rnd_HE_Grenade_shell",
+			"3Rnd_HE_Grenade_shell",
+			"3Rnd_HE_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",

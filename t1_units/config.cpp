@@ -4417,10 +4417,12 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
+			"B_UavTerminal",
 			STDITEMS
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
+			"B_UavTerminal",
 			STDITEMS
 		};
 		icon = "iconManLeader";

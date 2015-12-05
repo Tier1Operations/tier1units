@@ -19,6 +19,7 @@ class CfgPatches
 		units[] = {
 			"T1_Kitbag_camo_SF_Marksman",
 			"T1_Kitbag_camo_Lead",
+			"T1_Kitbag_camo_Lead_Plt",
 			"T1_Kitbag_camo_Lead_Trainer",
 			"T1_Carryall_camo_AMG",
 			"T1_Carryall_camo_AAA",
@@ -230,7 +231,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_Lead: B_Kitbag_Base
+	class T1_Kitbag_camo_Lead : T1_Kitbag_camo
 	{
 		scope = 2;
 		displayName = "Kitbag Lead (T1 Camo)";
@@ -257,6 +258,39 @@ class CfgVehicles
 				count = 1;
 				name = "rhs_goggles_clear";
 			};			
+		};
+	};
+	class T1_Kitbag_camo_Lead_Plt: T1_Kitbag_camo_Lead
+	{
+		scope = 2;
+		displayName = "Kitbag PltLead (T1 Camo)";
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		class TransportItems
+		{
+			class _xx_ACE_quikclot
+			{
+				count = 9;
+				name = "ACE_quikclot";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 3;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 1;
+				name = "ACE_epinephrine";
+			};
+			class _xx_rhs_goggles_clear
+			{
+				count = 1;
+				name = "rhs_goggles_clear";
+			};
+			class lr_radio {
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
 		};
 	};
 	class T1_Kitbag_camo_Lead_SF: B_Kitbag_Base
@@ -4327,14 +4361,12 @@ class CfgVehicles
 		displayName = "Platoon Lead";
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -4346,16 +4378,10 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"SmokeShellGreen",
@@ -4374,16 +4400,10 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"SmokeShellGreen",
@@ -4397,12 +4417,10 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
 			STDITEMS
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
 			STDITEMS
 		};
 		icon = "iconManLeader";

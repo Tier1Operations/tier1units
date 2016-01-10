@@ -9,7 +9,7 @@
 #define STDITEMS "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie"
 
 // MEDICALITEMS is used in addition to STDITEMS for units without backpacks
-#define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_quikclot","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
+#define MEDICALITEMS "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
 
 //Class t1_units : config.bin{
 class CfgPatches
@@ -209,10 +209,20 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -238,10 +248,20 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -267,10 +287,20 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -308,10 +338,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -342,10 +382,20 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -384,10 +434,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -418,10 +478,20 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};		
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -470,10 +540,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -506,13 +586,18 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 40;
+				count = 12;
 				name = "ACE_packingBandage";
 			};
 			class Bandage2
 			{
-				count = 20;
+				count = 4;
 				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -651,10 +736,20 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_carryall_camo_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -683,10 +778,20 @@ class CfgVehicles
 				name = "ToolKit";
 				count = 1;
 			};
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -738,10 +843,20 @@ class CfgVehicles
 				count = 1;
 				name = "MineDetector";
 			};
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -788,10 +903,20 @@ class CfgVehicles
 				count = 1;
 				name = "MineDetector";
 			};
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -838,10 +963,20 @@ class CfgVehicles
 				count = 1;
 				name = "MineDetector";
 			};
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -868,10 +1003,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -912,10 +1057,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{			
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -952,10 +1107,20 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_SpareBarrel";
 			};
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -987,10 +1152,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{			
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1022,10 +1197,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1062,10 +1247,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1097,10 +1292,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1199,10 +1404,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1235,10 +1450,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1262,10 +1487,20 @@ class CfgVehicles
 		scope = 1;
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 9;
-				name = "ACE_quikclot";
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -4460,14 +4695,12 @@ class CfgVehicles
 		displayName = "Medic";
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -4486,8 +4719,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4517,8 +4748,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",

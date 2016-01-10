@@ -504,10 +504,15 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 50;
-				name = "ACE_quikclot";
+				count = 40;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 20;
+				name = "ACE_elasticBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -522,12 +527,17 @@ class CfgVehicles
 			class _xx_ACE_bloodIV_250
 			{
 				count = 20;
-				name = "ACE_bloodIV_250";
+				name = "ACE_salineIV_250";
 			};
-			class _xx_rhs_goggles_clear
+			class MagicalAidKit
 			{
 				count = 1;
-				name = "rhs_goggles_clear";
+				name = "ACE_personalAidKit";
+			};
+			class Tourniquet
+			{
+				count = 4;
+				name = "ACE_tourniquet";
 			};
 		};
 	};

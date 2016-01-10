@@ -4505,18 +4505,12 @@ class CfgVehicles
 			"SmokeShell"
 		};
 		items[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine"
+			"ACRE_PRC148",
+			STDITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine"
+			"ACRE_PRC148",
+			STDITEMS
 		};
 		icon = "iconManMedic";
 		backpack = "T1_Kitbag_camo_medic";

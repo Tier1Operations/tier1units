@@ -4842,10 +4842,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 80;
-				name = "ACE_quikclot";
+				count = 120;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 40;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 8;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -4860,7 +4870,7 @@ class CfgVehicles
 			class _xx_ACE_bloodIV_250
 			{
 				count = 10;
-				name = "ACE_bloodIV_250";
+				name = "ACE_salineIV_250";
 			};
 			class _xx_ACE_CableTie
 			{
@@ -4966,10 +4976,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_quikclot
+			class Bandage1
 			{
-				count = 40;
-				name = "ACE_quikclot";
+				count = 60;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 20;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 8;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{

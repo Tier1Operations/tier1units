@@ -9,7 +9,7 @@
 #define STDITEMS "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie"
 
 // MEDICALITEMS is used in addition to STDITEMS for units without backpacks
-#define MEDICALITEMS "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
+#define MEDICALITEMS "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_tourniquet"
 
 //Class t1_units : config.bin{
 class CfgPatches
@@ -2643,28 +2643,14 @@ class CfgVehicles
 		};
 		// Todo: Evaluate wrt MEDICALITEMS mismatch
 		items[] = {
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine",
 			"ACRE_PRC148",
-			STDITEMS
+			STDITEMS,
+			MEDICALITEMS
 		};
 		respawnItems[] = {
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine",
 			"ACRE_PRC148",
-			STDITEMS
+			STDITEMS,
+			MEDICALITEMS
 		};
 		camouflage = 1.4;
 	};
@@ -3014,36 +3000,12 @@ class CfgVehicles
 		items[] = {
 			"ACRE_PRC148",
 			STDITEMS,
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine"
+			MEDICALITEMS
 		};
 		respawnItems[] = {
 			"ACRE_PRC148",
 			STDITEMS,
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine"
+			MEDICALITEMS
 		};
 		backpack = "T1_Carryall_camo_AAT";
 	};
@@ -3159,36 +3121,12 @@ class CfgVehicles
 		items[] = {
 			"ACRE_PRC148",
 			STDITEMS,
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine"
+			MEDICALITEMS
 		};
 		respawnItems[] = {
 			"ACRE_PRC148",
 			STDITEMS,
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine"
+			MEDICALITEMS
 		};
 		backpack = "T1_Carryall_camo_Medium_AAT";
 	};
@@ -3305,36 +3243,12 @@ class CfgVehicles
 		items[] = {
 			"ACRE_PRC148",
 			STDITEMS,
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine"
+			MEDICALITEMS
 		};
 		respawnItems[] = {
 			"ACRE_PRC148",
 			STDITEMS,
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine"
+			MEDICALITEMS
 		};
 		backpack = "T1_Carryall_camo_AAA";
 	};
@@ -3759,39 +3673,15 @@ class CfgVehicles
 		};
 		items[] = {
 			"rhs_goggles_clear",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine",
 			"ACRE_PRC148",
-			STDITEMS
+			STDITEMS,
+			MEDICALITEMS
 		};
 		respawnItems[] = {
 			"rhs_goggles_clear",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine",
 			"ACRE_PRC148",
-			STDITEMS
+			STDITEMS,
+			MEDICALITEMS
 		};
 	};
 	class T1_Crew_Commander_Standard_F: T1_Soldier_F
@@ -3867,39 +3757,15 @@ class CfgVehicles
 		};
 		items[] = {
 			"rhs_goggles_clear",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine",
 			"ACRE_PRC148",
-			STDITEMS
+			STDITEMS,
+			MEDICALITEMS
 		};
 		respawnItems[] = {
 			"rhs_goggles_clear",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_quikclot",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_morphine",
-			"ACE_epinephrine",
 			"ACRE_PRC148",
-			STDITEMS
+			STDITEMS,
+			MEDICALITEMS
 		};
 	};
 	class T1_Sentinel_Commander_Standard_F: T1_Soldier_F
@@ -4923,6 +4789,8 @@ class CfgVehicles
 	class B_supplyCrate_F;
 	class T1_section_ammobox: B_supplyCrate_F
 	{
+		
+		
 		vehicleClass = "Ammo";
 		displayName = "T1 Section Supply Box";
 		transportMaxWeapons = 999;

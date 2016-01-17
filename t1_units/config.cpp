@@ -586,12 +586,12 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
+				count = 80;
 				name = "ACE_packingBandage";
 			};
 			class Bandage2
 			{
-				count = 4;
+				count = 30;
 				name = "ACE_elasticBandage";
 			};
 			class Tourniquet
@@ -601,17 +601,17 @@ class CfgVehicles
 			};
 			class _xx_ACE_morphine
 			{
-				count = 25;
+				count = 26;
 				name = "ACE_morphine";
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 20;
+				count = 8;
 				name = "ACE_epinephrine";
 			};
-			class _xx_ACE_bloodIV_250
+			class IVFluid
 			{
-				count = 20;
+				count = 16;
 				name = "ACE_salineIV_250";
 			};
 			class MagicalAidKit
@@ -621,7 +621,7 @@ class CfgVehicles
 			};
 			class Tourniquet
 			{
-				count = 4;
+				count = 16;
 				name = "ACE_tourniquet";
 			};
 		};
@@ -643,12 +643,12 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 30;
+				count = 40;
 				name = "ACE_packingBandage";
 			};
 			class Bandage2
 			{
-				count = 10;
+				count = 12;
 				name = "ACE_elasticBandage";
 			};
 			class _xx_ACE_morphine
@@ -658,12 +658,12 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 10;
+				count = 4;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 10;
+				count = 8;
 				name = "ACE_salineIV_250";
 			};
 			class MagicalAidKit
@@ -685,12 +685,12 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 30;
+				count = 40;
 				name = "ACE_packingBandage";
 			};
 			class Bandage2
 			{
-				count = 10;
+				count = 12;
 				name = "ACE_elasticBandage";
 			};
 			class _xx_ACE_morphine
@@ -700,12 +700,12 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 10;
+				count = 4;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 10;
+				count = 8;
 				name = "ACE_salineIV_250";
 			};
 			class MagicalAidKit
@@ -715,7 +715,7 @@ class CfgVehicles
 			};
 			class Tourniquet
 			{
-				count = 4;
+				count = 6;
 				name = "ACE_tourniquet";
 			};
 		};

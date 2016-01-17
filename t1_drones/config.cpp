@@ -139,10 +139,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class Bandage1
 			{
-				count = 180;
-				name = "ACE_fieldDressing";
+				count = 240;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 80;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 20;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{
@@ -315,10 +325,20 @@ class CfgVehicles
 		};
 		class TransportItems
 		{
-			class _xx_ACE_fieldDressing
+			class Bandage1
 			{
-				count = 180;
-				name = "ACE_fieldDressing";
+				count = 240;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 80;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 20;
+				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
 			{

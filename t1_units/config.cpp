@@ -4551,7 +4551,7 @@ class CfgVehicles
 			STDITEMS
 		};
 		icon = "iconManLeader";
-		backpack = "T1_Kitbag_camo_Lead";
+		backpack = "T1_Kitbag_camo_Lead_Plt";
 	};
 	class T1_Platoon_Medic_Standard_F: T1_Soldier_F
 	{

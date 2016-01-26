@@ -164,10 +164,10 @@ class CfgVehicles
 				count = 34;
 				name = "ACE_epinephrine";
 			};
-			class _xx_ACE_bloodIV_250
+			class saline
 			{
-				count = 12;
-				name = "ACE_bloodIV_250";
+				count = 16;
+				name = "ACE_salineIV_500";
 			};
 			class _xx_ACE_CableTie
 			{
@@ -350,10 +350,10 @@ class CfgVehicles
 				count = 34;
 				name = "ACE_epinephrine";
 			};
-			class _xx_ACE_bloodIV_250
+			class saline
 			{
-				count = 12;
-				name = "ACE_bloodIV_250";
+				count = 16;
+				name = "ACE_salineIV_500";
 			};
 			class _xx_ACE_CableTie
 			{

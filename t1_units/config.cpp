@@ -5181,29 +5181,6 @@ class CfgWeapons
 			};
 		};
 	};
-
-	class BWA3_G28_Assault;
-	class T1_weap_marksman_sf: BWA3_G28_Assault
-	{
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				item = "optic_SOS";
-				slot = "CowsSlot";
-			};
-			class LinkedItemsMuzzle
-			{
-				item = "BWA3_muzzle_snds_G28";
-				slot = "MuzzleSlot";
-			};
-			class LinkedItemsAcc
-			{
-				item = "acc_pointer_IR";
-				slot = "PointerSlot";
-			};
-		};
-	};
 	class srifle_LRR_F;
 	class T1_weap_sierra: srifle_LRR_F
 	{

@@ -66,11 +66,6 @@ class CfgVehicles
 				magazine = "20Rnd_762x51_Mag";
 				count = 24;
 			};
-			class _xx_BWA3_20Rnd_762x51_G28
-			{
-				magazine = "BWA3_20Rnd_762x51_G28";
-				count = 24;
-			};
 			class _xx_t1_100Rnd_762x51_Box
 			{
 				magazine = "t1_100Rnd_762x51_Box";
@@ -250,11 +245,6 @@ class CfgVehicles
 			class _xx_20Rnd_762x51_Mag
 			{
 				magazine = "20Rnd_762x51_Mag";
-				count = 24;
-			};
-			class _xx_BWA3_20Rnd_762x51_G28
-			{
-				magazine = "BWA3_20Rnd_762x51_G28";
 				count = 24;
 			};
 			class _xx_t1_100Rnd_762x51_Box

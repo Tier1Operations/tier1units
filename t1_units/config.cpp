@@ -1979,14 +1979,14 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_heat"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_heat"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -2476,14 +2476,14 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_heat"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_heat"
 		};
 		magazines[] = {
 			"ACE_M84",
@@ -4415,7 +4415,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_heat"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
@@ -4423,7 +4423,7 @@ class CfgVehicles
 			"Throw",
 			"Put",
 			"ACE_Vector",
-			"BWA3_RGW90"
+			"tf47_at4_heat"
 		};
 		magazines[] = {
 			"SmokeShell",
@@ -4879,9 +4879,9 @@ class CfgVehicles
 		};
 		class TransportWeapons
 		{
-			class _xx_BWA3_RGW90
+			class _xx_tf47_at4_heat
 			{
-				weapon = "BWA3_RGW90";
+				weapon = "tf47_at4_heat";
 				count = 1;
 			};
 			class _xx_HAFM_LAW

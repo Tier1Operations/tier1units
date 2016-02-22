@@ -338,6 +338,7 @@ class CfgVehicles
 		linkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
 		glassesEnabled = 0;
+		backpack = "T1_Kitbag_camo_Sniper_desert"
 	};
 	class T1_Sniper_Standard_F;
 	class T1_Sniper_Standard_Desert_F: T1_Sniper_Standard_F
@@ -351,6 +352,7 @@ class CfgVehicles
 		linkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
 		glassesEnabled = 0;
+		backpack = "T1_Kitbag_camo_Lead_desert";
 	};
 	class T1_Specialist_AT_Standard_F;
 	class T1_Specialist_AT_Standard_Desert_F: T1_Specialist_AT_Standard_F

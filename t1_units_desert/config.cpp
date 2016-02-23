@@ -11,8 +11,79 @@ class CfgPatches
 {
 	class t1_units_desert
 	{
-		units[] = {"T1_Kitbag_camo_Lead_desert","T1_Kitbag_camo_desert","T1_Carryall_camo_PLSgt_JTAC","T1_Carryall_camo_PLEOD_desert","T1_Kitbag_camo_medic_desert","T1_Kitbag_camo_cls_desert","T1_Kitbag_camo_Section_AT_desert","T1_Kitbag_camo_AR_desert","T1_Carryall_camo_AMG_desert","T1_Specialist_AMG_Standard_Desert_F","T1_Carryall_camo_AAA_desert","T1_Kitbag_camo_AA_desert","T1_Carryall_camo_AAT_desert","T1_Kitbag_camo_AT_desert","T1_Kitbag_camo_medic_sf_desert","T1_Carryall_camo_Exp_SF_desert","T1_Kitbag_camo_SF_Marksman_desert","T1_Soldier_Desert_F","T1_Section_Lead_Standard_Desert_F","T1_Section_Sgt_Standard_Desert_F","T1_Section_AR_Standard_Desert_F","T1_Section_AAR_Standard_Desert_F","T1_Section_AT_Standard_Desert_F","T1_Section_CLS_Standard_Desert_F","T1_Platoon_Lead_Standard_Desert_F","T1_Platoon_Medic_Standard_Desert_F","T1_Platoon_EOD_Standard_Desert_F","T1_Platoon_Sgt_Standard_Desert_F","T1_SF_Marksman_SOS_Standard_Desert_F","T1_SF_Explosive_Standard_Desert_F","T1_SF_Medic_Standard_Desert_F","T1_SF_FTL_Standard_Desert_F","T1_SF_AT_Standard_Desert_F","T1_SF_AR_Standard_Desert_F","T1_Spotter_Standard_Desert_F","T1_Sniper_Standard_Desert_F","T1_Specialist_AT_Standard_Desert_F","T1_Specialist_AAT_Standard_D","T1_Specialist_AA_Standard_Desert_F","T1_Specialist_AAA_Standard_Desert_F","T1_Specialist_MG_Standard_Desert_F","T1_Specialist_AMG_Standard_Desert_F","T1_Scout_Standard_Desert_F","T1_Scout_TL_Standard_Desert_F","T1_B_MRAP_01_hmg_DesertPlain_F","T1_B_MRAP_01_gmg_DesertPlain_F","T1_B_MRAP_01_DesertPlain_F","T1_B_MRAP_01_hmg_Desert_F","T1_B_MRAP_01_gmg_Desert_F","T1_B_MRAP_01_Desert_F"};
-		weapons[] = {"T1_U_Sniper_Standard_desert","T1_U_Medic_Standard_desert","T1_U_Squad_Standard_desert","T1_V_PlateCarrier2_desert","T1_V_PlateCarrier2_medic_desert","T1_H_HelmetB_desert"};
+		units[] = {
+			"T1_Kitbag_camo_desert",
+			"T1_Kitbag_camo_Lead_desert",
+			"T1_Kitbag_camo_Lead_Plt_desert",
+			"T1_Kitbag_camo_Lead_SF_desert",
+			"T1_Kitbag_camo_Lead_Trainer_desert",
+			"T1_Kitbag_camo_Sniper_desert",
+			"T1_Kitbag_camo_Scout_Lead_desert",
+			"T1_Kitbag_camo_SF_Marksman_desert",
+			"T1_Kitbag_camo_medic_desert",
+			"T1_Kitbag_camo_medic_sf_desert",
+			"T1_Kitbag_camo_cls_desert",
+			"T1_Carryall_camo_desert",
+			"T1_Kitbag_camo_Repair",
+			"T1_Carryall_camo_Exp",
+			"T1_Carryall_camo_Exp_SF_desert",
+			"T1_Carryall_camo_PLEOD_desert",
+			"T1_Carryall_camo_PLSgt_JTAC_desert",
+			"T1_Kitbag_camo_AR_desert",
+			"T1_Kitbag_camo_AAR_desert",
+			"T1_Kitbag_camo_AR_SF_desert",
+			"T1_Kitbag_camo_AT_desert",
+			"T1_Kitbag_camo_Medium_AT_desert",
+			"T1_Kitbag_camo_AA_desert",
+			"T1_Carryall_camo_AAT_desert",
+			"T1_Carryall_camo_Medium_AAT_desert",
+			"T1_Carryall_camo_AAA_desert",
+			"T1_Kitbag_camo_MG_desert",
+			"T1_Carryall_camo_AMG_desert",
+			"T1_Kitbag_camo_Section_AT_desert",
+			"T1_Soldier_Desert_F",
+			"T1_SF_Marksman_SOS_Standard_Desert_F",
+			"T1_SF_Explosive_Standard_Desert_F",
+			"T1_SF_Medic_Standard_Desert_F",
+			"T1_SF_FTL_Standard_Desert_F",
+			"T1_SF_AT_Standard_Desert_F",
+			"T1_SF_AR_Standard_Desert_F",
+			"T1_Spotter_Standard_Desert_F",
+			"T1_Sniper_Standard_Desert_F",
+			"T1_Specialist_AT_Standard_Desert_F",
+			"T1_Specialist_AAT_Standard_Desert_F",
+			"T1_Specialist_Medium_AT_Standard_Desert_F",
+			"T1_Specialist_Medium_AAT_Standard_Desert_F",
+			"T1_Specialist_AA_Standard_Desert_F",
+			"T1_Specialist_AAA_Standard_Desert_F",
+			"T1_Specialist_MG_Standard_Desert_F",
+			"T1_Specialist_AMG_Standard_Desert_F",
+			"T1_Scout_TL_Standard_Desert_F",
+			"T1_Scout_Standard_Desert_F",
+			"T1_Section_Lead_Standard_Desert_F",
+			"T1_Section_Sgt_Standard_Desert_F",
+			"T1_Section_CLS_Standard_Desert_F",
+			"T1_Section_AR_Standard_Desert_F",
+			"T1_Section_AAR_Standard_Desert_F",
+			"T1_Section_AT_Standard_Desert_F",
+			"T1_Platoon_Lead_Standard_Desert_F",
+			"T1_Platoon_Medic_Standard_Desert_F",
+			"T1_Platoon_EOD_Standard_Desert_F",
+			"T1_Platoon_Sgt_Standard_Desert_F",
+			"T1_B_MRAP_01_Desert_F",
+			"T1_B_MRAP_01_gmg_Desert_F",
+			"T1_B_MRAP_01_hmg_Desert_F",
+			"T1_B_MRAP_01_DesertPlain_F",
+			"T1_B_MRAP_01_gmg_DesertPlain_F",
+			"T1_B_MRAP_01_hmg_DesertPlain_F"
+		};
+		weapons[] = {
+			"T1_U_Squad_Standard_desert",
+			"T1_U_Medic_Standard_desert",
+			"T1_V_PlateCarrier2_desert",
+			"T1_V_PlateCarrier2_medic_desert",
+			"T1_H_HelmetB_desert"
+		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"t1_units"};
 	};
@@ -265,8 +336,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_SF_Marksman_desert";
 	};
 	class T1_SF_Explosive_Standard_F;
@@ -276,8 +347,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_Exp_SF_desert";
 	};
 	class T1_SF_Medic_Standard_F;
@@ -287,8 +358,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Medic_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_medic_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_medic_sf_desert";
 	};
 	class T1_SF_FTL_Standard_F;
@@ -298,8 +369,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_desert";
 	};
 	class T1_SF_AT_Standard_F;
@@ -309,8 +380,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_desert";
 	};
 	class T1_SF_AR_Standard_F;
@@ -320,8 +391,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_desert";
 	};
 	//Divers placed here
@@ -335,10 +406,10 @@ class CfgVehicles
 		modelSides[] = {3,1};
 		uniformAccessories[] = {};
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		glassesEnabled = 0;
-		backpack = "T1_Kitbag_camo_Sniper_desert"
+		backpack = "T1_Kitbag_camo_Sniper_desert";
 	};
 	class T1_Sniper_Standard_F;
 	class T1_Sniper_Standard_Desert_F: T1_Sniper_Standard_F
@@ -349,8 +420,8 @@ class CfgVehicles
 		modelSides[] = {3,1};
 		uniformAccessories[] = {};
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		glassesEnabled = 0;
 		backpack = "T1_Kitbag_camo_Lead_desert";
 	};
@@ -361,8 +432,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_AT_desert";
 	};
 	class T1_Specialist_AAT_Standard_F;
@@ -372,8 +443,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_AAT_desert";
 	};
 	// Added - Check Linked Items
@@ -384,20 +455,20 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Medium_AT_desert";
 	};
-	class T1_Specialist_Medium_AAT_Standard_F;
 	// Added- Check Linked Items
+	class T1_Specialist_Medium_AAT_Standard_F;
 	class T1_Specialist_Medium_AAT_Standard_Desert_F: T1_Specialist_Medium_AAT_Standard_F
 	{
 		scope = 2;
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_Medium_AAT_desert";
 	};
 	class T1_Specialist_AA_Standard_F;
@@ -407,8 +478,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_AA_desert";
 	};
 	class T1_Specialist_AAA_Standard_F;
@@ -418,8 +489,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_AAA_desert";
 	};	
 	class T1_Specialist_MG_Standard_F;
@@ -429,8 +500,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_desert";
 	};
 	class T1_Specialist_AMG_Standard_F;
@@ -440,8 +511,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_AMG_desert";
 	};
 	class T1_Scout_TL_Standard_F;
@@ -451,8 +522,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_desert";
 	};
 	class T1_Scout_Standard_F;
@@ -462,8 +533,8 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_desert";
 	};
 	// Crewmen placed here
@@ -476,8 +547,8 @@ class CfgVehicles
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_desert";
 	};
 	class T1_Section_Sgt_Standard_F;
@@ -488,8 +559,8 @@ class CfgVehicles
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_desert";
 	};
 	class T1_Section_CLS_Standard_F;
@@ -500,8 +571,8 @@ class CfgVehicles
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_cls_desert";
 	};
 	class T1_Section_AR_Standard_F;
@@ -512,8 +583,8 @@ class CfgVehicles
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_desert";
 	};
 	class T1_Section_AAR_Standard_F;
@@ -524,8 +595,8 @@ class CfgVehicles
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_AR_desert";
 	};
 	class T1_Section_AT_Standard_F;
@@ -536,8 +607,8 @@ class CfgVehicles
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Section_AT_desert";
 	};
 	class T1_Platoon_Lead_Standard_F;
@@ -548,8 +619,8 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_Plt_desert";
 	};
 	class T1_Platoon_Medic_Standard_F;
@@ -560,8 +631,8 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_medic_desert";
 	};
 	class T1_Platoon_EOD_Standard_F;
@@ -572,8 +643,8 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		uniformClass = "T1_U_Medic_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_medic_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_PLEOD_desert";
 	};
 	class T1_Platoon_Sgt_Standard_F;
@@ -584,8 +655,8 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemRadio","ItemCompass","ItemWatch","ItemGPS"};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_PLSgt_JTAC_desert";
 	};
 	// Not found in regular units

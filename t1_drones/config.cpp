@@ -81,9 +81,9 @@ class CfgVehicles
 				magazine = "BWA3_40Rnd_46x30_MP7";
 				count = 16;
 			};
-			class _xx_11Rnd_45ACP_Mag
+			class _xx_rhsusf_mag_17Rnd_9x19_JHP
 			{
-				magazine = "11Rnd_45ACP_Mag";
+				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
 				count = 16;
 			};
 			class _xx_HandGrenade
@@ -262,9 +262,9 @@ class CfgVehicles
 				magazine = "BWA3_40Rnd_46x30_MP7";
 				count = 16;
 			};
-			class _xx_11Rnd_45ACP_Mag
+			class _xx_rhsusf_mag_17Rnd_9x19_JHP
 			{
-				magazine = "11Rnd_45ACP_Mag";
+				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
 				count = 16;
 			};
 			class _xx_HandGrenade

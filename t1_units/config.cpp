@@ -5167,19 +5167,6 @@ class CfgWeapons
 	class rhsusf_weap_glock17g4;
 	class T1_weap_sidearm_l: rhsusf_weap_glock17g4
 	{
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				item = "optic_MRD";
-				slot = "CowsSlot";
-			};
-			class LinkedItemsMuzzle
-			{
-				item = "muzzle_snds_acp";
-				slot = "MuzzleSlot";
-			};
-		};
 	};
 	class srifle_LRR_F;
 	class T1_weap_sierra: srifle_LRR_F

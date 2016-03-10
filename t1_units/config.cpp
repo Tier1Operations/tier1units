@@ -1713,14 +1713,14 @@ class CfgVehicles
 		displayName = "T1 SF Explosive Specialist";
 		weapons[] = {
 			"T1_weap_rifle_sd",
-			"rhsusf_weap_glock17g4",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
-			"rhsusf_weap_glock17g4",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1789,12 +1789,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
 		weapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1886,6 +1888,7 @@ class CfgVehicles
 		displayName = "T1 SF FTL";
 		weapons[] = {
 			"T1_weap_rifle_gl_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_MX2A",
@@ -1893,6 +1896,7 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_MX2A",
@@ -1988,6 +1992,7 @@ class CfgVehicles
 		displayName = "T1 SF Radioman";
 		weapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -1995,6 +2000,7 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2220,12 +2226,14 @@ class CfgVehicles
 		displayName = "T1 Diver Explosive Specialist";
 		weapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2294,12 +2302,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
 		weapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2393,6 +2403,7 @@ class CfgVehicles
 		displayName = "T1 Diver FTL";
 		weapons[] = {
 			"T1_weap_rifle_gl_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2400,6 +2411,7 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2495,6 +2507,7 @@ class CfgVehicles
 		displayName = "T1 Diver Radioman";
 		weapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -2502,6 +2515,7 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_sd",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4514,12 +4528,14 @@ class CfgVehicles
 		displayName = "Platoon Lead";
 		weapons[] = {
 			"T1_weap_rifle",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -4535,6 +4551,8 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1_Tracer",
 			"SMA_30Rnd_556x45_M855A1_Tracer",
 			"SMA_30Rnd_556x45_M855A1_Tracer",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"SmokeShellGreen",
@@ -4557,6 +4575,8 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1_Tracer",
 			"SMA_30Rnd_556x45_M855A1_Tracer",
 			"SMA_30Rnd_556x45_M855A1_Tracer",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"SmokeShellGreen",
@@ -4589,12 +4609,14 @@ class CfgVehicles
 		displayName = "Medic";
 		weapons[] = {
 			"T1_weap_rifle",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -4613,6 +4635,8 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1",
 			"SMA_30Rnd_556x45_M855A1",
 			"SMA_30Rnd_556x45_M855A1",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4642,6 +4666,8 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1",
 			"SMA_30Rnd_556x45_M855A1",
 			"SMA_30Rnd_556x45_M855A1",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4745,12 +4771,14 @@ class CfgVehicles
 		displayName = "Platoon Sergeant";
 		weapons[] = {
 			"T1_weap_rifle_gl",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -4765,6 +4793,8 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1_Tracer",
 			"SMA_30Rnd_556x45_M855A1_Tracer",
 			"SMA_30Rnd_556x45_M855A1_Tracer",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"Chemlight_blue",
 			"UGL_FlareCIR_F",
@@ -4788,6 +4818,8 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1_Tracer",
 			"SMA_30Rnd_556x45_M855A1_Tracer",
 			"SMA_30Rnd_556x45_M855A1_Tracer",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"Chemlight_blue",
 			"UGL_FlareCIR_F",

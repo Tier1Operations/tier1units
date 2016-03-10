@@ -245,12 +245,10 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_map_gestures_GroupColorConfigurations {
-	    
 		typeName = "ARRAY";
 		force = 0;
 	};
 	class ace_map_gestures_GroupColorConfigurationMapping {
-	    
 		typeName = "ARRAY";
 		force = 0;
 	};
@@ -270,7 +268,7 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_medical_enableFor {
-		value = 1;
+		value = 0;
 		typeName = "SCALAR";
 		force = 0;
 	};
@@ -320,7 +318,7 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_medical_AIDamageThreshold {
-		value = 1;
+		value = 0.6;
 		typeName = "SCALAR";
 		force = 0;
 	};
@@ -365,7 +363,7 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_medical_litterCleanUpDelay {
-		value = 0;
+		value = 1800;
 		typeName = "SCALAR";
 		force = 0;
 	};

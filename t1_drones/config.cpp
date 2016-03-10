@@ -46,9 +46,9 @@ class CfgVehicles
 		maximumload = 999999;
 		class TransportMagazines
 		{
-			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
+			class _xx_SMA_30Rnd_556x45_M855A1
 			{
-				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+				magazine = "SMA_30Rnd_556x45_M855A1";
 				count = 130;
 			};
 			class _xx_rhs_200rnd_556x45_M_SAW
@@ -227,9 +227,9 @@ class CfgVehicles
 		maximumload = 999999;
 		class TransportMagazines
 		{
-			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
+			class _xx_SMA_30Rnd_556x45_M855A1
 			{
-				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+				magazine = "SMA_30Rnd_556x45_M855A1";
 				count = 130;
 			};
 			class _xx_hlc_rhs_200rnd_556x45_M_SAW

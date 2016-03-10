@@ -86,9 +86,9 @@ class CfgVehicles
 				magazine = "BWA3_40Rnd_46x30_MP7";
 				count = 16;
 			};
-			class _xx_rhsusf_mag_17Rnd_9x19_JHP
+			class _xx_rhsusf_mag_17Rnd_9x19_FMJ
 			{
-				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
+				magazine = "rhsusf_mag_17Rnd_9x19_FMJ";
 				count = 16;
 			};
 			class _xx_HandGrenade
@@ -242,17 +242,17 @@ class CfgVehicles
 				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
 				count = 20;
 			};
-			class _xx_hlc_rhs_200rnd_556x45_M_SAW
+			class section_ar_mag
 			{
 				magazine = "rhs_200rnd_556x45_M_SAW";
 				count = 30;
 			};
-			class _xx_SMA_150Rnd_762_Mk319
+			class mmg_mag
 			{
 				magazine = "SMA_150Rnd_762_Mk319";
 				count = 20;
 			};
-			class _xx_20Rnd_762x51_Mag
+			class marksman_mag
 			{
 				magazine = "20Rnd_762x51_Mag";
 				count = 24;
@@ -272,9 +272,9 @@ class CfgVehicles
 				magazine = "BWA3_40Rnd_46x30_MP7";
 				count = 16;
 			};
-			class _xx_rhsusf_mag_17Rnd_9x19_JHP
+			class _xx_rhsusf_mag_17Rnd_9x19_FMJ
 			{
-				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
+				magazine = "rhsusf_mag_17Rnd_9x19_FMJ";
 				count = 16;
 			};
 			class _xx_HandGrenade

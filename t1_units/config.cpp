@@ -1530,14 +1530,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\instructor\t1_poloinstructor_b_co.paa"};
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2607,14 +2607,14 @@ class CfgVehicles
 		uniformClass = "T1_U_Pilot_Standard";
 		weapons[] = {
 			"SMG_01_ACO_F",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"SMG_01_ACO_F",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3322,7 +3322,7 @@ class CfgVehicles
 			description = ".338 MG DLC";
 			weapons[] = {
 			"MMG_02_camo_F",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3539,14 +3539,14 @@ class CfgVehicles
 		displayName = "T1 Scout [MM DLC]";
 		weapons[] = {
 			"T1_weap_romeo_mmdlc",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
 			"T1_weap_romeo_mmdlc",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -3635,14 +3635,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3715,14 +3715,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3799,14 +3799,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3876,14 +3876,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3949,14 +3949,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -4018,7 +4018,7 @@ class CfgVehicles
 		displayName = "Section Leader";
 		weapons[] = {
 			"T1_weap_rifle_gl",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4026,7 +4026,7 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle_gl",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4133,7 +4133,7 @@ class CfgVehicles
 		displayName = "Section Sergeant";
 		weapons[] = {
 			"T1_weap_rifle_gl",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4141,7 +4141,7 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {			
 			"T1_weap_rifle_gl",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4248,7 +4248,7 @@ class CfgVehicles
 		displayName = "Combat Life Saver";
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4256,7 +4256,7 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4445,7 +4445,7 @@ class CfgVehicles
 		displayName = "Rifleman AT";
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4453,7 +4453,7 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -4677,14 +4677,14 @@ class CfgVehicles
 		displayName = "Platoon EOD";
 		weapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_rifle",
-			"hgun_Pistol_heavy_01_F",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"

@@ -5286,6 +5286,7 @@ class CfgWeapons
 	class SMA_HK416vfg;
 	class T1_weap_rifle: SMA_HK416vfg
 	{
+		magazines += {"T1_30Rnd_556x45_Stanag_SD"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -5303,6 +5304,7 @@ class CfgWeapons
 	class SMA_MK16_EGLM_black;
 	class T1_weap_rifle_gl: SMA_MK16_EGLM_black
 	{
+		magazines += {"T1_30Rnd_556x45_Stanag_SD"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -5319,6 +5321,7 @@ class CfgWeapons
 	};		
 	class T1_weap_rifle_sd: SMA_HK416vfg
 	{
+		magazines += {"T1_30Rnd_556x45_Stanag_SD"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -5340,6 +5343,7 @@ class CfgWeapons
 	};
 	class T1_weap_rifle_gl_sd: SMA_MK16_EGLM_black
 	{
+		magazines += {"T1_30Rnd_556x45_Stanag_SD"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic

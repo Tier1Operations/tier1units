@@ -5328,7 +5328,7 @@ class CfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "rhsusf_acc_rotex5_grey";
+				item = "SMA_supp2b_556";
 				slot = "MuzzleSlot";
 			}
 			class LinkedItemsAcc
@@ -5349,7 +5349,7 @@ class CfgWeapons
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "rhsusf_acc_rotex5_grey";
+				item = "SMA_supp2bSCAR_556";
 				slot = "MuzzleSlot";
 			}
 			class LinkedItemsAcc

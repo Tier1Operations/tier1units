@@ -5252,7 +5252,11 @@ class CfgWeapons
 	class rhs_weap_m249_pip_L;
 	class T1_weap_lmg: rhs_weap_m249_pip_L
 	{
-		magazines += {"SMA_30Rnd_556x45_M855A1"};	// Todo: Add the tracer variants
+		magazines += {
+			"SMA_30Rnd_556x45_M855A1",
+			"SMA_30Rnd_556x45_M855A1_Tracer",
+			"SMA_30Rnd_556x45_M855A1_IR"
+		};
 		class LinkedItems
 		{
 			class LinkedItemsOptic

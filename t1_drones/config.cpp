@@ -56,9 +56,9 @@ class CfgVehicles
 				magazine = "rhs_200rnd_556x45_M_SAW";
 				count = 30;
 			};
-			class _xx_BWA3_120Rnd_762x51
+			class _xx_SMA_150Rnd_762_Mk319
 			{
-				magazine = "BWA3_120Rnd_762x51";
+				magazine = "SMA_150Rnd_762_Mk319";
 				count = 20;
 			};
 			class _xx_20Rnd_762x51_Mag
@@ -237,9 +237,9 @@ class CfgVehicles
 				magazine = "rhs_200rnd_556x45_M_SAW";
 				count = 30;
 			};
-			class _xx_BWA3_120Rnd_762x51
+			class _xx_SMA_150Rnd_762_Mk319
 			{
-				magazine = "BWA3_120Rnd_762x51";
+				magazine = "SMA_150Rnd_762_Mk319";
 				count = 20;
 			};
 			class _xx_20Rnd_762x51_Mag

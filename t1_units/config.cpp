@@ -1396,9 +1396,9 @@ class CfgVehicles
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_BWA3_120Rnd_762x51
+			class _xx_SMA_150Rnd_762_Mk319
 			{
-				magazine = "BWA3_120Rnd_762x51";
+				magazine = "SMA_150Rnd_762_Mk319";
 				count = 3;
 			};
 		};
@@ -1442,10 +1442,10 @@ class CfgVehicles
 		maximumLoad = 600;
 		class TransportMagazines
 		{
-			class _xx_BWA3_120Rnd_762x51
+			class _xx_SMA_150Rnd_762_Mk319
 			{
 				count = 5;
-				magazine = "BWA3_120Rnd_762x51";
+				magazine = "SMA_150Rnd_762_Mk319";
 			};
 		};
 		class TransportItems
@@ -3260,15 +3260,15 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"BWA3_120Rnd_762x51",
-			"BWA3_120Rnd_762x51",
+			"SMA_150Rnd_762_Mk319",
+			"SMA_150Rnd_762_Mk319",
 			"HandGrenade",
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"BWA3_120Rnd_762x51",
-			"BWA3_120Rnd_762x51",
+			"SMA_150Rnd_762_Mk319",
+			"SMA_150Rnd_762_Mk319",
 			"HandGrenade",
 			"SmokeShell"
 		};
@@ -3353,7 +3353,7 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"BWA3_120Rnd_762x51"
+			"SMA_150Rnd_762_Mk319"
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
@@ -3370,7 +3370,7 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"BWA3_120Rnd_762x51"
+			"SMA_150Rnd_762_Mk319"
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
@@ -4901,9 +4901,9 @@ class CfgVehicles
 				magazine = "SMA_30Rnd_556x45_M855A1";
 				count = 48;
 			};
-			class _xx_BWA3_120Rnd_762x51
+			class _xx_SMA_150Rnd_762_Mk319
 			{
-				magazine = "BWA3_120Rnd_762x51";
+				magazine = "SMA_150Rnd_762_Mk319";
 				count = 32;
 			};
 			class _xx_7Rnd_408_Mag
@@ -5261,8 +5261,8 @@ class CfgWeapons
 			};
 		};
 	};
-	class BWA3_MG5;
-	class T1_weap_mmg: BWA3_MG5
+	class sma_minimi_mk3_762tlb_wdl;
+	class T1_weap_mmg: sma_minimi_mk3_762tlb_wdl
 	{
 		class LinkedItems
 		{

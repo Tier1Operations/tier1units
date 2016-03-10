@@ -46,10 +46,15 @@ class CfgVehicles
 		maximumload = 999999;
 		class TransportMagazines
 		{
-			class _xx_SMA_30Rnd_556x45_M855A1
+			class riflemag
 			{
 				magazine = "SMA_30Rnd_556x45_M855A1";
-				count = 130;
+				count = 110;
+			};
+			class riflemag_tracer
+			{
+				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				count = 20;
 			};
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
@@ -227,10 +232,15 @@ class CfgVehicles
 		maximumload = 999999;
 		class TransportMagazines
 		{
-			class _xx_SMA_30Rnd_556x45_M855A1
+			class riflemag
 			{
 				magazine = "SMA_30Rnd_556x45_M855A1";
-				count = 130;
+				count = 110;
+			};
+			class riflemag_tracer
+			{
+				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				count = 20;
 			};
 			class _xx_hlc_rhs_200rnd_556x45_M_SAW
 			{

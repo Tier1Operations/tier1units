@@ -3354,7 +3354,7 @@ class CfgVehicles
 			items[] = {
 			"ACRE_PRC148",
 			"ACE_IR_Strobe_Item",
-			"iansky_specterdr",
+			"iansky_specterdrkf",
 			"acc_pointer_IR",
 			STDITEMS,
 			"ACE_SpareBarrel"
@@ -5347,7 +5347,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdr";
+				item = "iansky_specterdrkf";
 				slot = "CowsSlot";
 			};
 		};
@@ -5359,7 +5359,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdr";
+				item = "iansky_specterdrkf";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsAcc

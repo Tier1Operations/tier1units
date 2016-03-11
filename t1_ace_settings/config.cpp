@@ -139,6 +139,11 @@ class ACE_Settings {
 		typeName = "BOOL";
 		force = 0;
 	};
+	class ace_frag_ReflectionsEnabled {
+		value = 0;
+		typeName = "BOOL";
+		force = 0;
+	};
 	class ace_frag_maxTrack {
 		value = 500;
 		typeName = "SCALAR";
@@ -199,6 +204,11 @@ class ACE_Settings {
 		typeName = "BOOL";
 		force = 0;
 	};
+	class ace_map_BFT_ShowPlayerNames {
+		value = 0;
+		typeName = "BOOL";
+		force = 0;
+	};
 	class ace_map_mapIllumination {
 		value = 0;
 		typeName = "BOOL";
@@ -245,10 +255,12 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_map_gestures_GroupColorConfigurations {
+		
 		typeName = "ARRAY";
 		force = 0;
 	};
 	class ace_map_gestures_GroupColorConfigurationMapping {
+		
 		typeName = "ARRAY";
 		force = 0;
 	};
@@ -267,8 +279,13 @@ class ACE_Settings {
 		typeName = "SCALAR";
 		force = 0;
 	};
-	class ace_medical_enableFor {
+	class ace_medical_increaseTrainingInLocations {
 		value = 0;
+		typeName = "BOOL";
+		force = 0;
+	};
+	class ace_medical_enableFor {
+		value = 1;
 		typeName = "SCALAR";
 		force = 0;
 	};
@@ -367,6 +384,11 @@ class ACE_Settings {
 		typeName = "SCALAR";
 		force = 0;
 	};
+	class ace_medical_medicSetting_basicEpi {
+		value = 1;
+		typeName = "SCALAR";
+		force = 0;
+	};
 	class ace_medical_medicSetting_PAK {
 		value = 1;
 		typeName = "SCALAR";
@@ -383,6 +405,11 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_medical_consumeItem_SurgicalKit {
+		value = 0;
+		typeName = "SCALAR";
+		force = 0;
+	};
+	class ace_medical_useLocation_basicEpi {
 		value = 0;
 		typeName = "SCALAR";
 		force = 0;
@@ -432,6 +459,11 @@ class ACE_Settings {
 		typeName = "BOOL";
 		force = 0;
 	};
+	class ace_medical_delayUnconCaptive {
+		value = 3;
+		typeName = "SCALAR";
+		force = 0;
+	};
 	class ace_medical_menu_allow {
 		value = 1;
 		typeName = "SCALAR";
@@ -462,6 +494,11 @@ class ACE_Settings {
 		typeName = "BOOL";
 		force = 0;
 	};
+	class ace_mk6mortar_useAmmoHandling {
+		value = 0;
+		typeName = "BOOL";
+		force = 0;
+	};
 	class ace_nametags_showCursorTagForVehicles {
 		value = 1;
 		typeName = "BOOL";
@@ -480,6 +517,21 @@ class ACE_Settings {
 	class ace_nightvision_disableNVGsWithSights {
 		value = 0;
 		typeName = "BOOL";
+		force = 0;
+	};
+	class ace_overheating_overheatingDispersion {
+		value = 1;
+		typeName = "BOOL";
+		force = 0;
+	};
+	class ace_overheating_unJamOnreload {
+		value = 0;
+		typeName = "BOOL";
+		force = 0;
+	};
+	class ace_overheating_unJamFailChance {
+		value = 0.1;
+		typeName = "SCALAR";
 		force = 0;
 	};
 	class ace_rearm_level {

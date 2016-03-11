@@ -5383,12 +5383,12 @@ class CfgWeapons
 			class LinkedItemsOptic
 			{
 				item = "iansky_specterdrkf";
-				slot = "CowsSlot";
+				slot = "asdg_OpticRail_SMAAssault";
 			};
 			class LinkedItemsAcc
 			{
 				item = "acc_pointer_IR";
-				slot = "PointerSlot";
+				slot = "asdg_FrontSideRail_SMAAssault";
 			};
 		};
 	};	
@@ -5400,12 +5400,12 @@ class CfgWeapons
 			class LinkedItemsOptic
 			{
 				item = "iansky_specterdrkf";
-				slot = "CowsSlot";
+				slot = "asdg_OpticRail_SMAAssault";
 			};
 			class LinkedItemsAcc
 			{
 				item = "acc_pointer_IR";
-				slot = "PointerSlot";
+				slot = "asdg_FrontSideRail_SMAAssault";
 			};
 		};
 	};		
@@ -5416,7 +5416,7 @@ class CfgWeapons
 			class LinkedItemsOptic
 			{
 				item = "iansky_specterdrkf";
-				slot = "CowsSlot";
+				slot = "asdg_OpticRail_SMAAssault";
 			};
 			class LinkedItemsMuzzle
 			{
@@ -5426,7 +5426,7 @@ class CfgWeapons
 			class LinkedItemsAcc
 			{
 				item = "acc_pointer_IR";
-				slot = "PointerSlot";
+				slot = "asdg_FrontSideRail_SMAAssault";
 			};
 		};
 	};
@@ -5437,7 +5437,7 @@ class CfgWeapons
 			class LinkedItemsOptic
 			{
 				item = "iansky_specterdrkf";
-				slot = "CowsSlot";
+				slot = "asdg_OpticRail_SMAAssault";
 			};
 			class LinkedItemsMuzzle
 			{
@@ -5447,7 +5447,7 @@ class CfgWeapons
 			class LinkedItemsAcc
 			{
 				item = "acc_pointer_IR";
-				slot = "PointerSlot";
+				slot = "asdg_FrontSideRail_SMAAssault";
 			};
 		};
 	};

@@ -594,11 +594,6 @@ class CfgVehicles
 				count = 30;
 				name = "ACE_elasticBandage";
 			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
 			class _xx_ACE_morphine
 			{
 				count = 26;
@@ -621,7 +616,7 @@ class CfgVehicles
 			};
 			class Tourniquet
 			{
-				count = 16;
+				count = 8;
 				name = "ACE_tourniquet";
 			};
 		};
@@ -5324,7 +5319,26 @@ class CfgWeapons
 	class rhs_weap_m249_pip_L;
 	class T1_weap_lmg: rhs_weap_m249_pip_L
 	{
-		magazines[] += {
+		magazines[] = {
+			"rhs_200rnd_556x45_M_SAW",
+			"rhs_200rnd_556x45_B_SAW",
+			"rhs_200rnd_556x45_T_SAW",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_200Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_M200_soft_pouch",
+			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
+			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",
+			"rhs_mag_30Rnd_556x45_M200_Stanag",
+			"30Rnd_556x45_Stanag",
+			"30Rnd_556x45_Stanag_Tracer_Red",
+			"30Rnd_556x45_Stanag_Tracer_Green",
+			"30Rnd_556x45_Stanag_Tracer_Yellow",
+			"T1_30Rnd_556x45_Stanag_SD",
 			"SMA_30Rnd_556x45_M855A1",
 			"SMA_30Rnd_556x45_M855A1_Tracer",
 			"SMA_30Rnd_556x45_M855A1_IR"
@@ -5355,10 +5369,15 @@ class CfgWeapons
 			};
 		};
 	};
+
+	class SMA_AssaultBase;
+	class SMA_556_RIFLEBASE : SMA_AssaultBase {
+		magazines[] += {"T1_30Rnd_556x45_Stanag_SD"};
+	};
+	
 	class SMA_HK416vfg;
 	class T1_weap_rifle: SMA_HK416vfg
 	{
-		magazines[] += {"T1_30Rnd_556x45_Stanag_SD"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -5376,7 +5395,6 @@ class CfgWeapons
 	class SMA_MK16_EGLM_black;
 	class T1_weap_rifle_gl: SMA_MK16_EGLM_black
 	{
-		magazines[] += {"T1_30Rnd_556x45_Stanag_SD"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -5393,7 +5411,6 @@ class CfgWeapons
 	};		
 	class T1_weap_rifle_sd: SMA_HK416vfg
 	{
-		magazines[] += {"T1_30Rnd_556x45_Stanag_SD"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic
@@ -5415,7 +5432,6 @@ class CfgWeapons
 	};
 	class T1_weap_rifle_gl_sd: SMA_MK16_EGLM_black
 	{
-		magazines[] += {"T1_30Rnd_556x45_Stanag_SD"};
 		class LinkedItems
 		{
 			class LinkedItemsOptic

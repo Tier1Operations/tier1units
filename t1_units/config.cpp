@@ -4347,12 +4347,14 @@ class CfgVehicles
 		displayName = "Automatic Rifleman";
 		weapons[] = {
 			"T1_weap_lmg",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_weap_lmg",
+			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"

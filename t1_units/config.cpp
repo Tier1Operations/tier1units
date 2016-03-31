@@ -1813,6 +1813,8 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1",
 			"SMA_30Rnd_556x45_M855A1",
 			"SMA_30Rnd_556x45_M855A1",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"SmokeShell",
@@ -5080,6 +5082,142 @@ class CfgVehicles
 			{
 				weapon = "HAFM_LAW";
 				count = 2;
+			};
+		};
+		class TransportBackpacks
+		{
+			class _xx_B_Static_Designator_01_weapon_F
+			{
+				backpack = "B_Static_Designator_01_weapon_F";
+				count = 1;
+			};
+			class _xx_B_UAV_01_backpack_F
+			{
+				backpack = "B_UAV_01_backpack_F";
+				count = 1;
+			};
+		};
+	};
+	class T1_shadow_ammobox: B_supplyCrate_F
+	{
+		vehicleClass = "Ammo";
+		displayName = "T1 Shadow Supply Box";
+		transportMaxWeapons = 999;
+		transportMaxMagazines = 9999;
+		transportMaxBackpacks = 99;
+		transportMaxItems = 9999;
+		class TransportMagazines
+		{
+			class FiveFiveSix // standard rifle
+			{
+				magazine = "SMA_30Rnd_556x45_M855A1";
+				count = 48;
+			};
+			class FiveFiveSixSD // standard rifle
+			{
+				magazine = "T1_30Rnd_556x45_Stanag_SD";
+				count = 12;
+			};
+			class FourSixty // marksman sidearm
+			{
+				magazine = "BWA3_40Rnd_46x30_MP7";
+				count = 16;
+			};
+			class FourSixtySD // marksman sidearm
+			{
+				magazine = "BWA3_40Rnd_46x30_MP7_SD";
+				count = 8;
+			};
+			class SevenSixTwo	// sf marksman
+			{
+				magazine = "20Rnd_762x51_Mag";
+				count = 36;
+			};
+			class GLs // leader GLs
+			{
+				magazine = "1Rnd_HE_Grenade_shell";
+				count=30;
+			};
+			class _xx_rhsusf_mag_17Rnd_9x19_FMJ // standard sidearm
+			{
+				magazine = "rhsusf_mag_17Rnd_9x19_FMJ";
+				count = 8;
+			};
+			class _xx_HandGrenade
+			{
+				magazine = "HandGrenade";
+				count = 8;
+			};
+			class _xx_SmokeShell
+			{
+				magazine = "SmokeShell";
+				count = 16;
+			};
+			class _xx_SmokeShellGreen
+			{
+				magazine = "SmokeShellGreen";
+				count = 8;
+			};
+			class _xx_ACE_M84
+			{
+				magazine = "ACE_M84";
+				count = 8;
+			};
+		};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 60;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 20;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 8;
+				name = "ACE_tourniquet";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 8;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 8;
+				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_CableTie
+			{
+				count = 20;
+				name = "ACE_CableTie";
+			};
+			class _xx_ACE_UAVBattery
+			{
+				count = 4;
+				name = "ACE_UAVBattery";
+			};
+			class _xx_ACRE_PRC148
+			{
+				count = 4;
+				name = "ACRE_PRC148";
+			};
+		};
+		class TransportWeapons
+		{
+			class LAW
+			{
+				weapon = "HAFM_LAW";
+				count = 4;
+			};
+			class MAW
+			{
+				weapon = "tf47_at4_heat";
+				count = 4;
 			};
 		};
 		class TransportBackpacks

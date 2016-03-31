@@ -530,14 +530,6 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Kitbag SF Marksman (T1 Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
-		class TransportMagazines
-		{			
-			class _xx_t1_100Rnd_762x51_Box
-			{
-				count = 1;
-				magazine = "t1_100Rnd_762x51_Box";
-			};
-		};
 		class TransportItems
 		{
 			class Bandage1
@@ -1141,7 +1133,7 @@ class CfgVehicles
 		{
 			class _xx_t1_100Rnd_762x51_Box
 			{
-				count = 1;
+				count = 2;
 				magazine = "t1_100Rnd_762x51_Box";
 			};
 		};

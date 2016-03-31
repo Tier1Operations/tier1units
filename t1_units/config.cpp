@@ -5367,6 +5367,20 @@ class CfgWeapons
 			};
 		};
 	};	
+	class optic_AMS_base;
+	class optic_AMS: optic_AMS_base
+	{
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			class OpticsModes
+			{
+				class AMS
+				{
+					visionMode[] = {};
+				};
+			};
+		};
+	};
 	class iansky_specterdr: ItemCore
 	{
 		class ItemInfo: InventoryOpticsItem_Base_F

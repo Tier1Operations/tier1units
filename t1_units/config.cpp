@@ -1627,7 +1627,6 @@ class CfgVehicles
 		displayName = "T1 SF Marksman";
 		weapons[] = {
 			"T1_weap_romeo_mmdlc",
-			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"

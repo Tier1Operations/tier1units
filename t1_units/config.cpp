@@ -1658,6 +1658,8 @@ class CfgVehicles
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD",
@@ -1677,6 +1679,8 @@ class CfgVehicles
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD",
@@ -5163,6 +5167,11 @@ class CfgVehicles
 				magazine = "ACE_M84";
 				count = 8;
 			};
+			class SLAMs
+			{
+				magazine = "SLAMDirectionalMine_Wire_Mag";
+				count = 20;
+			};
 		};
 		class TransportItems
 		{
@@ -5206,6 +5215,11 @@ class CfgVehicles
 				count = 4;
 				name = "ACRE_PRC148";
 			};
+			class UavTerminal
+			{
+				count = 6;
+				name = "B_UavTerminal";
+			};
 		};
 		class TransportWeapons
 		{
@@ -5225,12 +5239,17 @@ class CfgVehicles
 			class _xx_B_Static_Designator_01_weapon_F
 			{
 				backpack = "B_Static_Designator_01_weapon_F";
-				count = 1;
+				count = 2;
 			};
 			class _xx_B_UAV_01_backpack_F
 			{
 				backpack = "B_UAV_01_backpack_F";
-				count = 1;
+				count = 2;
+			};
+			class TacticalLegBreaker
+			{
+				backpack = "ACE_TacticalLadder_Pack";
+				count = 2;
 			};
 		};
 	};

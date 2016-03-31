@@ -5322,6 +5322,11 @@ class CfgWeapons
 				{
 					visionMode[] = {};
 				};
+				class Iron
+				{
+					distanceZoomMin = 100;
+					distanceZoomMax = 100;
+				};
 			};
 		};
 	};

@@ -1642,7 +1642,6 @@ class CfgVehicles
 		};
 		respawnWeapons[] = {
 			"T1_weap_romeo_mmdlc",
-			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1658,11 +1657,9 @@ class CfgVehicles
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -1679,11 +1676,9 @@ class CfgVehicles
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",

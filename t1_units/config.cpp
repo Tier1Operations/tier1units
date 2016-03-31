@@ -5326,6 +5326,7 @@ class CfgWeapons
 				{
 					distanceZoomMin = 100;
 					distanceZoomMax = 100;
+					discreteDistance[] = {100};
 				};
 			};
 		};

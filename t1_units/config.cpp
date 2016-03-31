@@ -5307,53 +5307,11 @@ class CfgVehicles
 		class TransportWeapons{};
 		class TransportBackpacks{};
 	};
-
-
 };
 class CfgWeapons
 {
 	class InventoryOpticsItem_Base_F;
 	class Iteminfo;
-	class ItemCore;
-	class optic_SOS: ItemCore
-	{
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			class OpticsModes
-			{
-				class Snip
-				{
-					visionMode[] = {};
-				};
-			};
-		};
-	};	
-	class optic_DMS: ItemCore
-	{
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			class OpticsModes
-			{
-				class Snip
-				{
-					visionMode[] = {};
-				};
-			};
-		};
-	};
-	class optic_LRPS: ItemCore
-	{
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			class OpticsModes
-			{
-				class Snip
-				{
-					visionMode[] = {};
-				};
-			};
-		};
-	};	
 	class ItemCore;
 	class optic_AMS_base: ItemCore
 	{
@@ -5402,7 +5360,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_SOS";
+				item = "optic_AMS";
 				slot = "CowsSlot";
 			};
 		};

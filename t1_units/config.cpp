@@ -5521,7 +5521,16 @@ class CfgWeapons
 				slot = "asdg_FrontSideRail_SMAAssault";
 			};
 		};
-	};	
+	};
+	class SMA_Mk16;
+	class UGL_F;
+	class SMA_Mk16_EGLM 
+	{
+		class EGLM : UGL_F {
+			// I don't get why SMA overrode it with a reordered equal list, but they did.
+			magazines[] += {"ACE_HUNTIR_M203"};
+		};
+	};
 	class SMA_MK16_EGLM_black;
 	class T1_weap_rifle_gl: SMA_MK16_EGLM_black
 	{

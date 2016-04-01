@@ -5524,7 +5524,7 @@ class CfgWeapons
 	};
 	class SMA_Mk16;
 	class UGL_F;
-	class SMA_Mk16_EGLM 
+	class SMA_Mk16_EGLM : SMA_Mk16
 	{
 		class EGLM : UGL_F {
 			// I don't get why SMA overrode it with a reordered equal list, but they did.

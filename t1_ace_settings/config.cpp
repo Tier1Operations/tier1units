@@ -270,7 +270,7 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_medical_level {
-		value = 2;
+		value = 1;
 		typeName = "SCALAR";
 		force = 0;
 	};

@@ -42,6 +42,7 @@ class CfgPatches
 			"T1_Carryall_camo_AMG_desert",
 			"T1_Kitbag_camo_Section_AT_desert",
 			"T1_Soldier_Desert_F",
+			"T1_Medic_Desert_F",
 			"T1_SF_Marksman_SOS_Standard_Desert_F",
 			"T1_SF_Explosive_Standard_Desert_F",
 			"T1_SF_Medic_Standard_Desert_F",
@@ -82,7 +83,8 @@ class CfgPatches
 			"T1_U_Medic_Standard_desert",
 			"T1_V_PlateCarrier2_desert",
 			"T1_V_PlateCarrier2_medic_desert",
-			"T1_H_HelmetB_desert"
+			"T1_H_HelmetB_desert",
+			"T1_weap_romeo_desert_mmdlc"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"t1_units"};
@@ -329,6 +331,13 @@ class CfgVehicles
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
 	};
+	class T1_Medic_Desert_F: T1_Soldier_F
+	{
+		scope = 1;
+		uniformClass = "T1_U_Medic_Standard_desert";
+		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_medic_desert_co.paa"};
+	};
+	
 	class T1_SF_Marksman_SOS_Standard_F;
 	class T1_SF_Marksman_SOS_Standard_Desert_F: T1_SF_Marksman_SOS_Standard_F
 	{
@@ -336,8 +345,20 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
+		weapons[] = {
+			"T1_weap_romeo_desert_mmdlc",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		respawnWeapons[] = {
+			"T1_weap_romeo_desert_mmdlc",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS","ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
+		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS","ACE_RangeCard","ACE_ATragMX","ACE_Kestrel4500"};
 		backpack = "T1_Kitbag_camo_SF_Marksman_desert";
 	};
 	class T1_SF_Explosive_Standard_F;
@@ -371,7 +392,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
-		backpack = "T1_Kitbag_camo_Lead_desert";
+		backpack = "T1_Kitbag_camo_Lead_SF_desert";
 	};
 	class T1_SF_AT_Standard_F;
 	class T1_SF_AT_Standard_Desert_F: T1_SF_AT_Standard_F
@@ -382,7 +403,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
-		backpack = "T1_Kitbag_camo_Lead_desert";
+		backpack = "T1_Kitbag_camo_Lead_SF_desert";
 	};
 	class T1_SF_AR_Standard_F;
 	class T1_SF_AR_Standard_Desert_F: T1_SF_AR_Standard_F
@@ -524,7 +545,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
 		linkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
-		backpack = "T1_Kitbag_camo_Lead_desert";
+		backpack = "T1_Kitbag_camo_Scout_Lead_desert";
 	};
 	class T1_Scout_Standard_F;
 	class T1_Scout_Standard_Desert_F: T1_Scout_Standard_F
@@ -533,9 +554,23 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		uniformClass = "T1_U_Squad_Standard_desert";
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
-		linkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
-		respawnLinkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
-		backpack = "T1_Kitbag_camo_Lead_desert";
+		weapons[] = {
+			"T1_weap_romeo_desert_mmdlc",
+			"T1_weap_sidearm_l",
+			"Throw",
+			"Put",
+			"Laserdesignator"
+		};
+		respawnWeapons[] = {
+			"T1_weap_romeo_desert_mmdlc",
+			"T1_weap_sidearm_l",
+			"Throw",
+			"Put",
+			"Laserdesignator"
+		};
+		linkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS","B_UavTerminal"};
+		respawnLinkedItems[] = {"V_Chestrig_khk","H_Booniehat_khk","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS","B_UavTerminal"};
+		backpack = "B_Static_Designator_01_weapon_F";
 	};
 	// Crewmen placed here
 	
@@ -569,8 +604,8 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_Desert";
 		vehicleClass = "Section";
-		uniformClass = "T1_U_Squad_Standard_desert";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
+		uniformClass = "T1_U_Medic_Standard_desert";
+		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_medic_desert_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_cls_desert";
@@ -629,8 +664,8 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_Desert";
 		vehicleClass = "Platoon";
-		uniformClass = "T1_U_Squad_Standard_desert";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
+		uniformClass = "T1_U_Medic_Standard_desert";
+		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_medic_desert_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_medic_desert";
@@ -641,8 +676,8 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_Desert";
 		vehicleClass = "Platoon";
-		uniformClass = "T1_U_Medic_Standard_desert";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_medic_desert_co.paa"};
+		uniformClass = "T1_U_Squad_Standard_desert";
+		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_PLEOD_desert";
@@ -734,11 +769,11 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "T1_Squad_Medic_Standard_Desert_F";
+			uniformClass = "T1_Medic_Desert_F";
 			containerClass = "Supply130";
 			mass = 80;
 		};
-	};
+	}; 
 	 //T1_U_Instructor_Polo_Black missing
 	 //T1_U_Instructor_Polo_Orange mssing
 	 //T1_U_Pilot_Standard missing
@@ -781,6 +816,33 @@ class CfgWeapons
 		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_equip1_desert_co.paa"};
+	};
+	class srifle_DMR_03_tan_F;
+	class T1_weap_romeo_desert_mmdlc : srifle_DMR_03_tan_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_AMS_snd";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_B";
+				slot = "MuzzleSlot";
+			};
+			class LinkedItemsAcc
+			{
+				item = "acc_pointer_IR";
+				slot = "PointerSlot";
+			};
+			class LinkedItemsUnder
+			{
+				item = "bipod_01_F_snd";
+				slot = "UnderBarrelSlot";
+			};
+		};
 	};
 };
 //};

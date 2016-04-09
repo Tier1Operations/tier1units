@@ -495,7 +495,7 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_mk6mortar_useAmmoHandling {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 0;
 	};

@@ -414,7 +414,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_desert","T1_H_HelmetB_desert","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
-		backpack = "T1_Kitbag_camo_AR_desert";
+		backpack = "T1_Kitbag_camo_AR_SF_desert";
 	};
 	//Divers placed here
 	// Pilots placed here

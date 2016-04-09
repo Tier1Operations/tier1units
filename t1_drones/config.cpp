@@ -167,7 +167,7 @@ class CfgVehicles
 			class saline
 			{
 				count = 16;
-				name = "ACE_salineIV_500";
+				name = "ACE_bloodIV_500";
 			};
 			class _xx_ACE_CableTie
 			{
@@ -353,7 +353,7 @@ class CfgVehicles
 			class saline
 			{
 				count = 16;
-				name = "ACE_salineIV_500";
+				name = "ACE_bloodIV_500";
 			};
 			class _xx_ACE_CableTie
 			{

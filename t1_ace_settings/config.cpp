@@ -525,12 +525,12 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_overheating_unJamOnreload {
-		value = 0;
+		value = 1;
 		typeName = "BOOL";
 		force = 0;
 	};
 	class ace_overheating_unJamFailChance {
-		value = 0.1;
+		value = 0;
 		typeName = "SCALAR";
 		force = 0;
 	};

@@ -599,7 +599,7 @@ class CfgVehicles
 			class IVFluid
 			{
 				count = 8;
-				name = "ACE_salineIV_500";
+				name = "ACE_bloodIV_500";
 			};
 			class MagicalAidKit
 			{
@@ -651,7 +651,7 @@ class CfgVehicles
 			class _xx_ACE_bloodIV_250
 			{
 				count = 4;
-				name = "ACE_salineIV_500";
+				name = "ACE_bloodIV_500";
 			};
 			class MagicalAidKit
 			{
@@ -693,7 +693,7 @@ class CfgVehicles
 			class _xx_ACE_bloodIV_250
 			{
 				count = 4;
-				name = "ACE_salineIV_500";
+				name = "ACE_bloodIV_500";
 			};
 			class MagicalAidKit
 			{
@@ -4926,7 +4926,7 @@ class CfgVehicles
 			class _xx_ACE_bloodIV_250
 			{
 				count = 5;
-				name = "ACE_salineIV_500";
+				name = "ACE_bloodIV_500";
 			};
 			class _xx_ACE_CableTie
 			{

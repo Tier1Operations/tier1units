@@ -355,17 +355,17 @@ class ACE_Settings {
 		force = 0;
 	};
 	class ace_medical_enableRevive {
-		value = 0;
+		value = 1;
 		typeName = "SCALAR";
 		force = 0;
 	};
 	class ace_medical_maxReviveTime {
-		value = 600;
+		value = 1200;
 		typeName = "SCALAR";
 		force = 0;
 	};
 	class ace_medical_amountOfReviveLives {
-		value = 2;
+		value = -1;
 		typeName = "SCALAR";
 		force = 0;
 	};

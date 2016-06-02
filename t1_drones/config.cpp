@@ -61,9 +61,9 @@ class CfgVehicles
 				magazine = "rhs_200rnd_556x45_M_SAW";
 				count = 30;
 			};
-			class _xx_SMA_150Rnd_762_Mk319
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
-				magazine = "SMA_150Rnd_762_Mk319";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 				count = 20;
 			};
 			class _xx_20Rnd_762x51_Mag
@@ -249,7 +249,7 @@ class CfgVehicles
 			};
 			class mmg_mag
 			{
-				magazine = "SMA_150Rnd_762_Mk319";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 				count = 20;
 			};
 			class marksman_mag

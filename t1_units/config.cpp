@@ -1383,9 +1383,9 @@ class CfgVehicles
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_SMA_150Rnd_762_Mk319
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
-				magazine = "SMA_150Rnd_762_Mk319";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 				count = 3;
 			};
 		};
@@ -1429,10 +1429,10 @@ class CfgVehicles
 		maximumLoad = 600;
 		class TransportMagazines
 		{
-			class _xx_SMA_150Rnd_762_Mk319
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 5;
-				magazine = "SMA_150Rnd_762_Mk319";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 			};
 		};
 		class TransportItems
@@ -3293,15 +3293,15 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"SMA_150Rnd_762_Mk319",
-			"SMA_150Rnd_762_Mk319",
+			"rhsusf_100Rnd_762x51_m62_tracer",
+			"rhsusf_100Rnd_762x51_m62_tracer",
 			"HandGrenade",
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"SMA_150Rnd_762_Mk319",
-			"SMA_150Rnd_762_Mk319",
+			"rhsusf_100Rnd_762x51_m62_tracer",
+			"rhsusf_100Rnd_762x51_m62_tracer",
 			"HandGrenade",
 			"SmokeShell"
 		};
@@ -3386,7 +3386,7 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"SMA_150Rnd_762_Mk319"
+			"rhsusf_100Rnd_762x51_m62_tracer"
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
@@ -3403,7 +3403,7 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"SMA_150Rnd_762_Mk319"
+			"rhsusf_100Rnd_762x51_m62_tracer"
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
@@ -4969,9 +4969,9 @@ class CfgVehicles
 				magazine = "SMA_30Rnd_556x45_M855A1";
 				count = 48;
 			};
-			class _xx_SMA_150Rnd_762_Mk319
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
-				magazine = "SMA_150Rnd_762_Mk319";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 				count = 32;
 			};
 			class _xx_7Rnd_408_Mag
@@ -5482,8 +5482,8 @@ class CfgWeapons
 			};
 		};
 	};
-	class sma_minimi_mk3_762tlb_wdl;
-	class T1_weap_mmg: sma_minimi_mk3_762tlb_wdl
+	class rhs_weap_m240B;
+	class T1_weap_mmg: rhs_weap_m240B
 	{
 		class LinkedItems
 		{

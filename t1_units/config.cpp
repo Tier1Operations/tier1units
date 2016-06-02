@@ -118,9 +118,6 @@ class CfgPatches
 			"T1_weap_sidearm_l",
 			"T1_weap_romeo_mmdlc"
 		};
-		magazines[] = {
-			"t1_100Rnd_762x51_Box"
-		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
 			"45KO_SO_weapons_ABR",
@@ -144,27 +141,6 @@ class CfgFactionClasses
 		side = 1;
 		priority = 10;
 		icon = "\t1_units\data\cfgFactionClasses_T1_ca.paa";
-	};
-};
-class CfgMagazines
-{
-	class CA_Magazine;
-	
-	class t1_100Rnd_762x51_Box: CA_Magazine
-	{
-		author = "Tier1 Operations";
-		scope = 2;
-		displayName = "7.62x51mm 100Rnd Box";
-		descriptionShort = "7.62x51mm 100Rnd Box";
-		picture = "\A3\Weapons_F_Beta\Data\UI\m_150Rnd_762x51_CA.paa";
-		count = 100;
-		type = "2*		256";
-		ammo = "B_762x51_Tracer_Red";
-		initSpeed = 860;
-		tracersEvery = 5;
-		lastRoundsTracer = 4;
-		nameSound = "mgun";
-		mass = 67;
 	};
 };
 class CfgVehicleClasses
@@ -330,10 +306,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{			
-			class _xx_t1_100Rnd_762x51_Box
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 1;
-				magazine = "t1_100Rnd_762x51_Box";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 			};
 		};
 		class TransportItems
@@ -620,10 +596,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
 		class TransportMagazines
 		{			
-			class _xx_t1_100Rnd_762x51_Box
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 1;
-				magazine = "t1_100Rnd_762x51_Box";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 			};
 		};
 		class TransportItems
@@ -877,10 +853,10 @@ class CfgVehicles
 				count = 4;
 				magazine = "DemoCharge_Remote_Mag";
 			};
-			class _xx_t1_100Rnd_762x51_Box
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 1;
-				magazine = "t1_100Rnd_762x51_Box";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 			};
 		};
 		class TransportItems
@@ -1131,10 +1107,10 @@ class CfgVehicles
 		scope = 1;
 		class TransportMagazines
 		{
-			class _xx_t1_100Rnd_762x51_Box
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 2;
-				magazine = "t1_100Rnd_762x51_Box";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 			};
 		};
 		class TransportItems
@@ -2063,7 +2039,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"t1_100Rnd_762x51_Box",
+			"rhsusf_100Rnd_762x51_m62_tracer",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD"
 		};
@@ -2071,7 +2047,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"t1_100Rnd_762x51_Box",
+			"rhsusf_100Rnd_762x51_m62_tracer",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD"
 		};
@@ -2578,7 +2554,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"t1_100Rnd_762x51_Box",
+			"rhsusf_100Rnd_762x51_m62_tracer",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD"
 		};
@@ -2586,7 +2562,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"t1_100Rnd_762x51_Box",
+			"rhsusf_100Rnd_762x51_m62_tracer",
 			"BWA3_40Rnd_46x30_MP7",
 			"BWA3_40Rnd_46x30_MP7_SD"
 		};
@@ -5403,7 +5379,7 @@ class CfgWeapons
 	class Rifle_Long_Base_F;
 	class LMG_Zafir_F: Rifle_Long_Base_F
 	{
-		magazines[] += {"t1_100Rnd_762x51_Box"};
+		magazines[] += {"rhsusf_100Rnd_762x51_m62_tracer"};
 		class WeaponSlotsInfo;
 		class Single;
 		class FullAuto;

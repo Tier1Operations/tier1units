@@ -2802,14 +2802,14 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
-			"srifle_LRR_LRPS_F",
+			"T1_weap_sierra",
 			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"Rangefinder"
 		};
 		respawnWeapons[] = {
-			"srifle_LRR_LRPS_F",
+			"T1_weap_sierra",
 			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",

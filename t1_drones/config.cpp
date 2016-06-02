@@ -61,7 +61,7 @@ class CfgVehicles
 				magazine = "rhs_200rnd_556x45_M_SAW";
 				count = 30;
 			};
-			class _xx_rhsusf_100Rnd_762x51_m62_tracer
+			class mmg_mag
 			{
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 				count = 20;
@@ -71,9 +71,9 @@ class CfgVehicles
 				magazine = "20Rnd_762x51_Mag";
 				count = 24;
 			};
-			class _xx_t1_100Rnd_762x51_Box
+			class mmg_sf_mag
 			{
-				magazine = "t1_100Rnd_762x51_Box";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 				count = 8;
 			};
 			class _xx_7Rnd_408_Mag
@@ -257,9 +257,9 @@ class CfgVehicles
 				magazine = "20Rnd_762x51_Mag";
 				count = 24;
 			};
-			class _xx_t1_100Rnd_762x51_Box
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
-				magazine = "t1_100Rnd_762x51_Box";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 				count = 8;
 			};
 			class _xx_7Rnd_408_Mag

@@ -283,8 +283,11 @@ class T1_weap_rifle_gl_sd: SMA_MK16_EGLM_black
 		};
 	};
 };
+#define t1_mag_rifle "SMA_30Rnd_556x45_M855A1"
+#define t1_mag_rifle_sd "T1_30Rnd_556x45_Stanag_SD"
+
 class srifle_DMR_03_woodland_F;
-class T1_weap_romeo_mmdlc : srifle_DMR_03_woodland_F
+class T1_weap_marksman : srifle_DMR_03_woodland_F
 {
 	class LinkedItems
 	{
@@ -310,6 +313,9 @@ class T1_weap_romeo_mmdlc : srifle_DMR_03_woodland_F
 		};
 	};
 };
+#define t1_mag_marksman "20Rnd_762x51_Mag"
+#define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
+
 class UniformItem;
 class Uniform_Base;
 class T1_U_Squad_Standard: Uniform_Base

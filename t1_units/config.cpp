@@ -1018,7 +1018,7 @@ class CfgVehicles
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
 				count = 3;
-				magazine = "rhs_200rnd_556x45_M_SAW";
+				magazine = t1_mag_lmg;
 			};
 		};
 		class TransportItems
@@ -1063,7 +1063,7 @@ class CfgVehicles
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
 				count = 3;
-				magazine = "rhs_200rnd_556x45_M_SAW";
+				magazine = t1_mag_lmg;
 			};
 		};
 		class TransportItems
@@ -4332,7 +4332,7 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"rhs_200rnd_556x45_M_SAW",
+			t1_mag_lmg,
 			t1_mag_sidearm_l,
 			t1_mag_sidearm_l,
 			"HandGrenade",
@@ -4342,7 +4342,7 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"rhs_200rnd_556x45_M_SAW",
+			t1_mag_lmg,
 			t1_mag_sidearm_l,
 			t1_mag_sidearm_l,
 			"HandGrenade",
@@ -4841,7 +4841,7 @@ class CfgVehicles
 			};
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
-				magazine = "rhs_200rnd_556x45_M_SAW";
+				magazine = t1_mag_lmg;
 				count = 18;
 			};
 			class _xx_20Rnd_762x51_Mag

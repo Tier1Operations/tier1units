@@ -171,6 +171,8 @@ class T1_weap_lmg: rhs_weap_m249_pip_L
 		};
 	};
 };
+#define t1_mag_lmg "rhs_200rnd_556x45_M_SAW"
+
 
 class rhs_weap_m240B;
 class T1_weap_mmg: rhs_weap_m240B

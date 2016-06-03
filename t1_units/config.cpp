@@ -312,7 +312,7 @@ class CfgVehicles
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 1;
-				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
+				magazine = t1_mag_mmg_sf;
 			};
 		};
 		class TransportItems
@@ -602,7 +602,7 @@ class CfgVehicles
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 1;
-				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
+				magazine = t1_mag_mmg_sf;
 			};
 		};
 		class TransportItems
@@ -859,7 +859,7 @@ class CfgVehicles
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 1;
-				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
+				magazine = t1_mag_mmg_sf;
 			};
 		};
 		class TransportItems
@@ -1113,7 +1113,7 @@ class CfgVehicles
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 2;
-				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
+				magazine = t1_mag_mmg_sf;
 			};
 		};
 		class TransportItems
@@ -1364,7 +1364,7 @@ class CfgVehicles
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
-				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
+				magazine = t1_mag_mmg;
 				count = 3;
 			};
 		};
@@ -1411,7 +1411,7 @@ class CfgVehicles
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 5;
-				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
+				magazine = t1_mag_mmg;
 			};
 		};
 		class TransportItems
@@ -2042,7 +2042,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"rhsusf_100Rnd_762x51_m62_tracer",
+			t1_mag_mmg_sf,
 			t1_mag_sidearm_m,
 			t1_mag_sidearm_m_sd
 		};
@@ -2050,7 +2050,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"rhsusf_100Rnd_762x51_m62_tracer",
+			t1_mag_mmg_sf,
 			t1_mag_sidearm_m,
 			t1_mag_sidearm_m_sd
 		};
@@ -2557,7 +2557,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"rhsusf_100Rnd_762x51_m62_tracer",
+			t1_mag_mmg_sf,
 			t1_mag_sidearm_m,
 			t1_mag_sidearm_m_sd
 		};
@@ -2565,7 +2565,7 @@ class CfgVehicles
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
-			"rhsusf_100Rnd_762x51_m62_tracer",
+			t1_mag_mmg_sf,
 			t1_mag_sidearm_m,
 			t1_mag_sidearm_m_sd
 		};
@@ -3272,15 +3272,15 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"rhsusf_100Rnd_762x51_m62_tracer",
-			"rhsusf_100Rnd_762x51_m62_tracer",
+			t1_mag_mmg,
+			t1_mag_mmg,
 			"HandGrenade",
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"rhsusf_100Rnd_762x51_m62_tracer",
-			"rhsusf_100Rnd_762x51_m62_tracer",
+			t1_mag_mmg,
+			t1_mag_mmg,
 			"HandGrenade",
 			"SmokeShell"
 		};
@@ -3365,7 +3365,7 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"rhsusf_100Rnd_762x51_m62_tracer"
+			t1_mag_mmg
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
@@ -3382,7 +3382,7 @@ class CfgVehicles
 			"SMA_30Rnd_556x45_M855A1",
 			"SmokeShell",
 			"SmokeShellGreen",
-			"rhsusf_100Rnd_762x51_m62_tracer"
+			t1_mag_mmg
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
@@ -4950,7 +4950,7 @@ class CfgVehicles
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
-				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
+				magazine = t1_mag_mmg;
 				count = 32;
 			};
 			class _xx_7Rnd_408_Mag

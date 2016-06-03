@@ -133,6 +133,8 @@ class T1_weap_mmg_sf: 45KO_zafir_black
 		};
 	};
 };
+#define t1_mag_mmg_sf "rhsusf_100Rnd_762x51_m62_tracer"
+
 class rhs_weap_m249_pip_L;
 class T1_weap_lmg: rhs_weap_m249_pip_L
 {
@@ -169,6 +171,7 @@ class T1_weap_lmg: rhs_weap_m249_pip_L
 		};
 	};
 };
+
 class rhs_weap_m240B;
 class T1_weap_mmg: rhs_weap_m240B
 {
@@ -186,6 +189,7 @@ class T1_weap_mmg: rhs_weap_m240B
 		};
 	};
 };
+#define t1_mag_mmg "rhsusf_100Rnd_762x51_m62_tracer"
 
 class SMA_AssaultBase;
 class SMA_556_RIFLEBASE : SMA_AssaultBase {

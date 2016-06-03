@@ -2043,16 +2043,16 @@ class CfgVehicles
 			"HandGrenade",
 			"SmokeShell",
 			"rhsusf_100Rnd_762x51_m62_tracer",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD"
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m_sd
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
 			"rhsusf_100Rnd_762x51_m62_tracer",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD"
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m_sd
 		};
 		icon = "iconManMG";
 		backpack = "T1_Kitbag_camo_AR_SF";
@@ -2142,9 +2142,9 @@ class CfgVehicles
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD",
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m_sd,
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -2161,9 +2161,9 @@ class CfgVehicles
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
 			"20Rnd_762x51_Mag",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD",
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m_sd,
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
@@ -2558,16 +2558,16 @@ class CfgVehicles
 			"HandGrenade",
 			"SmokeShell",
 			"rhsusf_100Rnd_762x51_m62_tracer",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD"
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m_sd
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell",
 			"rhsusf_100Rnd_762x51_m62_tracer",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD"
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m_sd
 		};
 		icon = "iconManMG";
 		backpack = "T1_Kitbag_camo_AR_SF";
@@ -2828,11 +2828,11 @@ class CfgVehicles
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD",
-			"BWA3_40Rnd_46x30_MP7_SD",
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m_sd,
+			t1_mag_sidearm_m_sd,
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
@@ -2845,11 +2845,11 @@ class CfgVehicles
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7",
-			"BWA3_40Rnd_46x30_MP7_SD",
-			"BWA3_40Rnd_46x30_MP7_SD",
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m,
+			t1_mag_sidearm_m_sd,
+			t1_mag_sidearm_m_sd,
 			"SmokeShell"
 		};
 		linkedItems[] = {
@@ -4960,7 +4960,7 @@ class CfgVehicles
 			};
 			class _xx_BWA3_40Rnd_46x30_MP7
 			{
-				magazine = "BWA3_40Rnd_46x30_MP7";
+				magazine = t1_mag_sidearm_m;
 				count = 16;
 			};
 			class _xx_rhsusf_mag_17Rnd_9x19_FMJ
@@ -5096,12 +5096,12 @@ class CfgVehicles
 			};
 			class FourSixty // marksman sidearm
 			{
-				magazine = "BWA3_40Rnd_46x30_MP7";
+				magazine = t1_mag_sidearm_m;
 				count = 16;
 			};
 			class FourSixtySD // marksman sidearm
 			{
-				magazine = "BWA3_40Rnd_46x30_MP7_SD";
+				magazine = t1_mag_sidearm_m_sd;
 				count = 8;
 			};
 			class SevenSixTwo	// sf marksman

@@ -84,6 +84,8 @@ class T1_weap_sidearm_m: BWA3_MP7
 		};
 	};
 };
+#define t1_mag_sidearm_m "BWA3_40Rnd_46x30_MP7"
+#define t1_mag_sidearm_m_sd "BWA3_40Rnd_46x30_MP7_SD"
 
 class Rifle_Long_Base_F;
 class LMG_Zafir_F: Rifle_Long_Base_F

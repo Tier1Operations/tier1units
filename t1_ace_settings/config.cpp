@@ -17,7 +17,6 @@ class CfgPatches
 			"ace_vector",
 			"ace_switchunits",
 			"ace_tacticalladder",
-			"ace_testmissions",
 			"ace_thermals",
 			"ace_sandbag",
 			"ace_scopes",

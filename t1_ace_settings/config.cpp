@@ -79,7 +79,6 @@ class CfgPatches
 			"ace_flashsuppressors",
 			"ace_concertina_wire",
 			"ace_dagr",
-			"ace_difficulties",
 			"ace_disarming",
 			"ace_captives",
 			"ace_common",

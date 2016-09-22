@@ -123,8 +123,6 @@ class CfgPatches
 			"45KO_SO_weapons_ABR",
 			"iansky_opt",
 			"ace_flashsuppressors",
-			"BWA3_Weapons",
-			"BWA3_Weapons_t1fix",
 			"t1_law",
 			"ace_medical",
 			"rhsusf_c_weapons",
@@ -4958,7 +4956,7 @@ class CfgVehicles
 				magazine = t1_mag_sierra;
 				count = 36;
 			};
-			class _xx_BWA3_40Rnd_46x30_MP7
+			class sidearm_medium_mags
 			{
 				magazine = t1_mag_sidearm_m;
 				count = 16;

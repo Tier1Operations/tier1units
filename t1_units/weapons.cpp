@@ -62,30 +62,14 @@ class T1_weap_sierra: srifle_LRR_F
 	};
 };
 #define t1_mag_sierra "7Rnd_408_Mag"
-class BWA3_MP7;
-class T1_weap_sidearm_m: BWA3_MP7
+
+// using the same as light until we find a better alternative
+class T1_weap_sidearm_l;
+class T1_weap_sidearm_m: T1_weap_sidearm_l
 {
-	class LinkedItems
-	{
-		class LinkedItemsOptic
-		{
-			item = "optic_Aco_smg";
-			slot = "CowsSlot";
-		};
-		class LinkedItemsMuzzle
-		{
-			item = "BWA3_muzzle_snds_MP7";
-			slot = "MuzzleSlot";
-		};
-		class LinkedItemsAcc
-		{
-			item = "acc_pointer_IR";
-			slot = "PointerSlot";
-		};
-	};
 };
-#define t1_mag_sidearm_m "BWA3_40Rnd_46x30_MP7"
-#define t1_mag_sidearm_m_sd "BWA3_40Rnd_46x30_MP7_SD"
+#define t1_mag_sidearm_m "rhsusf_mag_17Rnd_9x19_FMJ"
+#define t1_mag_sidearm_m_sd "rhsusf_mag_17Rnd_9x19_FMJ"
 
 class Rifle_Long_Base_F;
 class LMG_Zafir_F: Rifle_Long_Base_F

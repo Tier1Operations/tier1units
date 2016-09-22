@@ -189,12 +189,13 @@ class CfgVehicles {
 				weapon = "tf47_at4_heat";
 				count = 1;
 			};
+			/*
 			class _xx_HAFM_LAW
 			{
 				weapon = "HAFM_LAW";
 				count = 2;
-			};
-		};		
+			};//*/
+		};
 	};
 	class rhsusf_m1025_w_s_m2;
 	class t1_car_light_mg : rhsusf_m1025_w_s_m2 {
@@ -292,11 +293,12 @@ class CfgVehicles {
 				weapon = "tf47_at4_heat";
 				count = 1;
 			};
+			/*
 			class _xx_HAFM_LAW
 			{
 				weapon = "HAFM_LAW";
 				count = 2;
-			};
+			}; //*/
 		};
 	};
 	class rhsusf_m1025_w_s_Mk19;
@@ -395,11 +397,12 @@ class CfgVehicles {
 				weapon = "tf47_at4_heat";
 				count = 1;
 			};
+			/*
 			class _xx_HAFM_LAW
 			{
 				weapon = "HAFM_LAW";
 				count = 2;
-			};
+			}; //*/
 		};
 	};
 	// APC: NATO Namer
@@ -499,11 +502,12 @@ class CfgVehicles {
 				weapon = "tf47_at4_heat";
 				count = 2;
 			};
+			/*
 			class _xx_HAFM_LAW
 			{
 				weapon = "HAFM_LAW";
 				count = 5;
-			};
+			};//*/
 		};
 	};
 	// IFV: NATO Patria AMV
@@ -603,11 +607,12 @@ class CfgVehicles {
 				weapon = "tf47_at4_heat";
 				count = 2;
 			};
+			/*
 			class _xx_HAFM_LAW
 			{
 				weapon = "HAFM_LAW";
 				count = 5;
-			};
+			};//*/
 		};
 	};
 	// 	tank: NATO Merkava MK IV M
@@ -707,11 +712,12 @@ class CfgVehicles {
 				weapon = "tf47_at4_heat";
 				count = 1;
 			};
+			/*
 			class _xx_HAFM_LAW
 			{
 				weapon = "HAFM_LAW";
 				count = 2;
-			};
+			};//*/
 		};
 	};
 	// helo transport light: NATO MH-6M Little Bird

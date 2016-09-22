@@ -81,11 +81,12 @@ class CfgVehicles
 				magazine = "7Rnd_408_Mag";
 				count = 24;
 			};
-			class _xx_BWA3_40Rnd_46x30_MP7
+			/*
+			class sidearm_m_mag
 			{
 				magazine = "BWA3_40Rnd_46x30_MP7";
 				count = 16;
-			};
+			};//*/
 			class _xx_rhsusf_mag_17Rnd_9x19_FMJ
 			{
 				magazine = "rhsusf_mag_17Rnd_9x19_FMJ";
@@ -192,11 +193,12 @@ class CfgVehicles
 				weapon = "tf47_at4_heat";
 				count = 5;
 			};
+			/*
 			class _xx_HAFM_LAW
 			{
 				weapon = "HAFM_LAW";
 				count = 14;
-			};
+			};//*/
 		};
 		class TransportBackpacks
 		{
@@ -267,11 +269,12 @@ class CfgVehicles
 				magazine = "7Rnd_408_Mag";
 				count = 24;
 			};
-			class _xx_BWA3_40Rnd_46x30_MP7
+			/*
+			class sidearm_m_mag
 			{
 				magazine = "BWA3_40Rnd_46x30_MP7";
 				count = 16;
-			};
+			};//*/
 			class _xx_rhsusf_mag_17Rnd_9x19_FMJ
 			{
 				magazine = "rhsusf_mag_17Rnd_9x19_FMJ";
@@ -378,11 +381,12 @@ class CfgVehicles
 				weapon = "tf47_at4_heat";
 				count = 5;
 			};
+			/*
 			class _xx_HAFM_LAW
 			{
 				weapon = "HAFM_LAW";
 				count = 14;
-			};
+			};//*/
 		};
 		class TransportBackpacks
 		{

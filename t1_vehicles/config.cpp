@@ -105,12 +105,12 @@ class CfgVehicles {
 		{
 			class riflemag
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 18;
 			};
 			class riflemag_tracer
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				magazine = "30Rnd_556x45_Stanag_Tracer_Red";
 				count = 4;
 			};
 			class section_ar_mag
@@ -209,12 +209,12 @@ class CfgVehicles {
 		{
 			class riflemag
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 18;
 			};
 			class riflemag_tracer
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				magazine = "30Rnd_556x45_Stanag_Tracer_Red";
 				count = 4;
 			};
 			class section_ar_mag
@@ -313,12 +313,12 @@ class CfgVehicles {
 		{
 			class riflemag
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 18;
 			};
 			class riflemag_tracer
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				magazine = "30Rnd_556x45_Stanag_Tracer_Red";
 				count = 4;
 			};
 			class section_ar_mag
@@ -418,12 +418,12 @@ class CfgVehicles {
 		{
 			class riflemag
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 62;
 			};
 			class riflemag_tracer
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				magazine = "30Rnd_556x45_Stanag_Tracer_Red";
 				count = 12;
 			};
 			class section_ar_mag
@@ -523,12 +523,12 @@ class CfgVehicles {
 		{
 			class riflemag
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 62;
 			};
 			class riflemag_tracer
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				magazine = "30Rnd_556x45_Stanag_Tracer_Red";
 				count = 12;
 			};
 			class section_ar_mag
@@ -628,12 +628,12 @@ class CfgVehicles {
 		{
 			class riflemag
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 18;
 			};
 			class riflemag_tracer
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				magazine = "30Rnd_556x45_Stanag_Tracer_Red";
 				count = 4;
 			};
 			class section_ar_mag

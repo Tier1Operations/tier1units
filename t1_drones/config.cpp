@@ -48,12 +48,12 @@ class CfgVehicles
 		{
 			class riflemag
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 110;
 			};
 			class riflemag_tracer
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				magazine = "30Rnd_556x45_Stanag_Tracer_Red";
 				count = 20;
 			};
 			class _xx_rhs_200rnd_556x45_M_SAW
@@ -236,12 +236,12 @@ class CfgVehicles
 		{
 			class riflemag
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1";
+				magazine = "30Rnd_556x45_Stanag";
 				count = 110;
 			};
 			class riflemag_tracer
 			{
-				magazine = "SMA_30Rnd_556x45_M855A1_Tracer";
+				magazine = "30Rnd_556x45_Stanag_Tracer_Red";
 				count = 20;
 			};
 			class section_ar_mag

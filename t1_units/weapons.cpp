@@ -141,10 +141,7 @@ class T1_weap_lmg: rhs_weap_m249_pip_L
 		"30Rnd_556x45_Stanag_Tracer_Red",
 		"30Rnd_556x45_Stanag_Tracer_Green",
 		"30Rnd_556x45_Stanag_Tracer_Yellow",
-		"T1_30Rnd_556x45_Stanag_SD",
-		"SMA_30Rnd_556x45_M855A1",
-		"SMA_30Rnd_556x45_M855A1_Tracer",
-		"SMA_30Rnd_556x45_M855A1_IR"
+		"T1_30Rnd_556x45_Stanag_SD"
 	};
 	class LinkedItems
 	{
@@ -177,13 +174,14 @@ class T1_weap_mmg: rhs_weap_m240B
 };
 #define t1_mag_mmg "rhsusf_100Rnd_762x51_m62_tracer"
 
-class SMA_AssaultBase;
-class SMA_556_RIFLEBASE : SMA_AssaultBase {
+/* TODO: SPARs taking SD mags
+class arifle_SPAR_01_blk_F :  {
 	magazines[] += {"T1_30Rnd_556x45_Stanag_SD"};
 };
+//*/
 
-class SMA_HK416vfg;
-class T1_weap_rifle: SMA_HK416vfg
+class arifle_SPAR_01_blk_F;
+class T1_weap_rifle: arifle_SPAR_01_blk_F
 {
 	class LinkedItems
 	{
@@ -199,17 +197,9 @@ class T1_weap_rifle: SMA_HK416vfg
 		};
 	};
 };
-class SMA_Mk16;
-class UGL_F;
-class SMA_Mk16_EGLM : SMA_Mk16
-{
-	class EGLM : UGL_F {
-		// I don't get why SMA overrode it with a reordered equal list, but they did.
-		magazines[] += {"ACE_HUNTIR_M203"};
-	};
-};
-class SMA_MK16_EGLM_black;
-class T1_weap_rifle_gl: SMA_MK16_EGLM_black
+
+class arifle_SPAR_01_GL_blk_F;
+class T1_weap_rifle_gl: arifle_SPAR_01_GL_blk_F
 {
 	class LinkedItems
 	{
@@ -225,7 +215,7 @@ class T1_weap_rifle_gl: SMA_MK16_EGLM_black
 		};
 	};
 };		
-class T1_weap_rifle_sd: SMA_HK416vfg
+class T1_weap_rifle_sd: arifle_SPAR_01_blk_F
 {
 	class LinkedItems
 	{
@@ -246,7 +236,7 @@ class T1_weap_rifle_sd: SMA_HK416vfg
 		};
 	};
 };
-class T1_weap_rifle_gl_sd: SMA_MK16_EGLM_black
+class T1_weap_rifle_gl_sd: arifle_SPAR_01_GL_blk_F
 {
 	class LinkedItems
 	{
@@ -267,7 +257,8 @@ class T1_weap_rifle_gl_sd: SMA_MK16_EGLM_black
 		};
 	};
 };
-#define t1_mag_rifle "SMA_30Rnd_556x45_M855A1"
+#define t1_mag_rifle "30Rnd_556x45_Stanag"
+#define t1_mag_rifle_tracer "30Rnd_556x45_Stanag_Tracer_Red"
 #define t1_mag_rifle_sd "T1_30Rnd_556x45_Stanag_SD"
 
 class srifle_DMR_03_woodland_F;

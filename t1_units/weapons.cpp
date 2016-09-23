@@ -33,16 +33,6 @@ class iansky_specterdr: ItemCore
 		};
 	};
 };
-/*
-class NVGoggles;
-class ACE_NVG_Gen4: NVGoggles
-{
-	class ItemInfo
-	{
-		modelOff = "";
-	};
-};
-*/
 class rhsusf_weap_glock17g4;
 class T1_weap_sidearm_l: rhsusf_weap_glock17g4
 {
@@ -64,7 +54,6 @@ class T1_weap_sierra: srifle_LRR_F
 #define t1_mag_sierra "7Rnd_408_Mag"
 
 // using the same as light until we find a better alternative
-class T1_weap_sidearm_l;
 class T1_weap_sidearm_m: T1_weap_sidearm_l
 {
 };
@@ -188,12 +177,12 @@ class T1_weap_rifle: arifle_SPAR_01_blk_F
 		class LinkedItemsOptic
 		{
 			item = "iansky_specterdrkf";
-			slot = "asdg_OpticRail_SMAAssault";
+			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
 		{
 			item = "acc_pointer_IR";
-			slot = "asdg_FrontSideRail_SMAAssault";
+			slot = "PointerSlot";
 		};
 	};
 };
@@ -206,12 +195,12 @@ class T1_weap_rifle_gl: arifle_SPAR_01_GL_blk_F
 		class LinkedItemsOptic
 		{
 			item = "iansky_specterdrkf";
-			slot = "asdg_OpticRail_SMAAssault";
+			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
 		{
 			item = "acc_pointer_IR";
-			slot = "asdg_FrontSideRail_SMAAssault";
+			slot = "PointerSlot";
 		};
 	};
 };		
@@ -222,17 +211,17 @@ class T1_weap_rifle_sd: arifle_SPAR_01_blk_F
 		class LinkedItemsOptic
 		{
 			item = "iansky_specterdrkf";
-			slot = "asdg_OpticRail_SMAAssault";
+			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
 		{
-			item = "SMA_supp2b_556";
+			item = "muzzle_snds_M";
 			slot = "MuzzleSlot";
 		}
 		class LinkedItemsAcc
 		{
 			item = "acc_pointer_IR";
-			slot = "asdg_FrontSideRail_SMAAssault";
+			slot = "PointerSlot";
 		};
 	};
 };
@@ -243,17 +232,17 @@ class T1_weap_rifle_gl_sd: arifle_SPAR_01_GL_blk_F
 		class LinkedItemsOptic
 		{
 			item = "iansky_specterdrkf";
-			slot = "asdg_OpticRail_SMAAssault";
+			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
 		{
-			item = "SMA_supp2bSCAR_556";
+			item = "muzzle_snds_M";
 			slot = "MuzzleSlot";
 		}
 		class LinkedItemsAcc
 		{
 			item = "acc_pointer_IR";
-			slot = "asdg_FrontSideRail_SMAAssault";
+			slot = "PointerSlot";
 		};
 	};
 };

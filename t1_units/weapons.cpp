@@ -168,6 +168,11 @@ class arifle_SPAR_01_blk_F :  {
 	magazines[] += {"T1_30Rnd_556x45_Stanag_SD"};
 };
 //*/
+class Rifle_Base_F;
+class arifle_SPAR_01_base_F : Rifle_Base_F
+{
+	magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_red","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_Mk262_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Tracer_Dim","T1_30Rnd_556x45_Stanag_SD"};
+};
 
 class arifle_SPAR_01_blk_F;
 class T1_weap_rifle: arifle_SPAR_01_blk_F

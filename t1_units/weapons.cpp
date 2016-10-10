@@ -656,6 +656,23 @@ class T1_m4a1_Mstock_grip3 : rhs_weap_m4a1_carryhandle_mstock_grip3
 		};
 	};
 };
+class rhs_weap_m4a1_carryhandle;
+class T1_m4a1_carryhandle : rhs_weap_m4a1_carryhandle
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+	};
+};
 #define t1_mag_marksman "20Rnd_762x51_Mag"
 #define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
 

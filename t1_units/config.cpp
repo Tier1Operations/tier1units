@@ -23,6 +23,7 @@ class CfgPatches
 			"T1_AssaultPack_Lead_SF",
 			"T1_AssaultPack_AR",
 			"T1_AssaultPack_AAR",
+			"T1_AssaultPack_pl_medic",
 			"T1_B_AssaultPack_SF_Radioman_DM",
 			"T1_Kitbag_AMG",
 			"T1_Kitbag_camo_Lead",
@@ -37,7 +38,7 @@ class CfgPatches
 			"T1_Kitbag_camo_AR",
 			"T1_FieldPack_Scout_Lead",
 			"T1_AssaultPack_PLSgt_JTAC",
-			"T1_Carryall_camo_PLEOD",
+			"T1_AssaultPack_PLEOD",
 			"T1_Carryall_camo_Exp",
 			"T1_B_AssaultPack_Exp_SF",
 			"T1_Kitbag_camo_Repair",
@@ -140,7 +141,10 @@ class CfgPatches
 			"T1_mk18_m320",
 			"T1_m27iar",
 			"T1_mk18",
-			"T1_m4a1_blockII_SD"
+			"T1_m4a1_blockII_SD",
+			"T1_m4a1_grip3",
+			"T1_m4a1_grip2",
+			"T1_m4a1_Mstock_grip3"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
@@ -674,6 +678,40 @@ class CfgVehicles
 			};
 		};
 	};
+	class T1_AssaultPack_pl_medic: B_AssaultPack_rgr
+	{
+		scope = 2;
+		displayName = "AssaultPack Medic";
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 80;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 30;
+				name = "ACE_elasticBandage";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 26;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 8;
+				name = "ACE_epinephrine";
+			};
+			class Tourniquet
+			{
+				count = 8;
+				name = "ACE_tourniquet";
+			};
+		};
+	};
 	class T1_AssaultPack_medic_sf: B_AssaultPack_rgr
 	{
 		scope = 2;
@@ -993,7 +1031,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Carryall_camo_PLEOD: T1_Carryall_camo
+	class T1_AssaultPack_PLEOD: B_AssaultPack_rgr
 	{
 		scope = 1;
 		class TransportMagazines
@@ -1003,11 +1041,6 @@ class CfgVehicles
 				count = 1;
 				magazine = "SatchelCharge_Remote_Mag";
 			};
-			class _xx_DemoCharge_Remote_Mag
-			{
-				count = 2;
-				magazine = "DemoCharge_Remote_Mag";
-			};
 		};
 		class TransportItems
 		{
@@ -1015,36 +1048,6 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ToolKit";
-			};
-			class _xx_MineDetector
-			{
-				count = 1;
-				name = "MineDetector";
-			};
-			class Bandage1
-			{
-				count = 12;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
-			class _xx_ACE_morphine
-			{
-				count = 3;
-				name = "ACE_morphine";
-			};
-			class _xx_ACE_epinephrine
-			{
-				count = 1;
-				name = "ACE_epinephrine";
 			};
 			class _xx_rhs_goggles_clear
 			{
@@ -4712,17 +4715,15 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Platoon";
-		displayName = "Medic";
+		displayName = "Platoon Medic";
 		weapons[] = {
-			"T1_weap_rifle",
-			"T1_weap_sidearm_l",
+			"T1_m4a1_Mstock_grip3",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle",
-			"T1_weap_sidearm_l",
+			"T1_m4a1_Mstock_grip3",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -4730,19 +4731,6 @@ class CfgVehicles
 		magazines[] = {
 			"HandGrenade",
 			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4756,24 +4744,23 @@ class CfgVehicles
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
-			"SmokeShell"
+			"SmokeShell",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag"
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
 			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4787,18 +4774,48 @@ class CfgVehicles
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
-			"SmokeShell"
+			"SmokeShell",			
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag"
 		};
 		items[] = {
 			"ACRE_PRC148",
-			STDITEMS
+			STDITEMS,
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_personalAidKit"
 		};
 		respawnItems[] = {
 			"ACRE_PRC148",
-			STDITEMS
+			STDITEMS,
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_bloodIV_500",
+			"ACE_personalAidKit"
 		};
 		icon = "iconManMedic";
-		backpack = "T1_Kitbag_camo_medic";
+		backpack = "T1_AssaultPack_pl_medic";
 		attendant = 1;
 	};
 	class T1_Platoon_EOD_Standard_F: T1_Soldier_F
@@ -4808,63 +4825,67 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Platoon EOD";
 		weapons[] = {
-			"T1_weap_rifle",
-			"T1_weap_sidearm_l",
+			"T1_m4a1_grip3",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle",
-			"T1_weap_sidearm_l",
+			"T1_m4a1_grip3",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		magazines[] = {
 			"HandGrenade",
-			"HandGrenade",
-			"ACE_M84",			
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
 			"SmokeShell",
-			"SmokeShellGreen",
-			t1_mag_rifle_tracer,
-			"B_IR_Grenade"
+			"B_IR_Grenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"DemoCharge_Remote_Mag",
+			"DemoCharge_Remote_Mag"
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
-			"HandGrenade",
-			"ACE_M84",			
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
 			"SmokeShell",
-			"SmokeShellGreen",
-			t1_mag_rifle_tracer,
-			"B_IR_Grenade"
+			"B_IR_Grenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"DemoCharge_Remote_Mag",
+			"DemoCharge_Remote_Mag"
 		};
 		items[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_M26_Clacker",
-			"ACE_DefusalKit"
+			"ACRE_PRC148",
+			STDITEMS,
+			MEDICALITEMS2,
+			"ACE_M26_Clacker",
+			"ACE_DefusalKit",
+			"MineDetector"
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",STDITEMS,"ACE_M26_Clacker",
-			"ACE_DefusalKit"
+			"ACRE_PRC148",
+			STDITEMS,
+			MEDICALITEMS2,
+			"ACE_M26_Clacker",
+			"ACE_DefusalKit",
+			"MineDetector"
 		};
 		icon = "iconManExplosive";
-		backpack = "T1_Carryall_camo_PLEOD";
+		backpack = "T1_AssaultPack_PLEOD";
 		engineer = 1;
 		canDeactivateMines = 1;
 		detectSkill = 80;

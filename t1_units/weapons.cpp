@@ -612,6 +612,50 @@ class T1_m4a1_grip2 : rhs_weap_m16a4_pmag_grip2
 		};
 	};
 };
+class rhs_weap_m4a1_carryhandle_pmag_grip3;
+class T1_m4a1_grip3 : rhs_weap_m4a1_carryhandle_pmag_grip3
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "rhsusf_acc_grip3";
+			slot = "UnderBarrelSlot";
+		};
+	};
+};
+class rhs_weap_m4a1_carryhandle_mstock_grip3;
+class T1_m4a1_Mstock_grip3 : rhs_weap_m4a1_carryhandle_mstock_grip3
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "rhsusf_acc_grip3";
+			slot = "UnderBarrelSlot";
+		};
+	};
+};
 #define t1_mag_marksman "20Rnd_762x51_Mag"
 #define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
 

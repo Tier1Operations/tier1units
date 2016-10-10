@@ -4962,25 +4962,15 @@ class CfgVehicles
 		transportMaxItems = 9999;
 		class TransportMagazines
 		{
-			class _xx_SMA_30Rnd_556x45_M855A1
+			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
 			{
-				magazine = t1_mag_rifle;
+				magazine = rhs_mag_30Rnd_556x45_M855A1_Stanag;
 				count = 72;
 			};
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
 				magazine = t1_mag_lmg;
-				count = 18;
-			};
-			class _xx_20Rnd_762x51_Mag
-			{
-				magazine = t1_mag_marksman;
 				count = 12;
-			};
-			class _xx_rhsusf_mag_17Rnd_9x19_FMJ
-			{
-				magazine = t1_mag_sidearm_l;
-				count = 8;
 			};
 			class _xx_HandGrenade
 			{
@@ -4990,17 +4980,17 @@ class CfgVehicles
 			class _xx_1Rnd_HE_Grenade_shell
 			{
 				magazine = "1Rnd_HE_Grenade_shell";
-				count = 12;
+				count = 24;
 			};
 			class _xx_SmokeShell
 			{
 				magazine = "SmokeShell";
-				count = 32;
+				count = 18;
 			};
 			class _xx_ACE_M84
 			{
 				magazine = "ACE_M84";
-				count = 16;
+				count = 8;
 			};
 		};
 		class TransportItems
@@ -5022,17 +5012,17 @@ class CfgVehicles
 			};
 			class _xx_ACE_morphine
 			{
-				count = 18;
+				count = 32;
 				name = "ACE_morphine";
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 18;
+				count = 16;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 5;
+				count = 8;
 				name = "ACE_bloodIV_500";
 			};
 			class _xx_ACE_CableTie
@@ -5051,14 +5041,13 @@ class CfgVehicles
 			class _xx_tf47_at4_heat
 			{
 				weapon = "tf47_at4_heat";
-				count = 1;
-			};
-		  /*
-			class _xx_HAFM_LAW
+				count = 2;
+			};		  
+			class _xx_rhs_weap_m72a7
 			{
-				weapon = "HAFM_LAW";
-				count = 7;
-			};			//*/
+				weapon = "rhs_weap_m72a7";
+				count = 5;
+			};			
 		};
 		class TransportBackpacks{};
 	};

@@ -21,6 +21,7 @@ class CfgPatches
 			"T1_AssaultPack_MMG",
 			"T1_AssaultPack_Sniper_RHS",
 			"T1_AssaultPack_Lead_SF",
+			"T1_AssaultPack_AR",
 			"T1_B_AssaultPack_SF_Radioman_DM",
 			"T1_Kitbag_AMG",
 			"T1_Kitbag_camo_Lead",
@@ -40,7 +41,7 @@ class CfgPatches
 			"T1_B_AssaultPack_Exp_SF",
 			"T1_Kitbag_camo_Repair",
 			"T1_Carryall_camo",
-			"T1_Kitbag_camo_cls",
+			"T1_AssaultPack_cls",
 			"T1_Kitbag_camo_medic",
 			"T1_Kitbag_camo",
 			"T1_Platoon_Sgt_Standard_F",
@@ -135,7 +136,8 @@ class CfgPatches
 			"T1_45KO_ABR_green_SD",
 			"T1_DMR_SHADOW_SD",
 			"T1_Pistol_heavy_SD",
-			"T1_mk18_m320"
+			"T1_mk18_m320",
+			"T1_m27iar"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
@@ -726,7 +728,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_cls: T1_Kitbag_camo_medic
+	class T1_AssaultPack_cls: B_AssaultPack_rgr
 	{
 		scope = 1;
 		class TransportItems
@@ -1097,14 +1099,14 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_AR: T1_Kitbag_camo
+	class T1_AssaultPack_AR: B_AssaultPack_rgr
 	{
 		scope = 1;
 		class TransportMagazines
 		{
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
-				count = 3;
+				count = 2;
 				magazine = t1_mag_lmg;
 			};
 		};
@@ -4338,15 +4340,13 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Combat Life Saver";
 		weapons[] = {
-			"T1_weap_rifle",
-			"T1_weap_sidearm_l",
+			"T1_m27iar",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle",
-			"T1_weap_sidearm_l",
+			"T1_m27iar",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -4356,25 +4356,18 @@ class CfgVehicles
 			"HandGrenade",
 			"ACE_M84",
 			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4387,25 +4380,18 @@ class CfgVehicles
 			"HandGrenade",
 			"ACE_M84",
 			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4416,7 +4402,7 @@ class CfgVehicles
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
 		icon = "iconManMedic";
-		backpack = "T1_Kitbag_camo_cls";
+		backpack = "T1_AssaultPack_cls";
 		attendant = 1;
 	};
 	class T1_Section_AR_Standard_F: T1_Soldier_F
@@ -4442,25 +4428,21 @@ class CfgVehicles
 		magazines[] = {
 			"ACE_M84",
 			t1_mag_lmg,
-			t1_mag_sidearm_l,
+			t1_mag_lmg,
 			t1_mag_sidearm_l,
 			"HandGrenade",
-			"HandGrenade",
-			"SmokeShell",
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
 			t1_mag_lmg,
-			t1_mag_sidearm_l,
+			t1_mag_lmg,
 			t1_mag_sidearm_l,
 			"HandGrenade",
-			"HandGrenade",
-			"SmokeShell",
 			"SmokeShell"
 		};
 		icon = "iconManMG";
-		backpack = "T1_Kitbag_camo_AR";
+		backpack = "T1_AssaultPack_AR";
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
 	};

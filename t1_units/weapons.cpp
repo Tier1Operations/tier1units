@@ -524,6 +524,23 @@ class T1_mk18_m320 : rhs_weap_mk18_m320
 		};
 	};
 };
+class rhs_weap_m27iar_grip;
+class T1_m27iar : rhs_weap_m27iar_grip
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};		
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+	};
+};
 #define t1_mag_marksman "20Rnd_762x51_Mag"
 #define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
 

@@ -490,6 +490,40 @@ class T1_hk416d145_m320_SD : rhs_weap_hk416d145_m320
 		};
 	};
 };
+class hgun_Pistol_heavy_01_F;
+class T1_Pistol_heavy_SD : hgun_Pistol_heavy_01_F
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "optic_MRD";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsMuzzle
+		{
+			item = "muzzle_snds_acp";
+			slot = "MuzzleSlot";
+		};		
+	};
+};
+class rhs_weap_mk18_m320;
+class T1_mk18_m320 : rhs_weap_mk18_m320
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};		
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+	};
+};
 #define t1_mag_marksman "20Rnd_762x51_Mag"
 #define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
 

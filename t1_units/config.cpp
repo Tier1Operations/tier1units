@@ -26,7 +26,7 @@ class CfgPatches
 			"T1_B_AssaultPack_SF_Radioman_DM",
 			"T1_Kitbag_AMG",
 			"T1_Kitbag_camo_Lead",
-			"T1_Kitbag_camo_Lead_Plt",
+			"T1_AssaultPack_Lead_Plt",
 			"T1_Kitbag_camo_Lead_Trainer",			
 			"T1_Carryall_camo_AAA",
 			"T1_Carryall_camo_AAT",
@@ -36,7 +36,7 @@ class CfgPatches
 			"T1_Kitbag_camo_Medium_AT",
 			"T1_Kitbag_camo_AR",
 			"T1_FieldPack_Scout_Lead",
-			"T1_Carryall_camo_PLSgt_JTAC",
+			"T1_AssaultPack_PLSgt_JTAC",
 			"T1_Carryall_camo_PLEOD",
 			"T1_Carryall_camo_Exp",
 			"T1_B_AssaultPack_Exp_SF",
@@ -139,7 +139,8 @@ class CfgPatches
 			"T1_Pistol_heavy_SD",
 			"T1_mk18_m320",
 			"T1_m27iar",
-			"T1_mk18"
+			"T1_mk18",
+			"T1_m4a1_blockII_SD"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
@@ -279,7 +280,8 @@ class CfgVehicles
 			};			
 		};
 	};
-	class T1_Kitbag_camo_Lead_Plt: T1_Kitbag_camo_Lead
+	class B_AssaultPack_rgr;
+	class v: B_AssaultPack_rgr
 	{
 		scope = 2;
 		displayName = "Kitbag PltLead (T1 Camo)";
@@ -322,7 +324,6 @@ class CfgVehicles
 			};
 		};
 	};
-	class B_AssaultPack_rgr;
 	class T1_AssaultPack_Lead_SF: B_AssaultPack_rgr
 	{
 		scope = 2;
@@ -1052,7 +1053,7 @@ class CfgVehicles
 			};			
 		};
 	};
-	class T1_Carryall_camo_PLSgt_JTAC: T1_Carryall_camo
+	class T1_AssaultPack_PLSgt_JTAC: B_AssaultPack_rgr
 	{
 		scope = 1;
 		class TransportMagazines
@@ -4630,15 +4631,13 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Platoon Lead";
 		weapons[] = {
-			"T1_weap_rifle",
-			"T1_weap_sidearm_l",
+			"T1_m4a1_blockII_SD",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle",
-			"T1_weap_sidearm_l",
+			"T1_m4a1_blockII_SD",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -4646,16 +4645,6 @@ class CfgVehicles
 		magazines[] = {
 			"ACE_M84",			
 			"HandGrenade",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
 			"SmokeShell",
 			"SmokeShellGreen",
 			"SmokeShellGreen",
@@ -4665,21 +4654,23 @@ class CfgVehicles
 			"SmokeShellOrange",
 			"SmokeShellBlue",
 			"SmokeShellBlue",
-			"B_IR_Grenade"
+			"B_IR_Grenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",			
 			"HandGrenade",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
 			"SmokeShell",
 			"SmokeShellGreen",
 			"SmokeShellGreen",
@@ -4689,7 +4680,19 @@ class CfgVehicles
 			"SmokeShellOrange",
 			"SmokeShellBlue",
 			"SmokeShellBlue",
-			"B_IR_Grenade"
+			"B_IR_Grenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
@@ -4702,7 +4705,7 @@ class CfgVehicles
 			STDITEMS
 		};
 		icon = "iconManLeader";
-		backpack = "T1_Kitbag_camo_Lead_Plt";
+		backpack = "T1_AssaultPack_Lead_Plt";
 	};
 	class T1_Platoon_Medic_Standard_F: T1_Soldier_F
 	{
@@ -4873,15 +4876,13 @@ class CfgVehicles
 		vehicleClass = "Platoon";
 		displayName = "Platoon Sergeant";
 		weapons[] = {
-			"T1_weap_rifle_gl",
-			"T1_weap_sidearm_l",
+			"T1_m4a1_grip2",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle_gl",
-			"T1_weap_sidearm_l",
+			"T1_m4a1_grip2",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -4889,59 +4890,30 @@ class CfgVehicles
 		magazines[] = {
 			"Laserbatteries",
 			"HandGrenade",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
 			"SmokeShell",
 			"Chemlight_blue",
-			"UGL_FlareCIR_F",
-			"UGL_FlareCIR_F",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_HE_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell"
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
 		};
 		respawnmagazines[] = {
 			"Laserbatteries",
 			"HandGrenade",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_rifle_tracer,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
 			"SmokeShell",
 			"Chemlight_blue",
-			"UGL_FlareCIR_F",
-			"UGL_FlareCIR_F",
-			"3Rnd_HE_Grenade_shell",
-			"3Rnd_HE_Grenade_shell",
-			"3Rnd_HE_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell"
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
 		};
 		items[] = {
 			"ACRE_PRC148",
@@ -4953,7 +4925,7 @@ class CfgVehicles
 			"B_UavTerminal",
 			STDITEMS
 		};
-		backpack = "T1_Carryall_camo_PLSgt_JTAC";
+		backpack = "T1_AssaultPack_PLSgt_JTAC";
 	};
 	class NATO_Box_Base;
 	class B_supplyCrate_F;

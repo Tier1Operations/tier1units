@@ -563,6 +563,55 @@ class T1_mk18 : rhs_weap_mk18_grip_KAC
 		};
 	};
 };
+class rhs_weap_m4a1_blockII_grip_KAC_bk;
+class T1_m4a1_blockII_SD : rhs_weap_m4a1_blockII_grip_KAC_bk
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsMuzzle
+		{
+			item = "rhsusf_acc_SFMB556";
+			slot = "MuzzleSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "rhsusf_acc_grip1";
+			slot = "UnderBarrelSlot";
+		};
+	};
+};
+class rhs_weap_m16a4_pmag_grip2;
+class T1_m4a1_grip2 : rhs_weap_m16a4_pmag_grip2
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "rhsusf_acc_grip2";
+			slot = "UnderBarrelSlot";
+		};
+	};
+};
 #define t1_mag_marksman "20Rnd_762x51_Mag"
 #define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
 

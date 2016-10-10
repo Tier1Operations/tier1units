@@ -21,10 +21,10 @@ class CfgPatches
 			"T1_AssaultPack_MMG",
 			"T1_AssaultPack_Sniper_RHS",
 			"T1_Kitbag_camo_SF_Marksman",
+			"T1_Kitbag_AMG",
 			"T1_Kitbag_camo_Lead",
 			"T1_Kitbag_camo_Lead_Plt",
-			"T1_Kitbag_camo_Lead_Trainer",
-			"T1_Kitbag_AMG",
+			"T1_Kitbag_camo_Lead_Trainer",			
 			"T1_Carryall_camo_AAA",
 			"T1_Carryall_camo_AAT",
 			"T1_Carryall_camo_Medium_AAT",
@@ -1376,7 +1376,7 @@ class CfgVehicles
 			class _xx_tf47_m3maaws_HE
 			{
 				magazine = "tf47_m3maaws_HE";
-				count = 3;
+				count = 2;
 			};
 		};
 		class TransportItems
@@ -3249,49 +3249,43 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Medium AT Specialist";
 		weapons[] = {
-			"T1_weap_rifle",
+			"T1_weap_m16a4_carryhandle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"tf47_m3maaws_optic"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle",
+			"T1_weap_m16a4_carryhandle",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"tf47_m3maaws_optic"
 		};
 		magazines[] = {
-			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,			
-			"HandGrenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"tf47_m3maaws_HEAT"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,			
-			"HandGrenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"tf47_m3maaws_HEAT"
@@ -3308,48 +3302,30 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Medium AAT Specialist";
 		weapons[] = {
-			"T1_weap_rifle",
+			"T1_weap_m16a4_carryhandle",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle",
+			"T1_weap_m16a4_carryhandle",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		magazines[] = {
-			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen"
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen"
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 		};
 		items[] = {
 			"ACRE_PRC148",

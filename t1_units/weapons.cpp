@@ -392,6 +392,55 @@ class T1_weap_sierra_spotter_RHS : srifle_DMR_06_camo_F
 		};
 	};
 };
+class 45KO_ABR_black_F;
+class T1_45KO_ABR_SD : 45KO_ABR_black_F
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "optic_AMS";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsMuzzle
+		{
+			item = "muzzle_snds_B";
+			slot = "MuzzleSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "bipod_01_F_blk";
+			slot = "UnderBarrelSlot";
+		};
+	};
+};
+class rhs_weap_hk416d145_m320;
+class T1_hk416d145_m320_SD : rhs_weap_hk416d145_m320
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsMuzzle
+		{
+			item = "rhsusf_acc_nt4_black";
+			slot = "MuzzleSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+	};
+};
 #define t1_mag_marksman "20Rnd_762x51_Mag"
 #define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
 

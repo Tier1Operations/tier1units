@@ -32,7 +32,7 @@ class CfgPatches
 			"T1_Kitbag_camo_AT",
 			"T1_Kitbag_camo_Medium_AT",
 			"T1_Kitbag_camo_AR",
-			"T1_Kitbag_camo_Scout_Lead",
+			"T1_FieldPack_Scout_Lead",
 			"T1_Carryall_camo_PLSgt_JTAC",
 			"T1_Carryall_camo_PLEOD",
 			"T1_Carryall_camo_Exp",
@@ -122,12 +122,14 @@ class CfgPatches
 			"T1_weap_sidearm_m",
 			"T1_weap_sidearm_l",
 			"T1_weap_marksman",
+			"T1_45KO_ABR_SD",
 			"T1_weap_m16a4_SD",
 			"hgun_P07_snds_F",
 			"T1_weap_sierra_RHS",
 			"T1_weap_sierra_spotter_RHS",
 			"T1_weap_m16a4_carryhandle",
-			"T1_weap_m16a4"
+			"T1_weap_m16a4",
+			"T1_hk416d145_m320_SD"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
@@ -503,7 +505,8 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_Scout_Lead: B_Kitbag_Base
+	class B_FieldPack_khk;
+	class T1_FieldPack_Scout_Lead: B_FieldPack_khk
 	{
 		scope = 2;
 		displayName = "Kitbag Lead (T1 Camo)";
@@ -3572,15 +3575,13 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Scout TL";
 		weapons[] = {
-			"T1_weap_rifle_gl_sd",
-			"rhs_weap_tr8",
+			"T1_hk416d145_m320_SD",
 			"Throw",
 			"Put",
 			"ACE_MX2A"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle_gl_sd",
-			"rhs_weap_tr8",
+			"T1_hk416d145_m320_SD",
 			"Throw",
 			"Put",
 			"ACE_MX2A"
@@ -3592,18 +3593,23 @@ class CfgVehicles
 			"SmokeShellGreen",
 			"Laserbatteries",
 			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle_sd,
-			t1_mag_rifle_sd,
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
 			"Chemlight_blue",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
@@ -3637,6 +3643,8 @@ class CfgVehicles
 			"ACE_HuntIR_M203",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
@@ -3649,7 +3657,7 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"V_Chestrig_oli",
-			"H_Booniehat_mcamo",
+			"rhs_booniehat2_marpatwd",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
@@ -3658,14 +3666,14 @@ class CfgVehicles
 		};
 		respawnLinkedItems[] = {
 			"V_Chestrig_oli",
-			"H_Booniehat_mcamo",
+			"rhs_booniehat2_marpatwd",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"B_UavTerminal"
 		};
-		backpack = "T1_Kitbag_camo_Scout_Lead";
+		backpack = "T1_FieldPack_Scout_Lead";
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_HuntIR_monitor",
@@ -3687,15 +3695,13 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 Scout [MM DLC]";
 		weapons[] = {
-			"T1_weap_marksman",
-			"T1_weap_sidearm_l",
+			"T1_45KO_ABR_SD",
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
-			"T1_weap_marksman",
-			"T1_weap_sidearm_l",
+			"T1_45KO_ABR_SD",
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -3706,16 +3712,17 @@ class CfgVehicles
 			"SmokeShellGreen",
 			"Laserbatteries",
 			"Chemlight_blue",
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman_sd,
-			t1_mag_marksman_sd,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD"
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
@@ -3723,20 +3730,21 @@ class CfgVehicles
 			"SmokeShellGreen",
 			"Laserbatteries",
 			"Chemlight_blue",
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman,
-			t1_mag_marksman_sd,
-			t1_mag_marksman_sd,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD"
 		};
 		linkedItems[] = {
 			"V_Chestrig_oli",
-			"H_Booniehat_mcamo",
+			"rhs_booniehat2_marpatwd",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
@@ -3745,7 +3753,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[] = {
 			"V_Chestrig_oli",
-			"H_Booniehat_mcamo",
+			"rhs_booniehat2_marpatwd",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",

@@ -18,11 +18,13 @@ class CfgPatches
 	class t1_units
 	{
 		units[] = {
+			"T1_AssaultPack_MMG",
+			"T1_AssaultPack_Sniper_RHS",
 			"T1_Kitbag_camo_SF_Marksman",
 			"T1_Kitbag_camo_Lead",
 			"T1_Kitbag_camo_Lead_Plt",
 			"T1_Kitbag_camo_Lead_Trainer",
-			"T1_Carryall_camo_AMG",
+			"T1_Kitbag_AMG",
 			"T1_Carryall_camo_AAA",
 			"T1_Carryall_camo_AAT",
 			"T1_Carryall_camo_Medium_AAT",
@@ -92,8 +94,7 @@ class CfgPatches
 			"T1_Kitbag_camo_Section_AT",
 			"T1_section_ammobox",
 			"T1_support_ammobox",
-			"T1_eod_ammobox",			
-			"T1_AssaultPack_Sniper_RHS",
+			"T1_eod_ammobox",	
 			"T1_Spotter_RHS_F",
 			"T1_Sniper_RHS_F"
 		};
@@ -1407,7 +1408,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_MG: T1_Kitbag_camo
+	class T1_AssaultPack_MMG: B_AssaultPack_rgr
 	{
 		scope = 1;
 		class TransportMagazines
@@ -1415,7 +1416,7 @@ class CfgVehicles
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				magazine = t1_mag_mmg;
-				count = 3;
+				count = 2;
 			};
 		};
 		class TransportItems
@@ -1452,7 +1453,8 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Carryall_camo_AMG: T1_Carryall_camo
+	class B_Kitbag_rgr;
+	class T1_Kitbag_AMG: B_Kitbag_rgr
 	{
 		scope = 1;
 		maximumLoad = 600;
@@ -1460,7 +1462,7 @@ class CfgVehicles
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
-				count = 5;
+				count = 4;
 				magazine = t1_mag_mmg;
 			};
 		};
@@ -3502,21 +3504,19 @@ class CfgVehicles
 			"ACE_Vector"
 		};
 		magazines[] = {
-			"ACE_M84",
 			t1_mag_mmg,
 			t1_mag_mmg,
-			"HandGrenade",
+			t1_mag_mmg,
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
 			t1_mag_mmg,
 			t1_mag_mmg,
-			"HandGrenade",
+			t1_mag_mmg,
 			"SmokeShell"
 		};
 		icon = "iconManMG";
-		backpack = "T1_Kitbag_camo_MG";
+		backpack = "T1_AssaultPack_MMG";
 		items[] = {
 			"ACRE_PRC148",
 			"ACE_IR_Strobe_Item",
@@ -3570,13 +3570,13 @@ class CfgVehicles
 		vehicleClass = "Special";
 		displayName = "T1 AMG Specialist";
 		weapons[] = {
-			"T1_weap_rifle",
+			"T1_weap_m16a4",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle",
+			"T1_weap_m16a4",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3584,35 +3584,35 @@ class CfgVehicles
 		magazines[] = {
 			"HandGrenade",
 			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
 			"SmokeShellGreen",
+			t1_mag_mmg,
 			t1_mag_mmg
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
 			"ACE_M84",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
 			"SmokeShellGreen",
+			t1_mag_mmg,
 			t1_mag_mmg
 		};
 		items[] = {
@@ -3625,7 +3625,7 @@ class CfgVehicles
 			"ACRE_PRC148",
 			STDITEMS
 		};
-		backpack = "T1_Carryall_camo_AMG";
+		backpack = "T1_Kitbag_AMG";
 	};
 	class T1_Scout_TL_Standard_F: T1_Soldier_F
 	{

@@ -309,6 +309,23 @@ class T1_weap_m16a4_SD : rhs_weap_m16a4_pmag_grip
 		};
 	};
 };
+class rhs_weap_m16a4_pmag;
+class T1_weap_m16a4 : rhs_weap_m16a4_pmag
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};		
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};		
+	};
+};
 class rhs_weap_XM2010_wd;
 class T1_weap_sierra_RHS : rhs_weap_XM2010_wd
 {

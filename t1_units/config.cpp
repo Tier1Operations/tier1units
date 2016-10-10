@@ -5062,10 +5062,15 @@ class CfgVehicles
 		transportMaxItems = 9999;
 		class TransportMagazines
 		{
-			class _xx_SMA_30Rnd_556x45_M855A1
+			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
 			{
-				magazine = t1_mag_rifle;
+				magazine = rhs_mag_30Rnd_556x45_M855A1_Stanag;
 				count = 48;
+			};
+			class _xx_20Rnd_762x51_Mag
+			{
+				magazine = 20Rnd_762x51_Mag;
+				count = 24;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
@@ -5075,11 +5080,21 @@ class CfgVehicles
 			class _xx_7Rnd_408_Mag
 			{
 				magazine = t1_mag_sierra;
+				count = 26;
+			};
+			class _xx_rhsusf_5Rnd_300winmag_xm2010
+			{
+				magazine = rhsusf_5Rnd_300winmag_xm2010;
 				count = 36;
 			};
-			class sidearm_medium_mags
+			class _xx_T1_rhsusf_5Rnd_300winmag_xm2010_SD
 			{
-				magazine = t1_mag_sidearm_m;
+				magazine = T1_rhsusf_5Rnd_300winmag_xm2010_SD;
+				count = 12;
+			};
+			class _xx_16Rnd_9x21_Mag
+			{
+				magazine = 16Rnd_9x21_Mag;
 				count = 16;
 			};
 			class _xx_rhsusf_mag_17Rnd_9x19_FMJ
@@ -5172,13 +5187,12 @@ class CfgVehicles
 			};
 		};
 		class TransportWeapons
-		{
-			/*
-			class _xx_HAFM_LAW
+		{			
+			class _xx_rhs_weap_m72a7
 			{
-				weapon = "HAFM_LAW";
+				weapon = "rhs_weap_m72a7";
 				count = 2;
-			};//*/
+			};
 		};
 		class TransportBackpacks
 		{
@@ -5204,40 +5218,25 @@ class CfgVehicles
 		transportMaxItems = 9999;
 		class TransportMagazines
 		{
-			class FiveFiveSix // standard rifle
+			class _xx_11Rnd_45ACP_Mag
 			{
-				magazine = t1_mag_rifle;
-				count = 48;
-			};
-			class FiveFiveSixSD // standard rifle
-			{
-				magazine = t1_mag_rifle_sd;
-				count = 12;
-			};
-			class FourSixty // marksman sidearm
-			{
-				magazine = t1_mag_sidearm_m;
-				count = 16;
-			};
-			class FourSixtySD // marksman sidearm
-			{
-				magazine = t1_mag_sidearm_m_sd;
+				magazine = "11Rnd_45ACP_Mag";
 				count = 8;
 			};
-			class SevenSixTwo	// sf marksman
+			class _xx_20Rnd_762x51_Mag
 			{
-				magazine = t1_mag_marksman;
-				count = 36;
+				magazine = "20Rnd_762x51_Mag";
+				count = 72;
 			};
+			class ACE_20Rnd_762x51_Mag_SD
+			{
+				magazine = "ACE_20Rnd_762x51_Mag_SD";
+				count = 16;
+			};	
 			class GLs // leader GLs
 			{
 				magazine = "1Rnd_HE_Grenade_shell";
-				count=30;
-			};
-			class _xx_rhsusf_mag_17Rnd_9x19_FMJ // standard sidearm
-			{
-				magazine = t1_mag_sidearm_l;
-				count = 8;
+				count=16;
 			};
 			class _xx_HandGrenade
 			{
@@ -5252,7 +5251,7 @@ class CfgVehicles
 			class _xx_SmokeShellGreen
 			{
 				magazine = "SmokeShellGreen";
-				count = 8;
+				count = 4;
 			};
 			class _xx_ACE_M84
 			{
@@ -5262,7 +5261,7 @@ class CfgVehicles
 			class SLAMs
 			{
 				magazine = "SLAMDirectionalMine_Wire_Mag";
-				count = 20;
+				count = 12;
 			};
 		};
 		class TransportItems
@@ -5284,7 +5283,7 @@ class CfgVehicles
 			};
 			class _xx_ACE_morphine
 			{
-				count = 8;
+				count = 16;
 				name = "ACE_morphine";
 			};
 			class _xx_ACE_epinephrine
@@ -5314,17 +5313,16 @@ class CfgVehicles
 			};
 		};
 		class TransportWeapons
-		{
-			/*
-			class LAW
+		{			
+			class rhs_weap_m72a7
 			{
-				weapon = "HAFM_LAW";
+				weapon = "rhs_weap_m72a7";
 				count = 4;
-			}; //*/
+			};
 			class MAW
 			{
 				weapon = "tf47_at4_heat";
-				count = 4;
+				count = 2;
 			};
 		};
 		class TransportBackpacks

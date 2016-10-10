@@ -46,7 +46,7 @@ class T1_weap_sierra: srifle_LRR_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "optic_AMS";
+			item = "ACE_optic_LRPS_2D";
 			slot = "CowsSlot";
 		};
 	};
@@ -278,6 +278,82 @@ class T1_weap_marksman : srifle_DMR_03_woodland_F
 		class LinkedItemsUnder
 		{
 			item = "bipod_01_F_mtp";
+			slot = "UnderBarrelSlot";
+		};
+	};
+};
+class rhs_weap_m16a4_pmag_grip;
+class T1_weap_m16a4_SD : rhs_weap_m16a4_pmag_grip
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsMuzzle
+		{
+			item = "rhsusf_acc_nt4_black";
+			slot = "MuzzleSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "rhsusf_acc_grip1";
+			slot = "UnderBarrelSlot";
+		};
+	};
+};
+class rhs_weap_XM2010_wd;
+class T1_weap_sierra_RHS : rhs_weap_XM2010_wd
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "ACE_optic_LRPS_2D";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsMuzzle
+		{
+			item = "rhsusf_acc_M2010S";
+			slot = "MuzzleSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "rhsusf_acc_harris_bipod";
+			slot = "UnderBarrelSlot";
+		};
+	};
+};
+class srifle_DMR_06_camo_F;
+class T1_weap_sierra_spotter_RHS : srifle_DMR_06_camo_F
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf_t";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsMuzzle
+		{
+			item = "muzzle_snds_B_khk_F";
+			slot = "MuzzleSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "bipod_03_F_oli";
 			slot = "UnderBarrelSlot";
 		};
 	};

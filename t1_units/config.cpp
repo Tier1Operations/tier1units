@@ -10,6 +10,7 @@
 
 // MEDICALITEMS is used in addition to STDITEMS for units without backpacks
 #define MEDICALITEMS "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_tourniquet"
+#define MEDICALITEMS2 "ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_tourniquet","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine" 
 
 //Class t1_units : config.bin{
 class CfgPatches
@@ -91,7 +92,10 @@ class CfgPatches
 			"T1_Kitbag_camo_Section_AT",
 			"T1_section_ammobox",
 			"T1_support_ammobox",
-			"T1_eod_ammobox"
+			"T1_eod_ammobox",			
+			"T1_AssaultPack_Sniper_RHS",
+			"T1_Spotter_RHS_F",
+			"T1_Sniper_RHS_F"
 		};
 		weapons[] = {
 			"T1_V_PlateCarrier2_Standard",
@@ -116,7 +120,11 @@ class CfgPatches
 			"T1_weap_marksman_sf",
 			"T1_weap_sidearm_m",
 			"T1_weap_sidearm_l",
-			"T1_weap_marksman"
+			"T1_weap_marksman",
+			"T1_weap_m16a4_SD",
+			"hgun_P07_snds_F",
+			"T1_weap_sierra_RHS",
+			"T1_weap_sierra_spotter_RHS"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
@@ -395,19 +403,12 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_Sniper: B_Kitbag_Base
+	class B_AssaultPack_rgr;
+	class T1_Kitbag_camo_Sniper: B_AssaultPack_rgr
 	{
 		scope = 2;
-		displayName = "Kitbag Lead (T1 Camo)";
+		displayName = "Assault Pack Spotter";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
-		class TransportMagazines
-		{			
-			class _xx_7Rnd_408_Mag
-			{
-				count = 5;
-				magazine = t1_mag_sierra;
-			};
-		};
 		class TransportItems
 		{
 			class Bandage1
@@ -444,6 +445,58 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_Vector";
+			};
+			class _xx_ACRE_PRC117F
+			{
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
+		};
+	};	
+	class T1_AssaultPack_Sniper_RHS: B_AssaultPack_rgr
+	{
+		scope = 2;
+		displayName = "Assault Pack Sniper";
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		class TransportMagazines
+		{			
+			class _xx_rhsusf_5Rnd_300winmag_xm2010
+			{
+				count = 12;
+				magazine = rhsusf_5Rnd_300winmag_xm2010;
+			};
+		};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 12;
+				name = "ACE_packingBandage";
+			};
+			class Bandage2
+			{
+				count = 4;
+				name = "ACE_elasticBandage";
+			};
+			class Tourniquet
+			{
+				count = 1;
+				name = "ACE_tourniquet";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 3;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 1;
+				name = "ACE_epinephrine";
+			};
+			class _xx_rhs_goggles_clear
+			{
+				count = 1;
+				name = "rhs_goggles_clear";
 			};
 		};
 	};
@@ -2688,15 +2741,13 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
-			"T1_weap_rifle_sd",
-			"T1_weap_sidearm_l",
+			"T1_weap_m16a4_SD",			
 			"Throw",
 			"Put",
 			"Laserdesignator"
 		};
 		respawnWeapons[] = {
-			"T1_weap_rifle_sd",
-			"T1_weap_sidearm_l",
+			"T1_weap_m16a4_SD",			
 			"Throw",
 			"Put",
 			"Laserdesignator"
@@ -2704,50 +2755,52 @@ class CfgVehicles
 		magazines[] = {
 			"ACE_M84",
 			"Laserbatteries",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
-			"HandGrenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			t1_mag_rifle_sd,
+			t1_mag_rifle_sd,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
 			"HandGrenade",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"APERSTripMine_Wire_Mag",
-			"APERSTripMine_Wire_Mag"
+			"SmokeShellGreen"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
 			"Laserbatteries",
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_rifle,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
-			"HandGrenade",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			t1_mag_rifle_sd,
+			t1_mag_rifle_sd,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			t1_mag_sierra,
 			"HandGrenade",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"APERSTripMine_Wire_Mag",
-			"APERSTripMine_Wire_Mag"
+			"SmokeShellGreen"
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
@@ -2766,7 +2819,6 @@ class CfgVehicles
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			"ACRE_PRC148",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
@@ -2775,7 +2827,6 @@ class CfgVehicles
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			"ACRE_PRC148",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
@@ -2799,50 +2850,50 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
 			"T1_weap_sierra",
-			"T1_weap_sidearm_m",
+			"hgun_P07_snds_F",
 			"Throw",
 			"Put",
 			"Rangefinder"
 		};
 		respawnWeapons[] = {
 			"T1_weap_sierra",
-			"T1_weap_sidearm_m",
+			"hgun_P07_snds_F",
 			"Throw",
 			"Put",
 			"Rangefinder"
 		};
 		magazines[] = {
-			"HandGrenade",
-			"HandGrenade",
-			"ACE_M84",
+			"HandGrenade",			
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
-			t1_mag_sidearm_m,
-			t1_mag_sidearm_m,
-			t1_mag_sidearm_m,
-			t1_mag_sidearm_m_sd,
-			t1_mag_sidearm_m_sd,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
-			"HandGrenade",
-			"HandGrenade",
-			"ACE_M84",
+			"HandGrenade",			
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
-			t1_mag_sidearm_m,
-			t1_mag_sidearm_m,
-			t1_mag_sidearm_m,
-			t1_mag_sidearm_m_sd,
-			t1_mag_sidearm_m_sd,
+			t1_mag_sierra,
+			t1_mag_sierra,
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
 			"SmokeShell"
 		};
 		linkedItems[] = {
@@ -2866,7 +2917,8 @@ class CfgVehicles
 			STDITEMS,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
-			"ACE_RangeCard"
+			"ACE_RangeCard",
+			MEDICALITEMS2
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
@@ -2875,9 +2927,195 @@ class CfgVehicles
 			STDITEMS,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
-			"ACE_RangeCard"
+			"ACE_RangeCard",
+			MEDICALITEMS2
+		};		
+		camouflage = 0.3;
+		glassesEnabled = 0;
+	};
+	class T1_Spotter_RHS_F: B_Spotter_F
+	{
+		faction = "T1_Units";
+		vehicleClass = "Special";
+		displayName = "T1 Spotter DMR";
+		uniformClass = "T1_FB_Ghillie_Camo";
+		model = "\Ghillie\ghillie.p3d";
+		modelSides[] = {3,1};
+		uniformAccessories[] = {};
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
+		weapons[] = {
+			"T1_weap_sierra_spotter_RHS",			
+			"Throw",
+			"Put",
+			"Laserdesignator"
 		};
-		backpack = "T1_Kitbag_camo_Lead";
+		respawnWeapons[] = {
+			"T1_weap_sierra_spotter_RHS",			
+			"Throw",
+			"Put",
+			"Laserdesignator"
+		};
+		magazines[] = {
+			"Laserbatteries",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD"
+		};
+		respawnmagazines[] = {
+			"Laserbatteries",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD"
+		};
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		items[] = {
+			"ACE_IR_Strobe_Item",
+			"ACE_DefusalKit",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",
+			STDITEMS
+		};
+		respawnItems[] = {
+			"ACE_IR_Strobe_Item",
+			"ACE_DefusalKit",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",
+			STDITEMS
+		};
+		backpack = "T1_Kitbag_camo_Sniper";
+		camouflage = 0.3;
+		glassesEnabled = 0;
+	};
+	class T1_Sniper_RHS_F: T1_Sniper_Standard_F
+	{
+		faction = "T1_Units";
+		vehicleClass = "Special";
+		displayName = "T1 Sniper XM2010";
+		uniformClass = "T1_FB_Ghillie_Camo";
+		model = "\Ghillie\ghillie.p3d";
+		modelSides[] = {3,1};
+		uniformAccessories[] = {};
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
+		weapons[] = {
+			"T1_weap_sierra_RHS",	
+			"hgun_P07_snds_F",
+			"Throw",
+			"Put",
+			"Rangefinder"
+		};
+		respawnWeapons[] = {
+			"T1_weap_sierra_RHS",
+			"hgun_P07_snds_F",			
+			"Throw",
+			"Put",
+			"Rangefinder"
+		};
+		magazines[] = {
+			"HandGrenade",			
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
+			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
+			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"SmokeShell"
+		};
+		respawnmagazines[] = {
+			"HandGrenade",			
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"rhsusf_5Rnd_300winmag_xm2010",
+			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
+			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
+			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",		
+			"SmokeShell"
+		};
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		items[] = {
+			"ACE_IR_Strobe_Item",
+			"ACE_DefusalKit",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",
+			MEDICALITEMS2
+		};
+		respawnItems[] = {
+			"ACE_IR_Strobe_Item",
+			"ACE_DefusalKit",
+			"ACRE_PRC148",
+			STDITEMS,
+			"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			"ACE_RangeCard",
+			MEDICALITEMS2
+		};		
+		backpack = "T1_AssaultPack_Sniper_RHS";
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};

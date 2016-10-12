@@ -7,4 +7,4 @@ _rnd1 = floor random 6;
 	"\t1_drones\wood\waldo_ugv_01_ext_co.paa",
 	"\t1_drones\wood\pinup_ugv_01_ext_co.paa",
 	"\t1_drones\wood\tier1_ugv_01_ext_co.paa"] select _rnd1];
-}; /* "if (isServer)" END - DO NOT DELETE
+};

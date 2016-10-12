@@ -80,28 +80,7 @@ class T1_weap_mmg_sf: 45KO_zafir_black
 
 class rhs_weap_m249_pip_L;
 class T1_weap_lmg: rhs_weap_m249_pip_L
-{
-	magazines[] = {
-		"rhs_200rnd_556x45_M_SAW",
-		"rhs_200rnd_556x45_B_SAW",
-		"rhs_200rnd_556x45_T_SAW",
-		"rhsusf_100Rnd_556x45_soft_pouch",
-		"rhsusf_200Rnd_556x45_soft_pouch",
-		"rhsusf_100Rnd_556x45_M200_soft_pouch",
-		"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-		"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",
-		"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",
-		"rhs_mag_30Rnd_556x45_M200_Stanag",
-		"30Rnd_556x45_Stanag",
-		"30Rnd_556x45_Stanag_Tracer_Red",
-		"30Rnd_556x45_Stanag_Tracer_Green",
-		"30Rnd_556x45_Stanag_Tracer_Yellow",
-		"T1_30Rnd_556x45_Stanag_SD"
-	};
+{	
 	class LinkedItems
 	{
 		class LinkedItemsOptic

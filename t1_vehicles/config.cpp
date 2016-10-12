@@ -115,7 +115,7 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  rhs_mag_30Rnd_556x45_Mk262_Stanag;
+				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
 				count = 6;
 			};
 			class section_ar_mag
@@ -223,7 +223,7 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  rhs_mag_30Rnd_556x45_Mk262_Stanag;
+				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
 				count = 6;
 			};
 			class section_ar_mag
@@ -331,7 +331,7 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  rhs_mag_30Rnd_556x45_Mk262_Stanag;
+				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
 				count = 6;
 			};
 			class section_ar_mag
@@ -430,17 +430,17 @@ class CfgVehicles {
 		{
 			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
 			{
-				magazine = rhs_mag_30Rnd_556x45_M855A1_Stanag;
+				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
 				count = 142;
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  rhs_mag_30Rnd_556x45_Mk262_Stanag;
+				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
 				count = 24;
 			};
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
-				magazine = t1_mag_lmg;
+				magazine = "rhs_200rnd_556x45_M_SAW";
 				count = 24;
 			};
 			class _xx_HandGrenade
@@ -540,17 +540,17 @@ class CfgVehicles {
 		{
 			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
 			{
-				magazine = rhs_mag_30Rnd_556x45_M855A1_Stanag;
+				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
 				count = 142;
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  rhs_mag_30Rnd_556x45_Mk262_Stanag;
+				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
 				count = 24;
 			};
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
-				magazine = t1_mag_lmg;
+				magazine = "rhs_200rnd_556x45_M_SAW";
 				count = 24;
 			};
 			class _xx_HandGrenade
@@ -660,7 +660,7 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  rhs_mag_30Rnd_556x45_Mk262_Stanag;
+				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
 				count = 6;
 			};
 			class section_ar_mag

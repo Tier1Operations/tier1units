@@ -102,12 +102,7 @@ class T1_weap_mmg: rhs_weap_m240B
 		{
 			item = "iansky_specterdrkf";
 			slot = "CowsSlot";
-		};
-		class LinkedItemsAcc
-		{
-			item = "acc_pointer_IR";
-			slot = "PointerSlot";
-		};
+		};		
 	};
 };
 #define t1_mag_mmg "rhsusf_100Rnd_762x51_m62_tracer"
@@ -644,6 +639,33 @@ class T1_weap_Instructor_Black : rhs_weap_m4a1_blockII_grip_KAC_wd
 		};
 	};
 };
+class rhs_weap_m4a1_blockII_grip_d;
+class T1_weap_Instructor_Orange : rhs_weap_m4a1_blockII_grip_d
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdr_d";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsMuzzle
+		{
+			item = "rhsusf_acc_SF3P556";
+			slot = "MuzzleSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "rhsusf_acc_grip1";
+			slot = "UnderBarrelSlot";
+		};
+	};
+};
 #define t1_mag_marksman "20Rnd_762x51_Mag"
 #define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
 
@@ -674,7 +696,7 @@ class T1_U_Diver_Standard: Uniform_Base
 		uniformModel = "-";
 		uniformClass = "T1_Diver_Soldier_F";
 		uniformtype = "Neopren";
-		containerClass = "Supply230";
+		containerClass = "Supply300";
 		mass = 80;
 	};
 };

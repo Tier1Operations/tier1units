@@ -26,7 +26,6 @@ class CfgPatches
 			"T1_AssaultPack_pl_medic",
 			"T1_B_AssaultPack_SF_Radioman_DM",
 			"T1_Kitbag_AMG",
-			"T1_Kitbag_camo_Lead",
 			"T1_AssaultPack_Lead_Plt",
 			"T1_Kitbag_camo_Lead_Trainer",			
 			"T1_Carryall_camo_AAA",
@@ -99,8 +98,8 @@ class CfgPatches
 			"T1_section_ammobox",
 			"T1_support_ammobox",
 			"T1_eod_ammobox",	
-			"T1_Spotter_RHS_F",
-			"T1_Sniper_RHS_F"
+			"T1_Spotter_Light_F",
+			"T1_Sniper_Light_F"
 		};
 		weapons[] = {
 			"T1_V_PlateCarrier2_Standard",
@@ -154,7 +153,7 @@ class CfgPatches
 			"ace_flashsuppressors",
 			"ace_medical",
 			"rhsusf_c_weapons",
-			"t1_556_sd_ammo",
+			"t1_silencer_ammo_fix",
 			"tf47_m3maaws"
 		};
 	};
@@ -209,7 +208,7 @@ class CfgVehicles
 	class B_Kitbag_Base;
 	class T1_Kitbag_camo: B_Kitbag_Base
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "Kitbag (T1 Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
@@ -246,49 +245,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_Lead : T1_Kitbag_camo
-	{
-		scope = 2;
-		displayName = "Kitbag Lead (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
-		class TransportItems
-		{
-			class Bandage1
-			{
-				count = 12;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
-			class _xx_ACE_morphine
-			{
-				count = 3;
-				name = "ACE_morphine";
-			};
-			class _xx_ACE_epinephrine
-			{
-				count = 1;
-				name = "ACE_epinephrine";
-			};
-			class _xx_rhs_goggles_clear
-			{
-				count = 1;
-				name = "rhs_goggles_clear";
-			};			
-		};
-	};
 	class B_AssaultPack_rgr;
 	class v: B_AssaultPack_rgr
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "Kitbag PltLead (T1 Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
@@ -331,7 +291,7 @@ class CfgVehicles
 	};
 	class T1_AssaultPack_Lead_SF: B_AssaultPack_rgr
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "AssaultPack SF Lead";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
@@ -393,7 +353,7 @@ class CfgVehicles
 	};
 	class T1_Kitbag_camo_Lead_Trainer: B_Kitbag_Base
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "Kitbag Lead (T1 Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
@@ -437,7 +397,7 @@ class CfgVehicles
 	};
 	class T1_Kitbag_camo_Sniper: B_AssaultPack_rgr
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "Assault Pack Spotter";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
@@ -486,7 +446,7 @@ class CfgVehicles
 	};	
 	class T1_AssaultPack_Sniper_RHS: B_AssaultPack_rgr
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "Assault Pack Sniper";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
@@ -534,8 +494,8 @@ class CfgVehicles
 	class B_FieldPack_khk;
 	class T1_FieldPack_Scout_Lead: B_FieldPack_khk
 	{
-		scope = 2;
-		displayName = "Kitbag Lead (T1 Camo)";
+		scope = 1;
+		displayName = "Fieldpack Lead (T1 Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};		
 		class TransportItems
 		{
@@ -588,8 +548,8 @@ class CfgVehicles
 	};
 	class T1_B_AssaultPack_SF_Radioman_DM: B_AssaultPack_rgr
 	{
-		scope = 2;
-		displayName = "Kitbag SF Marksman (T1 Camo)";
+		scope = 1;
+		displayName = "Assaultpack SF Marksman (T1 Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
@@ -637,7 +597,7 @@ class CfgVehicles
 	};
 	class T1_Kitbag_camo_medic: B_Kitbag_Base
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "Kitbag Medic (T1 Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
 		class TransportItems
@@ -681,7 +641,7 @@ class CfgVehicles
 	};
 	class T1_AssaultPack_pl_medic: B_AssaultPack_rgr
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "AssaultPack Medic";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
 		class TransportItems
@@ -715,7 +675,7 @@ class CfgVehicles
 	};
 	class T1_AssaultPack_medic_sf: B_AssaultPack_rgr
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "AssaultPack Medic (T1 Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
 		class TransportMagazines
@@ -773,6 +733,8 @@ class CfgVehicles
 	class T1_AssaultPack_cls: B_AssaultPack_rgr
 	{
 		scope = 1;
+		displayName = "AssaultPack CLS (T1 Camo)";
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -823,7 +785,7 @@ class CfgVehicles
 	class B_Carryall_Base;
 	class T1_Carryall_camo: B_Carryall_Base
 	{
-		scope = 2;
+		scope = 1;
 		displayName = "Carryall Backpack (T1 Camo)";
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_carryall_camo_co.paa"};
 		class TransportItems
@@ -863,6 +825,7 @@ class CfgVehicles
 	class T1_Kitbag_camo_Repair: T1_Kitbag_camo
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
 			class _xx_ToolKit
@@ -970,6 +933,7 @@ class CfgVehicles
 	class T1_B_AssaultPack_Exp_SF: B_AssaultPack_rgr
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_SatchelCarge_Remote_Mag
@@ -1035,6 +999,7 @@ class CfgVehicles
 	class T1_AssaultPack_PLEOD: B_AssaultPack_rgr
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_SatchelCarge_Remote_Mag
@@ -1060,6 +1025,7 @@ class CfgVehicles
 	class T1_AssaultPack_PLSgt_JTAC: B_AssaultPack_rgr
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 		};
@@ -1109,6 +1075,7 @@ class CfgVehicles
 	class T1_AssaultPack_AR: B_AssaultPack_rgr
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhs_200rnd_556x45_M_SAW
@@ -1154,6 +1121,7 @@ class CfgVehicles
 	class T1_AssaultPack_AAR: B_AssaultPack_rgr
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhs_200rnd_556x45_M_SAW
@@ -1199,6 +1167,7 @@ class CfgVehicles
 	class T1_Kitbag_camo_AR_SF: T1_Kitbag_camo
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
@@ -1244,6 +1213,7 @@ class CfgVehicles
 	class T1_Kitbag_camo_AT: T1_Kitbag_camo
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_Titan_AT
@@ -1289,6 +1259,7 @@ class CfgVehicles
 	class T1_Kitbag_camo_Medium_AT: T1_Kitbag_camo
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_tf47_m3maaws_HE
@@ -1339,6 +1310,7 @@ class CfgVehicles
 	class T1_Kitbag_camo_AA: T1_Kitbag_camo
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_Titan_AA
@@ -1451,6 +1423,7 @@ class CfgVehicles
 	class T1_AssaultPack_MMG: B_AssaultPack_rgr
 	{
 		scope = 1;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
@@ -1497,7 +1470,7 @@ class CfgVehicles
 	class T1_Kitbag_AMG: B_Kitbag_rgr
 	{
 		scope = 1;
-		maximumLoad = 600;
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
@@ -2892,11 +2865,11 @@ class CfgVehicles
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};
-	class T1_Spotter_RHS_F: B_Spotter_F
+	class T1_Spotter_Light_F: B_Spotter_F
 	{
 		faction = "T1_Units";
 		vehicleClass = "Special";
-		displayName = "T1 Spotter DMR";
+		displayName = "T1 Spotter";
 		uniformClass = "T1_FB_Ghillie_Camo";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
@@ -2983,11 +2956,11 @@ class CfgVehicles
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};
-	class T1_Sniper_RHS_F: T1_Sniper_Standard_F
+	class T1_Sniper_Light_F: T1_Sniper_Standard_F
 	{
 		faction = "T1_Units";
 		vehicleClass = "Special";
-		displayName = "T1 Sniper XM2010";
+		displayName = "T1 Sniper";
 		uniformClass = "T1_FB_Ghillie_Camo";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
@@ -4505,7 +4478,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Section";
-		displayName = "Rifleman AT (MK18)";
+		displayName = "Rifleman AT";
 		weapons[] = {
 			"T1_mk18",
 			"Throw",
@@ -4564,12 +4537,12 @@ class CfgVehicles
 		respawnItems[] = {STDITEMS,MEDICALITEMS2};
 		icon = "iconManAT";
 	};
-	class T1_Section_AT_Standard_M27_F: T1_Soldier_F
+	class T1_Section_AT_DM_F: T1_Soldier_F
 	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Section";
-		displayName = "Rifleman AT (M27)";
+		displayName = "Rifleman AT";
 		weapons[] = {
 			"T1_m27iar",
 			"Throw",

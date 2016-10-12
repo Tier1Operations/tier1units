@@ -59,34 +59,8 @@ class T1_weap_sidearm_m: T1_weap_sidearm_l
 };
 #define t1_mag_sidearm_m "rhsusf_mag_17Rnd_9x19_FMJ"
 #define t1_mag_sidearm_m_sd "rhsusf_mag_17Rnd_9x19_FMJ"
-
-class Rifle_Long_Base_F;
-class LMG_Zafir_F: Rifle_Long_Base_F
-{
-	magazines[] += {"rhsusf_100Rnd_762x51_m62_tracer"};
-	class WeaponSlotsInfo;
-	class Single;
-	class FullAuto;
-};
-class 45KO_zafir_black: LMG_Zafir_F	{
-	class WeaponSlotsInfo;
-	class Single;
-	class FullAuto;
-};
 class T1_weap_mmg_sf: 45KO_zafir_black
-{
-	displayName = "Negev NG7 NATO (Black)";
-	dispersion = 0.00032;
-	ACE_Overheating_JamChance[] = {0, 0.00010, 0.0005, 0.0025};
-	class WeaponSlotsInfo: WeaponSlotsInfo {
-		mass = 168;
-	};
-	class Single: Single {
-		dispersion = 0.00032;
-	};		
-	class FullAuto: FullAuto {	
-		dispersion = 0.00032;
-	};
+{	
 	class LinkedItems
 	{
 		class LinkedItemsOptic
@@ -168,11 +142,6 @@ class arifle_SPAR_01_blk_F :  {
 	magazines[] += {"T1_30Rnd_556x45_Stanag_SD"};
 };
 //*/
-class Rifle_Base_F;
-class arifle_SPAR_01_base_F : Rifle_Base_F
-{
-	magazines[] = {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_red","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow","ACE_30Rnd_556x45_Stanag_M995_AP_mag","ACE_30Rnd_556x45_Stanag_Mk262_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Tracer_Dim","T1_30Rnd_556x45_Stanag_SD"};
-};
 
 class arifle_SPAR_01_blk_F;
 class T1_weap_rifle: arifle_SPAR_01_blk_F

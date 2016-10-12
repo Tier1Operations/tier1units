@@ -1790,14 +1790,14 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"HandGrenade",
@@ -1806,14 +1806,14 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"HandGrenade",
@@ -5011,6 +5011,11 @@ class CfgVehicles
 				magazine = rhs_mag_30Rnd_556x45_M855A1_Stanag;
 				count = 72;
 			};
+			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
+			{
+				magazine =  rhs_mag_30Rnd_556x45_Mk262_Stanag;
+				count = 12;
+			};
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
 				magazine = t1_mag_lmg;
@@ -5076,8 +5081,13 @@ class CfgVehicles
 			};
 			class _xx_ACRE_PRC148
 			{
-				count = 1;
+				count = 2;
 				name = "ACRE_PRC148";
+			};
+			class _xx_ACRE_PRC117F
+			{
+				count = 1;
+				name = "ACRE_PRC117F";
 			};
 		};
 		class TransportWeapons
@@ -5112,8 +5122,13 @@ class CfgVehicles
 			};
 			class _xx_20Rnd_762x51_Mag
 			{
-				magazine = ACE_20Rnd_762x51_Mk319_Mod_0_Mag;
-				count = 24;
+				magazine = ACE_20Rnd_762x51_Mk316_Mod_0_Mag
+				count = 30;
+			};
+			class _xx_ACE_20Rnd_762x51_Mag_SD
+			{
+				magazine = ACE_20Rnd_762x51_Mag_SD
+				count = 10;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
@@ -5220,13 +5235,18 @@ class CfgVehicles
 			};
 			class _xx_ACE_UAVBattery
 			{
-				count = 4;
+				count = 8;
 				name = "ACE_UAVBattery";
 			};
 			class _xx_ACRE_PRC148
 			{
 				count = 4;
 				name = "ACRE_PRC148";
+			};
+			class _xx_ACRE_PRC117F
+			{
+				count = 2;
+				name = "ACRE_PRC117F";
 			};
 		};
 		class TransportWeapons
@@ -5271,11 +5291,21 @@ class CfgVehicles
 				magazine = "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
 				count = 72;
 			};
+			class _xx_ACE_20Rnd_762x51_Mk316_Mod_0_Mag
+			{
+				magazine = "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
+				count = 16;
+			};
 			class ACE_20Rnd_762x51_Mag_SD
 			{
 				magazine = "ACE_20Rnd_762x51_Mag_SD";
-				count = 16;
+				count = 20;
 			};	
+			class _xx_t1_mag_mmg_sf
+			{
+				magazine = t1_mag_mmg_sf;
+				count = 16;
+			};
 			class GLs // leader GLs
 			{
 				magazine = "1Rnd_HE_Grenade_shell";
@@ -5284,7 +5314,7 @@ class CfgVehicles
 			class _xx_HandGrenade
 			{
 				magazine = "HandGrenade";
-				count = 8;
+				count = 12;
 			};
 			class _xx_SmokeShell
 			{
@@ -5299,7 +5329,7 @@ class CfgVehicles
 			class _xx_ACE_M84
 			{
 				magazine = "ACE_M84";
-				count = 8;
+				count = 12;
 			};
 			class SLAMs
 			{
@@ -5321,7 +5351,7 @@ class CfgVehicles
 			};
 			class Tourniquet
 			{
-				count = 8;
+				count = 12;
 				name = "ACE_tourniquet";
 			};
 			class _xx_ACE_morphine
@@ -5331,13 +5361,18 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 8;
+				count = 12;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_CableTie
 			{
 				count = 20;
 				name = "ACE_CableTie";
+			};
+			class _xx_ACE_wirecutter
+			{
+				count = 4;
+				name = "ACE_wirecutter";
 			};
 			class _xx_ACE_UAVBattery
 			{
@@ -5348,6 +5383,11 @@ class CfgVehicles
 			{
 				count = 4;
 				name = "ACRE_PRC148";
+			};
+			class _xx_ACRE_PRC117F
+			{
+				count = 2;
+				name = "ACRE_PRC117F";
 			};
 			class UavTerminal
 			{
@@ -5447,8 +5487,13 @@ class CfgVehicles
 			};
 			class _xx_ACRE_PRC148
 			{
-				count = 2;
+				count = 4;
 				name = "ACRE_PRC148";
+			};
+			class _xx_ACRE_PRC117F
+			{
+				count = 2;
+				name = "ACRE_PRC117F";
 			};
 		};
 		class TransportWeapons{};

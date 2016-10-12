@@ -169,6 +169,13 @@ class CfgFactionClasses
 		priority = 10;
 		icon = "\t1_units\data\cfgFactionClasses_T1_ca.paa";
 	};
+	class T1_Units_Desert
+    {
+        displayName = "T1 Units (Desert)";
+        side = 1;
+        priority = 10;
+        icon = "\t1_units\data\cfgFactionClasses_T1_ca.paa";
+    };
 };
 class CfgWeapons {
 #include "weapons.cpp"

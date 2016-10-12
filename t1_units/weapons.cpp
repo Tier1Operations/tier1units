@@ -68,11 +68,6 @@ class T1_weap_mmg_sf: 45KO_zafir_black
 			item = "iansky_specterdrkf";
 			slot = "CowsSlot";
 		};
-		class LinkedItemsMuzzle
-		{
-			item = "ACE_muzzle_mzls_B";
-			slot = "MuzzleSlot";
-		}
 		class LinkedItemsAcc
 		{
 			item = "acc_pointer_IR";
@@ -483,7 +478,7 @@ class T1_mk18_m320 : rhs_weap_mk18_m320
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdrkf_t";
 			slot = "CowsSlot";
 		};		
 		class LinkedItemsAcc

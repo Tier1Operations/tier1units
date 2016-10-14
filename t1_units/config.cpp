@@ -1632,6 +1632,7 @@ class CfgVehicles
 	class T1_SF_Marksman_SOS_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.9;
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF Radioman DM";
@@ -1697,6 +1698,7 @@ class CfgVehicles
 	class T1_SF_Explosive_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.9;
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF Explosive Specialist";
@@ -1765,6 +1767,7 @@ class CfgVehicles
 	class T1_SF_Medic_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.9;
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF Medic";
@@ -1824,6 +1827,7 @@ class CfgVehicles
 	class T1_SF_FTL_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.9;
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF FTL";
@@ -1893,6 +1897,7 @@ class CfgVehicles
 	class T1_SF_AT_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.9;
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF Rifleman AT";
@@ -1956,6 +1961,7 @@ class CfgVehicles
 	class T1_SF_AR_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.9;
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF AR";
@@ -2633,6 +2639,8 @@ class CfgVehicles
 	class B_Spotter_F;
 	class T1_Spotter_Standard_F: B_Spotter_F
 	{
+		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Spotter";
@@ -2739,6 +2747,8 @@ class CfgVehicles
 	class B_Sniper_F;
 	class T1_Sniper_Standard_F: B_Sniper_F
 	{
+		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Sniper";
@@ -2833,6 +2843,8 @@ class CfgVehicles
 	};
 	class T1_Spotter_Light_F: B_Spotter_F
 	{
+		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Spotter";
@@ -2924,6 +2936,8 @@ class CfgVehicles
 	};
 	class T1_Sniper_Light_F: T1_Sniper_Standard_F
 	{
+		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Sniper";
@@ -3020,6 +3034,7 @@ class CfgVehicles
 	class T1_Specialist_AT_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AT Specialist";
@@ -3068,6 +3083,7 @@ class CfgVehicles
 	class T1_Specialist_AAT_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AAT Specialist";
@@ -3120,6 +3136,7 @@ class CfgVehicles
 	class T1_Specialist_Medium_AT_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Medium AT Specialist";
@@ -3167,6 +3184,7 @@ class CfgVehicles
 	class T1_Specialist_Medium_AAT_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Medium AAT Specialist";
@@ -3213,6 +3231,7 @@ class CfgVehicles
 	class T1_Specialist_AA_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AA Specialist";
@@ -3259,6 +3278,7 @@ class CfgVehicles
 	class T1_Specialist_AAA_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AAA Specialist";
@@ -3315,6 +3335,7 @@ class CfgVehicles
 	class T1_Specialist_MG_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 MG Specialist";
@@ -3390,7 +3411,8 @@ class CfgVehicles
 	};
 	class T1_Specialist_AMG_Standard_F: T1_Soldier_F
 	{
-		scope = 2;
+		sscope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 AMG Specialist";
@@ -3455,6 +3477,7 @@ class CfgVehicles
 	class T1_Scout_TL_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Scout TL";
@@ -3578,6 +3601,7 @@ class CfgVehicles
 	class T1_Scout_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		t1_DutyMod = 0.94;
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Scout [MM DLC]";

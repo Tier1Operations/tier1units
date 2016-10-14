@@ -99,7 +99,8 @@ class CfgPatches
 			"T1_support_ammobox",
 			"T1_eod_ammobox",	
 			"T1_Spotter_Light_F",
-			"T1_Sniper_Light_F"
+			"T1_Sniper_Light_F",
+			"T1_Section_AR_Alt_F"
 		};
 		weapons[] = {
 			"T1_V_PlateCarrier2_Standard",
@@ -146,7 +147,8 @@ class CfgPatches
 			"T1_m4a1_Mstock_grip3",
 			"T1_m4a1_carryhandle",
 			"T1_weap_Instructor_Orange",
-			"T1_weap_Instructor_Black"
+			"T1_weap_Instructor_Black",
+			"T1_weap_lmg2"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
@@ -1041,10 +1043,10 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
-			class _xx_rhs_200rnd_556x45_M_SAW
+			class _xx_rhsusf_100Rnd_556x45_soft_pouch
 			{
-				count = 2;
-				magazine = t1_mag_lmg;
+				count = 3;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
 			};
 		};
 		class TransportItems
@@ -1084,7 +1086,7 @@ class CfgVehicles
 		{
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
-				count = 2;
+				count = 3;
 				magazine = t1_mag_lmg;
 			};
 		};
@@ -2021,10 +2023,20 @@ class CfgVehicles
 			MEDICALITEMS2
 		};
 		linkedItems[] = {
-			"T1_V_PlateCarrier2_Standard_SFAR"
+			"T1_V_PlateCarrier2_Standard_SFAR",
+			"H_HelmetB_light",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
-			"T1_V_PlateCarrier2_Standard_SFAR"
+			"T1_V_PlateCarrier2_Standard_SFAR",
+			"H_HelmetB_light",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
 		};
 		camouflage = 1.0;
 	};
@@ -4368,15 +4380,64 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			t1_mag_lmg,
-			t1_mag_lmg,
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
 			t1_mag_sidearm_l,
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			t1_mag_lmg,
-			t1_mag_lmg,
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			t1_mag_sidearm_l,
+			"SmokeShell"
+		};
+		icon = "iconManMG";
+		backpack = "T1_AssaultPack_AR";
+		items[] = {STDITEMS};
+		respawnItems[] = {STDITEMS};
+	};
+	class T1_Section_AR_Alt_F: T1_Soldier_F
+	{
+		scope = 2;
+		faction = "T1_Units";
+		vehicleClass = "Section";
+		displayName = "Automatic Rifleman";
+		weapons[] = {
+			"T1_weap_lmg2",
+			"T1_weap_sidearm_l",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		respawnWeapons[] = {
+			"T1_weap_lmg2",
+			"T1_weap_sidearm_l",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		magazines[] = {
+			"ACE_M84",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",			
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			t1_mag_sidearm_l,
+			"SmokeShell"
+		};
+		respawnmagazines[] = {
+			"ACE_M84",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
 			t1_mag_sidearm_l,
 			"SmokeShell"
 		};
@@ -4416,7 +4477,9 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"HandGrenade",
 			"SmokeShell",
-			t1_mag_lmg
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
@@ -4431,7 +4494,9 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"HandGrenade",
 			"SmokeShell",
-			t1_mag_lmg
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch",
+			"rhsusf_100Rnd_556x45_soft_pouch"
 		};
 		backpack = "T1_AssaultPack_AAR";
 		items[] = {STDITEMS};

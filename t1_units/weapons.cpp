@@ -90,6 +90,18 @@ class T1_weap_lmg: rhs_weap_m249_pip_L
 		};
 	};
 };
+class rhs_weap_m249_pip_S_vfg;
+class T1_weap_lmg2: rhs_weap_m249_pip_S_vfg
+{	
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "iansky_specterdrkf";
+			slot = "CowsSlot";
+		};
+	};
+};
 #define t1_mag_lmg "rhs_200rnd_556x45_M_SAW"
 
 

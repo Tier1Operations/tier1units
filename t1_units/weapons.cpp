@@ -827,3 +827,11 @@ class T1_V_PlateCarrier2_Standard: V_PlateCarrier2_rgr
 		hiddenSelections[] = {"camo"};
 	};
 };
+class T1_V_PlateCarrier2_Standard_SFAR: T1_V_PlateCarrier2_Standard
+{
+    scope = 2;
+    class ItemInfo: Iteminfo
+    {
+        containerClass = "Supply200";
+    };
+};

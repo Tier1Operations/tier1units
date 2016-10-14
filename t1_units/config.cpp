@@ -254,7 +254,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Kitbag PltLead (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -292,23 +292,23 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack SF Lead";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 1;
-				magazine = t1_mag_mmg_sf;
+			magazine = "rhsusf_50Rnd_762x51_m62_tracer";
 			};
 			class _xx_1Rnd_HE_Grenade_shell
 			{
 				count = 8;
-				magazine = 1Rnd_HE_Grenade_shell;
+				magazine = "1Rnd_HE_Grenade_shell";
 			};
 			class _xx_1Rnd_SmokeRed_Grenade_shell
 			{
 				count = 2;
-				magazine = 1Rnd_SmokeRed_Grenade_shell;
+				magazine = "1Rnd_SmokeRed_Grenade_shell";
 			};
 		};
 		class TransportItems
@@ -383,7 +383,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Assault Pack Spotter";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -427,7 +427,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Assault Pack Sniper";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_rhsusf_5Rnd_300winmag_xm2010
@@ -519,7 +519,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -607,7 +607,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack Medic";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -641,7 +641,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack Medic (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_SmokeShell
@@ -698,7 +698,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack CLS (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -882,7 +882,7 @@ class CfgVehicles
 	class T1_B_AssaultPack_Exp_SF: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_SatchelCarge_Remote_Mag
@@ -938,7 +938,7 @@ class CfgVehicles
 	class T1_AssaultPack_PLEOD: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_SatchelCarge_Remote_Mag
@@ -959,7 +959,7 @@ class CfgVehicles
 	class T1_AssaultPack_PLSgt_JTAC: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -1001,7 +1001,7 @@ class CfgVehicles
 	class T1_Backpack_PL_Lead: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};		
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};		
 		class TransportItems
 		{
 			class Bandage1
@@ -1038,7 +1038,7 @@ class CfgVehicles
 	class T1_AssaultPack_AR: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhs_200rnd_556x45_M_SAW
@@ -1079,7 +1079,7 @@ class CfgVehicles
 	class T1_AssaultPack_AAR: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhs_200rnd_556x45_M_SAW
@@ -1161,13 +1161,14 @@ class CfgVehicles
 	class T1_Kitbag_camo_AT: T1_Kitbag_camo
 	{
 		scope = 1;
+		maximumLoad = 380;
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_Titan_AT
 			{
 				magazine = "Titan_AT";
-				count = 2;
+				count = 3;
 			};
 		};
 		class TransportItems
@@ -1202,6 +1203,7 @@ class CfgVehicles
 	class T1_Kitbag_camo_Medium_AT: T1_Kitbag_camo
 	{
 		scope = 1;
+		maximumLoad = 380;
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
@@ -1213,7 +1215,7 @@ class CfgVehicles
 			class _xx_tf47_m3maaws_HEAT
 			{
 				magazine = "tf47_m3maaws_HEAT";
-				count = 1;
+				count = 2;
 			};
 		};
 		class TransportItems
@@ -1248,13 +1250,14 @@ class CfgVehicles
 	class T1_Kitbag_camo_AA: T1_Kitbag_camo
 	{
 		scope = 1;
+		maximumLoad = 380;
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_Titan_AA
 			{
 				magazine = "Titan_AA";
-				count = 1;
+				count = 2;
 			};
 		};
 		class TransportItems
@@ -1332,7 +1335,7 @@ class CfgVehicles
 	class T1_AssaultPack_MMG: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
@@ -1792,7 +1795,8 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"HandGrenade",
-			t1_mag_mmg_sf
+			"rhsusf_50Rnd_762x51_m62_tracer",			
+			"rhsusf_50Rnd_762x51_m62_tracer"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
@@ -1807,7 +1811,8 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"HandGrenade",
-			t1_mag_mmg_sf
+			"rhsusf_50Rnd_762x51_m62_tracer",			
+			"rhsusf_50Rnd_762x51_m62_tracer"
 		};
 		icon = "iconManMedic";
 		backpack = "T1_AssaultPack_medic_sf";
@@ -1917,8 +1922,9 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"SmokeShell",
-			"SmokeShellGreen",			
-			t1_mag_mmg_sf
+			"SmokeShellGreen",
+			"rhsusf_50Rnd_762x51_m62_tracer",			
+			"rhsusf_50Rnd_762x51_m62_tracer"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
@@ -1932,8 +1938,9 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"SmokeShell",
-			"SmokeShellGreen",			
-			t1_mag_mmg_sf
+			"SmokeShellGreen",
+			"rhsusf_50Rnd_762x51_m62_tracer",			
+			"rhsusf_50Rnd_762x51_m62_tracer"
 		};
 		items[] = {
 			STDITEMS,
@@ -1967,10 +1974,14 @@ class CfgVehicles
 			"ACE_Vector"
 		};
 		magazines[] = {
-			t1_mag_mmg_sf,
-			t1_mag_mmg_sf,
-			t1_mag_mmg_sf,
-			t1_mag_mmg_sf,
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
@@ -1978,11 +1989,15 @@ class CfgVehicles
 			"HandGrenade",
 			"SmokeShell"
 		};
-		respawnmagazines[] = {			
-			t1_mag_mmg_sf,
-			t1_mag_mmg_sf,
-			t1_mag_mmg_sf,
-			t1_mag_mmg_sf,
+		respawnmagazines[] = {
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
 			"11Rnd_45ACP_Mag",
@@ -1998,6 +2013,12 @@ class CfgVehicles
 		respawnItems[] = {
 			STDITEMS,
 			MEDICALITEMS2
+		};
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard_SFAR"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard_SFAR"
 		};
 		camouflage = 1.0;
 	};
@@ -3025,8 +3046,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"Titan_AT"
+			"SmokeShellGreen"
 			
 		};
 		respawnmagazines[] = {
@@ -3038,8 +3058,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"Titan_AT"
+			"SmokeShellGreen"
 		};
 		items[] = {STDITEMS,"ACRE_PRC148"};
 		respawnItems[] = {STDITEMS,"ACRE_PRC148"};
@@ -3126,8 +3145,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"tf47_m3maaws_HEAT"
+			"SmokeShellGreen"
 
 		};
 		respawnmagazines[] = {
@@ -3138,8 +3156,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"tf47_m3maaws_HEAT"
+			"SmokeShellGreen"
 
 		};
 		items[] = {STDITEMS,"ACRE_PRC148"};
@@ -3210,8 +3227,7 @@ class CfgVehicles
 			"T1_weap_m16a4_carryhandle",
 			"Throw",
 			"Put",
-			"ACE_Vector",
-			"launch_Titan_F"
+			"ACE_Vector"
 		};
 		magazines[] = {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3222,8 +3238,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"Titan_AA"
+			"SmokeShellGreen"
 		};
 		respawnmagazines[] = {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3234,8 +3249,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"Titan_AA"
+			"SmokeShellGreen"
 		};
 		items[] = {STDITEMS,"ACRE_PRC148"};
 		respawnItems[] = {STDITEMS,"ACRE_PRC148"};

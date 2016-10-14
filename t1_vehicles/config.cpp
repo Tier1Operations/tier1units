@@ -115,13 +115,13 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+				magazine =  "t1_longrange_556";
 				count = 6;
 			};
 			class section_ar_mag
 			{
-				magazine = "rhs_200rnd_556x45_M_SAW";
-				count = 5;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 10;
 			};				
 			class _xx_HandGrenade
 			{
@@ -223,13 +223,13 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+				magazine =  "t1_longrange_556";
 				count = 6;
 			};
 			class section_ar_mag
 			{
-				magazine = "rhs_200rnd_556x45_M_SAW";
-				count = 5;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 10;
 			};				
 			class _xx_HandGrenade
 			{
@@ -331,13 +331,13 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+				magazine =  "t1_longrange_556";
 				count = 6;
 			};
 			class section_ar_mag
 			{
-				magazine = "rhs_200rnd_556x45_M_SAW";
-				count = 5;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 10;
 			};				
 			class _xx_HandGrenade
 			{
@@ -435,13 +435,13 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+				magazine =  "t1_longrange_556";
 				count = 24;
 			};
-			class _xx_rhs_200rnd_556x45_M_SAW
+			class _xx_rhsusf_100Rnd_556x45_soft_pouch
 			{
-				magazine = "rhs_200rnd_556x45_M_SAW";
-				count = 24;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 48;
 			};
 			class _xx_HandGrenade
 			{
@@ -545,13 +545,13 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+				magazine =  "t1_longrange_556";
 				count = 24;
 			};
-			class _xx_rhs_200rnd_556x45_M_SAW
+			class _xx_rhsusf_100Rnd_556x45_soft_pouch
 			{
-				magazine = "rhs_200rnd_556x45_M_SAW";
-				count = 24;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 48;
 			};
 			class _xx_HandGrenade
 			{
@@ -660,13 +660,13 @@ class CfgVehicles {
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+				magazine =  "t1_longrange_556";
 				count = 6;
 			};
 			class section_ar_mag
 			{
-				magazine = "rhs_200rnd_556x45_M_SAW";
-				count = 5;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 10;
 			};				
 			class _xx_HandGrenade
 			{

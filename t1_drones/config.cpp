@@ -51,9 +51,9 @@ class CfgVehicles
 				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
 				count = 110;
 			};
-			class rhs_mag_30Rnd_556x45_Mk262_Stanag
+			class t1_longrange_556
 			{
-				magazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+				magazine = "t1_longrange_556";
 				count = 30;
 			};
 			class riflemag_tracer
@@ -61,15 +61,20 @@ class CfgVehicles
 				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 				count = 20;
 			};
-			class _xx_rhs_200rnd_556x45_M_SAW
+			class _xx_rhs_rhsusf_100Rnd_556x45_soft_pouch
 			{
-				magazine = "rhs_200rnd_556x45_M_SAW";
-				count = 30;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 60;
 			};
 			class mmg_mag
 			{
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 				count = 40;
+			};
+			class _xx_rhsusf_50Rnd_762x51_m62_tracer
+			{
+				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
+				count = 30;
 			};
 			class _xx_ACE_20Rnd_762x51_Mk316_Mod_0_Mag
 			{
@@ -278,9 +283,9 @@ class CfgVehicles
 				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
 				count = 110;
 			};
-			class rhs_mag_30Rnd_556x45_Mk262_Stanag
+			class t1_longrange_556
 			{
-				magazine = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
+				magazine = "t1_longrange_556";
 				count = 30;
 			};
 			class riflemag_tracer
@@ -288,15 +293,20 @@ class CfgVehicles
 				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 				count = 20;
 			};
-			class _xx_rhs_200rnd_556x45_M_SAW
+			class _xx_rhsusf_100Rnd_556x45_soft_pouch
 			{
-				magazine = "rhs_200rnd_556x45_M_SAW";
-				count = 30;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 60;
 			};
 			class mmg_mag
 			{
 				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 				count = 40;
+			};
+			class _xx_rhsusf_50Rnd_762x51_m62_tracer
+			{
+				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
+				count = 30;
 			};
 			class _xx_ACE_20Rnd_762x51_Mk316_Mod_0_Mag
 			{

@@ -1259,7 +1259,7 @@ class CfgVehicles
 			class _xx_Titan_AA
 			{
 				magazine = "Titan_AA";
-				count = 2;
+				count = 3;
 			};
 		};
 		class TransportItems
@@ -1330,7 +1330,7 @@ class CfgVehicles
 			class _xx_Titan_AA
 			{
 				magazine = "Titan_AA";
-				count = 2;
+				count = 3;
 			};
 		};
 	};
@@ -3317,8 +3317,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"Titan_AA"
+			"SmokeShellGreen"
 		};
 		respawnmagazines[] = {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -3329,8 +3328,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShell",
-			"SmokeShellGreen",
-			"Titan_AA"
+			"SmokeShellGreen"
 		};
 		items[] = {
 			"ACRE_PRC148",
@@ -3342,7 +3340,7 @@ class CfgVehicles
 			STDITEMS,
 			MEDICALITEMS
 		};
-		backpack = "T1_Carryall_camo_AAA";
+		backpack = "T1_Kitbag_camo_AA";
 	};
 	class T1_Specialist_MG_Standard_F: T1_Soldier_F
 	{
@@ -4315,12 +4313,12 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",			
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4339,12 +4337,12 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",			
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4599,12 +4597,12 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",			
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag"
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556"
 		};
 		respawnmagazines[] = {
 			"SmokeShell",
@@ -4619,12 +4617,12 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",			
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag"
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556"
 		};
 		items[] = {STDITEMS,MEDICALITEMS2};
 		respawnItems[] = {STDITEMS,MEDICALITEMS2};
@@ -4970,13 +4968,13 @@ class CfgVehicles
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
-				magazine =  rhs_mag_30Rnd_556x45_Mk262_Stanag;
+				magazine =  t1_longrange_556;
 				count = 12;
 			};
-			class _xx_rhs_200rnd_556x45_M_SAW
+			class _xx_rhsusf_100Rnd_556x45_soft_pouch
 			{
-				magazine = t1_mag_lmg;
-				count = 12;
+				magazine = rhsusf_100Rnd_556x45_soft_pouch;
+				count = 24;
 			};
 			class _xx_HandGrenade
 			{
@@ -5258,10 +5256,10 @@ class CfgVehicles
 				magazine = "ACE_20Rnd_762x51_Mag_SD";
 				count = 20;
 			};	
-			class _xx_t1_mag_mmg_sf
+			class _xx_rhsusf_50Rnd_762x51_m62_tracer
 			{
-				magazine = t1_mag_mmg_sf;
-				count = 16;
+				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
+				count = 32;
 			};
 			class GLs // leader GLs
 			{
@@ -5457,5 +5455,12 @@ class CfgVehicles
 		class TransportBackpacks{};
 	};
 };
-
+class CfgMagazines
+{
+    class rhs_mag_30Rnd_556x45_Mk262_Stanag;
+    class t1_longrange_556: rhs_mag_30Rnd_556x45_Mk262_Stanag
+    {
+		displayName = "T1 5.56mm 30Rnd Mk262";
+    };
+};
 //};

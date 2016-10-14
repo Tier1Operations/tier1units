@@ -88,6 +88,11 @@ class T1_weap_lmg: rhs_weap_m249_pip_L
 			item = "iansky_specterdrkf";
 			slot = "CowsSlot";
 		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
 	};
 };
 class rhs_weap_m249_pip_S_vfg;
@@ -99,6 +104,11 @@ class T1_weap_lmg2: rhs_weap_m249_pip_S_vfg
 		{
 			item = "iansky_specterdrkf";
 			slot = "CowsSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
 		};
 	};
 };

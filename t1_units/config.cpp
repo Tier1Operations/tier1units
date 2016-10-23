@@ -297,9 +297,9 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
-			class _xx_rhsusf_100Rnd_762x51_m62_tracer
+			class _xx_rhsusf_50Rnd_762x51_m62_tracer
 			{
-				count = 1;
+				count = 2;
 			magazine = "rhsusf_50Rnd_762x51_m62_tracer";
 			};
 			class _xx_1Rnd_HE_Grenade_shell

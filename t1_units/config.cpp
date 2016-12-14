@@ -1072,7 +1072,7 @@ class CfgVehicles
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
 				count = 3;
-				magazine = "rhsusf_100Rnd_556x45_soft_pouch",
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
 			};
 		};
 		class TransportItems
@@ -2770,9 +2770,7 @@ class CfgVehicles
 			"Rangefinder"
 		};
 		magazines[] = {
-			"HandGrenade",	
-			"ACE_epinephrine";
-			"ACE_epinephrine";			
+			"HandGrenade",		
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
@@ -2789,8 +2787,6 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"HandGrenade",
-			"ACE_epinephrine";
-			"ACE_epinephrine";
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
@@ -2827,6 +2823,8 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
+			"ACE_epinephrine",
+			"ACE_epinephrine",	
 			MEDICALITEMS2
 		};
 		respawnItems[] = {
@@ -2837,6 +2835,8 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
 			MEDICALITEMS2
 		};		
 		camouflage = 0.3;
@@ -3622,8 +3622,6 @@ class CfgVehicles
 			"SmokeShellGreen",
 			"Laserbatteries",
 			"Chemlight_blue",
-			"ACE_epinephrine";
-			"ACE_epinephrine";
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -3641,8 +3639,6 @@ class CfgVehicles
 			"SmokeShellGreen",
 			"Laserbatteries",
 			"Chemlight_blue",
-			"ACE_epinephrine";
-			"ACE_epinephrine";
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -3678,6 +3674,8 @@ class CfgVehicles
 			"ACRE_PRC148",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
 			STDITEMS,
 			MEDICALITEMS
 		};
@@ -3686,6 +3684,8 @@ class CfgVehicles
 			"ACRE_PRC148",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
 			STDITEMS,
 			MEDICALITEMS
 		};
@@ -4312,14 +4312,6 @@ class CfgVehicles
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4344,14 +4336,6 @@ class CfgVehicles
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
-			"ACE_epinephrine";
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4359,8 +4343,28 @@ class CfgVehicles
 			"SmokeShellGreen",
 			"SmokeShellGreen"
 		};
-		items[] = {STDITEMS};
-		respawnItems[] = {STDITEMS};
+		items[] = {
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			STDITEMS
+		};
+		respawnItems[] = {
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			STDITEMS
+		};
 		icon = "iconManMedic";
 		backpack = "T1_AssaultPack_cls";
 		attendant = 1;

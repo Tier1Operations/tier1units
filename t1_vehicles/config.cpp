@@ -173,13 +173,13 @@ class CfgVehicles {
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 4;
+				count = 8;
 				name = "ACE_epinephrine";
 			};
 			class saline
 			{
-				count = 4;
-				name = "ACE_bloodIV_500";
+				count = 8;
+				name = "ACE_bloodIV";
 			};			
 			class _xx_ACRE_PRC148
 			{
@@ -281,13 +281,13 @@ class CfgVehicles {
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 4;
+				count = 8;
 				name = "ACE_epinephrine";
 			};
 			class saline
 			{
-				count = 4;
-				name = "ACE_bloodIV_500";
+				count = 8;
+				name = "ACE_bloodIV";
 			};			
 			class _xx_ACRE_PRC148
 			{
@@ -389,13 +389,13 @@ class CfgVehicles {
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 4;
+				count = 8;
 				name = "ACE_epinephrine";
 			};
 			class saline
 			{
-				count = 4;
-				name = "ACE_bloodIV_500";
+				count = 8;
+				name = "ACE_bloodIV";
 			};			
 			class _xx_ACRE_PRC148
 			{
@@ -488,13 +488,13 @@ class CfgVehicles {
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 32;
+				count = 64;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 16;
-				name = "ACE_bloodIV_500";
+				count = 32;
+				name = "ACE_bloodIV";
 			};
 			class _xx_ACE_CableTie
 			{
@@ -598,13 +598,13 @@ class CfgVehicles {
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 32;
+				count = 64;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 16;
-				name = "ACE_bloodIV_500";
+				count = 32;
+				name = "ACE_bloodIV";
 			};
 			class _xx_ACE_CableTie
 			{
@@ -718,13 +718,13 @@ class CfgVehicles {
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 4;
+				count = 8;
 				name = "ACE_epinephrine";
 			};
 			class saline
 			{
-				count = 4;
-				name = "ACE_bloodIV_500";
+				count = 8;
+				name = "ACE_bloodIV";
 			};			
 			class _xx_ACRE_PRC148
 			{

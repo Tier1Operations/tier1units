@@ -410,7 +410,7 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 1;
+				count = 3;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_Vector
@@ -462,7 +462,7 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 1;
+				count = 2;
 				name = "ACE_epinephrine";
 			};
 		};
@@ -497,7 +497,7 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 1;
+				count = 3;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_Vector
@@ -585,13 +585,13 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 8;
+				count = 16;
 				name = "ACE_epinephrine";
 			};
 			class IVFluid
 			{
-				count = 8;
-				name = "ACE_bloodIV_500";
+				count = 16;
+				name = "ACE_bloodIV";
 			};
 			class MagicalAidKit
 			{
@@ -629,7 +629,7 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 8;
+				count = 16;
 				name = "ACE_epinephrine";
 			};
 			class Tourniquet
@@ -681,8 +681,8 @@ class CfgVehicles
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 4;
-				name = "ACE_bloodIV_500";
+				count = 10;
+				name = "ACE_bloodIV";
 			};
 			class MagicalAidKit
 			{
@@ -725,13 +725,8 @@ class CfgVehicles
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 4;
-				name = "ACE_bloodIV_500";
-			};
-			class MagicalAidKit
-			{
-				count = 1;
-				name = "ACE_personalAidKit";
+				count = 10;
+				name = "ACE_bloodIV";
 			};
 			class Tourniquet
 			{
@@ -2785,7 +2780,9 @@ class CfgVehicles
 			"Rangefinder"
 		};
 		magazines[] = {
-			"HandGrenade",			
+			"HandGrenade",	
+			"ACE_epinephrine";
+			"ACE_epinephrine";			
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
@@ -2801,7 +2798,9 @@ class CfgVehicles
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
-			"HandGrenade",			
+			"HandGrenade",
+			"ACE_epinephrine";
+			"ACE_epinephrine";
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
@@ -3421,7 +3420,7 @@ class CfgVehicles
 	};
 	class T1_Specialist_AMG_Standard_F: T1_Soldier_F
 	{
-		sscope = 2;
+		scope = 2;
 		t1_DutyMod = 0.965;
 		faction = "T1_Units";
 		vehicleClass = "Special";
@@ -3519,7 +3518,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",			
 			"Chemlight_blue",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
@@ -3633,6 +3632,8 @@ class CfgVehicles
 			"SmokeShellGreen",
 			"Laserbatteries",
 			"Chemlight_blue",
+			"ACE_epinephrine";
+			"ACE_epinephrine";
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -3650,6 +3651,8 @@ class CfgVehicles
 			"SmokeShellGreen",
 			"Laserbatteries",
 			"Chemlight_blue",
+			"ACE_epinephrine";
+			"ACE_epinephrine";
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -4319,6 +4322,14 @@ class CfgVehicles
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4343,6 +4354,14 @@ class CfgVehicles
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
+			"ACE_epinephrine";
 			"SmokeShell",
 			"SmokeShell",
 			"SmokeShell",
@@ -4790,27 +4809,43 @@ class CfgVehicles
 		items[] = {
 			"ACRE_PRC148",
 			STDITEMS,
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
 			"ACE_personalAidKit"
 		};
 		respawnItems[] = {
 			"ACRE_PRC148",
 			STDITEMS,
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
-			"ACE_bloodIV_500",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
 			"ACE_personalAidKit"
 		};
 		icon = "iconManMedic";
@@ -5026,8 +5061,8 @@ class CfgVehicles
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 8;
-				name = "ACE_bloodIV_500";
+				count = 32;
+				name = "ACE_bloodIV";
 			};
 			class _xx_ACE_CableTie
 			{

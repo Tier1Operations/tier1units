@@ -593,11 +593,6 @@ class CfgVehicles
 				count = 16;
 				name = "ACE_bloodIV";
 			};
-			class MagicalAidKit
-			{
-				count = 1;
-				name = "ACE_personalAidKit";
-			};
 			class Tourniquet
 			{
 				count = 8;
@@ -683,11 +678,6 @@ class CfgVehicles
 			{
 				count = 10;
 				name = "ACE_bloodIV";
-			};
-			class MagicalAidKit
-			{
-				count = 1;
-				name = "ACE_personalAidKit";
 			};
 			class Tourniquet
 			{
@@ -1082,7 +1072,7 @@ class CfgVehicles
 			class _xx_rhs_200rnd_556x45_M_SAW
 			{
 				count = 3;
-				magazine = t1_mag_lmg;
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch",
 			};
 		};
 		class TransportItems
@@ -4824,8 +4814,7 @@ class CfgVehicles
 			"ACE_bloodIV",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_personalAidKit"
+			"ACE_bloodIV"
 		};
 		respawnItems[] = {
 			"ACRE_PRC148",
@@ -4845,8 +4834,7 @@ class CfgVehicles
 			"ACE_bloodIV",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_personalAidKit"
+			"ACE_bloodIV"
 		};
 		icon = "iconManMedic";
 		backpack = "T1_AssaultPack_pl_medic";

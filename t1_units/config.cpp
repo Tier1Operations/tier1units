@@ -253,7 +253,7 @@ class CfgVehicles
 		};
 	};
 	class B_AssaultPack_rgr;
-	class v: B_AssaultPack_rgr
+	class T1_AssaultPack_rgr: B_AssaultPack_rgr
 	{
 		scope = 1;
 		displayName = "Kitbag PltLead (T1 Camo)";

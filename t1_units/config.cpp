@@ -286,7 +286,7 @@ class CfgVehicles
 			};
 			class lr_radio {
 				count = 1;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -418,10 +418,10 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_Vector";
 			};
-			class _xx_ACRE_PRC117F
+			class _xx_tf_rt1523g_bwmod
 			{
 				count = 1;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};	
@@ -513,7 +513,7 @@ class CfgVehicles
 			class lr_radio
 			{
 				count = 1;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -554,10 +554,10 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_Kestrel";
 			};
-			class _xx_ACRE_PRC117F
+			class _xx_tf_rt1523g_bwmod
 			{
 				count = 1;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -981,7 +981,7 @@ class CfgVehicles
 			};
 			class lr_radio {
 				count = 1;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -1018,7 +1018,7 @@ class CfgVehicles
 			};
 			class lr_radio {
 				count = 1;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -1508,8 +1508,8 @@ class CfgVehicles
 			"ItemWatch"
 		};
 		backpack = "T1_Kitbag_camo_Lead_Trainer";
-		items[] = {"ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS};
+		items[] = {"tf_anprc152",STDITEMS};
+		respawnItems[] = {"tf_anprc152",STDITEMS};
 		camouflage = 1.4;
 	};
 	class T1_Instructor_Polo_Orange_F: T1_Instructor_Polo_Black_F	
@@ -1585,8 +1585,8 @@ class CfgVehicles
 			"ItemWatch"
 		};
 		backpack = "T1_Kitbag_camo_Lead_Trainer";
-		items[] = {"ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS};
+		items[] = {"tf_anprc152",STDITEMS};
+		respawnItems[] = {"tf_anprc152",STDITEMS};
 		camouflage = 1.4;
 	};
 	class B_Soldier_F;
@@ -1667,7 +1667,7 @@ class CfgVehicles
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
-		backpack = "T1_B_AssaultPack_SF_Radioman_DM";
+		backpack = "tf_rt1523g_bwmod";
 		items[] = {
 			STDITEMS,
 			"ACE_RangeCard",
@@ -1870,12 +1870,12 @@ class CfgVehicles
 		icon = "iconManLeader";
 		backpack = "T1_AssaultPack_Lead_SF";
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"ACE_IR_Strobe_Item",
 			STDITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"ACE_IR_Strobe_Item",
 			STDITEMS
 		};
@@ -2411,12 +2411,12 @@ class CfgVehicles
 		icon = "iconManLeader";
 		backpack = "T1_AssaultPack_Lead_SF";
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"ACE_IR_Strobe_Item",
 			STDITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"ACE_IR_Strobe_Item",
 			STDITEMS
 		};
@@ -2484,8 +2484,8 @@ class CfgVehicles
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
-		items[] = {"ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS};
+		items[] = {"tf_anprc152",STDITEMS};
+		respawnItems[] = {"tf_anprc152",STDITEMS};
 		icon = "iconManAT";
 		backpack = "T1_AssaultPack_Lead_SF";
 		camouflage = 1.0;
@@ -2594,12 +2594,12 @@ class CfgVehicles
 		};
 		// Todo: Evaluate wrt MEDICALITEMS mismatch
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
@@ -2737,7 +2737,7 @@ class CfgVehicles
 			"ACE_RangeCard",
 			STDITEMS
 		};
-		backpack = "T1_Kitbag_camo_Sniper";
+		backpack = "tf_rt1523g_bwmod";
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};
@@ -2818,7 +2818,7 @@ class CfgVehicles
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
@@ -2830,7 +2830,7 @@ class CfgVehicles
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
@@ -2931,7 +2931,7 @@ class CfgVehicles
 			"ACE_RangeCard",
 			STDITEMS
 		};
-		backpack = "T1_Kitbag_camo_Sniper";
+		backpack = "tf_rt1523g_bwmod";
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};
@@ -3011,7 +3011,7 @@ class CfgVehicles
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
@@ -3021,7 +3021,7 @@ class CfgVehicles
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
@@ -3076,8 +3076,8 @@ class CfgVehicles
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
-		items[] = {STDITEMS,"ACRE_PRC148"};
-		respawnItems[] = {STDITEMS,"ACRE_PRC148"};
+		items[] = {STDITEMS,"tf_anprc152"};
+		respawnItems[] = {STDITEMS,"tf_anprc152"};
 		icon = "iconManAT";
 		backpack = "T1_Kitbag_camo_AT";
 	};
@@ -3123,12 +3123,12 @@ class CfgVehicles
 			"SmokeShellGreen"
 		};
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
@@ -3177,8 +3177,8 @@ class CfgVehicles
 			"SmokeShellGreen"
 
 		};
-		items[] = {STDITEMS,"ACRE_PRC148"};
-		respawnItems[] = {STDITEMS,"ACRE_PRC148"};
+		items[] = {STDITEMS,"tf_anprc152"};
+		respawnItems[] = {STDITEMS,"tf_anprc152"};
 		icon = "iconManAT";
 		backpack = "T1_Kitbag_camo_Medium_AT";
 	};
@@ -3218,12 +3218,12 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag"
 		};
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
@@ -3271,8 +3271,8 @@ class CfgVehicles
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
-		items[] = {STDITEMS,"ACRE_PRC148"};
-		respawnItems[] = {STDITEMS,"ACRE_PRC148"};
+		items[] = {STDITEMS,"tf_anprc152"};
+		respawnItems[] = {STDITEMS,"tf_anprc152"};
 		icon = "iconManAT";
 		backpack = "T1_Kitbag_camo_AA";
 	};
@@ -3320,12 +3320,12 @@ class CfgVehicles
 			"SmokeShellGreen"
 		};
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
@@ -3365,12 +3365,12 @@ class CfgVehicles
 		icon = "iconManMG";
 		backpack = "T1_AssaultPack_MMG";
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"ACE_IR_Strobe_Item",
 			STDITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"ACE_IR_Strobe_Item",
 			STDITEMS
 		};
@@ -3399,7 +3399,7 @@ class CfgVehicles
 			"130Rnd_338_Mag"
 		};
 			items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"ACE_IR_Strobe_Item",
 			"iansky_specterdrkf",
 			"acc_pointer_IR",
@@ -3463,12 +3463,12 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS
 		};
 		backpack = "T1_Kitbag_AMG";
@@ -3582,7 +3582,7 @@ class CfgVehicles
 			"ItemWatch",
 			"B_UavTerminal"
 		};
-		backpack = "T1_FieldPack_Scout_Lead";
+		backpack = "tf_rt1523g_bwmod";
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_HuntIR_monitor",
@@ -3671,7 +3671,7 @@ class CfgVehicles
 		backpack = "B_Static_Designator_01_weapon_F";
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
 			"ACE_epinephrine",
@@ -3681,7 +3681,7 @@ class CfgVehicles
 		};
 		respawnitems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
 			"ACE_epinephrine",
@@ -3759,12 +3759,12 @@ class CfgVehicles
 			"ItemWatch"
 		};
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
@@ -3841,12 +3841,12 @@ class CfgVehicles
 			"ItemWatch"
 		};
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS
 		};
@@ -3922,8 +3922,8 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
-		items[] = {"ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS};
+		items[] = {"tf_anprc152",STDITEMS};
+		respawnItems[] = {"tf_anprc152",STDITEMS};
 		backpack = "T1_Kitbag_camo_Repair";
 		engineer = 1;
 		detectSkill = 40;
@@ -3995,8 +3995,8 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
-		items[] = {"ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS};
+		items[] = {"tf_anprc152",STDITEMS};
+		respawnItems[] = {"tf_anprc152",STDITEMS};
 		backpack = "T1_Kitbag_camo_Repair";
 		engineer = 1;
 		detectSkill = 40;
@@ -4068,8 +4068,8 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
-		items[] = {"ACRE_PRC148",STDITEMS};
-		respawnItems[] = {"ACRE_PRC148",STDITEMS};
+		items[] = {"tf_anprc152",STDITEMS};
+		respawnItems[] = {"tf_anprc152",STDITEMS};
 		backpack = "T1_Kitbag_camo_medic";
 		attendant = 1;
 	};
@@ -4163,13 +4163,13 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS2
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS2
 		};
@@ -4265,13 +4265,13 @@ class CfgVehicles
 		};
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS2
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS2
 		};
@@ -4724,7 +4724,7 @@ class CfgVehicles
 			STDITEMS
 		};
 		icon = "iconManLeader";
-		backpack = "T1_Backpack_PL_Lead";
+		backpack = "tf_rt1523g_bwmod";
 	};
 	class T1_Platoon_Medic_Standard_F: T1_Soldier_F
 	{
@@ -4801,7 +4801,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag"
 		};
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			"ACE_bloodIV",
 			"ACE_bloodIV",
@@ -4821,7 +4821,7 @@ class CfgVehicles
 			"ACE_bloodIV"
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			"ACE_bloodIV",
 			"ACE_bloodIV",
@@ -4895,7 +4895,7 @@ class CfgVehicles
 			"DemoCharge_Remote_Mag"
 		};
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS2,
 			"ACE_M26_Clacker",
@@ -4903,7 +4903,7 @@ class CfgVehicles
 			"MineDetector"
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			STDITEMS,
 			MEDICALITEMS2,
 			"ACE_M26_Clacker",
@@ -4963,16 +4963,16 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
 		};
 		items[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"B_UavTerminal",
 			STDITEMS
 		};
 		respawnItems[] = {
-			"ACRE_PRC148",
+			"tf_anprc152",
 			"B_UavTerminal",
 			STDITEMS
 		};
-		backpack = "T1_AssaultPack_PLSgt_JTAC";
+		backpack = "tf_rt1523g_bwmod";
 	};
 	class NATO_Box_Base;
 	class B_supplyCrate_F;
@@ -5061,15 +5061,15 @@ class CfgVehicles
 				count = 20;
 				name = "ACE_CableTie";
 			};
-			class _xx_ACRE_PRC148
+			class _xx_tf_anprc152
 			{
 				count = 2;
-				name = "ACRE_PRC148";
+				name = "tf_anprc152";
 			};
-			class _xx_ACRE_PRC117F
+			class _xx_tf_rt1523g_bwmod
 			{
 				count = 1;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 		class TransportWeapons
@@ -5220,15 +5220,15 @@ class CfgVehicles
 				count = 8;
 				name = "ACE_UAVBattery";
 			};
-			class _xx_ACRE_PRC148
+			class _xx_tf_anprc152
 			{
 				count = 4;
-				name = "ACRE_PRC148";
+				name = "tf_anprc152";
 			};
-			class _xx_ACRE_PRC117F
+			class _xx_tf_rt1523g_bwmod
 			{
 				count = 2;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 		class TransportWeapons
@@ -5361,15 +5361,15 @@ class CfgVehicles
 				count = 4;
 				name = "ACE_UAVBattery";
 			};
-			class _xx_ACRE_PRC148
+			class _xx_tf_anprc152
 			{
 				count = 4;
-				name = "ACRE_PRC148";
+				name = "tf_anprc152";
 			};
-			class _xx_ACRE_PRC117F
+			class _xx_tf_rt1523g_bwmod
 			{
 				count = 2;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 			class UavTerminal
 			{
@@ -5467,15 +5467,15 @@ class CfgVehicles
 				count = 6;
 				name = "ACE_DefusalKit";
 			};
-			class _xx_ACRE_PRC148
+			class _xx_tf_anprc152
 			{
 				count = 4;
-				name = "ACRE_PRC148";
+				name = "tf_anprc152";
 			};
-			class _xx_ACRE_PRC117F
+			class _xx_tf_rt1523g_bwmod
 			{
 				count = 2;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 		class TransportWeapons{};

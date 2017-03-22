@@ -5406,10 +5406,10 @@ class CfgVehicles
 		class TransportWeapons{};
 		class TransportBackpacks
 		{			
-			class _xx_AssaultPack_rgr
+			class _xx_B_AssaultPack_rgr
 			{
 				count = 6;
-				backpack = "AssaultPack_rgr";
+				backpack = "B_AssaultPack_rgr";
 			};
 		};
 	};

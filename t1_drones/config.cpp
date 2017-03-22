@@ -210,15 +210,15 @@ class CfgVehicles
 				count = 8;
 				name = "ACE_UAVBattery";
 			};
-			class _xx_ACRE_PRC148
+			class _xx_tf_anprc15
 			{
 				count = 4;
-				name = "ACRE_PRC148";
+				name = "tf_anprc152";
 			};
-			class _xx_ACRE_PRC117F
+			class _xx_tf_rt1523g_bwmod
 			{
 				count = 2;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 			class _xx_ACE_M26_Clacker
 			{
@@ -442,15 +442,15 @@ class CfgVehicles
 				count = 8;
 				name = "ACE_UAVBattery";
 			};
-			class _xx_ACRE_PRC148
+			class _xx_tf_anprc15
 			{
 				count = 4;
-				name = "ACRE_PRC148";
+				name = "tf_anprc152";
 			};
-			class _xx_ACRE_PRC117F
+			class _xx_tf_rt1523g_bwmod
 			{
 				count = 2;
-				name = "ACRE_PRC117F";
+				name = "tf_rt1523g_bwmod";
 			};
 			class _xx_ACE_M26_Clacker
 			{

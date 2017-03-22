@@ -216,6 +216,7 @@ class CfgVehicleClasses
 class CfgVehicles
 {
 	class B_Soldier_base_F;
+	class tf_rt1523g_bwmod;
 	class B_Kitbag_Base;
 	class T1_Kitbag_camo: B_Kitbag_Base
 	{
@@ -283,10 +284,6 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
-			};
-			class lr_radio {
-				count = 1;
-				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -381,7 +378,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_Sniper: B_AssaultPack_rgr
+	class T1_Kitbag_camo_Sniper: tf_rt1523g_bwmod
 	{
 		scope = 1;
 		displayName = "Assault Pack Spotter";
@@ -417,11 +414,6 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_Vector";
-			};
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 1;
-				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};	
@@ -468,7 +460,7 @@ class CfgVehicles
 		};
 	};
 	class B_FieldPack_khk;
-	class T1_FieldPack_Scout_Lead: B_FieldPack_khk
+	class T1_FieldPack_Scout_Lead: tf_rt1523g_bwmod
 	{
 		scope = 1;
 		displayName = "Fieldpack Lead (T1 Camo)";
@@ -495,11 +487,6 @@ class CfgVehicles
 				count = 3;
 				name = "ACE_morphine";
 			};
-			class _xx_ACE_epinephrine
-			{
-				count = 3;
-				name = "ACE_epinephrine";
-			};
 			class _xx_ACE_Vector
 			{
 				count = 1;
@@ -510,14 +497,9 @@ class CfgVehicles
 				count = 1;
 				name = "Laserdesignator";
 			};
-			class lr_radio
-			{
-				count = 1;
-				name = "tf_rt1523g_bwmod";
-			};
 		};
 	};
-	class T1_B_AssaultPack_SF_Radioman_DM: B_AssaultPack_rgr
+	class T1_B_AssaultPack_SF_Radioman_DM: tf_rt1523g_bwmod
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Camo)";
@@ -553,11 +535,6 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_Kestrel";
-			};
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 1;
-				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -943,7 +920,7 @@ class CfgVehicles
 			};			
 		};
 	};
-	class T1_AssaultPack_PLSgt_JTAC: B_AssaultPack_rgr
+	class T1_AssaultPack_PLSgt_JTAC: tf_rt1523g_bwmod
 	{
 		scope = 1;
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
@@ -979,13 +956,9 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_Vector";
 			};
-			class lr_radio {
-				count = 1;
-				name = "tf_rt1523g_bwmod";
-			};
 		};
 	};
-	class T1_Backpack_PL_Lead: B_AssaultPack_rgr
+	class T1_Backpack_PL_Lead: tf_rt1523g_bwmod
 	{
 		scope = 1;
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};		
@@ -1015,10 +988,6 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
-			};
-			class lr_radio {
-				count = 1;
-				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -1667,7 +1636,7 @@ class CfgVehicles
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
-		backpack = "tf_rt1523g_bwmod";
+		backpack = "T1_B_AssaultPack_SF_Radioman_DM";
 		items[] = {
 			STDITEMS,
 			"ACE_RangeCard",
@@ -2731,7 +2700,7 @@ class CfgVehicles
 			"ACE_RangeCard",
 			STDITEMS
 		};
-		backpack = "tf_rt1523g_bwmod";
+		backpack = "T1_Kitbag_camo_Sniper";
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};
@@ -2923,7 +2892,7 @@ class CfgVehicles
 			"ACE_RangeCard",
 			STDITEMS
 		};
-		backpack = "tf_rt1523g_bwmod";
+		backpack = "T1_Kitbag_camo_Sniper";
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};
@@ -3561,17 +3530,23 @@ class CfgVehicles
 			"ItemWatch",
 			"B_UavTerminal"
 		};
-		backpack = "tf_rt1523g_bwmod";
+		backpack = "T1_FieldPack_Scout_Lead";
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_HuntIR_monitor",
 			"ACE_RangeCard",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
 			STDITEMS
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_HuntIR_monitor",
 			"ACE_RangeCard",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
 			STDITEMS
 		};
 		camouflage = 0.6;
@@ -4693,7 +4668,7 @@ class CfgVehicles
 			STDITEMS
 		};
 		icon = "iconManLeader";
-		backpack = "tf_rt1523g_bwmod";
+		backpack = "T1_Backpack_PL_Lead";
 	};
 	class T1_Platoon_Medic_Standard_F: T1_Soldier_F
 	{
@@ -4935,7 +4910,7 @@ class CfgVehicles
 			"B_UavTerminal",
 			STDITEMS
 		};
-		backpack = "tf_rt1523g_bwmod";
+		backpack = "T1_AssaultPack_PLSgt_JTAC";
 	};
 	class NATO_Box_Base;
 	class B_supplyCrate_F;
@@ -5029,11 +5004,6 @@ class CfgVehicles
 				count = 2;
 				name = "tf_anprc152";
 			};
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 1;
-				name = "tf_rt1523g_bwmod";
-			};
 		};
 		class TransportWeapons
 		{
@@ -5048,7 +5018,14 @@ class CfgVehicles
 				count = 5;
 			};			
 		};
-		class TransportBackpacks{};
+		class TransportBackpacks
+		{			
+			class _xx_tf_rt1523g_bwmod
+			{
+				count = 2;
+				name = "tf_rt1523g_bwmod";
+			};
+		};		
 	};
 	class T1_support_ammobox: B_supplyCrate_F
 	{
@@ -5188,11 +5165,6 @@ class CfgVehicles
 				count = 4;
 				name = "tf_anprc152";
 			};
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
-			};
 		};
 		class TransportWeapons
 		{			
@@ -5213,6 +5185,11 @@ class CfgVehicles
 			{
 				backpack = "B_UAV_01_backpack_F";
 				count = 1;
+			};
+			class _xx_tf_rt1523g_bwmod
+			{
+				count = 2;
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -5324,16 +5301,6 @@ class CfgVehicles
 				count = 4;
 				name = "ACE_UAVBattery";
 			};
-			class _xx_tf_anprc152
-			{
-				count = 4;
-				name = "tf_anprc152";
-			};
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
-			};
 			class UavTerminal
 			{
 				count = 6;
@@ -5369,6 +5336,11 @@ class CfgVehicles
 			{
 				backpack = "ACE_TacticalLadder_Pack";
 				count = 2;
+			};
+			class _xx_tf_rt1523g_bwmod
+			{
+				count = 2;
+				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -5429,16 +5401,6 @@ class CfgVehicles
 			{
 				count = 6;
 				name = "ACE_DefusalKit";
-			};
-			class _xx_tf_anprc152
-			{
-				count = 4;
-				name = "tf_anprc152";
-			};
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
 			};
 		};
 		class TransportWeapons{};

@@ -215,11 +215,6 @@ class CfgVehicles
 				count = 4;
 				name = "tf_anprc152";
 			};
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
-			};
 			class _xx_ACE_M26_Clacker
 			{
 				count = 6;
@@ -255,6 +250,11 @@ class CfgVehicles
 			{
 				backpack = "B_UAV_01_backpack_F";
 				count = 1;
+			};
+			class _xx_tf_rt1523g_bwmod
+			{
+				count = 2;
+				backpack = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -447,11 +447,6 @@ class CfgVehicles
 				count = 4;
 				name = "tf_anprc152";
 			};
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
-			};
 			class _xx_ACE_M26_Clacker
 			{
 				count = 6;
@@ -487,6 +482,11 @@ class CfgVehicles
 			{
 				backpack = "B_UAV_01_backpack_F";
 				count = 1;
+			};
+			class _xx_tf_rt1523g_bwmod
+			{
+				count = 2;
+				backpack = "tf_rt1523g_bwmod";
 			};
 		};
 	};

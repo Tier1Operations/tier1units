@@ -5023,7 +5023,7 @@ class CfgVehicles
 			class _xx_tf_rt1523g_bwmod
 			{
 				count = 2;
-				name = "tf_rt1523g_bwmod";
+				backpack = "tf_rt1523g_bwmod";
 			};
 		};		
 	};
@@ -5189,7 +5189,7 @@ class CfgVehicles
 			class _xx_tf_rt1523g_bwmod
 			{
 				count = 2;
-				name = "tf_rt1523g_bwmod";
+				backpack = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -5340,9 +5340,9 @@ class CfgVehicles
 			class _xx_tf_rt1523g_bwmod
 			{
 				count = 2;
-				name = "tf_rt1523g_bwmod";
+				backpack = "tf_rt1523g_bwmod";
 			};
-		};
+		}; 
 	};
 	class T1_eod_ammobox: B_supplyCrate_F
 	{
@@ -5404,7 +5404,14 @@ class CfgVehicles
 			};
 		};
 		class TransportWeapons{};
-		class TransportBackpacks{};
+		class TransportBackpacks
+		{			
+			class _xx_AssaultPack_rgr
+			{
+				count = 6;
+				backpack = "AssaultPack_rgr";
+			};
+		};
 	};
 };
 class CfgMagazines

@@ -181,6 +181,11 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};
+			class tf_anprc152
+			{
+				count = 2;
+				name = "tf_anprc152";
+			};
 		};
 		class TransportWeapons
 		{
@@ -193,14 +198,6 @@ class CfgVehicles {
 			{
 				weapon = "rhs_weap_m72a7";
 				count = 2;
-			};
-		};
-		class TransportBackpacks
-		{			
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -291,6 +288,11 @@ class CfgVehicles {
 			{
 				count = 8;
 				name = "ACE_bloodIV";
+			};			
+			class tf_anprc152
+			{
+				count = 2;
+				name = "tf_anprc152";
 			};
 		};
 		class TransportWeapons
@@ -304,14 +306,6 @@ class CfgVehicles {
 			{
 				weapon = "rhs_weap_m72a7";
 				count = 2;
-			};
-		};
-		class TransportBackpacks
-		{			
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -402,6 +396,11 @@ class CfgVehicles {
 			{
 				count = 8;
 				name = "ACE_bloodIV";
+			};			
+			class tf_anprc152
+			{
+				count = 2;
+				name = "tf_anprc152";
 			};
 		};
 		class TransportWeapons
@@ -415,14 +414,6 @@ class CfgVehicles {
 			{
 				weapon = "rhs_weap_m72a7";
 				count = 2;
-			};
-		};
-		class TransportBackpacks
-		{			
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};
@@ -514,6 +505,11 @@ class CfgVehicles {
 			{
 				count = 4;
 				name = "tf_anprc152";
+			};			
+			class tf_anprc152
+			{
+				count = 4;
+				name = "tf_anprc152";
 			};
 		};
 		class TransportWeapons
@@ -528,14 +524,6 @@ class CfgVehicles {
 				weapon = "rhs_weap_m72a7";
 				count = 10;
 			};			
-		};
-		class TransportBackpacks
-		{			
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
-			};
 		};
 	};
 	// IFV: NATO Patria AMV
@@ -621,6 +609,11 @@ class CfgVehicles {
 			{
 				count = 20;
 				name = "ACE_CableTie";
+			};			
+			class tf_anprc152
+			{
+				count = 4;
+				name = "tf_anprc152";
 			};
 		};
 		class TransportWeapons
@@ -635,14 +628,6 @@ class CfgVehicles {
 				weapon = "rhs_weap_m72a7";
 				count = 10;
 			};			
-		};
-		class TransportBackpacks
-		{			
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 4;
-				name = "tf_rt1523g_bwmod";
-			};
 		};
 	};
 	// 	tank: NATO Merkava MK IV M
@@ -733,6 +718,11 @@ class CfgVehicles {
 			{
 				count = 8;
 				name = "ACE_bloodIV";
+			};			
+			class tf_anprc152
+			{
+				count = 2;
+				name = "tf_anprc152";
 			};
 		};
 		class TransportWeapons
@@ -746,14 +736,6 @@ class CfgVehicles {
 			{
 				weapon = "rhs_weap_m72a7";
 				count = 2;
-			};
-		};
-		class TransportBackpacks
-		{			
-			class _xx_tf_rt1523g_bwmod
-			{
-				count = 2;
-				name = "tf_rt1523g_bwmod";
 			};
 		};
 	};

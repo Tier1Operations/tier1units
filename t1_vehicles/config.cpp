@@ -740,14 +740,14 @@ class CfgVehicles {
 		};
 	};
 	// helo transport light: NATO MH-6M Little Bird
-	class MELB_MH6M;
-	class t1_heli_light_trans : MELB_MH6M {
+	class RHS_MELB_MH6M;
+	class t1_heli_light_trans : RHS_MELB_MH6M {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
 	// helo attack light: NATO AH-6M-M Little Bird
-	class MELB_AH6M_M;
-	class t1_heli_light_attack : MELB_AH6M_M {
+	class RHS_MELB_AH6M_M;
+	class t1_heli_light_attack : RHS_MELB_AH6M_M {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};

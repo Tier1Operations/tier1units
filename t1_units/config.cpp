@@ -344,7 +344,8 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_Lead_Trainer: B_Kitbag_Base
+	class tf_rt1523g_bwmod;
+	class T1_Kitbag_camo_Lead_Trainer: tf_rt1523g_bwmod
 	{
 		scope = 1;
 		displayName = "Kitbag Lead (T1 Camo)";

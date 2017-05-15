@@ -461,11 +461,11 @@ class CfgVehicles
 		};
 	};
 	class B_FieldPack_khk;
-	class T1_FieldPack_Scout_Lead: tf_rt1523g_bwmod
+	class T1_FieldPack_Scout_Lead: tf_rt1523g_black
 	{
 		scope = 1;
 		displayName = "Fieldpack Lead (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};		
+//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1

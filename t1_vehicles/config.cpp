@@ -778,18 +778,18 @@ class CfgVehicles {
 		crew = "T1_Pilot_Camo_F";
 		vehicleClass = "Air";
 	};
-	// jet: NATO F/A-18E
-	class JS_JC_FA18E;
-	class t1_fighterjet_oneseat : JS_JC_FA18E {
+	// Vanilla plane
+	class B_Plane_CAS_01_dynamicLoadout_F;
+	class t1_fighterjet_oneseat : B_Plane_CAS_01_dynamicLoadout_F {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
-	class JS_JC_FA18F;
+/*	class JS_JC_FA18F;
 	class t1_fighterjet_twoseat : JS_JC_FA18F {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
-	
+*/
 	class UK3CB_BAF_Coyote_Logistics_L134A1_W;
 	class t1_support_light : UK3CB_BAF_Coyote_Logistics_L134A1_W {
 		faction = "T1_Units";

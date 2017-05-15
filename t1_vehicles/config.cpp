@@ -751,19 +751,14 @@ class CfgVehicles {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
-	// helo transport medium: USA USMC-W UH-1Y FFAR/MG  /  NATO UH-1Y TOW
+	// helo transport medium: USA USMC-W UH-1Y FFAR/MG
 	class RHS_UH1Y;
 	class t1_heli_medium_rockets : RHS_UH1Y {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 		vehicleClass = "Air";
 	};
-	class UH1Y_TOW;
-	class t1_heli_medium_at : UH1Y_TOW {
-		faction = "T1_Units";
-		crew = "T1_Pilot_Camo_F";
-		vehicleClass = "Air";
-	};
+
 	// helo transport heavy: USA Army-W CH-47F
 	class RHS_CH_47F;
 	class t1_heli_heavy_trans : RHS_CH_47F {

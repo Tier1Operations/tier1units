@@ -772,8 +772,8 @@ class CfgVehicles {
 		vehicleClass = "Air";
 	};
 	// helo attack heavy: USA Army-W AH-64D multi-role
-	class RHS_AH64D_wd_AA_FS;
-	class t1_heli_heavy_attack : RHS_AH64D_wd_AA_FS {
+	class RHS_AH64D_wd_AA;
+	class t1_heli_heavy_attack : RHS_AH64D_wd_AA {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 		vehicleClass = "Air";

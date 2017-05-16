@@ -765,12 +765,6 @@ class CfgVehicles {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
-/*	class JS_JC_FA18F;
-	class t1_fighterjet_twoseat : JS_JC_FA18F {
-		faction = "T1_Units";
-		crew = "T1_Pilot_Camo_F";
-	};
-*/
 	class UK3CB_BAF_Coyote_Logistics_L134A1_W;
 	class t1_support_light : UK3CB_BAF_Coyote_Logistics_L134A1_W {
 		faction = "T1_Units";

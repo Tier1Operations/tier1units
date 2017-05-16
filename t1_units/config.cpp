@@ -27,7 +27,7 @@ class CfgPatches
 			"T1_B_AssaultPack_SF_Radioman_DM",
 			"T1_Kitbag_AMG",
 			"T1_Backpack_PL_Lead",
-			"T1_Kitbag_camo_Lead_Trainer",			
+			"T1_Kitbag_camo_Lead_Trainer",
 			"T1_Carryall_camo_AAA",
 			"T1_Carryall_camo_AAT",
 			"T1_Carryall_camo_Medium_AAT",
@@ -344,7 +344,6 @@ class CfgVehicles
 			};
 		};
 	};
-	class tf_rt1523g_bwmod;
 	class T1_Kitbag_camo_Lead_Trainer: tf_rt1523g_bwmod
 	{
 		scope = 1;
@@ -461,6 +460,7 @@ class CfgVehicles
 		};
 	};
 	class B_FieldPack_khk;
+	class tf_rt1523g_black;
 	class T1_FieldPack_Scout_Lead: tf_rt1523g_black
 	{
 		scope = 1;

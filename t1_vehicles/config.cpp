@@ -40,25 +40,11 @@ class CfgPatches
 				// t1_car_light* 
 				// t1_heli_medium_rockets 
 				// t1_heli_heavy_trans
-			"UK3CB_BAF_Vehicles_Coyote_Jackal",	// t1_support_light
-			"MELB",	// t1_heli_light_trans t1_heli_light_attack
-			"HueyPack", // t1_heli_medium_at
-			"JS_JC_FA18"	// t1_fighterjet_oneseat t1_fighterjet_twoseat
+			"UK3CB_BAF_Vehicles_Coyote_Jackal"	// t1_support_light
 		};
 	};
 };
-/*
-class CfgFactionClasses
-{
-	class T1_Units
-	{
-		displayName = "T1 Units";
-		side = 1;
-		priority = 10;
-		icon = "\t1_units\data\cfgFactionClasses_T1_ca.paa";
-	};
-};
-*/
+
 class CfgVehicleClasses
 {
 	class Platoon

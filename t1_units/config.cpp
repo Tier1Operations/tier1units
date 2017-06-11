@@ -4399,8 +4399,8 @@ class CfgVehicles
 		};
 		icon = "iconManMG";
 		backpack = "T1_AssaultPack_AR";
-		items[] = {STDITEMS};
-		respawnItems[] = {STDITEMS};
+		items[] = {STDITEMS,"rhsusf_acc_grip4"};
+		respawnItems[] = {STDITEMS,"rhsusf_acc_grip4"};
 	};
 	class T1_Section_AAR_Standard_F: T1_Soldier_F
 	{

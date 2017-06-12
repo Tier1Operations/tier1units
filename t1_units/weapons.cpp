@@ -95,15 +95,20 @@ class T1_weap_lmg: rhs_weap_m249_pip_L
 		};
 	};
 };
-class rhs_weap_m249_pip_S_vfg;
-class T1_weap_lmg2: rhs_weap_m249_pip_S_vfg
-{	
+class rhs_weap_m249_pip_S_vfg2;
+class T1_weap_lmg2: rhs_weap_m249_pip_S_vfg2
+{
 	class LinkedItems
 	{
 		class LinkedItemsOptic
 		{
 			item = "iansky_specterdrkf";
 			slot = "CowsSlot";
+		};
+		class LinkedItemsUnder
+		{
+			item = "rhsusf_acc_grip4";
+			slot = "GripodSlot";
 		};
 		class LinkedItemsAcc
 		{

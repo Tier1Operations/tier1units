@@ -9,8 +9,8 @@
 #define STDITEMS "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie"
 
 // MEDICALITEMS is used in addition to STDITEMS for units without backpacks
-#define MEDICALITEMS "ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_tourniquet"
-#define MEDICALITEMS2 "ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_elasticBandage","ACE_tourniquet","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine" 
+#define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
+#define MEDICALITEMS2 "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine" 
 
 //Class t1_units : config.bin{
 class CfgPatches
@@ -111,7 +111,7 @@ class CfgPatches
 			"T1_U_Pilot_Standard",
 			"T1_U_Instructor_Polo_Orange",
 			"T1_U_Instructor_Polo_Black",
-			"T1_U_Sniper_Standard",
+			"T1_U_B_FullGhillie_lsh",
 			"T1_U_Diver_Standard",
 			"T1_U_Squad_Standard",
 			"T1_weap_rifle_gl",
@@ -137,7 +137,7 @@ class CfgPatches
 			"T1_45KO_ABR_SD",
 			"T1_45KO_ABR_green_SD",
 			"T1_DMR_SHADOW_SD",
-			"T1_Pistol_heavy_SD",
+			"T1_SF_AR_pistol",
 			"T1_mk18_m320",
 			"T1_m27iar",
 			"T1_mk18",
@@ -227,18 +227,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -262,19 +252,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -314,19 +295,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -353,19 +325,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -387,19 +350,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -434,19 +388,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -470,19 +415,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -509,19 +445,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -548,13 +475,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 80;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 30;
-				name = "ACE_elasticBandage";
+				count = 110;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -568,13 +490,8 @@ class CfgVehicles
 			};
 			class IVFluid
 			{
-				count = 16;
+				count = 5;
 				name = "ACE_bloodIV";
-			};
-			class Tourniquet
-			{
-				count = 8;
-				name = "ACE_tourniquet";
 			};
 		};
 	};
@@ -587,13 +504,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 80;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 30;
-				name = "ACE_elasticBandage";
+				count = 110;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -604,11 +516,6 @@ class CfgVehicles
 			{
 				count = 16;
 				name = "ACE_epinephrine";
-			};
-			class Tourniquet
-			{
-				count = 8;
-				name = "ACE_tourniquet";
 			};
 		};
 	};
@@ -634,13 +541,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 40;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 12;
-				name = "ACE_elasticBandage";
+				count = 52;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -654,13 +556,8 @@ class CfgVehicles
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 10;
+				count = 3;
 				name = "ACE_bloodIV";
-			};
-			class Tourniquet
-			{
-				count = 4;
-				name = "ACE_tourniquet";
 			};
 		};
 	};
@@ -673,13 +570,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 40;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 12;
-				name = "ACE_elasticBandage";
+				count = 52;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -693,13 +585,8 @@ class CfgVehicles
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 10;
+				count = 3;
 				name = "ACE_bloodIV";
-			};
-			class Tourniquet
-			{
-				count = 6;
-				name = "ACE_tourniquet";
 			};
 		};
 		class TransportMagazines
@@ -721,19 +608,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -759,19 +637,10 @@ class CfgVehicles
 			};
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -819,19 +688,10 @@ class CfgVehicles
 			};
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -875,19 +735,10 @@ class CfgVehicles
 		{			
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -929,19 +780,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -967,19 +809,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1008,19 +841,10 @@ class CfgVehicles
 		{			
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1049,19 +873,10 @@ class CfgVehicles
 		{			
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1090,19 +905,10 @@ class CfgVehicles
 		{			
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1132,19 +938,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1179,19 +976,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1221,19 +1009,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1305,19 +1084,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1347,19 +1117,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1379,19 +1140,10 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 12;
-				name = "ACE_packingBandage";
+				count = 16;
+				name = "ACE_fieldDressing";
 			};
-			class Bandage2
-			{
-				count = 4;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 1;
-				name = "ACE_tourniquet";
-			};
+
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1481,6 +1233,7 @@ class CfgVehicles
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
 		camouflage = 1.4;
+		engineer = 1;
 	};
 	class T1_Instructor_Polo_Orange_F: T1_Instructor_Polo_Black_F	
 	{
@@ -1557,21 +1310,20 @@ class CfgVehicles
 		backpack = "T1_Kitbag_camo_Lead_Trainer";
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
-		camouflage = 1.4;
+		camouflage = 1.4;		
+		engineer = 1;
 	};
 	class B_Soldier_F;
 	class T1_Soldier_F: B_Soldier_F
 	{
 		scope = 1;
-		uniformClass = "T1_U_Squad_Standard";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_camo_co.paa"};
+		uniformClass = "t1_rhs_uniform_FROG01_wd";
 		camouflage = 1.4;
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"H_HelmetB_light",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
@@ -1579,16 +1331,18 @@ class CfgVehicles
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"H_HelmetB_light",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 	};
+	
 	class T1_SF_Marksman_SOS_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
@@ -1615,6 +1369,10 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"HandGrenade",
@@ -1623,6 +1381,10 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -1651,10 +1413,27 @@ class CfgVehicles
 			"ACE_Kestrel4500"
 		};
 		camouflage = 0.8;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_SF_Explosive_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
@@ -1680,7 +1459,6 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",			
 			"HandGrenade",
@@ -1689,7 +1467,6 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {			
 			
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
@@ -1719,17 +1496,33 @@ class CfgVehicles
 		};
 		canDeactivateMines = 1;
 		detectSkill = 80;
-		camouflage = 1.0;
+		camouflage = 1.0;		
+		engineer = 1;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_SF_Medic_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF Medic";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
 		weapons[] = {
 			"T1_DMR_SHADOW_SD",
 			"Throw",
@@ -1780,10 +1573,27 @@ class CfgVehicles
 		respawnItems[] = {STDITEMS};
 		attendant = 1;
 		camouflage = 1.0;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_SF_FTL_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
@@ -1848,10 +1658,27 @@ class CfgVehicles
 			STDITEMS
 		};
 		camouflage = 1.0;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_SF_AT_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
@@ -1912,24 +1739,41 @@ class CfgVehicles
 		};
 		icon = "iconManAT";
 		camouflage = 1.0;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_SF_AR_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF AR";
 		weapons[] = {
 			"T1_weap_mmg_sf",
-			"T1_Pistol_heavy_SD",
+			"T1_SF_AR_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnweapons[] = {
 			"T1_weap_mmg_sf",
-			"T1_Pistol_heavy_SD",
+			"T1_SF_AR_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -1943,9 +1787,9 @@ class CfgVehicles
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_mag_17Rnd_9x19_JHP",
+			"rhsusf_mag_17Rnd_9x19_JHP",
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell"
@@ -1959,9 +1803,9 @@ class CfgVehicles
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
-			"11Rnd_45ACP_Mag",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_mag_17Rnd_9x19_JHP",
+			"rhsusf_mag_17Rnd_9x19_JHP",
 			"ACE_M84",
 			"HandGrenade",
 			"SmokeShell"
@@ -1977,7 +1821,7 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard_SFAR",
-			"H_HelmetB_light",
+			"rhsusf_opscore_fg_pelt_cam",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
@@ -1985,7 +1829,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard_SFAR",
-			"H_HelmetB_light",
+			"rhsusf_opscore_fg_pelt_cam",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
@@ -2568,6 +2412,7 @@ class CfgVehicles
 			MEDICALITEMS
 		};
 		camouflage = 1.4;
+		engineer = 1;
 	};
 	class T1_Pilot_Black_F: T1_Pilot_Standard_F
 	{
@@ -2605,12 +2450,10 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Spotter";
-		uniformClass = "T1_FB_Ghillie_Camo";
+		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
 		uniformAccessories[] = {};
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
 			"T1_weap_m16a4_SD",			
 			"Throw",
@@ -2704,6 +2547,7 @@ class CfgVehicles
 		backpack = "T1_Kitbag_camo_Sniper";
 		camouflage = 0.3;
 		glassesEnabled = 0;
+		engineer = 1;
 	};
 	class B_Sniper_F;
 	class T1_Sniper_Standard_F: B_Sniper_F
@@ -2713,12 +2557,10 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Sniper";
-		uniformClass = "T1_FB_Ghillie_Camo";
+		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
 		uniformAccessories[] = {};
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
 			"T1_weap_sierra",
 			"hgun_P07_snds_F",
@@ -2811,12 +2653,10 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Spotter";
-		uniformClass = "T1_FB_Ghillie_Camo";
+		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
 		uniformAccessories[] = {};
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
 			"T1_weap_sierra_spotter_RHS",			
 			"Throw",
@@ -2904,12 +2744,10 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		displayName = "T1 Sniper";
-		uniformClass = "T1_FB_Ghillie_Camo";
+		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
 		uniformAccessories[] = {};
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\Ghillie\ghillie_wood_co.paa"};
 		weapons[] = {
 			"T1_weap_sierra_RHS",	
 			"hgun_P07_snds_F",
@@ -3040,6 +2878,22 @@ class CfgVehicles
 		respawnItems[] = {STDITEMS};
 		icon = "iconManAT";
 		backpack = "T1_Kitbag_camo_AT";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Specialist_AAT_Standard_F: T1_Soldier_F
 	{
@@ -3091,6 +2945,22 @@ class CfgVehicles
 			MEDICALITEMS
 		};
 		backpack = "T1_Carryall_camo_AAT";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Specialist_Medium_AT_Standard_F: T1_Soldier_F
 	{
@@ -3139,6 +3009,22 @@ class CfgVehicles
 		respawnItems[] = {STDITEMS};
 		icon = "iconManAT";
 		backpack = "T1_Kitbag_camo_Medium_AT";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Specialist_Medium_AAT_Standard_F: T1_Soldier_F
 	{
@@ -3184,6 +3070,22 @@ class CfgVehicles
 			MEDICALITEMS
 		};
 		backpack = "T1_Carryall_camo_Medium_AAT";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Specialist_AA_Standard_F: T1_Soldier_F
 	{
@@ -3231,6 +3133,22 @@ class CfgVehicles
 		respawnItems[] = {STDITEMS};
 		icon = "iconManAT";
 		backpack = "T1_Kitbag_camo_AA";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Specialist_AAA_Standard_F: T1_Soldier_F
 	{
@@ -3284,6 +3202,22 @@ class CfgVehicles
 			MEDICALITEMS
 		};
 		backpack = "T1_Kitbag_camo_AA";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Specialist_MG_Standard_F: T1_Soldier_F
 	{
@@ -3326,38 +3260,54 @@ class CfgVehicles
 			"ACE_IR_Strobe_Item",
 			STDITEMS
 		};
-		class altloadout1 {
-			description = ".338 MG DLC";
-			weapons[] = {
-			"MMG_02_camo_F",
-			"T1_weap_sidearm_l",
-			"Throw",
-			"Put",
-			"ACE_Vector"
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
 		};
-			backpack = "T1_Kitbag_camo";
-			magazines[] = {
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
-			"HandGrenade",
-			"SmokeShell",
-			"130Rnd_338_Mag",
-			"130Rnd_338_Mag",
-			"130Rnd_338_Mag",
-			"130Rnd_338_Mag",
-			"130Rnd_338_Mag",
-			"130Rnd_338_Mag",
-			"130Rnd_338_Mag",
-			"130Rnd_338_Mag"
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
 		};
-			items[] = {
-			"ACE_IR_Strobe_Item",
-			"iansky_specterdrkf",
-			"acc_pointer_IR",
-			STDITEMS,
-			"ACE_SpareBarrel"
-		};
-		};
+			class altloadout1 {
+				description = ".338 MG DLC";
+				weapons[] = {
+				"MMG_02_camo_F",
+				"T1_weap_sidearm_l",
+				"Throw",
+				"Put",
+				"ACE_Vector"
+			};
+				backpack = "T1_Kitbag_camo";
+				magazines[] = {
+				t1_mag_sidearm_l,
+				t1_mag_sidearm_l,
+				"HandGrenade",
+				"SmokeShell",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag"
+			};
+				items[] = {
+				"ACE_IR_Strobe_Item",
+				"iansky_specterdrkf",
+				"acc_pointer_IR",
+				STDITEMS,
+				"ACE_SpareBarrel"
+			};
+			};
 	};
 	class T1_Specialist_AMG_Standard_F: T1_Soldier_F
 	{
@@ -3421,6 +3371,22 @@ class CfgVehicles
 			STDITEMS
 		};
 		backpack = "T1_Kitbag_AMG";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Scout_TL_Standard_F: T1_Soldier_F
 	{
@@ -3515,7 +3481,7 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"V_Chestrig_oli",
-			"rhs_booniehat2_marpatwd",
+			"H_Booniehat_khk_hs",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
@@ -3524,7 +3490,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[] = {
 			"V_Chestrig_oli",
-			"rhs_booniehat2_marpatwd",
+			"H_Booniehat_khk_hs",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
@@ -3607,7 +3573,7 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"V_Chestrig_oli",
-			"rhs_booniehat2_marpatwd",
+			"H_Watchcap_khk",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
@@ -3616,7 +3582,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[] = {
 			"V_Chestrig_oli",
-			"rhs_booniehat2_marpatwd",
+			"H_Watchcap_khk",
 			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
@@ -3719,6 +3685,7 @@ class CfgVehicles
 			STDITEMS,
 			MEDICALITEMS
 		};
+		engineer = 1;
 	};
 	class T1_Crew_Commander_Standard_F: T1_Soldier_F
 	{
@@ -3799,6 +3766,7 @@ class CfgVehicles
 			STDITEMS,
 			MEDICALITEMS
 		};
+		engineer = 1;
 	};
 	class T1_Sentinel_Commander_Standard_F: T1_Soldier_F
 	{
@@ -4021,6 +3989,7 @@ class CfgVehicles
 		respawnItems[] = {STDITEMS};
 		backpack = "T1_Kitbag_camo_medic";
 		attendant = 1;
+		engineer = 1;
 	};
 	class T1_Section_Lead_Standard_F: T1_Soldier_F
 	{
@@ -4221,6 +4190,22 @@ class CfgVehicles
 			MEDICALITEMS2
 		};
 		icon = "iconManLeader";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Section_CLS_Standard_F: T1_Soldier_F
 	{
@@ -4313,6 +4298,22 @@ class CfgVehicles
 		icon = "iconManMedic";
 		backpack = "T1_AssaultPack_cls";
 		attendant = 1;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Section_AR_Standard_F: T1_Soldier_F
 	{
@@ -4356,6 +4357,22 @@ class CfgVehicles
 		backpack = "T1_AssaultPack_AR";
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Section_AR_Alt_F: T1_Soldier_F
 	{
@@ -4401,6 +4418,22 @@ class CfgVehicles
 		backpack = "T1_AssaultPack_AR";
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Section_AAR_Standard_F: T1_Soldier_F
 	{
@@ -4457,6 +4490,22 @@ class CfgVehicles
 		backpack = "T1_AssaultPack_AAR";
 		items[] = {STDITEMS};
 		respawnItems[] = {STDITEMS};
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Section_AT_Standard_F: T1_Soldier_F
 	{
@@ -4521,13 +4570,29 @@ class CfgVehicles
 		items[] = {STDITEMS,MEDICALITEMS2};
 		respawnItems[] = {STDITEMS,MEDICALITEMS2};
 		icon = "iconManAT";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Section_AT_DM_F: T1_Soldier_F
 	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Section";
-		displayName = "Rifleman AT";
+		displayName = "Rifleman AT DM";
 		weapons[] = {
 			"T1_m27iar",
 			"Throw",
@@ -4585,6 +4650,22 @@ class CfgVehicles
 		items[] = {STDITEMS,MEDICALITEMS2};
 		respawnItems[] = {STDITEMS,MEDICALITEMS2};
 		icon = "iconManAT";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Platoon_Lead_Standard_F: T1_Soldier_F
 	{
@@ -4670,6 +4751,22 @@ class CfgVehicles
 		};
 		icon = "iconManLeader";
 		backpack = "T1_Backpack_PL_Lead";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Platoon_Medic_Standard_F: T1_Soldier_F
 	{
@@ -4751,32 +4848,10 @@ class CfgVehicles
 			"ACE_bloodIV",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
 			"ACE_bloodIV"
 		};
 		respawnItems[] = {
 			STDITEMS,
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
-			"ACE_bloodIV",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
@@ -4786,6 +4861,22 @@ class CfgVehicles
 		icon = "iconManMedic";
 		backpack = "T1_AssaultPack_pl_medic";
 		attendant = 1;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Platoon_EOD_Standard_F: T1_Soldier_F
 	{
@@ -4856,6 +4947,22 @@ class CfgVehicles
 		engineer = 1;
 		canDeactivateMines = 1;
 		detectSkill = 80;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ACE_NVG_Gen4",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
 	};
 	class T1_Platoon_Sgt_Standard_F: T1_Soldier_F
 	{
@@ -4967,18 +5074,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 120;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 40;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 8;
-				name = "ACE_tourniquet";
+				count = 160;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -5128,18 +5225,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 60;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 20;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 8;
-				name = "ACE_tourniquet";
+				count = 80;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -5150,6 +5237,11 @@ class CfgVehicles
 			{
 				count = 8;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_bloodIV_250
+			{
+				count = 32;
+				name = "ACE_bloodIV";
 			};
 			class _xx_ACE_CableTie
 			{
@@ -5204,9 +5296,9 @@ class CfgVehicles
 		transportMaxItems = 9999;
 		class TransportMagazines
 		{
-			class _xx_11Rnd_45ACP_Mag
+			class _xx_rhsusf_mag_17Rnd_9x19_JHP
 			{
-				magazine = "11Rnd_45ACP_Mag";
+				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
 				count = 8;
 			};
 			class _xx_20Rnd_762x51_Mag
@@ -5264,18 +5356,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 60;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 20;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 12;
-				name = "ACE_tourniquet";
+				count = 80;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -5286,6 +5368,11 @@ class CfgVehicles
 			{
 				count = 12;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_bloodIV_250
+			{
+				count = 32;
+				name = "ACE_bloodIV";
 			};
 			class _xx_ACE_CableTie
 			{

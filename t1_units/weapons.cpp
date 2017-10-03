@@ -69,6 +69,11 @@ class T1_weap_mmg_sf: 45KO_zafir_black
 			item = "iansky_specterdrkf";
 			slot = "CowsSlot";
 		};
+		class LinkedItemsMuzzle
+		{
+			item = "muzzle_snds_H_MG_blk_F";
+			slot = "MuzzleSlot";
+		}
 		class LinkedItemsAcc
 		{
 			item = "acc_pointer_IR";
@@ -456,19 +461,13 @@ class T1_hk416d145_m320_SD : rhs_weap_hk416d145_m320
 		};
 	};
 };
-class hgun_Pistol_heavy_01_F;
-class T1_Pistol_heavy_SD : hgun_Pistol_heavy_01_F
+class T1_SF_AR_pistol : rhsusf_weap_glock17g4
 {
 	class LinkedItems
 	{
-		class LinkedItemsOptic
-		{
-			item = "optic_MRD";
-			slot = "CowsSlot";
-		};
 		class LinkedItemsMuzzle
 		{
-			item = "muzzle_snds_acp";
+			item = "rhsusf_acc_omega9k";
 			slot = "MuzzleSlot";
 		};		
 	};
@@ -698,20 +697,34 @@ class T1_weap_Instructor_Orange : rhs_weap_m4a1_blockII_grip_d
 
 class UniformItem;
 class Uniform_Base;
-class T1_U_Squad_Standard: Uniform_Base
+class rhs_uniform_g3_m81: Uniform_Base
+{
+	class ItemInfo;
+};
+class T1_rhs_uniform_g3_m81: rhs_uniform_g3_m81
 {
 	scope = 2;
-	displayName = "T1 Uniform";
-	picture = "\t1_units\data\ui\icon_t1_u_squad_standard.paa";
-	model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-	class ItemInfo: UniformItem
+	displayName = "T1 Uniform1";
+	class ItemInfo: ItemInfo
 	{
-		uniformModel = "-";
-		uniformClass = "T1_Soldier_F";
 		containerClass = "Supply130";
-		mass = 80;
 	};
 };
+class rhs_uniform_FROG01_d;
+class rhs_uniform_FROG01_wd: rhs_uniform_FROG01_d
+{
+	class ItemInfo;
+};
+class T1_rhs_uniform_FROG01_wd: rhs_uniform_FROG01_wd
+{
+	scope = 2;
+	displayName = "T1 Uniform2";
+	class ItemInfo: ItemInfo
+	{
+		containerClass = "Supply130";
+	};
+};
+
 class T1_U_Diver_Standard: Uniform_Base
 {
 	scope = 2;
@@ -727,19 +740,17 @@ class T1_U_Diver_Standard: Uniform_Base
 		mass = 80;
 	};
 };
-class U_B_GhillieSuit;
-class T1_U_Sniper_Standard: U_B_GhillieSuit
+class U_B_FullGhillie_lsh: Uniform_Base
+	{
+		class ItemInfo;
+	};
+class T1_U_B_FullGhillie_lsh: U_B_FullGhillie_lsh
 {
 	scope = 2;
 	displayName = "T1 Ghillie Suit";
-	picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
-	model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-	class ItemInfo: UniformItem
+	class ItemInfo: ItemInfo
 	{
-		uniformModel = "-";
-		uniformClass = "T1_Sniper_Standard_F";
 		containerClass = "Supply110";
-		mass = 80;
 	};
 };
 class T1_U_Instructor_Polo_Black: Uniform_Base

@@ -139,18 +139,8 @@ class CfgVehicles {
 		{
 			class Bandage1
 			{
-				count = 40;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 10;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 4;
-				name = "ACE_tourniquet";
+				count = 60;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -247,18 +237,8 @@ class CfgVehicles {
 		{
 			class Bandage1
 			{
-				count = 40;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 10;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 4;
-				name = "ACE_tourniquet";
+				count = 50;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -355,18 +335,8 @@ class CfgVehicles {
 		{
 			class Bandage1
 			{
-				count = 40;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 10;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 4;
-				name = "ACE_tourniquet";
+				count = 50;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -454,18 +424,8 @@ class CfgVehicles {
 		{
 			class Bandage1
 			{
-				count = 240;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 40;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 16;
-				name = "ACE_tourniquet";
+				count = 280;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -563,18 +523,8 @@ class CfgVehicles {
 		{
 			class Bandage1
 			{
-				count = 240;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 40;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 16;
-				name = "ACE_tourniquet";
+				count = 280;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -677,18 +627,8 @@ class CfgVehicles {
 		{
 			class Bandage1
 			{
-				count = 40;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 10;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 4;
-				name = "ACE_tourniquet";
+				count = 50;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{

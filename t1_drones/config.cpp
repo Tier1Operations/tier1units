@@ -36,10 +36,6 @@ class CfgVehicles
 		author = "Vasilyevich";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"\t1_drones\wood\normal_ugv_01_ext_co.paa","\t1_drones\wood\t1_ugv_01_int_co.paa"};
-		class EventHandlers
-		{
-			init = "(_this select 0) execVM ""\t1_drones\scripts\wood_texture_randomisation.sqf""";
-		};
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
@@ -172,18 +168,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 240;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 80;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 20;
-				name = "ACE_tourniquet";
+				count = 400;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -268,10 +254,6 @@ class CfgVehicles
 		author = "Vasilyevich";
 		hiddenSelections[] = {"Camo1","Camo2","Camo3"};
 		hiddenSelectionsTextures[] = {"\t1_drones\wood\normal_ugv_01_ext_co.paa","\t1_drones\wood\t1_ugv_01_int_co.paa","\t1_drones\wood\t1_ugv_01_turret_co.paa"};
-		class EventHandlers
-		{
-			init = "(_this select 0) execVM ""\t1_drones\scripts\wood_texture_randomisation.sqf""";
-		};
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
@@ -404,18 +386,8 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 240;
-				name = "ACE_packingBandage";
-			};
-			class Bandage2
-			{
-				count = 80;
-				name = "ACE_elasticBandage";
-			};
-			class Tourniquet
-			{
-				count = 20;
-				name = "ACE_tourniquet";
+				count = 320;
+				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
@@ -500,10 +472,7 @@ class CfgVehicles
 		author = "Vasilyevich";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"\t1_drones\desert\normal_ugv_01_ext_co.paa","\t1_drones\desert\t1_ugv_01_int_co.paa"};
-		class EventHandlers
-		{
-			init = "(_this select 0) execVM ""\t1_drones\scripts\desert_texture_randomisation.sqf""";
-		};
+
 	};
 	class B_UGV_T1_Desert_rcws_F: B_UGV_T1_Camo_rcws_F
 	{
@@ -515,10 +484,6 @@ class CfgVehicles
 		author = "Vasilyevich";
 		hiddenSelections[] = {"Camo1","Camo2","Camo3"};
 		hiddenSelectionsTextures[] = {"\t1_drones\desert\normal_ugv_01_ext_co.paa","\t1_drones\desert\t1_ugv_01_int_co.paa","\t1_drones\desert\t1_ugv_01_turret_co.paa"};
-		class EventHandlers
-		{
-			init = "(_this select 0) execVM ""\t1_drones\scripts\desert_texture_randomisation.sqf""";
-		};
 	};
 };
 //};

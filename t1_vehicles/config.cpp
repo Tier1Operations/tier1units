@@ -566,104 +566,11 @@ class CfgVehicles {
 			};			
 		};
 	};
-	// 	tank: NATO Merkava MK IV M
-	class B_MBT_01_cannon_F;
-	class t1_tank : B_MBT_01_cannon_F {
+	// 	tank: NATO Leopard 2 MBT Revolution Woodland
+	class Leopard_2_wd;
+	class t1_tank : Leopard_2_wd {
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
-		transportmaxmagazines = 99999;
-		transportmaxweapons = 9999;
-		transportmaxbackpacks = 99;
-		maximumload = 999999;
-		class TransportMagazines
-		{
-			class riflemag
-			{
-				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
-				count = 20;
-			};
-			class riflemag_tracer
-			{
-				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
-				count = 4;
-			};
-			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
-			{
-				magazine =  "t1_longrange_556";
-				count = 6;
-			};
-			class section_ar_mag
-			{
-				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
-				count = 10;
-			};				
-			class _xx_HandGrenade
-			{
-				magazine = "HandGrenade";
-				count = 8;
-			};
-			class _xx_1Rnd_HE_Grenade_shell
-			{
-				magazine = "1Rnd_HE_Grenade_shell";
-				count = 8;
-			};
-			class _xx_SmokeShell
-			{
-				magazine = "SmokeShell";
-				count = 8;
-			};
-			class _xx_SmokeShellGreen
-			{
-				magazine = "SmokeShellGreen";
-				count = 2;
-			};
-			class _xx_ACE_M84
-			{
-				magazine = "ACE_M84";
-				count = 4;
-			};			
-		};
-		class TransportItems
-		{
-			class Bandage1
-			{
-				count = 50;
-				name = "ACE_fieldDressing";
-			};
-			class _xx_ACE_morphine
-			{
-				count = 10;
-				name = "ACE_morphine";
-			};
-			class _xx_ACE_epinephrine
-			{
-				count = 8;
-				name = "ACE_epinephrine";
-			};
-			class saline
-			{
-				count = 8;
-				name = "ACE_bloodIV";
-			};			
-			class tf_anprc152
-			{
-				count = 2;
-				name = "tf_anprc152";
-			};
-		};
-		class TransportWeapons
-		{
-			class _xx_tf47_at4_heat
-			{
-				weapon = "tf47_at4_heat";
-				count = 1;
-			};
-			class _xx_rhs_weap_m72a7
-			{
-				weapon = "rhs_weap_m72a7";
-				count = 2;
-			};
-		};
 	};
 	// helo transport light: NATO MH-6M Little Bird
 	class RHS_MELB_MH6M;
@@ -692,13 +599,13 @@ class CfgVehicles {
 		crew = "T1_Pilot_Camo_F";
 		vehicleClass = "Air";
 	};
-	// helo attack heavy: USA Army-W AH-64D multi-role
-	class RHS_AH64D_wd_AA;
-	class t1_heli_heavy_attack : RHS_AH64D_wd_AA {
-		faction = "T1_Units";
-		crew = "T1_Pilot_Camo_F";
-		vehicleClass = "Air";
-	};
+    // helo attack heavy: NATO (British) Apache multi-role
+    class UK3CB_BAF_Apache_AH1_JS;
+    class t1_heli_heavy_attack : UK3CB_BAF_Apache_AH1_JS {
+        faction = "T1_Units";
+        crew = "T1_Pilot_Camo_F";
+        vehicleClass = "Air";
+    };
 	// Vanilla plane
 	class B_Plane_CAS_01_dynamicLoadout_F;
 	class t1_fighterjet_oneseat : B_Plane_CAS_01_dynamicLoadout_F {

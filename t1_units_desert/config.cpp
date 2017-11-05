@@ -393,7 +393,7 @@ class CfgVehicles
 			"ACE_Vector"
 		};
 		linkedItems[] = {
-			"T1_V_PlateCarrier2_Desert",
+			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_opscore_ut_pelt_cam",
 			"ACE_NVG_Gen4",
 			"ItemMap",
@@ -401,7 +401,7 @@ class CfgVehicles
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
-			"T1_V_PlateCarrier2_Desert",
+			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_opscore_ut_pelt_cam",
 			"ACE_NVG_Gen4",
 			"ItemMap",
@@ -625,7 +625,8 @@ class CfgVehicles
 			"ItemWatch"
 		};
 	};
-	class T1_Sniper_Light_F_D: T1_Sniper_Standard_F
+	class T1_Sniper_Light_F;
+	class T1_Sniper_Light_F_D: T1_Sniper_Light_F
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
@@ -1061,7 +1062,7 @@ class CfgVehicles
 		backpack = "T1_AssaultPack_cls_Desert";
 		attendant = 1;
 		linkedItems[] = {
-			"T1_V_PlateCarrier2_Desert",
+			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
 			"ACE_NVG_Gen4",
 			"ItemMap",
@@ -1069,7 +1070,7 @@ class CfgVehicles
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
-			"T1_V_PlateCarrier2_Desert",
+			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
 			"ACE_NVG_Gen4",
 			"ItemMap",
@@ -1248,7 +1249,7 @@ class CfgVehicles
 		
 		backpack = "T1_AssaultPack_pl_medic_Desert";
 		linkedItems[] = {
-			"T1_V_PlateCarrier2_Desert",
+			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
 			"ACE_NVG_Gen4",
 			"ItemMap",
@@ -1256,7 +1257,7 @@ class CfgVehicles
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
-			"T1_V_PlateCarrier2_Desert",
+			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
 			"ACE_NVG_Gen4",
 			"ItemMap",
@@ -1594,5 +1595,4 @@ class CfgWeapons
 		};
 	};
 };
-
 

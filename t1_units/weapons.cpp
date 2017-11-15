@@ -1,38 +1,6 @@
 class InventoryOpticsItem_Base_F;
-class Iteminfo;
 class ItemCore;
-class optic_AMS_base: ItemCore
-{
-	class ItemInfo: InventoryOpticsItem_Base_F
-	{
-		class OpticsModes
-		{
-			class AMS
-			{
-				visionMode[] = {};
-			};
-			class Iron
-			{
-				distanceZoomMin = 100;
-				distanceZoomMax = 100;
-				discreteDistance[] = {100};
-			};
-		};
-	};
-};
-class iansky_specterdr: ItemCore
-{
-	class ItemInfo: InventoryOpticsItem_Base_F
-	{
-		class OpticsModes
-		{
-			class DRScope
-			{
-				visionMode[] = {};
-			};
-		};
-	};
-};
+
 class rhsusf_weap_glock17g4;
 class T1_weap_sidearm_l: rhsusf_weap_glock17g4
 {
@@ -90,7 +58,7 @@ class T1_weap_lmg: rhs_weap_m249_pip_L
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -107,7 +75,7 @@ class T1_weap_lmg2: rhs_weap_m249_pip_S_vfg2
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsUnder
@@ -132,7 +100,7 @@ class T1_weap_mmg: rhs_weap_m240B
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};		
 	};
@@ -152,7 +120,7 @@ class T1_weap_rifle: arifle_SPAR_01_blk_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -170,7 +138,7 @@ class T1_weap_rifle_gl: arifle_SPAR_01_GL_blk_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -186,7 +154,7 @@ class T1_weap_rifle_sd: arifle_SPAR_01_blk_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -207,7 +175,7 @@ class T1_weap_rifle_gl_sd: arifle_SPAR_01_GL_blk_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -287,7 +255,7 @@ class T1_weap_m16a4 : rhs_weap_m16a4_pmag
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};		
 		class LinkedItemsAcc
@@ -304,7 +272,7 @@ class T1_weap_m16a4_carryhandle : rhs_weap_m4a1_carryhandle_pmag
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};		
 		class LinkedItemsAcc
@@ -348,7 +316,7 @@ class T1_weap_sierra_spotter_RHS : srifle_DMR_06_camo_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf_t";
+			item = "iansky_specterdr_t";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -479,7 +447,7 @@ class T1_mk18_m320 : rhs_weap_mk18_m320
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf_t";
+			item = "iansky_specterdr_t";
 			slot = "CowsSlot";
 		};		
 		class LinkedItemsAcc
@@ -496,7 +464,7 @@ class T1_m27iar : rhs_weap_m27iar_grip
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};		
 		class LinkedItemsAcc
@@ -513,7 +481,7 @@ class T1_mk18 : rhs_weap_mk18_grip_KAC
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf_t";
+			item = "iansky_specterdr_t";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -535,7 +503,7 @@ class T1_m4a1_blockII_SD : rhs_weap_m4a1_blockII_grip_KAC_bk
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -562,7 +530,7 @@ class T1_m4a1_grip2 : rhs_weap_m16a4_pmag_grip2
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -584,7 +552,7 @@ class T1_m4a1_grip3 : rhs_weap_m4a1_carryhandle_pmag_grip3
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -606,7 +574,7 @@ class T1_m4a1_Mstock_grip3 : rhs_weap_m4a1_carryhandle_mstock_grip3
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "iansky_specterdr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -628,7 +596,7 @@ class T1_m4a1_carryhandle : rhs_weap_m4a1_carryhandle
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "rhsusf_acc_eotech_552";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -704,7 +672,7 @@ class rhs_uniform_g3_m81: Uniform_Base
 class T1_rhs_uniform_g3_m81: rhs_uniform_g3_m81
 {
 	scope = 2;
-	displayName = "T1 Uniform1";
+	displayName = "T1 Uniform 1";
 	class ItemInfo: ItemInfo
 	{
 		containerClass = "Supply130";
@@ -718,7 +686,7 @@ class rhs_uniform_FROG01_wd: rhs_uniform_FROG01_d
 class T1_rhs_uniform_FROG01_wd: rhs_uniform_FROG01_wd
 {
 	scope = 2;
-	displayName = "T1 Uniform2";
+	displayName = "T1 Uniform 2";
 	class ItemInfo: ItemInfo
 	{
 		containerClass = "Supply130";
@@ -851,7 +819,38 @@ class T1_U_Pilot_Night: Uniform_Base
 		mass = 80;
 	};
 };
+
 class V_PlateCarrier2_rgr;
+class V_PlateCarrier2_rgr_noflag_F: V_PlateCarrier2_rgr
+{
+	class ItemInfo;
+}
+
+class T1_V_PlateCarrier2_Standard: V_PlateCarrier2_rgr_noflag_F
+{
+	scope = 2;
+	displayName = "T1 Carrier Rig";
+	class ItemInfo: Iteminfo
+	{
+		hiddenSelections[] = {"camo"};
+	};
+};
+class T1_V_PlateCarrier2_Standard_SFAR: T1_V_PlateCarrier2_Standard
+{
+    scope = 1;
+    class ItemInfo: Iteminfo
+    {
+        containerClass = "Supply200";
+    };
+};
+/*
+class V_PlateCarrier1_rgr;
+class V_PlateCarrier2_rgr: V_PlateCarrier1_rgr
+{
+	class ItemInfo;
+};
+
+
 class T1_V_PlateCarrier2_Standard: V_PlateCarrier2_rgr
 {
 	scope = 2;
@@ -873,3 +872,5 @@ class T1_V_PlateCarrier2_Standard_SFAR: T1_V_PlateCarrier2_Standard
         containerClass = "Supply200";
     };
 };
+
+*/

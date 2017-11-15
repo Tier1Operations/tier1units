@@ -181,6 +181,16 @@ class CfgVehicles
 				count = 64;
 				name = "ACE_epinephrine";
 			};
+			class _xx_ACE_tourniquet
+			{
+				count = 30;
+				name = "ACE_tourniquet";
+			};
+			class _xx_ACE_surgicalKit
+			{
+				count = 1;
+				name = "ACE_surgicalKit";
+			};
 			class saline
 			{
 				count = 32;
@@ -398,6 +408,16 @@ class CfgVehicles
 			{
 				count = 64;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_tourniquet
+			{
+				count = 30;
+				name = "ACE_tourniquet";
+			};
+			class _xx_ACE_surgicalKit
+			{
+				count = 1;
+				name = "ACE_surgicalKit";
 			};
 			class saline
 			{

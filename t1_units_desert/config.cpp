@@ -12,29 +12,6 @@ class CfgPatches
 	class t1_units_desert
 	{
 		units[] = {
-			"T1_B_AssaultPack_SF_Radioman_DM_Desert",
-			"T1_FieldPack_Scout_Lead_Desert",
-			"T1_Backpack_PL_Lead_Desert",
-			"T1_AssaultPack_PLSgt_JTAC_Desert",
-			"T1_B_AssaultPack_Exp_SF_Desert",
-			"T1_AssaultPack_medic_sf_Desert",
-			"T1_AssaultPack_Lead_SF_Desert",
-			"T1_AssaultPack_MMG_Desert",
-			"T1_AssaultPack_cls_Desert",
-			"T1_AssaultPack_AR_Desert",
-			"T1_AssaultPack_AAR_Desert",
-			"T1_AssaultPack_pl_medic_Desert",
-			"T1_AssaultPack_PLEOD_Desert",
-			"T1_Kitbag_Desert",
-			"T1_Kitbag_Desert_AT",
-			"T1_Kitbag_Desert_Medium_AT",
-			"T1_Kitbag_Desert_AA",
-			"T1_Kitbag_AMG_Desert",
-			"T1_Carryall_Desert",
-			"T1_Carryall_Desert_AAT",
-			"T1_Carryall_Desert_Medium_AAT",		
-			"T1_Soldier_Desert_F",
-			"T1_Soldier_F_D",
 			"T1_SF_Marksman_SOS_Standard_F_D",
 			"T1_SF_Explosive_Standard_F_D",
 			"T1_SF_Medic_Standard_F_D",
@@ -44,6 +21,8 @@ class CfgPatches
 			"T1_Spotter_Standard_F_D",
 			"T1_Sniper_Standard_F_D",
 			"T1_Spotter_Light_F_D",
+			"T1_Sniper_Light_F_D",
+			"T1_Soldier_F_D",
 			"T1_Specialist_AT_Standard_F_D",
 			"T1_Specialist_AAT_Standard_F_D",
 			"T1_Specialist_Medium_AT_Standard_F_D",
@@ -65,23 +44,39 @@ class CfgPatches
 			"T1_Platoon_Lead_Standard_F_D",
 			"T1_Platoon_Medic_Standard_F_D",
 			"T1_Platoon_EOD_Standard_F_D",
-			"T1_Platoon_Sgt_Standard_F_D",				
-			"T1_B_MRAP_01_Desert_F",
-			"T1_B_MRAP_01_gmg_Desert_F",
-			"T1_B_MRAP_01_hmg_Desert_F",
-			"T1_B_MRAP_01_DesertPlain_F",
-			"T1_B_MRAP_01_gmg_DesertPlain_F",
-			"T1_B_MRAP_01_hmg_DesertPlain_F"
+			"T1_Platoon_Sgt_Standard_F_D",
+			"T1_FieldPack_Scout_Lead_Desert",
+			"T1_B_AssaultPack_SF_Radioman_DM_Desert",
+			"T1_Backpack_PL_Lead_Desert",
+			"T1_AssaultPack_PLSgt_JTAC_Desert",
+			"T1_B_AssaultPack_Exp_SF_Desert",
+			"T1_AssaultPack_medic_sf_Desert",
+			"T1_AssaultPack_Lead_SF_Desert",
+			"T1_AssaultPack_MMG_Desert",
+			"T1_AssaultPack_cls_Desert",
+			"T1_AssaultPack_AR_Desert",
+			"T1_AssaultPack_AAR_Desert",
+			"T1_AssaultPack_pl_medic_Desert",
+			"T1_AssaultPack_PLEOD_Desert",
+			"T1_Kitbag_Desert",
+			"T1_Kitbag_Desert_AT",
+			"T1_Kitbag_Desert_Medium_AT",
+			"T1_Kitbag_Desert_AA",
+			"T1_Kitbag_camo_AMG_Desert",
+			"T1_Carryall_Desert",
+			"T1_Carryall_Desert_AAT",
+			"T1_Carryall_Desert_Medium_AAT",
+			"T1_Static_Designator_01_weapon_F_D"
 		};
 		weapons[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"T1_V_PlateCarrier2_medic_desert",
 			"T1_V_PlateCarrier2_Desert_SFAR",
-			"T1_DMR_SHADOW_SD_Desert",
 			"T1_rhs_uniform_g3_tan",
 			"T1_rhs_uniform_FROG01_d",
 			"T1_U_B_FullGhillie_ard",
-			"T1_weap_mmg_sf",
+			"T1_DMR_SHADOW_SD_Desert",
+			"T1_weap_mmg_sf_d",
 			"T1_ABR_SD_Desert",
 			"T1_weap_sierra_RHS_desert",
 			"T1_weap_sierra_spotter_RHS_desert",
@@ -139,7 +134,7 @@ class CfgVehicles
 	class T1_Kitbag_camo_AT;
 	class T1_Kitbag_camo_Medium_AT;
 	class T1_Kitbag_camo_AA;
-	class T1_Kitbag_AMG;
+	class T1_Kitbag_camo_AMG;
 	
 	class T1_Carryall_camo;
 	class T1_Carryall_camo_AAT;
@@ -150,23 +145,26 @@ class CfgVehicles
 	
 	class T1_FieldPack_Scout_Lead_Desert: T1_FieldPack_Scout_Lead
 	{
-		hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\camo\backpack_sage_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_210.paa"};
 	};
 	class T1_B_AssaultPack_SF_Radioman_DM_Desert: T1_B_AssaultPack_SF_Radioman_DM
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Desert)";
-		hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
+		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
 	};
 	class T1_Backpack_PL_Lead_Desert: T1_Backpack_PL_Lead
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
+		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
 	};
 	class T1_AssaultPack_PLSgt_JTAC_Desert: T1_AssaultPack_PLSgt_JTAC
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
+		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
 	};
 	
 	class T1_B_AssaultPack_Exp_SF_Desert: T1_B_AssaultPack_Exp_SF
@@ -240,7 +238,7 @@ class CfgVehicles
 		scope = 1;
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_fast_cbr_co.paa"};
 	};
-	class T1_Kitbag_AMG_Desert: T1_Kitbag_AMG
+	class T1_Kitbag_camo_AMG_Desert: T1_Kitbag_camo_AMG
 	{
 		scope = 1;
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_fast_cbr_co.paa"};
@@ -264,38 +262,14 @@ class CfgVehicles
 		scope = 1;
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_tortila_cbr_co.paa"};
 	};
-		
 
-/*	
-	class T1_Soldier_F;
-	class T1_Soldier_Desert_F: T1_Soldier_F
+	class B_Static_Designator_01_weapon_F;
+	class T1_Static_Designator_01_weapon_F_D: B_Static_Designator_01_weapon_F
 	{
-		scope = 1;
-		uniformClass = "T1_U_Squad_Standard_desert";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_clothing1_desert_co.paa"};
+		scope = 2;
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
-//-----------------------new basic desert stuff-------------------------------	
-	class T1_Soldier_F_D: T1_Soldier_F
-	{
-		uniformClass = "t1_rhs_uniform_FROG01_d"
-		linkedItems[] = {
-			"T1_V_PlateCarrier2_Desert",
-			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-		respawnLinkedItems[] = {
-			"T1_V_PlateCarrier2_Desert",
-			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-	};
-*/
+	
 	
 //-----------------------rhs desert sf stuff starts here----------------------
 	class T1_SF_Marksman_SOS_Standard_F;
@@ -321,7 +295,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -329,7 +302,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -358,7 +330,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -366,7 +337,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -395,7 +365,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -403,7 +372,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -435,7 +403,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -443,7 +410,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -472,7 +438,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -480,7 +445,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -493,14 +457,14 @@ class CfgVehicles
 		uniformClass = "t1_rhs_uniform_g3_tan";
 		faction = "T1_Units_Desert";
 		weapons[] = {
-			"T1_weap_mmg_sf",
+			"T1_weap_mmg_sf_d",
 			"T1_SF_AR_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnweapons[] = {
-			"T1_weap_mmg_sf",
+			"T1_weap_mmg_sf_d",
 			"T1_SF_AR_pistol",
 			"Throw",
 			"Put",
@@ -509,7 +473,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert_SFAR",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -517,7 +480,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert_SFAR",
 			"rhsusf_opscore_ut_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -535,14 +497,12 @@ class CfgVehicles
 		uniformAccessories[] = {};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -572,14 +532,12 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -593,7 +551,7 @@ class CfgVehicles
 		t1_DutyMod = 0.965;
 		faction = "T1_Units_Desert";
 		vehicleClass = "Special";
-		displayName = "T1 Spotter";
+		displayName = "T1 Spotter Light";
 		uniformClass = "T1_U_B_FullGhillie_ard";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
@@ -612,14 +570,12 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -632,7 +588,7 @@ class CfgVehicles
 		t1_DutyMod = 0.965;
 		faction = "T1_Units_Desert";
 		vehicleClass = "Special";
-		displayName = "T1 Sniper light";
+		displayName = "T1 Sniper Light";
 		uniformClass = "T1_U_B_FullGhillie_ard";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
@@ -653,14 +609,12 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -668,7 +622,26 @@ class CfgVehicles
 
 	};
 //-----------------------------rhs desert basic stuff starts here-----------------
-		
+	class T1_Soldier_F;
+	class T1_Soldier_F_D: T1_Soldier_F
+	{
+		uniformClass = "t1_rhs_uniform_FROG01_d"
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Desert",
+			"rhsusf_mich_helmet_marpatd_norotos_headset",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Desert",
+			"rhsusf_mich_helmet_marpatd_norotos_headset",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+	};
+
 	class T1_Specialist_AT_Standard_F;
 	class T1_Specialist_AT_Standard_F_D: T1_Specialist_AT_Standard_F
 	{
@@ -683,7 +656,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -691,7 +663,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -711,7 +682,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -719,7 +689,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -739,7 +708,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -747,7 +715,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -767,7 +734,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -775,7 +741,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -795,7 +760,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -803,7 +767,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -823,7 +786,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -831,7 +793,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -851,7 +812,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -859,7 +819,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -907,11 +866,10 @@ class CfgVehicles
 		displayName = "T1 AMG Specialist";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
 		
-		backpack = "T1_Kitbag_AMG_Desert";
+		backpack = "T1_Kitbag_camo_AMG_Desert";
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -919,7 +877,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -938,7 +895,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_Chestrig_khk",
 			"rhs_booniehat2_marpatd",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -947,7 +903,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_Chestrig_khk",
 			"rhs_booniehat2_marpatd",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -981,7 +936,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_Chestrig_khk",
 			"H_ShemagOpen_khk",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -990,12 +944,12 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_Chestrig_khk",
 			"H_ShemagOpen_khk",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"B_UavTerminal"
 		};
+		backpack = "T1_Static_Designator_01_weapon_F_D";
 	};
 	class T1_Section_Lead_Standard_F;
 	class T1_Section_Lead_Standard_F_D: T1_Section_Lead_Standard_F
@@ -1009,7 +963,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1017,7 +970,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1036,7 +988,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1044,7 +995,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1064,7 +1014,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1072,7 +1021,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1084,14 +1032,13 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_Desert";
 		vehicleClass = "Section";
-		displayName = "Automatic Rifleman";
+		displayName = "Automatic Rifleman Light";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
 		
 		backpack = "T1_AssaultPack_AR_Desert";
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1099,7 +1046,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1118,7 +1064,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1126,7 +1071,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1145,7 +1089,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1153,7 +1096,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1171,7 +1113,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1179,7 +1120,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1197,7 +1137,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1205,7 +1144,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1224,7 +1162,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1232,7 +1169,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1251,7 +1187,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1259,7 +1194,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_medic_desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1278,7 +1212,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1286,7 +1219,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1304,7 +1236,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1312,70 +1243,19 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		
 		backpack = "T1_AssaultPack_PLSgt_JTAC_Desert";
-	};
-/*	
-	// Not found in regular units
-	class B_MRAP_01_F;
-	class B_MRAP_01_gmg_F;
-	class B_MRAP_01_hmg_F;
-	class T1_B_MRAP_01_Desert_F: B_MRAP_01_F
-	{
-		scope = 2;
-		faction = "T1_Units_Desert";
-		displayName = "T1 Hunter";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\vehicles\hunter\t1_hunter_desert_base_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desert_adds_co.paa",""};
-	};
-	class T1_B_MRAP_01_gmg_Desert_F: B_MRAP_01_gmg_F
-	{
-		scope = 2;
-		faction = "T1_Units_Desert";
-		displayName = "T1 Hunter GMG";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\vehicles\hunter\t1_hunter_desert_base_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desert_adds_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desert_turret_co.paa"};
-	};
-	class T1_B_MRAP_01_hmg_Desert_F: B_MRAP_01_hmg_F
-	{
-		scope = 2;
-		faction = "T1_Units_Desert";
-		displayName = "T1 Hunter HMG";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\vehicles\hunter\t1_hunter_desert_base_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desert_adds_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desert_turret_co.paa"};
-	};
-	class T1_B_MRAP_01_DesertPlain_F: B_MRAP_01_F
-	{
-		scope = 2;
-		faction = "T1_Units_Desert";
-		displayName = "T1 Hunter";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\vehicles\hunter\t1_hunter_desertplain_base_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desertplain_adds_co.paa",""};
-	};
-	class T1_B_MRAP_01_gmg_DesertPlain_F: B_MRAP_01_gmg_F
-	{
-		scope = 2;
-		faction = "T1_Units_Desert";
-		displayName = "T1 Hunter GMG";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\vehicles\hunter\t1_hunter_desertplain_base_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desertplain_adds_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desertplain_turret_co.paa"};
-	};
-	class T1_B_MRAP_01_hmg_DesertPlain_F: B_MRAP_01_hmg_F
-	{
-		scope = 2;
-		faction = "T1_Units_Desert";
-		displayName = "T1 Hunter HMG";
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\vehicles\hunter\t1_hunter_desertplain_base_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desertplain_adds_co.paa","\t1_units_desert\data\vehicles\hunter\t1_hunter_desertplain_turret_co.paa"};
-	};
-*/
-	
+	};	
 };
 
 class CfgWeapons
 {
 	class Uniform_Base;
 	class UniformItem;
-	class ItemInfo;
 
 	 //T1_U_Instructor_Polo_Black missing
 	 //T1_U_Instructor_Polo_Orange mssing
@@ -1384,7 +1264,13 @@ class CfgWeapons
 	 //T1_U_Pilot_BlackCamo missing
 	 //T1_U_Pilot_Camo missing
 	 //T1_U_Pilot_Night missing
-	class V_PlateCarrier2_rgr;
+	 
+	class V_PlateCarrier1_rgr;
+	class V_PlateCarrier2_rgr: V_PlateCarrier1_rgr
+	{
+		class ItemInfo;
+	};
+	
 	class T1_V_PlateCarrier2_Desert: V_PlateCarrier2_rgr
 	{
 		scope = 2;
@@ -1397,7 +1283,6 @@ class CfgWeapons
 			hiddenSelections[] = {"camo"};
 		};
 	};
-	 // Not used by any units ??
 	class T1_V_PlateCarrier2_medic_desert: V_PlateCarrier2_rgr
 	{
 		scope = 2;
@@ -1413,7 +1298,7 @@ class CfgWeapons
 	class T1_V_PlateCarrier2_Desert_SFAR: T1_V_PlateCarrier2_Desert
 	{
 		scope = 2;
-		class ItemInfo: Iteminfo
+		class ItemInfo: ItemInfo
 		{
 			containerClass = "Supply200";
 		};
@@ -1427,17 +1312,21 @@ class CfgWeapons
 	class T1_rhs_uniform_g3_tan: rhs_uniform_g3_tan
 	{
 		scope = 2;
-		displayName = "T1 Uniform1 (Desert)";
+		displayName = "T1 Uniform 1 (Desert)";
 		class ItemInfo: ItemInfo
 		{
 			containerClass = "Supply130";
 		};
 	};
-	class rhs_uniform_FROG01_d;
+	class rhs_uniform_cu_ocp;
+	class rhs_uniform_FROG01_d: rhs_uniform_cu_ocp
+	{
+		class ItemInfo;
+	};
 	class T1_rhs_uniform_FROG01_d: rhs_uniform_FROG01_d
 	{
 		scope = 2;
-		displayName = "T1 Uniform2 (Desert)";
+		displayName = "T1 Uniform 2 (Desert)";
 		class ItemInfo: ItemInfo
 		{
 			containerClass = "Supply130";
@@ -1485,7 +1374,7 @@ class CfgWeapons
 		};
 	};
 	class 45KO_zafir_camo_brown;
-	class T1_weap_mmg_sf: 45KO_zafir_camo_brown
+	class T1_weap_mmg_sf_d: 45KO_zafir_camo_brown
 	{	
 		class LinkedItems
 		{

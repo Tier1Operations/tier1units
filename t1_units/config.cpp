@@ -6,7 +6,9 @@
 
 #define _ARMA_
 
-#define STDITEMS "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie"
+#define STDITEMS "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "rhsusf_ANPVS_14"
+
+#define STDITEMS_SF "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_NVG_Gen4"
 
 // MEDICALITEMS is used in addition to STDITEMS for units without backpacks
 #define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
@@ -18,137 +20,141 @@ class CfgPatches
 	class t1_units
 	{
 		units[] = {
-			"T1_AssaultPack_MMG",
-			"T1_AssaultPack_Sniper_RHS",
+			"T1_Kitbag_camo",
+			"T1_AssaultPack_rgr",
 			"T1_AssaultPack_Lead_SF",
-			"T1_AssaultPack_AR",
-			"T1_AssaultPack_AAR",
-			"T1_AssaultPack_pl_medic",
-			"T1_B_AssaultPack_SF_Radioman_DM",
-			"T1_Kitbag_AMG",
-			"T1_Backpack_PL_Lead",
 			"T1_Kitbag_camo_Lead_Trainer",
-			"T1_Carryall_camo_AAA",
-			"T1_Carryall_camo_AAT",
-			"T1_Carryall_camo_Medium_AAT",
-			"T1_Kitbag_camo_AA",
-			"T1_Kitbag_camo_AT",
-			"T1_Kitbag_camo_Medium_AT",
-			"T1_Kitbag_camo_AR",
+			"T1_Kitbag_camo_Sniper",
+			"T1_AssaultPack_Sniper_RHS",
 			"T1_FieldPack_Scout_Lead",
-			"T1_AssaultPack_PLSgt_JTAC",
-			"T1_AssaultPack_PLEOD",
+			"T1_B_AssaultPack_SF_Radioman_DM",
+			"T1_Kitbag_camo_medic",
+			"T1_AssaultPack_pl_medic",
+			"T1_AssaultPack_medic_sf",
+			"T1_AssaultPack_cls",
+			"T1_Carryall_camo",
+			"T1_Kitbag_camo_Repair",
 			"T1_Carryall_camo_Exp",
 			"T1_B_AssaultPack_Exp_SF",
-			"T1_Kitbag_camo_Repair",
-			"T1_Carryall_camo",
-			"T1_AssaultPack_cls",
-			"T1_Kitbag_camo_medic",
-			"T1_Kitbag_camo",
-			"T1_Platoon_Sgt_Standard_F",
-			"T1_Platoon_EOD_Standard_F",
-			"T1_Platoon_Medic_Standard_F",
-			"T1_Platoon_Lead_Standard_F",
-			"T1_Section_AT_Standard_F",
-			"T1_Section_AAR_Standard_F",
-			"T1_Section_AR_Standard_F",
-			"T1_Section_CLS_Standard_F",
-			"T1_Section_Sgt_Standard_F",
-			"T1_Section_Lead_Standard_F",
-			"T1_Sentinel_Driver_Standard_F",
-			"T1_Sentinel_Gunner_Standard_F",
-			"T1_Sentinel_Commander_Standard_F",
-			"T1_Crew_Commander_Standard_F",
-			"T1_Crewman_Standard_F",
-			"T1_Scout_TL_Standard_F",
-			"T1_Scout_Standard_F",
-			"T1_Specialist_AMG_Standard_F",
-			"T1_Specialist_MG_Standard_F",
-			"T1_Specialist_AAA_Standard_F",
-			"T1_Specialist_AA_Standard_F",
-			"T1_Specialist_AAT_Standard_F",
-			"T1_Specialist_AT_Standard_F",
-			"T1_Specialist_Medium_AAT_Standard_F",
-			"T1_Specialist_Medium_AT_Standard_F",
-			"T1_Sniper_Standard_F",
-			"T1_Spotter_Standard_F",
-			"T1_Pilot_Night_F",
-			"T1_Pilot_Camo_F",
-			"T1_Pilot_BlackCamo_F",
-			"T1_Pilot_Black_F",
-			"T1_Pilot_Standard_F",
-			"T1_Diver_AR_Standard_F",
-			"T1_Diver_AT_Standard_F",
-			"T1_Diver_FTL_Standard_F",
-			"T1_Diver_Medic_Standard_F",
-			"T1_Diver_Explosive_Standard_F",
-			"T1_Diver_Marksman_SOS_Standard_F",
-			"T1_Diver_Soldier_F",
-			"T1_SF_AR_Standard_F",
-			"T1_SF_AT_Standard_F",
-			"T1_SF_FTL_Standard_F",
-			"T1_SF_Medic_Standard_F",
-			"T1_SF_Explosive_Standard_F",
-			"T1_SF_Marksman_SOS_Standard_F",
-			"T1_Soldier_F",
-			"T1_Instructor_Polo_Orange_F",
-			"T1_Instructor_Polo_Black_F",
-			"T1_AssaultPack_medic_sf",
+			"T1_AssaultPack_PLEOD",
+			"T1_AssaultPack_PLSgt_JTAC",
+			"T1_Backpack_PL_Lead",
+			"T1_AssaultPack_AR",
+			"T1_AssaultPack_AAR",
+			"T1_Kitbag_camo_AR_SF",
+			"T1_Kitbag_camo_AT",
+			"T1_Kitbag_camo_Medium_AT",
+			"T1_Kitbag_camo_AA",
+			"T1_Carryall_camo_AAT",
+			"T1_Carryall_camo_Medium_AAT",
+			"T1_Carryall_camo_AAA",
+			"T1_AssaultPack_MMG",
+			"T1_Kitbag_camo_AMG",
 			"T1_Kitbag_camo_Section_AT",
-			"T1_section_ammobox",
-			"T1_support_ammobox",
-			"T1_eod_ammobox",	
+			"T1_Static_Designator_01_weapon_F",
+			"T1_Instructor_Polo_Black_F",
+			"T1_Instructor_Polo_Orange_F",
+			"T1_Soldier_F",
+			"T1_SF_Marksman_SOS_Standard_F",
+			"T1_SF_Explosive_Standard_F",
+			"T1_SF_Medic_Standard_F",
+			"T1_SF_FTL_Standard_F",
+			"T1_SF_AT_Standard_F",
+			"T1_SF_AR_Standard_F",
+			"T1_Diver_Soldier_F",
+			"T1_Diver_Marksman_SOS_Standard_F",
+			"T1_Diver_Explosive_Standard_F",
+			"T1_Diver_Medic_Standard_F",
+			"T1_Diver_FTL_Standard_F",
+			"T1_Diver_AT_Standard_F",
+			"T1_Diver_AR_Standard_F",
+			"T1_Pilot_Standard_F",
+			"T1_Pilot_Black_F",
+			"T1_Pilot_BlackCamo_F",
+			"T1_Pilot_Camo_F",
+			"T1_Pilot_Night_F",
+			"T1_Spotter_Standard_F",
+			"T1_Sniper_Standard_F",
 			"T1_Spotter_Light_F",
 			"T1_Sniper_Light_F",
-			"T1_Section_AR_Alt_F"
+			"T1_Specialist_AT_Standard_F",
+			"T1_Specialist_AAT_Standard_F",
+			"T1_Specialist_Medium_AT_Standard_F",
+			"T1_Specialist_Medium_AAT_Standard_F",
+			"T1_Specialist_AA_Standard_F",
+			"T1_Specialist_AAA_Standard_F",
+			"T1_Specialist_MG_Standard_F",
+			"T1_Specialist_AMG_Standard_F",
+			"T1_Scout_TL_Standard_F",
+			"T1_Scout_Standard_F",
+			"T1_Crewman_Standard_F",
+			"T1_Crew_Commander_Standard_F",
+			"T1_Sentinel_Commander_Standard_F",
+			"T1_Sentinel_Gunner_Standard_F",
+			"T1_Sentinel_Driver_Standard_F",
+			"T1_Section_Lead_Standard_F",
+			"T1_Section_Sgt_Standard_F",
+			"T1_Section_CLS_Standard_F",
+			"T1_Section_AR_Standard_F",
+			"T1_Section_AR_Alt_F",
+			"T1_Section_AAR_Standard_F",
+			"T1_Section_AT_Standard_F",
+			"T1_Section_AT_DM_F",
+			"T1_Platoon_Lead_Standard_F",
+			"T1_Platoon_Medic_Standard_F",
+			"T1_Platoon_EOD_Standard_F",
+			"T1_Platoon_Sgt_Standard_F",
+			"T1_section_ammobox",
+			"T1_support_ammobox",
+			"T1_shadow_ammobox",
+			"T1_eod_ammobox"
 		};
 		weapons[] = {
-			"T1_V_PlateCarrier2_Standard",
-			"T1_U_Pilot_Night",
-			"T1_U_Pilot_Camo",
-			"T1_U_Pilot_BlackCamo",
-			"T1_U_Pilot_Black",
-			"T1_U_Pilot_Standard",
-			"T1_U_Instructor_Polo_Orange",
-			"T1_U_Instructor_Polo_Black",
-			"T1_U_B_FullGhillie_lsh",
-			"T1_U_Diver_Standard",
-			"T1_U_Squad_Standard",
-			"T1_weap_rifle_gl",
-			"T1_weap_rifle_gl_sd",
-			"T1_weap_rifle",
-			"T1_weap_rifle_sd",
-			"T1_weap_mmg",
-			"T1_weap_lmg",
-			"T1_weap_mmg_sf",
-			"T1_weap_sierra",
-			"T1_weap_marksman_sf",
-			"T1_weap_sidearm_m",
 			"T1_weap_sidearm_l",
+			"T1_weap_sierra",
+			"T1_weap_sidearm_m",
+			"T1_weap_mmg_sf",
+			"T1_weap_lmg",
+			"T1_weap_lmg2",
+			"T1_weap_mmg",
+			"T1_weap_rifle",
+			"T1_weap_rifle_gl",
+			"T1_weap_rifle_sd",
+			"T1_weap_rifle_gl_sd",
 			"T1_weap_marksman",
-			"T1_45KO_ABR_SD",
 			"T1_weap_m16a4_SD",
-			"hgun_P07_snds_F",
+			"T1_weap_m16a4",
+			"T1_weap_m16a4_carryhandle",
 			"T1_weap_sierra_RHS",
 			"T1_weap_sierra_spotter_RHS",
-			"T1_weap_m16a4_carryhandle",
-			"T1_weap_m16a4",
-			"T1_hk416d145_m320_SD",
 			"T1_45KO_ABR_SD",
-			"T1_45KO_ABR_green_SD",
 			"T1_DMR_SHADOW_SD",
+			"T1_45KO_ABR_green_SD",
+			"T1_hk416d145_m320_SD",
 			"T1_SF_AR_pistol",
 			"T1_mk18_m320",
 			"T1_m27iar",
 			"T1_mk18",
 			"T1_m4a1_blockII_SD",
-			"T1_m4a1_grip3",
 			"T1_m4a1_grip2",
+			"T1_m4a1_grip3",
 			"T1_m4a1_Mstock_grip3",
 			"T1_m4a1_carryhandle",
-			"T1_weap_Instructor_Orange",
 			"T1_weap_Instructor_Black",
-			"T1_weap_lmg2"
+			"T1_weap_Instructor_Orange",
+			"T1_rhs_uniform_g3_m81",
+			"T1_rhs_uniform_FROG01_wd",
+			"T1_U_Diver_Standard",
+			"T1_U_B_FullGhillie_lsh",
+			"T1_U_Instructor_Polo_Black",
+			"T1_U_Instructor_Polo_Orange",
+			"T1_U_Pilot_Standard",
+			"T1_U_Pilot_Black",
+			"T1_U_Pilot_BlackCamo",
+			"T1_U_Pilot_Camo",
+			"T1_U_Pilot_Night",
+			"T1_V_PlateCarrier2_Standard",
+			"T1_V_PlateCarrier2_Standard_SFAR"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {			
@@ -218,11 +224,12 @@ class CfgVehicles
 	class B_Soldier_base_F;
 	class tf_rt1523g_bwmod;
 	class B_Kitbag_Base;
+	class B_Kitbag_rgr;
 	class T1_Kitbag_camo: B_Kitbag_Base
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\marpat_kitbag.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -247,7 +254,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Kitbag PltLead (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -272,7 +279,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack SF Lead";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_rhsusf_50Rnd_762x51_m62_tracer
@@ -320,7 +327,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Kitbag Lead (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -339,13 +346,14 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_epinephrine";
 			};
+
 		};
 	};
 	class T1_Kitbag_camo_Sniper: tf_rt1523g_bwmod
 	{
 		scope = 1;
 		displayName = "Assault Pack Spotter";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -375,7 +383,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Assault Pack Sniper";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_rhsusf_5Rnd_300winmag_xm2010
@@ -410,7 +418,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Fieldpack Lead (T1 Camo)";
-//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\aor2_210.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -434,13 +442,28 @@ class CfgVehicles
 				count = 1;
 				name = "Laserdesignator";
 			};
+			class tourniquet
+			{
+				count = 4;
+				name = "ACE_tourniquet";
+			};
+			class surgicalKit
+			{
+				count = 1;
+				name = "ACE_surgicalKit";
+			};
+			class IVFluid
+			{
+				count = 2;
+				name = "ACE_bloodIV";
+			};
 		};
 	};
 	class T1_B_AssaultPack_SF_Radioman_DM: tf_rt1523g_bwmod
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -466,11 +489,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_medic: B_Kitbag_Base
+	class T1_Kitbag_camo_medic: B_Kitbag_rgr
 	{
 		scope = 1;
 		displayName = "Kitbag Medic (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_medic_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -490,7 +512,7 @@ class CfgVehicles
 			};
 			class IVFluid
 			{
-				count = 5;
+				count = 8;
 				name = "ACE_bloodIV";
 			};
 		};
@@ -499,7 +521,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack Medic";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -517,13 +539,18 @@ class CfgVehicles
 				count = 16;
 				name = "ACE_epinephrine";
 			};
+			class _xx_ACE_bloodIV_250
+			{
+				count = 3;
+				name = "ACE_bloodIV";
+			};
 		};
 	};
 	class T1_AssaultPack_medic_sf: B_AssaultPack_rgr
 	{
 		scope = 1;
 		displayName = "AssaultPack Medic (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_SmokeShell
@@ -551,12 +578,12 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 4;
+				count = 10;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 3;
+				count = 6;
 				name = "ACE_bloodIV";
 			};
 		};
@@ -565,7 +592,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack CLS (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -580,12 +607,12 @@ class CfgVehicles
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 4;
+				count = 12;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_bloodIV_250
 			{
-				count = 3;
+				count = 6;
 				name = "ACE_bloodIV";
 			};
 		};
@@ -603,7 +630,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_carryall_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\marpat_carryall.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -624,10 +651,9 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_Repair: T1_Kitbag_camo
+	class T1_Kitbag_camo_Repair: B_Kitbag_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportItems
 		{
 			class _xx_ToolKit
@@ -707,7 +733,7 @@ class CfgVehicles
 	class T1_B_AssaultPack_Exp_SF: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_SatchelCarge_Remote_Mag
@@ -754,7 +780,7 @@ class CfgVehicles
 	class T1_AssaultPack_PLEOD: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_SatchelCarge_Remote_Mag
@@ -775,7 +801,7 @@ class CfgVehicles
 	class T1_AssaultPack_PLSgt_JTAC: tf_rt1523g_bwmod
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -804,7 +830,7 @@ class CfgVehicles
 	class T1_Backpack_PL_Lead: tf_rt1523g_bwmod
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};		
+		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};		
 		class TransportItems
 		{
 			class Bandage1
@@ -828,7 +854,7 @@ class CfgVehicles
 	class T1_AssaultPack_AR: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_556x45_soft_pouch
@@ -860,7 +886,7 @@ class CfgVehicles
 	class T1_AssaultPack_AAR: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhs_200rnd_556x45_M_SAW
@@ -892,7 +918,6 @@ class CfgVehicles
 	class T1_Kitbag_camo_AR_SF: T1_Kitbag_camo
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
@@ -925,7 +950,6 @@ class CfgVehicles
 	{
 		scope = 1;
 		maximumLoad = 380;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_Titan_AT
@@ -958,7 +982,6 @@ class CfgVehicles
 	{
 		scope = 1;
 		maximumLoad = 380;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_tf47_m3maaws_HE
@@ -996,7 +1019,6 @@ class CfgVehicles
 	{
 		scope = 1;
 		maximumLoad = 380;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_Titan_AA
@@ -1071,7 +1093,7 @@ class CfgVehicles
 	class T1_AssaultPack_MMG: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
@@ -1100,11 +1122,10 @@ class CfgVehicles
 			};
 		};
 	};
-	class B_Kitbag_rgr;
-	class T1_Kitbag_AMG: B_Kitbag_rgr
+
+	class T1_Kitbag_camo_AMG: T1_Kitbag_camo
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_kitbag_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
@@ -1156,11 +1177,20 @@ class CfgVehicles
 			};
 		};		
 	};
+
+	class B_Static_Designator_01_weapon_F;
+	class T1_Static_Designator_01_weapon_F: B_Static_Designator_01_weapon_F
+	{
+		scope = 2;
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_rgr_co.paa"};
+	};
+
 	class B_RangeMaster_F;
 	class T1_Instructor_Polo_Black_F: B_RangeMaster_F
 	{
 		faction = "T1_Units";
 		vehicleClass = "Special";
+		attendant = 1;
 		displayName = "T1 Instructor";
 		uniformClass = "T1_U_Instructor_Polo_Black";
 		hiddenSelections[] = {"Camo"};
@@ -1216,7 +1246,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"H_Cap_headphones",
 			"V_Rangemaster_belt",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1224,7 +1253,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"H_Cap_headphones",
 			"V_Rangemaster_belt",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1239,6 +1267,7 @@ class CfgVehicles
 	{
 		faction = "T1_Units";
 		vehicleClass = "Special";
+		attendant = 1;
 		displayName = "T1 Instructor";
 		uniformClass = "T1_U_Instructor_Polo_Orange";
 		hiddenSelections[] = {"Camo"};
@@ -1294,7 +1323,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"H_Cap_headphones",
 			"V_Rangemaster_belt",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1302,7 +1330,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"H_Cap_headphones",
 			"V_Rangemaster_belt",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1324,7 +1351,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1332,7 +1358,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1346,6 +1371,7 @@ class CfgVehicles
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
+		attendant = 1;
 		displayName = "T1 SF Radioman DM";
 		weapons[] = {
 			"T1_45KO_ABR_green_SD",
@@ -1401,13 +1427,13 @@ class CfgVehicles
 		};
 		backpack = "T1_B_AssaultPack_SF_Radioman_DM";
 		items[] = {
-			STDITEMS,
+			STDITEMS_SF,
 			"ACE_RangeCard",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500"
 		};
 		respawnItems[] = {
-			STDITEMS,
+			STDITEMS_SF,
 			"ACE_RangeCard",
 			"ACE_ATragMX",
 			"ACE_Kestrel4500"
@@ -1416,7 +1442,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1424,7 +1449,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1486,22 +1510,22 @@ class CfgVehicles
 			"ACE_M26_Clacker",
 			"ACE_DefusalKit",
 			"MineDetector",
-			STDITEMS
+			STDITEMS_SF
 		};
 		respawnItems[] = {
 			"ACE_M26_Clacker",
 			"ACE_DefusalKit",
 			"MineDetector",
-			STDITEMS
+			STDITEMS_SF
 		};
 		canDeactivateMines = 1;
 		detectSkill = 80;
 		camouflage = 1.0;		
 		engineer = 1;
+		attendant = 1;
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1509,7 +1533,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1569,14 +1592,45 @@ class CfgVehicles
 		};
 		icon = "iconManMedic";
 		backpack = "T1_AssaultPack_medic_sf";
-		items[] = {STDITEMS};
-		respawnItems[] = {STDITEMS};
+		items[] = {
+			STDITEMS_SF,
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV"
+		};
+		respawnItems[] = {
+			STDITEMS_SF,
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV"
+		};
 		attendant = 1;
 		camouflage = 1.0;
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1584,7 +1638,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1597,6 +1650,7 @@ class CfgVehicles
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
+		attendant = 1;
 		displayName = "T1 SF FTL";
 		weapons[] = {
 			"T1_DMR_SHADOW_SD",
@@ -1651,17 +1705,16 @@ class CfgVehicles
 		backpack = "T1_AssaultPack_Lead_SF";
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			STDITEMS
+			STDITEMS_SF
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			STDITEMS
+			STDITEMS_SF
 		};
 		camouflage = 1.0;
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1669,7 +1722,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1682,6 +1734,7 @@ class CfgVehicles
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
+		attendant = 1;
 		displayName = "T1 SF Rifleman AT";
 		weapons[] = {
 			"T1_DMR_SHADOW_SD",
@@ -1730,11 +1783,11 @@ class CfgVehicles
 			"rhsusf_50Rnd_762x51_m62_tracer"
 		};
 		items[] = {
-			STDITEMS,
+			STDITEMS_SF,
 			MEDICALITEMS2
 		};
 		respawnItems[] = {
-			STDITEMS,
+			STDITEMS_SF,
 			MEDICALITEMS2
 		};
 		icon = "iconManAT";
@@ -1742,7 +1795,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1750,7 +1802,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1763,6 +1814,7 @@ class CfgVehicles
 		t1_DutyMod = 0.95;
 		faction = "T1_Units";
 		vehicleClass = "SF";
+		attendant = 1;
 		displayName = "T1 SF AR";
 		weapons[] = {
 			"T1_weap_mmg_sf",
@@ -1812,17 +1864,16 @@ class CfgVehicles
 		};
 		icon = "iconManMG";
 		items[] = {
-			STDITEMS,
+			STDITEMS_SF,
 			MEDICALITEMS2
 		};
 		respawnItems[] = {
-			STDITEMS,
+			STDITEMS_SF,
 			MEDICALITEMS2
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard_SFAR",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1830,7 +1881,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard_SFAR",
 			"rhsusf_opscore_fg_pelt_cam",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1874,7 +1924,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_RebreatherB",
 			"G_Diving",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -1882,7 +1931,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_RebreatherB",
 			"G_Diving",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -2389,15 +2437,13 @@ class CfgVehicles
 			"SmokeShellGreen"
 		};
 		linkedItems[] = {
-			"H_PilotHelmetHeli_B",
-			"ACE_NVG_Gen4",
+			"rhsusf_hgu56p_visor",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
-			"H_PilotHelmetHeli_B",
-			"ACE_NVG_Gen4",
+			"rhsusf_hgu56p_visor",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -2449,6 +2495,7 @@ class CfgVehicles
 		t1_DutyMod = 0.965;
 		faction = "T1_Units";
 		vehicleClass = "Special";
+		attendant = 1;
 		displayName = "T1 Spotter";
 		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
@@ -2516,14 +2563,12 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -2534,7 +2579,7 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
-			STDITEMS
+			STDITEMS_SF
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
@@ -2542,7 +2587,7 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
-			STDITEMS
+			STDITEMS_SF
 		};
 		backpack = "T1_Kitbag_camo_Sniper";
 		camouflage = 0.3;
@@ -2556,6 +2601,7 @@ class CfgVehicles
 		t1_DutyMod = 0.965;
 		faction = "T1_Units";
 		vehicleClass = "Special";
+		attendant = 1;
 		displayName = "T1 Sniper";
 		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
@@ -2609,14 +2655,12 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -2624,23 +2668,37 @@ class CfgVehicles
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			STDITEMS,
+			STDITEMS_SF,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
 			"ACE_epinephrine",
-			"ACE_epinephrine",	
+			"ACE_epinephrine",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
 			MEDICALITEMS2
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			STDITEMS,
+			STDITEMS_SF,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
 			"ACE_epinephrine",
 			"ACE_epinephrine",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
 			MEDICALITEMS2
 		};		
 		camouflage = 0.3;
@@ -2652,7 +2710,8 @@ class CfgVehicles
 		t1_DutyMod = 0.965;
 		faction = "T1_Units";
 		vehicleClass = "Special";
-		displayName = "T1 Spotter";
+		attendant = 1;
+		displayName = "T1 Spotter Light";
 		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
@@ -2705,14 +2764,12 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -2723,7 +2780,7 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
-			STDITEMS
+			STDITEMS_SF
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
@@ -2731,7 +2788,7 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
-			STDITEMS
+			STDITEMS_SF
 		};
 		backpack = "T1_Kitbag_camo_Sniper";
 		camouflage = 0.3;
@@ -2743,7 +2800,8 @@ class CfgVehicles
 		t1_DutyMod = 0.965;
 		faction = "T1_Units";
 		vehicleClass = "Special";
-		displayName = "T1 Sniper";
+		attendant = 1;
+		displayName = "T1 Sniper Light";
 		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
@@ -2796,14 +2854,12 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -2811,19 +2867,33 @@ class CfgVehicles
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			STDITEMS,
+			STDITEMS_SF,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
 			MEDICALITEMS2
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_DefusalKit",
-			STDITEMS,
+			STDITEMS_SF,
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
 			MEDICALITEMS2
 		};		
 		backpack = "T1_AssaultPack_Sniper_RHS";
@@ -2881,7 +2951,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -2889,7 +2958,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -2948,7 +3016,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -2956,7 +3023,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3012,7 +3078,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3020,7 +3085,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3073,7 +3137,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3081,7 +3144,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3136,7 +3198,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3144,7 +3205,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3205,7 +3265,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3213,7 +3272,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3263,7 +3321,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3271,7 +3328,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3370,11 +3426,10 @@ class CfgVehicles
 			"ACE_IR_Strobe_Item",
 			STDITEMS
 		};
-		backpack = "T1_Kitbag_AMG";
+		backpack = "T1_Kitbag_camo_AMG";
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3382,7 +3437,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3394,6 +3448,7 @@ class CfgVehicles
 		t1_DutyMod = 0.965;
 		faction = "T1_Units";
 		vehicleClass = "Special";
+		attendant = 1;
 		displayName = "T1 Scout TL";
 		weapons[] = {
 			"T1_hk416d145_m320_SD",
@@ -3482,7 +3537,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_Chestrig_oli",
 			"H_Booniehat_khk_hs",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -3491,7 +3545,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_Chestrig_oli",
 			"H_Booniehat_khk_hs",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -3505,7 +3558,7 @@ class CfgVehicles
 			"ACE_epinephrine",
 			"ACE_epinephrine",
 			"ACE_epinephrine",
-			STDITEMS
+			STDITEMS_SF
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
@@ -3514,7 +3567,7 @@ class CfgVehicles
 			"ACE_epinephrine",
 			"ACE_epinephrine",
 			"ACE_epinephrine",
-			STDITEMS
+			STDITEMS_SF
 		};
 		camouflage = 0.6;
 	};
@@ -3524,6 +3577,7 @@ class CfgVehicles
 		t1_DutyMod = 0.965;
 		faction = "T1_Units";
 		vehicleClass = "Special";
+		attendant = 1;
 		displayName = "T1 Scout [MM DLC]";
 		weapons[] = {
 			"T1_45KO_ABR_SD",
@@ -3574,7 +3628,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_Chestrig_oli",
 			"H_Watchcap_khk",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
@@ -3583,20 +3636,19 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_Chestrig_oli",
 			"H_Watchcap_khk",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch",
 			"B_UavTerminal"
 		};
-		backpack = "B_Static_Designator_01_weapon_F";
+		backpack = "T1_Static_Designator_01_weapon_F";
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
 			"ACE_epinephrine",
 			"ACE_epinephrine",
-			STDITEMS,
+			STDITEMS_SF,
 			MEDICALITEMS
 		};
 		respawnitems[] = {
@@ -3605,7 +3657,7 @@ class CfgVehicles
 			"ACE_RangeCard",
 			"ACE_epinephrine",
 			"ACE_epinephrine",
-			STDITEMS,
+			STDITEMS_SF,
 			MEDICALITEMS
 		};
 		camouflage = 0.6;
@@ -3664,7 +3716,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3672,7 +3723,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3745,7 +3795,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3753,7 +3802,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3826,7 +3874,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3834,7 +3881,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3899,7 +3945,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3907,7 +3952,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3923,7 +3967,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Special";
-		displayName = "T1 Sentinel Driver";
+		displayName = "T1 Sentinel Driver Medic";
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
@@ -3972,7 +4016,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -3980,13 +4023,21 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
-		items[] = {STDITEMS};
-		respawnItems[] = {STDITEMS};
+		items[] = {
+			STDITEMS,
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit"
+		};
+		respawnItems[] = {
+			STDITEMS
+		};
 		backpack = "T1_Kitbag_camo_medic";
 		attendant = 1;
 		engineer = 1;
@@ -4193,7 +4244,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4201,7 +4251,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4274,25 +4323,19 @@ class CfgVehicles
 			"SmokeShellGreen"
 		};
 		items[] = {
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
 			STDITEMS
 		};
 		respawnItems[] = {
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
-			"ACE_epinephrine",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
 			STDITEMS
 		};
 		icon = "iconManMedic";
@@ -4301,7 +4344,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4309,7 +4351,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4320,7 +4361,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Section";
-		displayName = "Automatic Rifleman";
+		displayName = "Automatic Rifleman Light";
 		weapons[] = {
 			"T1_weap_lmg",
 			"T1_weap_sidearm_l",
@@ -4360,7 +4401,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4368,7 +4408,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4421,7 +4460,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4429,7 +4467,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4493,7 +4530,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4501,7 +4537,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4573,7 +4608,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4581,7 +4615,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4653,7 +4686,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4661,7 +4693,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4754,7 +4785,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4762,7 +4792,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4848,7 +4877,12 @@ class CfgVehicles
 			"ACE_bloodIV",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
-			"ACE_bloodIV"
+			"ACE_bloodIV",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit"
 		};
 		respawnItems[] = {
 			STDITEMS,
@@ -4856,7 +4890,12 @@ class CfgVehicles
 			"ACE_bloodIV",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
-			"ACE_bloodIV"
+			"ACE_bloodIV",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit"
 		};
 		icon = "iconManMedic";
 		backpack = "T1_AssaultPack_pl_medic";
@@ -4864,7 +4903,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4872,7 +4910,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4950,7 +4987,6 @@ class CfgVehicles
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -4958,7 +4994,6 @@ class CfgVehicles
 		respawnLinkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
 			"rhsusf_mich_helmet_marpatwd_norotos_headset",
-			"ACE_NVG_Gen4",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
@@ -5086,6 +5121,16 @@ class CfgVehicles
 			{
 				count = 16;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_tourniquet
+			{
+				count = 30;
+				name = "ACE_tourniquet";
+			};
+			class _xx_ACE_surgicalKit
+			{
+				count = 1;
+				name = "ACE_surgicalKit";
 			};
 			class _xx_ACE_bloodIV_250
 			{
@@ -5238,6 +5283,16 @@ class CfgVehicles
 				count = 8;
 				name = "ACE_epinephrine";
 			};
+			class _xx_ACE_tourniquet
+			{
+				count = 30;
+				name = "ACE_tourniquet";
+			};
+			class _xx_ACE_surgicalKit
+			{
+				count = 1;
+				name = "ACE_surgicalKit";
+			};
 			class _xx_ACE_bloodIV_250
 			{
 				count = 32;
@@ -5346,11 +5401,7 @@ class CfgVehicles
 				magazine = "ACE_M84";
 				count = 12;
 			};
-			class SLAMs
-			{
-				magazine = "SLAMDirectionalMine_Wire_Mag";
-				count = 12;
-			};
+
 		};
 		class TransportItems
 		{
@@ -5368,6 +5419,16 @@ class CfgVehicles
 			{
 				count = 12;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_tourniquet
+			{
+				count = 30;
+				name = "ACE_tourniquet";
+			};
+			class _xx_ACE_surgicalKit
+			{
+				count = 1;
+				name = "ACE_surgicalKit";
 			};
 			class _xx_ACE_bloodIV_250
 			{
@@ -5435,7 +5496,7 @@ class CfgVehicles
 	class T1_eod_ammobox: B_supplyCrate_F
 	{
 		vehicleClass = "Ammo";
-		displayName = "T1 EOD Supply Box";
+		displayName = "T1 Explosives Supply Box";
 		transportMaxWeapons = 999;
 		transportMaxMagazines = 9999;
 		transportMaxBackpacks = 99;
@@ -5466,6 +5527,11 @@ class CfgVehicles
 			{
 				count = 32;
 				magazine = "APERSBoundingMine_Range_Mag";
+			};
+			class SLAMs
+			{
+				magazine = "SLAMDirectionalMine_Wire_Mag";
+				count = 12;
 			};
 		};
 		class TransportItems

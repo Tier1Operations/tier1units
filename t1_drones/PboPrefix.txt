@@ -1,3 +1,0 @@
-t1_drones
-prefix=t1_drones
-Pbo Type is: Arma

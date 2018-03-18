@@ -223,7 +223,6 @@ class CfgVehicleClasses
 class CfgVehicles
 {
 	class B_Soldier_base_F;
-	class tf_rt1523g_bwmod;
 	class B_Kitbag_Base;
 	class B_Kitbag_rgr;
 	class T1_Kitbag_camo: B_Kitbag_Base
@@ -324,7 +323,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_Lead_Trainer: tf_rt1523g_bwmod
+	class T1_Kitbag_camo_Lead_Trainer: B_Kitbag_Base
 	{
 		scope = 1;
 		displayName = "Kitbag Lead (T1 Camo)";
@@ -347,10 +346,13 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_epinephrine";
 			};
-
+			class radio {
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
 		};
 	};
-	class T1_Kitbag_camo_Sniper: tf_rt1523g_bwmod
+	class T1_Kitbag_camo_Sniper: B_Kitbag_Base
 	{
 		scope = 1;
 		displayName = "Assault Pack Spotter";
@@ -378,6 +380,10 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_Vector";
 			};
+			class radio {
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
 		};
 	};	
 	class T1_AssaultPack_Sniper_RHS: B_AssaultPack_rgr
@@ -400,7 +406,6 @@ class CfgVehicles
 				count = 16;
 				name = "ACE_fieldDressing";
 			};
-
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -411,11 +416,14 @@ class CfgVehicles
 				count = 2;
 				name = "ACE_epinephrine";
 			};
+			class radio {
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
 		};
 	};
 	class B_FieldPack_khk;
-	class tf_rt1523g_black;
-	class T1_FieldPack_Scout_Lead: tf_rt1523g_black
+	class T1_FieldPack_Scout_Lead: B_FieldPack_khk
 	{
 		scope = 1;
 		displayName = "Fieldpack Lead (T1 Camo)";
@@ -458,9 +466,13 @@ class CfgVehicles
 				count = 2;
 				name = "ACE_bloodIV";
 			};
+			class radio {
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
 		};
 	};
-	class T1_B_AssaultPack_SF_Radioman_DM: tf_rt1523g_bwmod
+	class T1_B_AssaultPack_SF_Radioman_DM: B_AssaultPack_rgr
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Camo)";
@@ -487,6 +499,10 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_Kestrel";
+			};
+			class radio {
+				count = 1;
+				name = "ACRE_PRC117F";
 			};
 		};
 	};
@@ -799,7 +815,7 @@ class CfgVehicles
 			};			
 		};
 	};
-	class T1_AssaultPack_PLSgt_JTAC: tf_rt1523g_bwmod
+	class T1_AssaultPack_PLSgt_JTAC: B_AssaultPack_rgr
 	{
 		scope = 1;
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
@@ -826,9 +842,13 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_Vector";
 			};
+			class radio {
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
 		};
 	};
-	class T1_Backpack_PL_Lead: tf_rt1523g_bwmod
+	class T1_Backpack_PL_Lead: B_AssaultPack_rgr
 	{
 		scope = 1;
 		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};		
@@ -849,6 +869,10 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class radio {
+				count = 1;
+				name = "ACRE_PRC117F";
 			};
 		};
 	};
@@ -5143,11 +5167,16 @@ class CfgVehicles
 				count = 20;
 				name = "ACE_CableTie";
 			};
-			class _xx_tf_anprc152
+			class radioh
 			{
 				count = 2;
-				name = "tf_anprc152";
+				name = "ACRE_PRC152";
 			};
+			class radiob
+			{
+				count = 2;
+				name = "ACRE_PRC117F";
+			}
 		};
 		class TransportWeapons
 		{
@@ -5164,10 +5193,10 @@ class CfgVehicles
 		};
 		class TransportBackpacks
 		{			
-			class _xx_tf_rt1523g_bwmod
+			class bp
 			{
 				count = 2;
-				backpack = "tf_rt1523g_bwmod";
+				backpack = "B_AssaultPack_rgr";
 			};
 		};		
 	};
@@ -5309,10 +5338,10 @@ class CfgVehicles
 				count = 8;
 				name = "ACE_UAVBattery";
 			};
-			class _xx_tf_anprc152
+			class radioh
 			{
 				count = 4;
-				name = "tf_anprc152";
+				name = "ACRE_PRC152";
 			};
 		};
 		class TransportWeapons
@@ -5335,10 +5364,10 @@ class CfgVehicles
 				backpack = "B_UAV_01_backpack_F";
 				count = 1;
 			};
-			class _xx_tf_rt1523g_bwmod
+			class bp
 			{
 				count = 2;
-				backpack = "tf_rt1523g_bwmod";
+				backpack = "B_AssaultPack_rgr";
 			};
 		};
 	};
@@ -5487,10 +5516,10 @@ class CfgVehicles
 				backpack = "ACE_TacticalLadder_Pack";
 				count = 2;
 			};
-			class _xx_tf_rt1523g_bwmod
+			class bp
 			{
 				count = 2;
-				backpack = "tf_rt1523g_bwmod";
+				backpack = "B_AssaultPack_rgr";
 			};
 		}; 
 	};

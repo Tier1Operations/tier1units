@@ -157,7 +157,8 @@ class CfgPatches
 			"T1_V_PlateCarrier2_Standard_SFAR"
 		};
 		requiredVersion = 0.1;
-		requiredAddons[] = {			
+		requiredAddons[] = {
+			"acre_main",
 			"45KO_SO_weapons_ABR",
 			"iansky_opt",
 			"ace_flashsuppressors",

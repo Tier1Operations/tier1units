@@ -206,10 +206,10 @@ class CfgVehicles
 				count = 8;
 				name = "ACE_UAVBattery";
 			};
-			class _xx_tf_anprc15
+			class radioh
 			{
 				count = 4;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 			class _xx_ACE_M26_Clacker
 			{
@@ -247,10 +247,10 @@ class CfgVehicles
 				backpack = "B_UAV_01_backpack_F";
 				count = 1;
 			};
-			class _xx_tf_rt1523g_bwmod
+			class bp
 			{
 				count = 2;
-				backpack = "tf_rt1523g_bwmod";
+				backpack = "B_Kitbag_Base";
 			};
 		};
 	};
@@ -434,10 +434,10 @@ class CfgVehicles
 				count = 8;
 				name = "ACE_UAVBattery";
 			};
-			class _xx_tf_anprc15
+			class radioh
 			{
 				count = 4;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 			class _xx_ACE_M26_Clacker
 			{
@@ -475,10 +475,10 @@ class CfgVehicles
 				backpack = "B_UAV_01_backpack_F";
 				count = 1;
 			};
-			class _xx_tf_rt1523g_bwmod
+			class bp
 			{
 				count = 2;
-				backpack = "tf_rt1523g_bwmod";
+				backpack = "B_Kitbag_Base";
 			};
 		};
 	};

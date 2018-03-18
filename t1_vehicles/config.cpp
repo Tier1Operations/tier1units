@@ -170,10 +170,10 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 2;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -270,10 +270,10 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};			
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 2;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -370,10 +370,10 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};			
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 2;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -470,10 +470,10 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 2;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -570,10 +570,10 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};			
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 2;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -670,10 +670,10 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};			
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 2;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -808,10 +808,10 @@ class CfgVehicles {
 				count = 12;
 				name = "ACE_bloodIV";
 			};
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 3;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -906,10 +906,10 @@ class CfgVehicles {
 				count = 12;
 				name = "ACE_bloodIV";
 			};
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 3;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -1011,10 +1011,10 @@ class CfgVehicles {
 				count = 12;
 				name = "ACE_bloodIV";
 			};
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 3;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -1119,10 +1119,10 @@ class CfgVehicles {
 				count = 12;
 				name = "ACE_bloodIV";
 			};
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 3;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -1216,10 +1216,10 @@ class CfgVehicles {
 				count = 12;
 				name = "ACE_bloodIV";
 			};
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 3;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons {
@@ -1320,10 +1320,10 @@ class CfgVehicles {
 				count = 12;
 				name = "ACE_bloodIV";
 			};
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 3;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -1574,15 +1574,15 @@ class CfgVehicles {
 				count = 20;
 				name = "ACE_CableTie";
 			};
-			class _xx_tf_anprc15
+			class radioh
 			{
 				count = 4;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};			
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 4;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -1674,10 +1674,10 @@ class CfgVehicles {
 				count = 20;
 				name = "ACE_CableTie";
 			};			
-			class tf_anprc152
+			class acre_prc152
 			{
 				count = 4;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons
@@ -1854,10 +1854,10 @@ class CfgVehicles {
 				count = 20;
 				name = "ACE_CableTie";
 			};
-			class _xx_tf_anprc15
+			class radioh
 			{
 				count = 1;
-				name = "tf_anprc152";
+				name = "acre_prc152";
 			};
 		};
 		class TransportWeapons

@@ -2441,7 +2441,6 @@ class CfgVehicles
 			"ACE_Vector"
 		};
 		magazines[] = {
-			"ACE_M84",
 			"rhsusf_mag_40Rnd_46x30_AP",
 			"rhsusf_mag_40Rnd_46x30_AP",
 			"rhsusf_mag_40Rnd_46x30_AP",
@@ -2449,10 +2448,10 @@ class CfgVehicles
 			t1_mag_sidearm_l,
 			t1_mag_sidearm_l,
 			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellGreen",
+			"SmokeShellBlue"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
 			"rhsusf_mag_40Rnd_46x30_AP",
 			"rhsusf_mag_40Rnd_46x30_AP",
 			"rhsusf_mag_40Rnd_46x30_AP",
@@ -2460,7 +2459,8 @@ class CfgVehicles
 			t1_mag_sidearm_l,
 			t1_mag_sidearm_l,
 			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellGreen",
+			"SmokeShellBlue"
 		};
 		linkedItems[] = {
 			"H_PilotHelmetFighter_B",

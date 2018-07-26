@@ -671,6 +671,24 @@ class T1_weap_Instructor_Orange : rhs_weap_m4a1_blockII_grip_d
 #define t1_mag_marksman "20Rnd_762x51_Mag"
 #define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
 
+class rhsusf_weap_MP7A2;
+class T1_weap_mp7: rhsusf_weap_MP7A2
+{
+	class LinkedItems
+	{
+		class LinkedItemsOptic
+		{
+			item = "optic_Aco_smg";
+			slot = "CowsSlot";
+		};
+		class LinkedItemsAcc
+		{
+			item = "acc_pointer_IR";
+			slot = "PointerSlot";
+		};
+	};
+};
+
 class UniformItem;
 class Uniform_Base;
 class rhs_uniform_g3_m81: Uniform_Base

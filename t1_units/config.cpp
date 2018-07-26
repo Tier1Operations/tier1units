@@ -2427,15 +2427,15 @@ class CfgVehicles
 		uniformClass = "T1_U_Pilot_Night";
 		backpack = "B_Parachute";
 		weapons[] = {
-			"rhsusf_weap_MP7A2",
-			"T1_weap_sidearm_l",
+			"T1_weap_mp7",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"rhsusf_weap_MP7A2",
-			"T1_weap_sidearm_l",
+			"T1_weap_mp7",
+			"T1_weap_sidearm_m",
 			"Throw",
 			"Put",
 			"ACE_Vector"

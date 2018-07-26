@@ -2462,13 +2462,15 @@ class CfgVehicles
 			"SmokeShellGreen"
 		};
 		linkedItems[] = {
-			"rhsusf_hgu56p_visor",
+			"H_PilotHelmetFighter_B",
+			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
 		respawnLinkedItems[] = {
-			"rhsusf_hgu56p_visor",
+			"H_PilotHelmetFighter_B",
+			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"

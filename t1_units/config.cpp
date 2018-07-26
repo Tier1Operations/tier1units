@@ -2426,14 +2426,14 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Data\coveralls_sage_co.paa"};
 		uniformClass = "T1_U_Pilot_Standard";
 		weapons[] = {
-			"SMG_01_ACO_F",
+			"rhsusf_weap_MP7A2",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"SMG_01_ACO_F",
+			"rhsusf_weap_MP7A2",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
@@ -2441,10 +2441,10 @@ class CfgVehicles
 		};
 		magazines[] = {
 			"ACE_M84",
-			"30Rnd_45ACP_Mag_SMG_01",
-			"30Rnd_45ACP_Mag_SMG_01",
-			"30Rnd_45ACP_Mag_SMG_01",
-			"30Rnd_45ACP_Mag_SMG_01",
+			"rhsusf_mag_40Rnd_46x30_AP",
+			"rhsusf_mag_40Rnd_46x30_AP",
+			"rhsusf_mag_40Rnd_46x30_AP",
+			"rhsusf_mag_40Rnd_46x30_AP",
 			t1_mag_sidearm_l,
 			t1_mag_sidearm_l,
 			"SmokeShell",
@@ -2452,10 +2452,10 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
-			"30Rnd_45ACP_Mag_SMG_01",
-			"30Rnd_45ACP_Mag_SMG_01",
-			"30Rnd_45ACP_Mag_SMG_01",
-			"30Rnd_45ACP_Mag_SMG_01",
+			"rhsusf_mag_40Rnd_46x30_AP",
+			"rhsusf_mag_40Rnd_46x30_AP",
+			"rhsusf_mag_40Rnd_46x30_AP",
+			"rhsusf_mag_40Rnd_46x30_AP",
 			t1_mag_sidearm_l,
 			t1_mag_sidearm_l,
 			"SmokeShell",

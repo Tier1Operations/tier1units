@@ -2425,6 +2425,7 @@ class CfgVehicles
 		model = "\A3\Characters_F\Common\coveralls.p3d";
 		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Data\coveralls_sage_co.paa"};
 		uniformClass = "T1_U_Pilot_Night";
+		backpack = "B_Parachute";
 		weapons[] = {
 			"rhsusf_weap_MP7A2",
 			"T1_weap_sidearm_l",

@@ -24,6 +24,14 @@ class T1_weap_sierra: srifle_LRR_F
 // using the same as light until we find a better alternative
 class T1_weap_sidearm_m: T1_weap_sidearm_l
 {
+	class LinkedItems
+	{
+		class LinkedItemsAcc
+		{
+			item = "acc_flashlight_pistol";
+			slot = "PointerSlot";
+		};
+	};
 };
 #define t1_mag_sidearm_m "rhsusf_mag_17Rnd_9x19_FMJ"
 #define t1_mag_sidearm_m_sd "rhsusf_mag_17Rnd_9x19_FMJ"

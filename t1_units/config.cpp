@@ -14,7 +14,6 @@
 #define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
 #define MEDICALITEMS2 "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine" 
 
-//Class t1_units : config.bin{
 class CfgPatches
 {
 	class t1_units
@@ -51,6 +50,7 @@ class CfgPatches
 			"T1_AssaultPack_MMG",
 			"T1_Kitbag_camo_AMG",
 			"T1_Kitbag_camo_Section_AT",
+			"T1_backpack_grenadier",
 			"T1_Static_Designator_01_weapon_F",
 			"T1_Instructor_Polo_Black_F",
 			"T1_Instructor_Polo_Orange_F",
@@ -1189,7 +1189,6 @@ class CfgVehicles
 				count = 16;
 				name = "ACE_fieldDressing";
 			};
-
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -1201,6 +1200,42 @@ class CfgVehicles
 				name = "ACE_epinephrine";
 			};
 		};		
+	};
+	class T1_backpack_grenadier : T1_Kitbag_camo {
+		scope = 1;
+		class TransportItems {
+			class Bandage1
+			{
+				count = 16;
+				name = "ACE_fieldDressing";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 3;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 1;
+				name = "ACE_epinephrine";
+			};
+			class GLHE {
+				count = 4;
+				name = "rhsusf_mag_6Rnd_M441_HE";
+			};
+			class GLSMOKE {
+				count = 1;
+				name = "rhsusf_mag_6Rnd_M585_white"; // is flare?
+			};
+			class GLFLARE {
+				count = 1;
+				name = "rhsusf_mag_6Rnd_M714_white"; // is smoke?
+			};
+			class GLBUCK { 
+				count = 1;
+				name = "rhsusf_mag_6Rnd_M576_Buckshot";
+			};
+		};
 	};
 
 	class B_Static_Designator_01_weapon_F;

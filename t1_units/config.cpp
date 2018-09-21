@@ -5585,6 +5585,27 @@ class CfgVehicles
 				magazine = "tf47_m3maaws_HE";
 				count = 10;
 			};
+			class GLHE {
+				count = 16;
+				name = "rhsusf_mag_6Rnd_M441_HE";
+			};
+			class GLHET {
+				count = 12;
+				name = "rhsusf_mag_6Rnd_M397_HET";
+			}
+			class GLSMOKE {
+				count = 4;
+				name = "rhsusf_mag_6Rnd_M585_white"; // is flare?
+			};
+			class GLFLARE {
+				count = 4;
+				name = "rhsusf_mag_6Rnd_M714_white"; // is smoke?
+			};
+			class GLBUCK { 
+				count = 4;
+				name = "rhsusf_mag_6Rnd_M576_Buckshot";
+			};
+
 		};
 		class TransportItems
 		{

@@ -104,6 +104,11 @@ class CfgPatches
 			"T1_Platoon_Medic_Standard_F",
 			"T1_Platoon_EOD_Standard_F",
 			"T1_Platoon_Sgt_Standard_F",
+			"T1_charlie_assault",	// charlie 1 is 6x assault
+			"T1_charlie_marksman",
+			"T1_charlie_grenadier",
+			"T1_charlie_machinegunner",
+			"T1_charlie_medic",
 			"T1_section_ammobox",
 			"T1_support_ammobox",
 			"T1_shadow_ammobox",
@@ -5118,6 +5123,253 @@ class CfgVehicles
 		};
 		backpack = "T1_AssaultPack_PLSgt_JTAC";
 	};
+	class T1_charlie_assault : T1_Soldier_F {	// Charlie 1 is 6 of these guys.
+		scope = 2;
+		faction = "T1_Units";
+		vehicleClass = "Section";
+		displayName = "Charlie Assault";
+		weapons[] = {
+			"T1_m4a1_grip2",
+			"rhs_weap_m72a7",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		respawnWeapons[] = {
+			"T1_m4a1_grip2",
+			"rhs_weap_m72a7",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		magazines[] = {
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"HandGrenade",
+			"HandGrenade",
+			"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"ACE_M84",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen"
+		};
+		respawnmagazines[] = {
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"HandGrenade",
+			"HandGrenade",
+			"HandGrenade",
+			"HandGrenade",
+			"ACE_M84",
+			"ACE_M84",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			STDITEMS
+		};
+		respawnItems[] = {
+			STDITEMS
+		};
+		icon = "iconMan";
+		backpack = "T1_Kitbag_camo";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+	};
+	class T1_charlie_grenadier : T1_Soldier_F {
+		scope = 2;
+		faction = "T1_Units";
+		vehicleClass = "Section";
+		displayName = "Charlie Grenadier";
+		weapons[] = {
+			"rhs_weap_m32",
+			"rhsusf_weap_glock17g4",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		respawnWeapons[] = {
+			"rhs_weap_m32",
+			"rhsusf_weap_glock17g4",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		magazines[] = {
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_6Rnd_M441_HE",	// +4 in backpack
+			"rhsusf_mag_6Rnd_M441_HE",
+			"rhsusf_mag_6Rnd_M397_HET",
+			"rhsusf_mag_6Rnd_M397_HET",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen"
+		};
+		respawnmagazines[] = {
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_6Rnd_M441_HE",	// +4 in backpack
+			"rhsusf_mag_6Rnd_M441_HE",
+			"rhsusf_mag_6Rnd_M397_HET",
+			"rhsusf_mag_6Rnd_M397_HET",
+			"SmokeShell",
+			"SmokeShell",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			STDITEMS
+		};
+		respawnItems[] = {
+			STDITEMS
+		};
+		icon = "iconMan";	// todo: Better icon?
+		backpack = "T1_backpack_grenadier";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+	};
+	class T1_charlie_marksman : T1_Soldier_F {
+		scope = 2;
+		faction = "T1_Units";
+		vehicleClass = "Section";
+		displayName = "Charlie Marksman";
+		weapons[] = {
+			"T1_weap_marksman",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		respawnWeapons[] = {
+			"T1_weap_marksman",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		magazines[] = {
+			"ACE_M84",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"
+		};
+		respawnmagazines[] = {
+			"ACE_M84",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"
+		};
+		items[] = {
+			"ACE_RangeCard",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			STDITEMS
+		};
+		respawnItems[] = {
+			"ACE_RangeCard",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500",
+			STDITEMS
+		};
+		icon = "iconMan";	//iconManAT
+		backpack = "T1_Kitbag_camo";
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_mich_helmet_marpatwd_norotos_headset",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+	};
+	class T1_charlie_mg : T1_Specialist_MG_Standard_F {
+		vehicleClass = "Section";
+		displayName = "Charlie MG";
+	};
+	class T1_charlie_medic : T1_Section_CLS_Standard_F {
+		vehicleClass = "Section";
+		displayName = "Charlie Medic";
+	};
+
 	class NATO_Box_Base;
 	class B_supplyCrate_F;
 	class T1_section_ammobox: B_supplyCrate_F

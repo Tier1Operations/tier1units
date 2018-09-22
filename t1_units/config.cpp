@@ -136,6 +136,7 @@ class CfgPatches
 			"T1_m27iar",
 			"T1_mk18",
 			"T1_m4a1_blockII_SD",
+			"T1_SF_m4a1_blockII_SD_wd",
 			"T1_m4a1_grip2",
 			"T1_m4a1_grip3",
 			"T1_m4a1_Mstock_grip3",

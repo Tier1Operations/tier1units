@@ -1359,6 +1359,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_mrzr\data\blue_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\yel_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\red_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\grn_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\merged\orng_tan_mud_co.paa"};
+		editorSubcategory = "EdSubcat_Cars";	// rhs_EdSubCat_Cars
+		vehicleClass = "rhs_vehclass_car";	// "class rhs_vehclass_car"
 		class TransportMagazines
 		{
 			class _xx_rhsusf_mag_17Rnd_9x19_JHP

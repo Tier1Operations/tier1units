@@ -18,6 +18,7 @@ class CfgPatches
 			"T1_SF_FTL_Standard_F_D",
 			"T1_SF_AT_Standard_F_D",
 			"T1_SF_AR_Standard_F_D",
+			"T1_SF_m4a1_blockII_SD_D",
 			"T1_Spotter_Standard_F_D",
 			"T1_Sniper_Standard_F_D",
 			"T1_Spotter_Light_F_D",
@@ -145,26 +146,30 @@ class CfgVehicles
 	
 	class T1_FieldPack_Scout_Lead_Desert: T1_FieldPack_Scout_Lead
 	{
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_210.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_210.paa"};
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_tortila_cbr_co.paa"};
 	};
 	class T1_B_AssaultPack_SF_Radioman_DM_Desert: T1_B_AssaultPack_SF_Radioman_DM
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Desert)";
 		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
 	class T1_Backpack_PL_Lead_Desert: T1_Backpack_PL_Lead
 	{
 		scope = 1;
 		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
 	class T1_AssaultPack_PLSgt_JTAC_Desert: T1_AssaultPack_PLSgt_JTAC
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
 		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
 	
 	class T1_B_AssaultPack_Exp_SF_Desert: T1_B_AssaultPack_Exp_SF
@@ -315,13 +320,13 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		backpack = "T1_B_AssaultPack_Exp_SF_Desert";
 		weapons[] = {
-			"T1_DMR_SHADOW_SD_Desert",
+			"T1_SF_m4a1_blockII_SD_D",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_DMR_SHADOW_SD_Desert",
+			"T1_SF_m4a1_blockII_SD_D",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -351,13 +356,13 @@ class CfgVehicles
 
 		backpack = "T1_AssaultPack_medic_sf_Desert";
 		weapons[] = {
-			"T1_DMR_SHADOW_SD_Desert",
+			"T1_SF_m4a1_blockII_SD_D",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_DMR_SHADOW_SD_Desert",
+			"T1_SF_m4a1_blockII_SD_D",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -386,14 +391,14 @@ class CfgVehicles
 
 		backpack = "T1_AssaultPack_Lead_SF_Desert";
 		weapons[] = {
-			"T1_DMR_SHADOW_SD_Desert",
+			"T1_SF_m4a1_blockII_SD_D",
 			"rhs_weap_M320",
 			"Throw",
 			"Put",
 			"ACE_MX2A"
 		};
 		respawnWeapons[] = {
-			"T1_DMR_SHADOW_SD_Desert",
+			"T1_SF_m4a1_blockII_SD_D",
 			"rhs_weap_M320",
 			"Throw",
 			"Put",
@@ -422,14 +427,14 @@ class CfgVehicles
 		uniformClass = "t1_rhs_uniform_g3_tan";
 		faction = "T1_Units_Desert";
 		weapons[] = {
-			"T1_DMR_SHADOW_SD_Desert",
+			"T1_SF_m4a1_blockII_SD_D",
 			"Throw",
 			"Put",
 			"ACE_Vector",
 			"tf47_at4_heat"
 		};
 		respawnWeapons[] = {
-			"T1_DMR_SHADOW_SD_Desert",
+			"T1_SF_m4a1_blockII_SD_D",
 			"Throw",
 			"Put",
 			"ACE_Vector",
@@ -1346,19 +1351,19 @@ class CfgWeapons
 		};
 	};
 	
-	class srifle_DMR_03_tan_F;
-	class T1_DMR_SHADOW_SD_Desert : srifle_DMR_03_tan_F
+	class rhs_weap_m4a1_blockII_d;
+	class T1_SF_m4a1_blockII_SD_D : rhs_weap_m4a1_blockII_d
 	{
 		class LinkedItems
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdrkf_d";
+				item = "iansky_specterdrkf_t";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle
 			{
-				item = "muzzle_snds_B_snd_F";
+				item = "rhsusf_acc_rotex5_grey";
 				slot = "MuzzleSlot";
 			};
 			class LinkedItemsAcc
@@ -1368,7 +1373,7 @@ class CfgWeapons
 			};
 			class LinkedItemsUnder
 			{
-				item = "bipod_01_F_snd";
+				item = "rhsusf_acc_grip2_tan";
 				slot = "UnderBarrelSlot";
 			};
 		};

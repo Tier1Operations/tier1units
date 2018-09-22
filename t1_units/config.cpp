@@ -328,7 +328,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Kitbag Lead (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -357,7 +357,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Assault Pack Spotter";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -428,7 +428,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Fieldpack Lead (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\aor2_210.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\aor2_210.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -477,7 +477,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -819,7 +819,7 @@ class CfgVehicles
 	class T1_AssaultPack_PLSgt_JTAC: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -852,7 +852,7 @@ class CfgVehicles
 	class T1_Backpack_PL_Lead: B_AssaultPack_rgr
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};		
+		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};		
 		class TransportItems
 		{
 			class Bandage1

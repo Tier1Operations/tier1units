@@ -1682,16 +1682,20 @@ class CfgVehicles {
 		};
 		class TransportWeapons
 		{
-			class _xx_tf47_at4_heat
+			class at4
 			{
 				weapon = "tf47_at4_heat";
 				count = 4;
 			};		  
-			class _xx_rhs_weap_m72a7
+			class law
 			{
 				weapon = "rhs_weap_m72a7";
 				count = 10;
-			};			
+			};
+			class manpad {
+				count = 1;
+				weapon = "";
+			};
 		};
 	};
 	// 	tank: NATO Leopard 2 MBT Revolution Woodland

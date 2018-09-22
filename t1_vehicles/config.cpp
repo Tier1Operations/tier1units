@@ -1638,12 +1638,16 @@ class CfgVehicles {
 	{
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
-	}
+	};
 	class B_APC_Tracked_01_CRV_F;
 	class t1_support_heavy : B_APC_Tracked_01_CRV_F 
 	{
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
-	}
+		vehicleClass = "Support";
+		editorSubcategory = "LOP_Support";	// should check where LOP_ comes from
+		ace_repair_canRepair = 1;
+		ace_rearm_defaultSupply = 1200;
+	};
 	// TODO: Make a derivative of "B_Slingload_01_Ammo_F" that has all service types.
 };

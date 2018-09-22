@@ -1547,6 +1547,11 @@ class CfgVehicles {
 				magazine = "ACE_M84";
 				count = 16;
 			};
+			class manpad_missiles
+			{
+				magazine = "Titan_AA";
+				count = 3;
+			};
 		};
 		class TransportItems
 		{

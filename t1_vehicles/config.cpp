@@ -1643,12 +1643,11 @@ class CfgVehicles {
 		crew = "T1_Pilot_Camo_F";
 		vehicleClass = "Air";
 	};
-    class UK3CB_BAF_Apache_AH1_JS;
-    class t1_heli_heavy_attack : UK3CB_BAF_Apache_AH1_JS 
+    class rhs_ah64d;
+    class t1_heli_heavy_attack : rhs_ah64d 
 	{
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
-        vehicleClass = "Air";
     };
 	class B_Plane_CAS_01_dynamicLoadout_F;
 	class t1_fighterjet_oneseat : B_Plane_CAS_01_dynamicLoadout_F 

@@ -1601,6 +1601,7 @@ class CfgVehicles {
 	class RHS_MELB_AH6M_M;
 	class t1_heli_light_attack : RHS_MELB_AH6M_M 
 	{
+		scope = 2;
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};

@@ -1605,13 +1605,35 @@ class CfgVehicles {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
-	// helo transport medium: USA USMC-W UH-1Y FFAR/MG
-	class RHS_UH1Y;
-	class t1_heli_medium_rockets : RHS_UH1Y 
+	class RHS_UH60M2;
+	class rhs_uh60m_esss : RHS_UH60M2 {
+		// This is messy. Really messy. So why is it needed? :shrug:
+		class Components;
+		class TransportPylonsComponent;
+		class pylons;
+		class pylon1;
+		class pylon2;
+		class pylon3;
+		class pylon4;
+	};
+	class t1_heli_medium_rockets : rhs_uh60m_esss 
 	{
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
-		vehicleClass = "Air";
+		class Components : Components {
+			class TransportPylonsComponent : TransportPylonsComponent {
+				class pylons : pylons {
+					class pylon1 : pylon1 {
+						attachment = "rhs_mag_M229_19";
+					};
+					class pylon2 : pylon2 {	};
+					class pylon3 : pylon3 { };
+					class pylon4 : pylon4 {
+						attachment = "rhs_mag_M229_19";
+					};
+				};
+			};
+		};
 	};
 
 	class RHS_CH_47F;

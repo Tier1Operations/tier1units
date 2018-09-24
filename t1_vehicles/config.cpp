@@ -1,14 +1,5 @@
-/*
-	Tier 1 Operations
-	Custom vehicle definitions
-	
-
-*/
-
-
 #define _ARMA_
 
-// 
 class CfgPatches
 {
 	class t1_vehicles
@@ -89,8 +80,6 @@ class CfgVehicleClasses
 	};
 };
 class CfgVehicles {
-	// car: USA Army-W M1025A2 M2
-	// I'm including the unarmed and mk19 variants
 	class rhsusf_m1025_w_s;
 	class t1_car_light : rhsusf_m1025_w_s 
 	{
@@ -390,7 +379,6 @@ class CfgVehicles {
 			};
 		};
 	};
-	//desert Hummvee
 	class rhsusf_m1025_d_s;
 	class t1_car_light_d : rhsusf_m1025_d_s 
 	{
@@ -691,7 +679,6 @@ class CfgVehicles {
 		};
 	};
 		
-	//MRAPs	
 	class Truck_01_base_F;
 	class rhsusf_caiman_base: Truck_01_base_F
 	{
@@ -728,7 +715,6 @@ class CfgVehicles {
 		};
 	};
 		
-	//MRAP Woodland
 	class rhsusf_M1232_usarmy_wd;
 	class t1_mrap : rhsusf_M1232_usarmy_wd 
 	{
@@ -1039,7 +1025,6 @@ class CfgVehicles {
         };
 	};
 	
-	//MRAP Desert
 	class rhsusf_M1232_usarmy_d;
 	class t1_mrap_d : rhsusf_M1232_usarmy_d 
 	{
@@ -1348,7 +1333,6 @@ class CfgVehicles {
         };
 	};
 
-	//MRZR SF Buggy Desert
 	class rhsusf_mrzr4_d;
 	class t1_mrzr_d: rhsusf_mrzr4_d 
 	{
@@ -1492,7 +1476,6 @@ class CfgVehicles {
 		};
 	};
 	
-	//MRZR SF Buggy Woodland
 	class t1_mrzr: t1_mrzr_d 
 	{
 		faction = "T1_Units";
@@ -1500,7 +1483,6 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_mrzr\data\blue_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\yel_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\red_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\grn_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\merged\orng_grn_mud_co.paa"};
 	};
 
-	// IFV: NATO Patria AMV
 	class B_APC_Wheeled_01_cannon_F;
 	class t1_ifv_wheeled : B_APC_Wheeled_01_cannon_F 
 	{
@@ -1604,21 +1586,18 @@ class CfgVehicles {
 			};
 		};
 	};
-	// 	tank: NATO Leopard 2 MBT Revolution Woodland
 	class Leopard_2_wd;
 	class t1_tank : Leopard_2_wd 
 	{
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
 	};
-	// helo transport light: NATO MH-6M Little Bird
 	class RHS_MELB_MH6M;
 	class t1_heli_light_trans : RHS_MELB_MH6M 
 	{
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 	};
-	// helo attack light: NATO AH-6M-M Little Bird
 	class RHS_MELB_AH6M_M;
 	class t1_heli_light_attack : RHS_MELB_AH6M_M 
 	{
@@ -1634,7 +1613,6 @@ class CfgVehicles {
 		vehicleClass = "Air";
 	};
 
-	// helo transport heavy: USA Army-W CH-47F
 	class RHS_CH_47F;
 	class t1_heli_heavy_trans : RHS_CH_47F 
 	{
@@ -1642,7 +1620,6 @@ class CfgVehicles {
 		crew = "T1_Pilot_Camo_F";
 		vehicleClass = "Air";
 	};
-    // helo attack heavy: NATO (British) Apache multi-role
     class UK3CB_BAF_Apache_AH1_JS;
     class t1_heli_heavy_attack : UK3CB_BAF_Apache_AH1_JS 
 	{
@@ -1650,7 +1627,6 @@ class CfgVehicles {
         crew = "T1_Pilot_Camo_F";
         vehicleClass = "Air";
     };
-	// Vanilla plane
 	class B_Plane_CAS_01_dynamicLoadout_F;
 	class t1_fighterjet_oneseat : B_Plane_CAS_01_dynamicLoadout_F 
 	{

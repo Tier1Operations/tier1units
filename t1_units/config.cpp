@@ -1226,6 +1226,8 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_epinephrine";
 			};
+		};
+		class TransportMagazines {
 			class GLHE {
 				count = 4;
 				name = "rhsusf_mag_6Rnd_M441_HE";

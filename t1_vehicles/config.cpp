@@ -178,6 +178,7 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
+#include "acre_rack_hmmwv.hpp"
 	};
 	
 	class rhsusf_m1025_w_s_m2;
@@ -278,6 +279,7 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
+#include "acre_rack_hmmwv.hpp"
 	};
 	
 	class rhsusf_m1025_w_s_Mk19;
@@ -378,6 +380,7 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
+#include "acre_rack_hmmwv.hpp"
 	};
 	class rhsusf_m1025_d_s;
 	class t1_car_light_d : rhsusf_m1025_d_s 
@@ -477,6 +480,7 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
+#include "acre_rack_hmmwv.hpp"
 	};
 	
 	class rhsusf_m1025_d_s_m2;
@@ -577,6 +581,7 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
+#include "acre_rack_hmmwv.hpp"
 	};
 	
 	class rhsusf_m1025_d_s_Mk19;
@@ -677,6 +682,7 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
+#include "acre_rack_hmmwv.hpp"
 	};
 		
 	class Truck_01_base_F;

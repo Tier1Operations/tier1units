@@ -1660,13 +1660,13 @@ class CfgVehicles {
 	{
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
+		editorSubcategory = "LOP_Support";	// should check where LOP_ comes from
 	};
 	class B_APC_Tracked_01_CRV_F;
 	class t1_support_heavy : B_APC_Tracked_01_CRV_F 
 	{
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
-		vehicleClass = "Support";
 		editorSubcategory = "LOP_Support";	// should check where LOP_ comes from
 		ace_repair_canRepair = 1;
 		ace_rearm_defaultSupply = 1200;

@@ -229,6 +229,7 @@ class CfgVehicleClasses
 };
 class CfgVehicles
 {
+	class ItemInfo {scope = 0;};	// Attempt to silence that error
 	class B_Soldier_base_F;
 	class B_Kitbag_Base;
 	class B_Kitbag_rgr;

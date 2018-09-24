@@ -164,6 +164,7 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {
+			"t1_textures",
 			"acre_main",
 			"45KO_SO_weapons_ABR",
 			"iansky_opt",
@@ -182,14 +183,14 @@ class CfgFactionClasses
 		displayName = "T1 Units";
 		side = 1;
 		priority = 10;
-		icon = "\t1_units\data\cfgFactionClasses_T1_ca.paa";
+		icon = "\t1_textures\cfgFactionClasses_T1_ca.paa";
 	};
 	class T1_Units_Desert
     {
         displayName = "T1 Units (Desert)";
         side = 1;
         priority = 10;
-        icon = "\t1_units\data\cfgFactionClasses_T1_ca.paa";
+        icon = "\t1_textures\cfgFactionClasses_T1_ca.paa";
     };
 };
 class CfgWeapons {
@@ -235,7 +236,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\marpat_kitbag.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\marpat_kitbag.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -260,7 +261,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Kitbag PltLead (T1 Camo)";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -285,7 +286,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack SF Lead";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_rhsusf_50Rnd_762x51_m62_tracer
@@ -333,7 +334,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Kitbag Lead (T1 Camo)";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -362,7 +363,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Assault Pack Spotter";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -396,7 +397,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Assault Pack Sniper";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_rhsusf_5Rnd_300winmag_xm2010
@@ -433,7 +434,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Fieldpack Lead (T1 Camo)";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\aor2_210.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\aor2_210.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -482,7 +483,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Camo)";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -544,7 +545,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack Medic";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -573,7 +574,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack Medic (T1 Camo)";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_SmokeShell
@@ -615,7 +616,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "AssaultPack CLS (T1 Camo)";
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -653,7 +654,7 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 Camo)";
-		hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\marpat_carryall.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\marpat_carryall.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -756,7 +757,7 @@ class CfgVehicles
 	class T1_B_AssaultPack_Exp_SF: B_AssaultPack_rgr
 	{
 		scope = 1;
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_SatchelCarge_Remote_Mag
@@ -803,7 +804,7 @@ class CfgVehicles
 	class T1_AssaultPack_PLEOD: B_AssaultPack_rgr
 	{
 		scope = 1;
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_SatchelCarge_Remote_Mag
@@ -824,7 +825,7 @@ class CfgVehicles
 	class T1_AssaultPack_PLSgt_JTAC: B_AssaultPack_rgr
 	{
 		scope = 1;
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
@@ -857,7 +858,7 @@ class CfgVehicles
 	class T1_Backpack_PL_Lead: B_AssaultPack_rgr
 	{
 		scope = 1;
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\ogao_117.paa"};		
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};		
 		class TransportItems
 		{
 			class Bandage1
@@ -885,7 +886,7 @@ class CfgVehicles
 	class T1_AssaultPack_AR: B_AssaultPack_rgr
 	{
 		scope = 1;
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_556x45_soft_pouch
@@ -917,7 +918,7 @@ class CfgVehicles
 	class T1_AssaultPack_AAR: B_AssaultPack_rgr
 	{
 		scope = 1;
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhs_200rnd_556x45_M_SAW
@@ -1124,7 +1125,7 @@ class CfgVehicles
 	class T1_AssaultPack_MMG: B_AssaultPack_rgr
 	{
 		scope = 1;
-		//hiddenSelectionsTextures[] = {"\t1_units\data\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer
@@ -1260,7 +1261,7 @@ class CfgVehicles
 		displayName = "T1 Instructor";
 		uniformClass = "T1_U_Instructor_Polo_Black";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\instructor\t1_poloinstructor_b_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\instructor\t1_poloinstructor_b_co.paa"};
 		weapons[] = {
 			"T1_weap_Instructor_Black",
 			"T1_weap_sidearm_l",
@@ -1337,7 +1338,7 @@ class CfgVehicles
 		displayName = "T1 Instructor";
 		uniformClass = "T1_U_Instructor_Polo_Orange";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\instructor\t1_poloinstructor_o_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\instructor\t1_poloinstructor_o_co.paa"};
 		weapons[] = {
 			"T1_weap_Instructor_Orange",
 			"T1_weap_sidearm_l",
@@ -2174,7 +2175,7 @@ class CfgVehicles
 		vehicleClass = "Diver";
 		displayName = "T1 Diver Medic";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_clothing1_medic_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_medic_camo_co.paa"};
 		weapons[] = {
 			"T1_weap_rifle_sd",
 			"T1_weap_sidearm_l",
@@ -2558,28 +2559,28 @@ class CfgVehicles
 		displayName = "T1 Pilot";
 		uniformClass = "T1_U_Pilot_Black";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_black_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_black_co.paa"};
 	};
 	class T1_Pilot_BlackCamo_F: T1_Pilot_Standard_F
 	{
 		displayName = "T1 Pilot";
 		uniformClass = "T1_U_Pilot_BlackCamo";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_BlackCamo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_BlackCamo_co.paa"};
 	};
 	class T1_Pilot_Camo_F: T1_Pilot_Standard_F
 	{
 		displayName = "T1 Pilot";
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
 	};
 	class T1_Pilot_Night_F: T1_Pilot_Standard_F
 	{
 		displayName = "T1 Pilot";
 		uniformClass = "T1_U_Pilot_Night";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_night_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_night_co.paa"};
 	};
 	class B_Spotter_F;
 	class T1_Spotter_Standard_F: B_Spotter_F
@@ -3763,7 +3764,7 @@ class CfgVehicles
 		displayName = "T1 Crewman";
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
@@ -3838,7 +3839,7 @@ class CfgVehicles
 		displayName = "T1 Crew Commander";
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
@@ -3917,7 +3918,7 @@ class CfgVehicles
 		displayName = "T1 Sentinel Commander";
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
@@ -3992,7 +3993,7 @@ class CfgVehicles
 		displayName = "T1 Sentinel Gunner";
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
@@ -4063,7 +4064,7 @@ class CfgVehicles
 		displayName = "T1 Sentinel Driver Medic";
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_units\data\units\pilot\t1_pilot_camo_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
 		weapons[] = {
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",

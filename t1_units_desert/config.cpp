@@ -146,7 +146,7 @@ class CfgVehicles
 	
 	class T1_FieldPack_Scout_Lead_Desert: T1_FieldPack_Scout_Lead
 	{
-		//hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_210.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\aor1_210.paa"};
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_tortila_cbr_co.paa"};
 	};
 	class T1_B_AssaultPack_SF_Radioman_DM_Desert: T1_B_AssaultPack_SF_Radioman_DM
@@ -154,20 +154,20 @@ class CfgVehicles
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Desert)";
 		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
-		//hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\aor1_117.paa"};
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
 	class T1_Backpack_PL_Lead_Desert: T1_Backpack_PL_Lead
 	{
 		scope = 1;
 		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
-		//hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\aor1_117.paa"};
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
 	class T1_AssaultPack_PLSgt_JTAC_Desert: T1_AssaultPack_PLSgt_JTAC
 	{
 		scope = 1;
-		//hiddenSelectionsTextures[] = {"\t1_units_desert\data\backpacks\aor1_117.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\aor1_117.paa"};
 		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
@@ -1282,7 +1282,7 @@ class CfgWeapons
 		displayName = "Carrier Rig (T1 Desert)";
 		picture = "\A3\characters_f\Data\UI\icon_V_plate_carrier_2_CA.paa";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_vests_desert_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_vests_desert_co.paa"};
 		class ItemInfo: ItemInfo
 		{
 			hiddenSelections[] = {"camo"};
@@ -1294,7 +1294,7 @@ class CfgWeapons
 		displayName = "Medic Carrier Rig (T1 Desert)";
 		picture = "\A3\characters_f\Data\UI\icon_V_plate_carrier_2_CA.paa";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\t1_units_desert\data\units\t1_vests_medic_desert_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_vests_medic_desert_co.paa"};
 		class ItemInfo: ItemInfo
 		{
 			hiddenSelections[] = {"camo"};

@@ -778,7 +778,7 @@ class T1_U_Instructor_Polo_Black: Uniform_Base
 {
 	scope = 2;
 	displayName = "T1 Instructor Polo Shirt (Black)";
-	picture = "\t1_units\data\ui\icon_t1_u_instructor_polo_black.paa";
+	picture = "\t1_textures\ui\icon_t1_u_instructor_polo_black.paa";
 	model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 	class ItemInfo: UniformItem
 	{
@@ -792,7 +792,7 @@ class T1_U_Instructor_Polo_Orange: Uniform_Base
 {
 	scope = 2;
 	displayName = "T1 Instructor Polo Shirt (Orange)";
-	picture = "\t1_units\data\ui\icon_t1_u_instructor_polo_orange.paa";
+	picture = "\t1_textures\ui\icon_t1_u_instructor_polo_orange.paa";
 	model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 	class ItemInfo: UniformItem
 	{
@@ -820,7 +820,7 @@ class T1_U_Pilot_Black: Uniform_Base
 {
 	scope = 2;
 	displayName = "T1 Coveralls (Black)";
-	picture = "\t1_units\data\ui\icon_t1_u_pilot_black.paa";
+	picture = "\t1_textures\ui\icon_t1_u_pilot_black.paa";
 	model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 	class ItemInfo: UniformItem
 	{
@@ -834,7 +834,7 @@ class T1_U_Pilot_BlackCamo: Uniform_Base
 {
 	scope = 2;
 	displayName = "T1 Coveralls (Black Camo)";
-	picture = "\t1_units\data\ui\icon_t1_u_pilot_blackcamo.paa";
+	picture = "\t1_textures\ui\icon_t1_u_pilot_blackcamo.paa";
 	model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 	class ItemInfo: UniformItem
 	{
@@ -848,7 +848,7 @@ class T1_U_Pilot_Camo: Uniform_Base
 {
 	scope = 2;
 	displayName = "T1 Coveralls (Camo)";
-	picture = "\t1_units\data\ui\icon_t1_u_pilot_camo.paa";
+	picture = "\t1_textures\ui\icon_t1_u_pilot_camo.paa";
 	model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 	class ItemInfo: UniformItem
 	{
@@ -862,7 +862,7 @@ class T1_U_Pilot_Night: Uniform_Base
 {
 	scope = 2;
 	displayName = "T1 Coveralls (Night)";
-	picture = "\t1_units\data\ui\icon_t1_u_pilot_night.paa";
+	picture = "\t1_textures\ui\icon_t1_u_pilot_night.paa";
 	model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 	class ItemInfo: UniformItem
 	{
@@ -911,7 +911,7 @@ class T1_V_PlateCarrier2_Standard: V_PlateCarrier2_rgr
 	picture = "\A3\characters_f\Data\UI\icon_V_plate_carrier_2_CA.paa";
 	model = "\A3\Characters_F_EPA\BLUFOR\equip_b_vest_kerry.p3d";
 	hiddenSelections[] = {"camo"};
-	hiddenSelectionsTextures[] = {"\t1_units\data\units\t1_vests_camo_co.paa"};
+	hiddenSelectionsTextures[] = {"\t1_textures\units\t1_vests_camo_co.paa"};
 	class ItemInfo: Iteminfo
 	{
 		hiddenSelections[] = {"camo"};

@@ -118,216 +118,216 @@ class CfgVehicles
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_Lead;
 	class T1_Kitbag_camo_Lead_jungle: T1_Kitbag_camo_Lead
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_Lead_Plt;
 	class T1_Kitbag_camo_Lead_Plt_jungle: T1_Kitbag_camo_Lead_Plt
 	{
 		scope = 1;
 		displayName = "Kitbag PltLead (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_Lead_SF;
 	class T1_Kitbag_camo_Lead_SF_jungle: T1_Kitbag_camo_Lead_SF
 	{
 		scope = 1;
 		displayName = "Kitbag Lead SF (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_Lead_Trainer;
 	class T1_Kitbag_camo_Lead_Trainer_jungle: T1_Kitbag_camo_Lead_Trainer
 	{
 		scope = 1;
 		displayName = "Kitbag Lead Trainer (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_Sniper;
 	class T1_Kitbag_camo_Sniper_jungle: T1_Kitbag_camo_Sniper
 	{
 		scope = 1;
 		displayName = "Kitbag Sniper (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};		
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};		
 	};
 	class T1_Kitbag_camo_Scout_Lead;
 	class T1_Kitbag_camo_Scout_Lead_jungle: T1_Kitbag_camo_Scout_Lead
 	{
 		scope = 1;
 		displayName = "Kitbag Scout Lead (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};		
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};		
 	};
 	class T1_Kitbag_camo_SF_Marksman;
 	class T1_Kitbag_camo_SF_Marksman_jungle: T1_Kitbag_camo_SF_Marksman
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_medic;
 	class T1_Kitbag_camo_medic_jungle: T1_Kitbag_camo_medic
 	{
 		scope = 1;
 		displayName = "Kitbag Medic (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_medic_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_medic_co.paa"};
 	};
 	class T1_Kitbag_camo_medic_sf;
 	class T1_Kitbag_camo_medic_sf_jungle: T1_Kitbag_camo_medic_sf
 	{
 		scope = 1;
 		displayName = "Kitbag Medic SF (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_medic_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_medic_co.paa"};
 	};
 	class T1_Kitbag_camo_cls;
 	class T1_Kitbag_camo_cls_jungle: T1_Kitbag_camo_cls
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_medic_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_medic_co.paa"};
 	};
 	class T1_Carryall_camo;
 	class T1_Carryall_camo_jungle: T1_Carryall_camo
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_carryall_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_carryall_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_Repair;
 	class T1_Kitbag_camo_Repair_jungle: T1_Kitbag_camo_Repair
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Carryall_camo_Exp;
 	class T1_Carryall_camo_Exp_jungle: T1_Carryall_camo_Exp
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_carryall_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_carryall_jungle_co.paa"};
 	};
 	class T1_Carryall_camo_Exp_SF;
 	class T1_Carryall_camo_Exp_SF_jungle: T1_Carryall_camo_Exp_SF
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_carryall_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_carryall_jungle_co.paa"};
 	};
 	class T1_Carryall_camo_PLEOD;
 	class T1_Carryall_camo_PLEOD_jungle: T1_Carryall_camo_PLEOD
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_carryall_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_carryall_jungle_co.paa"};
 	};	
 	class T1_Carryall_camo_PLSgt_JTAC;
 	class T1_Carryall_camo_PLSgt_JTAC_jungle: T1_Carryall_camo_PLSgt_JTAC
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_carryall_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_carryall_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_AR;
 	class T1_Kitbag_camo_AR_jungle: T1_Kitbag_camo_AR
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_AAR;
 	class T1_Kitbag_camo_AAR_jungle: T1_Kitbag_camo_AAR
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_AR_SF;
 	class T1_Kitbag_camo_AR_SF_jungle: T1_Kitbag_camo_AR_SF
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};		
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};		
 	};
 	class T1_Kitbag_camo_AT;
 	class T1_Kitbag_camo_AT_jungle: T1_Kitbag_camo_AT
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_Medium_AT;
 	class T1_Kitbag_camo_Medium_AT_jungle: T1_Kitbag_camo_Medium_AT
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};	
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};	
 	};
 	class T1_Kitbag_camo_AA;
 	class T1_Kitbag_camo_AA_jungle: T1_Kitbag_camo_AA
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Carryall_camo_AAT;
 	class T1_Carryall_camo_AAT_jungle: T1_Carryall_camo_AAT
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_carryall_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_carryall_jungle_co.paa"};
 	};
 	class T1_Carryall_camo_Medium_AAT;
 	class T1_Carryall_camo_Medium_AAT_jungle: T1_Carryall_camo_Medium_AAT
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_carryall_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_carryall_jungle_co.paa"};
 	};
 	class T1_Carryall_camo_AAA;
 	class T1_Carryall_camo_AAA_jungle: T1_Carryall_camo_AAA
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_carryall_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_carryall_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_MG;
 	class T1_Kitbag_camo_MG_jungle: T1_Kitbag_camo_MG
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};	
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};	
 	};
 	class T1_Carryall_camo_AMG;
 	class T1_Carryall_camo_AMG_jungle: T1_Carryall_camo_AMG
 	{
 		scope = 1;
 		displayName = "Carryall Backpack (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_carryall_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_carryall_jungle_co.paa"};
 	};
 	class T1_Kitbag_camo_Section_AT;
 	class T1_Kitbag_camo_Section_AT_jungle: T1_Kitbag_camo_Section_AT
 	{
 		scope = 1;
 		displayName = "Kitbag (T1 jungle)";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\backpacks\t1_kitbag_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_kitbag_jungle_co.paa"};
 	};
 	class T1_Soldier_F;
 	class T1_Soldier_jungle_F: T1_Soldier_F
 	{
 		scope = 1;
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 	};
 	class T1_Medic_jungle_F: T1_Soldier_F
 	{
 		scope = 1;
 		uniformClass = "T1_U_Medic_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_medic_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_medic_co.paa"};
 	};
 	
 	class T1_SF_Marksman_SOS_Standard_F;
@@ -336,7 +336,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		weapons[] = {
 			"T1_weap_romeo_jungle_mmdlc",
 			"Throw",
@@ -359,7 +359,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_Exp_SF_jungle";
@@ -370,7 +370,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Medic_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_medic_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_medic_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_medic_sf_jungle";
@@ -381,7 +381,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_SF_jungle";
@@ -392,7 +392,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_SF_jungle";
@@ -403,7 +403,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_AR_SF_jungle";
@@ -444,7 +444,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_AT_jungle";
@@ -455,7 +455,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_AAT_jungle";
@@ -467,7 +467,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Medium_AT_jungle";
@@ -479,7 +479,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_Medium_AAT_jungle";
@@ -490,7 +490,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_AA_jungle";
@@ -501,7 +501,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_AAA_jungle";
@@ -512,7 +512,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_MG_jungle";
@@ -523,7 +523,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_AMG_jungle";
@@ -534,7 +534,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"V_Chestrig_oli","H_Booniehat_oli","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"V_Chestrig_oli","H_Booniehat_oli","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Scout_Lead_jungle";
@@ -545,7 +545,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_jungle";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		weapons[] = {
 			"T1_weap_romeo_jungle_mmdlc",
 			"T1_weap_sidearm_l",
@@ -573,7 +573,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_jungle";
@@ -585,7 +585,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_jungle";
@@ -597,7 +597,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Medic_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_medic_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_medic_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_cls_jungle";
@@ -609,7 +609,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_AR_jungle";
@@ -621,7 +621,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_AAR_jungle";
@@ -633,7 +633,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Section";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Section_AT_jungle";
@@ -645,7 +645,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Platoon";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_Lead_Plt_jungle";
@@ -657,7 +657,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Platoon";
 		uniformClass = "T1_U_Medic_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_medic_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_medic_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Kitbag_camo_medic_jungle";
@@ -669,7 +669,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Platoon";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_PLEOD_jungle";
@@ -681,7 +681,7 @@ class CfgVehicles
 		faction = "T1_Units_jungle";
 		vehicleClass = "Platoon";
 		uniformClass = "T1_U_Squad_Standard_jungle";
-		hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_clothing1_jungle_co.paa"};
+		hiddenSelectionsTextures[] = {"\t1_textures\units\t1_clothing1_jungle_co.paa"};
 		linkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		respawnLinkedItems[] = {"T1_V_PlateCarrier2_jungle","T1_H_HelmetB_jungle","NVGoggles","ItemMap","ItemCompass","ItemWatch","ItemGPS"};
 		backpack = "T1_Carryall_camo_PLSgt_JTAC_jungle";
@@ -763,7 +763,7 @@ class CfgWeapons
 		displayName = "ECH (T1 jungle)";
 		//picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
 		//hiddenSelections[] = {"camo"};
-		//hiddenSelectionsTextures[] = {"\t1_units_jungle\data\units\t1_equip1_jungle_co.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\units\t1_equip1_jungle_co.paa"};
 	};
 	class srifle_DMR_03_woodland_F;
 	class T1_weap_romeo_jungle_mmdlc : srifle_DMR_03_woodland_F

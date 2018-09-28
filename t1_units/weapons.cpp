@@ -534,6 +534,7 @@ class T1_m4a1_blockII_SD : rhs_weap_m4a1_blockII_grip_KAC_bk
 class rhs_weap_m4a1_blockII_wd;
 class T1_SF_m4a1_blockII_SD_wd : rhs_weap_m4a1_blockII_wd
 {
+	magazines[] += {"T1_30Rnd_556x45_Stanag_SD"};
 	class LinkedItems
 	{
 		class LinkedItemsOptic

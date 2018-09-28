@@ -5240,7 +5240,11 @@ class CfgVehicles
 			"ItemWatch"
 		};
 	};
-	class T1_charlie_grenadier : T1_Soldier_F {
+	class T1_charlie21 : T1_Section_CLS_Standard_F { // medic, lead
+		vehicleClass = "Section";
+		displayName = "Charlie Medic";
+	};
+	class T1_charlie22 : T1_Soldier_F {	// grenadier
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Section";
@@ -5304,7 +5308,7 @@ class CfgVehicles
 			"ItemWatch"
 		};
 	};
-	class T1_charlie_marksman : T1_Soldier_F {
+	class T1_charlie23 : T1_Soldier_F { // marksman
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Section";
@@ -5390,13 +5394,9 @@ class CfgVehicles
 			"ItemWatch"
 		};
 	};
-	class T1_charlie_mg : T1_Specialist_MG_Standard_F {
+	class T1_charlie24 : T1_Specialist_MG_Standard_F {
 		vehicleClass = "Section";
 		displayName = "Charlie MG";
-	};
-	class T1_charlie_medic : T1_Section_CLS_Standard_F {
-		vehicleClass = "Section";
-		displayName = "Charlie Medic";
 	};
 
 	class NATO_Box_Base;

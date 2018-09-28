@@ -2533,6 +2533,7 @@ class CfgVehicles
 		};
 		linkedItems[] = {
 			"H_PilotHelmetFighter_B",
+			"V_Rangemaster_belt",
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",
@@ -2540,6 +2541,7 @@ class CfgVehicles
 		};
 		respawnLinkedItems[] = {
 			"H_PilotHelmetFighter_B",
+			"V_Rangemaster_belt",
 			"ItemGPS",
 			"ItemMap",
 			"ItemCompass",

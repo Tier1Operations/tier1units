@@ -2559,30 +2559,26 @@ class CfgVehicles
 		camouflage = 1.4;
 		engineer = 1;
 	};
-	class T1_Pilot_Black_F: T1_Pilot_Standard_F
-	{
-		displayName = "T1 Pilot";
+	class T1_Pilot_Black_F: T1_Pilot_Standard_F	{
+		displayName = "T1 Pilot (Black)";
 		uniformClass = "T1_U_Pilot_Black";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_black_co.paa"};
 	};
-	class T1_Pilot_BlackCamo_F: T1_Pilot_Standard_F
-	{
-		displayName = "T1 Pilot";
+	class T1_Pilot_BlackCamo_F: T1_Pilot_Standard_F	{
+		displayName = "T1 Pilot (BlackCamo)";
 		uniformClass = "T1_U_Pilot_BlackCamo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_BlackCamo_co.paa"};
 	};
-	class T1_Pilot_Camo_F: T1_Pilot_Standard_F
-	{
-		displayName = "T1 Pilot";
+	class T1_Pilot_Camo_F: T1_Pilot_Standard_F {
+		displayName = "T1 Pilot (Camo)";
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
 	};
-	class T1_Pilot_Night_F: T1_Pilot_Standard_F
-	{
-		displayName = "T1 Pilot";
+	class T1_Pilot_Night_F: T1_Pilot_Standard_F	{
+		displayName = "T1 Pilot (Night Camo)";
 		uniformClass = "T1_U_Pilot_Night";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_night_co.paa"};

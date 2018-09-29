@@ -3,7 +3,7 @@
                 displayName = "Dashboard Upper";
                 shortName = "D.Up";
                 componentName = "ACRE_VRC110";
-                allowedPositions[] = {"driver", {"ffv", 1}};
+                allowedPositions[] = {"driver", {"ffv",{0}} };
                 disabledPositions[] = {};
                 defaultComponents[] = {};
                 mountedRadio = "";
@@ -14,7 +14,7 @@
                 displayName = "Dashboard Lower";
                 shortName = "D.Low";
                 componentName = "ACRE_VRC103";
-                allowedPositions[] = {"driver", {"ffv", 1}};
+                allowedPositions[] = {"driver", {"ffv",{0}} };
                 disabledPositions[] = {};
                 defaultComponents[] = {};
                 mountedRadio = "ACRE_PRC117F";

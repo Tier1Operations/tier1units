@@ -1,7 +1,0 @@
-///'t1_units_desert (1).pbo' from Mikero's dos tools, dll version 5.66///
-prefix=t1_units_desert
-Mikero=DePbo.dll
-version=17103111
-Pbo Type is: Arma Addon
-Sha: 'F7C9188A20FC945B68D93AADAAAD9FFC19318127'
-//////</HEADER>//////

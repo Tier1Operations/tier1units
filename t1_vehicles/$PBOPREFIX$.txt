@@ -1,7 +1,0 @@
-///'t1_vehicles (1).pbo' from Mikero's dos tools, dll version 5.66///
-prefix=t1_vehicles
-Mikero=DePbo.dll
-version=17111416
-Pbo Type is: Arma Addon
-Sha: '34D2403FD1CCFB3673BA3571BB0A51923A540903'
-//////</HEADER>//////

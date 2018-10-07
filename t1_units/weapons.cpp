@@ -560,28 +560,6 @@ class T1_SF_m4a1_blockII_SD_wd : rhs_weap_m4a1_blockII_wd
 		};
 	};
 };
-class rhs_weap_m16a4_pmag_grip2;
-class T1_m4a1_grip2 : rhs_weap_m16a4_pmag_grip2
-{
-	class LinkedItems
-	{
-		class LinkedItemsOptic
-		{
-			item = "iansky_specterdr";
-			slot = "CowsSlot";
-		};
-		class LinkedItemsAcc
-		{
-			item = "acc_pointer_IR";
-			slot = "PointerSlot";
-		};
-		class LinkedItemsUnder
-		{
-			item = "rhsusf_acc_grip2";
-			slot = "UnderBarrelSlot";
-		};
-	};
-};
 class rhs_weap_m4a1_carryhandle_pmag_grip3;
 class T1_m4a1_grip3 : rhs_weap_m4a1_carryhandle_pmag_grip3
 {

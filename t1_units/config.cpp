@@ -5186,14 +5186,14 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Charlie Assault";
 		weapons[] = {
-			"T1_m4a1_grip2",
+			"T1_mk18",
 			"rhs_weap_m72a7",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
-			"T1_m4a1_grip2",
+			"T1_mk18",
 			"rhs_weap_m72a7",
 			"Throw",
 			"Put",

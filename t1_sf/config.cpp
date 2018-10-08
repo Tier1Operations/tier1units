@@ -19,6 +19,7 @@ class CfgPatches {
 			"T1_AssaultPack_medic_sf"
 		};
 		weapons[] = {
+			"T1_rhs_uniform_g3_m81",
 			"T1_SF_m4a1_blockII_SD_wd",
 			"T1_weap_mmg_sf",
 			"T1_SF_AR_pistol",
@@ -32,6 +33,18 @@ class CfgPatches {
 };
 
 class CfgWeapons {
+	class ItemInfo { scope = 0; };
+	class rhs_uniform_g3_m81;
+	class T1_rhs_uniform_g3_m81: rhs_uniform_g3_m81
+	{
+		scope = 2;
+		displayName = "T1 Uniform 1";
+		class ItemInfo: ItemInfo
+		{
+			containerClass = "Supply130";
+		};
+	};
+
     class rhs_weap_m4a1_blockII_wd;
     class T1_SF_m4a1_blockII_SD_wd : rhs_weap_m4a1_blockII_wd
     {

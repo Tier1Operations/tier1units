@@ -591,15 +591,6 @@ class rhs_uniform_g3_m81: Uniform_Base
 {
 	class ItemInfo;
 };
-class T1_rhs_uniform_g3_m81: rhs_uniform_g3_m81
-{
-	scope = 2;
-	displayName = "T1 Uniform 1";
-	class ItemInfo: ItemInfo
-	{
-		containerClass = "Supply130";
-	};
-};
 class rhs_uniform_FROG01_d;
 class rhs_uniform_FROG01_wd: rhs_uniform_FROG01_d
 {

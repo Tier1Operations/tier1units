@@ -126,7 +126,6 @@ class CfgPatches
 			"T1_m4a1_carryhandle",
 			"T1_weap_Instructor_Black",
 			"T1_weap_Instructor_Orange",
-			"T1_rhs_uniform_g3_m81",
 			"T1_rhs_uniform_FROG01_wd",
 			"T1_U_Diver_Standard",
 			"T1_U_B_FullGhillie_lsh",

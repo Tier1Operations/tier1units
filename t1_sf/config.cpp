@@ -12,7 +12,9 @@ class CfgPatches {
 			"T1_SF_AR_Standard_F",
 			"T1_SF_Marksman_SOS_Standard_F",
 			"T1_B_AssaultPack_SF_Radioman_DM",
-			"T1_SF_AT_Standard_F"
+			"T1_SF_AT_Standard_F",
+			"T1_SF_Explosive_Standard_F",
+			"T1_B_AssaultPack_Exp_SF"
 		};
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
@@ -548,6 +550,144 @@ class CfgVehicles {
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
+		};
+	};
+
+	// SF Expl
+
+	class T1_SF_Explosive_Standard_F: T1_Soldier_F
+	{
+		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
+		t1_DutyMod = 0.95;
+		faction = "T1_Units";
+		vehicleClass = "SF";
+		displayName = "T1 SF Explosive Specialist";
+		weapons[] = {
+			"T1_SF_m4a1_blockII_SD_wd",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		respawnWeapons[] = {
+			"T1_SF_m4a1_blockII_SD_wd",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		magazines[] = {
+			
+			"T1_30Rnd_556x45_Stanag_SD",		
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"HandGrenade",
+			"DemoCharge_Remote_Mag",
+			"DemoCharge_Remote_Mag"
+		};
+		respawnmagazines[] = {			
+			
+			"T1_30Rnd_556x45_Stanag_SD",		
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"HandGrenade",
+			"DemoCharge_Remote_Mag",
+			"DemoCharge_Remote_Mag"
+		};
+		icon = "iconManExplosive";
+		backpack = "T1_B_AssaultPack_Exp_SF";
+		items[] = {
+			"ACE_M26_Clacker",
+			"ACE_DefusalKit",
+			"MineDetector",
+			STDITEMS_SF
+		};
+		respawnItems[] = {
+			"ACE_M26_Clacker",
+			"ACE_DefusalKit",
+			"MineDetector",
+			STDITEMS_SF
+		};
+		canDeactivateMines = 1;
+		detectSkill = 80;
+		camouflage = 1.0;		
+		engineer = 1;
+		attendant = 1;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+	};
+	class T1_B_AssaultPack_Exp_SF: B_AssaultPack_rgr
+	{
+		scope = 1;
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		class TransportMagazines
+		{
+			class _xx_SatchelCarge_Remote_Mag
+			{
+				count = 1;
+				magazine = "SatchelCharge_Remote_Mag";
+			};
+			class _xx_DemoCharge_Remote_Mag
+			{
+				count = 2;
+				magazine = "DemoCharge_Remote_Mag";
+			};
+			class _xx_SmokeShell
+			{
+				count = 1;
+				magazine = "SmokeShell";
+			};
+			class _xx_ACE_M84
+			{
+				count = 1;
+				magazine = "ACE_M84";
+			};
+		};
+		class TransportItems
+		{			
+			class Bandage1
+			{
+				count = 16;
+				name = "ACE_fieldDressing";
+			};
+
+			class _xx_ACE_morphine
+			{
+				count = 3;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 1;
+				name = "ACE_epinephrine";
+			};
 		};
 	};
 

@@ -25,7 +25,6 @@ class CfgPatches
 			"T1_Kitbag_camo_Sniper",
 			"T1_AssaultPack_Sniper_RHS",
 			"T1_FieldPack_Scout_Lead",
-			"T1_B_AssaultPack_SF_Radioman_DM",
 			"T1_Kitbag_camo_medic",
 			"T1_AssaultPack_pl_medic",
 			"T1_AssaultPack_medic_sf",
@@ -53,7 +52,6 @@ class CfgPatches
 			"T1_Instructor_Polo_Black_F",
 			"T1_Instructor_Polo_Orange_F",
 			"T1_Soldier_F",
-			"T1_SF_Marksman_SOS_Standard_F",
 			"T1_SF_Explosive_Standard_F",
 			"T1_SF_Medic_Standard_F",
 			"T1_SF_AT_Standard_F",
@@ -412,40 +410,6 @@ class CfgVehicles
 			{
 				count = 2;
 				name = "ACE_bloodIV";
-			};
-			class radio {
-				count = 1;
-				name = "ACRE_PRC117F";
-			};
-		};
-	};
-	class T1_B_AssaultPack_SF_Radioman_DM: B_AssaultPack_rgr
-	{
-		scope = 1;
-		displayName = "Assaultpack SF Marksman (T1 Camo)";
-		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
-		class TransportItems
-		{
-			class Bandage1
-			{
-				count = 16;
-				name = "ACE_fieldDressing";
-			};
-
-			class _xx_ACE_morphine
-			{
-				count = 3;
-				name = "ACE_morphine";
-			};
-			class _xx_ACE_epinephrine
-			{
-				count = 1;
-				name = "ACE_epinephrine";
-			};
-			class _xx_ACE_Kestrel
-			{
-				count = 1;
-				name = "ACE_Kestrel";
 			};
 			class radio {
 				count = 1;
@@ -1342,96 +1306,6 @@ class CfgVehicles
 		};
 	};
 	
-	class T1_SF_Marksman_SOS_Standard_F: T1_Soldier_F
-	{
-		scope = 2;
-		uniformClass = "t1_rhs_uniform_g3_m81";
-		t1_DutyMod = 0.95;
-		faction = "T1_Units";
-		vehicleClass = "SF";
-		attendant = 1;
-		displayName = "T1 SF Radioman DM";
-		weapons[] = {
-			"T1_45KO_ABR_green_SD",
-			"Throw",
-			"Put",
-			"ACE_Vector"
-		};
-		respawnWeapons[] = {
-			"T1_45KO_ABR_green_SD",
-			"Throw",
-			"Put",
-			"ACE_Vector"
-		};
-		magazines[] = {
-			"ACE_M84",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mag_SD",
-			"ACE_20Rnd_762x51_Mag_SD",
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen"
-		};
-		respawnmagazines[] = {
-			"ACE_M84",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mag_SD",
-			"ACE_20Rnd_762x51_Mag_SD",
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen"
-		};
-		backpack = "T1_B_AssaultPack_SF_Radioman_DM";
-		items[] = {
-			STDITEMS_SF,
-			"ACE_RangeCard",
-			"ACE_ATragMX",
-			"ACE_Kestrel4500"
-		};
-		respawnItems[] = {
-			STDITEMS_SF,
-			"ACE_RangeCard",
-			"ACE_ATragMX",
-			"ACE_Kestrel4500"
-		};
-		camouflage = 0.8;
-		linkedItems[] = {
-			"T1_V_PlateCarrier2_Standard",
-			"rhsusf_opscore_fg_pelt_cam",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-		respawnLinkedItems[] = {
-			"T1_V_PlateCarrier2_Standard",
-			"rhsusf_opscore_fg_pelt_cam",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-	};
 	class T1_SF_Explosive_Standard_F: T1_Soldier_F
 	{
 		scope = 2;

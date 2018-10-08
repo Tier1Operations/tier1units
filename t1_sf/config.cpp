@@ -9,11 +9,14 @@ class CfgPatches {
 		units[] = {
 			"T1_AssaultPack_Lead_SF",
 			"T1_SF_FTL_Standard_F",
-			"T1_SF_AR_Standard_F"
+			"T1_SF_AR_Standard_F",
+			"T1_SF_Marksman_SOS_Standard_F",
+			"T1_B_AssaultPack_SF_Radioman_DM"
 		};
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
-			"T1_weap_mmg_sf"
+			"T1_weap_mmg_sf",
+			"T1_45KO_ABR_green_SD"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {
@@ -71,6 +74,34 @@ class CfgWeapons {
 			{
 				item = "acc_pointer_IR";
 				slot = "PointerSlot";
+			};
+		};
+	};
+
+	class 45KO_ABR_camo_green_F;
+	class T1_45KO_ABR_green_SD : 45KO_ABR_camo_green_F
+	{
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "optic_AMS";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_B";
+				slot = "MuzzleSlot";
+			};
+			class LinkedItemsAcc
+			{
+				item = "acc_pointer_IR";
+				slot = "PointerSlot";
+			};
+			class LinkedItemsUnder
+			{
+				item = "bipod_01_F_blk";
+				slot = "UnderBarrelSlot";
 			};
 		};
 	};
@@ -304,6 +335,134 @@ class CfgVehicles {
 		};
 		camouflage = 1.0;
 	};
+
+	// SF DM/Radio
+
+	class T1_SF_Marksman_SOS_Standard_F: T1_Soldier_F
+	{
+		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
+		t1_DutyMod = 0.95;
+		faction = "T1_Units";
+		vehicleClass = "SF";
+		attendant = 1;
+		displayName = "T1 SF Radioman DM";
+		weapons[] = {
+			"T1_45KO_ABR_green_SD",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		respawnWeapons[] = {
+			"T1_45KO_ABR_green_SD",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		magazines[] = {
+			"ACE_M84",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"
+		};
+		respawnmagazines[] = {
+			"ACE_M84",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"ACE_20Rnd_762x51_Mag_SD",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShellGreen"
+		};
+		backpack = "T1_B_AssaultPack_SF_Radioman_DM";
+		items[] = {
+			STDITEMS_SF,
+			"ACE_RangeCard",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500"
+		};
+		respawnItems[] = {
+			STDITEMS_SF,
+			"ACE_RangeCard",
+			"ACE_ATragMX",
+			"ACE_Kestrel4500"
+		};
+		camouflage = 0.8;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+	};
+	class T1_B_AssaultPack_SF_Radioman_DM: B_AssaultPack_rgr
+	{
+		scope = 1;
+		displayName = "Assaultpack SF Marksman (T1 Camo)";
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 16;
+				name = "ACE_fieldDressing";
+			};
+
+			class _xx_ACE_morphine
+			{
+				count = 3;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 1;
+				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_Kestrel
+			{
+				count = 1;
+				name = "ACE_Kestrel";
+			};
+			class radio {
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
+		};
+	};
+
 
 
 };

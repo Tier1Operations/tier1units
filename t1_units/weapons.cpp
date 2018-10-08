@@ -36,29 +36,6 @@ class T1_weap_sidearm_m: T1_weap_sidearm_l
 };
 #define t1_mag_sidearm_m "rhsusf_mag_17Rnd_9x19_FMJ"
 #define t1_mag_sidearm_m_sd "rhsusf_mag_17Rnd_9x19_FMJ"
-class 45KO_zafir_black;
-class T1_weap_mmg_sf: 45KO_zafir_black
-{	
-	class LinkedItems
-	{
-		class LinkedItemsOptic
-		{
-			item = "iansky_specterdrkf";
-			slot = "CowsSlot";
-		};
-		class LinkedItemsMuzzle
-		{
-			item = "muzzle_snds_H_MG_blk_F";
-			slot = "MuzzleSlot";
-		}
-		class LinkedItemsAcc
-		{
-			item = "acc_pointer_IR";
-			slot = "PointerSlot";
-		};
-	};
-};
-#define t1_mag_mmg_sf "rhsusf_100Rnd_762x51_m62_tracer"
 
 class rhs_weap_m249_pip_L;
 class T1_weap_lmg: rhs_weap_m249_pip_L

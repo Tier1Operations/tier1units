@@ -1,14 +1,19 @@
 #define STDITEMS    "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACRE_PRC152", "rhsusf_ANPVS_14", "ACE_Flashlight_MX991"
 #define STDITEMS_SF "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACRE_PRC152", "ACE_NVG_Gen4", "ACE_Flashlight_MX991"
 
+#define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
+#define MEDICALITEMS2 "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine" 
+
 class CfgPatches {
     class t1_sf {
 		units[] = {
 			"T1_AssaultPack_Lead_SF",
-			"T1_SF_FTL_Standard_F"
+			"T1_SF_FTL_Standard_F",
+			"T1_SF_AR_Standard_F"
 		};
 		weapons[] = {
-			"T1_SF_m4a1_blockII_SD_wd"
+			"T1_SF_m4a1_blockII_SD_wd",
+			"T1_weap_mmg_sf"
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {
@@ -46,6 +51,30 @@ class CfgWeapons {
             };
         };
     };
+
+	class 45KO_zafir_black;
+	class T1_weap_mmg_sf: 45KO_zafir_black
+	{	
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				item = "iansky_specterdrkf";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsMuzzle
+			{
+				item = "muzzle_snds_H_MG_blk_F";
+				slot = "MuzzleSlot";
+			}
+			class LinkedItemsAcc
+			{
+				item = "acc_pointer_IR";
+				slot = "PointerSlot";
+			};
+		};
+	};
+
 
 };
 
@@ -192,5 +221,89 @@ class CfgVehicles {
 			};
 		};
 	};
+
+	// SF AR
+
+	class T1_SF_AR_Standard_F: T1_Soldier_F
+	{
+		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
+		t1_DutyMod = 0.95;
+		faction = "T1_Units";
+		vehicleClass = "SF";
+		attendant = 1;
+		displayName = "T1 SF AR";
+		weapons[] = {
+			"T1_weap_mmg_sf",
+			"T1_SF_AR_pistol",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		respawnweapons[] = {
+			"T1_weap_mmg_sf",
+			"T1_SF_AR_pistol",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		magazines[] = {
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_mag_17Rnd_9x19_JHP",
+			"rhsusf_mag_17Rnd_9x19_JHP",
+			"ACE_M84",
+			"HandGrenade",
+			"SmokeShell"
+		};
+		respawnmagazines[] = {
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_mag_17Rnd_9x19_JHP",
+			"rhsusf_mag_17Rnd_9x19_JHP",
+			"ACE_M84",
+			"HandGrenade",
+			"SmokeShell"
+		};
+		icon = "iconManMG";
+		items[] = {
+			STDITEMS_SF,
+			MEDICALITEMS2
+		};
+		respawnItems[] = {
+			STDITEMS_SF,
+			MEDICALITEMS2
+		};
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard_SFAR",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard_SFAR",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		camouflage = 1.0;
+	};
+
 
 };

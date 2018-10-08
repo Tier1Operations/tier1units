@@ -58,7 +58,6 @@ class CfgPatches
 			"T1_SF_Explosive_Standard_F",
 			"T1_SF_Medic_Standard_F",
 			"T1_SF_AT_Standard_F",
-			"T1_SF_AR_Standard_F",
 			"T1_Pilot_Standard_F",
 			"T1_Pilot_Black_F",
 			"T1_Pilot_BlackCamo_F",
@@ -109,7 +108,6 @@ class CfgPatches
 			"T1_weap_sidearm_l",
 			"T1_weap_sierra",
 			"T1_weap_sidearm_m",
-			"T1_weap_mmg_sf",
 			"T1_weap_lmg",
 			"T1_weap_lmg2",
 			"T1_weap_mmg",
@@ -1752,86 +1750,6 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
-	};
-	class T1_SF_AR_Standard_F: T1_Soldier_F
-	{
-		scope = 2;
-		uniformClass = "t1_rhs_uniform_g3_m81";
-		t1_DutyMod = 0.95;
-		faction = "T1_Units";
-		vehicleClass = "SF";
-		attendant = 1;
-		displayName = "T1 SF AR";
-		weapons[] = {
-			"T1_weap_mmg_sf",
-			"T1_SF_AR_pistol",
-			"Throw",
-			"Put",
-			"ACE_Vector"
-		};
-		respawnweapons[] = {
-			"T1_weap_mmg_sf",
-			"T1_SF_AR_pistol",
-			"Throw",
-			"Put",
-			"ACE_Vector"
-		};
-		magazines[] = {
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_mag_17Rnd_9x19_JHP",
-			"rhsusf_mag_17Rnd_9x19_JHP",
-			"ACE_M84",
-			"HandGrenade",
-			"SmokeShell"
-		};
-		respawnmagazines[] = {
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_mag_17Rnd_9x19_JHP",
-			"rhsusf_mag_17Rnd_9x19_JHP",
-			"ACE_M84",
-			"HandGrenade",
-			"SmokeShell"
-		};
-		icon = "iconManMG";
-		items[] = {
-			STDITEMS_SF,
-			MEDICALITEMS2
-		};
-		respawnItems[] = {
-			STDITEMS_SF,
-			MEDICALITEMS2
-		};
-		linkedItems[] = {
-			"T1_V_PlateCarrier2_Standard_SFAR",
-			"rhsusf_opscore_fg_pelt_cam",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-		respawnLinkedItems[] = {
-			"T1_V_PlateCarrier2_Standard_SFAR",
-			"rhsusf_opscore_fg_pelt_cam",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-		camouflage = 1.0;
 	};
 	class B_Helipilot_F;
 	class T1_Pilot_Standard_F: B_Helipilot_F

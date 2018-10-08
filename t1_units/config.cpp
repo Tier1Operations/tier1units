@@ -54,7 +54,6 @@ class CfgPatches
 			"T1_Soldier_F",
 			"T1_SF_Explosive_Standard_F",
 			"T1_SF_Medic_Standard_F",
-			"T1_SF_AT_Standard_F",
 			"T1_Pilot_Standard_F",
 			"T1_Pilot_Black_F",
 			"T1_Pilot_BlackCamo_F",
@@ -1493,90 +1492,6 @@ class CfgVehicles
 			"ACE_bloodIV"
 		};
 		attendant = 1;
-		camouflage = 1.0;
-		linkedItems[] = {
-			"T1_V_PlateCarrier2_Standard",
-			"rhsusf_opscore_fg_pelt_cam",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-		respawnLinkedItems[] = {
-			"T1_V_PlateCarrier2_Standard",
-			"rhsusf_opscore_fg_pelt_cam",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-	};
-	class T1_SF_AT_Standard_F: T1_Soldier_F
-	{
-		scope = 2;
-		uniformClass = "t1_rhs_uniform_g3_m81";
-		t1_DutyMod = 0.95;
-		faction = "T1_Units";
-		vehicleClass = "SF";
-		attendant = 1;
-		displayName = "T1 SF Rifleman AT";
-		weapons[] = {
-			"T1_SF_m4a1_blockII_SD_wd",
-			"Throw",
-			"Put",
-			"ACE_Vector",
-			"tf47_at4_heat"
-		};
-		respawnWeapons[] = {
-			"T1_SF_m4a1_blockII_SD_wd",
-			"Throw",
-			"Put",
-			"ACE_Vector",
-			"tf47_at4_heat"
-		};
-		magazines[] = {
-			"ACE_M84",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"SmokeShell",
-			"SmokeShellGreen",
-			"rhsusf_50Rnd_762x51_m62_tracer",			
-			"rhsusf_50Rnd_762x51_m62_tracer"
-		};
-		respawnmagazines[] = {
-			"ACE_M84",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mag_SD",
-			"ACE_20Rnd_762x51_Mag_SD",
-			"SmokeShell",
-			"SmokeShellGreen",
-			"rhsusf_50Rnd_762x51_m62_tracer",			
-			"rhsusf_50Rnd_762x51_m62_tracer"
-		};
-		items[] = {
-			STDITEMS_SF,
-			MEDICALITEMS2
-		};
-		respawnItems[] = {
-			STDITEMS_SF,
-			MEDICALITEMS2
-		};
-		icon = "iconManAT";
 		camouflage = 1.0;
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",

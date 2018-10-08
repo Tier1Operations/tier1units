@@ -1,0 +1,81 @@
+########################################################################
+# Model file conversion
+.p3d.bip3d:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\ImageToPaa\ImageToPaa.exe" -o "$@" "$<"
+
+.p3d.p3d:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\binarize\binarize.exe" -o "$@" "$<"
+
+########################################################################
+# World file conversion
+.wrp.biwrp:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\binarize\binarize.exe" -o "$@" "$<"
+
+.wrp.wrp:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\binarize\binarize.exe" -o "$@" "$<"
+
+########################################################################
+# Config file conversion
+.cpp.bin:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\CfgConvert\CfgConvert.exe" -bin -dst "$@" "$<"
+
+.cpp.bicpp:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\CfgConvert\CfgConvert.exe" -bin -dst "$@" "$<"
+
+########################################################################
+# Material conversion
+## Material is a ParamFile
+.rvmat.rvmat:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\CfgConvertFileChng\CfgConvertFileChange.exe" -bin -dst "$@" "$<"
+
+.bimpas.bimpas:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\CfgConvertFileChng\CfgConvertFileChange.exe" -bin -dst "$@" "$<"
+
+.bisurf.bisurf:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\CfgConvertFileChng\CfgConvertFileChange.exe" -bin -dst "$@" "$<"
+
+########################################################################
+# Texture file conversion
+.gif.bi:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\ImageToPAA\ImageToPAA.exe" "$<" "$@"
+
+.tga.bitga:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\ImageToPAA\ImageToPAA.exe" "$<" "$@"
+
+.tga.paa:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\ImageToPAA\ImageToPAA.exe" "$<" "$@"
+
+.png.paa:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\ImageToPAA\ImageToPAA.exe" "$<" "$@"
+
+.tga.pac:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\ImageToPAA\ImageToPAA.exe" "$<" "$@"
+
+.png.pac:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\ImageToPAA\ImageToPAA.exe" "$<" "$@"
+
+.gif.pac:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\ImageToPAA\ImageToPAA.exe" "$<" "$@"
+
+.paa.paa:
+	!copy  "$<" "$@"
+
+.pac.pac:
+	!copy  "$<" "$@"
+
+########################################################################
+.wav.lip:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\Audio\WavToLip.exe" "$<" "$@"
+
+.wav.wss:
+	"D:\SteamLibrary\SteamApps\common\Arma 3 Tools\Audio\WavToWSS.exe" "$<" "$@"
+
+########################################################################
+### How to add new rules:
+###
+### Each rules starts with suffixes telling which formats are converted by the rule,
+### followed by list of commands
+### list of commands is terminated by empty line
+### Following special variables can be used in commands:
+###    "$<"  Input file path
+###    "$@"  Output file path

@@ -24,6 +24,12 @@ import subprocess;
 
 for pbo in pbos:
 	print(pbo);
+	subprocess.check_call([	# Currently only for early syntax checks
+		binmake,
+		'--always-make',
+		pbo + '\\config.cpp',
+		'config.bin'
+	]);
 	subprocess.check_call([
 		filebank,
 		'-dst',
@@ -36,6 +42,7 @@ for pbo in pbos:
 		outfolder + pbo + '.pbo'
 	]);
 
-
+import os;
+os.unlink('config.bin');
 
 

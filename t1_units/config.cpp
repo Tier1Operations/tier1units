@@ -21,7 +21,6 @@ class CfgPatches
 		units[] = {
 			"T1_Kitbag_camo",
 			"T1_AssaultPack_rgr",
-			"T1_AssaultPack_Lead_SF",
 			"T1_Kitbag_camo_Lead_Trainer",
 			"T1_Kitbag_camo_Sniper",
 			"T1_AssaultPack_Sniper_RHS",
@@ -58,7 +57,6 @@ class CfgPatches
 			"T1_SF_Marksman_SOS_Standard_F",
 			"T1_SF_Explosive_Standard_F",
 			"T1_SF_Medic_Standard_F",
-			"T1_SF_FTL_Standard_F",
 			"T1_SF_AT_Standard_F",
 			"T1_SF_AR_Standard_F",
 			"T1_Pilot_Standard_F",
@@ -272,54 +270,6 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
-			};
-		};
-	};
-	class T1_AssaultPack_Lead_SF: B_AssaultPack_rgr
-	{
-		scope = 1;
-		displayName = "AssaultPack SF Lead";
-		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
-		class TransportMagazines
-		{			
-			class _xx_rhsusf_50Rnd_762x51_m62_tracer
-			{
-				count = 2;
-			magazine = "rhsusf_50Rnd_762x51_m62_tracer";
-			};
-			class _xx_1Rnd_HE_Grenade_shell
-			{
-				count = 8;
-				magazine = "1Rnd_HE_Grenade_shell";
-			};
-			class _xx_1Rnd_SmokeRed_Grenade_shell
-			{
-				count = 2;
-				magazine = "1Rnd_SmokeRed_Grenade_shell";
-			};
-		};
-		class TransportItems
-		{
-			class Bandage1
-			{
-				count = 16;
-				name = "ACE_fieldDressing";
-			};
-
-			class _xx_ACE_morphine
-			{
-				count = 3;
-				name = "ACE_morphine";
-			};
-			class _xx_ACE_epinephrine
-			{
-				count = 1;
-				name = "ACE_epinephrine";
-			};	
-			class _xx_ACE_Vector
-			{
-				count = 1;
-				name = "ACE_Vector";
 			};
 		};
 	};
@@ -1703,96 +1653,6 @@ class CfgVehicles
 			"ACE_bloodIV"
 		};
 		attendant = 1;
-		camouflage = 1.0;
-		linkedItems[] = {
-			"T1_V_PlateCarrier2_Standard",
-			"rhsusf_opscore_fg_pelt_cam",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-		respawnLinkedItems[] = {
-			"T1_V_PlateCarrier2_Standard",
-			"rhsusf_opscore_fg_pelt_cam",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-	};
-	class T1_SF_FTL_Standard_F: T1_Soldier_F
-	{
-		scope = 2;
-		uniformClass = "t1_rhs_uniform_g3_m81";
-		t1_DutyMod = 0.95;
-		faction = "T1_Units";
-		vehicleClass = "SF";
-		attendant = 1;
-		displayName = "T1 SF FTL";
-		weapons[] = {
-			"T1_SF_m4a1_blockII_SD_wd",
-			"rhs_weap_M320",
-			"Throw",
-			"Put",
-			"ACE_MX2A"
-		};
-		respawnWeapons[] = {
-			"T1_SF_m4a1_blockII_SD_wd",
-			"rhs_weap_M320",
-			"Throw",
-			"Put",
-			"ACE_MX2A"
-		};
-		magazines[] = {
-			"ACE_M84",			
-			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"HandGrenade",
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen"
-		};
-		respawnmagazines[] = {
-			"ACE_M84",			
-			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"HandGrenade",
-			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen"
-			
-		};
-		icon = "iconManLeader";
-		backpack = "T1_AssaultPack_Lead_SF";
-		items[] = {
-			"ACE_IR_Strobe_Item",
-			STDITEMS_SF
-		};
-		respawnItems[] = {
-			"ACE_IR_Strobe_Item",
-			STDITEMS_SF
-		};
 		camouflage = 1.0;
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",

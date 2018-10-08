@@ -344,28 +344,6 @@ class T1_45KO_ABR_SD : 45KO_ABR_black_F
 		};
 	};
 };
-class srifle_DMR_03_F;
-class T1_DMR_SHADOW_SD : srifle_DMR_03_F
-{
-	class LinkedItems
-	{
-		class LinkedItemsOptic
-		{
-			item = "iansky_specterdrkf";
-			slot = "CowsSlot";
-		};
-		class LinkedItemsMuzzle
-		{
-			item = "muzzle_snds_B";
-			slot = "MuzzleSlot";
-		};
-		class LinkedItemsAcc
-		{
-			item = "acc_pointer_IR";
-			slot = "PointerSlot";
-		};
-	};
-};
 class rhs_weap_hk416d145_m320;
 class T1_hk416d145_m320_SD : rhs_weap_hk416d145_m320
 {

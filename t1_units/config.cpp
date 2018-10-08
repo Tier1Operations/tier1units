@@ -114,7 +114,6 @@ class CfgPatches
 			"T1_weap_sierra_RHS",
 			"T1_weap_sierra_spotter_RHS",
 			"T1_45KO_ABR_SD",
-			"T1_DMR_SHADOW_SD",
 			"T1_45KO_ABR_green_SD",
 			"T1_hk416d145_m320_SD",
 			"T1_mk18_m320",

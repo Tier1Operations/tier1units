@@ -14,7 +14,9 @@ class CfgPatches {
 			"T1_B_AssaultPack_SF_Radioman_DM",
 			"T1_SF_AT_Standard_F",
 			"T1_SF_Explosive_Standard_F",
-			"T1_B_AssaultPack_Exp_SF"
+			"T1_B_AssaultPack_Exp_SF",
+			"T1_SF_Medic_Standard_F",
+			"T1_AssaultPack_medic_sf"
 		};
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
@@ -691,5 +693,164 @@ class CfgVehicles {
 		};
 	};
 
+	// SF Medic
+
+	class T1_SF_Medic_Standard_F: T1_Soldier_F
+	{
+		scope = 2;
+		uniformClass = "t1_rhs_uniform_g3_m81";
+		t1_DutyMod = 0.95;
+		faction = "T1_Units";
+		vehicleClass = "SF";
+		displayName = "T1 SF Medic";
+		weapons[] = {
+			"T1_SF_m4a1_blockII_SD_wd",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		respawnWeapons[] = {
+			"T1_SF_m4a1_blockII_SD_wd",
+			"Throw",
+			"Put",
+			"ACE_Vector"
+		};
+		magazines[] = {
+			"ACE_M84",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"HandGrenade",
+			"rhsusf_50Rnd_762x51_m62_tracer",			
+			"rhsusf_50Rnd_762x51_m62_tracer"
+		};
+		respawnmagazines[] = {
+			"ACE_M84",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"HandGrenade",
+			"rhsusf_50Rnd_762x51_m62_tracer",			
+			"rhsusf_50Rnd_762x51_m62_tracer"
+		};
+		icon = "iconManMedic";
+		backpack = "T1_AssaultPack_medic_sf";
+		items[] = {
+			STDITEMS_SF,
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV"
+		};
+		respawnItems[] = {
+			STDITEMS_SF,
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_surgicalKit",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_epinephrine",
+			"ACE_bloodIV",
+			"ACE_bloodIV",
+			"ACE_bloodIV"
+		};
+		attendant = 1;
+		camouflage = 1.0;
+		linkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+		respawnLinkedItems[] = {
+			"T1_V_PlateCarrier2_Standard",
+			"rhsusf_opscore_fg_pelt_cam",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch"
+		};
+	};
+	class T1_AssaultPack_medic_sf: B_AssaultPack_rgr
+	{
+		scope = 1;
+		displayName = "AssaultPack Medic (T1 Camo)";
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		class TransportMagazines
+		{			
+			class _xx_SmokeShell
+			{
+				count = 6;
+				magazine = "SmokeShell";
+			};
+			class _xx_SmokeShellGreen
+			{
+				count = 3;
+				magazine = "SmokeShellGreen";
+			};
+		};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 52;
+				name = "ACE_fieldDressing";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 20;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 10;
+				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_bloodIV_250
+			{
+				count = 6;
+				name = "ACE_bloodIV";
+			};
+		};
+	};
 
 };

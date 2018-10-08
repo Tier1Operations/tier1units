@@ -117,7 +117,6 @@ class CfgPatches
 			"T1_DMR_SHADOW_SD",
 			"T1_45KO_ABR_green_SD",
 			"T1_hk416d145_m320_SD",
-			"T1_SF_AR_pistol",
 			"T1_mk18_m320",
 			"T1_m27iar",
 			"T1_mk18",

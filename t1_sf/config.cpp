@@ -21,6 +21,7 @@ class CfgPatches {
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
 			"T1_weap_mmg_sf",
+			"T1_SF_AR_pistol",
 			"T1_45KO_ABR_green_SD"
 		};
 		requiredVersion = 0.1;
@@ -80,6 +81,18 @@ class CfgWeapons {
 				item = "acc_pointer_IR";
 				slot = "PointerSlot";
 			};
+		};
+	};
+	class rhsusf_weap_glock17g4;
+	class T1_SF_AR_pistol : rhsusf_weap_glock17g4
+	{
+		class LinkedItems
+		{
+			class LinkedItemsMuzzle
+			{
+				item = "rhsusf_acc_omega9k";
+				slot = "MuzzleSlot";
+			};		
 		};
 	};
 

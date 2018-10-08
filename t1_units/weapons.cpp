@@ -388,17 +388,6 @@ class T1_hk416d145_m320_SD : rhs_weap_hk416d145_m320
 		};
 	};
 };
-class T1_SF_AR_pistol : rhsusf_weap_glock17g4
-{
-	class LinkedItems
-	{
-		class LinkedItemsMuzzle
-		{
-			item = "rhsusf_acc_omega9k";
-			slot = "MuzzleSlot";
-		};		
-	};
-};
 class rhs_weap_mk18_m320;
 class T1_mk18_m320 : rhs_weap_mk18_m320
 {

@@ -39,7 +39,6 @@ class CfgPatches
 			"T1_Backpack_PL_Lead",
 			"T1_AssaultPack_AR",
 			"T1_AssaultPack_AAR",
-			"T1_Kitbag_camo_AR_SF",
 			"T1_Kitbag_camo_AT",
 			"T1_Kitbag_camo_Medium_AT",
 			"T1_Kitbag_camo_AA",
@@ -866,37 +865,6 @@ class CfgVehicles
 			{
 				count = 3;
 				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
-			};
-		};
-		class TransportItems
-		{			
-			class Bandage1
-			{
-				count = 16;
-				name = "ACE_fieldDressing";
-			};
-
-			class _xx_ACE_morphine
-			{
-				count = 3;
-				name = "ACE_morphine";
-			};
-			class _xx_ACE_epinephrine
-			{
-				count = 1;
-				name = "ACE_epinephrine";
-			};
-		};
-	};
-	class T1_Kitbag_camo_AR_SF: T1_Kitbag_camo
-	{
-		scope = 1;
-		class TransportMagazines
-		{
-			class _xx_rhsusf_100Rnd_762x51_m62_tracer
-			{
-				count = 2;
-				magazine = t1_mag_mmg_sf;
 			};
 		};
 		class TransportItems

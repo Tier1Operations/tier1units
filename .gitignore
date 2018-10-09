@@ -2,3 +2,4 @@
 *.bisign
 *.lnk
 .vscode/*
+config.bin

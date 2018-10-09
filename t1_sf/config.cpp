@@ -16,7 +16,9 @@ class CfgPatches {
 			"T1_SF_Explosive_Standard_F",
 			"T1_B_AssaultPack_Exp_SF",
 			"T1_SF_Medic_Standard_F",
-			"T1_AssaultPack_medic_sf"
+			"T1_AssaultPack_medic_sf",
+			"t1_mrzr_d",
+			"t1_mrzr"
 		};
 		weapons[] = {
 			"T1_rhs_uniform_g3_m81",
@@ -27,7 +29,8 @@ class CfgPatches {
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {
-			"t1_units"	// and nested dependencies
+			"t1_units",	// and nested dependencies
+			"rhsusf_c_mrzr"
 		};
 	};
 };
@@ -878,5 +881,142 @@ class CfgVehicles {
 			};
 		};
 	};
+
+	// Vehicles
+
+	class rhsusf_mrzr4_d;
+	class t1_mrzr_d: rhsusf_mrzr4_d 
+	{
+		faction = "T1_Units_Desert";
+		crew = "T1_Soldier_F_D";
+		transportmaxmagazines = 99999;
+		transportmaxweapons = 9999;
+		transportmaxbackpacks = 99;
+		maximumload = 999999;
+		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_mrzr\data\blue_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\yel_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\red_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\grn_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\merged\orng_tan_mud_co.paa"};
+		editorSubcategory = "EdSubcat_Cars";	// rhs_EdSubCat_Cars
+		vehicleClass = "rhs_vehclass_car";	// "class rhs_vehclass_car"
+		class TransportMagazines
+		{
+			class sidearm_mags {
+				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
+				count = 4;
+			};
+			class ummwhat {
+				magazine = "16Rnd_9x21_Mag";
+				count = 4;
+			};
+			class marksman_mags {
+				magazine = "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
+				count = 6;
+			};
+			class marksman_sd_mags {
+				magazine = "ACE_20Rnd_762x51_Mag_SD";
+				count = 2;
+			};
+			class mg_mags {
+				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
+				count = 10;
+			};
+			class GLs {
+				magazine = "1Rnd_HE_Grenade_shell";
+				count=8;
+			};
+			class _xx_HandGrenade {
+				magazine = "HandGrenade";
+				count = 6;
+			};
+			class _xx_SmokeShell {
+				magazine = "SmokeShell";
+				count = 4;
+			};
+			class _xx_SmokeShellGreen {
+				magazine = "SmokeShellGreen";
+				count = 1;
+			};
+			class _xx_ACE_M84 {
+				magazine = "ACE_M84";
+				count = 4;
+			};
+			class fivefiftysucks {
+				count = 24;
+				magazine = rhs_mag_30Rnd_556x45_M855A1_Stanag;
+			};
+			// expect different variant for these guys, to be removed then
+			class echo1_mag	{
+				count = 12;
+				magazine = rhsusf_5Rnd_300winmag_xm2010;
+			};
+			class echo2_mag {
+				count = 10;
+				magazine = 7Rnd_408_Mag;
+			};
+
+		};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 40;
+				name = "ACE_fieldDressing";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 8;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 6;
+				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_bloodIV
+			{
+				count = 6;
+				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_CableTie
+			{
+				count = 6;
+				name = "ACE_CableTie";
+			};
+			class _xx_ACE_wirecutter
+			{
+				count = 1;
+				name = "ACE_wirecutter";
+			};
+			class _xx_ACE_UAVBattery
+			{
+				count = 1;
+				name = "ACE_UAVBattery";
+			};
+			class UavTerminal
+			{
+				count = 1;
+				name = "B_UavTerminal";
+			};
+		};
+		class TransportWeapons
+		{            
+			class rhs_weap_m72a7
+			{
+				weapon = "rhs_weap_m72a7";
+				count = 3;
+			};
+			class MAW
+			{
+				weapon = "tf47_at4_heat";
+				count = 2;
+			};
+		};
+	};
+	
+	class t1_mrzr: t1_mrzr_d 
+	{
+		faction = "T1_Units";
+		crew = "T1_Soldier_F";
+		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_mrzr\data\blue_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\yel_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\red_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\grn_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\merged\orng_grn_mud_co.paa"};
+	};
+
 
 };

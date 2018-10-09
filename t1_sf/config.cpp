@@ -1031,33 +1031,23 @@ class CfgVehicles {
 		transportMaxItems = 9999;
 		class TransportMagazines
 		{
-			class _xx_rhsusf_mag_17Rnd_9x19_JHP
-			{
+			class sidearm {
 				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
 				count = 8;
 			};
-			class _xx_20Rnd_762x51_Mag
-			{
-				magazine = "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
-				count = 72;
-			};
-			class _xx_ACE_20Rnd_762x51_Mk316_Mod_0_Mag
-			{
+			class marksman {
 				magazine = "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
 				count = 16;
 			};
-			class ACE_20Rnd_762x51_Mag_SD
-			{
+			class marksman_sd {
 				magazine = "ACE_20Rnd_762x51_Mag_SD";
-				count = 20;
+				count = 4;
 			};	
-			class _xx_rhsusf_50Rnd_762x51_m62_tracer
-			{
+			class mg {
 				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
 				count = 32;
 			};
-			class GLs // leader GLs
-			{
+			class GLs {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count=16;
 			};
@@ -1081,7 +1071,10 @@ class CfgVehicles {
 				magazine = "ACE_M84";
 				count = 12;
 			};
-
+			class fivefiftysucks {
+				count = 64;
+				magazine = rhs_mag_30Rnd_556x45_M855A1_Stanag;
+			};
 		};
 		class TransportItems
 		{
@@ -1107,7 +1100,7 @@ class CfgVehicles {
 			};
 			class _xx_ACE_surgicalKit
 			{
-				count = 1;
+				count = 2;
 				name = "ACE_surgicalKit";
 			};
 			class _xx_ACE_bloodIV_250

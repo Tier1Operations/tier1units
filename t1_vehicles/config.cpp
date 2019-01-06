@@ -19,17 +19,13 @@ class CfgPatches
 			"t1_mrap_gl_d",
 			"t1_mrzr_d",
 			"t1_mrzr",
-			"t1_apc",
-			"t1_ifv_wheeled",
-			"t1_tank",
 			"t1_heli_light_trans",
 			"t1_heli_light_attack",
 			"t1_heli_medium_rockets",
 			"t1_heli_heavy_trans",
 			"t1_heli_heavy_attack",
 			"t1_fighterjet_oneseat",
-			"t1_support_light",
-			"t1_support_heavy"
+			"t1_support_light"
 		};
 		weapons[] = {};
 		magazines[] = {};
@@ -1338,115 +1334,6 @@ class CfgVehicles {
         };
 	};
 
-	class B_APC_Wheeled_01_cannon_F;
-	class t1_ifv_wheeled : B_APC_Wheeled_01_cannon_F 
-	{
-		faction = "T1_Units";
-		crew = "T1_Crewman_Standard_F";
-		transportmaxmagazines = 99999;
-		transportmaxweapons = 9999;
-		transportmaxbackpacks = 99;
-		maximumload = 999999;
-		class TransportMagazines
-		{
-			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
-			{
-				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
-				count = 142;
-			};
-			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
-			{
-				magazine =  "t1_longrange_556";
-				count = 24;
-			};
-			class _xx_rhsusf_100Rnd_556x45_soft_pouch
-			{
-				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
-				count = 48;
-			};
-			class _xx_HandGrenade
-			{
-				magazine = "HandGrenade";
-				count = 36;
-			};
-			class _xx_1Rnd_HE_Grenade_shell
-			{
-				magazine = "1Rnd_HE_Grenade_shell";
-				count = 48;
-			};
-			class _xx_SmokeShell
-			{
-				magazine = "SmokeShell";
-				count = 36;
-			};
-			class _xx_ACE_M84
-			{
-				magazine = "ACE_M84";
-				count = 16;
-			};
-			class manpad_missiles
-			{
-				magazine = "Titan_AA";
-				count = 3;
-			};
-		};
-		class TransportItems
-		{
-			class Bandage1
-			{
-				count = 280;
-				name = "ACE_fieldDressing";
-			};
-			class _xx_ACE_morphine
-			{
-				count = 64;
-				name = "ACE_morphine";
-			};
-			class _xx_ACE_epinephrine
-			{
-				count = 64;
-				name = "ACE_epinephrine";
-			};
-			class _xx_ACE_bloodIV_250
-			{
-				count = 32;
-				name = "ACE_bloodIV";
-			};
-			class _xx_ACE_CableTie
-			{
-				count = 20;
-				name = "ACE_CableTie";
-			};			
-			class acre_prc152
-			{
-				count = 4;
-				name = "acre_prc152";
-			};
-		};
-		class TransportWeapons
-		{
-			class at4
-			{
-				weapon = "tf47_at4_heat";
-				count = 4;
-			};		  
-			class law
-			{
-				weapon = "rhs_weap_m72a7";
-				count = 10;
-			};
-			class manpad {
-				count = 1;
-				weapon = "";
-			};
-		};
-	};
-	class Leopard_2_wd;
-	class t1_tank : Leopard_2_wd 
-	{
-		faction = "T1_Units";
-		crew = "T1_Crewman_Standard_F";
-	};
 	class RHS_MELB_MH6M;
 	class t1_heli_light_trans : RHS_MELB_MH6M 
 	{
@@ -1471,8 +1358,7 @@ class CfgVehicles {
 		class pylon3;
 		class pylon4;
 	};
-	class t1_heli_medium_rockets : rhs_uh60m_esss 
-	{
+	class t1_heli_medium_rockets : rhs_uh60m_esss {
 		faction = "T1_Units";
 		crew = "T1_Pilot_Camo_F";
 		class Components : Components {
@@ -1490,7 +1376,6 @@ class CfgVehicles {
 			};
 		};
 	};
-
 	class RHS_CH_47F;
 	class t1_heli_heavy_trans : RHS_CH_47F 
 	{
@@ -1517,14 +1402,6 @@ class CfgVehicles {
 		crew = "T1_Soldier_F";
 		editorSubcategory = "LOP_Support";	// should check where LOP_ comes from
 	};
-	class B_APC_Tracked_01_CRV_F;
-	class t1_support_heavy : B_APC_Tracked_01_CRV_F 
-	{
-		faction = "T1_Units";
-		crew = "T1_Crewman_Standard_F";
-		editorSubcategory = "LOP_Support";	// should check where LOP_ comes from
-		ace_repair_canRepair = 1;
-		ace_rearm_defaultSupply = 1200;
-	};
+
 	// TODO: Make a derivative of "B_Slingload_01_Ammo_F" that has all service types.
 };

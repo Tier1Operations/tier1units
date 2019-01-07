@@ -1,12 +1,4 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 4.02
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
 
-#define _ARMA_
-
-//Class t1_drones : config.bin{
-class DefaultEventHandlers;
 class CfgPatches
 {
 	class A3_Soft_F_Crusher_UGV_T1
@@ -102,12 +94,6 @@ class CfgVehicles
 				magazine = T1_rhsusf_5Rnd_300winmag_xm2010_SD;
 				count = 12;
 			};
-			/*
-			class sidearm_m_mag
-			{
-				magazine = "BWA3_40Rnd_46x30_MP7";
-				count = 16;
-			};//*/
 			class _xx_rhsusf_mag_17Rnd_9x19_FMJ
 			{
 				magazine = "rhsusf_mag_17Rnd_9x19_FMJ";
@@ -506,4 +492,3 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\t1_drones\desert\normal_ugv_01_ext_co.paa","\t1_drones\desert\t1_ugv_01_int_co.paa","\t1_drones\desert\t1_ugv_01_turret_co.paa"};
 	};
 };
-//};

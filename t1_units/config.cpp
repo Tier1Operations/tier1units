@@ -49,12 +49,8 @@ class CfgPatches
 			"T1_Static_Designator_01_weapon_F",
 			"T1_Instructor_Polo_Black_F",
 			"T1_Instructor_Polo_Orange_F",
+			
 			"T1_Soldier_F",
-			"T1_Pilot_Standard_F",
-			"T1_Pilot_Black_F",
-			"T1_Pilot_BlackCamo_F",
-			"T1_Pilot_Camo_F",
-			"T1_Pilot_Night_F",
 			"T1_Spotter_Standard_F",
 			"T1_Sniper_Standard_F",
 			"T1_Spotter_Light_F",
@@ -125,11 +121,6 @@ class CfgPatches
 			"T1_U_B_FullGhillie_lsh",
 			"T1_U_Instructor_Polo_Black",
 			"T1_U_Instructor_Polo_Orange",
-			"T1_U_Pilot_Standard",
-			"T1_U_Pilot_Black",
-			"T1_U_Pilot_BlackCamo",
-			"T1_U_Pilot_Camo",
-			"T1_U_Pilot_Night",
 			"T1_V_PlateCarrier2_Standard",
 			"T1_V_PlateCarrier2_Standard_SFAR"
 		};
@@ -1201,106 +1192,6 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
-	};
-	
-	class B_Helipilot_F;
-	class T1_Pilot_Standard_F: B_Helipilot_F
-	{
-		scope = 2;
-		faction = "T1_Units";
-		vehicleClass = "Pilot";
-		displayName = "T1 Pilot";
-		model = "\A3\Characters_F\Common\coveralls.p3d";
-		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Data\coveralls_sage_co.paa"};
-		uniformClass = "T1_U_Pilot_Night";
-		backpack = "B_Parachute";
-		weapons[] = {
-			"T1_weap_mp7",
-			"T1_weap_sidearm_m",
-			"Throw",
-			"Put",
-			"ACE_Vector"
-		};
-		respawnWeapons[] = {
-			"T1_weap_mp7",
-			"T1_weap_sidearm_m",
-			"Throw",
-			"Put",
-			"ACE_Vector"
-		};
-		magazines[] = {
-			"rhsusf_mag_40Rnd_46x30_AP",
-			"rhsusf_mag_40Rnd_46x30_AP",
-			"rhsusf_mag_40Rnd_46x30_AP",
-			"rhsusf_mag_40Rnd_46x30_AP",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
-			"SmokeShell",
-			"SmokeShellGreen",
-			"SmokeShellBlue"
-		};
-		respawnmagazines[] = {
-			"rhsusf_mag_40Rnd_46x30_AP",
-			"rhsusf_mag_40Rnd_46x30_AP",
-			"rhsusf_mag_40Rnd_46x30_AP",
-			"rhsusf_mag_40Rnd_46x30_AP",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
-			"SmokeShell",
-			"SmokeShellGreen",
-			"SmokeShellBlue"
-		};
-		linkedItems[] = {
-			"H_PilotHelmetFighter_B",
-			"V_Rangemaster_belt",
-			"ItemGPS",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-		respawnLinkedItems[] = {
-			"H_PilotHelmetFighter_B",
-			"V_Rangemaster_belt",
-			"ItemGPS",
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch"
-		};
-		// Todo: Evaluate wrt MEDICALITEMS mismatch
-		items[] = {
-			STDITEMS,
-			MEDICALITEMS
-		};
-		respawnItems[] = {
-			STDITEMS,
-			MEDICALITEMS
-		};
-		camouflage = 1.4;
-		engineer = 1;
-	};
-	class T1_Pilot_Black_F: T1_Pilot_Standard_F	{
-		displayName = "T1 Pilot (Black)";
-		uniformClass = "T1_U_Pilot_Black";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_black_co.paa"};
-	};
-	class T1_Pilot_BlackCamo_F: T1_Pilot_Standard_F	{
-		displayName = "T1 Pilot (BlackCamo)";
-		uniformClass = "T1_U_Pilot_BlackCamo";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_BlackCamo_co.paa"};
-	};
-	class T1_Pilot_Camo_F: T1_Pilot_Standard_F {
-		displayName = "T1 Pilot (Camo)";
-		uniformClass = "T1_U_Pilot_Camo";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
-	};
-	class T1_Pilot_Night_F: T1_Pilot_Standard_F	{
-		displayName = "T1 Pilot (Night Camo)";
-		uniformClass = "T1_U_Pilot_Night";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_night_co.paa"};
 	};
 	class B_Spotter_F;
 	class T1_Spotter_Standard_F: B_Spotter_F

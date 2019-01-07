@@ -1334,67 +1334,6 @@ class CfgVehicles {
         };
 	};
 
-	class RHS_MELB_MH6M;
-	class t1_heli_light_trans : RHS_MELB_MH6M 
-	{
-		faction = "T1_Units";
-		crew = "T1_Pilot_Camo_F";
-	};
-	class RHS_MELB_AH6M_M;
-	class t1_heli_light_attack : RHS_MELB_AH6M_M 
-	{
-		scope = 2;
-		faction = "T1_Units";
-		crew = "T1_Pilot_Camo_F";
-	};
-	class RHS_UH60M2;
-	class rhs_uh60m_esss : RHS_UH60M2 {
-		// This is messy. Really messy. So why is it needed? :shrug:
-		class Components;
-		class TransportPylonsComponent;
-		class pylons;
-		class pylon1;
-		class pylon2;
-		class pylon3;
-		class pylon4;
-	};
-	class t1_heli_medium_rockets : rhs_uh60m_esss {
-		faction = "T1_Units";
-		crew = "T1_Pilot_Camo_F";
-		class Components : Components {
-			class TransportPylonsComponent : TransportPylonsComponent {
-				class pylons : pylons {
-					class pylon1 : pylon1 {
-						attachment = "rhs_mag_M229_19";
-					};
-					class pylon2 : pylon2 {	};
-					class pylon3 : pylon3 { };
-					class pylon4 : pylon4 {
-						attachment = "rhs_mag_M229_19";
-					};
-				};
-			};
-		};
-	};
-	class RHS_CH_47F;
-	class t1_heli_heavy_trans : RHS_CH_47F 
-	{
-		faction = "T1_Units";
-		crew = "T1_Pilot_Camo_F";
-		vehicleClass = "Air";
-	};
-    class rhs_ah64d;
-    class t1_heli_heavy_attack : rhs_ah64d 
-	{
-        faction = "T1_Units";
-        crew = "T1_Pilot_Camo_F";
-    };
-	class B_Plane_CAS_01_dynamicLoadout_F;
-	class t1_fighterjet_oneseat : B_Plane_CAS_01_dynamicLoadout_F 
-	{
-		faction = "T1_Units";
-		crew = "T1_Pilot_Camo_F";
-	};
 	class UK3CB_BAF_Coyote_Logistics_L134A1_W;
 	class t1_support_light : UK3CB_BAF_Coyote_Logistics_L134A1_W 
 	{

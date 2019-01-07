@@ -212,6 +212,12 @@ class cfgVehicles
     {
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
+        class TransportBackpacks {
+            class repairkit {
+                backpack = "T1_Kitbag_camo_Repair";
+                count = 1;
+            };
+        };
     };
     class RHS_MELB_AH6M_M;
     class t1_heli_light_attack : RHS_MELB_AH6M_M
@@ -219,6 +225,12 @@ class cfgVehicles
         scope = 2;
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
+        class TransportBackpacks {
+            class repairkit {
+                backpack = "T1_Kitbag_camo_Repair";
+                count = 1;
+            };
+        };
     };
     class RHS_UH60M2;
     class rhs_uh60m_esss : RHS_UH60M2
@@ -259,6 +271,16 @@ class cfgVehicles
                 };
             };
         };
+        class TransportBackpacks {
+            class repairkit {
+                backpack = "T1_Kitbag_camo_Repair";
+                count = 1;
+            };
+            class para {
+                backpack = "B_Parachute";
+                count = 8;
+            };
+        };
     };
     class RHS_CH_47F;
     class t1_heli_heavy_trans : RHS_CH_47F
@@ -266,12 +288,28 @@ class cfgVehicles
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
         vehicleClass = "Air";
+        class TransportBackpacks {
+            class repairkit {
+                backpack = "T1_Kitbag_camo_Repair";
+                count = 1;
+            };
+            class para {
+                backpack = "B_Parachute";
+                count = 8;
+            };
+        };
     };
     class rhs_ah64d;
     class t1_heli_heavy_attack : rhs_ah64d
     {
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
+        class TransportBackpacks {
+            class repairkit {
+                backpack = "T1_Kitbag_camo_Repair";
+                count = 1;
+            };
+        };
     };
     class B_Plane_CAS_01_dynamicLoadout_F;
     class t1_fighterjet_oneseat : B_Plane_CAS_01_dynamicLoadout_F

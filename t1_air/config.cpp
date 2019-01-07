@@ -35,6 +35,19 @@ class CfgPatches
         };
     };
 };
+
+class SensorTemplatePassiveRadar;  
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;   
+class SensorTemplateIR;            
+class SensorTemplateVisual;        
+class SensorTemplateMan;           
+class SensorTemplateLaser;         
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+class DefaultVehicleSystemsDisplayManagerLeft;
+class DefaultVehicleSystemsDisplayManagerRight;
+
 class cfgWeapons
 {
     class UniformItem;
@@ -311,10 +324,10 @@ class cfgVehicles
             };
         };
     };
-    class B_Plane_CAS_01_dynamicLoadout_F;
-    class t1_fighterjet_oneseat : B_Plane_CAS_01_dynamicLoadout_F
-    {
+    class B_Plane_Fighter_01_F;
+    class t1_fighterjet_oneseat : B_Plane_Fighter_01_F {
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
+#include "fightercomponents.hpp"
     };
 };

@@ -1,7 +1,3 @@
-class InventoryOpticsItem_Base_F;
-class ItemCore;
-class ItemInfo;
-
 class rhsusf_weap_glock17g4;
 class T1_weap_sidearm_l: rhsusf_weap_glock17g4
 {

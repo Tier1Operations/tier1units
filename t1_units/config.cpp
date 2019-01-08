@@ -1192,6 +1192,7 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
+		T1_NoMedicIcon = 1;
 	};
 	class B_Spotter_F;
 	class T1_Spotter_Standard_F: B_Spotter_F
@@ -1201,6 +1202,7 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		attendant = 1;
+		T1_NoMedicIcon = 0;
 		displayName = "T1 Spotter";
 		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
@@ -1307,6 +1309,7 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		attendant = 1;
+		T1_NoMedicIcon = 0;
 		displayName = "T1 Sniper";
 		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
@@ -1416,6 +1419,7 @@ class CfgVehicles
 		faction = "T1_Units";
 		vehicleClass = "Special";
 		attendant = 1;
+		T1_NoMedicIcon = 0;
 		displayName = "T1 Spotter Light";
 		uniformClass = "T1_U_B_FullGhillie_lsh";
 		model = "\Ghillie\ghillie.p3d";
@@ -2680,6 +2684,7 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
+		T1_NoMedicIcon = 0;
 	};
 	class T1_Section_AR_Standard_F: T1_Soldier_F
 	{
@@ -3239,6 +3244,7 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
+		T1_NoMedicIcon = 0;
 	};
 	class T1_Platoon_EOD_Standard_F: T1_Soldier_F
 	{
@@ -3502,6 +3508,7 @@ class CfgVehicles
 	class T1_charlie21 : T1_Section_CLS_Standard_F { // medic, lead
 		vehicleClass = "Section";
 		displayName = "Charlie Medic";
+		T1_NoMedicIcon = 0;
 	};
 	class T1_charlie22 : T1_Soldier_F {	// grenadier
 		scope = 2;

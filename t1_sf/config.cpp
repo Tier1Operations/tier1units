@@ -733,6 +733,7 @@ class CfgVehicles {
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		displayName = "T1 SF Medic";
+		T1_NoMedicIcon = 0;
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
 			"Throw",

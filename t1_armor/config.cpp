@@ -402,6 +402,7 @@ class cfgVehicles {
 		backpack = "T1_Kitbag_camo_medic";
 		attendant = 1;
 		engineer = 1;
+		T1_NoMedicIcon = 0;
 	};
 	class B_APC_Wheeled_01_cannon_F;
 	class t1_ifv_wheeled : B_APC_Wheeled_01_cannon_F {

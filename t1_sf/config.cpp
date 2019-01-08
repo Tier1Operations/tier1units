@@ -37,7 +37,7 @@ class CfgPatches {
 };
 
 class CfgWeapons {
-	class ItemInfo { scope = 0; };
+	class ItemInfo;
 	class rhs_uniform_g3_m81;
 	class T1_rhs_uniform_g3_m81: rhs_uniform_g3_m81
 	{

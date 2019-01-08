@@ -225,6 +225,7 @@ class cfgVehicles
     {
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
+        reportOwnPosition = 1;
         class TransportBackpacks {
             class repairkit {
                 backpack = "T1_Kitbag_camo_Repair";
@@ -238,6 +239,7 @@ class cfgVehicles
         scope = 2;
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
+        reportOwnPosition = 1;
         class TransportBackpacks {
             class repairkit {
                 backpack = "T1_Kitbag_camo_Repair";
@@ -261,6 +263,7 @@ class cfgVehicles
     {
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
+        reportOwnPosition = 1;
         class Components : Components
         {
             class TransportPylonsComponent : TransportPylonsComponent
@@ -301,6 +304,7 @@ class cfgVehicles
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
         vehicleClass = "Air";
+        reportOwnPosition = 1;
         class TransportBackpacks {
             class repairkit {
                 backpack = "T1_Kitbag_camo_Repair";
@@ -323,11 +327,18 @@ class cfgVehicles
                 count = 1;
             };
         };
+        reportRemoteTargets = 1;
+        reportOwnPosition = 1;
+        receiveRemoteTargets = 1;
     };
     class B_Plane_Fighter_01_F;
     class t1_fighterjet_oneseat : B_Plane_Fighter_01_F {
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
+        reportRemoteTargets = 1;
+        reportOwnPosition = 1;
+        receiveRemoteTargets = 1;
+
 #include "fightercomponents.hpp"
     };
 };

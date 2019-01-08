@@ -316,8 +316,8 @@ class cfgVehicles
             };
         };
     };
-    class rhs_ah64d;
-    class t1_heli_heavy_attack : rhs_ah64d
+    class UK3CB_BAF_Apache_AH1_DynamicLoadout;
+    class t1_heli_heavy_attack : UK3CB_BAF_Apache_AH1_DynamicLoadout
     {
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";

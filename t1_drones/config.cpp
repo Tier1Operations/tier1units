@@ -32,6 +32,7 @@ class CfgVehicles
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -254,6 +255,7 @@ class CfgVehicles
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -479,6 +481,7 @@ class CfgVehicles
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"\t1_drones\desert\normal_ugv_01_ext_co.paa","\t1_drones\desert\t1_ugv_01_int_co.paa"};
 
+		reportOwnPosition = 1;
 	};
 	class B_UGV_T1_Desert_rcws_F: B_UGV_T1_Camo_rcws_F
 	{
@@ -490,5 +493,6 @@ class CfgVehicles
 		author = "Vasilyevich";
 		hiddenSelections[] = {"Camo1","Camo2","Camo3"};
 		hiddenSelectionsTextures[] = {"\t1_drones\desert\normal_ugv_01_ext_co.paa","\t1_drones\desert\t1_ugv_01_int_co.paa","\t1_drones\desert\t1_ugv_01_turret_co.paa"};
+		reportOwnPosition = 1;
 	};
 };

@@ -411,6 +411,8 @@ class cfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
+		
 		class TransportMagazines
 		{
 			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
@@ -509,6 +511,7 @@ class cfgVehicles {
 	class t1_tank : Leopard_2_wd {
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
+		reportOwnPosition = 1;
 	};
 	class B_APC_Tracked_01_CRV_F;
 	class t1_support_heavy : B_APC_Tracked_01_CRV_F 
@@ -518,5 +521,7 @@ class cfgVehicles {
 		editorSubcategory = "LOP_Support";	// should check where LOP_ comes from
 		ace_repair_canRepair = 1;
 		ace_rearm_defaultSupply = 1200;
+		reportOwnPosition = 1;
 	};
+	
 };

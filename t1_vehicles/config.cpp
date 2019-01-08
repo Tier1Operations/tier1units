@@ -84,6 +84,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -185,6 +186,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -286,6 +288,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -386,6 +389,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -487,6 +491,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -588,6 +593,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -689,6 +695,7 @@ class CfgVehicles {
 	class rhsusf_caiman_GPK_base: rhsusf_caiman_base{};
 	class rhsusf_M1230_M2_usarmy_d: rhsusf_caiman_GPK_base
 	{
+		reportOwnPosition = 1;
 		class AnimationSources: AnimationSources
 		{
 			class LWPK_hide;
@@ -696,6 +703,7 @@ class CfgVehicles {
 	};
 	class rhsusf_M1230_MK19_usarmy_d: rhsusf_M1230_M2_usarmy_d
 	{
+		reportOwnPosition = 1;
 		class AnimationSources: AnimationSources
 		{
 			class LWPK_hide;
@@ -703,6 +711,7 @@ class CfgVehicles {
 	};
 	class rhsusf_M1230_M2_usarmy_wd: rhsusf_M1230_M2_usarmy_d
 	{
+		reportOwnPosition = 1;
 		class AnimationSources: AnimationSources
 		{
 			class LWPK_hide;
@@ -710,6 +719,7 @@ class CfgVehicles {
 	};
 	class rhsusf_M1230_MK19_usarmy_wd: rhsusf_M1230_MK19_usarmy_d
 	{
+		reportOwnPosition = 1;
 		class AnimationSources: AnimationSources
 		{
 			class LWPK_hide;
@@ -725,6 +735,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -823,6 +834,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -928,6 +940,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -1035,6 +1048,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -1134,6 +1148,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines {
 			class riflemag
 			{
@@ -1236,6 +1251,7 @@ class CfgVehicles {
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class riflemag
@@ -1340,6 +1356,7 @@ class CfgVehicles {
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
 		editorSubcategory = "LOP_Support";	// should check where LOP_ comes from
+		reportOwnPosition = 1;
 	};
 
 	// TODO: Make a derivative of "B_Slingload_01_Ammo_F" that has all service types.

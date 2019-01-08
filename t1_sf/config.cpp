@@ -897,6 +897,7 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_mrzr\data\blue_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\yel_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\red_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\grn_tan_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\merged\orng_tan_mud_co.paa"};
 		editorSubcategory = "EdSubcat_Cars";	// rhs_EdSubCat_Cars
 		vehicleClass = "rhs_vehclass_car";	// "class rhs_vehclass_car"
+		reportOwnPosition = 1;
 		class TransportMagazines
 		{
 			class sidearm_mags {
@@ -1016,6 +1017,8 @@ class CfgVehicles {
 	{
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
+		reportOwnPosition = 1;
+
 		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_mrzr\data\blue_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\yel_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\red_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\grn_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\merged\orng_grn_mud_co.paa"};
 	};
 

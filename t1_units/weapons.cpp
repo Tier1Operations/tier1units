@@ -2,7 +2,6 @@ class rhsusf_weap_glock17g4;
 class T1_weap_sidearm_l: rhsusf_weap_glock17g4
 {
 };
-#define t1_mag_sidearm_l "rhsusf_mag_17Rnd_9x19_FMJ"
 
 class srifle_LRR_F;
 class T1_weap_sierra: srifle_LRR_F

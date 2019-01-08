@@ -153,8 +153,9 @@ class cfgVehicles
             "rhsusf_mag_40Rnd_46x30_AP",
             "rhsusf_mag_40Rnd_46x30_AP",
             "rhsusf_mag_40Rnd_46x30_AP",
-            t1_mag_sidearm_l,
-            t1_mag_sidearm_l,
+            
+            "rhsusf_mag_17Rnd_9x19_FMJ",
+            "rhsusf_mag_17Rnd_9x19_FMJ",
             "SmokeShell",
             "SmokeShellGreen",
             "SmokeShellBlue"};
@@ -163,8 +164,8 @@ class cfgVehicles
             "rhsusf_mag_40Rnd_46x30_AP",
             "rhsusf_mag_40Rnd_46x30_AP",
             "rhsusf_mag_40Rnd_46x30_AP",
-            t1_mag_sidearm_l,
-            t1_mag_sidearm_l,
+            "rhsusf_mag_17Rnd_9x19_FMJ",
+            "rhsusf_mag_17Rnd_9x19_FMJ",
             "SmokeShell",
             "SmokeShellGreen",
             "SmokeShellBlue"};

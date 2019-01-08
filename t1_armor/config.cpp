@@ -59,8 +59,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
@@ -73,8 +73,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
@@ -133,8 +133,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"B_IR_Grenade",
@@ -149,8 +149,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"B_IR_Grenade",
@@ -211,8 +211,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"B_IR_Grenade",
@@ -227,8 +227,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen",
 			"B_IR_Grenade",
@@ -285,8 +285,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
@@ -299,8 +299,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
@@ -355,8 +355,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen"
 		};
@@ -369,8 +369,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"SmokeShellGreen"
 		};

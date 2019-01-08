@@ -1,10 +1,3 @@
-////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 4.90
-//Thu Apr 30 23:39:42 2015 : Source 'file' date Thu Apr 30 23:39:42 2015
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-////////////////////////////////////////////////////////////////////
-
-#define _ARMA_
 
 #define STDITEMS    "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACRE_PRC152", "rhsusf_ANPVS_14", "ACE_Flashlight_MX991"
 
@@ -1049,8 +1042,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen"
@@ -1066,8 +1059,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen"
@@ -1126,8 +1119,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen"
@@ -1143,8 +1136,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"SmokeShell",
 			"SmokeShellGreen"
@@ -2051,8 +2044,8 @@ class CfgVehicles
 			};
 				backpack = "T1_Kitbag_camo";
 				magazines[] = {
-				t1_mag_sidearm_l,
-				t1_mag_sidearm_l,
+				"rhsusf_mag_17Rnd_9x19_FMJ",
+				"rhsusf_mag_17Rnd_9x19_FMJ",
 				"HandGrenade",
 				"SmokeShell",
 				"130Rnd_338_Mag",
@@ -2711,7 +2704,7 @@ class CfgVehicles
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
@@ -2720,7 +2713,7 @@ class CfgVehicles
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell"
 		};
 		icon = "iconManMG";
@@ -2769,7 +2762,7 @@ class CfgVehicles
 			"rhsusf_100Rnd_556x45_soft_pouch",			
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
@@ -2779,7 +2772,7 @@ class CfgVehicles
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell"
 		};
 		icon = "iconManMG";
@@ -3359,8 +3352,8 @@ class CfgVehicles
 			t1_mag_rifle_tracer,
 			t1_mag_rifle_tracer,
 			t1_mag_rifle_tracer,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"Chemlight_blue",
 			"UGL_FlareCIR_F",
@@ -3391,8 +3384,8 @@ class CfgVehicles
 			t1_mag_rifle_tracer,
 			t1_mag_rifle_tracer,
 			t1_mag_rifle_tracer,
-			t1_mag_sidearm_l,
-			t1_mag_sidearm_l,
+			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShell",
 			"Chemlight_blue",
 			"UGL_FlareCIR_F",
@@ -3836,7 +3829,7 @@ class CfgVehicles
 			};
 			class _xx_rhsusf_mag_17Rnd_9x19_FMJ
 			{
-				magazine = t1_mag_sidearm_l;
+				magazine = "rhsusf_mag_17Rnd_9x19_FMJ";
 				count = 8;
 			};
 			class _xx_HandGrenade

@@ -1,12 +1,6 @@
-/////////////////////////////////////////////////////////////////////
-//DeRap: Produced from mikero's Dos Tools Dll version 4.90
-//Thu Sep 17 17:35:51 2015 : Source 'file' date Thu Sep 17 17:35:51 2015
-//http://dev-heaven.net/projects/list_files/mikero-pbodll
-/////////////////////////////////////////////////////////////////////
 
-#define _ARMA_
 
-//Class t1_units_desert : config.bin{
+
 class CfgPatches
 {
 	class t1_units_desert
@@ -839,8 +833,8 @@ class CfgVehicles
 			};
 				backpack = "T1_Kitbag_camo";
 				magazines[] = {
-				t1_mag_sidearm_l,
-				t1_mag_sidearm_l,
+				"rhsusf_mag_17Rnd_9x19_FMJ",
+				"rhsusf_mag_17Rnd_9x19_FMJ",
 				"HandGrenade",
 				"SmokeShell",
 				"130Rnd_338_Mag",

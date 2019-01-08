@@ -79,7 +79,6 @@ class Components  {
             class DataLinkSensorComponent : SensorTemplateDataLink {};
 		};
 	};
-    class DefaultVehicleSystemsDisplayManagerLeft;
 	class VehicleSystemsDisplayManagerComponentLeft : DefaultVehicleSystemsDisplayManagerLeft {
 		class Components {
 			class EmptyDisplay {
@@ -112,7 +111,6 @@ class Components  {
 			};
 		};
 	};
-    class DefaultVehicleSystemsDisplayManagerRight;
 	class VehicleSystemsDisplayManagerComponentRight : DefaultVehicleSystemsDisplayManagerRight {
 		defaultDisplay = "SensorDisplay";
 		class Components {

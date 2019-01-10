@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="t1_sd_ammo">
+  <Package name="Weapons">
+
+    <Key ID="STR_T1_Author">
+      <Original>Tier 1 Operations</Original>
+      <English>Tier 1 Operations</English>
+    </Key>
+
+    <Key ID="STR_T1_30Rnd_556x45_Stanag_SD_Name">
+	  <Original>5.56mm 30Rnd SD Mag</Original>
+      <English>5.56mm 30Rnd SD Mag</English>
+    </Key>
+    <Key ID="STR_T1_30Rnd_556x45_Stanag_SD_Short">
+	  <Original>5.56mm SD</Original>
+      <English>5.56mm SD</English>
+    </Key>
+    <Key ID="STR_T1_30Rnd_556x45_Stanag_SD_Description">
+      <Original>Type: Subsonic ammunition&lt;br /&gt;Caliber: 5.56x45mm&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: AR15, HK416, M249</Original>
+	  <English>Type: Subsonic ammunition&lt;br /&gt;Caliber: 5.56x45mm&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: AR15, HK416, M249</English>
+    </Key>
+	
+    <Key ID="STR_T1_150Rnd_556x45_Drum_Mag_F_SD_Name">
+	  <Original>5.56mm 150Rnd SD Mag</Original>
+      <English>5.56mm 150Rnd SD Mag</English>
+    </Key>
+    <Key ID="STR_T1_150Rnd_556x45_Drum_Mag_F_SD_Short">
+	  <Original>5.56mm SD</Original>
+      <English>5.56mm SD</English>
+    </Key>
+    <Key ID="STR_T1_150Rnd_556x45_Drum_Mag_F_SD_Description">
+      <Original>Type: Subsonic ammunition&lt;br /&gt;Caliber: 5.56x45mm&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: HK416 Drum</Original>
+	  <English>Type: Subsonic ammunition&lt;br /&gt;Caliber: 5.56x45mm&lt;br /&gt;Rounds: 150&lt;br /&gt;Used in: HK416 Drum</English>
+    </Key>
+	
+    <Key ID="STR_T1_rhsusf_5Rnd_300winmag_xm2010_SD_Name">
+	  <Original>5Rnd .300 Winchester Magnum SD</Original>
+      <English>5Rnd .300 Winchester Magnum SD</English>
+    </Key>
+    <Key ID="STR_T1_rhsusf_5Rnd_300winmag_xm2010_SD_Short">
+	  <Original>.300WM SD</Original>
+      <English>.300WM SD</English>
+    </Key>
+    <Key ID="STR_T1_rhsusf_5Rnd_300winmag_xm2010_SD_Description">
+      <Original>Type: Subsonic ammunition&lt;br /&gt;Caliber: .300 Winchester Magnum&lt;br /&gt;Rounds: 5&lt;br /&gt;Used in: XM2010</Original>
+	  <English>Type: Subsonic ammunition&lt;br /&gt;Caliber: .300 Winchester Magnum&lt;br /&gt;Rounds: 5&lt;br /&gt;Used in: XM2010</English>
+    </Key>
+
+  </Package>
+</Project>

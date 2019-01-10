@@ -1,0 +1,29 @@
+/*
+82mm mortar
+High Angle (Low angle not possible)
+*/
+
+private ["_regularMaxRange","_distance","_longRangeGuided","_warheadType","_timeBetweenRounds","_minimumRange","_maximumRange"];
+
+_warheadType = _this select 0;
+_distance = _this select 1;
+
+// Minumum delay before firing a shot
+_timeBetweenRounds = 3;
+_minimumRange = 50;
+_maximumRange = 6000;
+_regularMaxRange = _maximumRange;
+
+if (_warheadType in dtaLaserTypes) then {
+	_maximumRange = 7000;
+};
+
+// If it can be guided by the guide script and it fires past its max distance,
+// we will give it more max range and mark it to be handled a bit differently.
+_longRangeGuided = false;
+if (((_warheadType in dtaGPSGuidedTypes) or {_warheadType in dtaGPSLaserTypes} or {_warheadType in dtaGPSSeekerTypes}) and {_distance > _maximumRange}) then {
+	_maximumRange = 8000;
+	_longRangeGuided = true;
+};
+
+[_timeBetweenRounds,_minimumRange,_maximumRange,_longRangeGuided,_regularMaxRange]

@@ -1,0 +1,14 @@
+dev = "BlackPixxel";
+author = "TaskForce 47";
+briefingName = "TF47 Launcher Range";
+onLoadName = "TF47 Launcher Range";
+onLoadMission = "";
+loadScreen = "\tf47_launchers\missions\TF47LaunchersRange.Stratis\logo_CA.paa";
+
+overviewText = "Try the TF47 Anti Tank weapons at the Kamino Firing Range.";
+overviewPicture = "\tf47_launchers\missions\TF47LaunchersRange.Stratis\logo_CA.paa";
+
+//doneKeys[] = {"BIS_Showcase_SCUBA.Stratis_done"};
+
+//briefing = "[1,0] select ([] call (uinamespace getvariable 'bis_fnc_isCampaign'))";
+//debriefing = "[1,0] select ([] call (uinamespace getvariable 'bis_fnc_isCampaign'))";

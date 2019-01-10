@@ -1,0 +1,698 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 4.97
+//Tue Oct 31 19:06:52 2017 : Source 'file' date Tue Oct 31 19:06:52 2017
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class tf47_launchers : missions\TF47LaunchersRange.Stratis\mission.sqm{
+version = 12;
+class Mission
+{
+	addOns[] = {"tf47_launchers","A3_Characters_F_BLUFOR","a3_characters_f","A3_Characters_F_EPC","A3_Characters_F_INDEP","A3_Structures_F_Mil_Shelters","A3_Structures_F_Mil_BagFence","A3_Signs_F_AD","A3_Structures_F_Mil_Flags","A3_Structures_F_Wrecks","A3_Structures_F_EPA_Mil_Scrapyard","A3_Weapons_F_Ammoboxes","A3_Structures_F_Civ_Camping","a3_map_stratis"};
+	addOnsAuto[] = {"tf47_launchers","A3_Characters_F_BLUFOR","a3_characters_f","A3_Characters_F_EPC","A3_Characters_F_INDEP","A3_Structures_F_Mil_Shelters","A3_Structures_F_Mil_BagFence","A3_Signs_F_AD","A3_Structures_F_Mil_Flags","A3_Structures_F_Wrecks","A3_Structures_F_EPA_Mil_Scrapyard","A3_Weapons_F_Ammoboxes","A3_Structures_F_Civ_Camping","a3_map_stratis"};
+	randomSeed = 15045253;
+	class Intel
+	{
+		startWeather = 0.37;
+		startWind = 0.099999994;
+		startWaves = 0.099999994;
+		forecastWeather = 0.39;
+		forecastWind = 0.099999994;
+		forecastWaves = 0.099999994;
+		forecastLightnings = 0.099999994;
+		year = 2035;
+		month = 4;
+		day = 6;
+		hour = 17;
+		minute = 0;
+		startFogDecay = 0.013;
+		forecastFogDecay = 0.013;
+	};
+	class Groups
+	{
+		items = 7;
+		class Item0
+		{
+			side = "WEST";
+			class Vehicles
+			{
+				items = 1;
+				class Item0
+				{
+					position[] = {6400.916,9,5450.3486};
+					azimut = -36.7084;
+					id = 0;
+					side = "WEST";
+					vehicle = "TF47_B_soldier_SMAW";
+					player = "PLAYER COMMANDER";
+					leader = 1;
+					skill = 0.6;
+					init = "comment ""Exported from Arsenal by BlackPixxel"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_CTRG_3"";  this addItemToUniform ""FirstAidKit"";  this addItemToUniform ""Chemlight_green"";  this addVest ""V_PlateCarrier1_rgr"";   this addBackpack ""B_Kitbag_mcamo"";  this addItemToBackpack ""tf47_smaw_HEAA"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""tf47_smaw_HEDP"";};  for ""_i"" from 1 to 2 do {this addItemToBackpack ""tf47_smaw_SR"";};  this addHeadgear ""H_HelmetSpecB"";  this addGoggles ""G_Tactical_Black"";    comment ""Add weapons"";  this addWeapon ""tf47_smaw"";  this addSecondaryWeaponItem ""tf47_optic_smaw"";  this addWeapon ""Rangefinder"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""GreekHead_A3_08"";  this setSpeaker ""Male09ENG"";  [this,""TF47_insignia1""] call bis_fnc_setUnitInsignia;  ";
+				};
+			};
+		};
+		class Item1
+		{
+			side = "WEST";
+			class Vehicles
+			{
+				items = 1;
+				class Item0
+				{
+					position[] = {6403.5254,9,5454.208};
+					azimut = 313.793;
+					offsetY = 0.1;
+					id = 1;
+					side = "WEST";
+					vehicle = "TF47_B_soldier_SMAW";
+					leader = 1;
+					skill = 0.6;
+					text = "unit1";
+					init = "comment ""Exported from Arsenal by BlackPixxel"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_I_G_resistanceLeader_F"";  this addItemToUniform ""FirstAidKit"";  this addItemToUniform ""Chemlight_green"";  this addVest ""V_PlateCarrier1_rgr"";  this addItemToVest ""SmokeShell"";  this addItemToVest ""SmokeShellGreen"";  this addItemToVest ""Chemlight_green"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  this addBackpack ""B_Kitbag_rgr"";  this addItemToBackpack ""tf47_smaw_HEAA"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""tf47_smaw_HEDP"";};  this addHeadgear ""H_HelmetSpecB"";  this addGoggles ""G_Lowprofile"";    comment ""Add weapons"";  this addWeapon ""tf47_smaw"";  this addSecondaryWeaponItem ""tf47_optic_smaw"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""GreekHead_A3_06"";  this setSpeaker ""Male02ENG"";  this disableAI ""MOVE"";";
+				};
+			};
+		};
+		class Item2
+		{
+			side = "WEST";
+			class Vehicles
+			{
+				items = 1;
+				class Item0
+				{
+					position[] = {6406.363,9,5457.3486};
+					azimut = 321.396;
+					id = 2;
+					side = "WEST";
+					vehicle = "B_Soldier_F";
+					leader = 1;
+					skill = 0.6;
+					text = "unit2";
+					init = "comment ""Exported from Arsenal by BlackPixxel"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_CTRG_3"";  this addItemToUniform ""FirstAidKit"";  this addVest ""V_PlateCarrierH_CTRG"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  this addItemToVest ""SmokeShell"";  this addItemToVest ""SmokeShellGreen"";  for ""_i"" from 1 to 2 do {this addItemToVest ""Chemlight_green"";};  this addBackpack ""B_AssaultPack_rgr"";  for ""_i"" from 1 to 2 do {this addItemToBackpack ""tf47_m3maaws_HEAT"";};  this addHeadgear ""H_HelmetB_light_snakeskin"";  this addGoggles ""G_Goggles_VR"";    comment ""Add weapons"";  this addWeapon ""tf47_m3maaws"";  this addSecondaryWeaponItem ""tf47_optic_m3maaws"";  this addWeapon ""Rangefinder"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";  this linkItem ""NVGoggles_OPFOR"";    comment ""Set identity"";  this setFace ""AfricanHead_01"";  this setSpeaker ""Male05ENG"";  [this,""TF47_insignia1""] call bis_fnc_setUnitInsignia; this disableAI ""MOVE"";";
+				};
+			};
+		};
+		class Item3
+		{
+			side = "WEST";
+			class Vehicles
+			{
+				items = 1;
+				class Item0
+				{
+					position[] = {6396.7964,9,5447.3203};
+					azimut = 313.793;
+					offsetY = 0.1;
+					special = "NONE";
+					id = 3;
+					side = "WEST";
+					vehicle = "B_Soldier_F";
+					leader = 1;
+					skill = 0.6;
+					text = "unit3";
+					init = "comment ""Exported from Arsenal by BlackPixxel"";    comment ""Remove existing items"";  removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""U_B_HeliPilotCoveralls"";  this addItemToUniform ""FirstAidKit"";  this addItemToUniform ""Chemlight_green"";   this addVest ""V_PlateCarrier1_rgr"";  this addItemToVest ""SmokeShell"";  this addItemToVest ""SmokeShellGreen"";  this addItemToVest ""Chemlight_green"";  for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";};  this addBackpack ""B_TacticalPack_blk"";  this addHeadgear ""H_HelmetSpecB"";  this addGoggles ""G_Spectacles_Tinted"";    comment ""Add weapons"";  this addWeapon ""tf47_at4_heat"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";  this linkItem ""ItemWatch"";  this linkItem ""ItemRadio"";    comment ""Set identity"";  this setFace ""WhiteHead_03"";  this setSpeaker ""Male12ENG"";  [this,""TF47_insignia1""] call bis_fnc_setUnitInsignia;  this disableAI ""MOVE"";";
+				};
+			};
+		};
+		class Item4
+		{
+			side = "CIV";
+			class Vehicles
+			{
+				items = 1;
+				class Item0
+				{
+					position[] = {6388.14,9,5441.206};
+					azimut = 325;
+					offsetY = 0.1;
+					special = "NONE";
+					id = 4;
+					side = "CIV";
+					vehicle = "C_Nikos_aged";
+					leader = 1;
+					skill = 0.6;
+					init = " this disableAI ""MOVE"";";
+				};
+			};
+		};
+		class Item5
+		{
+			side = "WEST";
+			class Vehicles
+			{
+				items = 1;
+				class Item0
+				{
+					position[] = {6392.1284,9,5444.831};
+					azimut = 441.143;
+					offsetY = 0.1;
+					special = "NONE";
+					id = 5;
+					side = "WEST";
+					vehicle = "B_officer_F";
+					leader = 1;
+					skill = 0.6;
+					init = "removeallweapons this; this disableAI ""MOVE"";removeheadgear this; this addheadgear ""tf47_beret"";";
+				};
+			};
+		};
+		class Item6
+		{
+			side = "GUER";
+			class Vehicles
+			{
+				items = 1;
+				class Item0
+				{
+					position[] = {6389.3135,9,5442.32};
+					azimut = 325;
+					offsetY = 0.1;
+					special = "NONE";
+					id = 6;
+					side = "GUER";
+					vehicle = "I_officer_F";
+					leader = 1;
+					skill = 0.6;
+					init = "removeallweapons this; this disableAI ""MOVE"";";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items = 36;
+		class Item0
+		{
+			position[] = {6391.092,9.020508,5439.1797};
+			azimut = 313.3263;
+			id = 7;
+			side = "EMPTY";
+			vehicle = "CamoNet_INDP_open_F";
+			leader = 1;
+			skill = 0.6;
+		};
+		class Item1
+		{
+			position[] = {6390.4893,8.902211,5444.567};
+			azimut = 313.793;
+			offsetY = 0.1;
+			id = 8;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Long_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item2
+		{
+			position[] = {6388.442,9,5442.4575};
+			azimut = 132.83728;
+			id = 9;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Long_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item3
+		{
+			position[] = {6386.417,8.939147,5440.28};
+			azimut = 313.118;
+			offsetY = 0.2;
+			id = 10;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Long_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item4
+		{
+			position[] = {6394.844,8.897217,5438.972};
+			azimut = 134.13579;
+			offsetY = -0.3;
+			special = "NONE";
+			id = 11;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Long_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item5
+		{
+			position[] = {6392.708,8.992261,5436.7695};
+			azimut = 313.793;
+			special = "NONE";
+			id = 12;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Long_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item6
+		{
+			position[] = {6390.604,8.957032,5434.559};
+			azimut = 133.3933;
+			offsetY = -0.3;
+			id = 13;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Long_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item7
+		{
+			position[] = {6396.939,8.906103,5441.1387};
+			azimut = 313.793;
+			id = 14;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Long_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item8
+		{
+			position[] = {6397.141,9,5450.238};
+			azimut = 131.74942;
+			offsetY = -0.3;
+			special = "NONE";
+			id = 15;
+			side = "EMPTY";
+			vehicle = "tf47_launcherbox";
+			leader = 1;
+			skill = 0.6;
+		};
+		class Item9
+		{
+			position[] = {6386.649,9,5439.965};
+			azimut = -46.717716;
+			id = 16;
+			side = "EMPTY";
+			vehicle = "SignAd_Sponsor_ARMEX_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item10
+		{
+			position[] = {6397.701,8.866895,5442.669};
+			azimut = -136.08104;
+			id = 17;
+			side = "EMPTY";
+			vehicle = "SignAd_SponsorS_ARMEX_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item11
+		{
+			position[] = {6382.2144,9,5435.0127};
+			azimut = 133.346;
+			id = 18;
+			side = "EMPTY";
+			vehicle = "Flag_ARMEX_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1]; _null =this execvm ""AISMAW.sqf"";_null =this execvm ""AIM3.sqf"";_null =this execvm ""AIAT4.sqf"";";
+		};
+		class Item12
+		{
+			position[] = {6395.597,8.904327,5448.612};
+			azimut = 131.42404;
+			id = 19;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Round_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item13
+		{
+			position[] = {6390.6445,8.963697,5444.2104};
+			azimut = -46.7177;
+			id = 20;
+			side = "EMPTY";
+			vehicle = "SignAd_Sponsor_ARMEX_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item14
+		{
+			position[] = {6398.7563,9,5451.8047};
+			azimut = 131.42404;
+			id = 21;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Round_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item15
+		{
+			position[] = {6326.1304,5.405854,5490.42};
+			azimut = 400.499;
+			offsetY = 0.1;
+			id = 22;
+			side = "EMPTY";
+			vehicle = "Land_Wreck_BMP2_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T1";
+		};
+		class Item16
+		{
+			position[] = {6087.6396,18.479708,5602.248};
+			azimut = 386.206;
+			offsetY = 0.1;
+			id = 23;
+			side = "EMPTY";
+			vehicle = "Land_Wreck_BMP2_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T2";
+		};
+		class Item17
+		{
+			position[] = {6046.709,2.7838318,5802.9985};
+			azimut = 402.74396;
+			offsetY = 0.1;
+			id = 24;
+			side = "EMPTY";
+			vehicle = "Land_Wreck_BMP2_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T3";
+		};
+		class Item18
+		{
+			position[] = {6226.0664,6.8315883,5534.273};
+			azimut = 215;
+			offsetY = 0.1;
+			id = 25;
+			side = "EMPTY";
+			vehicle = "Land_Wreck_BRDM2_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T4";
+		};
+		class Item19
+		{
+			position[] = {6262.118,3.3145704,5488.7295};
+			azimut = 215;
+			offsetY = 0.1;
+			id = 26;
+			side = "EMPTY";
+			vehicle = "Land_Wreck_Ural_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T5";
+		};
+		class Item20
+		{
+			position[] = {6135.812,5.7919273,5623.208};
+			azimut = 199.84326;
+			offsetY = 0.1;
+			id = 27;
+			side = "EMPTY";
+			vehicle = "Land_Wreck_T72_hull_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T6";
+		};
+		class Item21
+		{
+			position[] = {6399.098,7.61177,5416.365};
+			azimut = 313.793;
+			offsetY = 0.1;
+			special = "NONE";
+			id = 28;
+			side = "EMPTY";
+			vehicle = "Land_PaperBox_closed_F";
+			leader = 1;
+			skill = 0.6;
+		};
+		class Item22
+		{
+			position[] = {6397.7856,7.6091003,5417.596};
+			azimut = 313.793;
+			offsetY = 0.1;
+			special = "NONE";
+			id = 29;
+			side = "EMPTY";
+			vehicle = "Land_PaperBox_open_full_F";
+			leader = 1;
+			skill = 0.6;
+		};
+		class Item23
+		{
+			position[] = {6395.9844,9,5446.494};
+			azimut = 215.769;
+			id = 30;
+			side = "EMPTY";
+			vehicle = "Box_NATO_Ammo_F";
+			leader = 1;
+			skill = 0.6;
+			text = "box";
+		};
+		class Item24
+		{
+			position[] = {6403.7373,8.955341,5456.9604};
+			azimut = 131.74942;
+			offsetY = -0.3;
+			special = "NONE";
+			id = 31;
+			side = "EMPTY";
+			vehicle = "tf47_launcherbox";
+			leader = 1;
+			skill = 0.6;
+		};
+		class Item25
+		{
+			position[] = {6405.2666,9,5458.6636};
+			azimut = 131.42404;
+			id = 32;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Round_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item26
+		{
+			position[] = {6402.1323,9,5455.1914};
+			azimut = 131.42404;
+			id = 33;
+			side = "EMPTY";
+			vehicle = "Land_BagFence_Round_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item27
+		{
+			position[] = {6390.4326,9,5442.013};
+			azimut = 130;
+			offsetY = 0.1;
+			special = "NONE";
+			id = 34;
+			side = "EMPTY";
+			vehicle = "Land_CampingChair_V2_F";
+			leader = 1;
+			skill = 0.6;
+		};
+		class Item28
+		{
+			position[] = {6389.788,9,5441.2773};
+			azimut = 130;
+			offsetY = 0.1;
+			special = "NONE";
+			id = 35;
+			side = "EMPTY";
+			vehicle = "Land_CampingChair_V2_F";
+			leader = 1;
+			skill = 0.6;
+		};
+		class Item29
+		{
+			position[] = {6389.1826,9,5440.555};
+			azimut = 130;
+			offsetY = 0.1;
+			special = "NONE";
+			id = 36;
+			side = "EMPTY";
+			vehicle = "Land_CampingChair_V2_F";
+			leader = 1;
+			skill = 0.6;
+		};
+		class Item30
+		{
+			position[] = {6391.047,9,5443.9785};
+			azimut = -46.7765;
+			offsetY = 0.1;
+			special = "NONE";
+			id = 37;
+			side = "EMPTY";
+			vehicle = "Land_CampingTable_F";
+			leader = 1;
+			skill = 0.6;
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item31
+		{
+			position[] = {6387.0234,9,5439.6445};
+			azimut = -46.77645;
+			offsetY = 0.1;
+			special = "NONE";
+			id = 38;
+			side = "EMPTY";
+			vehicle = "Land_CampingTable_F";
+			leader = 1;
+			skill = 0.6;
+		};
+		class Item32
+		{
+			position[] = {6146.373,7.313689,5547.915};
+			azimut = 386.206;
+			offsetY = 0.1;
+			id = 39;
+			side = "EMPTY";
+			vehicle = "Land_Wreck_Slammer_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T7";
+		};
+		class Item33
+		{
+			position[] = {6010.9883,18.150717,5581.584};
+			azimut = 195.836;
+			offsetY = 0.1;
+			id = 40;
+			side = "EMPTY";
+			vehicle = "Land_Wreck_Ural_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T8";
+			init = "this setvectorup [0,0,1];";
+		};
+		class Item34
+		{
+			position[] = {5815.638,27.339521,5930.4614};
+			azimut = 225;
+			offsetY = 0.1;
+			id = 41;
+			side = "EMPTY";
+			vehicle = "Land_Wreck_Hunter_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T9";
+		};
+		class Item35
+		{
+			position[] = {6242.5684,0,5663.6787};
+			azimut = 225;
+			offsetY = 0.1;
+			id = 42;
+			side = "EMPTY";
+			vehicle = "Land_UWreck_FishingBoat_F";
+			leader = 1;
+			skill = 0.6;
+			text = "T10";
+		};
+	};
+	class Markers
+	{
+		items = 2;
+		class Item0
+		{
+			position[] = {6397.3145,7.5960608,5419.649};
+			name = "pos2";
+			type = "Empty";
+		};
+		class Item1
+		{
+			position[] = {6397.171,9,5448.2456};
+			name = "pos1";
+			type = "Empty";
+		};
+	};
+};
+class Intro
+{
+	addOns[] = {"a3_map_stratis"};
+	addOnsAuto[] = {"a3_map_stratis"};
+	randomSeed = 5528048;
+	class Intel
+	{
+		timeOfChanges = 1800.0002;
+		startWeather = 0.3;
+		startWind = 0.1;
+		startWaves = 0.1;
+		forecastWeather = 0.3;
+		forecastWind = 0.1;
+		forecastWaves = 0.1;
+		forecastLightnings = 0.1;
+		year = 2035;
+		month = 7;
+		day = 6;
+		hour = 12;
+		minute = 0;
+		startFogDecay = 0.013;
+		forecastFogDecay = 0.013;
+	};
+};
+class OutroWin
+{
+	addOns[] = {"a3_map_stratis"};
+	addOnsAuto[] = {"a3_map_stratis"};
+	randomSeed = 6200645;
+	class Intel
+	{
+		timeOfChanges = 1800.0002;
+		startWeather = 0.3;
+		startWind = 0.1;
+		startWaves = 0.1;
+		forecastWeather = 0.3;
+		forecastWind = 0.1;
+		forecastWaves = 0.1;
+		forecastLightnings = 0.1;
+		year = 2035;
+		month = 7;
+		day = 6;
+		hour = 12;
+		minute = 0;
+		startFogDecay = 0.013;
+		forecastFogDecay = 0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[] = {"a3_map_stratis"};
+	addOnsAuto[] = {"a3_map_stratis"};
+	randomSeed = 16010926;
+	class Intel
+	{
+		timeOfChanges = 1800.0002;
+		startWeather = 0.3;
+		startWind = 0.1;
+		startWaves = 0.1;
+		forecastWeather = 0.3;
+		forecastWind = 0.1;
+		forecastWaves = 0.1;
+		forecastLightnings = 0.1;
+		year = 2035;
+		month = 7;
+		day = 6;
+		hour = 12;
+		minute = 0;
+		startFogDecay = 0.013;
+		forecastFogDecay = 0.013;
+	};
+};
+//};

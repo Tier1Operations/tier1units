@@ -67,6 +67,7 @@ if (_simulationType == "tank") exitWith {
 
     // ammo was hit, high chance for cook-off
     if (_hitpoint == _ammoLocationHitpoint) then {
+		//systemchat ("ammo hit/dam check: " + str (_damage > 0.5));
         if (_damage > 0.5) then {
             // get cookoff probability for vehicle
             private _probability = [_vehicle call CBA_fnc_getObjectConfig >> "ace_cookoff_probability", "number", 0.7] call CBA_fnc_getConfigEntry;
@@ -77,13 +78,26 @@ if (_simulationType == "tank") exitWith {
                 _probability = _probability * ace_cookoff_probabilityCoef;
             };
             if (random 1 < _probability) then {
-                _vehicle call ace_cookoff_fnc_cookOff;
+				//systemchat "ammo hit/prob true";
+				if (!(_vehicle getVariable ["ace_cookoff_isCookingOff", false]) and random 1 < 0.06) then {
+					_vehicle setDamage 1;
+				} else {
+					//playSound "Alarm";
+					_vehicle call ace_cookoff_fnc_cookOff;
+				};
             };
         };
     } else {
-        if (_hitpoint in ["hithull", "hitturret", "#structural"] && {_newDamage > 0.6 + random 0.35}) then {
-            if ((_hitpoint == "hitturret") && {(getNumber (_vehicle call CBA_fnc_getObjectConfig >> "ace_cookoff_ignoreTurret")) == 1}) exitWith {}; // ignore turrets like RCWS
-            _vehicle call ace_cookoff_fnc_cookOff;
+		//t1_cookoff_debugstuff = true; t1_array pushBack [time,_hitpoint,(floor(_newdamage * 1000))/1000,_vehicle]; t1_array deleteAt 0;
+		if (_hitpoint in ["hithull", "hitturret", "#structural"] && {_damage > 0.58 + random 0.2}) then {
+			if (!(_vehicle getVariable ["ace_cookoff_isCookingOff", false]) or {_newDamage > 0.40 + random 0.3}) then {
+				//systemchat (str _hitpoint + ": " + str((floor(_newdamage * 1000))/1000) + "||"  + str((floor(_damage * 1000))/1000));
+				if ((_hitpoint == "hitturret") && {(getNumber (_vehicle call CBA_fnc_getObjectConfig >> "ace_cookoff_ignoreTurret")) == 1}) exitWith {
+					//systemchat "ignoreTurret=true";
+				}; // ignore turrets like RCWS
+				//playSound "Alarm";
+				_vehicle call ace_cookoff_fnc_cookOff;
+			};
         };
     };
 

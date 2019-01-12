@@ -22,13 +22,16 @@ params [
 // _init 1 = Initial start up of code. Initialize parameters.
 // _init 2 = Remotely told to run this code with certain parameters.
 if (_init == 1 and {_vehicle getVariable ["ace_cookoff_isCookingOff", false]}) exitWith {
-	if (random 1 < 0.15 and (_vehicle getVariable ["ace_cookoff_cookingOffTime", 9999999]) < time) then {
+	if (random 1 < 0.06 and (_vehicle getVariable ["ace_cookoff_cookingOffTime", 9999999]) < time) then {
 		_vehicle setDamage 1;
 	};
 };
 if (_init == 1) then {
 	_vehicle setVariable ["ace_cookoff_isCookingOff", true, true];
 	_vehicle setVariable ["ace_cookoff_cookingOffTime", time + 1, true];
+};
+if (_init == 1 and random 1 < 0.10) exitWith {
+	_vehicle setDamage 1;
 };
 
 

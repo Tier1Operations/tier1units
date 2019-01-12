@@ -39,7 +39,7 @@ class CfgAmmo
 	class ammo_Penetrator_rhs_ammo_m72a7_rocket: rhs_ammo_M136_hedp_penetrator
 	{
 		caliber = 30;
-		hit = 330;
+		hit = 275;
 		warheadName = "HEAT";
 	};
 	
@@ -48,7 +48,7 @@ class CfgAmmo
 	{
 		hit = 110;
 		indirectHit = 25;
-		indirectHitRange = 5;
+		indirectHitRange = 4;
 		explosive = 0.8;
 		
 		submunitionAmmo = "ammo_Penetrator_rhs_ammo_m72a7_rocket";

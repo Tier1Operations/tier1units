@@ -105,43 +105,43 @@ class CfgAmmo
 	class ammo_Penetrator_tf47_m3maaws_HEAT: ammo_Penetrator_Base
 	{
 		caliber = 60;
-		hit = 550;
+		hit = 600;
 		warheadName = "TandemHEAT";
 	};
 	class ammo_Penetrator_tf47_m3maaws_HEDP: ammo_Penetrator_Base
 	{
 		caliber = 40;
-		hit = 300;
+		hit = 250;
 		warheadName = "HEAT";
 	};
 	class ammo_Penetrator_tf47_at4_m_HEAT: ammo_Penetrator_Base
 	{
 		caliber = 50;
-		hit = 425;
+		hit = 475;
 		warheadName = "HEAT";
 	};
 	class ammo_Penetrator_tf47_at4_m_HEDP: ammo_Penetrator_Base
 	{
 		caliber = 40;
-		hit = 300;
+		hit = 250;
 		warheadName = "HEAT";
 	};
 	class ammo_Penetrator_tf47_at4_m_HP: ammo_Penetrator_Base
 	{
 		caliber = 60;
-		hit = 450;
+		hit = 500;
 		warheadName = "HEAT";
 	};
 	class ammo_Penetrator_tf47_smaw_HEAA: ammo_Penetrator_Base
 	{
 		caliber = 60;
-		hit = 540;
+		hit = 600;
 		warheadName = "TandemHEAT";
 	};
 	class ammo_Penetrator_tf47_smaw_HEDP: ammo_Penetrator_Base
 	{
 		caliber = 40;
-		hit = 290;
+		hit = 250;
 		warheadName = "HEAT";
 	};
 	
@@ -150,9 +150,9 @@ class CfgAmmo
 	class RocketBase;
 	class tf47_m3maaws_HEAT: RocketBase
 	{
-		hit = 150;
+		hit = 140;
 		indirectHit = 30;
-		indirectHitRange = 8;
+		indirectHitRange = 4;
 		explosive = 0.7;
 		
 		submunitionAmmo = "ammo_Penetrator_tf47_m3maaws_HEAT";
@@ -232,9 +232,9 @@ class CfgAmmo
 	
 	class tf47_at4_m_HEAT: RocketBase
 	{
-		hit = 150;
+		hit = 135;
 		indirectHit = 30;
-		indirectHitRange = 8;
+		indirectHitRange = 4;
 		
 		submunitionAmmo = "ammo_Penetrator_tf47_at4_m_HEAT";
 		submunitionDirectionType = "SubmunitionModelDirection";
@@ -264,9 +264,9 @@ class CfgAmmo
 	
 	class tf47_at4_m_HP: tf47_at4_m_HEAT
 	{
-		hit = 175;
+		hit = 140;
 		indirectHit = 20;
-		indirectHitRange = 5;
+		indirectHitRange = 4;
 		
 		submunitionAmmo = "ammo_Penetrator_tf47_at4_m_HP";
 		submunitionDirectionType = "SubmunitionModelDirection";
@@ -280,9 +280,9 @@ class CfgAmmo
 
 	class tf47_smaw_HEAA: RocketBase
 	{
-		hit = 140;
+		hit = 145;
 		indirectHit = 25;
-		indirectHitRange = 7;
+		indirectHitRange = 4;
 		
 		submunitionAmmo = "ammo_Penetrator_tf47_smaw_HEAA";
 		submunitionDirectionType = "SubmunitionModelDirection";
@@ -296,9 +296,9 @@ class CfgAmmo
 
 	class tf47_smaw_HEDP: RocketBase
 	{
-		hit = 90;
+		hit = 95;
 		indirectHit = 45;
-		indirectHitRange = 9;
+		indirectHitRange = 10;
 		
 		submunitionAmmo = "ammo_Penetrator_tf47_smaw_HEDP";
 		submunitionDirectionType = "SubmunitionModelDirection";

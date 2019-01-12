@@ -6,7 +6,7 @@ class CfgPatches
 		weapons[] = {};
 		magazines[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"tf47_launchers","tf47_m3maaws","tf47_at4","tf47_smaw","tf47_launchers_rhs"};
+		requiredAddons[] = {"tf47_launchers","tf47_m3maaws","tf47_at4","tf47_smaw"};
 	};
 };
 

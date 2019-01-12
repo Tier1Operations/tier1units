@@ -202,9 +202,11 @@ if (_init == 1 and random 1 < 0.10) exitWith {
 	
 	if (local _vehicle) then {
 		
-		// Allow AI crew to stay inside immmobilized vehicle.
+		// Allow AI crew to stay inside immmobilized vehicle. But only if they are still inside, otherwise they might decide to enter a disabled vehicle.
 		if (random 1 < 0.9) then {
-			_vehicle allowCrewInImmobile true;
+			if ({alive _x and !isPlayer _x} count crew _vehicle > 0) then {
+				_vehicle allowCrewInImmobile true;
+			};
 		};
 		
 		// Damage vehicle.

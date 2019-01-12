@@ -9,8 +9,14 @@ filebank = toolsfolder + 'FileBank\\Filebank.exe';
 dssign = toolsfolder + 'DSSignFile\\dssignfile.exe';
 binmake = toolsfolder + 'BinMake\\binmake.exe';
 
+import os;
 import glob;
 pbos = glob.glob('t1_*');
+
+# We're now generating ALL the files, so delete any that may be extra.
+oldfiles = glob.glob(outfolder+"*");
+for file in oldfiles:
+	os.unlink(file);
 
 import subprocess;
 #    check_call(*popenargs, **kwargs)
@@ -42,7 +48,6 @@ for pbo in pbos:
 		outfolder + pbo + '.pbo'
 	]);
 
-import os;
 os.unlink('config.bin');
 
 

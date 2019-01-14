@@ -51,8 +51,8 @@ for pbo in pbos:
 os.unlink('config.bin');
 
 # Create timestamp
-#file = open('myfile.dat', 'w+')
 import time;
-today = time.strftime("%Y-%m-%d")
+today = time.strftime("%Y-%m-%d-%H%M");
+print(today);
 stamp = open (outfolder + today, "w+").close();
 

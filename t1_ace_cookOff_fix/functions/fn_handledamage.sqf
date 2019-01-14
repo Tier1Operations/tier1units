@@ -64,7 +64,7 @@ if (_simulationType == "tank") exitWith {
     if (_hitIndex in (ace_cookoff_cacheTankDuplicates getVariable (typeOf _vehicle))) then {
         _hitpoint = "#subturret";
     };
-
+	
     // ammo was hit, high chance for cook-off
     if (_hitpoint == _ammoLocationHitpoint) then {
 		//systemchat ("ammo hit/dam check: " + str (_damage > 0.5));
@@ -79,12 +79,8 @@ if (_simulationType == "tank") exitWith {
             };
             if (random 1 < _probability) then {
 				//systemchat "ammo hit/prob true";
-				if (!(_vehicle getVariable ["ace_cookoff_isCookingOff", false]) and random 1 < 0.06) then {
-					_vehicle setDamage 1;
-				} else {
-					//playSound "Alarm";
-					_vehicle call ace_cookoff_fnc_cookOff;
-				};
+				//playSound "Alarm";
+				_vehicle call ace_cookoff_fnc_cookOff;
             };
         };
     } else {

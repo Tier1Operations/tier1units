@@ -1,0 +1,7 @@
+///<'t1_doubleweapons_fix.pbo' properties via Mikero's dos tools, dll version 6.44>///
+prefix=t1_doubleweapons_fix
+Mikero=DePbo.dll.6.44
+version=18122914
+//Pbo Type is: Arma Addon
+//Sha: '967389AF8BDFF02D2A2B5DC62DB210E246B46F75'
+//////</properties>//////

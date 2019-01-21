@@ -47,9 +47,22 @@ class CfgWeapons
 	
 	class rhs_weap_m4a1_blockII: rhs_weap_m4a1
 	{
-		class Single;
-		class Burst;
-		class FullAuto;
+		recoil = "recoil_t1_m4_l";
+		
+		class Single: Single
+		{
+			dispersion = 0.00085;
+		};
+		
+		class Burst: Burst
+		{
+			dispersion = 0.00085;
+		};
+		
+		class FullAuto: FullAuto
+		{
+			dispersion = 0.00085;
+		};
 	};
 	
 	class rhs_weap_mk18: rhs_weap_m4a1_blockII

@@ -112,7 +112,7 @@ if (_animType in ["idl", "mov", "adj"]) then {
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.1718;
+					_duty = _duty * 1.1700;
 				} else {
 					_duty = _duty2;
 				};
@@ -121,11 +121,11 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// < 2kg
 			case (_weight < 44): {
 				// low ready jog
-				_duty2 = _duty * 0.8125;
+				_duty2 = _duty * 0.8050;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.1901;
+					_duty = _duty * 1.1800;
 				} else {
 					_duty = _duty2;
 				};
@@ -135,11 +135,11 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// < 3kg
 			case (_weight < 66): {
 				// low ready jog
-				_duty2 = _duty * 0.8250;
+				_duty2 = _duty * 0.8150;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.2085;
+					_duty = _duty * 1.2000;
 				} else {
 					_duty = _duty2;
 				};
@@ -149,11 +149,25 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// < 4kg
 			case (_weight < 88): {
 				// low ready jog
-				_duty2 = _duty * 0.8375;
+				_duty2 = _duty * 0.8300;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.2268;
+					_duty = _duty * 1.2300;
+				} else {
+					_duty = _duty2;
+				};
+			};
+			
+			
+			// < 4.5kg
+			case (_weight < 99): {
+				// low ready jog
+				_duty2 = _duty * 0.8400;
+				
+				if (_animName select [9, 3] == "tac") then {
+					// high ready jog/walk
+					_duty = _duty * 1.2500;
 				} else {
 					_duty = _duty2;
 				};
@@ -167,7 +181,21 @@ if (_animType in ["idl", "mov", "adj"]) then {
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.2451;
+					_duty = _duty * 1.2700;
+				} else {
+					_duty = _duty2;
+				};
+			};
+			
+			
+			// < 5.5kg
+			case (_weight < 121): {
+				// low ready jog
+				_duty2 = _duty * 0.8625;
+				
+				if (_animName select [9, 3] == "tac") then {
+					// high ready jog/walk
+					_duty = _duty * 1.2950;
 				} else {
 					_duty = _duty2;
 				};
@@ -177,11 +205,25 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// < 6kg
 			case (_weight < 132): {
 				// low ready jog
-				_duty2 = _duty * 0.8625;
+				_duty2 = _duty * 0.8750;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.2634;
+					_duty = _duty * 1.3200;
+				} else {
+					_duty = _duty2;
+				};
+			};
+			
+			
+			// < 6.5kg
+			case (_weight < 143): {
+				// low ready jog
+				_duty2 = _duty * 0.8900;
+				
+				if (_animName select [9, 3] == "tac") then {
+					// high ready jog/walk
+					_duty = _duty * 1.3500;
 				} else {
 					_duty = _duty2;
 				};
@@ -191,11 +233,25 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// < 7kg
 			case (_weight < 154): {
 				// low ready jog
-				_duty2 = _duty * 0.8875;
+				_duty2 = _duty * 0.9050;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.3000;
+					_duty = _duty * 1.3800;
+				} else {
+					_duty = _duty2;
+				};
+			};
+			
+			
+			// < 7.5kg
+			case (_weight < 165): {
+				// low ready jog
+				_duty2 = _duty * 0.9225;
+				
+				if (_animName select [9, 3] == "tac") then {
+					// high ready jog/walk
+					_duty = _duty * 1.4150;
 				} else {
 					_duty = _duty2;
 				};
@@ -205,11 +261,25 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// < 8kg
 			case (_weight < 176): {
 				// low ready jog
-				_duty2 = _duty * 0.9125;
+				_duty2 = _duty * 0.9400;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.3366;
+					_duty = _duty * 1.4500;
+				} else {
+					_duty = _duty2;
+				};
+			};
+			
+			
+			// < 8.5kg
+			case (_weight < 187): {
+				// low ready jog
+				_duty2 = _duty * 0.9600;
+				
+				if (_animName select [9, 3] == "tac") then {
+					// high ready jog/walk
+					_duty = _duty * 1.4900;
 				} else {
 					_duty = _duty2;
 				};
@@ -219,11 +289,25 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// < 9kg
 			case (_weight < 198): {
 				// low ready jog
-				_duty2 = _duty * 0.9325;
+				_duty2 = _duty * 0.9800;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.3659;
+					_duty = _duty * 1.5300;
+				} else {
+					_duty = _duty2;
+				};
+			};
+			
+			
+			// < 9.5kg
+			case (_weight < 209): {
+				// low ready jog
+				_duty2 = _duty * 1.0025;
+				
+				if (_animName select [9, 3] == "tac") then {
+					// high ready jog/walk
+					_duty = _duty * 1.5750;
 				} else {
 					_duty = _duty2;
 				};
@@ -233,11 +317,25 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// < 10kg
 			case (_weight < 220): {
 				// low ready jog
-				_duty2 = _duty * 0.9575;
+				_duty2 = _duty * 1.0250;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.4025;
+					_duty = _duty * 1.6200;
+				} else {
+					_duty = _duty2;
+				};
+			};
+			
+			
+			// < 10.5kg
+			case (_weight < 231): {
+				// low ready jog
+				_duty2 = _duty * 1.0500;
+				
+				if (_animName select [9, 3] == "tac") then {
+					// high ready jog/walk
+					_duty = _duty * 1.6700;
 				} else {
 					_duty = _duty2;
 				};
@@ -247,11 +345,11 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// < 11kg
 			case (_weight < 243): {
 				// low ready jog
-				_duty2 = _duty * 0.9825;
+				_duty2 = _duty * 1.0750;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.4392;
+					_duty = _duty * 1.7200;
 				} else {
 					_duty = _duty2;
 				};
@@ -261,11 +359,11 @@ if (_animType in ["idl", "mov", "adj"]) then {
 			// >= 11kg
 			default {
 				// low ready jog
-				_duty2 = _duty * 1.0075;
+				_duty2 = _duty * 1.1300;
 				
 				if (_animName select [9, 3] == "tac") then {
 					// high ready jog/walk
-					_duty = _duty * 1.4758;
+					_duty = _duty * 1.7500;
 				} else {
 					_duty = _duty2;
 				};

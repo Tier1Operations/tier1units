@@ -17,6 +17,7 @@ class CfgFunctions
 		{
 			file = "t1_ace_fatigue_fix\functions";
 			class getAnimDuty;
+			class getMetabolicCosts;
 		};
 	};
 };

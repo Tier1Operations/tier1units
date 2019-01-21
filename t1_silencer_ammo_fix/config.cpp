@@ -20,7 +20,7 @@ class CfgAmmo
 	{
 		airFriction = -0.0025;
 		caliber = 0.55;
-		hit = 9;
+		hit = 5;
 		supersonicCrackFar[] = {};
 		supersonicCrackNear[] = {};
 		typicalSpeed = 320;
@@ -47,7 +47,7 @@ class CfgAmmo
 	{
 		airFriction = -0.00275;
 		caliber = 0.65;
-		hit = 10;
+		hit = 8;
 		supersonicCrackFar[] = {};
 		supersonicCrackNear[] = {};
 		typicalSpeed = 320;
@@ -74,7 +74,7 @@ class CfgAmmo
 	{
 		airFriction = -0.0030;
 		caliber = 0.7;
-		hit = 10.5;
+		hit = 9;
 		supersonicCrackFar[] = {};
 		supersonicCrackNear[] = {};
 		typicalSpeed = 320;

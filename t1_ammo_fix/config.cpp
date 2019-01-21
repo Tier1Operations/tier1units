@@ -96,7 +96,7 @@ class CfgAmmo
 	};
 	//class T1_B_556x45_Ball_SD: B_556x45_Ball_Tracer_Red
 	//{
-	//	hit = 9;
+	//	hit = 5;
 	//	airFriction = -0.0025;
 	//	typicalSpeed = 325;
 	//	caliber = 0.55;
@@ -217,7 +217,7 @@ class CfgAmmo
 	};
 	//class ACE_762x51_Ball_Subsonic: B_762x51_Ball
 	//{
-	//	hit = 10.5;
+	//	hit = 9;
 	//	airFriction = -0.0030;
 	//	typicalSpeed = 320;
 	//	caliber = 0.7;
@@ -592,9 +592,9 @@ class CfgAmmo
 	};
 	//class T1_rhsusf_B_300winmag_SD: rhsusf_B_300winmag
 	//{
-	//	hit = 21;
+	//	hit = 8;
 	//	airFriction = -0.00275;
-	//	typicalSpeed = 325;
+	//	typicalSpeed = 320;
 	//	caliber = 0.65;
 	//};
 	class rhsusf_ammo_127x99_M33_Ball: B_127x99_Ball

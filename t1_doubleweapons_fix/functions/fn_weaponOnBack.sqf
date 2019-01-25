@@ -27,10 +27,22 @@ private _unit	= param [0, objNull, [objNull]];
 private _weapon	= param [1, "CURRENT", ["", []], [1, 2, 3]];
 
 //Check params
-if ((isNull _unit) || (!alive _unit)) exitWith {diag_log format ["%1: unit %2 is NULL or dead (%3)", _fnc_scriptName, _unit, damage _unit]; false};
-if (!local _unit) exitWith {diag_log format ["%1: unit %2 is not local [%3/%4/%5/%6]", _fnc_scriptName, _unit, player, getPlayerUID player, profileName, clientOwner]; false};
-if !((getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")) isEqualTo "soldier") exitWith {diag_log format ["%1: unit %2 is not soldier (%3)", _fnc_scriptName, _unit, getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")]; false};
-if !(_unit getVariable ["DW_enable", missionNamespace getVariable ["DW_enable", true]]) exitWith {diag_log format ["%1: DW disabled for unit %2 by %3(Unit)/%4(Global)", _fnc_scriptName, _unit, _unit getVariable ["DW_enable", -1], missionNamespace getVariable ["DW_enable", true]]; false};
+if ((isNull _unit) || (!alive _unit)) exitWith {
+	//diag_log format ["%1: unit %2 is NULL or dead (%3)", _fnc_scriptName, _unit, damage _unit];
+	false;
+};
+if (!local _unit) exitWith {
+	//diag_log format ["%1: unit %2 is not local [%3/%4/%5/%6]", _fnc_scriptName, _unit, player, getPlayerUID player, profileName, clientOwner];
+	false;
+};
+if !((getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")) isEqualTo "soldier") exitWith {
+	//diag_log format ["%1: unit %2 is not soldier (%3)", _fnc_scriptName, _unit, getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")];
+	false;
+};
+if !(_unit getVariable ["DW_enable", missionNamespace getVariable ["DW_enable", true]]) exitWith {
+	//diag_log format ["%1: DW disabled for unit %2 by %3(Unit)/%4(Global)", _fnc_scriptName, _unit, _unit getVariable ["DW_enable", -1], missionNamespace getVariable ["DW_enable", true]];
+	false;
+};
 
 switch (true) do
 {
@@ -44,7 +56,10 @@ switch (true) do
 				default				{""};
 			});
 		
-		if (_weaponClass == "") exitWith {diag_log format ["%1: is undefined type %2 or weapon is empty %3", _fnc_scriptName, _weapon, _weaponClass]; false};
+		if (_weaponClass == "") exitWith {
+			//diag_log format ["%1: is undefined type %2 or weapon is empty %3", _fnc_scriptName, _weapon, _weaponClass];
+			false;
+		};
 		
 		private _weaponType = (switch (getNumber (configFile >> "CfgWeapons" >> _weaponClass >> "type")) do
 			{
@@ -53,8 +68,14 @@ switch (true) do
 				default	{""};
 			});
 		
-		if (_weaponType == "") exitWith {diag_log format ["%1: undefined type %2 in config", _fnc_scriptName, _weaponClass]; false};
-		if !(_unit getVariable [format ["DW_enable_%1", _weaponType], missionNamespace getVariable [format ["DW_enable_%1", _weaponType], true]]) exitWith {diag_log format ["%1: weapon with type %2 disabled for unit %3 by (%4(Unit)/%5(Global))", _fnc_scriptName, _weaponType, _unit, _unit getVariable [format ["DW_enable_%1", _weaponType], -1], missionNamespace getVariable [format ["DW_enable_%1", _weaponType], true]]; false};
+		if (_weaponType == "") exitWith {
+			//diag_log format ["%1: undefined type %2 in config", _fnc_scriptName, _weaponClass];
+			false;
+		};
+		if !(_unit getVariable [format ["DW_enable_%1", _weaponType], missionNamespace getVariable [format ["DW_enable_%1", _weaponType], true]]) exitWith {
+			//diag_log format ["%1: weapon with type %2 disabled for unit %3 by (%4(Unit)/%5(Global))", _fnc_scriptName, _weaponType, _unit, _unit getVariable [format ["DW_enable_%1", _weaponType], -1], missionNamespace getVariable [format ["DW_enable_%1", _weaponType], true]];
+			false;
+		};
 
 		private _weaponAttachments	= [];
 		private _weaponMagazines	= [];
@@ -70,7 +91,9 @@ switch (true) do
 						{
 							case (_x isEqualType ""):	{_weaponAttachments pushBack _x};
 							case (_x isEqualType []):	{_weaponMagazines pushBack _x};
-							default						{diag_log format ["%1: undefined type of %2 in weapons items", _fnc_scriptName, _x]};
+							default						{
+								//diag_log format ["%1: undefined type of %2 in weapons items", _fnc_scriptName, _x];
+							};
 						};
 					};
 				} forEach _x;
@@ -96,10 +119,10 @@ switch (true) do
 		//Add weapon to variable
 		if ((_unit getVariable ["DW_weapons", ""]) isEqualType "") then
 		{
-			diag_log format ["%1: %2 add variable %3", _fnc_scriptName, _unit, [[_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]]];
+			//diag_log format ["%1: %2 add variable %3", _fnc_scriptName, _unit, [[_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]]];
 			_unit setVariable ["DW_weapons", [[_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines, _weight]], false];
 		} else {
-			diag_log format ["%1: %2 add weapon %3", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]];
+			//diag_log format ["%1: %2 add weapon %3", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]];
 			(_unit getVariable ["DW_weapons", ""]) pushBack [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines, _weight];
 		};
 		
@@ -114,7 +137,10 @@ switch (true) do
 		private _weaponMagazines	= [];
 		
 		//Check weapon
-		if (_weaponClass == "") exitWith {diag_log format ["%1: weapon in %2 is empty", _fnc_scriptName, _weapon]; false};
+		if (_weaponClass == "") exitWith {
+			//diag_log format ["%1: weapon in %2 is empty", _fnc_scriptName, _weapon];
+			false;
+		};
 				
 		private _weaponType = (switch (getNumber (configFile >> "CfgWeapons" >> _weaponClass >> "type")) do
 			{
@@ -123,8 +149,14 @@ switch (true) do
 				default	{""};
 			});
 		
-		if (_weaponType == "") exitWith {diag_log format ["%1: undefined type %2 in config", _fnc_scriptName, _weaponClass]; false};
-		if !(_unit getVariable [format ["DW_enable_%1", _weaponType], missionNamespace getVariable [format ["DW_enable_%1", _weaponType], true]]) exitWith {diag_log format ["%1: weapon with type %2 disabled for unit %3 by (%4(Unit)/%5(Global))", _fnc_scriptName, _weaponType, _unit, _unit getVariable [format ["DW_enable_%1", _weaponType], -1], missionNamespace getVariable [format ["DW_enable_%1", _weaponType], true]]; false};
+		if (_weaponType == "") exitWith {
+			//diag_log format ["%1: undefined type %2 in config", _fnc_scriptName, _weaponClass];
+			false;
+		};
+		if !(_unit getVariable [format ["DW_enable_%1", _weaponType], missionNamespace getVariable [format ["DW_enable_%1", _weaponType], true]]) exitWith {
+			//diag_log format ["%1: weapon with type %2 disabled for unit %3 by (%4(Unit)/%5(Global))", _fnc_scriptName, _weaponType, _unit, _unit getVariable [format ["DW_enable_%1", _weaponType], -1], missionNamespace getVariable [format ["DW_enable_%1", _weaponType], true]];
+			false;
+		};
 		
 		//Get attachments
 		{
@@ -139,10 +171,10 @@ switch (true) do
 		//Add weapon to variable
 		if ((_unit getVariable ["DW_weapons", ""]) isEqualType "") then
 		{
-			diag_log format ["%1: %2 add variable %3", _fnc_scriptName, _unit, [[_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]]];
+			//diag_log format ["%1: %2 add variable %3", _fnc_scriptName, _unit, [[_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]]];
 			_unit setVariable ["DW_weapons", [[_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]], false];
 		} else {
-			diag_log format ["%1: %2 add weapon %3", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]];
+			//diag_log format ["%1: %2 add weapon %3", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]];
 			(_unit getVariable ["DW_weapons", ""]) pushBack [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines];
 		};
 		
@@ -151,7 +183,7 @@ switch (true) do
 	};
 	default
 	{
-		diag_log format ["%1: undefined type of %2", _fnc_scriptName, _weapon];
+		//diag_log format ["%1: undefined type of %2", _fnc_scriptName, _weapon];
 		
 		//Return
 		false

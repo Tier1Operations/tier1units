@@ -20,7 +20,9 @@ scriptName _fnc_scriptName;
 _unit = param [0, objNull, [objNull]];
 
 // --------- Check params --------- //
-if ((isNull _unit) || (!alive _unit)) exitWith { diag_log format ["%1: unit %2 is NULL or dead (%3)", _fnc_scriptName, _unit, damage _unit]};
+if ((isNull _unit) || (!alive _unit)) exitWith {
+	//diag_log format ["%1: unit %2 is NULL or dead (%3)", _fnc_scriptName, _unit, damage _unit];
+};
 
 if (isNil {_unit getVariable "DW_weapons"}) then {
 	private _weapons = getArray (configFile >> "CfgVehicles" >> (typeOf _unit) >> "DW_weapons");
@@ -54,9 +56,11 @@ if (isNil {_unit getVariable "DW_forceWalk"}) then {_unit setVariable ["DW_force
 if (isNil {_unit getVariable "DW_maxWeapons"}) then {if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _unit) >> "DW_maxWeapons")) > 1) then {_unit setVariable ["DW_maxWeapons", getNumber (configFile >> "CfgVehicles" >> (typeOf _unit) >> "DW_maxWeapons"), false]}};
 if (isNil {_unit getVariable "DW_maxWeaponsHeavy"}) then {if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _unit) >> "DW_maxWeaponsHeavy")) > 1) then {_unit setVariable ["DW_maxWeaponsHeavy", getNumber (configFile >> "CfgVehicles" >> (typeOf _unit) >> "DW_maxWeaponsHeavy"), false]}};
 
-if (!local _unit) exitWith { diag_log format ["%1: type %2 is not local [%3/%4/%5/%6]", _fnc_scriptName, _unit, player, getPlayerUID player, profileName, clientOwner]};
+if (!local _unit) exitWith {
+	//diag_log format ["%1: type %2 is not local [%3/%4/%5/%6]", _fnc_scriptName, _unit, player, getPlayerUID player, profileName, clientOwner];
+};
 
-diag_log format ["%1: init %2", _fnc_scriptName, _unit];
+//diag_log format ["%1: init %2", _fnc_scriptName, _unit];
 
 _unit setUnitTrait ["loadCoef", 1.0, true];
 _unit forceWalk false;

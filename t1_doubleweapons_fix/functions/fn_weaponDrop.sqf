@@ -30,21 +30,48 @@ private _weapon		= param [1, "CURRENT", [0, [], "", true], [3, 4]];
 private _vehicle	= param [2, true, [true]];
 
 //Check params
-if (isNull _unit) exitWith {diag_log format ["%1: unit %2 is NULL", _fnc_scriptName, _unit]; objNull};
-if (!local _unit) exitWith {diag_log format ["%1: unit %2 is not local [%3/%4/%5/%6]", _fnc_scriptName, _unit, player, getPlayerUID player, profileName, clientOwner]; objNull};
-if !((getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")) isEqualTo "soldier") exitWith {diag_log format ["%1: unit %2 is not soldier (%3)", _fnc_scriptName, _unit, getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")]; objNull};
-if !(_unit getVariable ["DW_enable", missionNamespace getVariable ["DW_enable", true]]) exitWith {diag_log format ["%1: DW disabled for unit %2 by %3(Unit)/%4(Global)", _fnc_scriptName, _unit, _unit getVariable ["DW_enable", -1], missionNamespace getVariable ["DW_enable", true]]; objNull};
+if (isNull _unit) exitWith {
+	//diag_log format ["%1: unit %2 is NULL", _fnc_scriptName, _unit];
+	objNull;
+};
+if (!local _unit) exitWith {
+	//diag_log format ["%1: unit %2 is not local [%3/%4/%5/%6]", _fnc_scriptName, _unit, player, getPlayerUID player, profileName, clientOwner];
+	objNull;
+};
+if !((getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")) isEqualTo "soldier") exitWith {
+	//diag_log format ["%1: unit %2 is not soldier (%3)", _fnc_scriptName, _unit, getText (configFile >> "CfgVehicles" >> (typeOf _unit) >> "simulation")];
+	objNull;
+};
+if !(_unit getVariable ["DW_enable", missionNamespace getVariable ["DW_enable", true]]) exitWith {
+	//diag_log format ["%1: DW disabled for unit %2 by %3(Unit)/%4(Global)", _fnc_scriptName, _unit, _unit getVariable ["DW_enable", -1], missionNamespace getVariable ["DW_enable", true]];
+	objNull;
+};
 
 private _hintMessage = {
 	private _unitHint = _this select 0;
 	private _weaponHint = _this select 1;
-	if (_unitHint isEqualTo player) then
-	{
+	if (_unitHint isEqualTo player) then {
 		hint format ["You picked up too many weapons and had to drop the:\n%1", getText (configFile >> "CfgWeapons" >> _weaponHint >> "displayName")];
 	} else {
-		if (player isEqualTo (leader _unitHint)) then
-		{
+		if (player isEqualTo (leader _unitHint)) then {
 			hint format ["%1 picked up too many weapons and had to drop the:\n%2", name _unitHint, getText (configFile >> "CfgWeapons" >> _weaponHint >> "displayName")];
+		};
+	};
+};
+
+private _hintMessageDropAll = {
+	private _unitHint = _this select 0;
+	private _WeaponsListHint = _this select 1;
+	private _str = "";
+	{
+		_str = _str + (getText (configFile >> "CfgWeapons" >> _x >> "displayName")) + "\n";
+	} forEach _WeaponsListHint;
+	
+	if (_unitHint isEqualTo player) then {
+		hint format ["You dropped the weapons on your back:\n%1", _str];
+	} else {
+		if (player isEqualTo (leader _unitHint)) then {
+			hint format ["%1 dropped the weapons on his back:\n%2", name _unitHint, _str];
 		};
 	};
 };
@@ -70,7 +97,10 @@ switch (true) do
 				};
 			});
 		
-		if (_weaponType == "") exitWith {diag_log format ["%1: undefined type for weapon %2", _fnc_scriptName, _weapon]; objNull};
+		if (_weaponType == "") exitWith {
+			//diag_log format ["%1: undefined type for weapon %2", _fnc_scriptName, _weapon];
+			objNull;
+		};
 		
 		private _weaponClass = "";
 		private _weaponAttachments = [];
@@ -115,7 +145,7 @@ switch (true) do
 				};
 			} forEach (_weaponMagazines);
 				
-			diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
+			//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
 			
 			_objectParent;
 		} else {
@@ -140,18 +170,25 @@ switch (true) do
 			_weaponHolder setPosATL [(getPosATL _unit) select 0, (getPosATL _unit) select 1, 0];
 			_weaponHolder setDir (getDir _unit);
 				
-			diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
+			//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
 			
 			_weaponHolder;
 		};
 	};
 	case (_weapon isEqualType 0):
 	{
-		if ((count (_unit getVariable ["DW_weapons", []])) == 0) exitWith {diag_log format ["%1: unit %2 dont have weapons", _fnc_scriptName, _unit]; objNull};
-		if (_weapon >= (count (_unit getVariable ["DW_weapons", []]))) exitWith {diag_log format ["%1: weapon index is higher then %2 (%3)", _fnc_scriptName, (count (_unit getVariable ["DW_weapons", []])) - 1, _weapon]; objNull};
+		if ((count (_unit getVariable ["DW_weapons", []])) == 0) exitWith {
+			//diag_log format ["%1: unit %2 dont have weapons", _fnc_scriptName, _unit];
+			objNull;
+		};
+		if (_weapon >= (count (_unit getVariable ["DW_weapons", []]))) exitWith {
+			//diag_log format ["%1: weapon index is higher then %2 (%3)", _fnc_scriptName, (count (_unit getVariable ["DW_weapons", []])) - 1, _weapon];
+			objNull;
+		};
 		
 		if (_weapon < 0) then
 		{
+			private _weaponsList = [];
 			if (_vehicle && (!isNull (objectParent _unit))) then
 			{
 				private _objectParent = objectParent _unit;
@@ -163,8 +200,7 @@ switch (true) do
 					private _weaponClass = _weaponData param [1, "", [""]];
 					private _weaponAttachments = [];
 					private _weaponMagazines = [];
-					
-					[_unit, _weaponClass] call _hintMessage;
+					_weaponsList pushback _weaponClass;
 					
 					{
 						_weaponAttachments pushBack ([_x] param [0, "", [""]]);
@@ -190,10 +226,11 @@ switch (true) do
 						};
 					} forEach (_weaponMagazines);
 				
-					diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
+					//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
 				};
 				
 				_objectParent;
+				
 			} else {
 				private _weaponHolder = createVehicle ["GroundWeaponHolder", getPosATL _unit, [], 0, "CAN_COLLIDE"];
 				
@@ -204,8 +241,7 @@ switch (true) do
 					private _weaponClass = _weaponData param [1, "", [""]];
 					private _weaponAttachments = [];
 					private _weaponMagazines = [];
-					
-					[_unit, _weaponClass] call _hintMessage;
+					_weaponsList pushback _weaponClass;
 					
 					{
 						_weaponAttachments pushBack ([_x] param [0, "", [""]]);
@@ -231,13 +267,16 @@ switch (true) do
 						};
 					} forEach (_weaponMagazines);
 				
-					diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
+					//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
 				};
 				
 				_weaponHolder setPosATL [(getPosATL _unit) select 0, (getPosATL _unit) select 1, 0];
 				_weaponHolder setDir (getDir _unit);
 				_weaponHolder;
 			};
+			
+			[_unit, _weaponsList] call _hintMessageDropAll;
+			
 		} else {
 			private _weaponData = (_unit getVariable ["DW_weapons", []]) deleteAt _weapon;
 			private _weaponType = _weaponData param [0, "", [""]];
@@ -275,7 +314,7 @@ switch (true) do
 					};
 				} forEach (_weaponMagazines);
 				
-				diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
+				//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
 			
 				_objectParent;
 			} else {
@@ -300,7 +339,7 @@ switch (true) do
 				_weaponHolder setPosATL [(getPosATL _unit) select 0, (getPosATL _unit) select 1, 0];
 				_weaponHolder setDir (getDir _unit);
 				
-				diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
+				//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
 				
 				_weaponHolder;
 			};
@@ -335,8 +374,14 @@ switch (true) do
 		
 		[_unit, _weaponClass] call _hintMessage;
 		
-		if (_weaponType == "") exitWith {diag_log format ["%1: undefined type %2 in config", _fnc_scriptName, _weaponClass]; objNull};
-		if !([_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines] in _weapons) exitWith {diag_log format ["%1: %2 not found in DW_weapons %3 for unit %4", _fnc_scriptName, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weapons, _unit]; objNull};
+		if (_weaponType == "") exitWith {
+			//diag_log format ["%1: undefined type %2 in config", _fnc_scriptName, _weaponClass];
+			objNull;
+		};
+		if !([_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines] in _weapons) exitWith {
+			//diag_log format ["%1: %2 not found in DW_weapons %3 for unit %4", _fnc_scriptName, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weapons, _unit];
+			objNull;
+		};
 		
 		_weapons deleteAt (_weapons find [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines]);
 		
@@ -359,8 +404,8 @@ switch (true) do
 					_objectParent addMagazineAmmoCargo [_x param [0, "", [""]], 1, _x param [1, 0, [0]]];
 				};
 			} forEach (_weaponMagazines);
-				
-			diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
+			
+			//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
 			
 			_objectParent;
 		} else {
@@ -384,8 +429,8 @@ switch (true) do
 			
 			_weaponHolder setPosATL [(getPosATL _unit) select 0, (getPosATL _unit) select 1, 0];
 			_weaponHolder setDir (getDir _unit);
-				
-			diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
+			
+			//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
 			
 			_weaponHolder;
 		};
@@ -412,7 +457,10 @@ switch (true) do
 				} forEach (_unit getVariable ["DW_weapons", []]);
 			});
 		
-		if (!_isFind) exitWith {diag_log format ["%1: weapon heavy/light not foun for unit %2 (%3/%4)", _fnc_scriptName, _unit, _weapon, _unit getVariable ["DW_weapons", []]]; objNull};
+		if (!_isFind) exitWith {
+			//diag_log format ["%1: weapon heavy/light not foun for unit %2 (%3/%4)", _fnc_scriptName, _unit, _weapon, _unit getVariable ["DW_weapons", []]];
+			objNull;
+		};
 		
 		
 		private _weaponType = _weaponData param [0, "", [""]];
@@ -449,8 +497,8 @@ switch (true) do
 					_objectParent addMagazineAmmoCargo [_x param [0, "", [""]], 1, _x param [1, 0, [0]]];
 				};
 			} forEach (_weaponMagazines);
-				
-			diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
+			
+			//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _objectParent];
 			
 			_objectParent;
 		} else {
@@ -474,8 +522,8 @@ switch (true) do
 			
 			_weaponHolder setPosATL [(getPosATL _unit) select 0, (getPosATL _unit) select 1, 0];
 			_weaponHolder setDir (getDir _unit);
-				
-			diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
+			
+			//diag_log format ["%1: unit %2 drop %3 to %4", _fnc_scriptName, _unit, [_weaponType, _weaponClass, _weaponAttachments, _weaponMagazines], _weaponHolder];
 			
 			_weaponHolder;
 		};

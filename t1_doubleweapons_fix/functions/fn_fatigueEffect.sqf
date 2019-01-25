@@ -20,7 +20,9 @@ missionNamespace setVariable ["DW_maxWeapons", 4, false];
 missionNamespace setVariable ["DW_maxWeaponsHeavy", 4, false];
 missionNamespace setVariable ["DW_lightMaxMass", 9999, false];
 
-if (!isNil {missionNamespace getVariable "DW_fatigueEffect"}) exitWith {diag_log format ["%1: Fatigue effect already init", _fnc_scriptName]};
+if (!isNil {missionNamespace getVariable "DW_fatigueEffect"}) exitWith {
+	//diag_log format ["%1: Fatigue effect already init", _fnc_scriptName];
+};
 
 if (hasInterface) then
 {

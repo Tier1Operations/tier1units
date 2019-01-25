@@ -17,7 +17,9 @@
 scriptName _fnc_scriptName;
 
 if (!hasInterface) exitWith {};
-if (!isNil {missionNamespace getVariable "DW_weaponsShow"}) exitWith {diag_log format ["%1: weapons show already init", _fnc_scriptName]};
+if (!isNil {missionNamespace getVariable "DW_weaponsShow"}) exitWith {
+	//diag_log format ["%1: weapons show already init", _fnc_scriptName];
+};
 
 missionNamespace setVariable [
 	"DW_weaponsShow",
@@ -38,7 +40,7 @@ missionNamespace setVariable [
 					private _countWeaponsHolders	= count _weaponsHolders;
 					
 					{
-						if !((_x select 1) isEqualTo (_weapons select _forEachIndex)) then
+						if (count _weapons > 0 and {!((_x select 1) isEqualTo (_weapons select _forEachIndex))}) then
 						{
 							clearWeaponCargo (_x select 0);
 							(_x select 0) addWeaponCargo [(_weapons select _forEachIndex) select 1, 1];

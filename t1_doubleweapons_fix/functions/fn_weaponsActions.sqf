@@ -18,7 +18,25 @@ scriptName _fnc_scriptName;
 
 //Check
 if (!hasInterface) exitWith {};
-if (!isNil {missionNamespace getVariable "DW_weaponsActions"}) exitWith {diag_log format ["%1: weapons actions already init", _fnc_scriptName]};
+if (!isNil {missionNamespace getVariable "DW_weaponsActions"}) exitWith {
+	//diag_log format ["%1: weapons actions already init", _fnc_scriptName];
+};
+
+
+
+addMissionEventHandler ["Ended", {
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack1"]] call ace_interact_menu_fnc_removeActionFromObject;
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack2"]] call ace_interact_menu_fnc_removeActionFromObject;
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack3"]] call ace_interact_menu_fnc_removeActionFromObject;
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack4"]] call ace_interact_menu_fnc_removeActionFromObject;
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack5"]] call ace_interact_menu_fnc_removeActionFromObject;
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack6"]] call ace_interact_menu_fnc_removeActionFromObject;
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack7"]] call ace_interact_menu_fnc_removeActionFromObject;
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack8"]] call ace_interact_menu_fnc_removeActionFromObject;
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack9"]] call ace_interact_menu_fnc_removeActionFromObject;
+	[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack10"]] call ace_interact_menu_fnc_removeActionFromObject;
+}];
+
 
 missionNamespace setVariable [
 	"DW_weaponsActions", 
@@ -161,30 +179,43 @@ missionNamespace setVariable [
 			
 			*/
 			
-			if ((player getVariable ["DW_maxWeaponsOld", 0]) < (player getVariable ["DW_maxWeapons", missionNamespace getVariable "DW_maxWeapons"])) then
-			{
-				for "_i" from 1 to (player getVariable ["DW_maxWeapons", missionNamespace getVariable ["DW_maxWeapons", 3]]) step 1 do 
+			if (getClientStateNumber < 11 and getClientStateNumber > 8) then {
+				if ((player getVariable ["DW_maxWeaponsOld", 0]) < (player getVariable ["DW_maxWeapons", missionNamespace getVariable "DW_maxWeapons"])) then
 				{
-					_condition	= compile format ["(_player getVariable ['DW_enable', missionNamespace getVariable 'DW_enable']) && ((count (_player getVariable ['DW_weapons', []])) > %1)", _i - 1];
-					_statement	= compile format ["
-						[player, %1] spawn DW_fnc_weaponFromBack;
-					", _i - 1];
-					_action		= [
-						format ["DW_weaponFromBack%1", _i],
-						format [localize "STR_DW_fromBack", _i], 
-						"A3\ui_f\data\gui\cfg\hints\rifle_ca.paa",
-						_statement,
-						_condition
-					] call ACE_interact_menu_fnc_createAction;
-					[
-						player,
-						1,
-						["ACE_SelfActions", "ACE_Equipment"],
-						_action
-					] call ACE_interact_menu_fnc_addActionToObject;
+					for "_i" from 1 to (player getVariable ["DW_maxWeapons", missionNamespace getVariable ["DW_maxWeapons", 3]]) step 1 do 
+					{
+						_condition	= compile format ["(_player getVariable ['DW_enable', missionNamespace getVariable 'DW_enable']) && ((count (_player getVariable ['DW_weapons', []])) > %1)", _i - 1];
+						_statement	= compile format ["
+							[player, %1] spawn DW_fnc_weaponFromBack;
+						", _i - 1];
+						_action		= [
+							format ["DW_weaponFromBack%1", _i],
+							format [localize "STR_DW_fromBack", _i], 
+							"A3\ui_f\data\gui\cfg\hints\rifle_ca.paa",
+							_statement,
+							_condition
+						] call ACE_interact_menu_fnc_createAction;
+						[
+							player,
+							1,
+							["ACE_SelfActions", "ACE_Equipment"],
+							_action
+						] call ACE_interact_menu_fnc_addActionToObject;
+					};
+					
+					player setVariable ["DW_maxWeaponsOld", (player getVariable ["DW_maxWeapons", missionNamespace getVariable ["DW_maxWeapons", 3]]), false];
 				};
-				
-				player setVariable ["DW_maxWeaponsOld", (player getVariable ["DW_maxWeapons", missionNamespace getVariable ["DW_maxWeapons", 3]]), false];
+			} else {
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack1"]] call ace_interact_menu_fnc_removeActionFromObject;
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack2"]] call ace_interact_menu_fnc_removeActionFromObject;
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack3"]] call ace_interact_menu_fnc_removeActionFromObject;
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack4"]] call ace_interact_menu_fnc_removeActionFromObject;
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack5"]] call ace_interact_menu_fnc_removeActionFromObject;
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack6"]] call ace_interact_menu_fnc_removeActionFromObject;
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack7"]] call ace_interact_menu_fnc_removeActionFromObject;
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack8"]] call ace_interact_menu_fnc_removeActionFromObject;
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack9"]] call ace_interact_menu_fnc_removeActionFromObject;
+				[player,1,["ACE_SelfActions", "ACE_Equipment", "DW_weaponFromBack10"]] call ace_interact_menu_fnc_removeActionFromObject;
 			};
 		}
 	],

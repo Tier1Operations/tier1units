@@ -5,3 +5,4 @@
 config.bin
 config.py
 __pycache__/
+binmakerules.txt

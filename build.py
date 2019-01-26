@@ -1,29 +1,22 @@
 #
-ignorefiles = ['binMakeRules.txt','build.py','readme.md','config.py','__pycache__'];
-
 import os;
 import subprocess;
 import glob;
 
-defaultconfig = r"""
-# See also binMakeRules.txt
-toolsfolder = 'E:\\SteamLibrary\\steamapps\\common\\Arma 3 Tools\\';
-outfolder = 'E:\\Stuff\\Arma3_Mod_Stuff\\Build PBOs\\addons\\';
-#privkey = 'E:\\Stuff\Arma3_Mod_Stuff\\Key\\tier1ops.biprivatekey';
-privkey = '';
-""";
+ignorefiles = ['binMakeRules.txt','readme.md','__pycache__'];
+ignorefiles = ignorefiles + glob.glob(".*") + glob.glob("*.py") + glob.glob("*.txt");
+
 if not os.path.isfile("config.py"):
-	print ("Writing default config !");
-	conf = open("config.py","w");
-	conf.write(defaultconfig);
-	conf.close();
+	print ("No config file, create config.py from template.");
+	os._exit(0);
+
+if not os.path.isfile("binMakeRules.txt"):
+	print ("Missing binMakeRules.txt - create from template");
+	os._exit(0);
 
 import config;
 if config.privkey == '':
 	print ("No private key. Not producing signatures.");
-
-# ignore all . files implicitly
-ignorefiles = ignorefiles + glob.glob(".*");
 
 #specific tools
 filebank = config.toolsfolder + 'FileBank\\Filebank.exe';

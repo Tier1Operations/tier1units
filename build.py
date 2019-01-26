@@ -22,6 +22,8 @@ import config;
 toolsfolder = config.toolsfolder;
 outfolder = config.outfolder;
 privkey = config.privkey;
+if privkey == '':
+	print ("No private key. Not producing signatures.");
 
 # ignore all . files implicitly
 ignorefiles = ignorefiles + glob.glob(".*");

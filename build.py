@@ -1,12 +1,29 @@
 #
-toolsfolder = 'E:\\SteamLibrary\\steamapps\\common\\Arma 3 Tools\\';
-outfolder = 'E:\\Stuff\\Arma3_Mod_Stuff\\Build PBOs\\addons\\';
-privkey = 'E:\\Stuff\Arma3_Mod_Stuff\\Key\\tier1ops.biprivatekey';
-ignorefiles = ['binMakeRules.txt','build.py','readme.md'];
+ignorefiles = ['binMakeRules.txt','build.py','readme.md','config.py','__pycache__'];
 
 import os;
 import subprocess;
 import glob;
+
+defaultconfig = r"""
+# See also binMakeRules.txt
+toolsfolder = 'E:\\SteamLibrary\\steamapps\\common\\Arma 3 Tools\\';
+outfolder = 'E:\\Stuff\\Arma3_Mod_Stuff\\Build PBOs\\addons\\';
+#privkey = 'E:\\Stuff\Arma3_Mod_Stuff\\Key\\tier1ops.biprivatekey';
+privkey = '';
+""";
+if not os.path.isfile("config.py"):
+	print ("Writing default config !");
+	conf = open("config.py","w");
+	conf.write(defaultconfig);
+	conf.close();
+
+import config;
+toolsfolder = config.toolsfolder;
+outfolder = config.outfolder;
+privkey = config.privkey;
+if privkey == '':
+	print ("No private key. Not producing signatures.");
 
 # ignore all . files implicitly
 ignorefiles = ignorefiles + glob.glob(".*");
@@ -45,11 +62,12 @@ for pbo in pbos:
 			outfolder,
 			pbo
 		]);
-		subprocess.check_call([
-			dssign,
-			privkey,
-			outfolder + pbo + '.pbo'
-		]);
+		if privkey != '' :
+			subprocess.check_call([
+				dssign,
+				privkey,
+				outfolder + pbo + '.pbo'
+			]);
 
 os.unlink('config.bin');
 

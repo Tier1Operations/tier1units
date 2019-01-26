@@ -40,7 +40,9 @@ if (hasInterface) then
 						private _weapons	= (_unit getVariable "DW_weapons");
 						private _weaponsOld	= _unit getVariable "DW_weaponsOld";
 						
-						if (!(_weapons isEqualTo _weaponsOld) || (_load != _loadOld)) then
+						private _nil = call {isNil "_load" or isNil "_loadOld" or isNil "_weapons" or isNil "_weaponsOld"};
+						
+						if (!_nil and {!(_weapons isEqualTo _weaponsOld) || (_load != _loadOld)}) then
 						{
 							/*
 							
@@ -168,7 +170,9 @@ if (hasInterface) then
 					private _weapons	= (_unit getVariable "DW_weapons");
 					private _weaponsOld	= _unit getVariable "DW_weaponsOld";
 					
-					if (!(_weapons isEqualTo _weaponsOld) || (_load != _loadOld)) then
+					private _nil = call {isNil "_load" or isNil "_loadOld" or isNil "_weapons" or isNil "_weaponsOld"};
+					
+					if (!_nil and {!(_weapons isEqualTo _weaponsOld) || (_load != _loadOld)}) then
 					{
 						/*
 						

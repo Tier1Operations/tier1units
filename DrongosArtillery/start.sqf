@@ -81,7 +81,7 @@ dtaControlRunning = false;
 
 // Rounds that can be used for airburst fire.
 if (isNil "dtaAirburstRounds") then {
-	dtaAirburstRounds = ["8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_guided","8Rnd_82mm_Mo_LG","32Rnd_155mm_Mo_shells","2Rnd_155mm_Mo_guided","2Rnd_155mm_Mo_LG","12Rnd_230mm_rockets","rhs_1Rnd_m821_HE","RHS_mag_m1_he_12","rhs_mag_HE_2a33","rhs_mag_3vo18_10","rhs_mag_3of56_10"];
+	dtaAirburstRounds = ["8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_guided","8Rnd_82mm_Mo_LG","32Rnd_155mm_Mo_shells","2Rnd_155mm_Mo_guided","2Rnd_155mm_Mo_LG","12Rnd_230mm_rockets","rhs_1Rnd_m821_HE","RHS_mag_m1_he_12","rhs_mag_HE_2a33","rhs_mag_3vo18_10","rhs_mag_3of56_10","rhs_mag_155mm_m795_28"];
 };
 
 
@@ -118,7 +118,7 @@ if (isNil "dtaGPSSeekerTypes") then {
 // Will go where the laser is.
 // If it loses lock, it will randomly hit around the last known position of the laser.
 if (isNil "dtaLaserTypes") then {
-	dtaLaserTypes = ["8Rnd_82mm_Mo_LG","rhs_mag_LASER_2a33"];
+	dtaLaserTypes = ["8Rnd_82mm_Mo_LG","rhs_mag_LASER_2a33","rhs_mag_155mm_m712_2"];
 };
 
 

@@ -19,22 +19,19 @@ if not os.path.isfile("config.py"):
 	conf.close();
 
 import config;
-toolsfolder = config.toolsfolder;
-outfolder = config.outfolder;
-privkey = config.privkey;
-if privkey == '':
+if config.privkey == '':
 	print ("No private key. Not producing signatures.");
 
 # ignore all . files implicitly
 ignorefiles = ignorefiles + glob.glob(".*");
 
 #specific tools
-filebank = toolsfolder + 'FileBank\\Filebank.exe';
-dssign = toolsfolder + 'DSSignFile\\dssignfile.exe';
-binmake = toolsfolder + 'BinMake\\binmake.exe';
+filebank = config.toolsfolder + 'FileBank\\Filebank.exe';
+dssign = config.toolsfolder + 'DSSignFile\\dssignfile.exe';
+binmake = config.toolsfolder + 'BinMake\\binmake.exe';
 
 # We're now generating ALL the files, so delete any that may be extra.
-oldfiles = glob.glob(outfolder+"*");
+oldfiles = glob.glob(config.outfolder+"*");
 for file in oldfiles:
 	os.unlink(file);
 
@@ -59,14 +56,14 @@ for pbo in pbos:
 		subprocess.check_call([
 			filebank,
 			'-dst',
-			outfolder,
+			config.outfolder,
 			pbo
 		]);
-		if privkey != '' :
+		if config.privkey != '' :
 			subprocess.check_call([
 				dssign,
-				privkey,
-				outfolder + pbo + '.pbo'
+				config.privkey,
+				config.outfolder + pbo + '.pbo'
 			]);
 
 os.unlink('config.bin');
@@ -75,5 +72,5 @@ os.unlink('config.bin');
 import time;
 today = time.strftime("%Y-%m-%d-%H%M");
 print(today);
-stamp = open (outfolder + today, "w+").close();
+stamp = open (config.outfolder + today, "w+").close();
 

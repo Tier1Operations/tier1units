@@ -1,12 +1,25 @@
 #
-toolsfolder = 'E:\\SteamLibrary\\steamapps\\common\\Arma 3 Tools\\';
-outfolder = 'E:\\Stuff\\Arma3_Mod_Stuff\\Build PBOs\\addons\\';
-privkey = 'E:\\Stuff\Arma3_Mod_Stuff\\Key\\tier1ops.biprivatekey';
-ignorefiles = ['binMakeRules.txt','build.py','readme.md'];
+ignorefiles = ['binMakeRules.txt','build.py','readme.md','config.py','__pycache__'];
 
 import os;
 import subprocess;
 import glob;
+
+defaultconfig = r"""
+toolsfolder = 'E:\\SteamLibrary\\steamapps\\common\\Arma 3 Tools\\';
+outfolder = 'E:\\Stuff\\Arma3_Mod_Stuff\\Build PBOs\\addons\\';
+#privkey = 'E:\\Stuff\Arma3_Mod_Stuff\\Key\\tier1ops.biprivatekey';
+privkey = '';
+""";
+if not os.path.isfile("config.py"):
+	conf = open("config.py","w");
+	conf.write(defaultconfig);
+	conf.close();
+
+import config;
+toolsfolder = config.toolsfolder;
+outfolder = config.outfolder;
+privkey = config.privkey;
 
 # ignore all . files implicitly
 ignorefiles = ignorefiles + glob.glob(".*");

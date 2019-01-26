@@ -3,3 +3,5 @@
 *.lnk
 .vscode/*
 config.bin
+config.py
+__pycache__/

@@ -45,11 +45,12 @@ for pbo in pbos:
 			outfolder,
 			pbo
 		]);
-		subprocess.check_call([
-			dssign,
-			privkey,
-			outfolder + pbo + '.pbo'
-		]);
+		if privkey != '' :
+			subprocess.check_call([
+				dssign,
+				privkey,
+				outfolder + pbo + '.pbo'
+			]);
 
 os.unlink('config.bin');
 

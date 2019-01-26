@@ -1,7 +1,8 @@
 #
-toolsfolder = 'D:\\SteamLibrary\\SteamApps\\common\\Arma 3 Tools\\';
-outfolder = 'D:\\@tier1ops\\addons\\';
-privkey = 'D:\\Nextcloud\\tier1ops.biprivatekey';
+toolsfolder = 'E:\\SteamLibrary\\steamapps\\common\\Arma 3 Tools\\';
+outfolder = 'E:\\Stuff\\Arma3_Mod_Stuff\\Build PBOs\\addons\\';
+privkey = 'E:\\Stuff\Arma3_Mod_Stuff\\Key\\tier1ops.biprivatekey';
+ignorefiles = ['.git','.gitignore','binMakeRules.txt','build.py','readme.md'];
 
 
 #specific tools
@@ -11,7 +12,7 @@ binmake = toolsfolder + 'BinMake\\binmake.exe';
 
 import os;
 import glob;
-pbos = glob.glob('t1_*');
+pbos = glob.glob('*');
 
 # We're now generating ALL the files, so delete any that may be extra.
 oldfiles = glob.glob(outfolder+"*");
@@ -29,24 +30,25 @@ import subprocess;
 #        check_call(["ls", "-l"])
 
 for pbo in pbos:
-	print(pbo);
-	subprocess.check_call([	# Currently only for early syntax checks
-		binmake,
-		'--always-make',
-		pbo + '\\config.cpp',
-		'config.bin'
-	]);
-	subprocess.check_call([
-		filebank,
-		'-dst',
-		outfolder,
-		pbo
-	]);
-	subprocess.check_call([
-		dssign,
-		privkey,
-		outfolder + pbo + '.pbo'
-	]);
+	if pbo not in ignorefiles:
+		print(pbo);
+		subprocess.check_call([	# Currently only for early syntax checks
+			binmake,
+			'--always-make',
+			pbo + '\\config.cpp',
+			'config.bin'
+		]);
+		subprocess.check_call([
+			filebank,
+			'-dst',
+			outfolder,
+			pbo
+		]);
+		subprocess.check_call([
+			dssign,
+			privkey,
+			outfolder + pbo + '.pbo'
+		]);
 
 os.unlink('config.bin');
 

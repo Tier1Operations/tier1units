@@ -3874,23 +3874,23 @@ class CfgVehicles
 			};
 			class GLHE {
 				count = 16;
-				name = "rhsusf_mag_6Rnd_M441_HE";
+				magazine = "rhsusf_mag_6Rnd_M441_HE";
 			};
 			class GLHET {
 				count = 12;
-				name = "rhsusf_mag_6Rnd_M397_HET";
+				magazine = "rhsusf_mag_6Rnd_M397_HET";
 			}
 			class GLSMOKE {
 				count = 4;
-				name = "rhsusf_mag_6Rnd_M585_white"; // is flare?
+				magazine = "rhsusf_mag_6Rnd_M585_white"; // is flare?
 			};
 			class GLFLARE {
 				count = 4;
-				name = "rhsusf_mag_6Rnd_M714_white"; // is smoke?
+				magazine = "rhsusf_mag_6Rnd_M714_white"; // is smoke?
 			};
 			class GLBUCK { 
 				count = 4;
-				name = "rhsusf_mag_6Rnd_M576_Buckshot";
+				magazine = "rhsusf_mag_6Rnd_M576_Buckshot";
 			};
 
 		};

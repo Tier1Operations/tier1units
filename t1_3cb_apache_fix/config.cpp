@@ -1134,7 +1134,7 @@ class CfgVehicles
 					{
 						attachment = "UK3CB_BAF_PylonRack_4Rnd_Hellfire_K";
 						bay = -1;
-						hardpoints[] = {"UK3CB_BAF_MISSILE_PYLON"};
+						hardpoints[] = {"UK3CB_BAF_MISSILE_PYLON","UK3CB_BAF_ROCKET_19_PYLON","UK3CB_BAF_ROCKET_19_PG_PYLON","UK3CB_BAF_ROCKET_12_PG_PYLON","UK3CB_BAF_ROCKET_12_PYLON"};
 						maxweight = 800;
 						priority = 5;
 						turret[] = {0};
@@ -1144,7 +1144,7 @@ class CfgVehicles
 					{
 						attachment = "UK3CB_BAF_PylonPod_19Rnd_CRV7_PG_HEISAP";
 						bay = -1;
-						hardpoints[] = {"UK3CB_BAF_MISSILE_PYLON"};
+						hardpoints[] = {"UK3CB_BAF_MISSILE_PYLON","UK3CB_BAF_ROCKET_19_PYLON","UK3CB_BAF_ROCKET_19_PG_PYLON","UK3CB_BAF_ROCKET_12_PG_PYLON","UK3CB_BAF_ROCKET_12_PYLON"};
 						maxweight = 800;
 						priority = 4;
 						turret[] = {0};
@@ -1154,7 +1154,7 @@ class CfgVehicles
 					{
 						attachment = "UK3CB_BAF_PylonRack_4Rnd_Hellfire_N";
 						bay = -1;
-						hardpoints[] = {"UK3CB_BAF_MISSILE_PYLON"};
+						hardpoints[] = {"UK3CB_BAF_MISSILE_PYLON","UK3CB_BAF_ROCKET_19_PYLON","UK3CB_BAF_ROCKET_19_PG_PYLON","UK3CB_BAF_ROCKET_12_PG_PYLON","UK3CB_BAF_ROCKET_12_PYLON"};
 						maxweight = 800;
 						mirroredMissilePos = 2;
 						priority = 3;
@@ -1166,7 +1166,7 @@ class CfgVehicles
 					{
 						attachment = "UK3CB_BAF_PylonRack_4Rnd_Hellfire_L";
 						bay = -1;
-						hardpoints[] = {"UK3CB_BAF_MISSILE_PYLON"};
+						hardpoints[] = {"UK3CB_BAF_MISSILE_PYLON","UK3CB_BAF_ROCKET_19_PYLON","UK3CB_BAF_ROCKET_19_PG_PYLON","UK3CB_BAF_ROCKET_12_PG_PYLON","UK3CB_BAF_ROCKET_12_PYLON"};
 						maxweight = 800;
 						mirroredMissilePos = 1;
 						priority = 2;

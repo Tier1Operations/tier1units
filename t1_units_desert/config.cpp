@@ -624,7 +624,7 @@ class CfgVehicles
 	class T1_Soldier_F;
 	class T1_Soldier_F_D: T1_Soldier_F
 	{
-		uniformClass = "t1_rhs_uniform_FROG01_d"
+		uniformClass = "t1_rhs_uniform_FROG01_d";
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",

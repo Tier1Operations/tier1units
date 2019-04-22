@@ -17,7 +17,7 @@ class CfgFunctions
 	{
 		class ace_grenades
 		{
-			class flare {file = "t1_ace_flares_fix\functions\fnc_flare.sqf"};
+			class flare {file = "t1_ace_flares_fix\functions\fnc_flare.sqf";};
 		};
 	};
 };

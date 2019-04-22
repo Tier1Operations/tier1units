@@ -17,7 +17,7 @@ class CfgFunctions
 	{
 		class t1_stui_fix
 		{
-			class init {file = "t1_stui_fix\functions\fn_init.sqf"};
+			class init {file = "t1_stui_fix\functions\fn_init.sqf";};
 		};
 	};
 };

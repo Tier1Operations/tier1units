@@ -26,7 +26,7 @@ class CfgFunctions
 	{
 		class ui
 		{
-			class curatorInitLine {file = "t1_mcc_fix\functions\fn_curatorInitLine.sqf"};
+			class curatorInitLine {file = "t1_mcc_fix\functions\fn_curatorInitLine.sqf";};
 		};
 	};
 };

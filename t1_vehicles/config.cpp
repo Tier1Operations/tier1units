@@ -17,14 +17,6 @@ class CfgPatches
 			"t1_mrap_d",
 			"t1_mrap_mg_d",
 			"t1_mrap_gl_d",
-			"t1_mrzr_d",
-			"t1_mrzr",
-			"t1_heli_light_trans",
-			"t1_heli_light_attack",
-			"t1_heli_medium_rockets",
-			"t1_heli_heavy_trans",
-			"t1_heli_heavy_attack",
-			"t1_fighterjet_oneseat",
 			"t1_support_light"
 		};
 		weapons[] = {};

@@ -15,7 +15,7 @@ class CfgPatches
             "T1_Pilot_Night_F",
 
             "t1_heli_light_trans",
-            "t1_heli_light_attack",
+			"t1_heli_medium_attack",
             "t1_heli_medium_rockets",
             "t1_heli_heavy_trans",
             "t1_heli_heavy_attack",
@@ -234,13 +234,17 @@ class cfgVehicles
             };
         };
     };
-    class RHS_MELB_AH6M_M;
-    class t1_heli_light_attack : RHS_MELB_AH6M_M
+    class I_Heli_light_03_dynamicLoadout_F;
+    class t1_heli_medium_attack : I_Heli_light_03_dynamicLoadout_F
     {
         scope = 2;
         faction = "T1_Units";
         crew = "T1_Pilot_Camo_F";
         reportOwnPosition = 1;
+		side = 1;
+		
+		hiddenSelectionsTextures[] = {"a3\air_f_epb\heli_light_03\data\heli_light_03_base_co.paa"};
+		
         class TransportBackpacks {
             class repairkit {
                 backpack = "T1_Kitbag_camo_Repair";

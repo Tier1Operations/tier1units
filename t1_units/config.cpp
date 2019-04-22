@@ -3794,12 +3794,12 @@ class CfgVehicles
 			};
 			class _xx_20Rnd_762x51_Mag
 			{
-				magazine = ACE_20Rnd_762x51_Mk316_Mod_0_Mag
+				magazine = ACE_20Rnd_762x51_Mk316_Mod_0_Mag;
 				count = 30;
 			};
 			class _xx_ACE_20Rnd_762x51_Mag_SD
 			{
-				magazine = ACE_20Rnd_762x51_Mag_SD
+				magazine = ACE_20Rnd_762x51_Mag_SD;
 				count = 10;
 			};
 			class _xx_rhsusf_100Rnd_762x51_m62_tracer

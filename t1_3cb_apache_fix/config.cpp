@@ -20,11 +20,11 @@ class CfgFunctions
 	{
 		class uk3cb_baf_vehicles_apache
 		{
-			class gunjam {file = "t1_3cb_apache_fix\functions\fn_gunjam.sqf"};
-			class fired_EH {file = "t1_3cb_apache_fix\functions\fn_fired_EH.sqf"};
-			class ah64_shake {file = "t1_3cb_apache_fix\functions\fn_ah64_shake.sqf"};
-			class gunjam_server {file = "t1_3cb_apache_fix\functions\fn_gunjam_server.sqf"};
-			class gunjam_unjam {file = "t1_3cb_apache_fix\functions\fn_gunjam_unjam.sqf"};
+			class gunjam {file = "t1_3cb_apache_fix\functions\fn_gunjam.sqf";};
+			class fired_EH {file = "t1_3cb_apache_fix\functions\fn_fired_EH.sqf";};
+			class ah64_shake {file = "t1_3cb_apache_fix\functions\fn_ah64_shake.sqf";};
+			class gunjam_server {file = "t1_3cb_apache_fix\functions\fn_gunjam_server.sqf";};
+			class gunjam_unjam {file = "t1_3cb_apache_fix\functions\fn_gunjam_unjam.sqf";};
 		};
 	};
 };
@@ -244,6 +244,7 @@ class CfgMagazines
 	class UK3CB_BAF_PylonPod_19Rnd_CRV7_PG_FAT: UK3CB_BAF_12Rnd_CRV7_PG_FAT
 	{
 		UK3CB_pilotControl = 0;
+		hardpoints[] += {"DAR"};
 	};
 	
 	class UK3CB_BAF_12Rnd_CRV7_PG_HEISAP;
@@ -255,6 +256,19 @@ class CfgMagazines
 	class UK3CB_BAF_PylonPod_19Rnd_CRV7_PG_HEISAP: UK3CB_BAF_12Rnd_CRV7_PG_HEISAP
 	{
 		UK3CB_pilotControl = 0;
+		hardpoints[] += {"DAR"};
+	};
+	
+	class UK3CB_BAF_12Rnd_CRV7_FAT;
+	class UK3CB_BAF_PylonPod_19Rnd_CRV7_FAT: UK3CB_BAF_12Rnd_CRV7_FAT
+	{
+		hardpoints[] += {"DAR"};
+	};
+	
+	class UK3CB_BAF_12Rnd_CRV7_HEISAP;
+	class UK3CB_BAF_PylonPod_19Rnd_CRV7_HEISAP: UK3CB_BAF_12Rnd_CRV7_HEISAP
+	{
+		hardpoints[] += {"DAR"};
 	};
 };
 

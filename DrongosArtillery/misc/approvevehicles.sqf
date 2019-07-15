@@ -10,7 +10,7 @@ _check = {
 	{
 		_typeOf = typeOf _x;
 		if ((getNumber (configFile >> "CfgVehicles" >> _typeOf >> "artilleryScanner")) == 1) then {
-			if (local _x) then {
+			if (local _x and !unitIsUAV _x) then {
 				_x setVariable ["DTA_suitableVehicle", true, true];
 				//diag_log format ["APPROVE VEH: %1 - TYPEOF: %2", _x, typeOf _x];
 				

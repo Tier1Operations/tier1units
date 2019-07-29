@@ -138,7 +138,7 @@ class CfgSounds
 		titles[] = {};
 	};
 
-	// Greek radio
+// Greek radio
 	class dtaAffirmativeGRE
 	{
 		name = "dtaAffirmativeGRE";

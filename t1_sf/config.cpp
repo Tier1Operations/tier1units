@@ -88,7 +88,7 @@ class CfgWeapons {
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "iansky_specterdrkf";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle

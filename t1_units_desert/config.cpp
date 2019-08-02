@@ -41,9 +41,11 @@ class CfgPatches
 			"T1_Platoon_EOD_Standard_F_D",
 			"T1_Platoon_Sgt_Standard_F_D",
 			"T1_FieldPack_Scout_Lead_Desert",
-			"T1_B_AssaultPack_SF_Radioman_DM_Desert",
+			"T1_B_AssaultPack_AR_SF_Desert",
+			"T1_B_AssaultPack_SF_DM_Desert",
 			"T1_Backpack_PL_Lead_Desert",
 			"T1_AssaultPack_PLSgt_JTAC_Desert",
+			"T1_B_AssaultPack_AT_SF_Desert",
 			"T1_B_AssaultPack_Exp_SF_Desert",
 			"T1_AssaultPack_medic_sf_Desert",
 			"T1_AssaultPack_Lead_SF_Desert",
@@ -112,10 +114,12 @@ class CfgVehicles
 */
 	
 	class T1_FieldPack_Scout_Lead;
-	class T1_B_AssaultPack_SF_Radioman_DM;
+	class T1_B_AssaultPack_AR_SF;
+	class T1_B_AssaultPack_SF_DM;
 	class T1_Backpack_PL_Lead;
 	class T1_AssaultPack_PLSgt_JTAC;
 	class T1_B_AssaultPack_Exp_SF;
+	class T1_B_AssaultPack_AT_SF;
 	class T1_AssaultPack_medic_sf;
 	class T1_AssaultPack_Lead_SF;
 	class T1_AssaultPack_MMG;
@@ -125,6 +129,8 @@ class CfgVehicles
 	class T1_AssaultPack_pl_medic;
 	class T1_AssaultPack_PLEOD;
 	
+	class T1_Kitbag_camo_sl;
+	class T1_Kitbag_camo_ss;
 	class T1_Kitbag_camo;
 	class T1_Kitbag_camo_AT;
 	class T1_Kitbag_camo_Medium_AT;
@@ -143,7 +149,15 @@ class CfgVehicles
 		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\aor1_210.paa"};
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_tortila_cbr_co.paa"};
 	};
-	class T1_B_AssaultPack_SF_Radioman_DM_Desert: T1_B_AssaultPack_SF_Radioman_DM
+	class T1_B_AssaultPack_AR_SF_Desert: T1_B_AssaultPack_AR_SF
+	{
+		scope = 1;
+		displayName = "Assaultpack SF AR (T1 Desert)";
+		//hiddenSelectionsTextures[] = {"\task_force_radio_items\models\data\clf_prc117g_rhs_co.paa.paa"};
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\aor1_117.paa"};
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
+	};
+	class T1_B_AssaultPack_SF_DM_Desert: T1_B_AssaultPack_SF_DM
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Desert)";
@@ -166,6 +180,11 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
 	
+	class T1_B_AssaultPack_AT_SF_Desert: T1_B_AssaultPack_AT_SF
+	{
+		scope = 1;
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
+	};
 	class T1_B_AssaultPack_Exp_SF_Desert: T1_B_AssaultPack_Exp_SF
 	{
 		scope = 1;
@@ -216,6 +235,19 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
 	
+
+	class T1_Kitbag_camo_sl_desert: T1_Kitbag_camo_sl
+	{
+		scope = 1;
+		displayName = "Kitbag SL (T1 Desert)";
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_fast_cbr_co.paa"};
+	};
+	class T1_Kitbag_camo_ss_desert: T1_Kitbag_camo_ss
+	{
+		scope = 1;
+		displayName = "Kitbag SS (T1 Desert)";
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_fast_cbr_co.paa"};
+	};
 	class T1_Kitbag_Desert: T1_Kitbag_camo
 	{
 		scope = 1;
@@ -278,7 +310,7 @@ class CfgVehicles
 		uniformClass = "t1_rhs_uniform_g3_tan";
 		faction = "T1_Units_Desert";
 
-		backpack = "T1_B_AssaultPack_SF_Radioman_DM_Desert";
+		backpack = "T1_B_AssaultPack_SF_DM_Desert";
 		weapons[] = {
 			"T1_ABR_SD_Desert",
 			"Throw",
@@ -353,13 +385,15 @@ class CfgVehicles
 			"T1_SF_m4a1_blockII_SD_D",
 			"Throw",
 			"Put",
-			"ACE_Vector"
+			"ACE_Vector",
+			"rhs_weap_m72a7"
 		};
 		respawnWeapons[] = {
 			"T1_SF_m4a1_blockII_SD_D",
 			"Throw",
 			"Put",
-			"ACE_Vector"
+			"ACE_Vector",
+			"rhs_weap_m72a7"
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_medic_desert",
@@ -420,6 +454,8 @@ class CfgVehicles
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_tan";
 		faction = "T1_Units_Desert";
+		
+		backpack = "T1_B_AssaultPack_AT_SF";
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_D",
 			"Throw",
@@ -835,16 +871,16 @@ class CfgVehicles
 				magazines[] = {
 				"rhsusf_mag_17Rnd_9x19_FMJ",
 				"rhsusf_mag_17Rnd_9x19_FMJ",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
+				"130Rnd_338_Mag",
 				"HandGrenade",
-				"SmokeShell",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag"
+				"SmokeShell"
 			};
 				items[] = {
 				"ACE_IR_Strobe_Item",
@@ -958,6 +994,7 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Section Leader";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
+		backpack = "T1_Kitbag_camo_sl_desert";
 		
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
@@ -983,6 +1020,7 @@ class CfgVehicles
 		vehicleClass = "Section";
 		displayName = "Section Sergeant";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
+		backpack = "T1_Kitbag_camo_ss_desert";
 		
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
@@ -1031,7 +1069,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_Desert";
 		vehicleClass = "Section";
-		displayName = "Automatic Rifleman Light";
+		displayName = "Automatic Rifleman";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
 		
 		backpack = "T1_AssaultPack_AR_Desert";
@@ -1056,7 +1094,7 @@ class CfgVehicles
 		scope = 2;
 		faction = "T1_Units_Desert";
 		vehicleClass = "Section";
-		displayName = "Automatic Rifleman";
+		displayName = "Automatic Rifleman Light";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
 		
 		backpack = "T1_AssaultPack_AR_Desert";
@@ -1352,7 +1390,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdrkf_t";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle
@@ -1379,7 +1417,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdrkf_D";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle

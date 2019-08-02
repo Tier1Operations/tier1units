@@ -1,5 +1,5 @@
 #define STDITEMS    "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACRE_PRC152", "rhsusf_ANPVS_14", "ACE_Flashlight_MX991"
-#define STDITEMS_SF "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACRE_PRC152", "ACE_NVG_Gen4", "ACE_Flashlight_MX991"
+#define STDITEMS_SF "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACRE_PRC152", "ACE_NVG_Gen4", "ACE_Flashlight_MX991","ACE_IR_Strobe_Item"
 
 #define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
 #define MEDICALITEMS2 "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine" 
@@ -11,14 +11,17 @@ class CfgPatches {
 			"T1_SF_FTL_Standard_F",
 			"T1_SF_AR_Standard_F",
 			"T1_SF_Marksman_SOS_Standard_F",
-			"T1_B_AssaultPack_SF_Radioman_DM",
+			"T1_B_AssaultPack_SF_DM",
+			"T1_B_AssaultPack_AR_SF",
 			"T1_SF_AT_Standard_F",
+			"T1_B_AssaultPack_AT_SF",
 			"T1_SF_Explosive_Standard_F",
 			"T1_B_AssaultPack_Exp_SF",
 			"T1_SF_Medic_Standard_F",
 			"T1_AssaultPack_medic_sf",
 			"t1_mrzr_d",
 			"t1_mrzr",
+			"T1_LSV_Armed",
 			"T1_shadow_ammobox"
 		};
 		weapons[] = {
@@ -57,7 +60,7 @@ class CfgWeapons {
         {
             class LinkedItemsOptic
             {
-                item = "iansky_specterdrkf";
+                item = "optic_Hamr";
                 slot = "CowsSlot";
             };
             class LinkedItemsMuzzle
@@ -85,7 +88,7 @@ class CfgWeapons {
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdrkf";
+				item = "optic_Hamr";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle
@@ -172,55 +175,108 @@ class CfgVehicles {
 			"ACE_MX2A"
 		};
 		magazines[] = {
-			"ACE_M84",			
+			"rhsusf_50Rnd_762x51_m62_tracer",		
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellGreen",
+			"ACE_M84",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"ACE_HuntIR_M203",
+			"ACE_HuntIR_M203"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",			
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk262_Stanag",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
 			"HandGrenade",
 			"HandGrenade",
 			"SmokeShell",
-			"SmokeShellGreen"
-			
+			"SmokeShellGreen",
+			"ACE_M84",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"1Rnd_HE_Grenade_shell",
+			"ACE_HuntIR_M203",
+			"ACE_HuntIR_M203"
 		};
 		icon = "iconManLeader";
 		backpack = "T1_AssaultPack_Lead_SF";
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			STDITEMS_SF
+			"ItemRadio",
+			"ACE_EarPlugs",
+			"ACE_microDAGR",
+			"ACE_MapTools",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_NVG_Gen4",
+			"ACE_Flashlight_MX991",
+			"ACE_HuntIR_monitor"
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
-			STDITEMS_SF
+			"ItemRadio",
+			"ACE_EarPlugs",
+			"ACE_microDAGR",
+			"ACE_MapTools",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_CableTie",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_tourniquet",
+			"ACE_NVG_Gen4",
+			"ACE_Flashlight_MX991",
+			"ACE_HuntIR_monitor"
 		};
 		camouflage = 1.0;
 		linkedItems[] = {
@@ -245,21 +301,11 @@ class CfgVehicles {
 		displayName = "AssaultPack SF Lead";
 		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
-		{			
-			class _xx_rhsusf_50Rnd_762x51_m62_tracer
-			{
-				count = 2;
-			magazine = "rhsusf_50Rnd_762x51_m62_tracer";
-			};
+		{
 			class _xx_1Rnd_HE_Grenade_shell
 			{
-				count = 8;
+				count = 1;
 				magazine = "1Rnd_HE_Grenade_shell";
-			};
-			class _xx_1Rnd_SmokeRed_Grenade_shell
-			{
-				count = 2;
-				magazine = "1Rnd_SmokeRed_Grenade_shell";
 			};
 		};
 		class TransportItems
@@ -269,7 +315,6 @@ class CfgVehicles {
 				count = 16;
 				name = "ACE_fieldDressing";
 			};
-
 			class _xx_ACE_morphine
 			{
 				count = 3;
@@ -284,6 +329,11 @@ class CfgVehicles {
 			{
 				count = 1;
 				name = "ACE_Vector";
+			};
+			class _xx_ACRE_PRC117F
+			{
+				count = 1;
+				name = "ACRE_PRC117F";
 			};
 		};
 	};
@@ -314,9 +364,8 @@ class CfgVehicles {
 			"ACE_Vector"
 		};
 		magazines[] = {
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_100Rnd_762x51_m62_tracer",
+			"rhsusf_100Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
@@ -330,9 +379,8 @@ class CfgVehicles {
 			"SmokeShell"
 		};
 		respawnmagazines[] = {
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_100Rnd_762x51_m62_tracer",
+			"rhsusf_100Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
@@ -345,6 +393,7 @@ class CfgVehicles {
 			"HandGrenade",
 			"SmokeShell"
 		};
+		backpack = "T1_B_AssaultPack_AR_SF";
 		icon = "iconManMG";
 		items[] = {
 			STDITEMS_SF,
@@ -371,7 +420,7 @@ class CfgVehicles {
 		camouflage = 1.0;
 	};
 
-	// SF DM/Radio
+	// SF DM
 
 	class T1_SF_Marksman_SOS_Standard_F: T1_Soldier_F
 	{
@@ -381,7 +430,7 @@ class CfgVehicles {
 		faction = "T1_Units";
 		vehicleClass = "SF";
 		attendant = 1;
-		displayName = "T1 SF Radioman DM";
+		displayName = "T1 SF DM";
 		weapons[] = {
 			"T1_45KO_ABR_green_SD",
 			"Throw",
@@ -395,9 +444,6 @@ class CfgVehicles {
 			"ACE_Vector"
 		};
 		magazines[] = {
-			"ACE_M84",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -412,12 +458,10 @@ class CfgVehicles {
 			"ACE_20Rnd_762x51_Mag_SD",
 			"HandGrenade",
 			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellGreen",
+			"ACE_M84"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -432,9 +476,10 @@ class CfgVehicles {
 			"ACE_20Rnd_762x51_Mag_SD",
 			"HandGrenade",
 			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellGreen",
+			"ACE_M84"
 		};
-		backpack = "T1_B_AssaultPack_SF_Radioman_DM";
+		backpack = "T1_B_AssaultPack_SF_DM";
 		items[] = {
 			STDITEMS_SF,
 			"ACE_RangeCard",
@@ -463,7 +508,13 @@ class CfgVehicles {
 			"ItemWatch"
 		};
 	};
-	class T1_B_AssaultPack_SF_Radioman_DM: B_AssaultPack_rgr
+	class T1_B_AssaultPack_AR_SF: B_AssaultPack_rgr
+	{
+		scope = 1;
+		displayName = "Assaultpack SF AR (T1 Camo)";
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
+	};
+	class T1_B_AssaultPack_SF_DM: B_AssaultPack_rgr
 	{
 		scope = 1;
 		displayName = "Assaultpack SF Marksman (T1 Camo)";
@@ -486,20 +537,24 @@ class CfgVehicles {
 				count = 1;
 				name = "ACE_epinephrine";
 			};
-			class _xx_ACE_Kestrel
+		};
+		class TransportMagazines
+		{
+			class _xx_rhsusf_50Rnd_762x51_m62_tracer
+			{
+				count = 2;
+				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
+			};
+			class _xx_rhsusf_100Rnd_762x51_m62_tracer
 			{
 				count = 1;
-				name = "ACE_Kestrel";
-			};
-			class radio {
-				count = 1;
-				name = "ACRE_PRC117F";
+				magazine = "rhsusf_100Rnd_762x51_m62_tracer";
 			};
 		};
 	};
-
+	
 	// SF AT
-
+	
 	class T1_SF_AT_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
@@ -524,7 +579,7 @@ class CfgVehicles {
 			"tf47_at4_heat"
 		};
 		magazines[] = {
-			"ACE_M84",
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"t1_longrange_556",
@@ -535,30 +590,23 @@ class CfgVehicles {
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"SmokeShell",
-			"SmokeShellGreen",
-			"rhsusf_50Rnd_762x51_m62_tracer",			
-			"rhsusf_50Rnd_762x51_m62_tracer"
+			"ACE_M84"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mag_SD",
-			"ACE_20Rnd_762x51_Mag_SD",
-			"SmokeShell",
-			"SmokeShellGreen",
-			"rhsusf_50Rnd_762x51_m62_tracer",			
-			"rhsusf_50Rnd_762x51_m62_tracer"
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"T1_30Rnd_556x45_Stanag_SD",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"t1_longrange_556",
+			"ACE_M84"
 		};
+		backpack = "T1_B_AssaultPack_AT_SF";
 		items[] = {
 			STDITEMS_SF,
 			MEDICALITEMS2
@@ -608,8 +656,7 @@ class CfgVehicles {
 			"ACE_Vector"
 		};
 		magazines[] = {
-			
-			"T1_30Rnd_556x45_Stanag_SD",		
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"t1_longrange_556",
@@ -620,15 +667,18 @@ class CfgVehicles {
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
-			"HandGrenade",
 			"DemoCharge_Remote_Mag",
-			"DemoCharge_Remote_Mag"
+			"HandGrenade",
+			"HandGrenade",
+			"SmokeShell",
+			"SmokeShell",
+			"ACE_M84",
+			"ACE_M84"
 		};
 		respawnmagazines[] = {			
-			
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"T1_30Rnd_556x45_Stanag_SD",		
 			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
@@ -637,9 +687,10 @@ class CfgVehicles {
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
-			"HandGrenade",
 			"DemoCharge_Remote_Mag",
-			"DemoCharge_Remote_Mag"
+			"HandGrenade",
+			"ACE_M84",
+			"SmokeShell"
 		};
 		icon = "iconManExplosive";
 		backpack = "T1_B_AssaultPack_Exp_SF";
@@ -675,6 +726,19 @@ class CfgVehicles {
 			"ItemWatch"
 		};
 	};
+	class T1_B_AssaultPack_AT_SF: B_AssaultPack_rgr
+	{
+		scope = 1;
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
+		class TransportWeapons
+		{
+			class _xx_rhs_weap_m72a7
+			{
+				count = 1;
+				weapon = "rhs_weap_m72a7";
+			};
+		};
+	};
 	class T1_B_AssaultPack_Exp_SF: B_AssaultPack_rgr
 	{
 		scope = 1;
@@ -688,18 +752,8 @@ class CfgVehicles {
 			};
 			class _xx_DemoCharge_Remote_Mag
 			{
-				count = 2;
+				count = 3;
 				magazine = "DemoCharge_Remote_Mag";
-			};
-			class _xx_SmokeShell
-			{
-				count = 1;
-				magazine = "SmokeShell";
-			};
-			class _xx_ACE_M84
-			{
-				count = 1;
-				magazine = "ACE_M84";
 			};
 		};
 		class TransportItems
@@ -738,23 +792,21 @@ class CfgVehicles {
 			"T1_SF_m4a1_blockII_SD_wd",
 			"Throw",
 			"Put",
-			"ACE_Vector"
+			"ACE_Vector",
+			"rhs_weap_m72a7"
 		};
 		respawnWeapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
 			"Throw",
 			"Put",
-			"ACE_Vector"
+			"ACE_Vector",
+			"rhs_weap_m72a7"
 		};
 		magazines[] = {
-			"ACE_M84",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
@@ -764,18 +816,13 @@ class CfgVehicles {
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"HandGrenade",
-			"rhsusf_50Rnd_762x51_m62_tracer",			
-			"rhsusf_50Rnd_762x51_m62_tracer"
+			"ACE_M84"
 		};
 		respawnmagazines[] = {
-			"ACE_M84",
+			"rhsusf_50Rnd_762x51_m62_tracer",
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"T1_30Rnd_556x45_Stanag_SD",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
-			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
@@ -785,8 +832,7 @@ class CfgVehicles {
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"HandGrenade",
-			"rhsusf_50Rnd_762x51_m62_tracer",			
-			"rhsusf_50Rnd_762x51_m62_tracer"
+			"ACE_M84"
 		};
 		icon = "iconManMedic";
 		backpack = "T1_AssaultPack_medic_sf";
@@ -905,17 +951,17 @@ class CfgVehicles {
 				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
 				count = 4;
 			};
-			class ummwhat {
+			class sidearm_mags2 {
 				magazine = "16Rnd_9x21_Mag";
 				count = 4;
 			};
 			class marksman_mags {
 				magazine = "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
-				count = 6;
+				count = 10;
 			};
 			class marksman_sd_mags {
 				magazine = "ACE_20Rnd_762x51_Mag_SD";
-				count = 2;
+				count = 4;
 			};
 			class mg_mags {
 				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
@@ -923,7 +969,7 @@ class CfgVehicles {
 			};
 			class GLs {
 				magazine = "1Rnd_HE_Grenade_shell";
-				count=8;
+				count = 8;
 			};
 			class _xx_HandGrenade {
 				magazine = "HandGrenade";
@@ -941,20 +987,22 @@ class CfgVehicles {
 				magazine = "ACE_M84";
 				count = 4;
 			};
-			class fivefiftysucks {
+			class _xx_t1_longrange_556 {
 				count = 24;
-				magazine = rhs_mag_30Rnd_556x45_M855A1_Stanag;
+				magazine = t1_longrange_556;
 			};
-			// expect different variant for these guys, to be removed then
-			class echo1_mag	{
-				count = 12;
-				magazine = rhsusf_5Rnd_300winmag_xm2010;
+			class echo1_mag {
+				count = 15;
+				magazine = "rhsusf_5Rnd_300winmag_xm2010";
+			};
+			class echo1_mag2 {
+				count = 4;
+				magazine = "T1_rhsusf_5Rnd_300winmag_xm2010_SD";
 			};
 			class echo2_mag {
 				count = 10;
-				magazine = 7Rnd_408_Mag;
+				magazine = "7Rnd_408_Mag";
 			};
-
 		};
 		class TransportItems
 		{
@@ -1006,7 +1054,7 @@ class CfgVehicles {
 				weapon = "rhs_weap_m72a7";
 				count = 3;
 			};
-			class MAW
+			class AT4
 			{
 				weapon = "tf47_at4_heat";
 				count = 2;
@@ -1022,7 +1070,156 @@ class CfgVehicles {
 
 		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_mrzr\data\blue_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\yel_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\red_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\grn_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\merged\orng_grn_mud_co.paa"};
 	};
-
+	
+	class LSV_02_armed_base_F;
+	class O_T_LSV_02_armed_F: LSV_02_armed_base_F
+	{
+		class turrets;
+	};
+	class O_LSV_02_armed_black_F: O_T_LSV_02_armed_F
+	{
+		class turrets: turrets
+		{
+			class MainTurret;
+		};
+	};
+	
+	class T1_LSV_Armed: O_LSV_02_armed_black_F
+	{
+		faction = "T1_Units";
+		crew = "T1_Soldier_F";
+		transportmaxmagazines = 99999;
+		transportmaxweapons = 9999;
+		transportmaxbackpacks = 99;
+		maximumload = 999999;
+		reportOwnPosition = 1;
+		side = 1;
+		
+		class TransportMagazines
+		{
+			class sidearm_mags {
+				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
+				count = 4;
+			};
+			class sidearm_mags2 {
+				magazine = "16Rnd_9x21_Mag";
+				count = 4;
+			};
+			class marksman_mags {
+				magazine = "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
+				count = 10;
+			};
+			class marksman_sd_mags {
+				magazine = "ACE_20Rnd_762x51_Mag_SD";
+				count = 4;
+			};
+			class mg_mags {
+				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
+				count = 10;
+			};
+			class GLs {
+				magazine = "1Rnd_HE_Grenade_shell";
+				count = 8;
+			};
+			class _xx_HandGrenade {
+				magazine = "HandGrenade";
+				count = 6;
+			};
+			class _xx_SmokeShell {
+				magazine = "SmokeShell";
+				count = 4;
+			};
+			class _xx_SmokeShellGreen {
+				magazine = "SmokeShellGreen";
+				count = 1;
+			};
+			class _xx_ACE_M84 {
+				magazine = "ACE_M84";
+				count = 4;
+			};
+			class _xx_t1_longrange_556 {
+				count = 24;
+				magazine = t1_longrange_556;
+			};
+			class echo1_mag {
+				count = 15;
+				magazine = "rhsusf_5Rnd_300winmag_xm2010";
+			};
+			class echo1_mag2 {
+				count = 4;
+				magazine = "T1_rhsusf_5Rnd_300winmag_xm2010_SD";
+			};
+			class echo2_mag {
+				count = 10;
+				magazine = "7Rnd_408_Mag";
+			};
+		};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 40;
+				name = "ACE_fieldDressing";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 8;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 6;
+				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_bloodIV
+			{
+				count = 6;
+				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_CableTie
+			{
+				count = 6;
+				name = "ACE_CableTie";
+			};
+			class _xx_ACE_wirecutter
+			{
+				count = 1;
+				name = "ACE_wirecutter";
+			};
+			class _xx_ACE_UAVBattery
+			{
+				count = 1;
+				name = "ACE_UAVBattery";
+			};
+			class UavTerminal
+			{
+				count = 1;
+				name = "B_UavTerminal";
+			};
+		};
+		class TransportWeapons
+		{            
+			class rhs_weap_m72a7
+			{
+				weapon = "rhs_weap_m72a7";
+				count = 3;
+			};
+			class AT4
+			{
+				weapon = "tf47_at4_heat";
+				count = 2;
+			};
+		};
+		
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				magazines[] = {"500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash"};
+			};
+		};
+	};
+	
 	// Supply box
 	class B_supplyCrate_F;
 	class T1_shadow_ammobox: B_supplyCrate_F
@@ -1041,11 +1238,11 @@ class CfgVehicles {
 			};
 			class marksman {
 				magazine = "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
-				count = 16;
+				count = 20;
 			};
 			class marksman_sd {
 				magazine = "ACE_20Rnd_762x51_Mag_SD";
-				count = 4;
+				count = 8;
 			};	
 			class mg {
 				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
@@ -1053,7 +1250,7 @@ class CfgVehicles {
 			};
 			class GLs {
 				magazine = "1Rnd_HE_Grenade_shell";
-				count=16;
+				count = 16;
 			};
 			class _xx_HandGrenade
 			{
@@ -1075,9 +1272,9 @@ class CfgVehicles {
 				magazine = "ACE_M84";
 				count = 12;
 			};
-			class fivefiftysucks {
+			class _xx_t1_longrange_556 {
 				count = 64;
-				magazine = rhs_mag_30Rnd_556x45_M855A1_Stanag;
+				magazine = t1_longrange_556;
 			};
 		};
 		class TransportItems
@@ -1140,7 +1337,7 @@ class CfgVehicles {
 				weapon = "rhs_weap_m72a7";
 				count = 4;
 			};
-			class MAW
+			class AT4
 			{
 				weapon = "tf47_at4_heat";
 				count = 2;

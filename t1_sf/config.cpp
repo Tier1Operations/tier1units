@@ -34,7 +34,8 @@ class CfgPatches {
 		requiredVersion = 0.1;
 		requiredAddons[] = {
 			"t1_units",	// and nested dependencies
-			"rhsusf_c_mrzr"
+			"rhsusf_c_mrzr",
+			"A3_Soft_F_Exp_LSV_02"
 		};
 	};
 };
@@ -146,6 +147,8 @@ class CfgWeapons {
 
 
 };
+
+
 
 class CfgVehicles {
     class T1_Soldier_F;
@@ -991,6 +994,10 @@ class CfgVehicles {
 				count = 24;
 				magazine = t1_longrange_556;
 			};
+			class _xx_T1_30Rnd_556x45_Stanag_SD {
+				count = 8;
+				magazine = "T1_30Rnd_556x45_Stanag_SD";
+			};
 			class echo1_mag {
 				count = 15;
 				magazine = "rhsusf_5Rnd_300winmag_xm2010";
@@ -1071,21 +1078,38 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_mrzr\data\blue_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\yel_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\red_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\grn_grn_mud_co.paa","rhsusf\addons\rhsusf_mrzr\data\merged\orng_grn_mud_co.paa"};
 	};
 	
-	class LSV_02_armed_base_F;
-	class O_T_LSV_02_armed_F: LSV_02_armed_base_F
+	class LSV_02_base_F;
+	class LSV_02_armed_base_F: LSV_02_base_F
 	{
-		class turrets;
+		class Turrets;
 	};
-	class O_LSV_02_armed_black_F: O_T_LSV_02_armed_F
+	class O_LSV_02_armed_F: LSV_02_armed_base_F
 	{
-		class turrets: turrets
+		class Turrets: Turrets
 		{
 			class MainTurret;
+			class CargoTurret_01;
+			class CargoTurret_02;
+			class CargoTurret_03;
+			class CargoTurret_04;
+			class CargoTurret_05;
 		};
 	};
-	
-	class T1_LSV_Armed: O_LSV_02_armed_black_F
+	class T1_LSV_Armed: O_LSV_02_armed_F
 	{
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				magazines[] = {"500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash"};
+			};
+			class CargoTurret_01: CargoTurret_01{};
+			class CargoTurret_02: CargoTurret_02{};
+			class CargoTurret_03: CargoTurret_03{};
+			class CargoTurret_04: CargoTurret_04{};
+			class CargoTurret_05: CargoTurret_05{};
+		};
+		
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
 		transportmaxmagazines = 99999;
@@ -1093,6 +1117,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		hiddenSelectionsTextures[] = {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_black_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_black_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_black_CO.paa"};
+		textureList[] = {"Black",1};
 		side = 1;
 		
 		class TransportMagazines
@@ -1140,6 +1166,10 @@ class CfgVehicles {
 			class _xx_t1_longrange_556 {
 				count = 24;
 				magazine = t1_longrange_556;
+			};
+			class _xx_T1_30Rnd_556x45_Stanag_SD {
+				count = 8;
+				magazine = "T1_30Rnd_556x45_Stanag_SD";
 			};
 			class echo1_mag {
 				count = 15;
@@ -1210,14 +1240,6 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
-		
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				magazines[] = {"500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash","500Rnd_65x39_Belt_Tracer_Red_Splash"};
-			};
-		};
 	};
 	
 	// Supply box
@@ -1275,6 +1297,10 @@ class CfgVehicles {
 			class _xx_t1_longrange_556 {
 				count = 64;
 				magazine = t1_longrange_556;
+			};
+			class _xx_T1_30Rnd_556x45_Stanag_SD {
+				count = 8;
+				magazine = "T1_30Rnd_556x45_Stanag_SD";
 			};
 		};
 		class TransportItems

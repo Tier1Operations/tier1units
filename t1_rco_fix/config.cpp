@@ -26,6 +26,13 @@ class CfgWeapons
 					distanceZoomMin = 100;
 					distanceZoomMax = 100;
 				};
+				
+				class Hamr2Scope
+				{
+					discreteInitIndex = 1;
+					discreteDistance[] = {100,300};
+					discreteDistanceInitIndex = 1;
+				};
 			};
 		};
 	};

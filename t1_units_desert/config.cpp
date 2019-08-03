@@ -418,20 +418,6 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 
 		backpack = "T1_AssaultPack_Lead_SF_Desert";
-		weapons[] = {
-			"T1_SF_m4a1_blockII_SD_D",
-			"rhs_weap_M320",
-			"Throw",
-			"Put",
-			"ACE_MX2A"
-		};
-		respawnWeapons[] = {
-			"T1_SF_m4a1_blockII_SD_D",
-			"rhs_weap_M320",
-			"Throw",
-			"Put",
-			"ACE_MX2A"
-		};
 
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",

@@ -1,3 +1,15 @@
+#define t1_mag_rifle "rhs_mag_30Rnd_556x45_M855A1_Stanag"
+#define t1_mag_rifle_tracer "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red"
+#define t1_mag_rifle_sf "rhs_mag_30Rnd_556x45_Mk318_Stanag"
+#define t1_mag_rifle_sd "T1_30Rnd_556x45_Stanag_SD"
+#define t1_mag_sierra "7Rnd_408_Mag"
+#define t1_mag_sidearm_m "rhsusf_mag_17Rnd_9x19_FMJ"
+#define t1_mag_sidearm_m_sd "rhsusf_mag_17Rnd_9x19_FMJ"
+#define t1_mag_lmg "rhs_200rnd_556x45_M_SAW"
+#define t1_mag_mmg "rhsusf_100Rnd_762x51_m62_tracer"
+#define t1_mag_marksman "20Rnd_762x51_Mag"
+#define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
+
 class rhsusf_weap_glock17g4;
 class T1_weap_sidearm_l: rhsusf_weap_glock17g4
 {
@@ -15,7 +27,6 @@ class T1_weap_sierra: srifle_LRR_F
 		};
 	};
 };
-#define t1_mag_sierra "7Rnd_408_Mag"
 
 // using the same as light until we find a better alternative
 class T1_weap_sidearm_m: T1_weap_sidearm_l
@@ -29,8 +40,6 @@ class T1_weap_sidearm_m: T1_weap_sidearm_l
 		};
 	};
 };
-#define t1_mag_sidearm_m "rhsusf_mag_17Rnd_9x19_FMJ"
-#define t1_mag_sidearm_m_sd "rhsusf_mag_17Rnd_9x19_FMJ"
 
 class rhs_weap_m249_pip_L;
 class T1_weap_lmg: rhs_weap_m249_pip_L
@@ -71,8 +80,6 @@ class T1_weap_lmg2: rhs_weap_m249_pip_S_vfg2
 		};
 	};
 };
-#define t1_mag_lmg "rhs_200rnd_556x45_M_SAW"
-
 
 class rhs_weap_m240B;
 class T1_weap_mmg: rhs_weap_m240B
@@ -86,7 +93,6 @@ class T1_weap_mmg: rhs_weap_m240B
 		};		
 	};
 };
-#define t1_mag_mmg "rhsusf_100Rnd_762x51_m62_tracer"
 
 /* TODO: SPARs taking SD mags
 class arifle_SPAR_01_blk_F :  {
@@ -171,9 +177,6 @@ class T1_weap_rifle_gl_sd: arifle_SPAR_01_GL_blk_F
 		};
 	};
 };
-#define t1_mag_rifle "30Rnd_556x45_Stanag"
-#define t1_mag_rifle_tracer "30Rnd_556x45_Stanag_Tracer_Red"
-#define t1_mag_rifle_sd "T1_30Rnd_556x45_Stanag_SD"
 
 class srifle_DMR_03_woodland_F;
 class T1_weap_marksman : srifle_DMR_03_woodland_F
@@ -559,8 +562,6 @@ class T1_weap_Instructor_Orange : rhs_weap_m4a1_blockII_grip_d
 		};
 	};
 };
-#define t1_mag_marksman "20Rnd_762x51_Mag"
-#define t1_mag_marksman_sd "ACE_20Rnd_762x51_Mag_SD"
 
 class rhsusf_weap_MP7A2;
 class T1_weap_mp7: rhsusf_weap_MP7A2

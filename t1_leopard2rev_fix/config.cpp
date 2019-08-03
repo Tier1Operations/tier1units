@@ -121,8 +121,69 @@ class CfgVehicles
 		};
 	};
 	
-	class Leopard_2_Base: MBT_03_base_F
+	class I_MBT_03_base_F: MBT_03_base_F
 	{
+
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets: Turrets
+				{
+					class CommanderOptics: CommanderOptics
+					{
+						class OpticsIn: Optics_Commander_02
+						{
+							class Wide;
+							class Medium;
+							class Narrow;
+						};
+					};
+				};
+				class OpticsIn: Optics_Gunner_MBT_03
+				{
+					class Wide;
+					class Medium;
+					class Narrow;
+				};
+			};
+		};
+	};
+	
+	class I_MBT_03_cannon_F: I_MBT_03_base_F
+	{
+		class EventHandlers;
+		
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				class Turrets: Turrets
+				{
+					class CommanderOptics: CommanderOptics
+					{
+						class OpticsIn: Optics_Commander_02
+						{
+							class Wide;
+							class Medium;
+							class Narrow;
+						};
+					};
+				};
+				class OpticsIn: Optics_Gunner_MBT_03
+				{
+					class Wide;
+					class Medium;
+					class Narrow;
+				};
+			};
+		};
+	};
+	
+	class Leopard_2_Base: I_MBT_03_cannon_F
+	{
+		faction = "BLU_F";
+		
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -146,9 +207,9 @@ class CfgVehicles
 							class Narrow: Narrow{};
 							class VeryNarrow: Narrow
 							{
-								initFov = "(35 * 0.05625 / 120)";
-								maxFov = "(35 * 0.05625 / 120)";
-								minFov = "(35 * 0.05625 / 120)";
+								initFov = "(35 * 0.05625 / 180)";
+								maxFov = "(35 * 0.05625 / 180)";
+								minFov = "(35 * 0.05625 / 180)";
 							};
 						};
 					};
@@ -161,9 +222,9 @@ class CfgVehicles
 					class Narrow: Narrow{};
 					class VeryNarrow: Narrow
 					{
-						initFov = "(35 * 0.05625 / 120)";
-						maxFov = "(35 * 0.05625 / 120)";
-						minFov = "(35 * 0.05625 / 120)";
+						initFov = "(35 * 0.05625 / 180)";
+						maxFov = "(35 * 0.05625 / 180)";
+						minFov = "(35 * 0.05625 / 180)";
 					};
 				};
 			};
@@ -203,6 +264,145 @@ class CfgVehicles
 				name = "Toolkit";
 				count = 1;
 			};
+		};
+		class EventHandlers: EventHandlers
+		{
+			init = "";
+		};
+	};
+	
+	class Leopard_2_wd: Leopard_2_Base
+	{
+		faction = "BLU_F";
+		
+		class TransportMagazines
+		{
+			delete _xx_SmokeShell;
+			delete _xx_SmokeShellGreen;
+			delete _xx_30Rnd_65x39_caseless_mag;
+			
+			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
+			{
+				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+				count = 8;
+			};
+		};
+		class TransportWeapons
+		{
+			delete _xx_arifle_MXC_F;
+			
+			class rhs_weap_m4a1_carryhandle
+			{
+				weapon = "rhs_weap_m4a1_carryhandle";
+				count = 4;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name = "FirstAidKit";
+				count = 4;
+			};
+			class _xx_Toolkit
+			{
+				name = "Toolkit";
+				count = 1;
+			};
+		};
+		class EventHandlers: EventHandlers
+		{
+			init = "";
+		};
+	};
+	
+	class Leopard_2_d: Leopard_2_Base
+	{
+		faction = "BLU_F";
+		
+		class TransportMagazines
+		{
+			delete _xx_SmokeShell;
+			delete _xx_SmokeShellGreen;
+			delete _xx_30Rnd_65x39_caseless_mag;
+			
+			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
+			{
+				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+				count = 8;
+			};
+		};
+		class TransportWeapons
+		{
+			delete _xx_arifle_MXC_F;
+			
+			class rhs_weap_m4a1_carryhandle
+			{
+				weapon = "rhs_weap_m4a1_carryhandle";
+				count = 4;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name = "FirstAidKit";
+				count = 4;
+			};
+			class _xx_Toolkit
+			{
+				name = "Toolkit";
+				count = 1;
+			};
+		};
+		class EventHandlers: EventHandlers
+		{
+			init = "";
+		};
+	};
+	
+	class Leopard_2_e: Leopard_2_Base
+	{
+		faction = "BLU_F";
+		
+		class TransportMagazines
+		{
+			delete _xx_SmokeShell;
+			delete _xx_SmokeShellGreen;
+			delete _xx_30Rnd_65x39_caseless_mag;
+			
+			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
+			{
+				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+				count = 8;
+			};
+		};
+		class TransportWeapons
+		{
+			delete _xx_arifle_MXC_F;
+			
+			class rhs_weap_m4a1_carryhandle
+			{
+				weapon = "rhs_weap_m4a1_carryhandle";
+				count = 4;
+			};
+		};
+		class TransportItems
+		{
+			class _xx_FirstAidKit
+			{
+				name = "FirstAidKit";
+				count = 4;
+			};
+			class _xx_Toolkit
+			{
+				name = "Toolkit";
+				count = 1;
+			};
+		};
+		class EventHandlers: EventHandlers
+		{
+			init = "";
 		};
 	};
 };

@@ -3,6 +3,7 @@
 
 params [
 	"_vehicle",
+	"_ammo",
 	["_init", 1, [0]],
 	["_DETONATE_TIME", 3, [0]],
 	["_IGNITE_TIME", 5, [0]],
@@ -19,25 +20,60 @@ params [
 ];
 
 
-
-// _init 1 = Initial start up of code. Initialize parameters.
+// _init 1 = Initial start up of code. Initialize parameters and tell other clients to run this script with certain parameters.
 // _init 2 = Remotely told to run this code with certain parameters.
-if (_init == 1 and local _vehicle and {!(_vehicle getVariable ["ace_cookoff_isCookingOff", false]) and random 1 < 0.10}) then {
-	_vehicle setDamage 1;
-};
-if (_init == 1 and {_vehicle getVariable ["ace_cookoff_isCookingOff", false]}) exitWith {
-	if (local _vehicle and {random 1 < 0.06 and (_vehicle getVariable ["ace_cookoff_cookingOffTime", 9999999]) < time}) then {
+
+
+// Chance to blow up vehicle if this script hasn't run before on this vehicle.
+if (_init == 1 and local _vehicle and {!(_vehicle getVariable ["ace_cookoff_isCookingOff", false])}) then {
+	private _dam = getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit");
+	if (_dam < 30) exitWith {};
+	private _chance = 0;
+	switch true do {
+		case (_dam < 150): {_chance = 0.01};
+		case (_dam < 500): {_chance = 0.04};
+		case (_dam < 1000): {_chance = 0.06};
+		default {_chance = 0.08};
+	};
+	
+	if (random 1 < _chance) then {
 		_vehicle setDamage 1;
 	};
 };
+
+// Chance to blow up vehicle after this script has already been run on this vehicle,
+// but only if X amount of time has passed.
+if (_init == 1 and {_vehicle getVariable ["ace_cookoff_isCookingOff", false]}) exitWith {
+	
+	if (local _vehicle and {(_vehicle getVariable ["ace_cookoff_cookingOffTime", 9999999]) < time}) then {
+		private _dam = getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit");
+		if (_dam < 30) exitWith {};
+		private _chance = 0;
+		switch true do {
+			case (_dam < 150): {_chance = 0.01};
+			case (_dam < 500): {_chance = 0.04};
+			case (_dam < 1000): {_chance = 0.06};
+			default {_chance = 0.08};
+		};
+		
+		if (random 1 < _chance) then {
+			_vehicle setDamage 1;
+		};
+	};
+};
+
+// Mark vehicle as being under the effect of this script.
 if (_init == 1) then {
 	_vehicle setVariable ["ace_cookoff_isCookingOff", true, true];
 	_vehicle setVariable ["ace_cookoff_cookingOffTime", time + 5, true];
 };
 
 
-[_vehicle, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME] spawn {
-	params ["_vehicle", "_init", "_DETONATE_TIME", "_IGNITE_TIME", "_SMOKE_TIME", "_FLAMESTART_TIME", "_FLAME_TIME", "_DISMOUNT_TIME", "_detonate", "_flameJet", "_onFire", "_posArray", "_posHit", "_DAMAGE_TIME"];
+if (!alive _vehicle) exitWith {};
+
+
+[_vehicle, _ammo, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME] spawn {
+	params ["_vehicle", "_ammo", "_init", "_DETONATE_TIME", "_IGNITE_TIME", "_SMOKE_TIME", "_FLAMESTART_TIME", "_FLAME_TIME", "_DISMOUNT_TIME", "_detonate", "_flameJet", "_onFire", "_posArray", "_posHit", "_DAMAGE_TIME"];
 	
 	// Initialize values that will be sent to other machines so that all machines will be using the same numbers, which is necessary to keep the effects synced in multiplayer.
 	if (_init == 1) then {
@@ -126,7 +162,7 @@ if (_init == 1) then {
 		
 		// Chance to have a vehicle without any smoke/fire/detonation.
 		private _showEffects = true;
-		if (random 1 < 0.20) then {
+		if (random 1 < 0.25) then {
 			_showEffects = false;
 			_onFire = false;
 			_flameJet = false;
@@ -186,7 +222,7 @@ if (_init == 1) then {
 		_init = 2;
 		
 		// Tell other machines to run this code using the numbers we've chosen.
-		["ace_cookoff_cookOff", [_vehicle, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME]] call CBA_fnc_remoteEvent;
+		["ace_cookoff_cookOff", [_vehicle, _ammo, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME]] call CBA_fnc_remoteEvent;
 	};
 	
 	

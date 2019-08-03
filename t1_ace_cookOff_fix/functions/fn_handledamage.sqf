@@ -80,7 +80,7 @@ if (_simulationType == "tank") exitWith {
             if (random 1 < _probability) then {
 				//systemchat "ammo hit/prob true";
 				//playSound "Alarm";
-				_vehicle call ace_cookoff_fnc_cookOff;
+				[_vehicle, _ammo] call ace_cookoff_fnc_cookOff;
             };
         };
     } else {
@@ -92,7 +92,7 @@ if (_simulationType == "tank") exitWith {
 					//systemchat "ignoreTurret=true";
 				}; // ignore turrets like RCWS
 				//playSound "Alarm";
-				_vehicle call ace_cookoff_fnc_cookOff;
+				[_vehicle, _ammo] call ace_cookoff_fnc_cookOff;
 			};
         };
     };

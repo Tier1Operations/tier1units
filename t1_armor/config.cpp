@@ -504,7 +504,7 @@ class cfgVehicles {
 			};
 			class manpad {
 				count = 1;
-				weapon = "";
+				weapon = "launch_Titan_F";
 			};
 		};
 	};

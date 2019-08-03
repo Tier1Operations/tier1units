@@ -31,9 +31,9 @@ if (_init == 1 and local _vehicle and {!(_vehicle getVariable ["ace_cookoff_isCo
 	private _chance = 0;
 	switch true do {
 		case (_dam < 150): {_chance = 0.01};
-		case (_dam < 500): {_chance = 0.04};
-		case (_dam < 1000): {_chance = 0.06};
-		default {_chance = 0.08};
+		case (_dam < 300): {_chance = 0.04};
+		case (_dam < 500): {_chance = 0.10};
+		default {_chance = 0.16};
 	};
 	
 	if (random 1 < _chance) then {
@@ -51,9 +51,9 @@ if (_init == 1 and {_vehicle getVariable ["ace_cookoff_isCookingOff", false]}) e
 		private _chance = 0;
 		switch true do {
 			case (_dam < 150): {_chance = 0.01};
-			case (_dam < 500): {_chance = 0.04};
-			case (_dam < 1000): {_chance = 0.06};
-			default {_chance = 0.08};
+			case (_dam < 300): {_chance = 0.04};
+			case (_dam < 500): {_chance = 0.10};
+			default {_chance = 0.16};
 		};
 		
 		if (random 1 < _chance) then {

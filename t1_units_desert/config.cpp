@@ -347,12 +347,14 @@ class CfgVehicles
 		backpack = "T1_B_AssaultPack_Exp_SF_Desert";
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_D",
+			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_SF_m4a1_blockII_SD_D",
+			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -479,14 +481,14 @@ class CfgVehicles
 		faction = "T1_Units_Desert";
 		weapons[] = {
 			"T1_weap_mmg_sf_d",
-			"T1_SF_AR_pistol",
+			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnweapons[] = {
 			"T1_weap_mmg_sf_d",
-			"T1_SF_AR_pistol",
+			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -844,38 +846,6 @@ class CfgVehicles
 			"ItemCompass",
 			"ItemWatch"
 		};
-			class altloadout1 {
-				description = ".338 MG DLC";
-				weapons[] = {
-				"MMG_02_camo_F",
-				"T1_weap_sidearm_l",
-				"Throw",
-				"Put",
-				"ACE_Vector"
-			};
-				backpack = "T1_Kitbag_camo";
-				magazines[] = {
-				"rhsusf_mag_17Rnd_9x19_FMJ",
-				"rhsusf_mag_17Rnd_9x19_FMJ",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"130Rnd_338_Mag",
-				"HandGrenade",
-				"SmokeShell"
-			};
-				items[] = {
-				"ACE_IR_Strobe_Item",
-				"iansky_specterdrkf",
-				"acc_pointer_IR",
-				STDITEMS,
-				"ACE_SpareBarrel"
-			};
-			};
 	};
 	class T1_Specialist_AMG_Standard_F;
 	class T1_Specialist_AMG_Standard_F_D: T1_Specialist_AMG_Standard_F
@@ -1376,7 +1346,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "optic_Hamr";
+				item = "optic_ERCO_blk_F";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle
@@ -1479,7 +1449,7 @@ class CfgWeapons
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdrkf_d";
+				item = "optic_ERCO_blk_F";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle

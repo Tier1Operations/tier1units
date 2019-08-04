@@ -61,8 +61,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellBlue",
+			"SmokeShellRed"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
@@ -75,8 +75,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellBlue",
+			"SmokeShellRed"
 		};
 		linkedItems[] = {
 			"V_BandollierB_rgr",
@@ -135,8 +135,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"B_IR_Grenade",
 			"B_IR_Grenade"
 		};
@@ -151,8 +151,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"B_IR_Grenade",
 			"B_IR_Grenade"
 		};
@@ -213,8 +213,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"B_IR_Grenade",
 			"B_IR_Grenade"
 		};
@@ -229,8 +229,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"B_IR_Grenade",
 			"B_IR_Grenade"
 		};
@@ -287,8 +287,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellBlue",
+			"SmokeShellRed"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
@@ -301,8 +301,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellBlue",
+			"SmokeShellRed"
 		};
 		linkedItems[] = {
 			"V_BandollierB_rgr",
@@ -357,8 +357,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellBlue",
+			"SmokeShellRed"
 		};
 		respawnmagazines[] = {
 			"ACE_M84",
@@ -371,8 +371,8 @@ class cfgVehicles {
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
-			"SmokeShell",
-			"SmokeShellGreen"
+			"SmokeShellBlue",
+			"SmokeShellRed"
 		};
 		linkedItems[] = {
 			"V_BandollierB_rgr",
@@ -413,48 +413,59 @@ class cfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 Badger IFV - Section";
 		
 		class TransportMagazines
 		{
 			class _xx_rhs_mag_30Rnd_556x45_M855A1_Stanag
 			{
 				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
-				count = 142;
+				count = 80;
 			};
 			class _xx_rhs_mag_30Rnd_556x45_Mk262_Stanag
 			{
 				magazine =  "t1_longrange_556";
-				count = 24;
+				count = 18;
 			};
 			class _xx_rhsusf_100Rnd_556x45_soft_pouch
 			{
 				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
-				count = 48;
+				count = 24;
 			};
 			class _xx_HandGrenade
 			{
 				magazine = "HandGrenade";
-				count = 36;
+				count = 24;
 			};
 			class _xx_1Rnd_HE_Grenade_shell
 			{
 				magazine = "1Rnd_HE_Grenade_shell";
-				count = 48;
+				count = 24;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
-				count = 36;
+				magazine = "SmokeShellBlue";
+				count = 12;
+			};
+			class _xx_SmokeShellRed
+			{
+				magazine = "SmokeShellRed";
+				count = 8;
 			};
 			class _xx_ACE_M84
 			{
 				magazine = "ACE_M84";
-				count = 16;
+				count = 24;
 			};
-			class manpad_missiles
+			class _xx_Titan_AA
 			{
 				magazine = "Titan_AA";
-				count = 3;
+				count = 4;
+			};
+			class _xx_Titan_AT
+			{
+				magazine = "Titan_AT";
+				count = 2;
 			};
 		};
 		class TransportItems
@@ -495,16 +506,20 @@ class cfgVehicles {
 			class at4
 			{
 				weapon = "tf47_at4_heat";
-				count = 4;
+				count = 3;
 			};		  
 			class law
 			{
 				weapon = "rhs_weap_m72a7";
-				count = 10;
+				count = 6;
 			};
-			class manpad {
+			class _xx_launch_B_Titan_olive_F {
 				count = 1;
-				weapon = "launch_Titan_F";
+				weapon = "launch_B_Titan_olive_F";
+			};
+			class _xx_launch_O_Titan_short_F {
+				count = 1;
+				weapon = "launch_O_Titan_short_F";
 			};
 		};
 	};

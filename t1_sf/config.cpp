@@ -22,13 +22,14 @@ class CfgPatches {
 			"t1_mrzr_d",
 			"t1_mrzr",
 			"T1_LSV_Armed",
-			"T1_shadow_ammobox"
+			"T1_shadow_ammobox",
+			"T1_shadow_thermalbox"
 		};
 		weapons[] = {
 			"T1_rhs_uniform_g3_m81",
 			"T1_SF_m4a1_blockII_SD_wd",
 			"T1_weap_mmg_sf",
-			"T1_SF_AR_pistol",
+			"T1_SF_pistol",
 			"T1_45KO_ABR_green_SD"
 		};
 		requiredVersion = 0.1;
@@ -60,7 +61,7 @@ class CfgWeapons {
         {
             class LinkedItemsOptic
             {
-                item = "optic_Hamr";
+                item = "optic_ERCO_blk_F";
                 slot = "CowsSlot";
             };
             class LinkedItemsMuzzle
@@ -83,7 +84,7 @@ class CfgWeapons {
         {
             class LinkedItemsOptic
             {
-                item = "optic_Hamr";
+                item = "optic_ERCO_blk_F";
                 slot = "CowsSlot";
             };
             class LinkedItemsMuzzle
@@ -111,7 +112,7 @@ class CfgWeapons {
 		{
 			class LinkedItemsOptic
 			{
-				item = "iansky_specterdrkf";
+				item = "iansky_specterdrkf_t";
 				slot = "CowsSlot";
 			};
 			class LinkedItemsMuzzle
@@ -127,7 +128,7 @@ class CfgWeapons {
 		};
 	};
 	class rhsusf_weap_glock17g4;
-	class T1_SF_AR_pistol : rhsusf_weap_glock17g4
+	class T1_SF_pistol : rhsusf_weap_glock17g4
 	{
 		class LinkedItems
 		{
@@ -211,8 +212,8 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"HandGrenade",
 			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"ACE_M84",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
@@ -241,8 +242,8 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"HandGrenade",
 			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"ACE_M84",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
@@ -372,14 +373,14 @@ class CfgVehicles {
 		displayName = "T1 SF AR";
 		weapons[] = {
 			"T1_weap_mmg_sf",
-			"T1_SF_AR_pistol",
+			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnweapons[] = {
 			"T1_weap_mmg_sf",
-			"T1_SF_AR_pistol",
+			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -396,7 +397,7 @@ class CfgVehicles {
 			"rhsusf_mag_17Rnd_9x19_JHP",
 			"HandGrenade",
 			"HandGrenade",
-			"SmokeShell",
+			"SmokeShellBlue",
 			"ACE_M84"
 		};
 		respawnmagazines[] = {
@@ -411,7 +412,7 @@ class CfgVehicles {
 			"rhsusf_mag_17Rnd_9x19_JHP",
 			"HandGrenade",
 			"HandGrenade",
-			"SmokeShell",
+			"SmokeShellBlue",
 			"ACE_M84"
 		};
 		backpack = "T1_B_AssaultPack_AR_SF";
@@ -478,8 +479,8 @@ class CfgVehicles {
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"ACE_M84"
 		};
 		respawnmagazines[] = {
@@ -496,8 +497,8 @@ class CfgVehicles {
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"HandGrenade",
-			"SmokeShell",
-			"SmokeShellGreen",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"ACE_M84"
 		};
 		backpack = "T1_B_AssaultPack_SF_DM";
@@ -662,12 +663,14 @@ class CfgVehicles {
 		displayName = "T1 SF Explosive Specialist";
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
+			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
+			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -688,8 +691,8 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"HandGrenade",
 			"HandGrenade",
-			"SmokeShell",
-			"SmokeShell",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"ACE_M84",
 			"ACE_M84"
 		};
@@ -709,8 +712,8 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"HandGrenade",
 			"HandGrenade",
-			"SmokeShell",
-			"SmokeShell",
+			"SmokeShellBlue",
+			"SmokeShellRed",
 			"ACE_M84",
 			"ACE_M84"
 		};
@@ -776,6 +779,11 @@ class CfgVehicles {
 			{
 				count = 3;
 				magazine = "DemoCharge_Remote_Mag";
+			};
+			class _xx_rhsusf_mag_17Rnd_9x19_JHP
+			{
+				count = 1;
+				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
 			};
 		};
 		class TransportItems
@@ -916,15 +924,15 @@ class CfgVehicles {
 		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
 				count = 5;
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
 				count = 2;
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 			};
 		};
 		class TransportItems
@@ -967,6 +975,8 @@ class CfgVehicles {
 		editorSubcategory = "EdSubcat_Cars";	// rhs_EdSubCat_Cars
 		vehicleClass = "rhs_vehclass_car";	// "class rhs_vehclass_car"
 		reportOwnPosition = 1;
+		displayName = "T1 MRZR - SF";
+		
 		class TransportMagazines
 		{
 			class sidearm_mags {
@@ -997,12 +1007,12 @@ class CfgVehicles {
 				magazine = "HandGrenade";
 				count = 6;
 			};
-			class _xx_SmokeShell {
-				magazine = "SmokeShell";
+			class _xx_SmokeShellBlue {
+				magazine = "SmokeShellBlue";
 				count = 4;
 			};
-			class _xx_SmokeShellGreen {
-				magazine = "SmokeShellGreen";
+			class _xx_SmokeShellRed {
+				magazine = "SmokeShellRed";
 				count = 1;
 			};
 			class _xx_ACE_M84 {
@@ -1139,6 +1149,7 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_black_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_black_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_black_CO.paa"};
 		textureList[] = {"Black",1};
 		side = 1;
+		displayName = "T1 LSV - SF";
 		
 		class TransportMagazines
 		{
@@ -1170,12 +1181,12 @@ class CfgVehicles {
 				magazine = "HandGrenade";
 				count = 6;
 			};
-			class _xx_SmokeShell {
-				magazine = "SmokeShell";
+			class _xx_SmokeShellBlue {
+				magazine = "SmokeShellBlue";
 				count = 4;
 			};
-			class _xx_SmokeShellGreen {
-				magazine = "SmokeShellGreen";
+			class _xx_SmokeShellRed {
+				magazine = "SmokeShellRed";
 				count = 1;
 			};
 			class _xx_ACE_M84 {
@@ -1283,7 +1294,7 @@ class CfgVehicles {
 			};
 			class marksman_sd {
 				magazine = "ACE_20Rnd_762x51_Mag_SD";
-				count = 8;
+				count = 16;
 			};	
 			class mg {
 				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
@@ -1298,14 +1309,14 @@ class CfgVehicles {
 				magazine = "HandGrenade";
 				count = 12;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 16;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 4;
 			};
 			class _xx_ACE_M84
@@ -1318,7 +1329,7 @@ class CfgVehicles {
 				magazine = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
 			};
 			class _xx_T1_30Rnd_556x45_Stanag_SD {
-				count = 8;
+				count = 32;
 				magazine = "T1_30Rnd_556x45_Stanag_SD";
 			};
 		};
@@ -1412,5 +1423,32 @@ class CfgVehicles {
 			};
 		}; 
 	};
-
+	
+	class T1_shadow_thermalbox: B_supplyCrate_F
+	{
+		vehicleClass = "Ammo";
+		displayName = "T1 Shadow Thermal Box";
+		transportMaxWeapons = 999;
+		transportMaxMagazines = 9999;
+		transportMaxBackpacks = 99;
+		transportMaxItems = 9999;
+		class TransportItems
+		{
+			class _xx_NVGogglesB_blk_F
+			{
+				count = 50;
+				name = "NVGogglesB_blk_F";
+			};
+			class _xx_optic_tws
+			{
+				count = 50;
+				name = "optic_tws";
+			};
+			class _xx_optic_ERCO_blk_F
+			{
+				count = 50;
+				name = "optic_ERCO_blk_F";
+			};
+		};
+	};
 };

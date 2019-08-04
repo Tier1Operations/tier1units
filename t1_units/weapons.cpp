@@ -48,7 +48,7 @@ class T1_weap_lmg: rhs_weap_m249_pip_L
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -65,7 +65,7 @@ class T1_weap_lmg2: rhs_weap_m249_pip_S_vfg2
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsUnder
@@ -88,7 +88,7 @@ class T1_weap_mmg: rhs_weap_m240B
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};		
 	};
@@ -107,7 +107,7 @@ class T1_weap_rifle: arifle_SPAR_01_blk_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -125,7 +125,7 @@ class T1_weap_rifle_gl: arifle_SPAR_01_GL_blk_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -141,7 +141,7 @@ class T1_weap_rifle_sd: arifle_SPAR_01_blk_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -162,7 +162,7 @@ class T1_weap_rifle_gl_sd: arifle_SPAR_01_GL_blk_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -212,7 +212,7 @@ class T1_weap_m16a4_SD : rhs_weap_m16a4_pmag_grip
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "optic_ERCO_blk_F";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -239,7 +239,7 @@ class T1_weap_m16a4 : rhs_weap_m16a4_pmag
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};		
 		class LinkedItemsAcc
@@ -256,7 +256,7 @@ class T1_weap_m16a4_carryhandle : rhs_weap_m4a1_carryhandle_pmag
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};		
 		class LinkedItemsAcc
@@ -300,7 +300,7 @@ class T1_weap_sierra_spotter_RHS : srifle_DMR_06_camo_F
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr_t";
+			item = "optic_ERCO_blk_F";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -349,7 +349,7 @@ class T1_hk416d145_m320_SD : rhs_weap_hk416d145_m320
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdrkf";
+			item = "optic_ERCO_blk_F";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -371,7 +371,7 @@ class T1_mk18_m320 : rhs_weap_mk18_m320
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr_t";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};		
 		class LinkedItemsAcc
@@ -388,7 +388,7 @@ class T1_m27iar : rhs_weap_m27iar_grip
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};		
 		class LinkedItemsAcc
@@ -405,7 +405,7 @@ class T1_mk18 : rhs_weap_mk18_grip_KAC
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr_t";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -427,7 +427,7 @@ class T1_m4a1_blockII_SD : rhs_weap_m4a1_blockII_grip_KAC_bk
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_ERCO_blk_F";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -454,7 +454,7 @@ class T1_m4a1_grip3 : rhs_weap_m4a1_carryhandle_pmag_grip3
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -476,7 +476,7 @@ class T1_m4a1_Mstock_grip3 : rhs_weap_m4a1_carryhandle_mstock_grip3
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsAcc
@@ -515,7 +515,7 @@ class T1_weap_Instructor_Black : rhs_weap_m4a1_blockII_grip_KAC_wd
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr";
+			item = "optic_ERCO_blk_F";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle
@@ -542,7 +542,7 @@ class T1_weap_Instructor_Orange : rhs_weap_m4a1_blockII_grip_d
 	{
 		class LinkedItemsOptic
 		{
-			item = "iansky_specterdr_d";
+			item = "optic_ERCO_blk_F";
 			slot = "CowsSlot";
 		};
 		class LinkedItemsMuzzle

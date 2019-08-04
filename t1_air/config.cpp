@@ -156,9 +156,9 @@ class cfgVehicles
             
             "rhsusf_mag_17Rnd_9x19_FMJ",
             "rhsusf_mag_17Rnd_9x19_FMJ",
-            "SmokeShell",
-            "SmokeShellGreen",
-            "SmokeShellBlue"};
+            "SmokeShellBlue",
+            "SmokeShellRed",
+            "SmokeShellRed"};
         respawnmagazines[] = {
             "rhsusf_mag_40Rnd_46x30_AP",
             "rhsusf_mag_40Rnd_46x30_AP",
@@ -166,9 +166,9 @@ class cfgVehicles
             "rhsusf_mag_40Rnd_46x30_AP",
             "rhsusf_mag_17Rnd_9x19_FMJ",
             "rhsusf_mag_17Rnd_9x19_FMJ",
-            "SmokeShell",
-            "SmokeShellGreen",
-            "SmokeShellBlue"};
+            "SmokeShellBlue",
+            "SmokeShellRed",
+            "SmokeShellRed"};
         linkedItems[] = {
             "H_PilotHelmetFighter_B",
             "V_Rangemaster_belt",

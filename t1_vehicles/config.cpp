@@ -7,9 +7,11 @@ class CfgPatches
 		units[] = {
 			"t1_car_light",
 			"t1_car_light_mg",
+			"t1_car_light_MAT",
 			"t1_car_light_gl",
 			"t1_car_light_d",
 			"t1_car_light_mg_d",
+			"t1_car_light_MAT_d",
 			"t1_car_light_gl_d",
 			"t1_mrap",
 			"t1_mrap_mg",
@@ -77,6 +79,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 HMMWV - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -109,14 +113,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 8;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 8;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 2;
 			};
 			class _xx_ACE_M84
@@ -166,7 +170,7 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
-#include "acre_rack_hmmwv.hpp"
+		#include "acre_rack_hmmwv.hpp"
 	};
 	
 	class rhsusf_m1025_w_s_m2;
@@ -179,6 +183,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 HMMWV MG - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -211,14 +217,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 8;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 8;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 2;
 			};
 			class _xx_ACE_M84
@@ -268,7 +274,93 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
-#include "acre_rack_hmmwv.hpp"
+		#include "acre_rack_hmmwv.hpp"
+	};
+	
+	class t1_car_light_MAT : rhsusf_m1025_w_s_m2 
+	{
+		faction = "T1_Units";
+		crew = "T1_Soldier_F";
+		transportmaxmagazines = 99999;
+		transportmaxweapons = 9999;
+		transportmaxbackpacks = 99;
+		maximumload = 999999;
+		reportOwnPosition = 1;
+		displayName = "T1 HMMWV MG - Section/MAT";
+		
+		class TransportMagazines
+		{
+			class riflemag
+			{
+				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+				count = 15;
+			};
+			class section_ar_mag
+			{
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 2;
+			};
+			class _xx_tf47_m3maaws_HE
+			{
+				magazine = "tf47_m3maaws_HE";
+				count = 10;
+			};
+			class _xx_tf47_m3maaws_HEAT
+			{
+				magazine = "tf47_m3maaws_HEAT";
+				count = 10;
+			};			
+		};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 25;
+				name = "ACE_fieldDressing";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 5;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 4;
+				name = "ACE_epinephrine";
+			};
+			class saline
+			{
+				count = 4;
+				name = "ACE_bloodIV";
+			};			
+			class acre_prc152
+			{
+				count = 1;
+				name = "acre_prc152";
+			};
+		};
+		class TransportWeapons
+		{
+			class _xx_tf47_at4_heat
+			{
+				weapon = "tf47_m3maaws_optic";
+				count = 2;
+			};
+			class _xx_rhs_weap_m72a7
+			{
+				weapon = "rhs_weap_m72a7";
+				count = 2;
+			};
+		};
+		class TransportBackpacks
+		{
+			class _xx_B_Carryall_khk
+			{
+				backpack = "B_Carryall_khk";
+				count = 2;
+			};
+		};
+		#include "acre_rack_hmmwv.hpp"
 	};
 	
 	class rhsusf_m1025_w_s_Mk19;
@@ -281,6 +373,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 HMMWV GL - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -313,14 +407,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 8;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 8;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 2;
 			};
 			class _xx_ACE_M84
@@ -370,7 +464,7 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
-#include "acre_rack_hmmwv.hpp"
+		#include "acre_rack_hmmwv.hpp"
 	};
 	class rhsusf_m1025_d_s;
 	class t1_car_light_d : rhsusf_m1025_d_s 
@@ -382,6 +476,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 HMMWV (Desert) - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -414,14 +510,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 8;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 8;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 2;
 			};
 			class _xx_ACE_M84
@@ -471,9 +567,9 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
-#include "acre_rack_hmmwv.hpp"
+		#include "acre_rack_hmmwv.hpp"
 	};
-	
+		
 	class rhsusf_m1025_d_s_m2;
 	class t1_car_light_mg_d : rhsusf_m1025_d_s_m2 
 	{
@@ -484,6 +580,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 HMMWV MG (Desert) - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -516,14 +614,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 8;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 8;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 2;
 			};
 			class _xx_ACE_M84
@@ -573,7 +671,93 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
-#include "acre_rack_hmmwv.hpp"
+		#include "acre_rack_hmmwv.hpp"
+	};
+	
+	class t1_car_light_MAT_d : rhsusf_m1025_d_s_m2 
+	{
+		faction = "T1_Units_Desert";
+		crew = "T1_Soldier_F_D";
+		transportmaxmagazines = 99999;
+		transportmaxweapons = 9999;
+		transportmaxbackpacks = 99;
+		maximumload = 999999;
+		reportOwnPosition = 1;
+		displayName = "T1 HMMWV MG (Desert) - Section/MAT";
+		
+		class TransportMagazines
+		{
+			class riflemag
+			{
+				magazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
+				count = 15;
+			};
+			class section_ar_mag
+			{
+				magazine = "rhsusf_100Rnd_556x45_soft_pouch";
+				count = 2;
+			};
+			class _xx_tf47_m3maaws_HE
+			{
+				magazine = "tf47_m3maaws_HE";
+				count = 10;
+			};
+			class _xx_tf47_m3maaws_HEAT
+			{
+				magazine = "tf47_m3maaws_HEAT";
+				count = 10;
+			};			
+		};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 25;
+				name = "ACE_fieldDressing";
+			};
+			class _xx_ACE_morphine
+			{
+				count = 5;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 4;
+				name = "ACE_epinephrine";
+			};
+			class saline
+			{
+				count = 4;
+				name = "ACE_bloodIV";
+			};			
+			class acre_prc152
+			{
+				count = 1;
+				name = "acre_prc152";
+			};
+		};
+		class TransportWeapons
+		{
+			class _xx_tf47_at4_heat
+			{
+				weapon = "tf47_m3maaws_optic";
+				count = 2;
+			};
+			class _xx_rhs_weap_m72a7
+			{
+				weapon = "rhs_weap_m72a7";
+				count = 2;
+			};
+		};
+		class TransportBackpacks
+		{
+			class _xx_B_Carryall_khk
+			{
+				backpack = "B_Carryall_khk";
+				count = 2;
+			};
+		};
+		#include "acre_rack_hmmwv.hpp"
 	};
 	
 	class rhsusf_m1025_d_s_Mk19;
@@ -586,6 +770,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 HMMWV GL (Desert) - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -618,14 +804,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 8;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 8;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 2;
 			};
 			class _xx_ACE_M84
@@ -675,7 +861,7 @@ class CfgVehicles {
 				count = 2;
 			};
 		};
-#include "acre_rack_hmmwv.hpp"
+		#include "acre_rack_hmmwv.hpp"
 	};
 		
 	class Truck_01_base_F;
@@ -728,6 +914,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 MRAP - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -760,14 +948,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 12;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 12;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 3;
 			};
 			class _xx_ACE_M84
@@ -827,6 +1015,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 MRAP MG - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -859,14 +1049,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 12;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 12;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 3;
 			};
 			class _xx_ACE_M84
@@ -933,6 +1123,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 MRAP GL - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -965,14 +1157,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 12;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 12;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 3;
 			};
 			class _xx_ACE_M84
@@ -1041,6 +1233,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 MRAP (Desert) - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -1073,14 +1267,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 12;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 12;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 3;
 			};
 			class _xx_ACE_M84
@@ -1141,6 +1335,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 MRAP MG (Desert) - Section";
+		
 		class TransportMagazines {
 			class riflemag
 			{
@@ -1172,14 +1368,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 12;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 12;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 3;
 			};
 			class _xx_ACE_M84
@@ -1244,6 +1440,8 @@ class CfgVehicles {
 		transportmaxbackpacks = 99;
 		maximumload = 999999;
 		reportOwnPosition = 1;
+		displayName = "T1 MRAP GL (Desert) - Section";
+		
 		class TransportMagazines
 		{
 			class riflemag
@@ -1276,14 +1474,14 @@ class CfgVehicles {
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 12;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 12;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 3;
 			};
 			class _xx_ACE_M84

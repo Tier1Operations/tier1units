@@ -70,9 +70,9 @@ class CfgVehicles
 				magazine = "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
 				count = 50;
 			};
-			class _xx_ACE_20Rnd_762x51_Mk319_Mod_0_Mag
+			class _xx_rhs_mag_30Rnd_556x45_Mk318_Stanag
 			{
-				magazine = "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
+				magazine = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
 				count = 80;
 			};
 			class ACE_20Rnd_762x51_Mag_SD
@@ -110,14 +110,14 @@ class CfgVehicles
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 80;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 64;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 8;
 			};
 			class _xx_ACE_M84
@@ -293,9 +293,9 @@ class CfgVehicles
 				magazine = "ACE_20Rnd_762x51_Mk316_Mod_0_Mag";
 				count = 50;
 			};
-			class _xx_ACE_20Rnd_762x51_Mk319_Mod_0_Mag
+			class _xx_rhs_mag_30Rnd_556x45_Mk318_Stanag
 			{
-				magazine = "ACE_20Rnd_762x51_Mk319_Mod_0_Mag";
+				magazine = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
 				count = 80;
 			};
 			class ACE_20Rnd_762x51_Mag_SD
@@ -339,14 +339,14 @@ class CfgVehicles
 				magazine = "1Rnd_HE_Grenade_shell";
 				count = 80;
 			};
-			class _xx_SmokeShell
+			class _xx_SmokeShellBlue
 			{
-				magazine = "SmokeShell";
+				magazine = "SmokeShellBlue";
 				count = 64;
 			};
-			class _xx_SmokeShellGreen
+			class _xx_SmokeShellRed
 			{
-				magazine = "SmokeShellGreen";
+				magazine = "SmokeShellRed";
 				count = 8;
 			};
 			class _xx_ACE_M84

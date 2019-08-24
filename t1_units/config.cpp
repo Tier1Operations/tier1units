@@ -15,8 +15,9 @@ class CfgPatches
 			"T1_Kitbag_camo",
 			"T1_AssaultPack_rgr",
 			"T1_Kitbag_camo_Lead_Trainer",
-			"T1_Kitbag_camo_Sniper",
-			"T1_AssaultPack_Sniper_RHS",
+			"T1_Kitbag_camo_Spotter",
+			"T1_Kitbag_camo_SpotterLight",
+			"T1_AssaultPack_SniperLight",
 			"T1_FieldPack_Scout_Lead",
 			"T1_Kitbag_camo_medic",
 			"T1_AssaultPack_pl_medic",
@@ -268,7 +269,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_Kitbag_camo_Sniper: B_Kitbag_Base
+	class T1_Kitbag_camo_Spotter: B_Kitbag_Base
 	{
 		scope = 1;
 		displayName = "Assault Pack Spotter";
@@ -301,17 +302,67 @@ class CfgVehicles
 				name = "ACRE_PRC117F";
 			};
 		};
-	};	
-	class T1_AssaultPack_Sniper_RHS: B_AssaultPack_rgr
+		class TransportMagazines
+		{
+			class _xx_t1_mag_sierra
+			{
+				count = 5;
+				magazine = t1_mag_sierra;
+			};
+		};
+	};
+	class T1_Kitbag_camo_SpotterLight: B_Kitbag_Base
 	{
 		scope = 1;
-		displayName = "Assault Pack Sniper";
+		displayName = "Assault Pack Spotter Light";
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 16;
+				name = "ACE_fieldDressing";
+			};
+
+			class _xx_ACE_morphine
+			{
+				count = 3;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 3;
+				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_Vector
+			{
+				count = 1;
+				name = "ACE_Vector";
+			};
+			class radio {
+				count = 1;
+				name = "ACRE_PRC117F";
+			};
+		};
+		class TransportMagazines
+		{
+			class _xx_rhsusf_5Rnd_300winmag_xm2010
+			{
+				count = 2;
+				magazine = "rhsusf_5Rnd_300winmag_xm2010";
+			};
+		};
+	};
+	class T1_AssaultPack_SniperLight: B_AssaultPack_rgr
+	{
+		scope = 1;
+		displayName = "Assault Pack Sniper Light";
 		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
 		class TransportMagazines
 		{			
 			class _xx_rhsusf_5Rnd_300winmag_xm2010
 			{
-				count = 12;
+				count = 13;
 				magazine = "rhsusf_5Rnd_300winmag_xm2010";
 			};
 		};
@@ -332,10 +383,6 @@ class CfgVehicles
 				count = 2;
 				name = "ACE_epinephrine";
 			};
-			class radio {
-				count = 1;
-				name = "ACRE_PRC117F";
-			};
 		};
 	};
 	class B_FieldPack_khk;
@@ -344,6 +391,7 @@ class CfgVehicles
 		scope = 1;
 		displayName = "Fieldpack Lead (T1 Camo)";
 		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\aor2_210.paa"};
+		maximumLoad = 230;
 		class TransportItems
 		{
 			class Bandage1
@@ -1073,7 +1121,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
@@ -1082,7 +1129,6 @@ class CfgVehicles
 			"ACE_M84"
 		};
 		respawnmagazines[] = {
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -1150,7 +1196,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
@@ -1159,7 +1204,6 @@ class CfgVehicles
 			"ACE_M84"
 		};
 		respawnmagazines[] = {
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -1246,51 +1290,29 @@ class CfgVehicles
 			"Laserdesignator"
 		};
 		magazines[] = {
+			"T1_30Rnd_556x45_Stanag_SD",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_rifle_sd,
-			t1_mag_rifle_sd,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
 			"Laserbatteries",
 			"HandGrenade",
 			"SmokeShellBlue",
-			"SmokeShellRed",
 			"ACE_M84"
 		};
 		respawnmagazines[] = {
+			"T1_30Rnd_556x45_Stanag_SD",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			t1_mag_rifle_sd,
-			t1_mag_rifle_sd,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
 			"Laserbatteries",
 			"HandGrenade",
 			"SmokeShellBlue",
-			"SmokeShellRed",
 			"ACE_M84"
 		};
 		linkedItems[] = {
@@ -1321,7 +1343,7 @@ class CfgVehicles
 			"ACE_RangeCard",
 			STDITEMS_SF
 		};
-		backpack = "T1_Kitbag_camo_Sniper";
+		backpack = "T1_Kitbag_camo_Spotter";
 		camouflage = 0.3;
 		glassesEnabled = 0;
 		engineer = 1;
@@ -1359,15 +1381,10 @@ class CfgVehicles
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"HandGrenade",
 			"SmokeShellBlue"
 		};
 		respawnmagazines[] = {
@@ -1375,15 +1392,10 @@ class CfgVehicles
 			t1_mag_sierra,
 			t1_mag_sierra,
 			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
-			t1_mag_sierra,
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"HandGrenade",
 			"SmokeShellBlue"
 		};
 		linkedItems[] = {
@@ -1463,12 +1475,6 @@ class CfgVehicles
 			"Laserdesignator"
 		};
 		magazines[] = {
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -1477,15 +1483,10 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
-			"Laserbatteries"
+			"Laserbatteries",
+			"SmokeShellBlue"
 		};
 		respawnmagazines[] = {
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -1494,7 +1495,8 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
-			"Laserbatteries"
+			"Laserbatteries",
+			"SmokeShellBlue"
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard",
@@ -1524,7 +1526,7 @@ class CfgVehicles
 			"ACE_RangeCard",
 			STDITEMS_SF
 		};
-		backpack = "T1_Kitbag_camo_Sniper";
+		backpack = "T1_Kitbag_camo_SpotterLight";
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};
@@ -1557,7 +1559,18 @@ class CfgVehicles
 		magazines[] = {			
 			"rhsusf_5Rnd_300winmag_xm2010",
 			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
+			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
+			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
+			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"16Rnd_9x21_Mag",
+			"HandGrenade",
+			"SmokeShellBlue",
+			"SmokeShellBlue"
+		};
+		respawnmagazines[] = {	
 			"rhsusf_5Rnd_300winmag_xm2010",
 			"rhsusf_5Rnd_300winmag_xm2010",
 			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
@@ -1568,22 +1581,7 @@ class CfgVehicles
 			"16Rnd_9x21_Mag",
 			"16Rnd_9x21_Mag",
 			"HandGrenade",
-			"SmokeShellBlue"
-		};
-		respawnmagazines[] = {	
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"rhsusf_5Rnd_300winmag_xm2010",
-			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
-			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
-			"T1_rhsusf_5Rnd_300winmag_xm2010_SD",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"16Rnd_9x21_Mag",
-			"HandGrenade",		
+			"SmokeShellBlue",
 			"SmokeShellBlue"
 		};
 		linkedItems[] = {
@@ -1630,7 +1628,7 @@ class CfgVehicles
 			"ACE_bloodIV",
 			MEDICALITEMS2
 		};		
-		backpack = "T1_AssaultPack_Sniper_RHS";
+		backpack = "T1_AssaultPack_SniperLight";
 		camouflage = 0.3;
 		glassesEnabled = 0;
 	};
@@ -1662,13 +1660,11 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShellBlue",
 			"SmokeShellRed"
 			
 		};
 		respawnmagazines[] = {
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -1723,12 +1719,10 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShellBlue",
 			"SmokeShellRed"
 		};
 		respawnmagazines[] = {
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -1911,12 +1905,10 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShellBlue",
 			"SmokeShellRed"
 		};
 		respawnmagazines[] = {
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -1973,12 +1965,10 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"SmokeShellBlue",
 			"SmokeShellRed"
 		};
 		respawnmagazines[] = {
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2098,7 +2088,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"HandGrenade",
 			"SmokeShellBlue",
 			"SmokeShellRed",
@@ -2107,7 +2096,6 @@ class CfgVehicles
 		respawnmagazines[] = {
 			t1_mag_mmg,
 			t1_mag_mmg,
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2166,16 +2154,15 @@ class CfgVehicles
 			"ACE_MX2A"
 		};
 		magazines[] = {
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"Laserbatteries",
 			"HandGrenade",
 			"HandGrenade",
@@ -2194,7 +2181,6 @@ class CfgVehicles
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeBlue_Grenade_shell",
 			"1Rnd_SmokeBlue_Grenade_shell",
 			"1Rnd_SmokePurple_Grenade_shell",
 			"1Rnd_SmokePurple_Grenade_shell",
@@ -2202,16 +2188,15 @@ class CfgVehicles
 			"Chemlight_blue"
 		};
 		respawnmagazines[] = {
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"Laserbatteries",
 			"HandGrenade",
 			"HandGrenade",
@@ -2230,7 +2215,6 @@ class CfgVehicles
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeBlue_Grenade_shell",
 			"1Rnd_SmokeBlue_Grenade_shell",
 			"1Rnd_SmokePurple_Grenade_shell",
 			"1Rnd_SmokePurple_Grenade_shell",
@@ -2303,6 +2287,7 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"Laserbatteries",
@@ -2312,6 +2297,7 @@ class CfgVehicles
 			"Chemlight_blue"
 		};
 		respawnmagazines[] = {
+			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -2395,7 +2381,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"SmokeShellBlue",
@@ -2414,7 +2399,6 @@ class CfgVehicles
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"B_IR_Grenade"
@@ -2427,7 +2411,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"SmokeShellBlue",
@@ -2446,7 +2429,6 @@ class CfgVehicles
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"B_IR_Grenade"
@@ -2494,7 +2476,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"SmokeShellBlue",
@@ -2513,7 +2494,6 @@ class CfgVehicles
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"B_IR_Grenade"
@@ -2526,7 +2506,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"SmokeShellBlue",
@@ -2545,7 +2524,6 @@ class CfgVehicles
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
-			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"B_IR_Grenade"
@@ -2604,13 +2582,13 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"t1_longrange_556",
-			"t1_longrange_556",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"HandGrenade",
 			"HandGrenade",
 			"HandGrenade",
 			"ACE_M84",
@@ -2629,13 +2607,13 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"t1_longrange_556",
-			"t1_longrange_556",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"HandGrenade",
 			"HandGrenade",
 			"HandGrenade",
 			"ACE_M84",
@@ -2708,6 +2686,7 @@ class CfgVehicles
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
+			"HandGrenade",
 			"SmokeShellBlue"
 		};
 		respawnmagazines[] = {
@@ -2715,6 +2694,7 @@ class CfgVehicles
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"HandGrenade",
 			"HandGrenade",
 			"SmokeShellBlue"
 		};
@@ -2764,6 +2744,7 @@ class CfgVehicles
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
+			"HandGrenade",
 			"SmokeShellBlue"
 		};
 		respawnmagazines[] = {
@@ -2772,6 +2753,7 @@ class CfgVehicles
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"HandGrenade",
 			"HandGrenade",
 			"SmokeShellBlue"
 		};
@@ -2824,7 +2806,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"HandGrenade",
@@ -2836,7 +2817,6 @@ class CfgVehicles
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
 			"rhsusf_100Rnd_556x45_soft_pouch",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2903,7 +2883,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"SmokeShellBlue",
 			"SmokeShellBlue",
@@ -2915,7 +2894,6 @@ class CfgVehicles
 			"ACE_M84"
 		};
 		respawnmagazines[] = {
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2984,9 +2962,9 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",			
-			"t1_longrange_556",
-			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
@@ -3005,9 +2983,9 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",			
-			"t1_longrange_556",
-			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
@@ -3066,8 +3044,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
@@ -3092,8 +3069,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
@@ -3165,8 +3141,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"HandGrenade",
 			"HandGrenade",
 			"SmokeShellBlue",
 			"SmokeShellBlue",
@@ -3192,8 +3168,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
+			"HandGrenade",
 			"HandGrenade",
 			"SmokeShellBlue",
 			"SmokeShellBlue",
@@ -3284,7 +3260,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
@@ -3299,7 +3275,7 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
-			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
 			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
@@ -3363,8 +3339,9 @@ class CfgVehicles
 		magazines[] = {
 			rhs_mag_30Rnd_556x45_M855A1_Stanag,
 			rhs_mag_30Rnd_556x45_M855A1_Stanag,
-			rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red,
-			rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red,
+			rhs_mag_30Rnd_556x45_M855A1_Stanag,
+			rhs_mag_30Rnd_556x45_M855A1_Stanag,
+			rhs_mag_30Rnd_556x45_M855A1_Stanag,
 			rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red,
 			rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red,
 			"rhsusf_mag_17Rnd_9x19_FMJ",
@@ -3391,8 +3368,9 @@ class CfgVehicles
 		respawnmagazines[] = {
 			rhs_mag_30Rnd_556x45_M855A1_Stanag,
 			rhs_mag_30Rnd_556x45_M855A1_Stanag,
-			rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red,
-			rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red,
+			rhs_mag_30Rnd_556x45_M855A1_Stanag,
+			rhs_mag_30Rnd_556x45_M855A1_Stanag,
+			rhs_mag_30Rnd_556x45_M855A1_Stanag,
 			rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red,
 			rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red,
 			"rhsusf_mag_17Rnd_9x19_FMJ",
@@ -3678,8 +3656,6 @@ class CfgVehicles
 	class B_supplyCrate_F;
 	class T1_section_ammobox: B_supplyCrate_F
 	{
-		
-		
 		vehicleClass = "Ammo";
 		displayName = "T1 Section Supply Box";
 		transportMaxWeapons = 999;

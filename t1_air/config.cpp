@@ -31,9 +31,22 @@ class CfgPatches
         magazines[] = {};
         requiredVersion = 0.1;
         requiredAddons[] = {
-            "t1_units"
+            "t1_units",
+			"Extended_Eventhandlers"
         };
     };
+};
+
+class Extended_Init_Eventhandlers
+{
+	class t1_heli_medium_attack
+	{
+		init = "_null = _this execVM 't1_air\AddFRIES.sqf'";
+	};
+	class t1_heli_medium_rockets
+	{
+		init = "_null = _this execVM 't1_air\AddFRIES.sqf'";
+	};
 };
 
 class SensorTemplatePassiveRadar;  
@@ -58,6 +71,8 @@ class cfgWeapons
         displayName = "T1 Coveralls";
         picture = "\A3\characters_f\data\ui\icon_U_B_coveralls_ca.paa";
         model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		ACE_GForceCoef = 0.8;
+		
         class ItemInfo : UniformItem
         {
             uniformModel = "-";
@@ -72,6 +87,8 @@ class cfgWeapons
         displayName = "T1 Coveralls (Black)";
         picture = "\t1_textures\ui\icon_t1_u_pilot_black.paa";
         model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		ACE_GForceCoef = 0.8;
+		
         class ItemInfo : UniformItem
         {
             uniformModel = "-";
@@ -86,6 +103,8 @@ class cfgWeapons
         displayName = "T1 Coveralls (Black Camo)";
         picture = "\t1_textures\ui\icon_t1_u_pilot_blackcamo.paa";
         model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		ACE_GForceCoef = 0.8;
+		
         class ItemInfo : UniformItem
         {
             uniformModel = "-";
@@ -100,6 +119,8 @@ class cfgWeapons
         displayName = "T1 Coveralls (Camo)";
         picture = "\t1_textures\ui\icon_t1_u_pilot_camo.paa";
         model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		ACE_GForceCoef = 0.8;
+		
         class ItemInfo : UniformItem
         {
             uniformModel = "-";
@@ -114,6 +135,8 @@ class cfgWeapons
         displayName = "T1 Coveralls (Night)";
         picture = "\t1_textures\ui\icon_t1_u_pilot_night.paa";
         model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		ACE_GForceCoef = 0.8;
+		
         class ItemInfo : UniformItem
         {
             uniformModel = "-";
@@ -192,6 +215,7 @@ class cfgVehicles
             MEDICALITEMS};
         camouflage = 1.4;
         engineer = 1;
+		ACE_GForceCoef = 0.55;
     };
     class T1_Pilot_Black_F : T1_Pilot_Standard_F
     {
@@ -255,7 +279,6 @@ class cfgVehicles
     class RHS_UH60M2;
     class rhs_uh60m_esss : RHS_UH60M2
     {
-        // This is messy. Really messy. So why is it needed? :shrug:
         class Components;
         class TransportPylonsComponent;
         class pylons;
@@ -343,7 +366,7 @@ class cfgVehicles
         reportRemoteTargets = 1;
         reportOwnPosition = 1;
         receiveRemoteTargets = 1;
-
-#include "fightercomponents.hpp"
+		
+		#include "fightercomponents.hpp"
     };
 };

@@ -54,7 +54,7 @@ class CfgWeapons
 	
 	class arifle_SPAR_01_GL_blk_F: arifle_SPAR_01_GL_base_F
 	{
-		recoil = "recoil_t1_m4_s";
+		recoil = "recoil_t1_m4_s_g";
 		initSpeed = -0.93;
 		
 		class WeaponSlotsInfo: WeaponSlotsInfo

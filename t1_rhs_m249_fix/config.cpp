@@ -157,30 +157,3 @@ class CfgWeapons
 		recoil = "recoil_t1_m249_l_g";
 	};
 };
-
-
-
-class CfgMagazines
-{
-	class rhsusf_200Rnd_556x45_soft_pouch;
-	class rhs_200rnd_556x45_M_SAW: rhsusf_200Rnd_556x45_soft_pouch
-	{
-		mass = 69;
-	};
-	
-	class rhs_200rnd_556x45_T_SAW: rhs_200rnd_556x45_M_SAW
-	{
-		mass = 69;
-	};
-	
-	class rhs_200rnd_556x45_B_SAW: rhs_200rnd_556x45_M_SAW
-	{
-		mass = 69;
-	};
-	
-	class rhs_mag_30Rnd_556x45_M855A1_Stanag;
-	class rhsusf_100Rnd_556x45_soft_pouch: rhs_mag_30Rnd_556x45_M855A1_Stanag
-	{
-		mass = 34;
-	};
-};

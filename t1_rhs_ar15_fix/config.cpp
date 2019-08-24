@@ -482,6 +482,11 @@ class CfgWeapons
 		recoil = "recoil_t1_m4_s_g";
 	};
 	
+	class rhs_weap_mk18_m320: rhs_weap_mk18
+	{
+		recoil = "recoil_t1_m4_s_g";
+	};
+	
 	class rhs_weap_mk18_grip2: rhs_weap_mk18_grip
 	{
 		recoil = "recoil_t1_m4_s_g";
@@ -658,6 +663,11 @@ class CfgWeapons
 		recoil = "recoil_t1_m4_s_g";
 	};
 	
+	class rhs_weap_hk416d10_m320: rhs_weap_hk416d10
+	{
+		recoil = "recoil_t1_m4_s_g";
+	};
+	
 	class rhs_weap_hk416d145_grip: rhs_weap_hk416d145
 	{
 		recoil = "recoil_t1_m4_l_g";
@@ -669,6 +679,11 @@ class CfgWeapons
 	};
 	
 	class rhs_weap_hk416d145_grip3: rhs_weap_hk416d145_grip2
+	{
+		recoil = "recoil_t1_m4_l_g";
+	};
+	
+	class rhs_weap_hk416d145_m320: rhs_weap_hk416d145
 	{
 		recoil = "recoil_t1_m4_l_g";
 	};

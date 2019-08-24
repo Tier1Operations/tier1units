@@ -114,7 +114,7 @@ class CfgMagazines
 		ammo = "T1_B_556x45_Ball_SD";
 		count = 30;
 		initSpeed = 325;
-		mass = 11.5;
+		mass = 8.8;
 		scope = 2;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
@@ -130,7 +130,7 @@ class CfgMagazines
 		ammo = "T1_B_556x45_Ball_SD";
 		count = 150;
 		initSpeed = 325;
-		mass = 54;
+		mass = 41;
 		scope = 2;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
@@ -145,7 +145,7 @@ class CfgMagazines
 		ammo = "T1_rhsusf_B_300winmag_SD";
 		count = 5;
 		initSpeed = 325;
-		mass = 10.4;
+		mass = 2.8;
 		scope = 2;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
@@ -153,6 +153,7 @@ class CfgMagazines
 	
 	class ACE_20Rnd_762x51_Mag_SD: 20Rnd_762x51_Mag
 	{
+		mass = 13;
 		initSpeed = 325;
 	};
 };

@@ -1030,6 +1030,7 @@ class CfgMagazines
 	};
 	class 30Rnd_556x45_Stanag: CA_Magazine
 	{
+		mass = 11;
 		initSpeed = 940;
 	};
 	class ACE_30Rnd_556x45_Stanag_M995_AP_mag: 30Rnd_556x45_Stanag
@@ -1054,6 +1055,7 @@ class CfgMagazines
 	};
 	class 20Rnd_762x51_Mag: CA_Magazine
 	{
+		mass = 16;
 		initSpeed = 833;
 	};
 	class 10Rnd_762x51_Mag: 20Rnd_762x51_Mag
@@ -1258,58 +1260,122 @@ class CfgMagazines
 	
 	class rhs_mag_30Rnd_556x45_M855_Stanag: 30Rnd_556x45_Stanag
 	{
+		mass = 11;
 		initSpeed = 750;
 	};
 	class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red: rhs_mag_30Rnd_556x45_M855_Stanag
 	{
+		mass = 11;
 		initSpeed = 750;
 	};
 	class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green: rhs_mag_30Rnd_556x45_M855_Stanag
 	{
+		mass = 11;
 		initSpeed = 750;
 	};
 	class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow: rhs_mag_30Rnd_556x45_M855_Stanag
 	{
+		mass = 11;
 		initSpeed = 750;
 	};
 	class rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange: rhs_mag_30Rnd_556x45_M855_Stanag
 	{
+		mass = 11;
 		initSpeed = 750;
 	};
 	class rhs_mag_30Rnd_556x45_M855A1_Stanag: 30Rnd_556x45_Stanag
 	{
+		mass = 11;
 		initSpeed = 940;
 	};
 	class rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer: rhs_mag_30Rnd_556x45_M855A1_Stanag
 	{
+		mass = 11;
 		initSpeed = 940;
 	};
 	class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red: rhs_mag_30Rnd_556x45_M855A1_Stanag
 	{
+		mass = 11;
 		initSpeed = 940;
 	};
 	class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green: rhs_mag_30Rnd_556x45_M855A1_Stanag
 	{
+		mass = 11;
 		initSpeed = 940;
 	};
 	class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow: rhs_mag_30Rnd_556x45_M855A1_Stanag
 	{
+		mass = 11;
 		initSpeed = 940;
 	};
 	class rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange: rhs_mag_30Rnd_556x45_M855A1_Stanag
 	{
+		mass = 11;
 		initSpeed = 940;
+	};
+	class rhs_mag_30Rnd_556x45_M855A1_PMAG: rhs_mag_30Rnd_556x45_M855A1_Stanag
+	{
+		mass = 11;
+		initSpeed = 940;
+	};
+	class rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red: rhs_mag_30Rnd_556x45_M855A1_PMAG
+	{
+		mass = 11;
+		initSpeed = 940;
+	};
+	class rhs_mag_30Rnd_556x45_M855_PMAG: rhs_mag_30Rnd_556x45_M855A1_PMAG
+	{
+		mass = 11;
+		initSpeed = 750;
+	};
+	class rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red: rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red
+	{
+		mass = 11;
+		initSpeed = 750;
 	};
 	class rhs_mag_30Rnd_556x45_Mk318_Stanag: rhs_mag_30Rnd_556x45_M855A1_Stanag
 	{
+		mass = 11;
 		initSpeed = 922;
 	};
 	class rhs_mag_30Rnd_556x45_Mk262_Stanag: rhs_mag_30Rnd_556x45_M855A1_Stanag
 	{
+		mass = 11;
+		initSpeed = 830;
+	};
+	class rhs_mag_100Rnd_556x45_M855A1_cmag: rhs_mag_30Rnd_556x45_M855A1_Stanag
+	{
+		mass = 39;
+		initSpeed = 940;
+	};
+	class rhs_mag_100Rnd_556x45_M855A1_cmag_mixed: rhs_mag_100Rnd_556x45_M855A1_cmag
+	{
+		mass = 39;
+		initSpeed = 940;
+	};
+	class rhs_mag_100Rnd_556x45_M855_cmag: rhs_mag_100Rnd_556x45_M855A1_cmag
+	{
+		mass = 39;
+		initSpeed = 750;
+	};
+	class rhs_mag_100Rnd_556x45_M855_cmag_mixed: rhs_mag_100Rnd_556x45_M855_cmag
+	{
+		mass = 39;
+		initSpeed = 750;
+	};
+	class rhs_mag_100Rnd_556x45_Mk318_cmag: rhs_mag_100Rnd_556x45_M855A1_cmag
+	{
+		mass = 39;
+		initSpeed = 922;
+	};
+	class rhs_mag_100Rnd_556x45_Mk262_cmag: rhs_mag_100Rnd_556x45_M855A1_cmag
+	{
+		mass = 39;
 		initSpeed = 830;
 	};
 	class rhsusf_5Rnd_300winmag_xm2010: CA_Magazine
 	{
+		mass = 3.5;
 		initSpeed = 869;
 	};
 	class 10Rnd_RHS_50BMG_Box: CA_Magazine
@@ -1326,106 +1392,167 @@ class CfgMagazines
 	};
 	class rhsusf_100Rnd_556x45_soft_pouch: rhs_mag_30Rnd_556x45_M855A1_Stanag
 	{
+		mass = 34;
 		initSpeed = 940;
 	};
-	class rhsusf_200Rnd_556x45_soft_pouch: rhsusf_100Rnd_556x45_soft_pouch
+	class rhsusf_100Rnd_556x45_mixed_soft_pouch: rhsusf_100Rnd_556x45_soft_pouch
 	{
-		initSpeed = 940;
-	};
-	class rhs_200rnd_556x45_M_SAW: rhsusf_200Rnd_556x45_soft_pouch
-	{
-		initSpeed = 940;
-	};
-	class rhs_200rnd_556x45_T_SAW: rhs_200rnd_556x45_M_SAW
-	{
-		initSpeed = 940;
-	};
-	class rhs_200rnd_556x45_B_SAW: rhs_200rnd_556x45_M_SAW
-	{
+		mass = 34;
 		initSpeed = 940;
 	};
 	class rhsusf_100Rnd_556x45_M855_soft_pouch: rhs_mag_30Rnd_556x45_M855_Stanag
 	{
+		mass = 34;
 		initSpeed = 750;
+	};
+	class rhsusf_100Rnd_556x45_M855_mixed_soft_pouch: rhsusf_100Rnd_556x45_M855_soft_pouch
+	{
+		mass = 34;
+		initSpeed = 750;
+	};
+	class rhsusf_200Rnd_556x45_soft_pouch: rhsusf_100Rnd_556x45_soft_pouch
+	{
+		mass = 69;
+		initSpeed = 940;
+	};
+	class rhsusf_200Rnd_556x45_mixed_soft_pouch: rhsusf_200Rnd_556x45_soft_pouch
+	{
+		mass = 69;
+		initSpeed = 940;
+	};
+	class rhs_200rnd_556x45_M_SAW: rhsusf_200Rnd_556x45_soft_pouch
+	{
+		mass = 69;
+		initSpeed = 940;
+	};
+	class rhs_200rnd_556x45_T_SAW: rhs_200rnd_556x45_M_SAW
+	{
+		mass = 69;
+		initSpeed = 940;
+	};
+	class rhs_200rnd_556x45_B_SAW: rhs_200rnd_556x45_M_SAW
+	{
+		mass = 69;
+		initSpeed = 940;
 	};
 	class rhsusf_200Rnd_556x45_M855_soft_pouch: rhsusf_100Rnd_556x45_M855_soft_pouch
 	{
+		mass = 69;
+		initSpeed = 750;
+	};
+	class rhsusf_200Rnd_556x45_M855_mixed_soft_pouch: rhsusf_200Rnd_556x45_M855_soft_pouch
+	{
+		mass = 69;
 		initSpeed = 750;
 	};
 	class rhsusf_50Rnd_762x51: CA_Magazine
 	{
+		mass = 30;
 		initSpeed = 833;
 	};
 	class rhsusf_50Rnd_762x51_m61_ap: rhsusf_50Rnd_762x51
 	{
+		mass = 30;
 		initSpeed = 850;
 	};
 	class rhsusf_50Rnd_762x51_m62_tracer: rhsusf_50Rnd_762x51
 	{
+		mass = 30;
 		initSpeed = 833;
 	};
 	class rhsusf_50Rnd_762x51_m80a1epr: rhsusf_50Rnd_762x51
 	{
+		mass = 30;
 		initSpeed = 915;
 	};
 	class rhsusf_100Rnd_762x51: rhsusf_50Rnd_762x51
 	{
+		mass = 58;
 		initSpeed = 833;
 	};
 	class rhsusf_100Rnd_762x51_m61_ap: rhsusf_50Rnd_762x51_m61_ap
 	{
+		mass = 58;
 		initSpeed = 850;
 	};
 	class rhsusf_100Rnd_762x51_m62_tracer: rhsusf_50Rnd_762x51_m62_tracer
 	{
+		mass = 58;
 		initSpeed = 833;
 	};
 	class rhsusf_100Rnd_762x51_m80a1epr: rhsusf_50Rnd_762x51_m80a1epr
 	{
+		mass = 58;
 		initSpeed = 915;
 	};
 	class rhsusf_50Rnd_762x51_m993: rhsusf_50Rnd_762x51
 	{
+		mass = 30;
 		initSpeed = 920;
 	};
 	class rhsusf_100Rnd_762x51_m993: rhsusf_50Rnd_762x51_m993
 	{
+		mass = 58;
 		initSpeed = 920;
 	};
 	class rhsusf_20Rnd_762x51_m118_special_Mag: CA_Magazine
 	{
+		mass = 16;
 		initSpeed = 805;
 	};
 	class rhsusf_20Rnd_762x51_m993_Mag: rhsusf_20Rnd_762x51_m118_special_Mag
 	{
+		mass = 16;
 		initSpeed = 920;
 	};
 	class rhsusf_20Rnd_762x51_m62_Mag: rhsusf_20Rnd_762x51_m118_special_Mag
 	{
+		mass = 16;
+		initSpeed = 833;
+	};
+	class rhsusf_20Rnd_762x51_SR25_m118_special_Mag: rhsusf_20Rnd_762x51_m118_special_Mag
+	{
+		mass = 16;
+		initSpeed = 805;
+	};
+	class rhsusf_20Rnd_762x51_SR25_m993_Mag: rhsusf_20Rnd_762x51_m993_Mag
+	{
+		mass = 16;
+		initSpeed = 920;
+	};
+	class rhsusf_20Rnd_762x51_SR25_m62_Mag: rhsusf_20Rnd_762x51_m62_Mag
+	{
+		mass = 16;
 		initSpeed = 833;
 	};
 	class rhsusf_5Rnd_762x51_m118_special_Mag: CA_Magazine
 	{
+		mass = 2.75;
 		initSpeed = 805;
 	};
 	class rhsusf_5Rnd_762x51_m993_Mag: rhsusf_5Rnd_762x51_m118_special_Mag
 	{
+		mass = 2.75;
 		initSpeed = 920;
 	};
 	class rhsusf_5Rnd_762x51_m62_Mag: rhsusf_5Rnd_762x51_m118_special_Mag
 	{
+		mass = 2.75;
 		initSpeed = 833;
 	};
 	class rhsusf_10Rnd_762x51_m118_special_Mag: CA_Magazine
 	{
+		mass = 9;
 		initSpeed = 805;
 	};
 	class rhsusf_10Rnd_762x51_m993_Mag: rhsusf_5Rnd_762x51_m118_special_Mag
 	{
+		mass = 9;
 		initSpeed = 920;
 	};
 	class rhsusf_10Rnd_762x51_m62_Mag: rhsusf_5Rnd_762x51_m118_special_Mag
 	{
+		mass = 9;
 		initSpeed = 833;
 	};
 	class rhsusf_mag_40Rnd_46x30_FMJ: CA_Magazine

@@ -22,6 +22,7 @@ class CfgFunctions
 			class toggleStrobeBrightness {file = "t1_ace_irstrobe_fix\functions\fn_toggleStrobeBrightness.sqf";};
 			class handleItemKilled {file = "t1_ace_irstrobe_fix\functions\fn_handleItemKilled.sqf";};
 			class unitInit {file = "t1_ace_irstrobe_fix\functions\fn_unitInit.sqf";};
+			class handleKilled {file = "t1_ace_irstrobe_fix\functions\fnc_handleKilled.sqf";};
 		};
 	};
 };

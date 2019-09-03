@@ -81,29 +81,28 @@ if (_audio == "beep") then {
 	};
 };
 
-//diag_log format["COMMSPLAY - _soundFile: %1", _soundFile];
+diag_log format["COMMSPLAY - _soundFile: %1", _soundFile];
 
 if (_asset isEqualType objNull) then {
-	//diag_log format["COMMSPLAY - ASSET IS OBJECT - _asset: %1", _asset];
+	diag_log format["COMMSPLAY - ASSET IS OBJECT - _asset: %1", _asset];
 	
 	if (!isPlayer (effectiveCommander _asset)) then {
-		_nr = 1;
+		private _nr = 1;
 		
 		{
 			if (_asset == _x) exitWith {};
 			_nr = _nr + 1;
 		} forEach ([group _asset] call dta_fnc_GroupVehicles);
 		
-		//diag_log format["COMMSPLAY - ASSET IS AI - ORIG MESSAGE: %1", _messageCode];
+		diag_log format["COMMSPLAY - ASSET IS AI - ORIG MESSAGE: %1", _messageCode];
 		_messageCode = format["UNIT %1: ", _nr] + _messageCode;
-		//diag_log format["COMMSPLAY - ASSET IS AI - NEW MESSAGE: %1", _messageCode];
+		diag_log format["COMMSPLAY - ASSET IS AI - NEW MESSAGE: %1", _messageCode];
 	};
 	_asset sideChat _messageCode;
 	
 } else {
+	diag_log format["COMMSPLAY - ASSET IS GROUP - _asset: %1", _asset];
 	(leader _asset) sideChat _messageCode;
-	
-	//diag_log format["COMMSPLAY - ASSET IS GROUP - _asset: %1", _asset];
 };
 
 

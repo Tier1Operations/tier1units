@@ -21,6 +21,7 @@ if ("O_MBT_02_arty_base_F" in _parents) then {_assetType = "Cannon"};
 if ("O_MBT_02_arty_F" in _parents) then {_assetType = "Cannon"};
 if ("I_MBT_01_arty_F" in _parents) then {_assetType = "Cannon"};
 if ("I_MBT_01_mlrs_F" in _parents) then {_assetType = "Rocket"};
+if ("B_Ship_MRLS_01_F" in _parents) then {_assetType = "MK41"};
 if ("rhs_2s3_tv" in _parents) then {_assetType = "Cannon"};
 
 // Second attempt to detect. Assumes unit is a howitzer unless it has some magazines that contain the word "rocket"

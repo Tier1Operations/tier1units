@@ -4,10 +4,14 @@
 
 private ["_tube","_magazineType","_magazineRounds","_allMagazines","_omitOnce",
 "_newMagazines","_index","_add","_magazine","_firstMag","_arrayNew","_lookForMag",
-"_gunner"];
+"_gunner","_assetType","_isMK41","_turretPath","_weapon","_reloadTime"];
 
 _tube = _this select 0;
 _magazineType = _this select 1;
+_assetType = _this select 2;
+
+_isMK41 = false;
+if (_assetType == "MK41") then {_isMK41 = true};
 
 //diag_log format ["LOADMAG - CURMAG: %1 - REQMAG: %2", currentMagazine _tube, _magazineType];
 
@@ -61,8 +65,20 @@ if (currentMagazine _tube != _magazineType) then {
 };
 
 
-// Need to wait 18 seconds after loading new ammo to circumvent an aiming bug in Arma.
-_tube setVariable ["DTA_ammoTimeout", time + 18, true];
+_turretPath = (assignedVehicleRole _gunner) select 1;
+_weapon = _tube currentWeaponTurret _turretPath;
+_reloadTime = getNumber(configfile >> "CfgWeapons" >> _weapon >> "magazineReloadTime");
 
+// Sometimes the reload time gets doubled on vanilla vehicles. So, double the number, just in case.
+_reloadTime = _reloadTime * 2;
+
+// Need to wait at least 18 seconds after loading new ammo to circumvent an aiming bug in Arma.
+_reloadTime = _reloadTime max 18;
+
+_tube setVariable ["DTA_ammoWaitingTime", _reloadTime];
+
+if (_reloadTime > 45) then {
+	[_tube, format["Changing ammo will take a while: %1 seconds.",_reloadTime], "beep"] call dta_fnc_SendComms;
+};
 
 //diag_log format ["LOADMAG - END - CURMAG: %1 - REQMAG: %2", currentMagazine _tube, _magazineType];

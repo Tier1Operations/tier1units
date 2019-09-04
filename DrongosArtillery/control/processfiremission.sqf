@@ -52,12 +52,14 @@ if (_assetType == "INVALID") exitWith {
 	publicVariable "dtaAssetsBusy";
 };
 
+
 _profile = [];
 if (_assetType == "Mortar") then {_profile = [_warheadType, _distance] call dta_fnc_ProfileMortar};
 if ((_assetType == "Cannon") and {_angle == "Low"}) then {_profile = [_warheadType, _distance] call dta_fnc_ProfileCannonLA};
 if ((_assetType == "Cannon") and {_angle == "High"}) then {_profile = [_warheadType, _distance] call dta_fnc_ProfileCannonHA};
 if ((_assetType == "Rocket") and {_angle == "Low"}) then {_profile = [_warheadType, _distance] call dta_fnc_ProfileRocketsLA};
 if ((_assetType == "Rocket") and {_angle == "High"}) then {_profile = [_warheadType, _distance] call dta_fnc_ProfileRocketsHA};
+if (_assetType == "MK41") then {_profile = [_warheadType, _distance] call dta_fnc_ProfileMK41};
 if (_assetType == "BM21") then {_profile = [_warheadType, _distance] call dta_fnc_ProfileBM21};
 
 _tubeType = weapons _vehicle select 0;

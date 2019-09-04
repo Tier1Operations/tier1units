@@ -36,7 +36,8 @@ _sheafLineDist = _this select 22;
 if ((_missionType == "SPOT") or (_missionType == "FFE")) then {
 	{
 		_x setVariable ["DTA_outOfAmmo", false];
-		[_x,_warheadType] call dta_fnc_LoadMagazine;
+		_x setVariable ["DTA_ammoWaitingTime", 0];
+		[_x,_warheadType,_assetType] call dta_fnc_LoadMagazine;
 	} forEach _tubes;
 };
 

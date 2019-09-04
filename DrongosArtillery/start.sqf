@@ -79,6 +79,13 @@ dtaLastAdjustY = 0;
 dtaControlRunning = false;
 
 
+// Units that will be added to the arty computer, even though they normally wouldn't be supported.
+// Used for special units.
+if (isNil "dtaApproveVehiclesOverride") then {
+	dtaApproveVehiclesOverride = ["B_Ship_MRLS_01_F"];
+};
+
+
 // Rounds that can be used for airburst fire.
 if (isNil "dtaAirburstRounds") then {
 	dtaAirburstRounds = ["8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_guided","8Rnd_82mm_Mo_LG","32Rnd_155mm_Mo_shells","2Rnd_155mm_Mo_guided","2Rnd_155mm_Mo_LG","12Rnd_230mm_rockets","rhs_1Rnd_m821_HE","RHS_mag_m1_he_12","rhs_mag_HE_2a33","rhs_mag_3vo18_10","rhs_mag_3of56_10","rhs_mag_155mm_m795_28"];
@@ -96,7 +103,7 @@ if (isNil "dtaGPSGuidedTypes") then {
 // Laser needs to be within 500 meters of the chosen target pos.
 // If it gained a lock and then loses lock on the laser, it will go for the last known position of the laser.
 if (isNil "dtaGPSLaserTypes") then {
-	dtaGPSLaserTypes = ["2Rnd_155mm_Mo_LG","2Rnd_155mm_Mo_Cluster","6Rnd_155mm_Mo_mine","6Rnd_155mm_Mo_AT_mine"];
+	dtaGPSLaserTypes = ["2Rnd_155mm_Mo_LG","2Rnd_155mm_Mo_Cluster","6Rnd_155mm_Mo_mine","6Rnd_155mm_Mo_AT_mine","magazine_Missiles_Cruise_01_x18","magazine_Missiles_Cruise_01_Cluster_x18"];
 };
 
 
@@ -196,6 +203,7 @@ dta_fnc_ProfileCannonLA = compile preprocessFile "DrongosArtillery\Profiles\Cann
 dta_fnc_ProfileCannonHA = compile preprocessFile "DrongosArtillery\Profiles\CannonHA.sqf";
 dta_fnc_ProfileRocketsLA = compile preprocessFile "DrongosArtillery\Profiles\RocketsLA.sqf";
 dta_fnc_ProfileRocketsHA = compile preprocessFile "DrongosArtillery\Profiles\RocketsHA.sqf";
+dta_fnc_ProfileMK41 = compile preprocessFile "DrongosArtillery\Profiles\MK41.sqf";
 dta_fnc_ProfileBM21 = compile preprocessFile "DrongosArtillery\Profiles\BM21.sqf";
 
 dta_fnc_CircularSheaf = compile preprocessFile "DrongosArtillery\Sheafs\Circle.sqf";

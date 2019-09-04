@@ -504,6 +504,15 @@ class CfgAmmo
 		caliber = 3.0;
 	};
 	
+	class ace_frag_huge2_dtaCopy: ace_frag_large_dtaCopy
+	{
+		hit = 40;
+		indirectHit = 5;
+		indirectHitRange = 0.5;
+		airFriction = "(-0.01)*0.25";
+		caliber = 5.0;
+	};
+	
 	class ACE_frag_DTA_HE_AIRBURST_1: ace_frag_base_dtaCopy
 	{
 		hit = 30;
@@ -791,14 +800,12 @@ class CfgAmmo
 		indirectHit = 400;
 		indirectHitRange = 30;
 		
-		ace_frag_charge = 420;
 		ace_frag_classes[] = {"ace_frag_large_HD_dtaCopy","ace_frag_large_dtaCopy","ace_frag_huge_HD_dtaCopy","ace_frag_huge_dtaCopy","ace_frag_huge_dtaCopy","ace_frag_huge_dtaCopy","ace_frag_huge_dtaCopy","ace_frag_huge_dtaCopy","ace_frag_huge_dtaCopy","ace_frag_huge_dtaCopy"};
-		ace_frag_enabled = 1;
-		ace_frag_gurney_c = 2440;
+		ace_frag_metal = 40000;
+		ace_frag_charge = 10000;
+		ace_frag_gurney_c = 2500;
 		ace_frag_gurney_k = "1/2";
-		ace_frag_metal = 3200;
 	};
-	
 	
 	class Smoke_120mm_AMOS_White: SubmunitionBase
 	{
@@ -816,6 +823,204 @@ class CfgAmmo
 		timeToLive = 140;
 		effectsSmoke = "SmokeShellWhiteEffect_dta";
 		ace_frag_enabled = 0;
+	};
+	
+	class ammo_Missile_CruiseBase;
+	class ammo_Missile_Cruise_01: ammo_Missile_CruiseBase
+	{
+		lockSeekRadius = 1500;
+		missileKeepLockedCone = 110;
+		missileLockCone = 110;
+		missileLockMaxSpeed = 150;
+		missileLockMinDistance = 0.1;
+		
+		ace_frag_classes[] = {"ace_frag_huge2_dtaCopy"};
+		ace_frag_metal = 45000;
+		ace_frag_charge = 6000;
+		ace_frag_gurney_c = 3000;
+		ace_frag_gurney_k = "1/2";
+		
+		class Cruise
+		{
+			lockDistanceToTarget = 800;
+			preferredFlightAltitude = 100;
+		};
+		
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class DataLinkSensorComponent
+					{
+						aimDown = 0;
+						allowsMarking = 0;
+						angleRangeHorizontal = 360;
+						angleRangeVertical = 360;
+						animDirection = "";
+						color[] = {1,1,1,0};
+						componentType = "DataLinkSensorComponent";
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 1;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 0;
+						
+						class AirTarget
+						{
+							maxRange = 32000;
+							minRange = 32000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						
+						class GroundTarget
+						{
+							maxRange = 32000;
+							minRange = 32000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+					};
+					
+					class SensorTemplateLaser
+					{
+						aimDown = 30;
+						allowsMarking = 0;
+						angleRangeHorizontal = 110;
+						angleRangeVertical = 110;
+						animDirection = "";
+						color[] = {1,1,1,0};
+						componentType = "LaserSensorComponent";
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 1e+010;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 0;
+						
+						class AirTarget
+						{
+							maxRange = 1500;
+							minRange = 1500;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						
+						class GroundTarget
+						{
+							maxRange = 1500;
+							minRange = 1500;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+					};
+				};
+			};
+		};
+	};
+	class ammo_Missile_Cruise_01_Cluster: ammo_Missile_Cruise_01
+	{
+		lockSeekRadius = 1000;
+		missileKeepLockedCone = 110;
+		missileLockCone = 110;
+		missileLockMaxSpeed = 150;
+		missileLockMinDistance = 0.1;
+		
+		class Cruise
+		{
+			lockDistanceToTarget = 800;
+			preferredFlightAltitude = 100;
+		};
+		
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class DataLinkSensorComponent
+					{
+						aimDown = 0;
+						allowsMarking = 0;
+						angleRangeHorizontal = 360;
+						angleRangeVertical = 360;
+						animDirection = "";
+						color[] = {1,1,1,0};
+						componentType = "DataLinkSensorComponent";
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 1;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 0;
+						
+						class AirTarget
+						{
+							maxRange = 32000;
+							minRange = 32000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						
+						class GroundTarget
+						{
+							maxRange = 32000;
+							minRange = 32000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+					};
+					
+					class SensorTemplateLaser
+					{
+						aimDown = 30;
+						allowsMarking = 0;
+						angleRangeHorizontal = 110;
+						angleRangeVertical = 110;
+						animDirection = "";
+						color[] = {1,1,1,0};
+						componentType = "LaserSensorComponent";
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 1e+010;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 0;
+						
+						class AirTarget
+						{
+							maxRange = 1500;
+							minRange = 1500;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						
+						class GroundTarget
+						{
+							maxRange = 1500;
+							minRange = 1500;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+					};
+				};
+			};
+		};
 	};
 };
 
@@ -904,17 +1109,17 @@ class cfgWeapons
 		
 		class Single1: Mode_SemiAuto
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 		};
 		class Burst1: Mode_Burst
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 		};
 		
 		class Single3;
 		class Single4: Single3
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 			artilleryCharge = 1.45;
 			displayName = "Semi (very far)";
 		};
@@ -922,7 +1127,7 @@ class cfgWeapons
 		class Burst3;
 		class Burst4: Burst3
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 			artilleryCharge = 1.45;
 			maxRange = 6500;
 			maxRangeProbab = 0.3;
@@ -939,12 +1144,12 @@ class cfgWeapons
 	{
 		class Single1: Mode_SemiAuto
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 		};
 
 		class Burst1: Mode_Burst
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 		};
 	};
 
@@ -952,19 +1157,25 @@ class cfgWeapons
 	{
 		class Close: RocketPods
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 		};
 		class Medium: Close
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 		};
 		class Far: Close
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 		};
 		class Full: Close
 		{
-			artilleryDispersion = 0.001;
+			artilleryDispersion = 0.01;
 		};
+	};
+	
+	class weapon_VLSBase;
+	class weapon_VLS_01: weapon_VLSBase
+	{
+		magazineReloadTime = 60;
 	};
 };

@@ -12,7 +12,7 @@ private ["_tube","_rounds","_profile","_pos","_warheadType","_missionType","_she
 "_vx","_vy","_vx","_vy","_dx","_dy","_specialEH","_action","_airburstEH","_doAirburst",
 "_scatter","_scatter2","_longRangeGuided","_tubesTemp","_selectedTube","_tubeIndex","_loaded",
 "_magazineClass","_firstRound","_g","_alt","_distance","_highAngle","_highETA","_lowAngle",
-"_lowETA","_angle","_ETA","_weapon","_warheadType","_modes","_ammoSpeed","_artyAlt",
+"_lowETA","_angle","_ETA","_weapon","_warheadType","_modes","_ammoInitSpeed","_artyAlt",
 "_gunAngle","_sleepTime","_dtaSelectedTube","_fireCenterFirst","_outOfAmmo","_infoDummyNetID",
 "_arrayTRP","_closeToTRP","_tubes","_endMission","_modHigh","_realDistance","_modLow","_root",
 "_switchedAmmoTime","_bestETA","_bestAngle","_vel","_c","_ha","_la","_hETA",
@@ -21,7 +21,8 @@ private ["_tube","_rounds","_profile","_pos","_warheadType","_missionType","_she
 "_impossibleShot","_allImpossibleShot","_allOutOfAmmo","_verDegrees","_posAGL","_sender",
 "_GPSZAdjust","_lastFiringPos","_chosenTargetPos","_lastGunAngle","_prePlotted",
 "_switchedAmmo","_infoDummy","_scatterSpread","_unguidedCEP","_chargesArrayLow",
-"_chargesArrayHigh","_findBestCharge","_driver","_posGPS","_sheafLineDir","_sheafLineDist", "_checkFire"];
+"_chargesArrayHigh","_findBestCharge","_driver","_posGPS","_sheafLineDir","_sheafLineDist", "_checkFire",
+"_isMK41","_ammo","_ammoMaxSpeed"];
 
 _tubes = _this select 0;
 _rounds = _this select 1;
@@ -50,6 +51,10 @@ _sheafLineDir = _this select 23;
 _sheafLineDist = _this select 24;
 
 
+// Will this use vanilla targeting?
+_isMK41 = if (_assetType == "MK41") then {true} else {false};
+
+
 // Set crew properties.
 _gunner = gunner _tube;
 _originalAimingSpeed = _gunner skill "aimingSpeed";
@@ -65,12 +70,13 @@ _driver = driver _tube;
 if (!isNull _driver) then {_driver disableAI "MOVE"};
 
 
-// Need to wait after changing ammo to avoid aiming bug.
-_ammoTimeout = _tube getVariable ["DTA_ammoTimeout", 0];
-if (time < _ammoTimeout) then {
+// If mag was changed, wait for reload. You need to wait at least 18 seconds to circumvent an aiming bug.
+private _ammoWaitingTime = _tube getVariable ["DTA_ammoWaitingTime", 0];
+if (_ammoWaitingTime > 0) then {
 	_switchedAmmo = true;
+	private _ammoTimeout = time + _ammoWaitingTime;
 	_switchedAmmoTime = (_ammoTimeOut - time) max 0;
-	_timeout = time + 18;
+	_timeout = time + 130; // Safety check.
 	waitUntil {sleep 0.5; (time > _ammoTimeout) or {time > _timeout}};
 } else {
 	_switchedAmmo = false;
@@ -232,8 +238,9 @@ _vy = _posTube select 1;
 
 // Weapon stats.
 _turretPath = (assignedVehicleRole _gunner) select 1;
-_tube currentWeaponTurret _turretPath;
 _weapon = _tube currentWeaponTurret _turretPath;
+_ammo = getText(configfile >> "CfgMagazines" >> _warheadType >> "ammo");
+_ammoMaxSpeed = (getNumber(configfile >> "CfgAmmo" >> _ammo >> "maxSpeed")) * 0.95;
 
 
 // Check if barrel is on target
@@ -258,6 +265,13 @@ _specialEH = -999;
 _action = 0;	// 0 = non-special / 1 = GPS/Laser / 2 = GPS / 3 = GPS/Discriminating / 4 = Laser
 
 switch true do {
+	case (_isMK41) : {
+		_sheaf = "POINT";
+		_scatter = 0;
+		_scatter2 = 0;
+		_action = 2;
+	};
+	
 	case (_warheadType in dtaGPSLaserTypes) : {
 		_sheaf = "POINT";
 		_scatter = 0;
@@ -375,20 +389,20 @@ private _getChargesArray = {
 	private _weapon = _this select 0;
 	private _warheadType = _this select 1;
 	
-	private _ammoSpeed = getNumber(configfile >> "CfgMagazines" >> _warheadType >> "initSpeed");
+	private _ammoInitSpeed = getNumber(configfile >> "CfgMagazines" >> _warheadType >> "initSpeed");
 	private _charge = "";
 	private _chargesArrayLow = [];
 	private _chargesArrayHigh = [];
 	
 	//diag_log format["TUBE: %1 - CHARGES - _warheadType: %2", _tube, _warheadType];
-	//diag_log format["TUBE: %1 - CHARGES - _ammoSpeed: %2", _tube, _ammoSpeed];
+	//diag_log format["TUBE: %1 - CHARGES - _ammoInitSpeed: %2", _tube, _ammoInitSpeed];
 	
 	{
 		_charge = _x;
 		
 		if (getNumber (configfile >> "CfgWeapons" >> _weapon >> _charge >> "showToPlayer") == 1) then {
 			
-			_vel = _ammoSpeed * getNumber(configfile >> "CfgWeapons" >> _weapon >> _charge >> "artilleryCharge");
+			_vel = _ammoInitSpeed * getNumber(configfile >> "CfgWeapons" >> _weapon >> _charge >> "artilleryCharge");
 			_calc = (_vel^4-_g*(_g*_distance^2+2*_alt*_vel^2));
 			//diag_log format["TUBE: %1 - CHARGE: %2 - _calc: %3", _tube, _charge, _calc];
 			if (_calc < 0) exitWith {
@@ -678,7 +692,7 @@ while {_rounds > 0} do {
 		// Get appropriate sheaf.
 		if (_scatter > 0) then {
 			
-			// Tube marked as fireCenterFirst will ignore the sheaf the first shot it fires.
+			// Tube marked as fireCenterFirst will ignore the sheaf with the first shot it fires.
 			if (!_fireCenterFirst) then {
 				switch true do {
 					case (_sheaf == "CIRCLE") : {_chosenTargetPos = [_tube,_asset,_pos,_scatter] call dta_fnc_CircularSheaf};
@@ -794,35 +808,46 @@ while {_rounds > 0} do {
 		//diag_log format["TUBE: %1 - CHARGES -- MODES: %2", _tube, (getArray (configfile >> "CfgWeapons" >> _weapon >> "modes"))];
 		
 		
-		if (!_longRangeGuided) then {
-			private _array = [_weapon, _warheadType] call _getChargesArray;
-			_chargesArrayLow = _array select 0;
-			_chargesArrayHigh = _array select 1;
+		if (!_isMK41) then {
+			if (!_longRangeGuided) then {
+				private _array = [_weapon, _warheadType] call _getChargesArray;
+				_chargesArrayLow = _array select 0;
+				_chargesArrayHigh = _array select 1;
+				
+				//diag_log format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
+				//diag_log format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
+				
+			} else {
+				// If it's long range guided, then fake the distance to get the projectile into the air regardless.
+				_realDistance = _distance;
+				_distance = _regularMaxRange;
+				
+				private _array = [_weapon, _warheadType] call _getChargesArray;
+				_chargesArrayLow = _array select 0;
+				_chargesArrayHigh = _array select 1;
+				
+				_distance = _realDistance;
+				
+				//diag_log format["TUBE: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
+				//diag_log format["TUBE: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
+			};
 			
-			//diag_log format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
-			//diag_log format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
+			// If no charge was chosen, we will assume it's an impossible shot, so exit out of this loop.
+			if (count _chargesArrayLow == 0 and {count _chargesArrayHigh == 0}) then {
+				_impossibleShot = true;
+				_tube setVariable ["DTA_impossibleShot", true];
+				[_tube,"Unable to get a firing solution - impossible shot.","beep"] call dta_fnc_SendComms;
+				//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 1 - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
+			};
 			
+			// Vanilla targeting.
 		} else {
-			// If it's long range guided, then fake the distance to get the projectile into the air regardless.
-			_realDistance = _distance;
-			_distance = _regularMaxRange;
-			
-			private _array = [_weapon, _warheadType] call _getChargesArray;
-			_chargesArrayLow = _array select 0;
-			_chargesArrayHigh = _array select 1;
-			
-			_distance = _realDistance;
-			
-			//diag_log format["TUBE: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
-			//diag_log format["TUBE: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
-		};
-		
-		// If no charge was chosen, we will assume it's an impossible shot, so exit out of this loop.
-		if (count _chargesArrayLow == 0 and {count _chargesArrayHigh == 0}) then {
-			_impossibleShot = true;
-			_tube setVariable ["DTA_impossibleShot", true];
-			[_tube,"Unable to get a firing solution - impossible shot.","beep"] call dta_fnc_SendComms;
-			//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 1 - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
+			if (_distance >= _maximumRange) then {
+				_impossibleShot = true;
+				_tube setVariable ["DTA_impossibleShot", true];
+				[_tube,"Unable to get a firing solution - out of range.","beep"] call dta_fnc_SendComms;
+				//diag_log format["TUBE: %1 - ABORT - OUT OF RANGE - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
+			};
 		};
 	};
 	
@@ -870,6 +895,11 @@ while {_rounds > 0} do {
 					_sleepTime = _sleepTime + 4 + (random 3);
 				};
 				
+				// MK41 cruise missile.
+				case (_assetType == "MK41"):{
+					_sleepTime = _sleepTime + 3 + (random 3);
+				};
+				
 				// Everything else.
 				default {
 					_sleepTime = _sleepTime + 5 + (random 4);
@@ -906,6 +936,11 @@ while {_rounds > 0} do {
 					if (_gunAngle == "HIGH") then {_sleepTime = _sleepTime + 25 + (random 4);};
 				};
 				
+				// MK41 cruise missile.
+				case (_assetType == "MK41"):{
+					_sleepTime = _sleepTime + 17 + (random 2);
+				};
+				
 				// Everything else.
 				default {
 					if (_gunAngle == "LOW") then {_sleepTime = _sleepTime + 22 + (random 3);};
@@ -934,6 +969,11 @@ while {_rounds > 0} do {
 			
 			// Rocket artillery.
 			case ((_assetType == "Rocket") or (_assetType == "BM21")):{
+				_sleepTime = _sleepTime + 0.1;
+			};
+			
+			// MK41 cruise missile.
+			case (_assetType == "MK41"):{
 				_sleepTime = _sleepTime + 0.1;
 			};
 			
@@ -983,43 +1023,48 @@ while {_rounds > 0} do {
 	_sleepTime = time + _sleepTime;
 	
 	
-	// Figure out which angle the tube can aim with.
-	private _bestCharge = [_tube, _veh, _asset, _gunner, _posTube, _chosenTargetPos, _gunAngle, _longRangeGuided, _chargesArrayLow, _chargesArrayHigh] call _findBestCharge;
-	private _obstructed = _bestCharge select 4;
-	
-	// If no angle was returned or the shot is obstructed, inform the player.
-	if (_bestCharge select 0 == "" or _obstructed) then {
-		_impossibleShot = true;
-		_tube setVariable ["DTA_impossibleShot", true];
-		private _abort = _bestCharge select 5;
+	if (!_isMK41) then {
+		// Figure out which angle the tube can aim with.
+		_bestCharge = [_tube, _veh, _asset, _gunner, _posTube, _chosenTargetPos, _gunAngle, _longRangeGuided, _chargesArrayLow, _chargesArrayHigh] call _findBestCharge;
+		private _obstructed = _bestCharge select 4;
 		
-		if (!_abort) then {
+		// If no angle was returned or the shot is obstructed, inform the player.
+		if (_bestCharge select 0 == "" or _obstructed) then {
+			_impossibleShot = true;
+			_tube setVariable ["DTA_impossibleShot", true];
+			private _abort = _bestCharge select 5;
+			
+			if (!_abort) then {
+				if (_asset getVariable ["DTA_endMission", false]) exitWith {};
+				if (_asset getVariable ["DTA_CheckFire", false]) exitWith {};
+				
+				if (!_obstructed) then {
+					[_tube,"Unable to get a firing solution - cannot get a valid angle.","beep"] call dta_fnc_SendComms;
+					//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 2 - Check1: %2", _tube, !_obstructed];
+				} else {
+					[_tube,"Unable to get a firing solution - shot obstructed.","beep"] call dta_fnc_SendComms;
+					//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 3 - Check1: %2", _tube, !_obstructed];
+				};
+			};
+			
+		} else {
+			
 			if (_asset getVariable ["DTA_endMission", false]) exitWith {};
 			if (_asset getVariable ["DTA_CheckFire", false]) exitWith {};
 			
-			if (!_obstructed) then {
-				[_tube,"Unable to get a firing solution - cannot get a valid angle.","beep"] call dta_fnc_SendComms;
-				//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 2 - Check1: %2", _tube, !_obstructed];
-			} else {
-				[_tube,"Unable to get a firing solution - shot obstructed.","beep"] call dta_fnc_SendComms;
-				//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 3 - Check1: %2", _tube, !_obstructed];
+			// If the tube switched angles, inform the player.
+			if (_bestCharge select 3 != _gunAngle) then {
+				if (_tellAboutAngle) then {
+					private _text = format["Cannot get firing solution with requested angle - will use %1 angle instead.", _bestCharge select 3];
+					[_tube, _text,"beep"] call dta_fnc_SendComms;
+					_tellAboutAngle = false;	// Only tell the player once, to avoid spamming the chat.
+				};
+				//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 4 - Check1: %2 - Check2: %3", _tube, _bestCharge select 3, _gunAngle];
 			};
 		};
 		
 	} else {
-		
-		if (_asset getVariable ["DTA_endMission", false]) exitWith {};
-		if (_asset getVariable ["DTA_CheckFire", false]) exitWith {};
-		
-		// If the tube switched angles, inform the player.
-		if (_bestCharge select 3 != _gunAngle) then {
-			if (_tellAboutAngle) then {
-				private _text = format["Cannot get firing solution with requested angle - will use %1 angle instead.", _bestCharge select 3];
-				[_tube, _text,"beep"] call dta_fnc_SendComms;
-				_tellAboutAngle = false;	// Only tell the player once, to avoid spamming the chat.
-			};
-			//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 4 - Check1: %2 - Check2: %3", _tube, _bestCharge select 3, _gunAngle];
-		};
+		_bestCharge = ["", "LOW", 99999];
 	};
 	
 	
@@ -1046,13 +1091,19 @@ while {_rounds > 0} do {
 		//diag_log format["TUBE: %1 - CHOSEN CHARGE -- _ETA: %2", _tube, _ETA];
 		
 		// When using the guided script, the ETA times need to change a bit.
-		if (_longRangeGuided) then {
-			_ETA = (_ETA/2) + ((_distance-(_regularMaxRange/2))/(_vel*0.4));
-			//diag_log format["TUBE: %1 - CHANGING ETA LONG RANGE GUIDED -- _ETA: %2", _tube, _ETA];
-		} else {
-			if (_action == 1 or {_action == 2} or {_action == 3}) then {
-				_ETA = _ETA * 1.05;
-				//diag_log format["TUBE: %1 - CHANGING ETA FOR ACTION 1,2,3 -- _ETA: %2", _tube, _ETA];
+		switch true do {
+			case (_longRangeGuided): {
+				_ETA = (_ETA/2) + ((_distance-(_regularMaxRange/2))/(_vel*0.4));
+				//diag_log format["TUBE: %1 - CHANGING ETA LONG RANGE GUIDED -- _ETA: %2", _tube, _ETA];
+			};
+			case (_isMK41): {
+				_ETA = (_distance / _ammoMaxSpeed) max 1;
+			};
+			default {
+				if (_action == 1 or {_action == 2} or {_action == 3}) then {
+					_ETA = _ETA * 1.05;
+					//diag_log format["TUBE: %1 - CHANGING ETA FOR ACTION 1,2,3 -- _ETA: %2", _tube, _ETA];
+				};
 			};
 		};
 		
@@ -1229,7 +1280,43 @@ while {_rounds > 0} do {
 			sleep 0.5;
 			
 			// Fire.
-			_tube fire [_tubeType, _bestCharge select 0];
+			if (!_isMK41) then {
+				_tube setWeaponReloadingTime [_gunner,(currentMuzzle _gunner), 0];
+				_tube fire [_tubeType, _bestCharge select 0];
+			
+			// MK41 fire.
+			} else {
+				
+				// Check for lasers at target pos. Lock on laser if there is one.
+				private _nearest = 999999;
+				private _target = nil;
+				{
+					private _distance = _x distance _chosenTargetPos;
+					if (_distance < _nearest) then {
+						_target = _x;
+						_nearest = _distance;
+					};
+				} forEach (_chosenTargetPos nearEntities ["LaserTarget", 1000]);
+				
+				// No laser found. Create a dummy target. Pretend it's GPS guidance.
+				private _dummyTarget = false;
+				if (isNil "_target") then {
+					_target = (createGroup sideLogic) createUnit ["module_f", [0,0,0], [], 0, "CAN_COLLIDE"];
+					_target setPosASL _chosenTargetPos;
+					_dummyTarget = true;
+				};
+				
+				// Fire.
+				(side _gunner) reportRemoteTarget [_target, _ETA * 1.3];
+				_tube setWeaponReloadingTime [_gunner,(currentMuzzle _gunner), 0];
+				_tube fireAtTarget [_target];
+				if (_dummyTarget) then {
+					[_target, _ETA] spawn {
+						sleep ((_this select 1) * 1.3) max 10;
+						deleteVehicle (_this select 0);
+					};
+				};
+			};
 			
 			sleep 0.5;
 		
@@ -1351,7 +1438,7 @@ if (_abort and !_isAnnouncementUnit) exitWith {
 
 if (_isAnnouncementUnit) then {
 	// Wait until all tubes are done.
-	_timeout = time + 60;
+	_timeout = time + 130;
 	while {time < _timeout} do {
 		if ({_x getVariable ["DTA_concludingMission", false]} count _tubes == count _tubes) exitWith {};
 		sleep 2;

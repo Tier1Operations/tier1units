@@ -151,6 +151,11 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};
+			class _xx_ACE_splint
+			{
+				count = 20;
+				name = "ACE_splint";
+			};
 			class acre_prc152
 			{
 				count = 2;
@@ -255,6 +260,11 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};			
+			class _xx_ACE_splint
+			{
+				count = 20;
+				name = "ACE_splint";
+			};
 			class acre_prc152
 			{
 				count = 2;
@@ -333,6 +343,11 @@ class CfgVehicles {
 				count = 4;
 				name = "ACE_bloodIV";
 			};			
+			class _xx_ACE_splint
+			{
+				count = 15;
+				name = "ACE_splint";
+			};
 			class acre_prc152
 			{
 				count = 1;
@@ -445,6 +460,11 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};			
+			class _xx_ACE_splint
+			{
+				count = 20;
+				name = "ACE_splint";
+			};
 			class acre_prc152
 			{
 				count = 2;
@@ -547,6 +567,11 @@ class CfgVehicles {
 			{
 				count = 8;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 20;
+				name = "ACE_splint";
 			};
 			class acre_prc152
 			{
@@ -652,6 +677,11 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};			
+			class _xx_ACE_splint
+			{
+				count = 20;
+				name = "ACE_splint";
+			};
 			class acre_prc152
 			{
 				count = 2;
@@ -730,6 +760,11 @@ class CfgVehicles {
 				count = 4;
 				name = "ACE_bloodIV";
 			};			
+			class _xx_ACE_splint
+			{
+				count = 15;
+				name = "ACE_splint";
+			};
 			class acre_prc152
 			{
 				count = 1;
@@ -842,6 +877,11 @@ class CfgVehicles {
 				count = 8;
 				name = "ACE_bloodIV";
 			};			
+			class _xx_ACE_splint
+			{
+				count = 20;
+				name = "ACE_splint";
+			};
 			class acre_prc152
 			{
 				count = 2;
@@ -986,6 +1026,11 @@ class CfgVehicles {
 				count = 12;
 				name = "ACE_bloodIV";
 			};
+			class _xx_ACE_splint
+			{
+				count = 30;
+				name = "ACE_splint";
+			};
 			class acre_prc152
 			{
 				count = 3;
@@ -1086,6 +1131,11 @@ class CfgVehicles {
 			{
 				count = 12;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 30;
+				name = "ACE_splint";
 			};
 			class acre_prc152
 			{
@@ -1194,6 +1244,11 @@ class CfgVehicles {
 			{
 				count = 12;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 30;
+				name = "ACE_splint";
 			};
 			class acre_prc152
 			{
@@ -1305,6 +1360,11 @@ class CfgVehicles {
 				count = 12;
 				name = "ACE_bloodIV";
 			};
+			class _xx_ACE_splint
+			{
+				count = 30;
+				name = "ACE_splint";
+			};
 			class acre_prc152
 			{
 				count = 3;
@@ -1404,6 +1464,11 @@ class CfgVehicles {
 			{
 				count = 12;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 30;
+				name = "ACE_splint";
 			};
 			class acre_prc152
 			{
@@ -1511,6 +1576,11 @@ class CfgVehicles {
 			{
 				count = 12;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 30;
+				name = "ACE_splint";
 			};
 			class acre_prc152
 			{

@@ -839,7 +839,6 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"HandGrenade",
 			"ACE_M84"
 		};
@@ -848,7 +847,6 @@ class CfgVehicles {
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
-			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
@@ -920,12 +918,12 @@ class CfgVehicles {
 		{			
 			class _xx_SmokeShellBlue
 			{
-				count = 5;
+				count = 3;
 				magazine = "SmokeShellBlue";
 			};
 			class _xx_SmokeShellRed
 			{
-				count = 2;
+				count = 1;
 				magazine = "SmokeShellRed";
 			};
 		};
@@ -950,6 +948,11 @@ class CfgVehicles {
 			{
 				count = 6;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 15;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -1055,6 +1058,11 @@ class CfgVehicles {
 			{
 				count = 6;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 15;
+				name = "ACE_splint";
 			};
 			class _xx_ACE_CableTie
 			{
@@ -1230,6 +1238,11 @@ class CfgVehicles {
 				count = 6;
 				name = "ACE_bloodIV";
 			};
+			class _xx_ACE_splint
+			{
+				count = 15;
+				name = "ACE_splint";
+			};
 			class _xx_ACE_CableTie
 			{
 				count = 6;
@@ -1358,6 +1371,11 @@ class CfgVehicles {
 			{
 				count = 32;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 60;
+				name = "ACE_splint";
 			};
 			class _xx_ACE_CableTie
 			{

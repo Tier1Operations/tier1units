@@ -263,6 +263,16 @@ class CfgVehicles
 				count = 1;
 				name = "ACE_epinephrine";
 			};
+			class IVFluid
+			{
+				count = 4;
+				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 15;
+				name = "ACE_splint";
+			};
 			class radio {
 				count = 1;
 				name = "ACRE_PRC117F";
@@ -444,7 +454,7 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 110;
+				count = 70;
 				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
@@ -461,6 +471,11 @@ class CfgVehicles
 			{
 				count = 8;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 20;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -499,23 +514,28 @@ class CfgVehicles
 		{
 			class Bandage1
 			{
-				count = 110;
+				count = 75;
 				name = "ACE_fieldDressing";
 			};
 			class _xx_ACE_morphine
 			{
-				count = 26;
+				count = 23;
 				name = "ACE_morphine";
 			};
 			class _xx_ACE_epinephrine
 			{
-				count = 16;
+				count = 14;
 				name = "ACE_epinephrine";
 			};
 			class _xx_ACE_bloodIV_250
 			{
 				count = 3;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 20;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -546,12 +566,17 @@ class CfgVehicles
 				count = 6;
 				name = "ACE_bloodIV";
 			};
+			class _xx_ACE_splint
+			{
+				count = 16;
+				name = "ACE_splint";
+			};
 		};
 		class TransportMagazines
 		{
 			class _xx_SmokeShellBlue
 			{
-				count = 7;
+				count = 4;
 				magazine = "SmokeShellBlue";
 			};
 			class _xx_SmokeShellRed
@@ -1333,7 +1358,11 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
-			STDITEMS_SF
+			STDITEMS_SF,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
@@ -1341,7 +1370,11 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
-			STDITEMS_SF
+			STDITEMS_SF,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};
 		backpack = "T1_Kitbag_camo_Spotter";
 		camouflage = 0.3;
@@ -1426,7 +1459,12 @@ class CfgVehicles
 			"ACE_surgicalKit",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
-			MEDICALITEMS2
+			MEDICALITEMS2,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
@@ -1444,7 +1482,12 @@ class CfgVehicles
 			"ACE_surgicalKit",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
-			MEDICALITEMS2
+			MEDICALITEMS2,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};		
 		camouflage = 0.3;
 		glassesEnabled = 0;
@@ -1516,7 +1559,12 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
-			STDITEMS_SF
+			STDITEMS_SF,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
@@ -1524,7 +1572,12 @@ class CfgVehicles
 			"ACE_ATragMX",
 			"ACE_Kestrel4500",
 			"ACE_RangeCard",
-			STDITEMS_SF
+			STDITEMS_SF,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};
 		backpack = "T1_Kitbag_camo_SpotterLight";
 		camouflage = 0.3;
@@ -1610,7 +1663,12 @@ class CfgVehicles
 			"ACE_surgicalKit",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
-			MEDICALITEMS2
+			MEDICALITEMS2,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
@@ -1626,7 +1684,12 @@ class CfgVehicles
 			"ACE_surgicalKit",
 			"ACE_bloodIV",
 			"ACE_bloodIV",
-			MEDICALITEMS2
+			MEDICALITEMS2,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};		
 		backpack = "T1_AssaultPack_SniperLight";
 		camouflage = 0.3;
@@ -2338,7 +2401,13 @@ class CfgVehicles
 			"ACE_epinephrine",
 			"ACE_epinephrine",
 			STDITEMS_SF,
-			MEDICALITEMS
+			MEDICALITEMS,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};
 		respawnitems[] = {
 			"ACE_IR_Strobe_Item",
@@ -2347,7 +2416,13 @@ class CfgVehicles
 			"ACE_epinephrine",
 			"ACE_epinephrine",
 			STDITEMS_SF,
-			MEDICALITEMS
+			MEDICALITEMS,
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint",
+			"ACE_splint"
 		};
 		camouflage = 0.6;
 	};
@@ -2437,12 +2512,16 @@ class CfgVehicles
 		items[] = {
 			"ACE_IR_Strobe_Item",
 			STDITEMS,
-			MEDICALITEMS2
+			MEDICALITEMS2,
+			"ACE_splint",
+			"ACE_splint"
 		};
 		respawnItems[] = {
 			"ACE_IR_Strobe_Item",
 			STDITEMS,
-			MEDICALITEMS2
+			MEDICALITEMS2,
+			"ACE_splint",
+			"ACE_splint"
 		};
 		icon = "iconManLeader";
 	};
@@ -2563,14 +2642,12 @@ class CfgVehicles
 		displayName = "Combat Life Saver";
 		weapons[] = {
 			"T1_m27iar",
-			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_m27iar",
-			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -2587,7 +2664,6 @@ class CfgVehicles
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
-			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"HandGrenade",
 			"HandGrenade",
@@ -2612,7 +2688,6 @@ class CfgVehicles
 			"t1_longrange_556",
 			"t1_longrange_556",
 			"t1_longrange_556",
-			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
 			"HandGrenade",
 			"HandGrenade",
@@ -3737,6 +3812,11 @@ class CfgVehicles
 				count = 32;
 				name = "ACE_bloodIV";
 			};
+			class _xx_ACE_splint
+			{
+				count = 60;
+				name = "ACE_splint";
+			};
 			class _xx_ACE_CableTie
 			{
 				count = 20;
@@ -3923,6 +4003,11 @@ class CfgVehicles
 			{
 				count = 32;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 60;
+				name = "ACE_splint";
 			};
 			class _xx_ACE_CableTie
 			{

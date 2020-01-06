@@ -183,6 +183,11 @@ class CfgVehicles
 				count = 32;
 				name = "ACE_bloodIV";
 			};
+			class _xx_ACE_splint
+			{
+				count = 60;
+				name = "ACE_splint";
+			};
 			class _xx_ACE_CableTie
 			{
 				count = 20;
@@ -411,6 +416,11 @@ class CfgVehicles
 			{
 				count = 32;
 				name = "ACE_bloodIV";
+			};
+			class _xx_ACE_splint
+			{
+				count = 60;
+				name = "ACE_splint";
 			};
 			class _xx_ACE_CableTie
 			{

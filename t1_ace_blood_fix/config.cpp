@@ -6,22 +6,7 @@ class CfgPatches
 		weapons[] = {};
 		magazines[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"ace_medical"};
-	};
-};
-
-
-
-class CfgFunctions
-{
-	class ace_medical
-	{
-		class ace_medical
-		{
-			file = "t1_ace_blood_fix\functions";
-			class getBloodVolumeChange;
-			class handleUnitVitals{};
-		};
+		requiredAddons[] = {"ace_medical_treatment"};
 	};
 };
 
@@ -45,20 +30,17 @@ class CfgWeapons
 
 
 
-class ACE_Medical_Advanced
+class ace_medical_treatment
 {
-	class Treatment
+	class IV
 	{
-		class IV
+		volume = 6000;
+		ratio[] = {};
+		type = "Blood";
+		class BloodIV
 		{
 			volume = 6000;
-			ratio[] = {};
-			type = "Blood";
-			class BloodIV
-			{
-				volume = 6000;
-				ratio[] = {"Plasma",1};
-			};
+			ratio[] = {"Plasma",1};
 		};
 	};
 };

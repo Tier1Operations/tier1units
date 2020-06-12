@@ -51,6 +51,11 @@ class T1_weap_lmg: rhs_weap_m249_pip_L
 			item = "optic_Hamr";
 			slot = "CowsSlot";
 		};
+		class LinkedItemsUnder
+		{
+			item = "rhsusf_acc_saw_bipod";
+			slot = "GripodSlot";
+		};
 		class LinkedItemsAcc
 		{
 			item = "acc_pointer_IR";

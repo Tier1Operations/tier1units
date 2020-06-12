@@ -4,8 +4,8 @@
 #define STDITEMS_SF "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACRE_PRC152", "ACE_NVG_Gen4", "ACE_Flashlight_MX991"
 
 // MEDICALITEMS is used in addition to STDITEMS for units without backpacks
-#define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
-#define MEDICALITEMS2 "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine" 
+#define MEDICALITEMS "ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_splint","ACE_splint"
+#define MEDICALITEMS2 "ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_splint","ACE_splint" 
 
 class CfgPatches
 {
@@ -200,7 +200,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -211,6 +211,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -225,7 +230,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -237,6 +242,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -250,7 +260,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -289,7 +299,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -331,7 +341,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -381,7 +391,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -392,6 +402,11 @@ class CfgVehicles
 			{
 				count = 2;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 1;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -407,7 +422,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -455,7 +470,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 70;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -515,7 +530,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 75;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -549,7 +564,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 52;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -597,7 +612,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -609,6 +624,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -625,7 +645,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -637,7 +657,12 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
-			};			
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
+			};
 		};
 	};
 	class T1_Carryall_camo_Exp: T1_Carryall_camo
@@ -676,7 +701,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -688,6 +713,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -721,7 +751,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -754,7 +784,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -766,6 +796,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 			class radio {
 				count = 1;
@@ -790,7 +825,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -802,6 +837,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -822,7 +862,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -834,6 +874,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -846,7 +891,7 @@ class CfgVehicles
 			class _xx_Titan_AT
 			{
 				magazine = "Titan_AT";
-				count = 5;
+				count = 4;
 			};
 		};
 		class TransportItems
@@ -854,7 +899,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -866,6 +911,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -891,7 +941,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -903,6 +953,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -923,7 +978,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -935,6 +990,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -998,7 +1058,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -1010,6 +1070,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -1030,7 +1095,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -1042,7 +1107,12 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
-			};			
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
+			};
 		};
 	};
 	class T1_Kitbag_camo_Section_AT: T1_Kitbag_camo
@@ -1053,7 +1123,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1064,6 +1134,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};		
 	};
@@ -1073,7 +1148,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1084,6 +1159,11 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 		class TransportMagazines {
@@ -2142,7 +2222,7 @@ class CfgVehicles
 		};
 		magazines[] = {
 			t1_mag_mmg,
-			t1_mag_mmg,
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2158,7 +2238,7 @@ class CfgVehicles
 		};
 		respawnmagazines[] = {
 			t1_mag_mmg,
-			t1_mag_mmg,
+			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -2228,7 +2308,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"Laserbatteries",
 			"HandGrenade",
-			"HandGrenade",
 			"SmokeShellBlue",
 			"SmokeShellRed",
 			"ACE_M84",
@@ -2244,11 +2323,7 @@ class CfgVehicles
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeBlue_Grenade_shell",
-			"1Rnd_SmokePurple_Grenade_shell",
-			"1Rnd_SmokePurple_Grenade_shell",
-			"UGL_FlareCIR_F",
-			"Chemlight_blue"
+			"UGL_FlareCIR_F"
 		};
 		respawnmagazines[] = {
 			"T1_30Rnd_556x45_Stanag_SD",
@@ -2262,7 +2337,6 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"Laserbatteries",
 			"HandGrenade",
-			"HandGrenade",
 			"SmokeShellBlue",
 			"SmokeShellRed",
 			"ACE_M84",
@@ -2278,11 +2352,7 @@ class CfgVehicles
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
-			"1Rnd_SmokeBlue_Grenade_shell",
-			"1Rnd_SmokePurple_Grenade_shell",
-			"1Rnd_SmokePurple_Grenade_shell",
-			"UGL_FlareCIR_F",
-			"Chemlight_blue"
+			"UGL_FlareCIR_F"
 		};
 		linkedItems[] = {
 			"V_Chestrig_oli",
@@ -2308,6 +2378,8 @@ class CfgVehicles
 			"ACE_epinephrine",
 			"ACE_epinephrine",
 			"ACE_epinephrine",
+			"ACE_splint",
+			"ACE_splint",
 			STDITEMS_SF
 		};
 		respawnItems[] = {
@@ -2317,6 +2389,8 @@ class CfgVehicles
 			"ACE_epinephrine",
 			"ACE_epinephrine",
 			"ACE_epinephrine",
+			"ACE_splint",
+			"ACE_splint",
 			STDITEMS_SF
 		};
 		camouflage = 0.6;
@@ -2350,14 +2424,11 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"Laserbatteries",
 			"HandGrenade",
-			"SmokeShellBlue",
-			"SmokeShellRed",
-			"Chemlight_blue"
+			"SmokeShellBlue"
 		};
 		respawnmagazines[] = {
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
@@ -2368,14 +2439,11 @@ class CfgVehicles
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
-			"ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"ACE_20Rnd_762x51_Mag_SD",
 			"Laserbatteries",
 			"HandGrenade",
-			"SmokeShellBlue",
-			"SmokeShellRed",
-			"Chemlight_blue"
+			"SmokeShellBlue"
 		};
 		linkedItems[] = {
 			"V_Chestrig_oli",
@@ -2396,14 +2464,11 @@ class CfgVehicles
 		backpack = "T1_Static_Designator_01_weapon_F";
 		items[] = {
 			"ACE_IR_Strobe_Item",
-			"ACE_Kestrel4500",
 			"ACE_RangeCard",
 			"ACE_epinephrine",
 			"ACE_epinephrine",
 			STDITEMS_SF,
 			MEDICALITEMS,
-			"ACE_splint",
-			"ACE_splint",
 			"ACE_splint",
 			"ACE_splint",
 			"ACE_splint",
@@ -2411,14 +2476,11 @@ class CfgVehicles
 		};
 		respawnitems[] = {
 			"ACE_IR_Strobe_Item",
-			"ACE_Kestrel4500",
 			"ACE_RangeCard",
 			"ACE_epinephrine",
 			"ACE_epinephrine",
 			STDITEMS_SF,
 			MEDICALITEMS,
-			"ACE_splint",
-			"ACE_splint",
 			"ACE_splint",
 			"ACE_splint",
 			"ACE_splint",
@@ -3437,8 +3499,7 @@ class CfgVehicles
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"UGL_FlareCIR_F",
-			"UGL_FlareCIR_F",
-			"Chemlight_blue"
+			"UGL_FlareCIR_F"
 		};
 		respawnmagazines[] = {
 			rhs_mag_30Rnd_556x45_M855A1_Stanag,
@@ -3466,15 +3527,18 @@ class CfgVehicles
 			"1Rnd_SmokeRed_Grenade_shell",
 			"1Rnd_SmokeRed_Grenade_shell",
 			"UGL_FlareCIR_F",
-			"UGL_FlareCIR_F",
-			"Chemlight_blue"
+			"UGL_FlareCIR_F"
 		};
 		items[] = {
 			"B_UavTerminal",
+			"ACE_splint",
+			"ACE_splint",
 			STDITEMS
 		};
 		respawnItems[] = {
 			"B_UavTerminal",
+			"ACE_splint",
+			"ACE_splint",
 			STDITEMS
 		};
 		backpack = "T1_AssaultPack_PLSgt_JTAC";
@@ -3785,7 +3849,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 160;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -3977,7 +4041,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 80;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{

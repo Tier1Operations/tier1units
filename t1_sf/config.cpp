@@ -1,8 +1,8 @@
 #define STDITEMS    "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACRE_PRC152", "rhsusf_ANPVS_14", "ACE_Flashlight_MX991"
 #define STDITEMS_SF "ItemRadio","ACE_EarPlugs","ACE_microDAGR","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACE_tourniquet", "ACRE_PRC152", "ACE_NVG_Gen4", "ACE_Flashlight_MX991","ACE_IR_Strobe_Item"
 
-#define MEDICALITEMS "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine"
-#define MEDICALITEMS2 "ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine" 
+#define MEDICALITEMS "ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_splint","ACE_splint"
+#define MEDICALITEMS2 "ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_splint","ACE_splint" 
 
 class CfgPatches {
     class t1_sf {
@@ -210,7 +210,6 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"HandGrenade",
-			"HandGrenade",
 			"SmokeShellBlue",
 			"SmokeShellRed",
 			"ACE_M84",
@@ -218,7 +217,6 @@ class CfgVehicles {
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
-			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
@@ -240,7 +238,6 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"HandGrenade",
-			"HandGrenade",
 			"SmokeShellBlue",
 			"SmokeShellRed",
 			"ACE_M84",
@@ -248,7 +245,6 @@ class CfgVehicles {
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
 			"ACE_HuntIR_M203",
-			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
 			"1Rnd_HE_Grenade_shell",
@@ -324,8 +320,8 @@ class CfgVehicles {
 			"ItemWatch"
 		};
 	};
-    class B_AssaultPack_rgr;
-	class T1_AssaultPack_Lead_SF: B_AssaultPack_rgr
+    class B_Kitbag_rgr;
+	class T1_AssaultPack_Lead_SF: B_Kitbag_rgr
 	{
 		scope = 1;
 		displayName = "AssaultPack SF Lead";
@@ -334,8 +330,8 @@ class CfgVehicles {
 		{
 			class Bandage1
 			{
-				count = 16;
-				name = "ACE_fieldDressing";
+				count = 12;
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -346,7 +342,12 @@ class CfgVehicles {
 			{
 				count = 1;
 				name = "ACE_epinephrine";
-			};	
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
+			};
 			class _xx_ACE_Vector
 			{
 				count = 1;
@@ -392,10 +393,7 @@ class CfgVehicles {
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_mag_17Rnd_9x19_JHP",
-			"HandGrenade",
 			"HandGrenade",
 			"SmokeShellBlue",
 			"ACE_M84"
@@ -407,10 +405,7 @@ class CfgVehicles {
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
-			"rhsusf_50Rnd_762x51_m62_tracer",
 			"rhsusf_mag_17Rnd_9x19_JHP",
-			"HandGrenade",
 			"HandGrenade",
 			"SmokeShellBlue",
 			"ACE_M84"
@@ -418,12 +413,10 @@ class CfgVehicles {
 		backpack = "T1_B_AssaultPack_AR_SF";
 		icon = "iconManMG";
 		items[] = {
-			STDITEMS_SF,
-			MEDICALITEMS2
+			STDITEMS_SF
 		};
 		respawnItems[] = {
-			STDITEMS_SF,
-			MEDICALITEMS2
+			STDITEMS_SF
 		};
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Standard_SFAR",
@@ -526,23 +519,18 @@ class CfgVehicles {
 			"ItemWatch"
 		};
 	};
+	class B_AssaultPack_rgr;
 	class T1_B_AssaultPack_AR_SF: B_AssaultPack_rgr
 	{
 		scope = 1;
 		displayName = "Assaultpack SF AR (T1 Camo)";
-		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
-	};
-	class T1_B_AssaultPack_SF_DM: B_AssaultPack_rgr
-	{
-		scope = 1;
-		displayName = "Assaultpack SF Marksman (T1 Camo)";
 		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
 		class TransportItems
 		{
 			class Bandage1
 			{
 				count = 16;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -554,6 +542,49 @@ class CfgVehicles {
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
+			};
+		};
+		class TransportMagazines
+		{
+			class _xx_rhsusf_50Rnd_762x51_m62_tracer
+			{
+				count = 1;
+				magazine = "rhsusf_50Rnd_762x51_m62_tracer";
+			};
+		};
+	};
+	class T1_B_AssaultPack_SF_DM: B_AssaultPack_rgr
+	{
+		scope = 1;
+		displayName = "Assaultpack SF Marksman (T1 Camo)";
+		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\ogao_117.paa"};
+		class TransportItems
+		{
+			class Bandage1
+			{
+				count = 16;
+				name = "ACE_packingBandage";
+			};
+
+			class _xx_ACE_morphine
+			{
+				count = 3;
+				name = "ACE_morphine";
+			};
+			class _xx_ACE_epinephrine
+			{
+				count = 1;
+				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 		class TransportMagazines
@@ -607,6 +638,7 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
+			"HandGrenade",
 			"HandGrenade"
 		};
 		respawnmagazines[] = {
@@ -620,6 +652,7 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
+			"HandGrenade",
 			"HandGrenade"
 		};
 		backpack = "T1_B_AssaultPack_AT_SF";
@@ -661,20 +694,17 @@ class CfgVehicles {
 		displayName = "T1 SF Explosive Specialist";
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
-			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_SF_m4a1_blockII_SD_wd",
-			"T1_SF_pistol",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		magazines[] = {
-			"DemoCharge_Remote_Mag",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
@@ -694,7 +724,6 @@ class CfgVehicles {
 			"ACE_M84"
 		};
 		respawnmagazines[] = {
-			"DemoCharge_Remote_Mag",
 			"rhsusf_50Rnd_762x51_m62_tracer",
 			"T1_30Rnd_556x45_Stanag_SD",
 			"T1_30Rnd_556x45_Stanag_SD",
@@ -760,7 +789,7 @@ class CfgVehicles {
 			};
 		};
 	};
-	class T1_B_AssaultPack_Exp_SF: B_AssaultPack_rgr
+	class T1_B_AssaultPack_Exp_SF: B_Kitbag_rgr
 	{
 		scope = 1;
 		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
@@ -773,21 +802,21 @@ class CfgVehicles {
 			};
 			class _xx_DemoCharge_Remote_Mag
 			{
-				count = 3;
+				count = 4;
 				magazine = "DemoCharge_Remote_Mag";
 			};
-			class _xx_rhsusf_mag_17Rnd_9x19_JHP
+			class _xx_SLAMDirectionalMine_Wire_Mag
 			{
 				count = 1;
-				magazine = "rhsusf_mag_17Rnd_9x19_JHP";
+				magazine = "SLAMDirectionalMine_Wire_Mag";
 			};
 		};
 		class TransportItems
 		{			
 			class Bandage1
 			{
-				count = 16;
-				name = "ACE_fieldDressing";
+				count = 14;
+				name = "ACE_packingBandage";
 			};
 
 			class _xx_ACE_morphine
@@ -799,6 +828,11 @@ class CfgVehicles {
 			{
 				count = 1;
 				name = "ACE_epinephrine";
+			};
+			class _xx_ACE_ACE_splint
+			{
+				count = 2;
+				name = "ACE_splint";
 			};
 		};
 	};
@@ -840,6 +874,7 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"HandGrenade",
+			"HandGrenade",
 			"ACE_M84"
 		};
 		respawnmagazines[] = {
@@ -853,6 +888,7 @@ class CfgVehicles {
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
 			"rhs_mag_30Rnd_556x45_Mk318_Stanag",
+			"HandGrenade",
 			"HandGrenade",
 			"ACE_M84"
 		};
@@ -932,7 +968,7 @@ class CfgVehicles {
 			class Bandage1
 			{
 				count = 52;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1042,7 +1078,7 @@ class CfgVehicles {
 			class Bandage1
 			{
 				count = 40;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1221,7 +1257,7 @@ class CfgVehicles {
 			class Bandage1
 			{
 				count = 40;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -1345,7 +1381,7 @@ class CfgVehicles {
 			class Bandage1
 			{
 				count = 80;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{

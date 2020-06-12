@@ -156,7 +156,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 400;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{
@@ -390,7 +390,7 @@ class CfgVehicles
 			class Bandage1
 			{
 				count = 320;
-				name = "ACE_fieldDressing";
+				name = "ACE_packingBandage";
 			};
 			class _xx_ACE_morphine
 			{

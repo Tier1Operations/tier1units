@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class t1_ammo_fix
 	{
-		//requiredaddons[] = {"t1_silencer_ammo_fix","ace_ballistics","rhs_c_heavyweapons","rhs_c_weapons","rhsusf_c_weapons"};
+		//requiredaddons[] = {"t1_silencer_ammo_fix","ace_ballistics","rhsusf_c_weapons","rhs_c_heavyweapons","rhs_c_weapons"};
 		requiredaddons[] = {"t1_silencer_ammo_fix","ace_ballistics","rhsusf_c_weapons"};
 		units[] = {};
 		weapons[] = {};
@@ -175,7 +175,7 @@ class CfgAmmo
 		airFriction = -0.00103711;
 		typicalSpeed = 833;
 		caliber = 1.6;
-		audibleFire = 45;
+		audibleFire = 55;
 		visibleFire = 3;
 		visibleFireTime = 2;
 	};
@@ -228,7 +228,7 @@ class CfgAmmo
 		airFriction = -0.00102329;
 		typicalSpeed = 828;
 		caliber = 1.8;
-		audibleFire = 47;
+		audibleFire = 57;
 		visibleFire = 3;
 		visibleFireTime = 2;
 	};
@@ -538,7 +538,7 @@ class CfgAmmo
 		airFriction = -0.00103711;
 		typicalSpeed = 833;
 		caliber = 1.6;
-		audibleFire = 45;
+		audibleFire = 55;
 		visibleFire = 3;
 		visibleFireTime = 2;
 	};
@@ -562,7 +562,7 @@ class CfgAmmo
 		airFriction = -0.00100957;
 		typicalSpeed = 900;
 		caliber = 1.7;
-		audibleFire = 48;
+		audibleFire = 58;
 		visibleFire = 3;
 		visibleFireTime = 2;
 	};
@@ -586,7 +586,7 @@ class CfgAmmo
 		airFriction = -0.0007034;
 		typicalSpeed = 869;
 		caliber = 1.8;
-		audibleFire = 55;
+		audibleFire = 60;
 		visibleFire = 3;
 		visibleFireTime = 2;
 	};
@@ -758,6 +758,7 @@ class CfgAmmo
 	
 	// RHS AFRF
 	// 7N6
+	/*
 	class rhs_B_545x39_Ball: B_556x45_Ball
 	{
 		hit = 9.5;
@@ -868,7 +869,7 @@ class CfgAmmo
 		airFriction = -0.00102329;
 		typicalSpeed = 828;
 		caliber = 1.7;
-		audibleFire = 47;
+		audibleFire = 58;
 		visibleFire = 3;
 		visibleFireTime = 2;
 	};
@@ -975,6 +976,7 @@ class CfgAmmo
 		visibleFire = 6;
 		visibleFireTime = 2;
 	};
+	*/
 };
 
 

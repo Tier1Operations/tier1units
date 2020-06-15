@@ -27,7 +27,7 @@ class CfgPatches
 			"T1_Carryall_camo",
 			"T1_Kitbag_camo_Repair",
 			"T1_Carryall_camo_Exp",
-			"T1_AssaultPack_PLEOD",
+			"T1_AssaultPack_PLCE",
 			"T1_AssaultPack_PLSgt_JTAC",
 			"T1_Backpack_PL_Lead",
 			"T1_AssaultPack_AR",
@@ -71,7 +71,7 @@ class CfgPatches
 			"T1_Section_AT_DM_F",
 			"T1_Platoon_Lead_Standard_F",
 			"T1_Platoon_Medic_Standard_F",
-			"T1_Platoon_EOD_Standard_F",
+			"T1_Platoon_CE_Standard_F",
 			"T1_Platoon_Sgt_Standard_F",
 			"T1_charlie_assault",	// charlie 1 is 6x assault
 			"T1_charlie_marksman",
@@ -80,7 +80,7 @@ class CfgPatches
 			"T1_charlie_medic",
 			"T1_section_ammobox",
 			"T1_support_ammobox",
-			"T1_eod_ammobox"
+			"T1_CE_Ammobox"
 		};
 		weapons[] = {
 			"T1_weap_sidearm_l",
@@ -721,7 +721,8 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_AssaultPack_PLEOD: B_AssaultPack_rgr
+	class B_FieldPack_oli;
+	class T1_AssaultPack_PLCE: B_FieldPack_oli
 	{
 		scope = 1;
 		//hiddenSelectionsTextures[] = {"\t1_textures\backpacks\t1_B_AssaultPack_rgr_camo_co.paa"};
@@ -732,6 +733,11 @@ class CfgVehicles
 				count = 1;
 				magazine = "SatchelCharge_Remote_Mag";
 			};
+			class _xx_DemoCharge_Remote_Mag
+			{
+				count = 1;
+				magazine = "DemoCharge_Remote_Mag";
+			};
 		};
 		class TransportItems
 		{
@@ -739,7 +745,12 @@ class CfgVehicles
 			{
 				count = 1;
 				name = "ToolKit";
-			};			
+			};
+			class _xx_ACE_EntrenchingTool
+			{
+				name = "ACE_EntrenchingTool";
+				count = 1;
+			};
 		};
 	};
 	class T1_AssaultPack_PLSgt_JTAC: B_AssaultPack_rgr
@@ -3369,22 +3380,20 @@ class CfgVehicles
 		};
 		T1_NoMedicIcon = 0;
 	};
-	class T1_Platoon_EOD_Standard_F: T1_Soldier_F
+	class T1_Platoon_CE_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Platoon";
-		displayName = "Platoon EOD";
+		displayName = "Platoon Combat Engineer";
 		weapons[] = {
 			"T1_m4a1_grip3",
-			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
 		respawnWeapons[] = {
 			"T1_m4a1_grip3",
-			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
@@ -3399,10 +3408,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
-			"SmokeShellBlue",
-			"B_IR_Grenade"
+			"SmokeShellBlue"
 		};
 		respawnmagazines[] = {
 			"DemoCharge_Remote_Mag",
@@ -3414,10 +3421,8 @@ class CfgVehicles
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
-			"rhsusf_mag_17Rnd_9x19_FMJ",
 			"HandGrenade",
-			"SmokeShellBlue",
-			"B_IR_Grenade"
+			"SmokeShellBlue"
 		};
 		items[] = {
 			STDITEMS,
@@ -3434,7 +3439,7 @@ class CfgVehicles
 			"MineDetector"
 		};
 		icon = "iconManExplosive";
-		backpack = "T1_AssaultPack_PLEOD";
+		backpack = "T1_AssaultPack_PLCE";
 		engineer = 1;
 		canDeactivateMines = 1;
 		detectSkill = 80;
@@ -4116,7 +4121,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class T1_eod_ammobox: B_supplyCrate_F
+	class T1_CE_Ammobox: B_supplyCrate_F
 	{
 		vehicleClass = "Ammo";
 		displayName = "T1 Explosives Supply Box";

@@ -38,7 +38,7 @@ class CfgPatches
 			"T1_Section_AT_DM_F_D",
 			"T1_Platoon_Lead_Standard_F_D",
 			"T1_Platoon_Medic_Standard_F_D",
-			"T1_Platoon_EOD_Standard_F_D",
+			"T1_Platoon_CE_Standard_F_D",
 			"T1_Platoon_Sgt_Standard_F_D",
 			"T1_FieldPack_Scout_Lead_Desert",
 			"T1_B_AssaultPack_AR_SF_Desert",
@@ -54,7 +54,7 @@ class CfgPatches
 			"T1_AssaultPack_AR_Desert",
 			"T1_AssaultPack_AAR_Desert",
 			"T1_AssaultPack_pl_medic_Desert",
-			"T1_AssaultPack_PLEOD_Desert",
+			"T1_AssaultPack_PLCE_Desert",
 			"T1_Kitbag_Desert",
 			"T1_Kitbag_Desert_AT",
 			"T1_Kitbag_Desert_Medium_AT",
@@ -111,6 +111,7 @@ class CfgVehicles
 	class B_AssaultPack_cbr;		// hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	class B_Kitbag_cbr;				// hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_tortila_cbr_co.paa"};
 	class B_Carryall_cbr;			// hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_fast_cbr_co.paa"};
+	class B_FieldPack_cbr;			// hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_gorod_cbr_co.paa"};
 */
 	
 	class T1_FieldPack_Scout_Lead;
@@ -127,7 +128,7 @@ class CfgVehicles
 	class T1_AssaultPack_AR;
 	class T1_AssaultPack_AAR;
 	class T1_AssaultPack_pl_medic;
-	class T1_AssaultPack_PLEOD;
+	class T1_AssaultPack_PLCE;
 	
 	class T1_Kitbag_camo_sl;
 	class T1_Kitbag_camo_ss;
@@ -229,10 +230,10 @@ class CfgVehicles
 		displayName = "AssaultPack Medic";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
 	};
-	class T1_AssaultPack_PLEOD_Desert: T1_AssaultPack_PLEOD
+	class T1_AssaultPack_PLCE_Desert: T1_AssaultPack_PLCE
 	{
 		scope = 1;
-		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_compact_cbr_co.paa"};
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_gorod_cbr_co.paa"};
 	};
 	
 
@@ -1192,16 +1193,16 @@ class CfgVehicles
 			"ItemWatch"
 		};
 	};
-	class T1_Platoon_EOD_Standard_F;
-	class T1_Platoon_EOD_Standard_F_D: T1_Platoon_EOD_Standard_F
+	class T1_Platoon_CE_Standard_F;
+	class T1_Platoon_CE_Standard_F_D: T1_Platoon_CE_Standard_F
 	{
 		scope = 2;
 		faction = "T1_Units_Desert";
 		vehicleClass = "Platoon";
-		displayName = "Platoon EOD";
+		displayName = "Platoon Combat Engineer";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
 		
-		backpack = "T1_AssaultPack_PLEOD_Desert";
+		backpack = "T1_AssaultPack_PLCE_Desert";
 		linkedItems[] = {
 			"T1_V_PlateCarrier2_Desert",
 			"rhsusf_mich_helmet_marpatd_norotos_headset",

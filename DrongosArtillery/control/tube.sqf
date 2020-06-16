@@ -517,21 +517,28 @@ _findBestCharge = {
 			private _lastWVD = _tube weaponDirection currentWeapon _tube;
 			private _wvd = [];
 			private _removedigits = {
-				// This will remove everything 3 places after the decimal because too much accuracy will get the while loop stuck on a ded server. This is because the AI is constantly aiming lower, but you only notice it in the vector numbers.
+				// This will remove everything 4 places past the decimal because on a ded server too much accuracy will get the while loop stuck. This is because the AI is constantly aiming lower, but you only notice it in the vector numbers.
 				private _arrayNew = [];
 				{
-					_x = (floor(_x * 1000)) / 1000;
-					_arrayNew append [_x];
+					private _str = str _x;
+					private _index = _str find ".";
+					if (_index == -1) then {
+						_arrayNew append [_x];
+					} else {
+						_str = _str select [0, _index + 4];
+						_arrayNew append [parseNumber _str];
+					};
 				} forEach (_this select 0);
 				_arrayNew;
 			};
 			sleep 0.25;
+			private _abortTime = time + 55;
 			while {!_abort} do {
 				_wvd = _tube weaponDirection currentWeapon _tube;
 				_wvd = [_wvd] call _removedigits;
 				_lastWVD = [_lastWVD] call _removedigits;
-				if (_lastWVD isEqualTo _wvd) exitWith {
-					//DIAG_LOG format ["TUBE: %1 | FIND CHARGE MOVING LOOP EXIT | Time: %2 | If: %3 | _wvd: %4 | _lastWVD: %5", _tube, time, (_lastWVD isEqualTo _wvd), _wvd, _lastWVD];
+				if (_lastWVD isEqualTo _wvd or time > _abortTime) exitWith {
+					//DIAG_LOG format ["TUBE: %1 | FIND CHARGE MOVING LOOP EXIT | Time: %2 | If: %3 | _wvd: %4 | _lastWVD: %5 | Aborted: %6", _tube, time, (_lastWVD isEqualTo _wvd), _wvd, _lastWVD, time > _abortTime];
 				};
 				//DIAG_LOG format ["TUBE: %1 | FIND CHARGE MOVING LOOP | Time: %2 | If: %3 | _wvd: %4 | _lastWVD: %5", _tube, time, (_lastWVD isEqualTo _wvd), _wvd, _lastWVD];
 				_lastWVD = _wvd;

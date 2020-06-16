@@ -1,11 +1,10 @@
-#include "BIS_AddonInfo.hpp"
 class CfgPatches {
 	class DrongosArtillery
 	{
 		units[] = {};
 		weapons[] = {};
-		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_gamma","A3_Armor_F","A3_Armor_F_T100K","A3_Armor_F_EPB_MBT_03","A3_Armor_F_EPC_MBT_01","A3_Armor_F_Slammer"};	
-		author[]= {"Drongo"}; 		
+		requiredAddons[] = {"A3_Data_F_Oldman_Loadorder","A3_Data_F_Mod_Loadorder","cba_main","A3_Weapons_F","A3_Weapons_F_gamma","A3_Armor_F","A3_Armor_F_T100K","A3_Armor_F_EPB_MBT_03","A3_Armor_F_EPC_MBT_01","A3_Armor_F_Slammer"};	
+		author[]= {"Drongo"};
 	};
 };
 
@@ -19,6 +18,21 @@ class CfgFunctions
 		{
 			file = "DrongosArtillery\functions";
 			class checkForDC;
+		};
+	};
+	
+	class RHS
+	{
+		class Functions
+		{
+			class fired_m119
+			{
+				file = "DrongosArtillery\functions\empty.sqf";
+			};
+			class fired_D30
+			{
+				file = "DrongosArtillery\functions\empty.sqf";
+			};
 		};
 	};
 };
@@ -45,7 +59,7 @@ class CfgSounds
 		titles[] = {};
 	};
 
-// US radio
+	// US radio
 	class dtaAdjustFireUS
 	{
 		name = "dtaAdjustFireUS";
@@ -81,7 +95,7 @@ class CfgSounds
 		titles[] = {};
 	};
 	
-// Iranian radio	
+	// Iranian radio	
 	class dtaAffirmativePER
 	{
 		name = "dtaAffirmativePER";
@@ -138,7 +152,7 @@ class CfgSounds
 		titles[] = {};
 	};
 
-// Greek radio
+	// Greek radio
 	class dtaAffirmativeGRE
 	{
 		name = "dtaAffirmativeGRE";

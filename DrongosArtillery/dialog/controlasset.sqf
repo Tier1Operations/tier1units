@@ -3,8 +3,8 @@
 
 _prePlotted = _this select 0;
 
-//diag_log format["CONTROLASSET - _prePlotted: %1", _prePlotted];
-//diag_log format["CONTROLASSET - ABORTING: %1", ((_prePlotted) AND ((count dtaSelectedPrePlotted) == 0))];
+//DIAG_LOG format["CONTROLASSET - _prePlotted: %1", _prePlotted];
+//DIAG_LOG format["CONTROLASSET - ABORTING: %1", ((_prePlotted) AND ((count dtaSelectedPrePlotted) == 0))];
 
 if ((_prePlotted) AND ((count dtaSelectedPrePlotted) == 0)) exitWith {hint "No mission selected"};
 
@@ -27,7 +27,7 @@ switch true do {
 if (_abort) exitWith {hint "Asset is not responding."; [false] execVM "DrongosArtillery\Dialog\EndMission.sqf"};
 
 
-//diag_log format["CONTROLASSET - (_asset == dtaControlledAssetLocal): %1", (_asset == dtaControlledAssetLocal)];
+//DIAG_LOG format["CONTROLASSET - (_asset == dtaControlledAssetLocal): %1", (_asset == dtaControlledAssetLocal)];
 
 if (_asset == dtaControlledAssetLocal) then {closeDialog 0;sleep 0.3};
 if (_prePlotted) then {dtaPrePlotted = true};
@@ -94,7 +94,7 @@ if (isNil "DTA_UnconsciousCheck_Loop") then {
 
 if (_prePlotted) then {dtaPrePlotted = true};
 
-//diag_log format["CONTROLASSET - IF _prePlotted: %1 - dtaPrePlotted: %2", _prePlotted, dtaPrePlotted];
+//DIAG_LOG format["CONTROLASSET - IF _prePlotted: %1 - dtaPrePlotted: %2", _prePlotted, dtaPrePlotted];
 
 _assetCallsign = "";
 _playerCallsign = "";

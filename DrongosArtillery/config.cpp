@@ -1109,17 +1109,17 @@ class cfgWeapons
 		
 		class Single1: Mode_SemiAuto
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.25;
 		};
 		class Burst1: Mode_Burst
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.25;
 		};
 		
 		class Single3;
 		class Single4: Single3
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.25;
 			artilleryCharge = 1.45;
 			displayName = "Semi (very far)";
 		};
@@ -1127,7 +1127,7 @@ class cfgWeapons
 		class Burst3;
 		class Burst4: Burst3
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.25;
 			artilleryCharge = 1.45;
 			maxRange = 6500;
 			maxRangeProbab = 0.3;
@@ -1144,12 +1144,12 @@ class cfgWeapons
 	{
 		class Single1: Mode_SemiAuto
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.1;
 		};
 
 		class Burst1: Mode_Burst
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.1;
 		};
 	};
 
@@ -1157,19 +1157,19 @@ class cfgWeapons
 	{
 		class Close: RocketPods
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.1;
 		};
 		class Medium: Close
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.1;
 		};
 		class Far: Close
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.1;
 		};
 		class Full: Close
 		{
-			artilleryDispersion = 0.01;
+			artilleryDispersion = 0.1;
 		};
 	};
 	

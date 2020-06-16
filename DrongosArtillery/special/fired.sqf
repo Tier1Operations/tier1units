@@ -11,23 +11,23 @@ _arrayEnemySides = _this select 7;
 _GPSZAdjust = _this select 8;
 _elevationMod = _this select 9;
 
-//diag_log format["FIRED -- _firedEHArray: %1", _firedEHArray];
-//diag_log format["FIRED -- _action: %1", _action];
-//diag_log format["FIRED -- _pos: %1", _pos];
-//diag_log format["FIRED -- _gunAngle: %1", _gunAngle];
-//diag_log format["FIRED -- _fuse: %1", _fuse];
-//diag_log format["FIRED -- _infoDummy: %1", _infoDummy];
-//diag_log format["FIRED -- _longRangeGuided: %1", _longRangeGuided];
-//diag_log format["FIRED -- _arrayEnemySides: %1", _arrayEnemySides];
-//diag_log format["FIRED -- _GPSZAdjust: %1", _GPSZAdjust];
-//diag_log format["FIRED -- _elevationMod: %1", _elevationMod];
+//DIAG_LOG format["FIRED -- _firedEHArray: %1", _firedEHArray];
+//DIAG_LOG format["FIRED -- _action: %1", _action];
+//DIAG_LOG format["FIRED -- _pos: %1", _pos];
+//DIAG_LOG format["FIRED -- _gunAngle: %1", _gunAngle];
+//DIAG_LOG format["FIRED -- _fuse: %1", _fuse];
+//DIAG_LOG format["FIRED -- _infoDummy: %1", _infoDummy];
+//DIAG_LOG format["FIRED -- _longRangeGuided: %1", _longRangeGuided];
+//DIAG_LOG format["FIRED -- _arrayEnemySides: %1", _arrayEnemySides];
+//DIAG_LOG format["FIRED -- _GPSZAdjust: %1", _GPSZAdjust];
+//DIAG_LOG format["FIRED -- _elevationMod: %1", _elevationMod];
 
 
 // Convert NET ID to object data type.
 _infoDummy = _infoDummy call BIS_fnc_objectFromNetId;
 
 
-//diag_log format["FIRED -- _infoDummy CONVERTED: %1", _infoDummy];
+//DIAG_LOG format["FIRED -- _infoDummy CONVERTED: %1", _infoDummy];
 
 
 // When doing a MIXED airburst, this will signal when it's not doing an airburst.

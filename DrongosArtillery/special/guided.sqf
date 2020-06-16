@@ -24,19 +24,19 @@ if (_action == 4) then {
 };
 
 
-//diag_log format ["GUIDED -- _firedEHArray: %1", _firedEHArray];
-//diag_log format ["GUIDED -- _pos: %1", _pos];
-//diag_log format ["GUIDED -- _gunAngle: %1", _gunAngle];
-//diag_log format ["GUIDED -- _action: %1", _action];
-//diag_log format ["GUIDED -- _fuse: %1", _fuse];
-//diag_log format ["GUIDED -- _infoDummy: %1", _infoDummy];
-//diag_log format ["GUIDED -- _doAirburst: %1", _doAirburst];
-//diag_log format ["GUIDED -- _longRangeGuided: %1", _longRangeGuided];
-//diag_log format ["GUIDED -- _arrayEnemySides: %1", _arrayEnemySides];
-//diag_log format ["GUIDED -- _GPSZAdjust: %1", _GPSZAdjust];
-//diag_log format ["GUIDED -- _elevationMod: %1", _elevationMod];
-//diag_log format ["GUIDED -- _projectile: %1", _projectile];
-//diag_log format ["GUIDED -- _unguidedCEP: %1", _unguidedCEP];
+//DIAG_LOG format ["GUIDED -- _firedEHArray: %1", _firedEHArray];
+//DIAG_LOG format ["GUIDED -- _pos: %1", _pos];
+//DIAG_LOG format ["GUIDED -- _gunAngle: %1", _gunAngle];
+//DIAG_LOG format ["GUIDED -- _action: %1", _action];
+//DIAG_LOG format ["GUIDED -- _fuse: %1", _fuse];
+//DIAG_LOG format ["GUIDED -- _infoDummy: %1", _infoDummy];
+//DIAG_LOG format ["GUIDED -- _doAirburst: %1", _doAirburst];
+//DIAG_LOG format ["GUIDED -- _longRangeGuided: %1", _longRangeGuided];
+//DIAG_LOG format ["GUIDED -- _arrayEnemySides: %1", _arrayEnemySides];
+//DIAG_LOG format ["GUIDED -- _GPSZAdjust: %1", _GPSZAdjust];
+//DIAG_LOG format ["GUIDED -- _elevationMod: %1", _elevationMod];
+//DIAG_LOG format ["GUIDED -- _projectile: %1", _projectile];
+//DIAG_LOG format ["GUIDED -- _unguidedCEP: %1", _unguidedCEP];
 
 
 // If not airbursting, set the target pos altitude close to the ground.
@@ -180,4 +180,4 @@ if (_action == 1 or {_action == 3}) then {
 };
 
 nul = [_firedEHArray,_target,_projectile,_pos,_radius,_action,_fuse,_infoDummy,_doAirburst,_arrayEnemySides,_GPSZAdjust,_elevationMod,_unguidedCEP] execVM "DrongosArtillery\Special\GuideProjectile.sqf";
-//diag_log "GUIDED - END";
+//DIAG_LOG "GUIDED - END";

@@ -1,6 +1,6 @@
 private _nr = _this select 0;
 
-//diag_log format ["PARSENUMBER - START - _nr: %1", _nr];
+//DIAG_LOG format ["PARSENUMBER - START - _nr: %1", _nr];
 
 if (_nr isEqualType "" and count _nr > 0) then {
 	
@@ -54,17 +54,17 @@ if (_nr isEqualType "" and count _nr > 0) then {
 		};
 		
 		if (_abort) exitWith {
-			//diag_log format ["PARSENUMBER - ABORTING - CHAR: %1", _nr select [_i, 1]];
+			//DIAG_LOG format ["PARSENUMBER - ABORTING - CHAR: %1", _nr select [_i, 1]];
 		};
 	};
 	
 	if (!_abort) then {_nr = parseNumber _nr} else {_nr = -9999999};
 	
 } else {
-	//diag_log format["PARSENUMBER - IF FALSE - CHECK1: %1 - CHECK2: %2", _nr isEqualType "", count _nr];
+	//DIAG_LOG format["PARSENUMBER - IF FALSE - CHECK1: %1 - CHECK2: %2", _nr isEqualType "", count _nr];
 	_nr = -9999999;
 };
 
-//diag_log format ["PARSENUMBER END - _nr: %1", _nr];
+//DIAG_LOG format ["PARSENUMBER END - _nr: %1", _nr];
 
 _nr

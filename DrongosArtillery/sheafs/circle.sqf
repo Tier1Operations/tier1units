@@ -5,14 +5,14 @@ _asset = _this select 1;
 _pos = _this select 2;
 _radius = _this select 3;
 
-//diag_log format["CIRCLE SHEAF - RADIUS: %1", _radius];
+//DIAG_LOG format["CIRCLE SHEAF - RADIUS: %1", _radius];
 
 _pos = ASLtoAGL _pos;
 _elevation = _pos select 2;		// Remember the height above ground for airburst.
 //_radius = _radius * sqrt random 1;
 _radius = random _radius;
 
-//diag_log format["CIRCLE SHEAF - FINAL RADIUS: %1", _radius];
+//DIAG_LOG format["CIRCLE SHEAF - FINAL RADIUS: %1", _radius];
 
 // If asset is not null, it means we want to use the complex code.
 if (!isNull _asset) then {

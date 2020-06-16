@@ -8,8 +8,8 @@ private _x = [ctrlText (_iccCode + 4)] call dta_fnc_ParseNumber;
 // Y adjustment (up/down)
 private _y = [ctrlText (_iccCode + 5)] call dta_fnc_ParseNumber;
 
-//diag_log "ADJUST START";
-//diag_log format["ADJUST - _x: %1 - _y: %2", _x, _y];
+//DIAG_LOG "ADJUST START";
+//DIAG_LOG format["ADJUST - _x: %1 - _y: %2", _x, _y];
 
 // Make sure the input is good.
 if (_x != -9999999 and {_y != -9999999}) then {
@@ -28,58 +28,58 @@ if (_x != -9999999 and {_y != -9999999}) then {
 		private _dir = player getDir _targetPos2D_1;
 		private _distance2D = player distance2D _targetPos2D_1;
 		
-		//diag_log format ["ADJUST - _x: %1", _x];
-		//diag_log format ["ADJUST - _y: %1", _y];
-		//diag_log format ["ADJUST - _targetPos2D_1: %1", _targetPos2D_1];
-		//diag_log format ["ADJUST - _targetPos2D_2: %1", _targetPos2D_2];
-		//diag_log format ["ADJUST - _dir: %1", _dir];
-		//diag_log format ["ADJUST - _distance2D: %1", _distance2D];
+		//DIAG_LOG format ["ADJUST - _x: %1", _x];
+		//DIAG_LOG format ["ADJUST - _y: %1", _y];
+		//DIAG_LOG format ["ADJUST - _targetPos2D_1: %1", _targetPos2D_1];
+		//DIAG_LOG format ["ADJUST - _targetPos2D_2: %1", _targetPos2D_2];
+		//DIAG_LOG format ["ADJUST - _dir: %1", _dir];
+		//DIAG_LOG format ["ADJUST - _distance2D: %1", _distance2D];
 		
 		// Adjust _y.
 		if (_y != 0) then {
-			//diag_log "ADJUST Y";
+			//DIAG_LOG "ADJUST Y";
 			private _targetPos2D_1_y = player getPos [_distance2D + _y, _dir];
-			//diag_log format ["ADJUST - _targetPos2D_1_y: %1", _targetPos2D_1_y];
+			//DIAG_LOG format ["ADJUST - _targetPos2D_1_y: %1", _targetPos2D_1_y];
 			_targetPos2D_1_y = [_targetPos2D_1_y select 0,_targetPos2D_1_y select 1,0];
-			//diag_log format ["ADJUST - _targetPos2D_1_y: %1", _targetPos2D_1_y];
+			//DIAG_LOG format ["ADJUST - _targetPos2D_1_y: %1", _targetPos2D_1_y];
 			_targetPos2D_2 = _targetPos2D_2 vectorAdd (_targetPos2D_1_y vectorDiff _targetPos2D_1);
-			//diag_log format ["ADJUST - (_targetPos2D_1_y vectorDiff _targetPos2D_1): %1", (_targetPos2D_1_y vectorDiff _targetPos2D_1)];
-			//diag_log format ["ADJUST - _targetPos2D_2: %1", _targetPos2D_2];
+			//DIAG_LOG format ["ADJUST - (_targetPos2D_1_y vectorDiff _targetPos2D_1): %1", (_targetPos2D_1_y vectorDiff _targetPos2D_1)];
+			//DIAG_LOG format ["ADJUST - _targetPos2D_2: %1", _targetPos2D_2];
 			_targetPos2D_1 = _targetPos2D_1_y;
-			//diag_log format ["ADJUST - _targetPos2D_1: %1", _targetPos2D_1];
+			//DIAG_LOG format ["ADJUST - _targetPos2D_1: %1", _targetPos2D_1];
 		};
 		
 		// Adjust _x.
 		if (_x != 0) then {
-			//diag_log "ADJUST X";
+			//DIAG_LOG "ADJUST X";
 			switch (true) do {
 				case (_dir > 270 and _x > 0) : {
 					_dir = _dir - 270;
-					//diag_log format ["ADJUST - _dir - 270: %1", _dir];
+					//DIAG_LOG format ["ADJUST - _dir - 270: %1", _dir];
 				};
 				case (_dir < 90 and _x < 0) : {
 					_dir = _dir + 270;
-					//diag_log format ["ADJUST - _dir + 270: %1", _dir];
+					//DIAG_LOG format ["ADJUST - _dir + 270: %1", _dir];
 				};
 				case (_x > 0) : {
 					_dir = _dir + 90;
-					//diag_log format ["ADJUST - _dir + 90: %1", _dir];
+					//DIAG_LOG format ["ADJUST - _dir + 90: %1", _dir];
 				};
 				case (_x < 0) : {
 					_dir = _dir - 90;
-					//diag_log format ["ADJUST - _dir - 90: %1", _dir];
+					//DIAG_LOG format ["ADJUST - _dir - 90: %1", _dir];
 				};
 			};
 			
 			private _targetPos2D_1_x = _targetPos2D_1 getPos [abs _x, _dir];
-			//diag_log format ["ADJUST - _targetPos2D_1_x: %1", _targetPos2D_1_x];
+			//DIAG_LOG format ["ADJUST - _targetPos2D_1_x: %1", _targetPos2D_1_x];
 			_targetPos2D_1_x = [_targetPos2D_1_x select 0,_targetPos2D_1_x select 1,0];
-			//diag_log format ["ADJUST - _targetPos2D_1_x: %1", _targetPos2D_1_x];
+			//DIAG_LOG format ["ADJUST - _targetPos2D_1_x: %1", _targetPos2D_1_x];
 			_targetPos2D_2 = _targetPos2D_2 vectorAdd (_targetPos2D_1_x vectorDiff _targetPos2D_1);
-			//diag_log format ["ADJUST - (_targetPos2D_1_x vectorDiff _targetPos2D_1): %1", (_targetPos2D_1_x vectorDiff _targetPos2D_1)];
-			//diag_log format ["ADJUST - _targetPos2D_2: %1", _targetPos2D_2];
+			//DIAG_LOG format ["ADJUST - (_targetPos2D_1_x vectorDiff _targetPos2D_1): %1", (_targetPos2D_1_x vectorDiff _targetPos2D_1)];
+			//DIAG_LOG format ["ADJUST - _targetPos2D_2: %1", _targetPos2D_2];
 			_targetPos2D_1 = _targetPos2D_1_x;
-			//diag_log format ["ADJUST - _targetPos2D_1: %1", _targetPos2D_1];
+			//DIAG_LOG format ["ADJUST - _targetPos2D_1: %1", _targetPos2D_1];
 		};
 		
 		dtaX = _targetPos2D_1 select 0;
@@ -90,13 +90,13 @@ if (_x != -9999999 and {_y != -9999999}) then {
 		
 		player sideChat "Adjust fire.";
 		
-		//diag_log format["ADJUST - _targetPos2D_1: %1", _targetPos2D_1];
-		//diag_log format["ADJUST - _targetPos2D_2: %1", _targetPos2D_2];
+		//DIAG_LOG format["ADJUST - _targetPos2D_1: %1", _targetPos2D_1];
+		//DIAG_LOG format["ADJUST - _targetPos2D_2: %1", _targetPos2D_2];
 		
 		if (dtaDebug) then {[_targetPos2D_1, 120, "ColorRed"] spawn dta_fnc_PlaceMarker};
 		if (dtaDebug) then {[_targetPos2D_2, 120, "ColorYellow"] spawn dta_fnc_PlaceMarker};		
 		
-		//diag_log "ADJUST END";
+		//DIAG_LOG "ADJUST END";
 	};
 	
 } else {

@@ -35,11 +35,11 @@ private _check = {
 						_unit enableSimulationGlobal false;
 					};
 				};
-				//diag_log format ["APPROVE VEH: %1 - TYPEOF: %2", _x, typeOf _x];
+				//DIAG_LOG format ["APPROVE VEH: %1 - TYPEOF: %2", _x, typeOf _x];
 				
 			} else {
 				_x setVariable ["DTA_suitableVehicle", false, true];
-				//diag_log format ["APPROVE VEH - NOT SUITABLE: %1 - TYPEOF: %2", _x, typeOf _x];
+				//DIAG_LOG format ["APPROVE VEH - NOT SUITABLE: %1 - TYPEOF: %2", _x, typeOf _x];
 			};
 		};
 		

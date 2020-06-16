@@ -8,8 +8,8 @@ _pos = _this select 2;
 _sizeX = _this select 3;
 _sizeY = _this select 4;
 
-//diag_log format["BOX SHEAF - _sizeX: %1", _sizeX];
-//diag_log format["BOX SHEAF - _sizeY: %1", _sizeY];
+//DIAG_LOG format["BOX SHEAF - _sizeX: %1", _sizeX];
+//DIAG_LOG format["BOX SHEAF - _sizeY: %1", _sizeY];
 
 _pos = ASLtoAGL _pos;
 _elevation = _pos select 2;		// Remember the height above ground for airburst.

@@ -28,18 +28,18 @@ _turret = ((assignedVehicleRole _gunner) select 1);
 // Convert NET ID to object data type.
 _infoDummy = _infoDummy call BIS_fnc_objectFromNetId;
 
-//diag_log format["AIRBURST -- _tube: %1", _tube];
-//diag_log format["AIRBURST -- _projectile: %1", _projectile];
-//diag_log format["AIRBURST -- _airburstHeight: %1", _airburstHeight];
-//diag_log format["AIRBURST -- _pos: %1", _pos];
-//diag_log format["AIRBURST -- _gunAngle: %1", _gunAngle];
-//diag_log format["AIRBURST -- _action: %1", _action];
-//diag_log format["AIRBURST -- _infoDummy: %1", _infoDummy];
-//diag_log format["AIRBURST -- _GPSZAdjust: %1", _GPSZAdjust];
+//DIAG_LOG format["AIRBURST -- _tube: %1", _tube];
+//DIAG_LOG format["AIRBURST -- _projectile: %1", _projectile];
+//DIAG_LOG format["AIRBURST -- _airburstHeight: %1", _airburstHeight];
+//DIAG_LOG format["AIRBURST -- _pos: %1", _pos];
+//DIAG_LOG format["AIRBURST -- _gunAngle: %1", _gunAngle];
+//DIAG_LOG format["AIRBURST -- _action: %1", _action];
+//DIAG_LOG format["AIRBURST -- _infoDummy: %1", _infoDummy];
+//DIAG_LOG format["AIRBURST -- _GPSZAdjust: %1", _GPSZAdjust];
 
 if (isNil "_action") then {_action = 0};	// Safety check. Not laser guided, nor seeker.
 
-//diag_log format["AIRBURST -- AFTER IF ISNIL _action: %1", _action];
+//DIAG_LOG format["AIRBURST -- AFTER IF ISNIL _action: %1", _action];
 
 // Size of explosion EFFECT used (not actual lethality) 1 = Small, 2 = Large
 _explosionSize = 0;
@@ -77,7 +77,7 @@ if (_submunType != "") then {
 	_submun = false;
 };
 
-//diag_log format["AIRBURST -- _submunType: %1", _submunType];
+//DIAG_LOG format["AIRBURST -- _submunType: %1", _submunType];
 
 
 switch (_tubeType) do {
@@ -136,8 +136,8 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 			while {alive _projectile} do {
 				_posProj = getPosASL _projectile;
 				_altitude = _posProj select 2;
-				//diag_log format["AIRBURST - NOSUB - HIGH - ALTITUDE LOOP - _posProj: %1", _posProj];
-				//diag_log format["AIRBURST - NOSUB - HIGH - ALTITUDE LOOP - _altitude: %1", _altitude];
+				//DIAG_LOG format["AIRBURST - NOSUB - HIGH - ALTITUDE LOOP - _posProj: %1", _posProj];
+				//DIAG_LOG format["AIRBURST - NOSUB - HIGH - ALTITUDE LOOP - _altitude: %1", _altitude];
 				// Add 7 to avoid bug.
 				if (_altitude + 7 < _altitudeHighest) exitWith {};
 				_altitudeHighest = _altitude;
@@ -147,9 +147,9 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 			waitUntil {
 				sleep 0.05;
 				_posProj = getPosASL _projectile;
-				//diag_log format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 1 - ALIVE PROJECTILE: %1", alive _projectile];
-				//diag_log format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 1 - _posProj: %1", _posProj];
-				//diag_log format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 1 - DISTANCE: %1", _pos vectorDistance _posProj];
+				//DIAG_LOG format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 1 - ALIVE PROJECTILE: %1", alive _projectile];
+				//DIAG_LOG format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 1 - _posProj: %1", _posProj];
+				//DIAG_LOG format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 1 - DISTANCE: %1", _pos vectorDistance _posProj];
 				_pos vectorDistance _posProj < 1000 or {!alive _projectile}
 			};
 			
@@ -157,10 +157,10 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 			waitUntil {
 				sleep 0.01;
 				_posProj = getPosASL _projectile;
-				//diag_log format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 2 - ALIVE PROJECTILE: %1", alive _projectile];
-				//diag_log format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 2 - _posProj: %1", _posProj];
-				//diag_log format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 2 - DISTANCE: %1", _pos vectorDistance _posProj];
-				//diag_log format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 2 - HEIGHT: %1", (ASLtoAGL _posProj) select 2];
+				//DIAG_LOG format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 2 - ALIVE PROJECTILE: %1", alive _projectile];
+				//DIAG_LOG format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 2 - _posProj: %1", _posProj];
+				//DIAG_LOG format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 2 - DISTANCE: %1", _pos vectorDistance _posProj];
+				//DIAG_LOG format["AIRBURST - NOSUB - HIGH - DISTANCE LOOP 2 - HEIGHT: %1", (ASLtoAGL _posProj) select 2];
 				(ASLtoAGL _posProj) select 2 < 60 or {!alive _projectile}
 			};
 			
@@ -171,9 +171,9 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 			waitUntil {
 				sleep 0.05;
 				_posProj = getPosASL _projectile;
-				//diag_log format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 1 - ALIVE PROJECTILE: %1", alive _projectile];
-				//diag_log format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 1 - _posProj: %1", _posProj];
-				//diag_log format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 1 - DISTANCE: %1", _pos vectorDistance _posProj];
+				//DIAG_LOG format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 1 - ALIVE PROJECTILE: %1", alive _projectile];
+				//DIAG_LOG format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 1 - _posProj: %1", _posProj];
+				//DIAG_LOG format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 1 - DISTANCE: %1", _pos vectorDistance _posProj];
 				_pos vectorDistance _posProj < 1000 or {!alive _projectile}
 			};
 			
@@ -181,9 +181,9 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 			waitUntil {
 				sleep 0.01;
 				_posProj = getPosASL _projectile;
-				//diag_log format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 2 - ALIVE PROJECTILE: %1", alive _projectile];
-				//diag_log format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 2 - _posProj: %1", _posProj];
-				//diag_log format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 2 - DISTANCE: %1", _pos vectorDistance _posProj];
+				//DIAG_LOG format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 2 - ALIVE PROJECTILE: %1", alive _projectile];
+				//DIAG_LOG format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 2 - _posProj: %1", _posProj];
+				//DIAG_LOG format["AIRBURST - NOSUB - LOW - DISTANCE LOOP 2 - DISTANCE: %1", _pos vectorDistance _posProj];
 				_pos vectorDistance _posProj < 300 or {!alive _projectile}
 			};
 		};
@@ -198,16 +198,16 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 			sleep 0.05;
 		};
 		
-		//diag_log "AIRBURST - SUB - LOST ORIGINAL PROJECTILE, LOOKING FOR SPAWNED SUBMUNITION";
+		//DIAG_LOG "AIRBURST - SUB - LOST ORIGINAL PROJECTILE, LOOKING FOR SPAWNED SUBMUNITION";
 		
 		// Try to locate the submunition so that we can manipulate it.
 		_list = (ASLtoAGL _posProj) nearObjects [_submunType, 300];
 		
-		//diag_log format["AIRBURST - SUB - _list: %1", _list];
+		//DIAG_LOG format["AIRBURST - SUB - _list: %1", _list];
 		
 		// Exit if no corresponding submunition objects found.
 		if ((count _list) < 1) exitWith {
-			//diag_log "AIRBURST - SUB - NO SUBMUNITION FOUND - EXITING";
+			//DIAG_LOG "AIRBURST - SUB - NO SUBMUNITION FOUND - EXITING";
 		};
 		
 		// Find the closest submunition object, we assume that must be the one that was spawned by the original projectile.
@@ -216,11 +216,11 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 			if ((getPosASL _x) vectorDistance _posProj < (getPosASL _projectile) vectorDistance _posProj) then {_projectile = _x};
 		} forEach _list;
 		
-		//diag_log format["AIRBURST - SUB - _projectile: %1", _projectile];
+		//DIAG_LOG format["AIRBURST - SUB - _projectile: %1", _projectile];
 		
 		// Something went wrong if the chosen projectile is not alive at this point, so abort.
 		if (!alive _projectile) exitWith {
-			//diag_log "AIRBURST - SUB - SUBMUNITION NOT ALIVE - EXITING";
+			//DIAG_LOG "AIRBURST - SUB - SUBMUNITION NOT ALIVE - EXITING";
 		};
 		
 		// Wait until projectile is closer to the target.
@@ -228,11 +228,11 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 			sleep 0.05;
 			if (_laserMode) then {_pos = _infoDummy getVariable ["dta_posLaser", _pos]};
 			_posProj = getPosASL _projectile;
-			//diag_log format["AIRBURST - SUB - DISTANCE LOOP 1 - ALIVE PROJECTILE: %1", alive _projectile];
-			//diag_log format["AIRBURST - SUB - DISTANCE LOOP 1 - _posProj: %1", _posProj];
-			//diag_log format["AIRBURST - SUB - DISTANCE LOOP 1 - DISTANCE: %1", _pos vectorDistance _posProj];
-			//diag_log format["AIRBURST - SUB - DISTANCE LOOP 1 - POS: %1", _pos];
-			//diag_log format["AIRBURST - SUB - DISTANCE LOOP 1 - INFODUMMY POS: %1", _infoDummy getVariable ["dta_posLaser", []]];
+			//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 1 - ALIVE PROJECTILE: %1", alive _projectile];
+			//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 1 - _posProj: %1", _posProj];
+			//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 1 - DISTANCE: %1", _pos vectorDistance _posProj];
+			//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 1 - POS: %1", _pos];
+			//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 1 - INFODUMMY POS: %1", _infoDummy getVariable ["dta_posLaser", []]];
 			_pos vectorDistance _posProj < 1000 or {!alive _projectile}
 		};
 		
@@ -242,10 +242,10 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 			waitUntil {
 				sleep 0.01;
 				_posProj = getPosASL _projectile;
-				//diag_log format["AIRBURST - SUB - DISTANCE LOOP HIGH NO LASER - ALIVE PROJECTILE: %1", alive _projectile];
-				//diag_log format["AIRBURST - SUB - DISTANCE LOOP HIGH NO LASER - _posProj: %1", _posProj];
-				//diag_log format["AIRBURST - SUB - DISTANCE LOOP HIGH NO LASER - DISTANCE: %1", _pos vectorDistance _posProj];
-				//diag_log format["AIRBURST - SUB - DISTANCE LOOP HIGH NO LASER - HEIGHT: %1", (ASLtoAGL _posProj) select 2];
+				//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP HIGH NO LASER - ALIVE PROJECTILE: %1", alive _projectile];
+				//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP HIGH NO LASER - _posProj: %1", _posProj];
+				//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP HIGH NO LASER - DISTANCE: %1", _pos vectorDistance _posProj];
+				//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP HIGH NO LASER - HEIGHT: %1", (ASLtoAGL _posProj) select 2];
 				(ASLtoAGL _posProj) select 2 < 60 or {!alive _projectile}
 			};
 			
@@ -256,20 +256,20 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 				sleep 0.01;
 				if (_laserMode) then {_pos = _infoDummy getVariable ["dta_posLaser", _pos]};
 				_posProj = getPosASL _projectile;
-				//diag_log format["AIRBURST - SUB - DISTANCE LOOP 2 - ALIVE PROJECTILE: %1", alive _projectile];
-				//diag_log format["AIRBURST - SUB - DISTANCE LOOP 2 - _posProj: %1", _posProj];
-				//diag_log format["AIRBURST - SUB - DISTANCE LOOP 2 - DISTANCE: %1", _pos vectorDistance _posProj];
-				//diag_log format["AIRBURST - SUB - DISTANCE LOOP 2 - POS: %1", _pos];
-				//diag_log format["AIRBURST - SUB - DISTANCE LOOP 2 - INFODUMMY POS: %1", _infoDummy getVariable ["dta_posLaser", []]];
+				//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 2 - ALIVE PROJECTILE: %1", alive _projectile];
+				//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 2 - _posProj: %1", _posProj];
+				//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 2 - DISTANCE: %1", _pos vectorDistance _posProj];
+				//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 2 - POS: %1", _pos];
+				//DIAG_LOG format["AIRBURST - SUB - DISTANCE LOOP 2 - INFODUMMY POS: %1", _infoDummy getVariable ["dta_posLaser", []]];
 				_pos vectorDistance _posProj < 300 or {!alive _projectile}
 			};
 		};
 	};
 	
-	//diag_log format["AIRBURST - NEAR END -- ALIVE PROJECTILE: %1", alive _projectile];
+	//DIAG_LOG format["AIRBURST - NEAR END -- ALIVE PROJECTILE: %1", alive _projectile];
 	
 	if (!alive _projectile) exitWith {
-		//diag_log "AIRBURST - NEAR END - PROJECTILE NOT ALIVE - EXITING";
+		//DIAG_LOG "AIRBURST - NEAR END - PROJECTILE NOT ALIVE - EXITING";
 	};
 	
 	
@@ -287,13 +287,13 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 	// If obstructed, use the first obstructed position for the airburst pos.
 	_lineIntersectsSurfaces = lineIntersectsSurfaces [_posProj, _pos, objNull, objNull, true, 1];
 	
-	//diag_log format["AIRBURST - NEAR END -- _pos: %1", _pos];
-	//diag_log format["AIRBURST - NEAR END -- _lineIntersectsSurfaces: %1", _lineIntersectsSurfaces];
+	//DIAG_LOG format["AIRBURST - NEAR END -- _pos: %1", _pos];
+	//DIAG_LOG format["AIRBURST - NEAR END -- _lineIntersectsSurfaces: %1", _lineIntersectsSurfaces];
 	
 	// Obstructed.
 	if (count _lineIntersectsSurfaces > 0) then {
 		_pos = ((_lineIntersectsSurfaces select 0) select 0);
-		//diag_log format["AIRBURST - NEAR END -- POS LINEINTERSECTS: %1", _pos];
+		//DIAG_LOG format["AIRBURST - NEAR END -- POS LINEINTERSECTS: %1", _pos];
 	};
 	
 	// If the ACE frag mod is installed, then use that instead because it works much better.
@@ -309,24 +309,24 @@ if (_airburstHeight == "MED" or {_airburstHeight == "LOW"} or {_airburstHeight =
 		
 		[_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret] call ace_frag_fnc_fired; 
 		
-		//diag_log _tube;
-		//diag_log _weapon;
-		//diag_log _muzzle;
-		//diag_log _mode;
-		//diag_log _airburstClass;
-		//diag_log _warheadType;
-		//diag_log _projectile;
-		//diag_log _vehicle;
-		//diag_log _gunner;
-		//diag_log _turret;
+		//DIAG_LOG _tube;
+		//DIAG_LOG _weapon;
+		//DIAG_LOG _muzzle;
+		//DIAG_LOG _mode;
+		//DIAG_LOG _airburstClass;
+		//DIAG_LOG _warheadType;
+		//DIAG_LOG _projectile;
+		//DIAG_LOG _vehicle;
+		//DIAG_LOG _gunner;
+		//DIAG_LOG _turret;
 		
-		//diag_log "AIRBURST - ACE FRAG ACTIVATED";
+		//DIAG_LOG "AIRBURST - ACE FRAG ACTIVATED";
 		
 	} else {
 		// If ACE not installed, then use the frag script that comes with this mod.
 		[_pos,_explosionSize,_shrapnelConcentration,_effectiveRange,_maxRange,_fallOff] execVM "DrongosArtillery\Airburst\AirburstHit.sqf";
-		//diag_log "AIRBURST - DTA FRAG ACTIVATED";
+		//DIAG_LOG "AIRBURST - DTA FRAG ACTIVATED";
 	};
 	
-	//diag_log "AIRBURST - END";
+	//DIAG_LOG "AIRBURST - END";
 };

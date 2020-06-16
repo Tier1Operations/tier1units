@@ -13,10 +13,10 @@ _assetType = _this select 2;
 _isMK41 = false;
 if (_assetType == "MK41") then {_isMK41 = true};
 
-//diag_log format ["LOADMAG - CURMAG: %1 - REQMAG: %2", currentMagazine _tube, _magazineType];
+//DIAG_LOG format ["LOADMAG - CURMAG: %1 - REQMAG: %2", currentMagazine _tube, _magazineType];
 
 if ((currentMagazine _tube) == _magazineType) exitWith {
-	//diag_log "LOADMAG - ABORT - MAG ALREADY LOADED";
+	//DIAG_LOG "LOADMAG - ABORT - MAG ALREADY LOADED";
 };
 
 _magazineRounds = 0;
@@ -25,7 +25,7 @@ _allMagazines = magazinesAmmo _tube;
 // If tube doesn't have the requested ammo, then abort.
 if ({(_x select 0) == _magazineType} count _allMagazines < 1) exitWith {
 	_tube setVariable ["DTA_outOfAmmo", true];
-	//diag_log "LOADMAG - ABORT - NO AMMO";
+	//DIAG_LOG "LOADMAG - ABORT - NO AMMO";
 };
 
 _gunner = gunner _tube;
@@ -45,9 +45,9 @@ _lookForMag = true;
 	};
 } forEach _allMagazines;
 
-//diag_log format ["LOADMAG - _firstMag: %1 - _magazineRounds: %2", _firstMag, _magazineRounds];
-//diag_log format ["LOADMAG - _arrayNew: %1", _arrayNew];
-//diag_log format ["LOADMAG - _allMagazines: %1", _allMagazines];
+//DIAG_LOG format ["LOADMAG - _firstMag: %1 - _magazineRounds: %2", _firstMag, _magazineRounds];
+//DIAG_LOG format ["LOADMAG - _arrayNew: %1", _arrayNew];
+//DIAG_LOG format ["LOADMAG - _allMagazines: %1", _allMagazines];
 
 {_tube removeMagazine (_x select 0)} forEach _allMagazines;
 
@@ -58,7 +58,7 @@ _tube addMagazine [_magazineType, _magazineRounds];
 _tube setWeaponReloadingTime [_gunner,(currentMuzzle _gunner), 0];
 
 if (currentMagazine _tube != _magazineType) then {
-	//diag_log "LOADMAG - WRONG MAG - TRYING TO LOAD CORRECT MAG";
+	//DIAG_LOG "LOADMAG - WRONG MAG - TRYING TO LOAD CORRECT MAG";
 	private _turretPath = (assignedVehicleRole _gunner) select 1;
 	_tube loadMagazine [_turretPath , _tube currentWeaponTurret _turretPath, _magazineType];
 	_tube setWeaponReloadingTime [_gunner,(currentMuzzle _gunner), 0];
@@ -81,4 +81,4 @@ if (_reloadTime > 45) then {
 	[_tube, format["Changing ammo will take a while: %1 seconds.",_reloadTime], "beep"] call dta_fnc_SendComms;
 };
 
-//diag_log format ["LOADMAG - END - CURMAG: %1 - REQMAG: %2", currentMagazine _tube, _magazineType];
+//DIAG_LOG format ["LOADMAG - END - CURMAG: %1 - REQMAG: %2", currentMagazine _tube, _magazineType];

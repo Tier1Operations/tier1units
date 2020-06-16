@@ -5,7 +5,7 @@ if (dtaSelectedAsset in dtaAssetsBusy) exitWith {(leader dtaSelectedAsset) sideC
 
 private _prePlotted = dtaPrePlotted;
 
-//diag_log format["TRANSMIT - _prePlotted: %1", _prePlotted];
+//DIAG_LOG format["TRANSMIT - _prePlotted: %1", _prePlotted];
 
 private _iccCode = 200;
 
@@ -115,13 +115,13 @@ if (_prePlotted) then {
 	dtaElevation = dtaLastPos select 2;
 	_pos = dtaLastPos;
 	
-	//diag_log format["TRANSMIT - PREPLOTTED - _pos: %1", _pos];
+	//DIAG_LOG format["TRANSMIT - PREPLOTTED - _pos: %1", _pos];
 	
 } else {
 	
 	_pos = [dtaX, dtaY, dtaElevation];
 	
-	//diag_log format["TRANSMIT - NOT PLOTTED - _pos: %1", _pos];
+	//DIAG_LOG format["TRANSMIT - NOT PLOTTED - _pos: %1", _pos];
 };
 
 

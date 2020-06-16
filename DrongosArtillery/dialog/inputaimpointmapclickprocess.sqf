@@ -13,9 +13,9 @@ _y = _pos select 1;
 
 dtaElevation = ((AGLtoASL [_x,_y,0]) select 2) max 0;
 
-//diag_log format["AIMPOINT MAPCLICK -- _x: %1", _x];
-//diag_log format["AIMPOINT MAPCLICK -- _y: %1", _y];
-//diag_log format["AIMPOINT MAPCLICK -- dtaElevation: %1", dtaElevation];
+//DIAG_LOG format["AIMPOINT MAPCLICK -- _x: %1", _x];
+//DIAG_LOG format["AIMPOINT MAPCLICK -- _y: %1", _y];
+//DIAG_LOG format["AIMPOINT MAPCLICK -- dtaElevation: %1", dtaElevation];
 
 dtaX = _x;
 dtaY = _y;
@@ -45,7 +45,7 @@ _errorSize = 25;
 _pos = [dtaX,dtaY,dtaElevation];
 _errorPos = [];
 
-//diag_log format["AIMPOINT MAPCLICK -- POS BEFORE RANDOM: %1", [dtaX,dtaY,dtaElevation]];
+//DIAG_LOG format["AIMPOINT MAPCLICK -- POS BEFORE RANDOM: %1", [dtaX,dtaY,dtaElevation]];
 
 _initialError = true;
 if (_distance <= 750) then {_initialError = false};
@@ -82,13 +82,13 @@ if (_initialError) then {
 	dtaX = dtaX;
 	dtaY = dtaY;
 	
-	//diag_log format["AIMPOINT MAPCLICK -- POS AFTER RANDOM: %1", [dtaX,dtaY,dtaElevation]];
+	//DIAG_LOG format["AIMPOINT MAPCLICK -- POS AFTER RANDOM: %1", [dtaX,dtaY,dtaElevation]];
 	
 	// For debug purposes. If enabled, turn off random misses.
 	if (DTA_turnOffMiss) then {
 		dtaX = _pos select 0;
 		dtaY = _pos select 1;
-		//diag_log format["AIMPOINT MAPCLICK -- TURN OFF MISS POS: %1", [dtaX,dtaY,dtaElevation]];
+		//DIAG_LOG format["AIMPOINT MAPCLICK -- TURN OFF MISS POS: %1", [dtaX,dtaY,dtaElevation]];
 	};
 };
 

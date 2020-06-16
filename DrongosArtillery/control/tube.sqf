@@ -86,14 +86,14 @@ if (_ammoWaitingTime > 0) then {
 _trackEH = -9685;
 if (dtaTrackRounds) then {_trackEH = _tube addEventHandler ["fired",{nul = _this execVM "DrongosArtillery\Test\Fired.sqf"}]};
 
-//diag_log format["TUBE: %1 - POS BEFORE PRECISE CHECK: %2", _tube, _pos];
+//DIAG_LOG format["TUBE: %1 - POS BEFORE PRECISE CHECK: %2", _tube, _pos];
 
 // If GPS guided, then use the displayed target pos instead of the randomized one.
 if ((_warheadType in dtaGPSGuidedTypes) or {_warheadType in dtaGPSLaserTypes} or {_warheadType in dtaGPSSeekerTypes}) then {
 	_pos = _posGPS;
 };
 
-//diag_log format["TUBE: %1 - POS BEFORE GROUND CHECK: %2", _tube, _pos];
+//DIAG_LOG format["TUBE: %1 - POS BEFORE GROUND CHECK: %2", _tube, _pos];
 
 // Make sure the given target pos is on the ground and not in the air.
 // This will make low angle shots a bit more accurate.
@@ -107,7 +107,7 @@ if (_posAGL select 2 > 0.1) then {
 	_pos = AGLtoASL [_posAGL select 0, _posAGL select 1, _alt];
 };
 
-//diag_log format["TUBE: %1 - POS AFTER GROUND CHECK: %2", _tube, _pos];
+//DIAG_LOG format["TUBE: %1 - POS AFTER GROUND CHECK: %2", _tube, _pos];
 
 // Create a temporary dummy object that can be used to store and send information between two threads.
 // We cannot save the variables on the tube because it might overwrite the variables of a mission that is still in progress,
@@ -117,32 +117,32 @@ _infoDummy setPosASL [-10000,-10000,-10000];
 _infoDummyNetID = _infoDummy call BIS_fnc_netId;
 
 
-//diag_log format["TUBE: %1 -- _tube: %1", _tube];
-//diag_log format["TUBE: %1 -- typeOf: %1", typeOf _tube];
-//diag_log format["TUBE: %1 -- _tubes: %1", _tubes];
-//diag_log format["TUBE: %1 -- _rounds: %1", _rounds];
-//diag_log format["TUBE: %1 -- _profile: %1", _profile];
-//diag_log format["TUBE: %1 -- _pos: %1", _pos];
-//diag_log format["TUBE: %1 -- _warheadType: %1", _warheadType];
-//diag_log format["TUBE: %1 -- _missionType: %1", _missionType];
-//diag_log format["TUBE: %1 -- _sheafSize: %1", _sheafSize];
-//diag_log format["TUBE: %1 -- _fuse: %1", _fuse];
-//diag_log format["TUBE: %1 -- _assetType: %1", _assetType];
-//diag_log format["TUBE: %1 -- _sheaf: %1", _sheaf];
-//diag_log format["TUBE: %1 -- _airburstHeight: %1", _airburstHeight];
-//diag_log format["TUBE: %1 -- _flightTime: %1", _flightTime];
-//diag_log format["TUBE: %1 -- _asset: %1", _asset];
-//diag_log format["TUBE: %1 -- _tubeType: %1", _tubeType];
-//diag_log format["TUBE: %1 -- _gunAngle: %1", _gunAngle];
-//diag_log format["TUBE: %1 -- _dtaSelectedTube: %1", _dtaSelectedTube];
-//diag_log format["TUBE: %1 -- _prePlotted: %1", _prePlotted];
-//diag_log format["TUBE: %1 -- _sender: %1", _sender];
-//diag_log format["TUBE: %1 -- _posDisplay: %1", _posDisplay];
-//diag_log format["TUBE: %1 -- _infoDummyNetID: %1", _infoDummyNetID];
-//diag_log format["TUBE: %1 -- _isAnnouncementUnit: %1", _isAnnouncementUnit];
-//diag_log format["TUBE: %1 -- _GPSZAdjust: %1", _GPSZAdjust];
-//diag_log format["TUBE: %1 -- _sheafLineDir: %1", _sheafLineDir];
-//diag_log format["TUBE: %1 -- _sheafLineDist: %1", _sheafLineDist];
+//DIAG_LOG format["TUBE: %1 -- _tube: %1", _tube];
+//DIAG_LOG format["TUBE: %1 -- typeOf: %1", typeOf _tube];
+//DIAG_LOG format["TUBE: %1 -- _tubes: %1", _tubes];
+//DIAG_LOG format["TUBE: %1 -- _rounds: %1", _rounds];
+//DIAG_LOG format["TUBE: %1 -- _profile: %1", _profile];
+//DIAG_LOG format["TUBE: %1 -- _pos: %1", _pos];
+//DIAG_LOG format["TUBE: %1 -- _warheadType: %1", _warheadType];
+//DIAG_LOG format["TUBE: %1 -- _missionType: %1", _missionType];
+//DIAG_LOG format["TUBE: %1 -- _sheafSize: %1", _sheafSize];
+//DIAG_LOG format["TUBE: %1 -- _fuse: %1", _fuse];
+//DIAG_LOG format["TUBE: %1 -- _assetType: %1", _assetType];
+//DIAG_LOG format["TUBE: %1 -- _sheaf: %1", _sheaf];
+//DIAG_LOG format["TUBE: %1 -- _airburstHeight: %1", _airburstHeight];
+//DIAG_LOG format["TUBE: %1 -- _flightTime: %1", _flightTime];
+//DIAG_LOG format["TUBE: %1 -- _asset: %1", _asset];
+//DIAG_LOG format["TUBE: %1 -- _tubeType: %1", _tubeType];
+//DIAG_LOG format["TUBE: %1 -- _gunAngle: %1", _gunAngle];
+//DIAG_LOG format["TUBE: %1 -- _dtaSelectedTube: %1", _dtaSelectedTube];
+//DIAG_LOG format["TUBE: %1 -- _prePlotted: %1", _prePlotted];
+//DIAG_LOG format["TUBE: %1 -- _sender: %1", _sender];
+//DIAG_LOG format["TUBE: %1 -- _posDisplay: %1", _posDisplay];
+//DIAG_LOG format["TUBE: %1 -- _infoDummyNetID: %1", _infoDummyNetID];
+//DIAG_LOG format["TUBE: %1 -- _isAnnouncementUnit: %1", _isAnnouncementUnit];
+//DIAG_LOG format["TUBE: %1 -- _GPSZAdjust: %1", _GPSZAdjust];
+//DIAG_LOG format["TUBE: %1 -- _sheafLineDir: %1", _sheafLineDir];
+//DIAG_LOG format["TUBE: %1 -- _sheafLineDist: %1", _sheafLineDist];
 
 
 // Airburst stuff.
@@ -171,7 +171,7 @@ if (_fuse == "AIRBURST" or {_fuse == "MIXED"}) then {
 	_infoDummy setVariable ["dta_doAirburst", false];	// Tell the guide script NOT to do an airburst.
 };
 
-//diag_log format["TUBE: %1 - POS AFTER AIRBURST CHECK: %2", _tube, _pos];
+//DIAG_LOG format["TUBE: %1 - POS AFTER AIRBURST CHECK: %2", _tube, _pos];
 
 _x = _pos select 0;
 _y = _pos select 1;
@@ -343,7 +343,7 @@ _tubeIndex = 0;
 // Abort if taking too long (asset dead or deleted).
 _waitTime = time + 30;
 
-//diag_log format["TUBE: %1 - POS BEFORE MIXED ALTERNATE: %2", _tube, _pos];
+//DIAG_LOG format["TUBE: %1 - POS BEFORE MIXED ALTERNATE: %2", _tube, _pos];
 
 while {(_tubeIndex < (count _tubesTemp)) and (_waitTime > time)} do {
 	_selectedTube = _tubesTemp select _tubeIndex;
@@ -358,7 +358,7 @@ while {(_tubeIndex < (count _tubesTemp)) and (_waitTime > time)} do {
 	_tubeIndex = _tubeIndex + 1;
 };
 
-//diag_log format["TUBE: %1 - POS AFTER MIXED ALTERNATE: %2", _tube, _pos];
+//DIAG_LOG format["TUBE: %1 - POS AFTER MIXED ALTERNATE: %2", _tube, _pos];
 
 _loaded = false;
 _magazineClass = "";
@@ -394,8 +394,8 @@ private _getChargesArray = {
 	private _chargesArrayLow = [];
 	private _chargesArrayHigh = [];
 	
-	//diag_log format["TUBE: %1 - CHARGES - _warheadType: %2", _tube, _warheadType];
-	//diag_log format["TUBE: %1 - CHARGES - _ammoInitSpeed: %2", _tube, _ammoInitSpeed];
+	//DIAG_LOG format["TUBE: %1 - CHARGES - _warheadType: %2", _tube, _warheadType];
+	//DIAG_LOG format["TUBE: %1 - CHARGES - _ammoInitSpeed: %2", _tube, _ammoInitSpeed];
 	
 	{
 		_charge = _x;
@@ -404,9 +404,9 @@ private _getChargesArray = {
 			
 			_vel = _ammoInitSpeed * getNumber(configfile >> "CfgWeapons" >> _weapon >> _charge >> "artilleryCharge");
 			_calc = (_vel^4-_g*(_g*_distance^2+2*_alt*_vel^2));
-			//diag_log format["TUBE: %1 - CHARGE: %2 - _calc: %3", _tube, _charge, _calc];
+			//DIAG_LOG format["TUBE: %1 - CHARGE: %2 - _calc: %3", _tube, _charge, _calc];
 			if (_calc < 0) exitWith {
-				//diag_log format ["TUBE: %1 - IMPOSSIBLE _calc - CHARGE: %2 -- VELOCITY: %3 -- _calc: %3", _tube, _charge, _vel, _calc];	
+				//DIAG_LOG format ["TUBE: %1 - IMPOSSIBLE _calc - CHARGE: %2 -- VELOCITY: %3 -- _calc: %3", _tube, _charge, _vel, _calc];	
 			};
 			
 			// Angle
@@ -420,7 +420,7 @@ private _getChargesArray = {
 			_chargesArrayLow pushback [_charge, _lA, _lETA];
 			_chargesArrayHigh pushback [_charge, _hA, _hETA];
 			
-			//diag_log format ["TUBE: %1 - CHARGE: %2 -- VELOCITY: %3 -- HIGH ANGLE: %4 -- HIGH ETA: %5 -- LOW ANGLE: %6 -- LOW ETA: %7", _tube, _charge, _vel, _hA, _hETA, _lA, _lETA];
+			//DIAG_LOG format ["TUBE: %1 - CHARGE: %2 -- VELOCITY: %3 -- HIGH ANGLE: %4 -- HIGH ETA: %5 -- LOW ANGLE: %6 -- LOW ETA: %7", _tube, _charge, _vel, _hA, _hETA, _lA, _lETA];
 		};
 		
 		sleep 0.1;
@@ -461,9 +461,9 @@ _findBestCharge = {
 		_angleText = "LOW";
 	};
 	
-	//diag_log format ["TUBE: %1 - FIND BEST CHARGE - _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
-	//diag_log format ["TUBE: %1 - FIND BEST CHARGE - _chargesArrayLow: %2", _tube, _chargesArrayLow];
-	//diag_log format ["TUBE: %1 - FIND BEST CHARGE - _chargesArray: %2", _tube, _chargesArray];
+	//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
+	//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _chargesArrayLow: %2", _tube, _chargesArrayLow];
+	//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _chargesArray: %2", _tube, _chargesArray];
 	
 	_checkAbort = {
 		switch true do {
@@ -483,7 +483,7 @@ _findBestCharge = {
 	_findCharge = {
 		
 		{
-			//diag_log format["TUBE: %1 - FIND CHARGE - FOREACH START", _tube];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - FOREACH START", _tube];
 			
 			// Calculate triangle opposite side. Add that to the height between the triangle and the sea level. 
 			private _angleA = _x select 1;															// Angle A.
@@ -496,32 +496,46 @@ _findBestCharge = {
 			private _heightArtyToSeaLvl = _posA select 2;											// Height between triangle and sea level.
 			private _z = _distanceOp + _heightArtyToSeaLvl;											// Add the two height numbers together to get the altitude above sea level.
 			
-			//diag_log format["TUBE: %1 - FIND CHARGE - CHARGE: %2", _tube, _x];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _angleA: %2", _tube, _angleA];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _posA: %2", _tube, _posA];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _posC: %2", _tube, _posC];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _distanceAdj: %2", _tube, _distanceAdj];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _angleB: %2", _tube, _angleB];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _distanceOp: %2", _tube, _distanceOp];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _heightArtyToSeaLvl: %2", _tube, _heightArtyToSeaLvl];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _x1: %2", _tube, _x1];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _y: %2", _tube, _y];
-			//diag_log format["TUBE: %1 - FIND CHARGE - _z: %2", _tube, _z];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - CHARGE: %2", _tube, _x];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _angleA: %2", _tube, _angleA];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _posA: %2", _tube, _posA];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _posC: %2", _tube, _posC];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _distanceAdj: %2", _tube, _distanceAdj];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _angleB: %2", _tube, _angleB];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _distanceOp: %2", _tube, _distanceOp];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _heightArtyToSeaLvl: %2", _tube, _heightArtyToSeaLvl];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _x1: %2", _tube, _x1];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _y: %2", _tube, _y];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _z: %2", _tube, _z];
 			
 			private _pos = [_x1,_y,_z];
 			
 			// Aim tube
 			_gunner doWatch (ASLtoAGL _pos);
 			
-			// Wait until the tube stops moving.
+			// Wait until the tube stops moving/aiming by comparing its aiming vector every 0.25 second.
 			private _lastWVD = _tube weaponDirection currentWeapon _tube;
 			private _wvd = [];
-			sleep 0.5;
+			private _removedigits = {
+				// This will remove everything 3 places after the decimal because too much accuracy will get the while loop stuck on a ded server. This is because the AI is constantly aiming lower, but you only notice it in the vector numbers.
+				private _arrayNew = [];
+				{
+					_x = (floor(_x * 1000)) / 1000;
+					_arrayNew append [_x];
+				} forEach (_this select 0);
+				_arrayNew;
+			};
+			sleep 0.25;
 			while {!_abort} do {
 				_wvd = _tube weaponDirection currentWeapon _tube;
-				if (_lastWVD isEqualTo _wvd) exitWith {};
+				_wvd = [_wvd] call _removedigits;
+				_lastWVD = [_lastWVD] call _removedigits;
+				if (_lastWVD isEqualTo _wvd) exitWith {
+					//DIAG_LOG format ["TUBE: %1 | FIND CHARGE MOVING LOOP EXIT | Time: %2 | If: %3 | _wvd: %4 | _lastWVD: %5", _tube, time, (_lastWVD isEqualTo _wvd), _wvd, _lastWVD];
+				};
+				//DIAG_LOG format ["TUBE: %1 | FIND CHARGE MOVING LOOP | Time: %2 | If: %3 | _wvd: %4 | _lastWVD: %5", _tube, time, (_lastWVD isEqualTo _wvd), _wvd, _lastWVD];
 				_lastWVD = _wvd;
-				sleep 0.5;
+				sleep 0.25;
 				call _checkAbort;
 			};
 			
@@ -552,8 +566,8 @@ _findBestCharge = {
 			//	_maxDifference = 4;
 			//};
 			
-			//diag_log format ["TUBE: %1 - FIND BEST CHARGE - FIND CHARGE - CHARGE: %2 - _angleA: %3 - _verDegrees: %4 - abs(_angleA-_verDegrees): %5", _tube, _x select 0, _angleA, _verDegrees, abs(_angleA - _verDegrees)];
-			//diag_log format ["TUBE: %1 - FIND BEST CHARGE - FIND CHARGE - WORLD: %2 - _maxDifference: %3", _tube, worldName, _maxDifference];
+			//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - FIND CHARGE - CHARGE: %2 - _angleA: %3 - _verDegrees: %4 - abs(_angleA-_verDegrees): %5", _tube, _x select 0, _angleA, _verDegrees, abs(_angleA - _verDegrees)];
+			//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - FIND CHARGE - WORLD: %2 - _maxDifference: %3", _tube, worldName, _maxDifference];
 			
 			// Check if the tube is aiming with the correct angle.
 			// _angleA is the requested angle that the tube should aim with.
@@ -565,7 +579,7 @@ _findBestCharge = {
 				_chargeFound = true;
 				_chosenCharge pushback _angleText;
 				
-				//diag_log format ["TUBE: %1 - FIND BEST CHARGE - FIND CHARGE - _chosenCharge: %2", _tube, _chosenCharge];
+				//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - FIND CHARGE - _chosenCharge: %2", _tube, _chosenCharge];
 				
 				// Check if there's an obstruction.
 				// Draw a line from the arty turret to a point 1000 meters down the barrel.
@@ -582,24 +596,24 @@ _findBestCharge = {
 				private _obstructed = false;
 				private _lineIntersectsSurfaces = lineIntersectsSurfaces [_eyePosTube, _pos, _tube, objNull, true, 1];
 				
-				//diag_log format ["TUBE: %1 - FIND BEST CHARGE - _pos: %2", _tube, _pos];
-				//diag_log format ["TUBE: %1 - FIND BEST CHARGE - _lineIntersectsSurfaces: %2", _tube, _lineIntersectsSurfaces];
+				//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _pos: %2", _tube, _pos];
+				//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _lineIntersectsSurfaces: %2", _tube, _lineIntersectsSurfaces];
 				
 				// Obstructed.
 				if (count _lineIntersectsSurfaces > 0) then {
 					_obstructed = true;
 					_chargeFound = false;
-					//diag_log format ["TUBE: %1 - FIND BEST CHARGE - OBSTRUCTED - _chosenCharge: %2", _tube, _chosenCharge];
+					//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - OBSTRUCTED - _chosenCharge: %2", _tube, _chosenCharge];
 				};
 				
 				_chosenCharge pushback _obstructed;
 			};
 			
 			if (_chargeFound) exitWith {
-				//diag_log format["TUBE: %1 - FIND CHARGE - CHARGE FOUND", _tube];
+				//DIAG_LOG format["TUBE: %1 - FIND CHARGE - CHARGE FOUND", _tube];
 			};
 			
-			//diag_log format["TUBE: %1 - FIND CHARGE - FOREACH END", _tube];
+			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - FOREACH END", _tube];
 			
 		} forEach _chargesArray;
 	};
@@ -618,20 +632,20 @@ _findBestCharge = {
 		
 		call _findCharge;
 		
-		//diag_log format ["TUBE: %1 - FIND BEST CHARGE - TRYING OTHER ANGLE - _chargesArray: %2", _tube, _chargesArray];
+		//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - TRYING OTHER ANGLE - _chargesArray: %2", _tube, _chargesArray];
 	};
 	
 	
 	if (_abort) then {
 		_chosenCharge = ["",0,0,"",false,true];
-		//diag_log format ["TUBE: %1 - FIND BEST CHARGE - ABORT - _chosenCharge: %2", _tube, _chosenCharge];
+		//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - ABORT - _chosenCharge: %2", _tube, _chosenCharge];
 	} else {
 		if (_chosenCharge select 0 == "") then {
 			_chosenCharge = ["",0,0,"",false,false];
-			//diag_log format ["TUBE: %1 - FIND BEST CHARGE - NOTHING CHOSEN - _chosenCharge: %2", _tube, _chosenCharge];
+			//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - NOTHING CHOSEN - _chosenCharge: %2", _tube, _chosenCharge];
 		} else {
 			_chosenCharge pushback _abort;
-			//diag_log format ["TUBE: %1 - FIND BEST CHARGE - END - _chosenCharge: %2", _tube, _chosenCharge];
+			//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - END - _chosenCharge: %2", _tube, _chosenCharge];
 		};
 	};
 	
@@ -684,10 +698,10 @@ while {_rounds > 0} do {
 		
 		_tube setWeaponReloadingTime [_gunner,(currentMuzzle _gunner), 0];
 		
-		//diag_log format["TUBE: %1 - FIRING LOOP - _fireCenterFirst: %2", _tube, _fireCenterFirst];
-		//diag_log format["TUBE: %1 - FIRING LOOP - _scatter: %2", _tube, _scatter];
-		//diag_log format["TUBE: %1 - FIRING LOOP - _scatter2: %2", _tube, _scatter2];
-		//diag_log format["TUBE: %1 - FIRING LOOP - POS BEFORE SHEAF: %2", _tube, _pos];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - _fireCenterFirst: %2", _tube, _fireCenterFirst];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - _scatter: %2", _tube, _scatter];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - _scatter2: %2", _tube, _scatter2];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - POS BEFORE SHEAF: %2", _tube, _pos];
 		
 		// Get appropriate sheaf.
 		if (_scatter > 0) then {
@@ -702,23 +716,23 @@ while {_rounds > 0} do {
 					default {_chosenTargetPos = _pos};
 				};
 				sleep 0.1;
-				//diag_log format["TUBE: %1 - FIRING LOOP - SHEAF NORMAL - _chosenTargetPos: %2 - _sheaf: %3", _tube, _chosenTargetPos, _sheaf];
+				//DIAG_LOG format["TUBE: %1 - FIRING LOOP - SHEAF NORMAL - _chosenTargetPos: %2 - _sheaf: %3", _tube, _chosenTargetPos, _sheaf];
 				
 			} else {
 				
 				// If marked as fireCenterFirst, make all next shots use the sheaf.
 				_fireCenterFirst = false;
 				_chosenTargetPos = _pos;
-				//diag_log format["TUBE: %1 - FIRING LOOP - SHEAF FIRECENTERFIRST - _chosenTargetPos: %2", _tube, _chosenTargetPos];
+				//DIAG_LOG format["TUBE: %1 - FIRING LOOP - SHEAF FIRECENTERFIRST - _chosenTargetPos: %2", _tube, _chosenTargetPos];
 			};
 			
 		} else {
 			
 			_chosenTargetPos = _pos;
-			//diag_log format["TUBE: %1 - FIRING LOOP - NO SHEAF - _chosenTargetPos: %2", _tube, _chosenTargetPos];
+			//DIAG_LOG format["TUBE: %1 - FIRING LOOP - NO SHEAF - _chosenTargetPos: %2", _tube, _chosenTargetPos];
 		};
 		
-		//diag_log format["TUBE: %1 - FIRING LOOP - CHOSENTARGETPOS AFTER SHEAF: %2", _tube, _chosenTargetPos];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - CHOSENTARGETPOS AFTER SHEAF: %2", _tube, _chosenTargetPos];
 		
 		_posTube = getPosASL _tube;
 		
@@ -765,7 +779,7 @@ while {_rounds > 0} do {
 			if (_assetType == "Mortar") then {_scatterSpread = _scatterSpread * 1.4};
 			if (_assetType == "Rocket" or {_assetType == "BM21"}) then {_scatterSpread = _scatterSpread * 1.6};
 			
-			//diag_log format["TUBE: %1 - FIRING LOOP - SPREAD AFTER IFS: %2", _tube, _scatterSpread];
+			//DIAG_LOG format["TUBE: %1 - FIRING LOOP - SPREAD AFTER IFS: %2", _tube, _scatterSpread];
 			
 			_scatterSpread = (_scatterSpread * 2) min 1000;
 			
@@ -773,7 +787,7 @@ while {_rounds > 0} do {
 			
 			_scatterSpread = _scatterSpread * ((random [0, 1, 2]) max 0.01);
 			
-			//diag_log format["TUBE: %1 - FIRING LOOP - SPREAD AFTER CALC: %2", _tube, _scatterSpread];
+			//DIAG_LOG format["TUBE: %1 - FIRING LOOP - SPREAD AFTER CALC: %2", _tube, _scatterSpread];
 			
 			_chosenTargetPos = [objNull,objNull,_chosenTargetPos,_scatterSpread] call dta_fnc_CircularSheaf;
 			_tube setVariable ["DTA_chosenTargetPos", _chosenTargetPos];
@@ -783,7 +797,7 @@ while {_rounds > 0} do {
 			_unguidedCEP = 0.01;
 		};
 		
-		//diag_log format["TUBE: %1 - FIRING LOOP - CHOSENTARGETPOS AFTER RANDOM SPREAD: %2", _tube, _chosenTargetPos];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - CHOSENTARGETPOS AFTER RANDOM SPREAD: %2", _tube, _chosenTargetPos];
 		
 		
 		if (dtaDebug) then {[_chosenTargetPos, 60, "ColorGreen"] spawn dta_fnc_PlaceMarker};
@@ -800,12 +814,12 @@ while {_rounds > 0} do {
 		_dy = _y - _vy;
 		_distance = sqrt((_dx*_dx)+(_dy*_dy));
 		
-		//diag_log format["TUBE: %1 - FIRING LOOP -- _longRangeGuided: %2", _tube, _longRangeGuided];
-		//diag_log format["TUBE: %1 - FIRING LOOP -- _distance: %2", _tube, _distance];
-		//diag_log format["TUBE: %1 - FIRING LOOP -- VECTORDISTANCE: %2", _tube, _chosenTargetPos vectorDistance (getPosASL _tube)];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- _longRangeGuided: %2", _tube, _longRangeGuided];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- _distance: %2", _tube, _distance];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- VECTORDISTANCE: %2", _tube, _chosenTargetPos vectorDistance (getPosASL _tube)];
 		
-		//diag_log format["TUBE: %1 - CHARGES START", _tube];
-		//diag_log format["TUBE: %1 - CHARGES -- MODES: %2", _tube, (getArray (configfile >> "CfgWeapons" >> _weapon >> "modes"))];
+		//DIAG_LOG format["TUBE: %1 - CHARGES START", _tube];
+		//DIAG_LOG format["TUBE: %1 - CHARGES -- MODES: %2", _tube, (getArray (configfile >> "CfgWeapons" >> _weapon >> "modes"))];
 		
 		
 		if (!_isMK41) then {
@@ -814,8 +828,8 @@ while {_rounds > 0} do {
 				_chargesArrayLow = _array select 0;
 				_chargesArrayHigh = _array select 1;
 				
-				//diag_log format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
-				//diag_log format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
+				//DIAG_LOG format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
+				//DIAG_LOG format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
 				
 			} else {
 				// If it's long range guided, then fake the distance to get the projectile into the air regardless.
@@ -828,8 +842,8 @@ while {_rounds > 0} do {
 				
 				_distance = _realDistance;
 				
-				//diag_log format["TUBE: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
-				//diag_log format["TUBE: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
+				//DIAG_LOG format["TUBE: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
+				//DIAG_LOG format["TUBE: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
 			};
 			
 			// If no charge was chosen, we will assume it's an impossible shot, so exit out of this loop.
@@ -837,7 +851,7 @@ while {_rounds > 0} do {
 				_impossibleShot = true;
 				_tube setVariable ["DTA_impossibleShot", true];
 				[_tube,"Unable to get a firing solution - impossible shot.","beep"] call dta_fnc_SendComms;
-				//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 1 - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
+				//DIAG_LOG format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 1 - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
 			};
 			
 			// Vanilla targeting.
@@ -846,7 +860,7 @@ while {_rounds > 0} do {
 				_impossibleShot = true;
 				_tube setVariable ["DTA_impossibleShot", true];
 				[_tube,"Unable to get a firing solution - out of range.","beep"] call dta_fnc_SendComms;
-				//diag_log format["TUBE: %1 - ABORT - OUT OF RANGE - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
+				//DIAG_LOG format["TUBE: %1 - ABORT - OUT OF RANGE - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
 			};
 		};
 	};
@@ -862,7 +876,7 @@ while {_rounds > 0} do {
 	// Comms/prep time.
 	if (_firstRound) then {
 		
-		// Check if the target pos is nearby one of the TRPs that belong to his group.
+		// Check if the target pos is nearby one of the TRPs that belong to this group.
 		_closeToTRP = false;
 		_arrayTRP = _asset getVariable ["DTA_arrayTRP", nil];
 		if (!isNil "_arrayTRP") then {
@@ -871,12 +885,12 @@ while {_rounds > 0} do {
 			} forEach _arrayTRP;
 		};
 		
-		//diag_log format["TUBE: %1 - FIRING LOOP -- CLOSETOTRP: %2", _tube, _closeToTRP];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- CLOSETOTRP: %2", _tube, _closeToTRP];
 		
 		// Has fired previously on this position or is preplotted or is close to a TRP.
 		if (((_lastFiringPos vectorDistance _chosenTargetPos < 300) and (_lastGunAngle == _gunAngle)) or _prePlotted or _closeToTRP) then {
 			
-			//diag_log format["TUBE: %1 - FIRING LOOP -- HAS FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
+			//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
 			
 			switch true do {
 				
@@ -913,7 +927,7 @@ while {_rounds > 0} do {
 			
 		} else {
 			
-			//diag_log format["TUBE: %1 - FIRING LOOP -- HAS NOT FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
+			//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS NOT FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
 			
 			// Firing on new position.
 			switch true do {
@@ -1040,10 +1054,10 @@ while {_rounds > 0} do {
 				
 				if (!_obstructed) then {
 					[_tube,"Unable to get a firing solution - cannot get a valid angle.","beep"] call dta_fnc_SendComms;
-					//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 2 - Check1: %2", _tube, !_obstructed];
+					//DIAG_LOG format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 2 - Check1: %2", _tube, !_obstructed];
 				} else {
 					[_tube,"Unable to get a firing solution - shot obstructed.","beep"] call dta_fnc_SendComms;
-					//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 3 - Check1: %2", _tube, !_obstructed];
+					//DIAG_LOG format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 3 - Check1: %2", _tube, !_obstructed];
 				};
 			};
 			
@@ -1059,7 +1073,7 @@ while {_rounds > 0} do {
 					[_tube, _text,"beep"] call dta_fnc_SendComms;
 					_tellAboutAngle = false;	// Only tell the player once, to avoid spamming the chat.
 				};
-				//diag_log format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 4 - Check1: %2 - Check2: %3", _tube, _bestCharge select 3, _gunAngle];
+				//DIAG_LOG format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 4 - Check1: %2 - Check2: %3", _tube, _bestCharge select 3, _gunAngle];
 			};
 		};
 		
@@ -1087,14 +1101,14 @@ while {_rounds > 0} do {
 		_angle = _bestCharge select 1;
 		_ETA = _bestCharge select 2;
 		
-		//diag_log format["TUBE: %1 - CHOSEN CHARGE -- _angle: %2", _tube, _angle];
-		//diag_log format["TUBE: %1 - CHOSEN CHARGE -- _ETA: %2", _tube, _ETA];
+		//DIAG_LOG format["TUBE: %1 - CHOSEN CHARGE -- _angle: %2", _tube, _angle];
+		//DIAG_LOG format["TUBE: %1 - CHOSEN CHARGE -- _ETA: %2", _tube, _ETA];
 		
 		// When using the guided script, the ETA times need to change a bit.
 		switch true do {
 			case (_longRangeGuided): {
 				_ETA = (_ETA/2) + ((_distance-(_regularMaxRange/2))/(_vel*0.4));
-				//diag_log format["TUBE: %1 - CHANGING ETA LONG RANGE GUIDED -- _ETA: %2", _tube, _ETA];
+				//DIAG_LOG format["TUBE: %1 - CHANGING ETA LONG RANGE GUIDED -- _ETA: %2", _tube, _ETA];
 			};
 			case (_isMK41): {
 				_ETA = (_distance / _ammoMaxSpeed) max 1;
@@ -1102,7 +1116,7 @@ while {_rounds > 0} do {
 			default {
 				if (_action == 1 or {_action == 2} or {_action == 3}) then {
 					_ETA = _ETA * 1.05;
-					//diag_log format["TUBE: %1 - CHANGING ETA FOR ACTION 1,2,3 -- _ETA: %2", _tube, _ETA];
+					//DIAG_LOG format["TUBE: %1 - CHANGING ETA FOR ACTION 1,2,3 -- _ETA: %2", _tube, _ETA];
 				};
 			};
 		};
@@ -1110,7 +1124,7 @@ while {_rounds > 0} do {
 		_ETA = round _ETA;
 		_tube setVariable ["DTA_ETA", _ETA];
 		
-		//diag_log format["TUBE: %1 - DTA_ETA: %2", _tube, _tube getVariable ["DTA_ETA", 9999]];
+		//DIAG_LOG format["TUBE: %1 - DTA_ETA: %2", _tube, _tube getVariable ["DTA_ETA", 9999]];
 	};
 	
 	
@@ -1177,7 +1191,7 @@ while {_rounds > 0} do {
 	
 	if (_asset getVariable ["DTA_amountAborted", 0] >= count _tubes and _isAnnouncementUnit) exitWith {_allAborted = true};
 	
-	//diag_log format["TUBE: %1 - FIRING LOOP - POS BEFORE AIRBURST IF: %2", _tube, _pos];
+	//DIAG_LOG format["TUBE: %1 - FIRING LOOP - POS BEFORE AIRBURST IF: %2", _tube, _pos];
 	
 	if (!_outOfAmmo and !_impossibleShot and !_abort) then {
 		
@@ -1213,7 +1227,7 @@ while {_rounds > 0} do {
 			sleep 0.1;	// Must wait a bit after adding/removing the eventhandler to make sure it works properly.
 		};
 		
-		//diag_log format["TUBE: %1 - FIRING LOOP - POS AFTER AIRBURST IF: %2", _tube, _pos];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - POS AFTER AIRBURST IF: %2", _tube, _pos];
 		
 		// If the right magazine is loaded, then go on and fire.
 		if ((currentMagazine _tube) == _warheadType) then {
@@ -1227,7 +1241,7 @@ while {_rounds > 0} do {
 					private _EH = _tube addEventHandler ["fired", {
 						private _tube = _this select 0;
 						
-						//diag_log format["TUBE: %1 - UPDATE TARGET POS - EH FIRED - TUBE: %2", _tube, _tube];
+						//DIAG_LOG format["TUBE: %1 - UPDATE TARGET POS - EH FIRED - TUBE: %2", _tube, _tube];
 						
 						[_tube, _this select 6] spawn {
 							private _tube = _this select 0;
@@ -1241,7 +1255,7 @@ while {_rounds > 0} do {
 							private _spotter = _group getVariable ["DTA_controlledBy", nil];
 							
 							if (isNil "_spotter") exitWith {
-								//diag_log format["TUBE: %1 - UPDATE TARGET POS - ABORT1 - CHECK1: %2", _tube, _spotter];
+								//DIAG_LOG format["TUBE: %1 - UPDATE TARGET POS - ABORT1 - CHECK1: %2", _tube, _spotter];
 							};
 							
 							while {alive _proj} do {
@@ -1252,7 +1266,7 @@ while {_rounds > 0} do {
 							
 							private _spotter2 = _group getVariable ["DTA_controlledBy", nil];
 							if (isNil "_spotter" or {isNil "_spotter2" or {_spotter != _spotter2}}) exitWith {
-								//diag_log format["TUBE: %1 - UPDATE TARGET POS - ABORT2 - CHECK1: %2 - CHECK2: %3", _tube, _spotter, _spotter2];
+								//DIAG_LOG format["TUBE: %1 - UPDATE TARGET POS - ABORT2 - CHECK1: %2 - CHECK2: %3", _tube, _spotter, _spotter2];
 							};
 							
 							if (!_abort and {_nr == (_group getVariable ["DTA_missionNr", -1])} and {getPosASL _tube vectorDistance _chosenTargetPos < 1500}) then {
@@ -1263,7 +1277,7 @@ while {_rounds > 0} do {
 								_owner publicVariableClient "dtaYdisplay";
 							};
 							
-							//diag_log format["TUBE: %1 - UPDATE TARGET POS - END - POS: %2 - SPOTTER: %3", _tube, _pos, _spotter2];
+							//DIAG_LOG format["TUBE: %1 - UPDATE TARGET POS - END - POS: %2 - SPOTTER: %3", _tube, _pos, _spotter2];
 						};
 						
 						_tube removeEventHandler ["fired", (_tube getVariable ["DTA_EH_Impact", -73341])];
@@ -1324,10 +1338,10 @@ while {_rounds > 0} do {
 			
 			// If the right magazine is not loaded, then assume the tube is out of ammo, and mark it as such.
 			_tube setVariable ["DTA_outOfAmmo", true];
-			//diag_log format["TUBE: %1 - ABORT - WRONG MAG LOADED - CURMAG: %2 - _warheadType: %3", _tube, currentMagazine _tube, _warheadType];
+			//DIAG_LOG format["TUBE: %1 - ABORT - WRONG MAG LOADED - CURMAG: %2 - _warheadType: %3", _tube, currentMagazine _tube, _warheadType];
 			
 			if (!_outOfAmmo) then {
-				//diag_log format["TUBE: %1 - ABORT - OUT OF AMMO - Check1: %2", _tube, !_outOfAmmo];
+				//DIAG_LOG format["TUBE: %1 - ABORT - OUT OF AMMO - Check1: %2", _tube, !_outOfAmmo];
 				_outOfAmmo = true;
 				[_tube,"Out of ammo.","beep"] call dta_fnc_SendComms;
 			};
@@ -1338,8 +1352,8 @@ while {_rounds > 0} do {
 	// Only run the next part if the tube can fire.
 	if (_outOfAmmo and !_isAnnouncementUnit) exitWith {};
 	
-	//diag_log format["TUBE: %1 - FIRING LOOP END -- _firstRound: %2", _tube, _firstRound];
-	//diag_log format["TUBE: %1 - FIRING LOOP END -- _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
+	//DIAG_LOG format["TUBE: %1 - FIRING LOOP END -- _firstRound: %2", _tube, _firstRound];
+	//DIAG_LOG format["TUBE: %1 - FIRING LOOP END -- _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
 	
 	// Show first round message.
 	if (_firstRound and _isAnnouncementUnit) then {
@@ -1365,15 +1379,15 @@ while {_rounds > 0} do {
 	_rounds = _rounds - 1;
 };
 
-//diag_log format["TUBE: %1 - ENDING -- _endMission: %2", _tube, _endMission];
-//diag_log format["TUBE: %1 - ENDING -- _abort: %2", _tube, _abort];
-//diag_log format["TUBE: %1 - ENDING -- _outOfAmmo: %2", _tube, _outOfAmmo];
-//diag_log format["TUBE: %1 - ENDING -- _impossibleShot: %2", _tube, _impossibleShot];
-//diag_log format["TUBE: %1 - ENDING -- _allOutOfAmmo: %2", _tube, _allOutOfAmmo];
-//diag_log format["TUBE: %1 - ENDING -- _allImpossibleShot: %2", _tube, _allImpossibleShot];
-//diag_log format["TUBE: %1 - ENDING -- _allAborted: %2", _tube, _allAborted];
-//diag_log format["TUBE: %1 - ENDING -- _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
-//diag_log format["TUBE: %1 - ENDING -- _asset: %2", _tube, _asset];
+//DIAG_LOG format["TUBE: %1 - ENDING -- _endMission: %2", _tube, _endMission];
+//DIAG_LOG format["TUBE: %1 - ENDING -- _abort: %2", _tube, _abort];
+//DIAG_LOG format["TUBE: %1 - ENDING -- _outOfAmmo: %2", _tube, _outOfAmmo];
+//DIAG_LOG format["TUBE: %1 - ENDING -- _impossibleShot: %2", _tube, _impossibleShot];
+//DIAG_LOG format["TUBE: %1 - ENDING -- _allOutOfAmmo: %2", _tube, _allOutOfAmmo];
+//DIAG_LOG format["TUBE: %1 - ENDING -- _allImpossibleShot: %2", _tube, _allImpossibleShot];
+//DIAG_LOG format["TUBE: %1 - ENDING -- _allAborted: %2", _tube, _allAborted];
+//DIAG_LOG format["TUBE: %1 - ENDING -- _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
+//DIAG_LOG format["TUBE: %1 - ENDING -- _asset: %2", _tube, _asset];
 
 
 // Mark tube to indicate it is ending its mission.
@@ -1432,7 +1446,7 @@ if (_abort and !_isAnnouncementUnit) exitWith {
 	};
 	
 	[_asset,_txt,"beep"] call dta_fnc_SendComms;
-	//diag_log format["TUBE END - TUBES INOPERABLE: %2", _tube, _amountAborted];
+	//DIAG_LOG format["TUBE END - TUBES INOPERABLE: %2", _tube, _amountAborted];
 };
 
 
@@ -1465,13 +1479,13 @@ if (_isAnnouncementUnit) then {
 	
 	sleep 1;
 	
-	//diag_log format["TUBE: %1 - FINAL ANNOUNCEMENT - dtaAssetsBusy: %2", _tube, dtaAssetsBusy];
-	//diag_log format["TUBE: %1 - FINAL ANNOUNCEMENT - _asset: %2", _tube, _asset];
+	//DIAG_LOG format["TUBE: %1 - FINAL ANNOUNCEMENT - dtaAssetsBusy: %2", _tube, dtaAssetsBusy];
+	//DIAG_LOG format["TUBE: %1 - FINAL ANNOUNCEMENT - _asset: %2", _tube, _asset];
 	
 	dtaAssetsBusy = dtaAssetsBusy - [_asset];
 	publicVariable "dtaAssetsBusy";
 	
-	//diag_log format["TUBE: %1 - FINAL ANNOUNCEMENT - dtaAssetsBusy: %2", _tube, dtaAssetsBusy];
+	//DIAG_LOG format["TUBE: %1 - FINAL ANNOUNCEMENT - dtaAssetsBusy: %2", _tube, dtaAssetsBusy];
 	
 	if (!_endMission and !_checkFire) then {
 		
@@ -1483,20 +1497,20 @@ if (_isAnnouncementUnit) then {
 				if (!_allOutOfAmmo) then {
 					// Ended mission with at least 1 tube still having ammo.
 					[_asset,"Rounds complete.","RoundsComplete"] call dta_fnc_SendComms;
-					//diag_log format["TUBE END - NORMAL ENDING: %2", _tube, !_allOutOfAmmo];
+					//DIAG_LOG format["TUBE END - NORMAL ENDING: %2", _tube, !_allOutOfAmmo];
 				} else {
 					// Ended mission because everyone ran out of the requested ammo.
 					[_asset,"Out of ammo on all units - Rounds complete.","RoundsComplete"] call dta_fnc_SendComms;
-					//diag_log format["TUBE END - RAN OUT OF AMMO ENDING: %2", _tube, !_allOutOfAmmo];
+					//DIAG_LOG format["TUBE END - RAN OUT OF AMMO ENDING: %2", _tube, !_allOutOfAmmo];
 				};
 			};
 			
 		} else {
 			// Everyone had an impossible shot.
 			[_asset,"Holding fire, all units are reporting an impossible firing solution.","Negative"] call dta_fnc_SendComms;
-			//diag_log format["TUBE END - IMPOSSIBLE SHOT ENDING: %2", _tube, !_allImpossibleShot];
+			//DIAG_LOG format["TUBE END - IMPOSSIBLE SHOT ENDING: %2", _tube, !_allImpossibleShot];
 		};
 	};
 };
 
-//diag_log format["TUBE: %1 - END", _tube];
+//DIAG_LOG format["TUBE: %1 - END", _tube];

@@ -47,7 +47,7 @@ _emptyTubes = [];
 _highestAmount = -999;
 _tubesTemp = _tubes;
 
-//diag_log format["PFM SERVER -- TUBES BEFORE LOOP: %1", _tubes];
+//DIAG_LOG format["PFM SERVER -- TUBES BEFORE LOOP: %1", _tubes];
 
 {
 	_tube = _x;
@@ -56,7 +56,7 @@ _tubesTemp = _tubes;
 	// Check if it has a gunner.
 	if (isNull (gunner _tube)) then {
 		_noGunner = true;
-		//diag_log format["PFM SERVER LOOP -- NO GUNNER - CHECK1: %1 - CHECK2: %2", gunner _tube, isNull (gunner _tube)];
+		//DIAG_LOG format["PFM SERVER LOOP -- NO GUNNER - CHECK1: %1 - CHECK2: %2", gunner _tube, isNull (gunner _tube)];
 	};
 	
 	// If tube doesn't have the requested ammo or has no gunner, then we won't fire it.
@@ -66,7 +66,7 @@ _tubesTemp = _tubes;
 		// Remove it from the list of tubes that will participate in this mission.
 		_tubes = _tubes - [_tube];
 		_emptyTubes = _emptyTubes + [_tube];
-		//diag_log format["PFM SERVER LOOP -- NO AMMO OR NO GUNNER - CHECK1: %1 - CHECK2: %2", _tube getVariable ["DTA_outOfAmmo", false], _noGunner];
+		//DIAG_LOG format["PFM SERVER LOOP -- NO AMMO OR NO GUNNER - CHECK1: %1 - CHECK2: %2", _tube getVariable ["DTA_outOfAmmo", false], _noGunner];
 		
 	} else {
 		
@@ -93,7 +93,7 @@ _tubesTemp = _tubes;
 	
 } forEach _tubesTemp;
 
-//diag_log format["PFM SERVER -- TUBES AFTER LOOP: %1", _tubes];
+//DIAG_LOG format["PFM SERVER -- TUBES AFTER LOOP: %1", _tubes];
 
 _countLoaded = count _tubes;
 
@@ -105,7 +105,7 @@ if (_countLoaded == 0) exitWith {
 	publicVariable "dtaAssetsBusy";
 	[_asset,"Unable to comply - requested ammo not available.","beep"] call dta_fnc_SendComms;
 	
-	//diag_log format["PFM SERVER ABORT - NO VIABLE TUBES FOUND -- _countLoaded: %1", _countLoaded];
+	//DIAG_LOG format["PFM SERVER ABORT - NO VIABLE TUBES FOUND -- _countLoaded: %1", _countLoaded];
 };
 
 
@@ -139,9 +139,9 @@ if (_countEmpty > 0) then {
 	sleep 4;
 };
 
-//diag_log format["PFM SERVER -- _countLoaded: %1", _countLoaded];
-//diag_log format["PFM SERVER -- _countEmpty: %1", _countEmpty];
-//diag_log format["PFM SERVER -- _announcementUnit: %1", _announcementUnit];
+//DIAG_LOG format["PFM SERVER -- _countLoaded: %1", _countLoaded];
+//DIAG_LOG format["PFM SERVER -- _countEmpty: %1", _countEmpty];
+//DIAG_LOG format["PFM SERVER -- _announcementUnit: %1", _announcementUnit];
 
 // Give orders to tubes that will participate in this mission.
 {
@@ -157,7 +157,7 @@ if (_countEmpty > 0) then {
 		_isAnnouncementUnit = false;
 	};
 	
-	//diag_log format["PFM SERVER -- UNIT: %1 - _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
+	//DIAG_LOG format["PFM SERVER -- UNIT: %1 - _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
 	
 	[_tubes,_rounds,_profile,_pos,_warheadType,_missionType,_sheafSize,_fuse,_assetType,_sheaf,_airburstHeight,_flightTime,_asset,_tubeType,_angle,_selectedTube,_prePlotted,_sender,_posDisplay,_tube,_isAnnouncementUnit,_GPSZAdjust,_posGPS,_sheafLineDir,_sheafLineDist] execVM "DrongosArtillery\Control\Tube.sqf";
 	

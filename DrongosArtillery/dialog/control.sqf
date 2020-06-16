@@ -21,7 +21,7 @@ private["_prePlotted","_iccCode","_assetName","_dialogName","_fireMission","_las
 
 disableSerialization;
 
-//diag_log "CONTROL START";
+//DIAG_LOG "CONTROL START";
 
 
 // Abort if there's something wrong with the leader's vehicle/gunner.
@@ -44,7 +44,7 @@ if (_abort) exitWith {hint "Asset is not responding."; [false] execVM "DrongosAr
 dtaLastDialog = "Control";
 _prePlotted = _this select 0;
 
-//diag_log format["CONTROL - _prePlotted: %1", _prePlotted];
+//DIAG_LOG format["CONTROL - _prePlotted: %1", _prePlotted];
 
 if (_prePlotted and {count dtaSelectedPrePlotted < 1}) exitWith {hint format["No mission selected.\n\nEnding mission."];[false] execVM "DrongosArtillery\Dialog\EndMission.sqf"};
 
@@ -137,7 +137,7 @@ if (_prePlotted) then {
 	
 	dtaLastPos = _lastPos;
 	
-	//diag_log format["CONTROL - PREPLOTTED MISSION - dtaLastPos: %1", dtaLastPos];
+	//DIAG_LOG format["CONTROL - PREPLOTTED MISSION - dtaLastPos: %1", dtaLastPos];
 };
 
 
@@ -157,7 +157,7 @@ if ((count dtaFireMissionCurrent) > 0) then {
 	
 	dtaLastPos = _lastPos;
 	
-	//diag_log format["CONTROL - CURRENT FIRE MISSION - dtaLastPos: %1", dtaLastPos];
+	//DIAG_LOG format["CONTROL - CURRENT FIRE MISSION - dtaLastPos: %1", dtaLastPos];
 };
 
 
@@ -186,7 +186,7 @@ _lastGPSZ_AGL = dtaLastGPSZ_AGL;
 _lastSheafLineDir = dtaLastSheafLineDir;
 _lastSheafLineDist = dtaLastSheafLineDist;
 
-//diag_log format["CONTROL GPSX 1: %1", _lastGPSX];
+//DIAG_LOG format["CONTROL GPSX 1: %1", _lastGPSX];
 
 // Sheaf size X
 if (_lastSheafSizeX != 0) then {
@@ -212,14 +212,14 @@ _posMap = [[_lastGPSX, _lastGPSY]] call dta_fnc_PosToMapGrid;
 _xMap = parseNumber (_posMap select 0);
 _yMap = parseNumber (_posMap select 1);
 
-//diag_log format["CONTROL GPSX 2: %1", _posMap select 0];
-//diag_log format["CONTROL GPSX 3: %1", _xMap];
+//DIAG_LOG format["CONTROL GPSX 2: %1", _posMap select 0];
+//DIAG_LOG format["CONTROL GPSX 3: %1", _xMap];
 
 // GPS X
 _posGPSX = [_xMap] call dta_fnc_FormatCoordinates;
 ((findDisplay _iccCode) displayCtrl (_iccCode + 22)) ctrlSetText format ["%1",_posGPSX];
 
-//diag_log format["CONTROL GPSX 4: %1", _posGPSX];
+//DIAG_LOG format["CONTROL GPSX 4: %1", _posGPSX];
 
 // GPS Y
 _posGPSY = [_yMap] call dta_fnc_FormatCoordinates;
@@ -288,7 +288,7 @@ dtaSelectedTube = _tubes select dtaSelectedTubeIndex;
 call dta_fnc_DisplayWarheads;
 _warheadType = lbData [(_iccCode + 6), (lbCurSel (_iccCode + 6))];
 
-//diag_log format["CONTROL - _warheadType: %1", _warheadType];
+//DIAG_LOG format["CONTROL - _warheadType: %1", _warheadType];
 
 // Distance
 if ((_warheadType in dtaGPSGuidedTypes) or {_warheadType in dtaGPSLaserTypes} or {_warheadType in dtaGPSSeekerTypes}) then {
@@ -490,8 +490,8 @@ while {!isNull (findDisplay _iccCode)} do {
 		dtaLastAirburstHeight = _height;
 	};
 	
-	//diag_log format["CONTROL LOOP GPSX 1: %1", ctrlText (_iccCode + 22)];
-	//diag_log format["CONTROL LOOP GPSX 2: %1", dtaLastGPSX];
+	//DIAG_LOG format["CONTROL LOOP GPSX 1: %1", ctrlText (_iccCode + 22)];
+	//DIAG_LOG format["CONTROL LOOP GPSX 2: %1", dtaLastGPSX];
 	
 	// If player has input a wrong value, then reset the value.
 	if (dtaLastGPSX == -9999999) then {
@@ -569,14 +569,14 @@ while {!isNull (findDisplay _iccCode)} do {
 	_xTemp = [dtaLastGPSX] call dta_fnc_FormatCoordinates;
 	_yTemp = [dtaLastGPSY] call dta_fnc_FormatCoordinates;
 	
-	//diag_log format["CONTROL LOOP GPSX 3: %1", dtaLastGPSX];
-	//diag_log format["CONTROL LOOP GPSX 4: %1", _xTemp];
+	//DIAG_LOG format["CONTROL LOOP GPSX 3: %1", dtaLastGPSX];
+	//DIAG_LOG format["CONTROL LOOP GPSX 4: %1", _xTemp];
 	
 	_posReal = [[_xTemp, _yTemp]] call dta_fnc_MapGridToPos;
 	dtaLastGPSX = _posReal select 0;
 	dtaLastGPSY = _posReal select 1;
 	
-	//diag_log format["CONTROL LOOP GPSX 5: %1", dtaLastGPSX];
+	//DIAG_LOG format["CONTROL LOOP GPSX 5: %1", dtaLastGPSX];
 	
 	// Adjust certain vars to clean them up and make sure the numbers are not too small or too big.
 	dtaLastSheafX = (round dtaLastSheafX) max 1;
@@ -746,4 +746,4 @@ sleep 1;
 
 dtaControlRunning = false;
 
-//diag_log "CONTROL END";
+//DIAG_LOG "CONTROL END";

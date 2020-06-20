@@ -38,8 +38,8 @@ class CfgBrains
 				SuppressionRange = 20;
 				CauseFireWeight = 0.025; // Modified
 				CauseHitWeight = 0.3; // Modified
-				CauseExplosionWeight = 0.025; // Modified
-				CauseBulletCloseWeight = 0.025; // Modified
+				CauseExplosionWeight = 0.005; // Modified
+				CauseBulletCloseWeight = 0.045; // Modified
 				SuppressionThreshold = 0.5; // Modified
 			};
 			class AIBrainAimingErrorComponent

@@ -4,12 +4,11 @@ class CfgPatches
 {
 	class t1_ammo_fix
 	{
-		//requiredaddons[] = {"t1_silencer_ammo_fix","ace_ballistics","rhsusf_c_weapons","rhs_c_heavyweapons","rhs_c_weapons"};
-		requiredaddons[] = {"t1_silencer_ammo_fix","ace_ballistics","rhsusf_c_weapons"};
+		//requiredaddons[] = {"A3_Data_F_Oldman_Loadorder","t1_silencer_ammo_fix","ace_ballistics","rhsusf_c_weapons","rhsusf_c_heavyweapons","rhs_c_weapons","rhs_c_heavyweapons"};
+		requiredaddons[] = {"A3_Data_F_Oldman_Loadorder","t1_silencer_ammo_fix","ace_ballistics","rhsusf_c_weapons","rhsusf_c_heavyweapons"};
 		units[] = {};
 		weapons[] = {};
 		magazines[] = {};
-		version = "1";
 	};
 };
 
@@ -20,17 +19,108 @@ class CfgAmmo
 	class B_762x54_Tracer_Green;
 	class B_556x45_Ball_Tracer_Red;
 	class B_556x45_Ball_Tracer_Green;
-	class B_12Gauge_Pellets;
-	class B_12Gauge_Slug;
 	class B_65x39_Case_yellow;
 	class B_65x39_Caseless_green;
 	class B_762x51_Tracer_Yellow;
 	class BulletCore;
+	class ShotgunBase;
 	
 	class BulletBase: BulletCore
 	{
 		timeToLive = 10;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
+	
+	class B_9x21_Ball: BulletBase
+	{
+		hit = 7;
+		airFriction= -0.00211064;
+		typicalSpeed = 320;
+		caliber = 0.5;
+		audibleFire = 3;
+		visibleFire = 1;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 0.7;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1.4;
+		dangerRadiusHit = 4;
+	};
+	class B_9x21_Ball_Tracer_Green: B_9x21_Ball
+	{
+		hit = 7;
+		airFriction= -0.00222;
+		typicalSpeed = 320;
+		caliber = 0.5;
+		audibleFire = 3;
+		visibleFire = 1;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 0.7;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1.4;
+		dangerRadiusHit = 4;
+	};
+	class ACE_9x19_Ball: B_9x21_Ball
+	{
+		hit = 7.5;
+		airFriction= -0.00201185;
+		typicalSpeed = 380;
+		caliber = 0.5;
+		audibleFire = 3;
+		visibleFire = 1.5;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 4;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 4;
+		dangerRadiusHit = 4;
+	};
+	class B_45ACP_Ball: BulletBase
+	{
+		hit = 9.5;
+		airFriction = -0.0023;
+		typicalSpeed = 280;
+		caliber = 0.6;
+		audibleFire = 3;
+		visibleFire = 1;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 0.7;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1.4;
+		dangerRadiusHit = 4;
+	};
+	
+	class B_12Gauge_Pellets: ShotgunBase
+	{
+		hit = 6;
+		airFriction = -0.00634;
+		typicalSpeed = 404;
+		caliber = 0.24;
+		audibleFire = 10;
+		visibleFire = 1.5;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 4;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 4;
+		dangerRadiusHit = 4;
+	};
+	class B_12Gauge_Slug: BulletBase
+	{
+		hit = 36;
+		airFriction = -0.0045;
+		typicalSpeed = 475;
+		caliber = 0.5;
+		audibleFire = 50;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 12;
+		suppressionRadiusHit = 12;
+		dangerRadiusBulletClose = 12;
+		dangerRadiusHit = 12;
+	};
+	
+	
 	
 	class B_56x15_dual: BulletBase
 	{
@@ -38,6 +128,13 @@ class CfgAmmo
 		airFriction = -0.0018;
 		typicalSpeed = 900;
 		caliber = 0.4;
+		audibleFire = 20;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 5;
+		suppressionRadiusHit = 5;
+		dangerRadiusBulletClose = 5;
+		dangerRadiusHit = 5;
 	};
 	
 	// 7N6M
@@ -50,6 +147,10 @@ class CfgAmmo
 		audibleFire = 35;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	
 	// M855A1
@@ -62,6 +163,10 @@ class CfgAmmo
 		audibleFire = 37;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class ACE_556x45_Ball_Mk262: B_556x45_Ball
 	{
@@ -69,9 +174,13 @@ class CfgAmmo
 		airFriction = -0.0006;
 		typicalSpeed = 830;
 		caliber = 0.8;
-		audibleFire = 35;
+		audibleFire = 37;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class ACE_556x45_Ball_Mk318: B_556x45_Ball
 	{
@@ -79,6 +188,13 @@ class CfgAmmo
 		airFriction = -0.0012588;
 		typicalSpeed = 922;
 		caliber = 0.9;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class ACE_556x45_Ball_M995_AP: B_556x45_Ball
 	{
@@ -86,6 +202,13 @@ class CfgAmmo
 		airFriction = -0.00126182;
 		typicalSpeed = 1013;
 		caliber = 1.6;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class ACE_B_556x45_Ball_Tracer_Dim: B_556x45_Ball_Tracer_Red
 	{
@@ -93,6 +216,13 @@ class CfgAmmo
 		airFriction = -0.00131;
 		typicalSpeed = 920;
 		caliber = 0.7;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	//class T1_B_556x45_Ball_SD: B_556x45_Ball_Tracer_Red
 	//{
@@ -100,6 +230,12 @@ class CfgAmmo
 	//	airFriction = -0.0025;
 	//	typicalSpeed = 325;
 	//	caliber = 0.55;
+	//	audibleFire = 0.45;
+	//	visibleFire = 1.50;
+	//	suppressionRadiusBulletClose = 0.5;
+	//	suppressionRadiusHit = 4;
+	//	dangerRadiusBulletClose = 1;
+	//	dangerRadiusHit = 4;
 	//};
 	class B_580x42_Ball_F: BulletBase
 	{
@@ -107,65 +243,139 @@ class CfgAmmo
 		airFriction = -0.00121087;
 		typicalSpeed = 870;
 		caliber = 0.9;
-	};
-	class B_65x39_Caseless: BulletBase
-	{
-		hit = 15;
-		airFriction = -0.00077363;
-		typicalSpeed = 800;
-		caliber = 1;
-	};
-	class B_65x39_Minigun_Caseless: SubmunitionBullet
-	{
-		hit = 15;
-		airFriction = -0.00077;
-		typicalSpeed = 820;
-		caliber = 1;
-	};
-	class ACE_65x39_Caseless_Tracer_Dim: B_65x39_Case_yellow
-	{
-		hit = 15;
-		airFriction = -0.00078;
-		typicalSpeed = 800;
-		caliber = 1;
-	};
-	class ACE_65x39_Caseless_green_Tracer_Dim: B_65x39_Caseless_green
-	{
-		hit = 15;
-		airFriction = -0.00078;
-		typicalSpeed = 800;
-		caliber = 1;
-	};
-	class ACE_65x47_Ball_Scenar: B_65x39_Caseless
-	{
-		hit = 15.5;
-		airFriction = -0.00069003;
-		typicalSpeed = 820;
-		caliber = 1.0;
-	};
-	class ACE_65_Creedmor_Ball: B_65x39_Caseless
-	{
-		hit = 16;
-		airFriction = -0.00062437;
-		typicalSpeed = 860;
-		caliber = 1.1;
+		audibleFire = 40;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 7;
+		suppressionRadiusHit = 7;
+		dangerRadiusBulletClose = 7;
+		dangerRadiusHit = 7;
 	};
 	class B_762x39_Ball_F: BulletBase
 	{
-		hit = 16;
+		hit = 15;
 		airFriction = -0.00154815;
 		typicalSpeed = 718;
 		caliber = 1.2;
 		audibleFire = 40;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 7;
+		suppressionRadiusHit = 7;
+		dangerRadiusBulletClose = 7;
+		dangerRadiusHit = 7;
 	};
 	class B_762x39_Ball_Green_F: B_762x39_Ball_F
 	{
-		hit = 16;
+		hit = 15;
 		airFriction = -0.00155;
 		typicalSpeed = 730;
 		caliber = 1.2;
+		audibleFire = 40;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 7;
+		suppressionRadiusHit = 7;
+		dangerRadiusBulletClose = 7;
+		dangerRadiusHit = 7;
+	};
+	class B_65x39_Caseless: BulletBase
+	{
+		hit = 16;
+		airFriction = -0.00077363;
+		typicalSpeed = 800;
+		caliber = 1;
+		audibleFire = 45;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 8;
+		suppressionRadiusHit = 8;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 8;
+	};
+	class B_65x39_Case: B_65x39_Caseless
+	{
+		hit = 15;
+		airFriction = -0.00077363;
+		typicalSpeed = 800;
+		caliber = 0.9;
+		audibleFire = 40;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 7;
+		suppressionRadiusHit = 7;
+		dangerRadiusBulletClose = 7;
+		dangerRadiusHit = 7;
+	};
+	class B_65x39_Minigun_Caseless: SubmunitionBullet
+	{
+		hit = 16;
+		airFriction = -0.00077;
+		typicalSpeed = 820;
+		caliber = 1;
+		audibleFire = 45;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 8;
+		suppressionRadiusHit = 8;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 8;
+	};
+	class ACE_65x39_Caseless_Tracer_Dim: B_65x39_Case_yellow
+	{
+		hit = 16;
+		airFriction = -0.00078;
+		typicalSpeed = 800;
+		caliber = 1;
+		audibleFire = 45;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 8;
+		suppressionRadiusHit = 8;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 8;
+	};
+	class ACE_65x39_Caseless_green_Tracer_Dim: B_65x39_Caseless_green
+	{
+		hit = 16;
+		airFriction = -0.00078;
+		typicalSpeed = 800;
+		caliber = 1;
+		audibleFire = 45;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 8;
+		suppressionRadiusHit = 8;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 8;
+	};
+	class ACE_65x47_Ball_Scenar: B_65x39_Caseless
+	{
+		hit = 16.5;
+		airFriction = -0.00069003;
+		typicalSpeed = 820;
+		caliber = 1.0;
+		audibleFire = 47;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 9;
+		suppressionRadiusHit = 9;
+		dangerRadiusBulletClose = 9;
+		dangerRadiusHit = 9;
+	};
+	class ACE_65_Creedmor_Ball: B_65x39_Caseless
+	{
+		hit = 17;
+		airFriction = -0.00062437;
+		typicalSpeed = 860;
+		caliber = 1.1;
+		audibleFire = 50;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 9;
+		suppressionRadiusHit = 9;
+		dangerRadiusBulletClose = 9;
+		dangerRadiusHit = 9;
 	};
 	
 	// M80
@@ -178,6 +388,10 @@ class CfgAmmo
 		audibleFire = 55;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	// M62
 	class ACE_B_762x51_Tracer_Dim: B_762x51_Tracer_Yellow
@@ -186,6 +400,41 @@ class CfgAmmo
 		airFriction = -0.00104;
 		typicalSpeed = 833;
 		caliber = 1.6;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
+	};
+	class B_762x51_Minigun_Tracer_Red_splash: B_762x51_Ball
+	{
+		hit = 19;
+		airFriction = -0.00103711;
+		typicalSpeed = 833;
+		caliber = 1.6;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
+	};
+	class B_762x51_Minigun_Tracer_Yellow_splash: B_762x51_Minigun_Tracer_Red_splash
+	{
+		hit = 19;
+		airFriction = -0.00103711;
+		typicalSpeed = 833;
+		caliber = 1.6;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class ACE_762x51_Ball_M118LR: B_762x51_Ball
 	{
@@ -193,6 +442,13 @@ class CfgAmmo
 		airFriction = -0.00085157;
 		typicalSpeed = 805;
 		caliber = 1.8;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class ACE_762x51_Ball_Mk316_Mod_0: B_762x51_Ball
 	{
@@ -200,6 +456,13 @@ class CfgAmmo
 		airFriction = -0.00084311;
 		typicalSpeed = 550;
 		caliber = 1.5;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class ACE_762x51_Ball_Mk319_Mod_0: B_762x51_Ball
 	{
@@ -207,6 +470,13 @@ class CfgAmmo
 		airFriction = -0.00104515;
 		typicalSpeed = 900;
 		caliber = 1.8;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class ACE_762x51_Ball_M993_AP: B_762x51_Ball
 	{
@@ -214,6 +484,13 @@ class CfgAmmo
 		airFriction = -0.0010939;
 		typicalSpeed = 700;
 		caliber = 2.2;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	//class ACE_762x51_Ball_Subsonic: B_762x51_Ball
 	//{
@@ -221,6 +498,12 @@ class CfgAmmo
 	//	airFriction = -0.0030;
 	//	typicalSpeed = 320;
 	//	caliber = 0.7;
+	//	audibleFire = 0.55;
+	//	visibleFire = 1.70;
+	//	suppressionRadiusBulletClose = 0.5;
+	//	suppressionRadiusHit = 4;
+	//	dangerRadiusBulletClose = 1.25;
+	//	dangerRadiusHit = 4;
 	//};
 	class B_762x54_Ball: B_762x51_Ball
 	{
@@ -231,6 +514,10 @@ class CfgAmmo
 		audibleFire = 57;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class ACE_762x54_Ball_7T2: B_762x54_Tracer_Green
 	{
@@ -238,6 +525,13 @@ class CfgAmmo
 		airFriction = -0.00106104;
 		typicalSpeed = 828;
 		caliber = 1.8;
+		audibleFire = 57;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class ACE_762x67_Ball_Mk248_Mod_0: B_762x51_Ball
 	{
@@ -245,6 +539,13 @@ class CfgAmmo
 		airFriction = -0.00072468;
 		typicalSpeed = 900;
 		caliber = 1.8;
+		audibleFire = 65;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 11;
+		suppressionRadiusHit = 11;
+		dangerRadiusBulletClose = 11;
+		dangerRadiusHit = 11;
 	};
 	class ACE_762x67_Ball_Mk248_Mod_1: B_762x51_Ball
 	{
@@ -252,6 +553,13 @@ class CfgAmmo
 		airFriction = -0.00063027;
 		typicalSpeed = 867;
 		caliber = 1.9;
+		audibleFire = 65;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 11;
+		suppressionRadiusHit = 11;
+		dangerRadiusBulletClose = 11;
+		dangerRadiusHit = 11;
 	};
 	class ACE_762x67_Ball_Berger_Hybrid_OTM: B_762x51_Ball
 	{
@@ -259,6 +567,27 @@ class CfgAmmo
 		airFriction = -0.00055262;
 		typicalSpeed = 853;
 		caliber = 2.0;
+		audibleFire = 65;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 11;
+		suppressionRadiusHit = 11;
+		dangerRadiusBulletClose = 11;
+		dangerRadiusHit = 11;
+	};
+	class B_338_NM_Ball: BulletBase
+	{
+		hit = 26;
+		airFriction = -0.00053639;
+		typicalSpeed = 820;
+		caliber = 1.8;
+		audibleFire = 70;
+		visibleFire = 4;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 12;
+		suppressionRadiusHit = 12;
+		dangerRadiusBulletClose = 12;
+		dangerRadiusHit = 12;
 	};
 	class B_338_Ball: BulletBase
 	{
@@ -269,26 +598,24 @@ class CfgAmmo
 		audibleFire = 90;
 		visibleFire = 5;
 		visibleFireTime = 2;
-	};
-	class B_338_NM_Ball: BulletBase
-	{
-		hit = 26;
-		airFriction = -0.00053639;
-		typicalSpeed = 820;
-		caliber = 1.8;
-		audibleFire = 65;
-		visibleFire = 5;
-		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 13;
+		suppressionRadiusHit = 13;
+		dangerRadiusBulletClose = 13;
+		dangerRadiusHit = 13;
 	};
 	class ACE_338_Ball: B_338_Ball
 	{
-		hit = 28;
+		hit = 29;
 		airFriction = -0.00055706;
 		typicalSpeed = 826;
 		caliber = 2;
 		audibleFire = 90;
 		visibleFire = 5;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 13;
+		suppressionRadiusHit = 13;
+		dangerRadiusBulletClose = 13;
+		dangerRadiusHit = 13;
 	};
 	class ACE_338_Ball_API526: B_338_Ball
 	{
@@ -299,6 +626,10 @@ class CfgAmmo
 		audibleFire = 90;
 		visibleFire = 5;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 13;
+		suppressionRadiusHit = 13;
+		dangerRadiusBulletClose = 13;
+		dangerRadiusHit = 13;
 	};
 	class B_93x64_Ball: BulletBase
 	{
@@ -309,6 +640,10 @@ class CfgAmmo
 		audibleFire = 100;
 		visibleFire = 5;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 14;
+		suppressionRadiusHit = 14;
+		dangerRadiusBulletClose = 14;
+		dangerRadiusHit = 14;
 	};
 	class B_408_Ball: BulletBase
 	{
@@ -319,6 +654,10 @@ class CfgAmmo
 		audibleFire = 110;
 		visibleFire = 5;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 15;
+		suppressionRadiusHit = 15;
+		dangerRadiusBulletClose = 15;
+		dangerRadiusHit = 15;
 	};
 	class ACE_408_Ball: BulletBase
 	{
@@ -329,6 +668,10 @@ class CfgAmmo
 		audibleFire = 110;
 		visibleFire = 5;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 15;
+		suppressionRadiusHit = 15;
+		dangerRadiusBulletClose = 15;
+		dangerRadiusHit = 15;
 	};
 	class B_127x33_Ball: BulletBase
 	{
@@ -336,6 +679,10 @@ class CfgAmmo
 		airFriction = -0.002;
 		typicalSpeed = 420;
 		caliber = 1;
+		suppressionRadiusBulletClose = 5;
+		suppressionRadiusHit = 5;
+		dangerRadiusBulletClose = 5;
+		dangerRadiusHit = 5;
 	};
 	class B_127x54_Ball: BulletBase
 	{
@@ -343,13 +690,13 @@ class CfgAmmo
 		airFriction = -0.00019568;
 		typicalSpeed = 300;
 		caliber = 1.8;
-		dangerRadiusBulletClose = 1.4;
-		dangerRadiusHit = 6;
-		suppressionRadiusBulletClose = 0.7;
-		suppressionRadiusHit = 6;
 		audibleFire = 3;
 		visibleFire = 1;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 0.7;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1.4;
+		dangerRadiusHit = 4;
 	};
 	class B_50BW_Ball_F: BulletBase
 	{
@@ -357,6 +704,13 @@ class CfgAmmo
 		airFriction = -0.00205896;
 		typicalSpeed = 550;
 		caliber = 1.9;
+		audibleFire = 60;
+		visibleFire = 1;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 11;
+		suppressionRadiusHit = 11;
+		dangerRadiusBulletClose = 11;
+		dangerRadiusHit = 11;
 	};
 	class B_127x99_Ball: BulletBase
 	{
@@ -367,6 +721,10 @@ class CfgAmmo
 		audibleFire = 120;
 		visibleFire = 6;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 16;
+		suppressionRadiusHit = 16;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 16;
 	};
 	class ACE_127x99_Ball_AMAX: B_127x99_Ball
 	{
@@ -374,6 +732,13 @@ class CfgAmmo
 		airFriction = -0.00037397;
 		typicalSpeed = 900;
 		caliber = 3;
+		audibleFire = 120;
+		visibleFire = 6;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 16;
+		suppressionRadiusHit = 16;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 16;
 	};
 	class ACE_127x99_API: BulletBase
 	{
@@ -384,6 +749,10 @@ class CfgAmmo
 		audibleFire = 120;
 		visibleFire = 6;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 16;
+		suppressionRadiusHit = 16;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 16;
 	};
 	class B_127x108_Ball: BulletBase
 	{
@@ -391,9 +760,13 @@ class CfgAmmo
 		airFriction = -0.00065098;
 		typicalSpeed = 820;
 		caliber = 2.8;
-		audibleFire = 120;
+		audibleFire = 130;
 		visibleFire = 6;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 16;
+		suppressionRadiusHit = 16;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 16;
 	};
 	class B_127x108_APDS: B_127x108_Ball
 	{
@@ -401,238 +774,88 @@ class CfgAmmo
 		airFriction = -0.0007;
 		typicalSpeed = 820;
 		caliber = 4;
+		audibleFire = 130;
+		visibleFire = 6;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 16;
+		suppressionRadiusHit = 16;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 16;
 	};
 	
 	
 	
-	class B_9x21_Ball: BulletBase
-	{
-		hit = 7;
-		airFriction= -0.00211064;
-		typicalSpeed = 320;
-		caliber = 0.5;
-	};
-	class B_9x21_Ball_Tracer_Green: B_9x21_Ball
-	{
-		hit = 7;
-		airFriction= -0.00222;
-		typicalSpeed = 320;
-		caliber = 0.5;
-	};
-	class ACE_9x19_Ball: B_9x21_Ball
+	// RHS USAF
+	class rhs_ammo_9x19_FMJ: BulletBase
 	{
 		hit = 7.5;
-		airFriction= -0.00201185;
-		typicalSpeed = 380;
+		airFriction= -0.00211185;
+		typicalSpeed = 390;
 		caliber = 0.5;
+		audibleFire = 3;
+		visibleFire = 1.5;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 4;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 4;
+		dangerRadiusHit = 4;
 	};
-	class B_45ACP_Ball: BulletBase
+	class rhs_ammo_9x19_JHP: BulletBase
+	{
+		hit = 7;
+		airFriction= -0.0022;
+		typicalSpeed = 300;
+		caliber = 0.4;
+		audibleFire = 3;
+		visibleFire = 1;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 0.7;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1.4;
+		dangerRadiusHit = 4;
+	};
+	class rhs_ammo_45ACP_MHP: BulletBase
 	{
 		hit = 9.5;
 		airFriction = -0.0023;
 		typicalSpeed = 280;
-		caliber = 0.6;
+		caliber = 0.5;
+		audibleFire = 3;
+		visibleFire = 1;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 0.7;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1.4;
+		dangerRadiusHit = 4;
 	};
 	
-	
-	// RHS USAF
-	class rhs_ammo_556x45_M855_Ball: B_556x45_Ball
-	{
-		hit = 9.5;
-		airFriction = -0.0014;
-		typicalSpeed = 750;
-		caliber = 0.6;
-		audibleFire = 35;
-		visibleFire = 3;
-		visibleFireTime = 2;
-	};
-	class rhs_ammo_556x45_M855_Ball_Red: rhs_ammo_556x45_M855_Ball
-	{
-		hit = 9.5;
-		airFriction = -0.00141;
-		typicalSpeed = 750;
-		caliber = 0.6;
-	};
-	class rhs_ammo_556x45_M855_Ball_Green: rhs_ammo_556x45_M855_Ball_Red
-	{
-		hit = 9.5;
-		airFriction = -0.00141;
-		typicalSpeed = 750;
-		caliber = 0.6;
-	};
-	class rhs_ammo_556x45_M855_Ball_Yellow: rhs_ammo_556x45_M855_Ball_Red
-	{
-		hit = 9.5;
-		airFriction = -0.00141;
-		typicalSpeed = 750;
-		caliber = 0.6;
-	};
-	class rhs_ammo_556x45_M855_Ball_Orange: rhs_ammo_556x45_M855_Ball_Red
-	{
-		hit = 9.5;
-		airFriction = -0.00141;
-		typicalSpeed = 750;
-		caliber = 0.6;
-	};
-	class rhs_ammo_556x45_M855A1_Ball: B_556x45_Ball
-	{
-		hit = 10;
-		airFriction = -0.00135094;
-		typicalSpeed = 940;
-		caliber = 0.7;
-		audibleFire = 37;
-		visibleFire = 3;
-		visibleFireTime = 2;
-	};
-	class rhs_ammo_556x45_M855A1_Ball_Red: rhs_ammo_556x45_M855A1_Ball
-	{
-		hit = 10;
-		airFriction = -0.00136;
-		typicalSpeed = 940;
-		caliber = 0.7;
-	};
-	class rhs_ammo_556x45_M855A1_Ball_Green: rhs_ammo_556x45_M855A1_Ball_Red
-	{
-		hit = 10;
-		airFriction = -0.00136;
-		typicalSpeed = 940;
-		caliber = 0.7;
-	};
-	class rhs_ammo_556x45_M855A1_Ball_Yellow: rhs_ammo_556x45_M855A1_Ball_Red
-	{
-		hit = 10;
-		airFriction = -0.00136;
-		typicalSpeed = 940;
-		caliber = 0.7;
-	};
-	class rhs_ammo_556x45_M855A1_Ball_Orange: rhs_ammo_556x45_M855A1_Ball_Red
-	{
-		hit = 10;
-		airFriction = -0.00136;
-		typicalSpeed = 940;
-		caliber = 0.7;
-	};
-	class rhs_ammo_556x45_Mk318_Ball: B_556x45_Ball
-	{
-		hit = 11.5;
-		airFriction = -0.0012588;
-		typicalSpeed = 922;
-		caliber = 0.9;
-		audibleFire = 37;
-		visibleFire = 3;
-		visibleFireTime = 2;
-	};
-	class rhs_ammo_556x45_Mk262_Ball: B_556x45_Ball
-	{
-		hit = 11;
-		airFriction = -0.0006;
-		typicalSpeed = 830;
-		caliber = 0.8;
-		audibleFire = 35;
-		visibleFire = 3;
-		visibleFireTime = 2;
-	};
-	class rhs_ammo_762x51_M80_Ball: BulletBase
-	{
-		hit = 19;
-		airFriction = -0.00103711;
-		typicalSpeed = 833;
-		caliber = 1.6;
-		audibleFire = 55;
-		visibleFire = 3;
-		visibleFireTime = 2;
-	};
-	class rhs_ammo_762x51_M61_AP: rhs_ammo_762x51_M80_Ball
-	{
-		hit = 21.5;
-		airFriction = -0.00105148;
-		typicalSpeed = 700;
-		caliber = 2.0;
-	};
-	class rhs_ammo_762x51_M62_tracer: rhs_ammo_762x51_M80_Ball
-	{
-		hit = 19;
-		airFriction = -0.00104;
-		typicalSpeed = 833;
-		caliber = 1.6;
-	};
-	class rhs_ammo_762x51_M80A1EPR_Ball: rhs_ammo_762x51_M80_Ball
-	{
-		hit = 20;
-		airFriction = -0.00100957;
-		typicalSpeed = 900;
-		caliber = 1.7;
-		audibleFire = 58;
-		visibleFire = 3;
-		visibleFireTime = 2;
-	};
-	class rhs_ammo_762x51_M118_Special_Ball: rhs_ammo_762x51_M80_Ball
-	{
-		hit = 20.5;
-		airFriction = -0.00085157;
-		typicalSpeed = 805;
-		caliber = 1.8;
-	};
-	class rhs_ammo_762x51_M993_Ball: rhs_ammo_762x51_M80_Ball
-	{
-		hit = 22;
-		airFriction = -0.0010939;
-		typicalSpeed = 700;
-		caliber = 2.2;
-	};
-	class rhsusf_B_300winmag: BulletBase
-	{
-		hit = 25;
-		airFriction = -0.0007034;
-		typicalSpeed = 869;
-		caliber = 1.8;
-		audibleFire = 60;
-		visibleFire = 3;
-		visibleFireTime = 2;
-	};
-	//class T1_rhsusf_B_300winmag_SD: rhsusf_B_300winmag
-	//{
-	//	hit = 8;
-	//	airFriction = -0.00275;
-	//	typicalSpeed = 320;
-	//	caliber = 0.65;
-	//};
-	class rhsusf_ammo_127x99_M33_Ball: B_127x99_Ball
-	{
-		hit = 44;
-		airFriction = -0.00058679;
-		typicalSpeed = 900;
-		caliber = 2.6;
-		audibleFire = 120;
-		visibleFire = 6;
-		visibleFireTime = 2;
-	};
-	class rhsusf_ammo_127x99_mk211: rhsusf_ammo_127x99_M33_Ball
-	{
-		hit = 75;
-		airFriction = -0.00058;
-		typicalSpeed = 900;
-		caliber = 4.5;
-		explosive = 0.1;
-		audibleFire = 120;
-		visibleFire = 6;
-		visibleFireTime = 2;
-		indirectHit = 4;
-		indirectHitRange = 0.6;
-	};
 	class rhs_ammo_m576_buckshot: B_12Gauge_Pellets
 	{
 		hit = 11;
 		airFriction = -0.008;
 		typicalSpeed = 400;
 		caliber = 1;
+		audibleFire = 11;
+		visibleFire = 1.5;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 4;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 4;
+		dangerRadiusHit = 4;
 	};
 	class rhs_ammo_12g_00buckshot: B_12Gauge_Pellets
 	{
-		hit = 10;
+		hit = 6;
 		airFriction = -0.00634;
 		typicalSpeed = 404;
 		caliber = 0.24;
+		audibleFire = 10;
+		visibleFire = 1.5;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 4;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 4;
+		dangerRadiusHit = 4;
 	};
 	class rhs_ammo_12g_slug: B_12Gauge_Slug
 	{
@@ -640,6 +863,13 @@ class CfgAmmo
 		airFriction = -0.0045;
 		typicalSpeed = 475;
 		caliber = 0.5;
+		audibleFire = 50;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 12;
+		suppressionRadiusHit = 12;
+		dangerRadiusBulletClose = 12;
+		dangerRadiusHit = 12;
 	};
 	class rhs_ammo_12g_FRAG: B_12Gauge_Slug
 	{
@@ -656,6 +886,13 @@ class CfgAmmo
 		tracerScale = 1.3;
 		tracerStartTime = 0.1;
 		tracerEndTime = 5;
+		audibleFire = 50;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 12;
+		suppressionRadiusHit = 12;
+		dangerRadiusBulletClose = 12;
+		dangerRadiusHit = 12;
 	};
 	class rhs_ammo_12g_HE: rhs_ammo_12g_FRAG
 	{
@@ -672,6 +909,13 @@ class CfgAmmo
 		tracerScale = 1.3;
 		tracerStartTime = 0.1;
 		tracerEndTime = 5;
+		audibleFire = 50;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 12;
+		suppressionRadiusHit = 12;
+		dangerRadiusBulletClose = 12;
+		dangerRadiusHit = 12;
 	};
 	class rhs_ammo_12gHEAP_penetrator: BulletBase
 	{
@@ -707,28 +951,329 @@ class CfgAmmo
 		indirectHit = 14;
 		typicalSpeed = 400;
 		caliber = 1;
+		audibleFire = 10;
+		visibleFire = 1.5;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 4;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 4;
+		dangerRadiusHit = 4;
 	};
-	class rhs_ammo_9x19_FMJ: BulletBase
-	{
-		hit = 7.5;
-		airFriction= -0.00211185;
-		typicalSpeed = 390;
-		caliber = 0.5;
-	};
-	class rhs_ammo_9x19_JHP: BulletBase
-	{
-		hit = 7;
-		airFriction= -0.0022;
-		typicalSpeed = 300;
-		caliber = 0.4;
-	};
-	class rhs_ammo_45ACP_MHP: BulletBase
+	
+	
+	class rhs_ammo_556x45_M855_Ball: B_556x45_Ball
 	{
 		hit = 9.5;
-		airFriction = -0.0023;
-		typicalSpeed = 280;
-		caliber = 0.5;
+		airFriction = -0.0014;
+		typicalSpeed = 750;
+		caliber = 0.6;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
+	class rhs_ammo_556x45_M855_Ball_Red: rhs_ammo_556x45_M855_Ball
+	{
+		hit = 9.5;
+		airFriction = -0.00141;
+		typicalSpeed = 750;
+		caliber = 0.6;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_M855_Ball_Green: rhs_ammo_556x45_M855_Ball_Red
+	{
+		hit = 9.5;
+		airFriction = -0.00141;
+		typicalSpeed = 750;
+		caliber = 0.6;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_M855_Ball_Yellow: rhs_ammo_556x45_M855_Ball_Red
+	{
+		hit = 9.5;
+		airFriction = -0.00141;
+		typicalSpeed = 750;
+		caliber = 0.6;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_M855_Ball_Orange: rhs_ammo_556x45_M855_Ball_Red
+	{
+		hit = 9.5;
+		airFriction = -0.00141;
+		typicalSpeed = 750;
+		caliber = 0.6;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_M855A1_Ball: B_556x45_Ball
+	{
+		hit = 10;
+		airFriction = -0.00135094;
+		typicalSpeed = 940;
+		caliber = 0.7;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_M855A1_Ball_Red: rhs_ammo_556x45_M855A1_Ball
+	{
+		hit = 10;
+		airFriction = -0.00136;
+		typicalSpeed = 940;
+		caliber = 0.7;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_M855A1_Ball_Green: rhs_ammo_556x45_M855A1_Ball_Red
+	{
+		hit = 10;
+		airFriction = -0.00136;
+		typicalSpeed = 940;
+		caliber = 0.7;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_M855A1_Ball_Yellow: rhs_ammo_556x45_M855A1_Ball_Red
+	{
+		hit = 10;
+		airFriction = -0.00136;
+		typicalSpeed = 940;
+		caliber = 0.7;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_M855A1_Ball_Orange: rhs_ammo_556x45_M855A1_Ball_Red
+	{
+		hit = 10;
+		airFriction = -0.00136;
+		typicalSpeed = 940;
+		caliber = 0.7;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_Mk318_Ball: B_556x45_Ball
+	{
+		hit = 11.5;
+		airFriction = -0.0012588;
+		typicalSpeed = 922;
+		caliber = 0.9;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_556x45_Mk262_Ball: B_556x45_Ball
+	{
+		hit = 11;
+		airFriction = -0.0006;
+		typicalSpeed = 830;
+		caliber = 0.8;
+		audibleFire = 37;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
+	};
+	class rhs_ammo_762x51_M80_Ball: BulletBase
+	{
+		hit = 19;
+		airFriction = -0.00103711;
+		typicalSpeed = 833;
+		caliber = 1.6;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
+	};
+	class rhs_ammo_762x51_M61_AP: rhs_ammo_762x51_M80_Ball
+	{
+		hit = 21.5;
+		airFriction = -0.00105148;
+		typicalSpeed = 700;
+		caliber = 2.0;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
+	};
+	class rhs_ammo_762x51_M62_tracer: rhs_ammo_762x51_M80_Ball
+	{
+		hit = 19;
+		airFriction = -0.00104;
+		typicalSpeed = 833;
+		caliber = 1.6;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
+	};
+	class rhs_ammo_762x51_M80A1EPR_Ball: rhs_ammo_762x51_M80_Ball
+	{
+		hit = 20;
+		airFriction = -0.00100957;
+		typicalSpeed = 900;
+		caliber = 1.7;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
+	};
+	class rhs_ammo_762x51_M118_Special_Ball: rhs_ammo_762x51_M80_Ball
+	{
+		hit = 20.5;
+		airFriction = -0.00085157;
+		typicalSpeed = 805;
+		caliber = 1.8;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
+	};
+	class rhs_ammo_762x51_M993_Ball: rhs_ammo_762x51_M80_Ball
+	{
+		hit = 22;
+		airFriction = -0.0010939;
+		typicalSpeed = 700;
+		caliber = 2.2;
+		audibleFire = 55;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
+	};
+	class rhsusf_B_300winmag: BulletBase
+	{
+		hit = 25;
+		airFriction = -0.0007034;
+		typicalSpeed = 869;
+		caliber = 1.8;
+		audibleFire = 65;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 11;
+		suppressionRadiusHit = 11;
+		dangerRadiusBulletClose = 11;
+		dangerRadiusHit = 11;
+	};
+	//class T1_rhsusf_B_300winmag_SD: rhsusf_B_300winmag
+	//{
+	//	hit = 8;
+	//	airFriction = -0.00275;
+	//	typicalSpeed = 320;
+	//	caliber = 0.65;
+	//	audibleFire = 0.50;
+	//	visibleFire = 1.60;
+	//	suppressionRadiusBulletClose = 0.5;
+	//	suppressionRadiusHit = 4;
+	//	dangerRadiusBulletClose = 1.5;
+	//	dangerRadiusHit = 4;
+	//};
+	class rhsusf_ammo_127x99_M33_Ball: B_127x99_Ball
+	{
+		hit = 44;
+		airFriction = -0.00058679;
+		typicalSpeed = 900;
+		caliber = 2.6;
+		audibleFire = 120;
+		visibleFire = 6;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 16;
+		suppressionRadiusHit = 16;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 16;
+	};
+	class rhsusf_ammo_127x99_mk211: rhsusf_ammo_127x99_M33_Ball
+	{
+		hit = 75;
+		airFriction = -0.00058;
+		typicalSpeed = 900;
+		caliber = 4.5;
+		explosive = 0.1;
+		indirectHit = 4;
+		indirectHitRange = 0.6;
+		audibleFire = 120;
+		visibleFire = 6;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 16;
+		suppressionRadiusHit = 16;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 16;
+	};
+	
+	
+	
 	class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball
 	{
 		hit = 9.5;
@@ -738,6 +1283,10 @@ class CfgAmmo
 		audibleFire = 33;
 		visibleFire = 2;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 5;
+		suppressionRadiusHit = 5;
+		dangerRadiusBulletClose = 5;
+		dangerRadiusHit = 5;
 	};
 	class rhs_ammo_46x30_JHP: rhs_ammo_46x30_FMJ
 	{
@@ -745,6 +1294,13 @@ class CfgAmmo
 		airFriction = -0.0017;
 		typicalSpeed = 700;
 		caliber = 0.6;
+		audibleFire = 33;
+		visibleFire = 2;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 5;
+		suppressionRadiusHit = 5;
+		dangerRadiusBulletClose = 5;
+		dangerRadiusHit = 5;
 	};
 	class rhs_ammo_46x30_AP: rhs_ammo_46x30_FMJ
 	{
@@ -752,6 +1308,13 @@ class CfgAmmo
 		airFriction = -0.00165;
 		typicalSpeed = 735;
 		caliber = 0.6;
+		audibleFire = 33;
+		visibleFire = 2;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 5;
+		suppressionRadiusHit = 5;
+		dangerRadiusBulletClose = 5;
+		dangerRadiusHit = 5;
 	};
 	
 	
@@ -759,6 +1322,51 @@ class CfgAmmo
 	// RHS AFRF
 	// 7N6
 	/*
+	class rhs_B_9x18_57N181S: B_9x21_Ball
+	{
+		hit = 6.5;
+		airFriction= -0.0017671455;
+		typicalSpeed = 272;
+		caliber = 0.6;
+		audibleFire = 3;
+		visibleFire = 1.5;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 4;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 4;
+		dangerRadiusHit = 4;
+	};
+	class rhs_B_9x19_7N21: B_9x21_Ball
+	{
+		hit = 8;
+		airFriction= -0.0018;
+		typicalSpeed = 393;
+		caliber = 0.65;
+		audibleFire = 3;
+		visibleFire = 1.5;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 4;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 4;
+		dangerRadiusHit = 4;
+	};
+	class rhs_B_9x19_7N31: rhs_B_9x19_7N21
+	{
+		hit = 8.5;
+		airFriction= -0.0017;
+		typicalSpeed = 600;
+		caliber = 0.7;
+		audibleFire = 3;
+		visibleFire = 1.5;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 4;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 4;
+		dangerRadiusHit = 4;
+	};
+	
+	
+	
 	class rhs_B_545x39_Ball: B_556x45_Ball
 	{
 		hit = 9.5;
@@ -768,6 +1376,10 @@ class CfgAmmo
 		audibleFire = 35;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class rhs_B_545x39_Ball_Tracer_Green: rhs_B_545x39_Ball
 	{
@@ -778,6 +1390,10 @@ class CfgAmmo
 		audibleFire = 35;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class rhs_B_545x39_7N6_Ball: rhs_B_545x39_Ball
 	{
@@ -788,6 +1404,10 @@ class CfgAmmo
 		audibleFire = 35;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class rhs_B_545x39_7N10_Ball: rhs_B_545x39_Ball
 	{
@@ -795,9 +1415,13 @@ class CfgAmmo
 		airFriction = -0.0013;
 		typicalSpeed = 880;
 		caliber = 1.3;
-		audibleFire = 36;
+		audibleFire = 35;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class rhs_B_545x39_7N22_Ball: rhs_B_545x39_Ball
 	{
@@ -805,9 +1429,13 @@ class CfgAmmo
 		airFriction = -0.0014;
 		typicalSpeed = 890;
 		caliber = 1.5;
-		audibleFire = 36;
+		audibleFire = 35;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class rhs_B_545x39_7N24_Ball: rhs_B_545x39_Ball
 	{
@@ -815,9 +1443,13 @@ class CfgAmmo
 		airFriction = -0.0016;
 		typicalSpeed = 890;
 		caliber = 1.7;
-		audibleFire = 37;
+		audibleFire = 35;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 6;
+		dangerRadiusBulletClose = 6;
+		dangerRadiusHit = 6;
 	};
 	class rhs_B_545x39_7U1_Ball: rhs_B_545x39_Ball
 	{
@@ -825,13 +1457,13 @@ class CfgAmmo
 		airFriction = -0.0012;
 		typicalSpeed = 303;
 		caliber = 0.4;
-		dangerRadiusBulletClose = 1;
-		dangerRadiusHit = 6;
-		suppressionRadiusBulletClose = 0.5;
-		suppressionRadiusHit = 6;
 		audibleFire = 0.50;
 		visibleFire = 1.50;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 0.5;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1;
+		dangerRadiusHit = 4;
 	};
 	class rhs_B_762x39_Ball: B_762x51_Ball
 	{
@@ -842,6 +1474,13 @@ class CfgAmmo
 		audibleFire = 40;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		audibleFire = 40;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 7;
+		suppressionRadiusHit = 7;
+		dangerRadiusBulletClose = 7;
+		dangerRadiusHit = 7;
 	};
 	class rhs_B_762x39_Ball_89: rhs_B_762x39_Ball
 	{
@@ -849,19 +1488,26 @@ class CfgAmmo
 		airFriction = -0.00151621;
 		typicalSpeed = 718;
 		caliber = 1.4;
+		audibleFire = 40;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 7;
+		suppressionRadiusHit = 7;
+		dangerRadiusBulletClose = 7;
+		dangerRadiusHit = 7;
 	};
 	class rhs_B_762x39_U_Ball: rhs_B_762x39_Ball
 	{
 		hit = 10;
 		airFriction = -0.0013;
 		typicalSpeed = 293;
-		dangerRadiusBulletClose = 1;
-		dangerRadiusHit = 6;
-		suppressionRadiusBulletClose = 0.5;
-		suppressionRadiusHit = 6;
 		audibleFire = 0.60;
 		visibleFire = 1.65;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 0.5;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1;
+		dangerRadiusHit = 4;
 	};
 	class rhs_B_762x54_Ball: B_762x51_Ball
 	{
@@ -869,9 +1515,13 @@ class CfgAmmo
 		airFriction = -0.00102329;
 		typicalSpeed = 828;
 		caliber = 1.7;
-		audibleFire = 58;
+		audibleFire = 57;
 		visibleFire = 3;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class rhs_B_762x54_Ball_Tracer_Green: rhs_B_762x54_Ball
 	{
@@ -879,6 +1529,13 @@ class CfgAmmo
 		airFriction = -0.00103;
 		typicalSpeed = 828;
 		caliber = 1.7;
+		audibleFire = 57;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class rhs_B_762x54_7N1_Ball: rhs_B_762x54_Ball
 	{
@@ -886,6 +1543,13 @@ class CfgAmmo
 		airFriction = -0.00095;
 		typicalSpeed = 823;
 		caliber = 1.9;
+		audibleFire = 57;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class rhs_B_762x54_7N13_Ball: rhs_B_762x54_Ball
 	{
@@ -893,6 +1557,13 @@ class CfgAmmo
 		airFriction = -0.00108;
 		typicalSpeed = 828;
 		caliber = 2.3;
+		audibleFire = 57;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class rhs_B_762x54_7BZ3_Ball: rhs_B_762x54_Ball
 	{
@@ -900,6 +1571,13 @@ class CfgAmmo
 		airFriction = -0.00115;
 		typicalSpeed = 808;
 		caliber = 2.7;
+		audibleFire = 57;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class rhs_B_762x54_7N26_Ball: rhs_B_762x54_Ball
 	{
@@ -907,50 +1585,39 @@ class CfgAmmo
 		airFriction = -0.0011;
 		typicalSpeed = 835;
 		caliber = 2.4;
+		audibleFire = 57;
+		visibleFire = 3;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 10;
+		dangerRadiusBulletClose = 10;
+		dangerRadiusHit = 10;
 	};
 	class rhs_B_9x39_SP5: rhs_B_762x39_Ball
 	{
 		hit = 11;
 		airFriction = -0.00052;
 		typicalSpeed = 295;
-		dangerRadiusBulletClose = 1.3;
-		dangerRadiusHit = 6;
-		suppressionRadiusBulletClose = 0.6;
-		suppressionRadiusHit = 6;
 		audibleFire = 1.0;
 		visibleFire = 1.70;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 0.6;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1.3;
+		dangerRadiusHit = 4;
 	};
 	class rhs_B_9x39_SP6: rhs_B_9x39_SP5
 	{
 		hit = 11.5;
 		airFriction = -0.00042;
 		typicalSpeed = 295;
-		dangerRadiusBulletClose = 1.3;
-		dangerRadiusHit = 6;
+		audibleFire = 1.0;
+		visibleFire = 1.70;
+		visibleFireTime = 2;
 		suppressionRadiusBulletClose = 0.6;
-		suppressionRadiusHit = 6;
-	};
-	class rhs_B_9x19_7N21: B_9x21_Ball
-	{
-		hit = 8;
-		airFriction= -0.0018;
-		typicalSpeed = 393;
-		caliber = 0.65;
-	};
-	class rhs_B_9x19_7N31: rhs_B_9x19_7N21
-	{
-		hit = 8.5;
-		airFriction= -0.0017;
-		typicalSpeed = 600;
-		caliber = 0.7;
-	};
-	class rhs_B_9x18_57N181S: B_9x21_Ball
-	{
-		hit = 6.5;
-		airFriction= -0.0017671455;
-		typicalSpeed = 272;
-		caliber = 0.6;
+		suppressionRadiusHit = 4;
+		dangerRadiusBulletClose = 1.3;
+		dangerRadiusHit = 4;
 	};
 	class rhs_ammo_127x107mm: B_127x108_Ball
 	{
@@ -958,6 +1625,13 @@ class CfgAmmo
 		airFriction = -0.00065098;
 		typicalSpeed = 820;
 		caliber = 2.8;
+		audibleFire = 130;
+		visibleFire = 6;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 16;
+		suppressionRadiusHit = 16;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 16;
 	};
 	class rhs_ammo_127x108mm_x5: SubmunitionBase
 	{
@@ -965,6 +1639,13 @@ class CfgAmmo
 		airFriction = -0.00065098;
 		typicalSpeed = 820;
 		caliber = 2.8;
+		audibleFire = 130;
+		visibleFire = 6;
+		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 16;
+		suppressionRadiusHit = 16;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 16;
 	};
 	class rhs_ammo_145x115mm: rhs_ammo_127x107mm
 	{
@@ -972,9 +1653,13 @@ class CfgAmmo
 		airFriction = -0.00052;
 		typicalSpeed = 988;
 		caliber = 4.1;
-		audibleFire = 130;
+		audibleFire = 140;
 		visibleFire = 6;
 		visibleFireTime = 2;
+		suppressionRadiusBulletClose = 17;
+		suppressionRadiusHit = 17;
+		dangerRadiusBulletClose = 17;
+		dangerRadiusHit = 17;
 	};
 	*/
 };

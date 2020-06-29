@@ -5,7 +5,7 @@ class CfgPatches
 {
 	class t1_recoilFix
 	{
-		requiredaddons[] = {"A3_Weapons_F","ace_recoil","rhsusf_c_weapons"};
+		requiredaddons[] = {"A3_Data_F_Oldman_Loadorder","A3_Weapons_F","ace_recoil","rhsusf_c_weapons"};
 		units[] = {};
 		weapons[] = {};
 		magazines[] = {};
@@ -22,7 +22,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.28,3.0,0.22,0.22};
+		muzzleOuter[] = {0.28,3.0,0.245,0.245};
 		kickBack[] = {0.1,0.1};
 		temporary = 0.003;
 	};
@@ -33,7 +33,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.26,2.5,0.2,0.2};
+		muzzleOuter[] = {0.26,2.5,0.240,0.240};
 		kickBack[] = {0.09,0.09};
 		temporary = 0.003;
 	};
@@ -44,7 +44,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.25,2.0,0.175,0.175};
+		muzzleOuter[] = {0.25,2.0,0.235,0.235};
 		kickBack[] = {0.06,0.07};
 		temporary = 0.003;
 	};
@@ -55,7 +55,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.30,1.8,0.15,0.15};
+		muzzleOuter[] = {0.30,1.8,0.230,0.230};
 		kickBack[] = {0.055,0.065};
 		temporary = 0.003;
 	};
@@ -68,7 +68,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.8,1.45,0.15,0.14};
+		muzzleOuter[] = {0.8,1.45,0.245,0.225};
 		kickBack[] = {0.0525,0.0625};
 		temporary = 0.006;
 	};
@@ -79,7 +79,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.75,1.4,0.145,0.14};
+		muzzleOuter[] = {0.75,1.4,0.240,0.220};
 		kickBack[] = {0.0525,0.0625};
 		temporary = 0.006;
 	};
@@ -90,7 +90,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.25,1.35,0.13,0.13};
+		muzzleOuter[] = {0.25,1.35,0.215,0.215};
 		kickBack[] = {0.05,0.06};
 		temporary = 0.006;
 	};
@@ -101,7 +101,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.55,1.35,0.13,0.13};
+		muzzleOuter[] = {0.55,1.35,0.175,0.175};
 		kickBack[] = {0.055,0.065};
 		temporary = 0.006;
 	};
@@ -112,7 +112,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.5,1.3,0.1,0.1};
+		muzzleOuter[] = {0.5,1.3,0.170,0.170};
 		kickBack[] = {0.05,0.06};
 		temporary = 0.005;
 	};
@@ -123,7 +123,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.425,1.05,0.09,0.09};
+		muzzleOuter[] = {0.425,1.05,0.165,0.165};
 		kickBack[] = {0.05,0.06};
 		temporary = 0.005;
 	};
@@ -136,7 +136,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.25,1.0,0.125,0.13};
+		muzzleOuter[] = {0.25,1.0,0.210,0.230};
 		kickBack[] = {0.035,0.045};
 		temporary = 0.006;
 	};
@@ -147,7 +147,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.225,0.95,0.12,0.1275};
+		muzzleOuter[] = {0.225,0.95,0.205,0.225};
 		kickBack[] = {0.035,0.045};
 		temporary = 0.006;
 	};
@@ -160,7 +160,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.3,0.9,0.085,0.08};
+		muzzleOuter[] = {0.3,0.9,0.160,0.160};
 		kickBack[] = {0.04,0.05};
 		temporary = 0.005;
 	};
@@ -173,7 +173,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.2,0.9,0.11,0.125};
+		muzzleOuter[] = {0.2,0.9,0.200,0.220};
 		kickBack[] = {0.0325,0.0425};
 		temporary = 0.006;
 	};
@@ -184,7 +184,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.175,0.8,0.11,0.12};
+		muzzleOuter[] = {0.175,0.8,0.195,0.220};
 		kickBack[] = {0.03,0.0375};
 		temporary = 0.006;
 	};
@@ -195,7 +195,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.15,0.9,0.11,0.12};
+		muzzleOuter[] = {0.15,0.9,0.195,0.215};
 		kickBack[] = {0.0325,0.0425};
 		temporary = 0.005;
 	};
@@ -206,7 +206,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.14,0.85,0.11,0.11};
+		muzzleOuter[] = {0.14,0.85,0.190,0.190};
 		kickBack[] = {0.0325,0.0425};
 		temporary = 0.005;
 	};
@@ -217,7 +217,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.13,0.8,0.105,0.105};
+		muzzleOuter[] = {0.13,0.8,0.185,0.185};
 		kickBack[] = {0.03,0.04};
 		temporary = 0.005;
 	};
@@ -228,7 +228,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.12,0.7,0.1,0.1};
+		muzzleOuter[] = {0.12,0.7,0.180,0.180};
 		kickBack[] = {0.025,0.035};
 		temporary = 0.005;
 	};
@@ -241,7 +241,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.45,0.7,0.1,0.1};
+		muzzleOuter[] = {0.45,0.7,0.160,0.130};
 		kickBack[] = {0.0375,0.0475};
 		temporary = 0.00525;
 	};
@@ -252,7 +252,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.43,0.68,0.095,0.095};
+		muzzleOuter[] = {0.43,0.68,0.160,0.130};
 		kickBack[] = {0.037,0.047};
 		temporary = 0.00475;
 	};
@@ -263,7 +263,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.41,0.675,0.09,0.09};
+		muzzleOuter[] = {0.41,0.675,0.160,0.130};
 		kickBack[] = {0.037,0.047};
 		temporary = 0.005;
 	};
@@ -274,7 +274,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.4,0.65,0.085,0.085};
+		muzzleOuter[] = {0.4,0.65,0.155,0.125};
 		kickBack[] = {0.035,0.045};
 		temporary = 0.0045;
 	};
@@ -285,7 +285,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.27,0.625,0.08,0.08};
+		muzzleOuter[] = {0.27,0.625,0.150,0.120};
 		kickBack[] = {0.0325,0.0425};
 		temporary = 0.00425;
 	};
@@ -296,7 +296,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.26,0.61,0.08,0.08};
+		muzzleOuter[] = {0.26,0.61,0.145,0.115};
 		kickBack[] = {0.0325,0.0425};
 		temporary = 0.00415;
 	};
@@ -307,7 +307,7 @@ class cfgRecoils
 		muzzleInner[] = {0,0,0.1,0.1};
 		permanent = 0.1;
 		
-		muzzleOuter[] = {0.25,0.6,0.075,0.075};
+		muzzleOuter[] = {0.25,0.6,0.140,0.110};
 		kickBack[] = {0.0325,0.0425};
 		temporary = 0.004;
 	};

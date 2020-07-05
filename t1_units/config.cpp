@@ -134,6 +134,13 @@ class CfgPatches
 		};
 	};
 };
+class CfgEditorSubcategories
+{
+	class T1_EdSubcat_Support
+	{
+		displayName = "Support";
+	};
+};
 class CfgFactionClasses
 {
 	class T1_Units

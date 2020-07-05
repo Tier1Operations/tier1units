@@ -7,7 +7,8 @@ class CfgPatches
 {
 	class t1_armor
 	{
-		units[] = {
+		units[] =
+		{
 			"T1_Crewman_Standard_F",
 			"T1_Crew_Commander_Standard_F",
 			"T1_Sentinel_Commander_Standard_F",
@@ -21,14 +22,17 @@ class CfgPatches
 		weapons[] = {};
 		magazines[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {
+		requiredAddons[] =
+		{
 			"t1_units"
 		};
 	};
 };
-class cfgVehicles {
+class cfgVehicles
+{
     class T1_Soldier_F;
-	class T1_Crewman_Standard_F: T1_Soldier_F {
+	class T1_Crewman_Standard_F: T1_Soldier_F
+	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Special";
@@ -36,21 +40,24 @@ class cfgVehicles {
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {
+		weapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		respawnWeapons[] = {
+		respawnWeapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		magazines[] = {
+		magazines[] =
+		{
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -64,7 +71,8 @@ class cfgVehicles {
 			"SmokeShellBlue",
 			"SmokeShellRed"
 		};
-		respawnmagazines[] = {
+		respawnmagazines[] =
+		{
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -78,31 +86,36 @@ class cfgVehicles {
 			"SmokeShellBlue",
 			"SmokeShellRed"
 		};
-		linkedItems[] = {
+		linkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
-		respawnLinkedItems[] = {
+		respawnLinkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
-		items[] = {
+		items[] =
+		{
 			STDITEMS,
 			MEDICALITEMS
 		};
-		respawnItems[] = {
+		respawnItems[] =
+		{
 			STDITEMS,
 			MEDICALITEMS
 		};
 		engineer = 1;
 	};
-	class T1_Crew_Commander_Standard_F: T1_Soldier_F {
+	class T1_Crew_Commander_Standard_F: T1_Soldier_F
+	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Special";
@@ -110,21 +123,24 @@ class cfgVehicles {
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {
+		weapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		respawnWeapons[] = {
+		respawnWeapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		magazines[] = {			
+		magazines[] =
+		{			
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -140,7 +156,8 @@ class cfgVehicles {
 			"B_IR_Grenade",
 			"B_IR_Grenade"
 		};
-		respawnmagazines[] = {
+		respawnmagazines[] =
+		{
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -156,31 +173,36 @@ class cfgVehicles {
 			"B_IR_Grenade",
 			"B_IR_Grenade"
 		};
-		linkedItems[] = {
+		linkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
-		respawnLinkedItems[] = {
+		respawnLinkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
-		items[] = {
+		items[] =
+		{
 			STDITEMS,
 			MEDICALITEMS
 		};
-		respawnItems[] = {
+		respawnItems[] =
+		{
 			STDITEMS,
 			MEDICALITEMS
 		};
 		engineer = 1;
 	};
-	class T1_Sentinel_Commander_Standard_F: T1_Soldier_F {
+	class T1_Sentinel_Commander_Standard_F: T1_Soldier_F
+	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Special";
@@ -188,21 +210,24 @@ class cfgVehicles {
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {
+		weapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		respawnWeapons[] = {
+		respawnWeapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		magazines[] = {
+		magazines[] =
+		{
 			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -218,7 +243,8 @@ class cfgVehicles {
 			"B_IR_Grenade",
 			"B_IR_Grenade"
 		};
-		respawnmagazines[] = {
+		respawnmagazines[] =
+		{
 			"ACE_M84",			
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -234,14 +260,16 @@ class cfgVehicles {
 			"B_IR_Grenade",
 			"B_IR_Grenade"
 		};
-		linkedItems[] = {
+		linkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
-		respawnLinkedItems[] = {
+		respawnLinkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
@@ -254,7 +282,8 @@ class cfgVehicles {
 		engineer = 1;
 		detectSkill = 40;
 	};
-	class T1_Sentinel_Gunner_Standard_F: T1_Soldier_F {
+	class T1_Sentinel_Gunner_Standard_F: T1_Soldier_F
+	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Special";
@@ -262,21 +291,24 @@ class cfgVehicles {
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {
+		weapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		respawnWeapons[] = {
+		respawnWeapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		magazines[] = {
+		magazines[] =
+		{
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -290,7 +322,8 @@ class cfgVehicles {
 			"SmokeShellBlue",
 			"SmokeShellRed"
 		};
-		respawnmagazines[] = {
+		respawnmagazines[] =
+		{
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -304,14 +337,16 @@ class cfgVehicles {
 			"SmokeShellBlue",
 			"SmokeShellRed"
 		};
-		linkedItems[] = {
+		linkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
-		respawnLinkedItems[] = {
+		respawnLinkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
@@ -324,7 +359,8 @@ class cfgVehicles {
 		engineer = 1;
 		detectSkill = 40;
 	};
-	class T1_Sentinel_Driver_Standard_F: T1_Soldier_F {
+	class T1_Sentinel_Driver_Standard_F: T1_Soldier_F
+	{
 		scope = 2;
 		faction = "T1_Units";
 		vehicleClass = "Special";
@@ -332,21 +368,24 @@ class cfgVehicles {
 		uniformClass = "T1_U_Pilot_Camo";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\t1_textures\units\pilot\t1_pilot_camo_co.paa"};
-		weapons[] = {
+		weapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		respawnWeapons[] = {
+		respawnWeapons[] =
+		{
 			"T1_m4a1_carryhandle",
 			"T1_weap_sidearm_l",
 			"Throw",
 			"Put",
 			"ACE_Vector"
 		};
-		magazines[] = {
+		magazines[] =
+		{
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -360,7 +399,8 @@ class cfgVehicles {
 			"SmokeShellBlue",
 			"SmokeShellRed"
 		};
-		respawnmagazines[] = {
+		respawnmagazines[] =
+		{
 			"ACE_M84",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
 			"rhs_mag_30Rnd_556x45_M855A1_Stanag",
@@ -374,21 +414,24 @@ class cfgVehicles {
 			"SmokeShellBlue",
 			"SmokeShellRed"
 		};
-		linkedItems[] = {
+		linkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
-		respawnLinkedItems[] = {
+		respawnLinkedItems[] =
+		{
 			"V_BandollierB_rgr",
 			"H_HelmetCrew_B",
 			"ItemMap",
 			"ItemCompass",
 			"ItemWatch"
 		};
-		items[] = {
+		items[] =
+		{
 			STDITEMS,
 			"ACE_tourniquet",
 			"ACE_tourniquet",
@@ -396,7 +439,8 @@ class cfgVehicles {
 			"ACE_tourniquet",
 			"ACE_surgicalKit"
 		};
-		respawnItems[] = {
+		respawnItems[] =
+		{
 			STDITEMS
 		};
 		backpack = "T1_Kitbag_camo_medic";
@@ -405,7 +449,8 @@ class cfgVehicles {
 		T1_NoMedicIcon = 0;
 	};
 	class B_APC_Wheeled_01_cannon_F;
-	class t1_ifv_wheeled : B_APC_Wheeled_01_cannon_F {
+	class t1_ifv_wheeled : B_APC_Wheeled_01_cannon_F
+	{
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
 		transportmaxmagazines = 99999;
@@ -518,18 +563,21 @@ class cfgVehicles {
 				weapon = "rhs_weap_m72a7";
 				count = 6;
 			};
-			class _xx_launch_B_Titan_olive_F {
+			class _xx_launch_B_Titan_olive_F
+			{
 				count = 1;
 				weapon = "launch_B_Titan_olive_F";
 			};
-			class _xx_launch_O_Titan_short_F {
+			class _xx_launch_O_Titan_short_F
+			{
 				count = 1;
 				weapon = "launch_O_Titan_short_F";
 			};
 		};
 	};
 	class Leopard_2_wd;
-	class t1_tank : Leopard_2_wd {
+	class t1_tank : Leopard_2_wd
+	{
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
 		reportOwnPosition = 1;
@@ -539,7 +587,7 @@ class cfgVehicles {
 	{
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
-		editorSubcategory = "LOP_Support";	// should check where LOP_ comes from
+		editorSubcategory = "T1_EdSubcat_Support";
 		ace_repair_canRepair = 1;
 		ace_rearm_defaultSupply = 1200;
 		reportOwnPosition = 1;

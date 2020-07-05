@@ -1615,7 +1615,7 @@ class CfgVehicles {
 	{
 		faction = "T1_Units";
 		crew = "T1_Soldier_F";
-		editorSubcategory = "LOP_Support";	// should check where LOP_ comes from
+		editorSubcategory = "T1_EdSubcat_Support";
 		reportOwnPosition = 1;
 	};
 

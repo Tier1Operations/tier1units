@@ -1,7 +1,0 @@
-Edit:
-
-Dialog\Adjust.sqf
-Dialog\InputAimpoint.sqf
-Dialog\Transmit.sqf
-
-Misc\FormatCoordinates.sqf

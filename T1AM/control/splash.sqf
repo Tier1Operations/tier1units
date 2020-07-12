@@ -1,5 +1,4 @@
-private _ETA = _this select 0;
-private _asset = _this select 1;
+params ["_ETA","_asset"];
 
 _ETA = (_ETA - 5) max 1;
 sleep _ETA;

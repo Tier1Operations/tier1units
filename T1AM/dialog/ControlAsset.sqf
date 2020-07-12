@@ -12,17 +12,9 @@ if ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0)) exitWith {hint "No
 private _asset = T1AM_SelectedAsset;
 
 // Abort if there's something wrong with the leader's vehicle/gunner.
-private _veh = (vehicle (leader T1AM_SelectedAsset));
-private _gunner = gunner _veh;
-private _abort = false;
-switch true do {
-	case (isNull _gunner):{_abort = true};
-	case (isNull _veh):{_abort = true};
-	case (!(alive _gunner)):{_abort = true};
-	case (!(alive _veh)):{_abort = true};
-	case (vehicle _gunner == _gunner):{_abort = true};
-	case (!(canFire _veh)):{_abort = true};
-};
+private _tube = (vehicle (leader T1AM_SelectedAsset));
+private _gunner = gunner _tube;
+private _abort = [_tube, _gunner] call T1AM_Fnc_CheckAssetStatus;
 if (_abort) exitWith {
 	hint "Asset is not responding.";
 	[false] call T1AM_Fnc_EndMission;

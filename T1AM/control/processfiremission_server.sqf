@@ -2,39 +2,11 @@
 // If not local to server, change locality to server.
 // Then tell each tube to start the fire mission.
 
-private ["_tubes","_rounds","_profile","_pos","_warheadType","_missionType","_sheafSize","_fuse","_assetType",
-"_sheaf","_airburstHeight","_flightTime","_asset","_tubeType","_angle","_selectedTube","_prePlotted","_sender",
-"_posDisplay","_emptyTubes","_highestAmount","_tube","_tempAmount","_announcementUnit","_countLoaded","_countEmpty",
-"_text1","_text2","_GPSZAdjust","_tubesTemp","_isAnnouncementUnit","_nr","_posGPS","_sheafLineDir","_sheafLineDist","_badTubes"];
-
-
-_tubes = _this select 0;
-_rounds = _this select 1;
-_profile = _this select 2;
-_pos = _this select 3;
-_warheadType = _this select 4;
-_missionType = _this select 5;
-_sheafSize = _this select 6;
-_fuse = _this select 7;
-_assetType = _this select 8;
-_sheaf = _this select 9;
-_airburstHeight = _this select 10;
-_flightTime = _this select 11;
-_asset = _this select 12;
-_tubeType = _this select 13;
-_angle = _this select 14;
-_selectedTube = _this select 15;
-_prePlotted = _this select 16;
-_sender = _this select 17;
-_posDisplay = _this select 18;
-_GPSZAdjust = _this select 19;
-_posGPS = _this select 20;
-_sheafLineDir = _this select 21;
-_sheafLineDist = _this select 22;
+params["_tubes","_rounds","_profile","_pos","_warheadType","_missionType","_sheafSize","_fuse","_assetType","_sheaf","_airburstHeight","_asset","_tubeType","_angle","_prePlotted","_sender","_posDisplay","_GPSZAdjust","_posGPS","_sheafLineDir","_sheafLineDist"];
 
 
 // Check locality and change it to the server.
-_badTubes = [];
+private _badTubes = [];
 {
 	private _tube = _x;
 	private _timesWaited = 0;
@@ -76,24 +48,26 @@ _badTubes = [];
 
 // Check locality again and mark the tube as bad if it couldn't change locality.
 {
-	private _abort = false;
+	
 	private _tube = _x;
 	if (alive _tube) then {
-		if (!local _tube) then {
+		if (!local _tube) exitWith {
 			//DIAG_LOG format["PFM SERVER -- BAD TUBE: %1", _tube];
 			_badTubes pushback _tube;
-			_abort = true;
 		};
-	};
-	
-	if (!_abort) then {
+		
+		private _gunner = gunner _tube;
+		if (!isNull _gunner and {isPlayer _gunner}) exitWith {
+			//DIAG_LOG format["PFM SERVER -- BAD GUNNER: %1", _tube];
+			_badTubes pushback _tube;
+		};
+		
+		private _abort = false;
 		{
-			if (alive _x) then {
-				if (!local _x) then {
-					//DIAG_LOG format["PFM SERVER -- BAD CREW: %1 in %2", _x, _tube];
-					_badTubes pushback _tube;
-					_abort = true;
-				};
+			if (alive _x and !local _x) then {
+				//DIAG_LOG format["PFM SERVER -- BAD CREW: %1 in %2", _x, _tube];
+				_badTubes pushback _tube;
+				_abort = true;
 			};
 			if (_abort) exitWith {};
 		} forEach crew _tube;
@@ -105,21 +79,23 @@ _badTubes = [];
 // Load magazine.
 if ((_missionType == "SPOT") or (_missionType == "FFE")) then {
 	{
-		_x setVariable ["T1AM_outOfAmmo", false];
-		[_x,_warheadType,_assetType] call T1AM_Fnc_LoadMagazine;
+		if (!(_x in _badTubes)) then {
+			_x setVariable ["T1AM_outOfAmmo", false];
+			[_x, _warheadType, _assetType] call T1AM_Fnc_LoadMagazine;
+		};
 	} forEach _tubes;
 };
 
 
-_announcementUnit = objNull;
-_emptyTubes = [];
-_highestAmount = -999;
-_tubesTemp = _tubes;
+private _announcementUnit = objNull;
+private _emptyTubes = [];
+private _highestAmount = -999;
+private _tubesTemp = _tubes;
 
 //DIAG_LOG format["PFM SERVER -- TUBES BEFORE LOOP: %1", _tubes];
 
 {
-	_tube = _x;
+	private _tube = _x;
 	private _noGunner = false;
 	
 	// Check if it has a gunner.
@@ -147,7 +123,7 @@ _tubesTemp = _tubes;
 		// Find out if this unit has the most ammo of the requested type.
 		// If so, make this unit do all the annoucements, ie. "shot", "rounds complete", etc.
 		// This unit will also be in charge of monitoring and ending the fire mission properly.
-		_tempAmount = 0;
+		private _tempAmount = 0;
 		
 		{
 			if (_x select 0 == _warheadType) then {_tempAmount = _tempAmount + (_x select 1)};
@@ -163,7 +139,7 @@ _tubesTemp = _tubes;
 
 //DIAG_LOG format["PFM SERVER -- TUBES AFTER LOOP: %1", _tubes];
 
-_countLoaded = count _tubes;
+private _countLoaded = count _tubes;
 
 
 // If the tubes list is empty at this point, it means no unit has the requested ammmo, so abort.
@@ -179,7 +155,7 @@ if (_countLoaded == 0) exitWith {
 
 // Reset vars.
 _asset setVariable ["T1AM_CheckFire", false];
-_nr = _asset getVariable ["T1AM_missionNr", 0];
+private _nr = _asset getVariable ["T1AM_missionNr", 0];
 _asset setVariable ["T1AM_missionNr", _nr + 1];
 _asset setVariable ["T1AM_amountAborted", 0];
 // Mark first sector as already fired at because the announcement unit will fire at it.
@@ -188,10 +164,10 @@ _asset setVariable ["T1AM_sheafSectorsLine", [true,false,false,false,false,false
 
 
 // If there's at least 1 tube that is empty, show the players a message to indicate that.
-_countEmpty = count _emptyTubes;
+private _countEmpty = count _emptyTubes;
 if (_countEmpty > 0) then {
-	_text1 = "";
-	_text2 = "";
+	private _text1 = "";
+	private _text2 = "";
 	
 	switch true do {
 		case (_countLoaded == 1) : {_text1 = format["%1 unit will fire - ", _countLoaded]};
@@ -213,12 +189,14 @@ if (_countEmpty > 0) then {
 
 // Give orders to tubes that will participate in this mission.
 {
-	_tube = _x;
+	private _tube = _x;
 	
 	// Reset var.
 	_tube setVariable ["T1AM_ETA", 9999];
 	_tube setVariable ["T1AM_concludingMission", false];
+	_tube setVariable ["T1AM_hasFired", false];
 	
+	private _isAnnouncementUnit = false;
 	if (_tube == _announcementUnit) then {
 		_isAnnouncementUnit = true;
 	} else {
@@ -227,6 +205,6 @@ if (_countEmpty > 0) then {
 	
 	//DIAG_LOG format["PFM SERVER -- UNIT: %1 - _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
 	
-	[_tubes,_rounds,_profile,_pos,_warheadType,_missionType,_sheafSize,_fuse,_assetType,_sheaf,_airburstHeight,_flightTime,_asset,_tubeType,_angle,_selectedTube,_prePlotted,_sender,_posDisplay,_tube,_isAnnouncementUnit,_GPSZAdjust,_posGPS,_sheafLineDir,_sheafLineDist] execVM "T1AM\Control\Tube.sqf";
+	[_tubes,_rounds,_profile,_pos,_warheadType,_missionType,_sheafSize,_fuse,_assetType,_sheaf,_airburstHeight,_asset,_tubeType,_angle,_prePlotted,_sender,_posDisplay,_tube,_isAnnouncementUnit,_GPSZAdjust,_posGPS,_sheafLineDir,_sheafLineDist] spawn T1AM_Fnc_Tube;
 	
 } forEach _tubes;

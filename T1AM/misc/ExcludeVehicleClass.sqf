@@ -1,5 +1,7 @@
-// Excludes a vehicle classname from the artillery system
-_vehicleClass = _this;
+// Excludes a vehicle classname from the artillery system.
+
+params ["_vehicleClass"];
+
 while {(time < 4)} do {
 	sleep 0.5;
 };

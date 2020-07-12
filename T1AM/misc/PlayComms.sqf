@@ -1,17 +1,12 @@
 if (!hasInterface) exitWith {};
 
-private ["_asset","_messageCode","_audio","_side","_audioSet","_soundFile"];
-
-// Arty comms
-_asset = _this select 0;
-_messageCode = _this select 1;
-_audio = _this select 2;
+params ["_asset","_messageCode","_audio"];
 
 //DIAG_LOG format["COMMSPLAY - _asset: %1", _asset];
 //DIAG_LOG format["COMMSPLAY - _messageCode: %1", _messageCode];
 //DIAG_LOG format["COMMSPLAY - _audio: %1", _audio];
 
-_side = (side (leader _asset));
+private _side = (side (leader _asset));
 if (_side != (side player)) exitWith {
 	//DIAG_LOG format["COMMSPLAY - EXITING BECAUSE SIDE - _side: %1 - side player: %2", _side, side player];
 };
@@ -22,13 +17,13 @@ if (!(call T1AM_Fnc_HasRadio)) exitWith {
 };
 
 // Which set of audio files should be used?
-_audioSet = "";
-
+private _soundFile = "";
 
 if (_audio == "beep") then {
 	_soundFile = "T1AM_Beep";
 } else {
 	
+	private _audioSet = "";
 	switch true do {
 		case (_side == West) : {_audioSet = T1AM_AudioBLUFOR};
 		case (_side == East) : {_audioSet = T1AM_AudioREDFOR};

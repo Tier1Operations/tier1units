@@ -17,7 +17,7 @@ if (_falloff > 5) then {_falloff = 5;};
 _listNear = _destroyPos nearEntities _maxRange; 
 
 {
-for [{_i = 0}, {_i < (_conc)}, {_i = _i + 1}] do{
-	nul = [_x, _destroyPos, _effRange, _falloff] execVM "T1AM\Airburst\OriginToTarget.sqf";
-	}
+	for [{_i = 0}, {_i < (_conc)}, {_i = _i + 1}] do {
+		[_x, _destroyPos, _effRange, _falloff] execVM "T1AM\Airburst\OriginToTarget.sqf";
+	};
 }foreach _listNear;

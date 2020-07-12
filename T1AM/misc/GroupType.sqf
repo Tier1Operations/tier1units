@@ -1,20 +1,17 @@
-// Returns the type of group, based upon the typeOf of the vehicle of the group leader
+// Returns the type of group, based upon the typeOf of the vehicle of the group leader.
 
-private["_group","_vehicle","_vehicleType","_groupType","_baseTypes","_baseType"];
-//disableSerialization;
-_group = _this select 0;
-_vehicle = vehicle (leader _group);
-_vehicleType = typeOf _vehicle;
-_groupType = "Vehicle";
+params ["_group"];
 
-_baseTypes = T1AM_ArtyParents;
-_baseType = "";
-_parents = [(configfile >> "CfgVehicles" >> _vehicleType),true] call BIS_fnc_returnParents;
+private _vehicle = vehicle (leader _group);
+private _vehicleType = typeOf _vehicle;
+private _groupType = "Vehicle";
 
-while {((count _baseTypes) > 0)} do {
-	_baseType = _baseTypes select 0;
-	_baseTypes = _baseTypes - [_baseType];
+private _baseTypes = T1AM_ArtyParents;
+private _parents = [(configfile >> "CfgVehicles" >> _vehicleType),true] call BIS_fnc_returnParents;
+
+{
+	private _baseType = _x;
 	if (_baseType in _parents) exitWith {_groupType = "Artillery"};
-};
+} forEach _baseTypes;
 
 _groupType

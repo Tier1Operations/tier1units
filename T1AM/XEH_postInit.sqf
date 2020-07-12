@@ -30,7 +30,6 @@ T1AM_Elevation = 0;
 
 // Parent classes that show a unit inherits from an artillery piece
 T1AM_ArtyParents = ["StaticMortar","StaticCannon","MBT_01_mlrs_base_F","MBT_01_arty_base_F","B_MBT_01_mlrs_base_F","B_MBT_01_arty_base_F","O_MBT_02_arty_base_F","O_MBT_02_arty_F","I_MBT_01_arty_F","I_MBT_01_mlrs_F","rhs_2s3_tv","rhs_bm21_msv_01"];
-//T1AM_ArtyParentsRHS = ["rhs_bm21_msv_01","rhs_2s3_tv"];
 // Acceptable radio types
 T1AM_RadioTypes = ["ItemRadio"];
 
@@ -39,7 +38,6 @@ T1AM_WarheadTypes = ["HE","Flare","Smoke","Guided","Cluster","Laser.G","Mine","A
 T1AM_WarheadType = "";
 T1AM_Dispersion = 0;
 T1AM_Angle = "Low";
-//T1AM_WaitForAmmoDisplay = false;
 T1AM_LastMission = "";
 T1AM_LastAngle = "";
 T1AM_LastRounds = 1;
@@ -61,7 +59,7 @@ T1AM_LastAimpointX = "";
 T1AM_LastAimpointY = "";
 
 
-// Units that will be added to the arty computer, even though they normally wouldn't be supported. Used for special units.
+// Units that will be added to the arty computer, even though they normally wouldn't be added. Used for special units.
 if (isNil "T1AM_ApproveVehiclesOverride") then {
 	T1AM_ApproveVehiclesOverride = ["B_Ship_MRLS_01_F"];
 };
@@ -69,7 +67,7 @@ if (isNil "T1AM_ApproveVehiclesOverride") then {
 
 // Rounds that can be used for airburst fire.
 if (isNil "T1AM_AirburstRounds") then {
-	T1AM_AirburstRounds = ["8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_guided","8Rnd_82mm_Mo_LG","32Rnd_155mm_Mo_shells","2Rnd_155mm_Mo_guided","2Rnd_155mm_Mo_LG","12Rnd_230mm_rockets","rhs_1Rnd_m821_HE","RHS_mag_m1_he_12","rhs_mag_HE_2a33","rhs_mag_3vo18_10","rhs_mag_3of56_10","rhs_mag_155mm_m795_28"];
+	T1AM_AirburstRounds = ["8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_guided","8Rnd_82mm_Mo_LG","32Rnd_155mm_Mo_shells","2Rnd_155mm_Mo_guided","2Rnd_155mm_Mo_LG","32Rnd_155mm_Mo_shells_O","2Rnd_155mm_Mo_guided_O","4Rnd_155mm_Mo_LG_O","12Rnd_230mm_rockets","RHS_mag_m1_he_12","rhs_mag_HE_2a33","rhs_mag_3vo18_10","rhs_mag_3of56_10","rhs_mag_155mm_m795_28"];
 };
 
 
@@ -84,7 +82,7 @@ if (isNil "T1AM_GPSGuidedTypes") then {
 // Laser needs to be within 500 meters of the chosen target pos.
 // If it gained a lock and then loses lock on the laser, it will go for the last known position of the laser.
 if (isNil "T1AM_GPSLaserTypes") then {
-	T1AM_GPSLaserTypes = ["2Rnd_155mm_Mo_LG","2Rnd_155mm_Mo_Cluster","6Rnd_155mm_Mo_mine","6Rnd_155mm_Mo_AT_mine","magazine_Missiles_Cruise_01_x18","magazine_Missiles_Cruise_01_Cluster_x18"];
+	T1AM_GPSLaserTypes = ["2Rnd_155mm_Mo_LG","2Rnd_155mm_Mo_Cluster","6Rnd_155mm_Mo_mine","6Rnd_155mm_Mo_AT_mine","4Rnd_155mm_Mo_LG_O","2Rnd_155mm_Mo_Cluster_O","6Rnd_155mm_Mo_mine_O","6Rnd_155mm_Mo_AT_mine_O","magazine_Missiles_Cruise_01_x18","magazine_Missiles_Cruise_01_Cluster_x18"];
 };
 
 
@@ -98,7 +96,7 @@ if (isNil "T1AM_GPSLaserTypes") then {
 // If it loses lock, it will use GPS instead.
 // If airburst is enabled, it will use GPS instead.
 if (isNil "T1AM_GPSSeekerTypes") then {
-	T1AM_GPSSeekerTypes = ["2Rnd_155mm_Mo_guided"];
+	T1AM_GPSSeekerTypes = ["2Rnd_155mm_Mo_guided","2Rnd_155mm_Mo_guided_O"];
 };
 
 
@@ -106,8 +104,12 @@ if (isNil "T1AM_GPSSeekerTypes") then {
 // Will go where the laser is.
 // If it loses lock, it will randomly hit around the last known position of the laser.
 if (isNil "T1AM_LaserTypes") then {
-	T1AM_LaserTypes = ["8Rnd_82mm_Mo_LG","rhs_mag_LASER_2a33","rhs_mag_155mm_m712_2"];
+	T1AM_LaserTypes = ["8Rnd_82mm_Mo_LG","rhs_mag_LASER_2a33","rhs_mag_3of69m_2","rhs_mag_155mm_m712_2"];
 };
+
+
+// Groups, vehicles and classnames that are excluded from the system.
+if (isNil "T1AM_Exclude") then {T1AM_Exclude = ["rhsgref_cdf_b_reg_d30_at","rhsgref_ins_d30_at","rhs_D30_at_msv","rhs_D30_at_vdv","rhs_D30_at_vmf","rhsgref_cdf_reg_d30_at","rhsgref_ins_g_d30_at","rhsgref_nat_d30_at","rhs_9k79","rhs_9k79_K","rhs_9k79_B"]};
 
 
 // New controlled asset
@@ -129,29 +131,26 @@ T1AM_SelectedTubeIndex = 0;
 // Fire mission the player is currently working on
 T1AM_FireMissionCurrent = [];
 
-// What type of mission (FFE = Fire For Effect, SPOT = 1 Spotting round, PLOT = Plot mission, but to not execute it)
+// What type of mission.
 T1AM_MissionType = "";
-// All fire missions performed so far (except spotting rounds)
+// All fire missions performed so far (except spotting rounds).
 if (isNil "T1AM_AllMissions") then {T1AM_AllMissions = []};
-// Cut down plotting time for repeast or pre-plotted missions
+// Cut down plotting time for repeast or pre-plotted missions.
 T1AM_PrePlotted = false;
-// Selected pre-plotted mission
+// Selected pre-plotted mission.
 T1AM_SelectedPrePlotted = [];
 
-// Which audio set should each side use (US, Greek, Persian, None)
+// Which audio set should each side use (US, Greek, Persian, None).
 T1AM_AudioBLUFOR = "US";
 T1AM_AudioREDFOR = "PER";
 T1AM_AudioINDEP = "GRE";
 
 // Restrict artillery users to certain types and classes?
 if (isNil "T1AM_AuthorizeEveryone") then {T1AM_AuthorizeEveryone = true};
-// If so, vehicle classes that are authorized.
+// If so, vehicle classes that are authorized (config classes).
 if (isNil "T1AM_AuthorizedClasses") then {T1AM_AuthorizedClasses = []};
-// If so, units that are authorized (to be set by script).
+// If so, units that are authorized (variables set by script or editor).
 if (isNil "T1AM_AuthorizedVariables") then {T1AM_AuthorizedVariables = []};
-
-// Groups, vehicles and classnames that are excluded from the system
-if (isNil "T1AM_Exclude") then {T1AM_Exclude = []};
 
 call T1AM_Fnc_GetMapGridData;
 [] spawn T1AM_Fnc_ApproveVehicles;

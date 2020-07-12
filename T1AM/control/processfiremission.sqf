@@ -1,59 +1,25 @@
 // Process more stuff before sending it to the server.
 
-private["_fireMission","_asset","_plotNr","_GPSZAdjust","_pos","_arrayTRP","_pos2",
-"_warheadType","_rounds","_distance","_missionType","_angle","_sender","_timeStamp",
-"_prePlotted","_sheaf","_fuse","_sheafSize","_posDisplay","_airburstHeight","_firstRound",
-"_tubes","_tubes","_vehicle","_assetType","_tubeType","_ammoType","_assetCallsign",
-"_displayName","_message","_timeBetweenRounds","_minimumRange","_maximumRange",
-"_flightTime","_sleepTime","_tubeArray","_posGPS","_sheafLineDir","_sheafLineDist"];
-
 if (T1AM_Debug_Mode) then {systemChat "Process Fire Mission"};
 
-_fireMission = _this;
+params["_asset","_pos","_warheadType","_rounds","_distance","_missionType","_angle","_sender","_timeStamp","_prePlotted","_sheaf","_fuse","_sheafSize","_posDisplay","_airburstHeight","_plotNr","_GPSZAdjust","_posGPS","_sheafLineDir","_sheafLineDist"];
 
-_asset = _fireMission select 0;
-_pos = _fireMission select 1;
-_warheadType = _fireMission select 2;
-_rounds = _fireMission select 3;
-_distance = _fireMission select 4;
-_missionType = _fireMission select 5;
-_angle = _fireMission select 6;
-_sender = _fireMission select 7;
-//_timeStamp = _fireMission select 8;
-_prePlotted = _fireMission select 9;
-_sheaf = _fireMission select 10;
-_fuse = _fireMission select 11;
-_sheafSize = _fireMission select 12;
-_posDisplay = _fireMission select 13;
-_airburstHeight = _fireMission select 14;
-_plotNr = _fireMission select 15;
-_GPSZAdjust = _fireMission select 16;
-_posGPS = _fireMission select 17;
-_sheafLineDir = _fireMission select 18;
-_sheafLineDist = _fireMission select 19;
-
+private _fireMission = _this;
 
 T1AM_AssetsBusy = T1AM_AssetsBusy + [_asset];
 publicVariable "T1AM_AssetsBusy";
+private _tubes = [_asset] call T1AM_Fnc_GroupVehicles;
 
-_firstRound = true;
-
-_tubes = [];
-_tubes = [_asset] call T1AM_Fnc_GroupVehicles;
-_type = "";
-_tube = objNull;
-
-_vehicle = T1AM_SelectedTube;
-_selectedTube = T1AM_SelectedTube;
-_assetType = _vehicle call T1AM_Fnc_AssetType;
-if (_assetType == "INVALID") exitWith {
+private _vehicle = T1AM_SelectedTube;
+private _assetType = [_vehicle] call T1AM_Fnc_AssetType;
+if (_assetType == "") exitWith {
 	[_asset,"Invalid asset type.","Negative"] call T1AM_Fnc_SendComms;
 	T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
 	publicVariable "T1AM_AssetsBusy";
 };
 
 
-_profile = [];
+private _profile = [];
 if (_assetType == "Mortar") then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMortar};
 if ((_assetType == "Cannon") and {_angle == "Low"}) then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonLA};
 if ((_assetType == "Cannon") and {_angle == "High"}) then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonHA};
@@ -62,70 +28,69 @@ if ((_assetType == "Rocket") and {_angle == "High"}) then {_profile = [_warheadT
 if (_assetType == "MK41") then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMK41};
 if (_assetType == "BM21") then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileBM21};
 
-_tubeType = weapons _vehicle select 0;
-_ammoType = getText (configFile >> "CfgMagazines" >> _warHeadType >> "displayName");
-_assetCallsign = [_asset] call T1AM_Fnc_TrimGroupName;
-_displayName = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
+private _tubeType = weapons _vehicle select 0;
+private _ammoType = getText (configFile >> "CfgMagazines" >> _warHeadType >> "displayName");
+private _assetCallsign = [_asset] call T1AM_Fnc_TrimGroupName;
+private _displayName = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
 
-_message = format ["%1 this is %2. %3 x %4 firing %5, %6 rounds, %7 sheaf, %8 %9 fuse, over.",_sender,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_sheaf,_fuse];
+private _message = format ["%1 this is %2. %3 x %4 firing %5, %6 rounds, %7 sheaf, %8 %9 fuse, over.",_sender,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_sheaf,_fuse];
 if (_missionType == "SPOT") then {_message = format ["%1 this is %2. %3 x %4 firing %5, %6 round, %7 %8 fuse, over.",_sender,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_fuse]};
+[_asset,_message,"MTO"] call T1AM_Fnc_SendComms;
 
-if (_firstRound) then {
-	[_asset,_message,"MTO"] call T1AM_Fnc_SendComms;
-} else {
-	if (_missionType == "FFE") then {[_asset,_message,"beep"] call T1AM_Fnc_SendComms};
-};
+private _timeBetweenRounds = _profile select 0;
+private _minimumRange = _profile select 1;
+private _maximumRange = _profile select 2;
 
-_timeBetweenRounds = _profile select 0;
-_minimumRange = _profile select 1;
-_maximumRange = _profile select 2;
-
-// Obsolete
-_flightTime = 0;
-
-_sleepTime = 6 + (random 5);
+private _sleepTime = 6 + (random 5);
 if (T1AM_Debug_Mode) then {_sleepTime = 0};
 
 if (_distance < _minimumRange) exitWith {
-	sleep _sleepTime;
-	[_asset,"Negative, under minimum range.","Negative"] call T1AM_Fnc_SendComms;
-	T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
-	publicVariable "T1AM_AssetsBusy";
+	[_asset,_sleepTime] spawn {
+		params ["_asset","_sleepTime"];
+		sleep _sleepTime;
+		[_asset,"Negative, under minimum range.","Negative"] call T1AM_Fnc_SendComms;
+		T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
+		publicVariable "T1AM_AssetsBusy";
+	};
 };
 if (_distance > _maximumRange) exitWith {
-	sleep _sleepTime;
-	[_asset,"Negative, out of range.","Negative"] call T1AM_Fnc_SendComms;
-	T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
-	publicVariable "T1AM_AssetsBusy";
+	[_asset,_sleepTime] spawn {
+		params ["_asset","_sleepTime"];
+		sleep _sleepTime;
+		[_asset,"Negative, out of range.","Negative"] call T1AM_Fnc_SendComms;
+		T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
+		publicVariable "T1AM_AssetsBusy";
+	};
 };
 
-sleep 1;
-
-// PERFORM MISSIONS //
-
+// PERFORM MISSIONS
 if (_missionType == "PLOT") exitWith {
-	sleep 20 + (random 5);
-	[_asset, format["Fire mission registered: TRP-%1", _plotNr], "FireMissionReady"] call T1AM_Fnc_SendComms;
-	T1AM_AllMissions = T1AM_AllMissions + [_fireMission];
-	publicVariable "T1AM_AllMissions";
-	T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
-	publicVariable "T1AM_AssetsBusy";
-	
-	_pos2 = _posDisplay;
-	
-	_marker = createMarker [format ["T1AM_MARKER_TRP_%1_%2_%3", _asset, _plotNr, time], _pos2];
-	_marker setMarkerShape "ICON";
-	_marker setMarkerType "mil_destroy";
-	_marker setMarkerColor "ColorBlack";
-	_marker setMarkerAlpha 0.4;
-	_marker setMarkerText ((format["%1", _asset]) + (format["|TRP-%1", _plotNr]));
-	
-	_arrayTRP = _asset getVariable ["T1AM_arrayTRP", nil];
-	if (isNil "_arrayTRP") then {
-		_asset setVariable ["T1AM_arrayTRP", [_pos2], true];
-	} else {
-		_arrayTRP pushback _pos2;
-		_asset setVariable ["T1AM_arrayTRP", _arrayTRP, true];
+	[_asset,_fireMission,_plotNr,_posDisplay] spawn {
+		params ["_asset","_fireMission","_plotNr","_posDisplay"];
+		
+		sleep 20 + (random 5);
+		[_asset, format["Fire mission registered: TRP-%1", _plotNr], "FireMissionReady"] call T1AM_Fnc_SendComms;
+		T1AM_AllMissions = T1AM_AllMissions + [_fireMission];
+		publicVariable "T1AM_AllMissions";
+		T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
+		publicVariable "T1AM_AssetsBusy";
+		
+		private _pos2 = _posDisplay;
+		
+		private _marker = createMarker [format ["T1AM_MARKER_TRP_%1_%2_%3", _asset, _plotNr, time], _pos2];
+		_marker setMarkerShape "ICON";
+		_marker setMarkerType "mil_destroy";
+		_marker setMarkerColor "ColorBlack";
+		_marker setMarkerAlpha 0.4;
+		_marker setMarkerText ((format["%1", _asset]) + (format["|TRP-%1", _plotNr]));
+		
+		private _arrayTRP = _asset getVariable ["T1AM_arrayTRP", nil];
+		if (isNil "_arrayTRP") then {
+			_asset setVariable ["T1AM_arrayTRP", [_pos2], true];
+		} else {
+			_arrayTRP pushback _pos2;
+			_asset setVariable ["T1AM_arrayTRP", _arrayTRP, true];
+		};
 	};
 };
 
@@ -137,11 +102,9 @@ if (_missionType == "SPOT") then {_tubes = [T1AM_SelectedTube]};
 
 
 // Send fire mission to the server.
-_tubeArray = [_tubes,_rounds,_profile,_pos,_warheadType,_missionType,_sheafSize,_fuse,_assetType,_sheaf,_airburstHeight,_flightTime,_asset,_tubeType,_angle,_selectedTube,_prePlotted,_sender,_posDisplay,_GPSZAdjust,_posGPS,_sheafLineDir,_sheafLineDist];
-[_tubeArray,"T1AM\Control\ProcessFireMission_server.sqf"] remoteExec ["BIS_fnc_execVM", 2]; 
+private _tubeArray = [_tubes,_rounds,_profile,_pos,_warheadType,_missionType,_sheafSize,_fuse,_assetType,_sheaf,_airburstHeight,_asset,_tubeType,_angle,_prePlotted,_sender,_posDisplay,_GPSZAdjust,_posGPS,_sheafLineDir,_sheafLineDist];
+_tubeArray remoteExec ["T1AM_Fnc_ProcessFireMission_Server", 2]; 
 
-
-// This sleep is for the initial processing for the fire mission at the tube level and waiting for the first shot to be fired
 if (_missionType == "FFE") then {
 	T1AM_AllMissions = T1AM_AllMissions + [_fireMission];
 	publicVariable "T1AM_AllMissions";

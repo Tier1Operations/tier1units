@@ -1,5 +1,7 @@
-// Excludes a group from the artillery system
-_group = _this;
+// Excludes a group from the artillery system.
+
+params ["_group"];
+
 while {(time < 4)} do {
 	sleep 0.5;
 };

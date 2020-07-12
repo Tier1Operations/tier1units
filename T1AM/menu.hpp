@@ -647,7 +647,7 @@ class T1AM_DialogControl
 		{
 			idc = -1;
 			text = "<<";
-			action = "[""Previous""] execVM 'T1AM\Dialog\ChangeTube.sqf'";
+			action = "[""Previous""] call T1AM_Fnc_ChangeTube";
 			x = T1AM_COL + (T1AM_COLINC * 5);
 			y = T1AM_ROW + (T1AM_ROWINC * 0);
 			w = T1AM_BUTTON_W / 2;
@@ -659,7 +659,7 @@ class T1AM_DialogControl
 		{
 			idc = -1;
 			text = ">>";
-			action = "[""Next""] execVM 'T1AM\Dialog\ChangeTube.sqf'";
+			action = "[""Next""] call T1AM_Fnc_ChangeTube";
 			x = T1AM_COL + (T1AM_COLINC * 5.5);
 			y = T1AM_ROW + (T1AM_ROWINC * 0);
 			w = T1AM_BUTTON_W / 2;
@@ -824,7 +824,7 @@ class T1AM_DialogControl
 		{
 			idc = -1;
 			text = "Transmit";
-			onButtonClick = "[] execVM 'T1AM\Dialog\Transmit.sqf'";
+			onButtonClick = "call T1AM_Fnc_Transmit";
 			x = T1AM_COL + (T1AM_COLINC * 0);
 			y = T1AM_ROW + (T1AM_ROWINC * 15);
 			w = T1AM_BUTTON_W * 1.5;
@@ -897,7 +897,7 @@ class T1AM_DialogControl
 		{
 			idc = 212;
 			text = "";
-			onLBSelChanged = "[] execVM 'T1AM\Dialog\SelectFuse.sqf'";
+			onLBSelChanged = "call T1AM_Fnc_SelectFuse";
 			x = T1AM_COL + (T1AM_COLINC * 3);
 			y = T1AM_ROW + (T1AM_ROWINC * 12);
 			w = T1AM_BUTTON_W * 2;

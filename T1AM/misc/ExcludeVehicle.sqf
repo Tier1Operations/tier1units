@@ -1,5 +1,7 @@
-// Excludes a vehicle from the artillery system
-_vehicle = _this;
+// Excludes a vehicle from the artillery system.
+
+params ["_vehicle"];
+
 while {(time < 4)} do {
 	sleep 0.5;
 };

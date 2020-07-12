@@ -1,58 +1,6 @@
 // Begin the actual fire mission, ie. find the aim pos, tell the AI to aim/fire, etc.
 
-
-// Exit if the tube is not local.
-if (!(local (_this select 19))) exitWith {};
-
-
-private ["_tube","_rounds","_profile","_pos","_warheadType","_missionType","_sheafSize",
-"_fuse","_assetType","_sheaf","_airburstHeight","_flightTime","_asset","_tubeType","_trackEH",
-"_tube","_wvd","_x","_y","_z","_bestCharge","_bestETAHigh",
-"_bestETALow","_flightTime","_timeBetweenRounds","_minimumRange","_maximumRange","_distance",
-"_vx","_vy","_vx","_vy","_dx","_dy","_specialEH","_action","_airburstEH","_doAirburst",
-"_scatter","_scatter2","_longRangeGuided","_tubesTemp","_selectedTube","_tubeIndex","_loaded",
-"_magazineClass","_firstRound","_g","_alt","_distance","_highAngle","_highETA","_lowAngle",
-"_lowETA","_angle","_ETA","_weapon","_warheadType","_modes","_ammoInitSpeed","_artyAlt",
-"_gunAngle","_sleepTime","_T1AM_SelectedTube","_fireCenterFirst","_outOfAmmo","_infoDummyNetID",
-"_arrayTRP","_closeToTRP","_tubes","_endMission","_modHigh","_realDistance","_modLow","_root",
-"_switchedAmmoTime","_bestETA","_bestAngle","_vel","_c","_ha","_la","_hETA",
-"_lETA","_wait","_posDisplay","_elevationMod","_check","_posTube",
-"_horDegrees","_allAborted","_txt","_regularMaxRange","_abortAdd","_isAnnouncementUnit",
-"_impossibleShot","_allImpossibleShot","_allOutOfAmmo","_verDegrees","_posAGL","_sender",
-"_GPSZAdjust","_lastFiringPos","_chosenTargetPos","_lastGunAngle","_prePlotted",
-"_switchedAmmo","_infoDummy","_scatterSpread","_unguidedCEP","_chargesArrayLow",
-"_chargesArrayHigh","_findBestCharge","_driver","_posGPS","_sheafLineDir","_sheafLineDist", "_checkFire",
-"_isMK41","_ammo","_ammoMaxSpeed"];
-
-_tubes = _this select 0;
-_rounds = _this select 1;
-_profile = _this select 2;
-_pos = _this select 3;
-_warheadType = _this select 4;
-_missionType = _this select 5;
-_sheafSize = _this select 6;
-_fuse = _this select 7;
-_assetType = _this select 8;
-_sheaf = _this select 9;
-_airburstHeight = _this select 10;
-_flightTime = _this select 11;
-_asset = _this select 12;
-_tubeType = _this select 13;
-_gunAngle = _this select 14;
-_T1AM_SelectedTube = _this select 15;
-_prePlotted = _this select 16;
-_sender = _this select 17;
-_posDisplay = _this select 18;
-_tube = _this select 19;
-_isAnnouncementUnit = _this select 20;
-_GPSZAdjust = _this select 21;
-_posGPS = _this select 22;
-_sheafLineDir = _this select 23;
-_sheafLineDist = _this select 24;
-
-
-// Will this use vanilla targeting?
-_isMK41 = if (_assetType == "MK41") then {true} else {false};
+params["_tubes","_rounds","_profile","_pos","_warheadType","_missionType","_sheafSize","_fuse","_assetType","_sheaf","_airburstHeight","_asset","_tubeType","_gunAngle","_prePlotted","_sender","_posDisplay","_tube","_isAnnouncementUnit","_GPSZAdjust","_posGPS","_sheafLineDir","_sheafLineDist"];
 
 
 // Set crew properties.
@@ -63,34 +11,24 @@ _isMK41 = if (_assetType == "MK41") then {true} else {false};
 	_x disableAI "AUTOTARGET";
 } forEach (crew _tube);
 
-_driver = driver _tube;
+private _driver = driver _tube;
 if (!isNull _driver) then {
 	_driver setVariable ["T1AM_aiMove", _driver checkAIFeature "MOVE"];
 	_driver disableAI "MOVE";
 };
 
-_gunner = gunner _tube;
-_originalAimingSpeed = _gunner skill "aimingSpeed";
-_originalReloadSpeed = _gunner skill "ReloadSpeed";
-_gunner setSkill ["ReloadSpeed", 1];
-_gunner setSkill ["aimingSpeed", 1];
 
-
-// If mag was changed, wait for reload. You need to wait at least 18 seconds to circumvent an aiming bug.
+// If there's a waiting time on the unit, then wait.
+private _mustWait = false;
 private _waitingTime = _tube getVariable ["T1AM_waitingTime", 0];
+private _mustWaitTime = 0;
 if (_waitingTime > 0) then {
-	_switchedAmmo = true;
-	private _ammoTimeout = time + _waitingTime;
-	_switchedAmmoTime = (_ammoTimeOut - time) max 0;
-	_timeout = time + 130; // Safety check.
-	waitUntil {sleep 0.5; (time > _ammoTimeout) or {time > _timeout}};
-} else {
-	_switchedAmmo = false;
+	_mustWait = true;
+	_waitingTime = time + _waitingTime;
+	_mustWaitTime = (_waitingTime - time) max 0;
+	private _timeout = time + 130; // Safety check.
+	waitUntil {sleep 0.5; (time > _waitingTime) or (time > _timeout)};
 };
-
-
-_trackEH = -9685;
-if (T1AM_DEBUG_ShowRounds) then {_trackEH = _tube addEventHandler ["fired",{_this spawn T1AM_Fnc_Track}]};
 
 //DIAG_LOG format["TUBE: %1 - POS BEFORE PRECISE CHECK: %2", _tube, _pos];
 
@@ -104,7 +42,7 @@ if ((_warheadType in T1AM_GPSGuidedTypes) or {_warheadType in T1AM_GPSLaserTypes
 // Make sure the given target pos is on the ground and not in the air.
 // This will make low angle shots a bit more accurate.
 // If GPS guided, then use GPSZAdjust for the altitude.
-_posAGL = ASLtoAGL _pos;
+private _posAGL = ASLtoAGL _pos;
 if (_posAGL select 2 > 0.2) then {
 	private _alt = 0.2;		// Slightly above the ground to avoid bugs.
 	if ((_warheadType in T1AM_GPSGuidedTypes) or {_warheadType in T1AM_GPSLaserTypes} or {_warheadType in T1AM_GPSSeekerTypes}) then {
@@ -118,9 +56,9 @@ if (_posAGL select 2 > 0.2) then {
 // Create a temporary dummy object that can be used to store and send information between two threads.
 // We cannot save the variables on the tube because it might overwrite the variables of a mission that is still in progress,
 // ie. shells that are still in the air from the previous fire mission and the tube begins a new fire mission.
-_infoDummy = "Land_HelipadEmpty_F" createVehicle [0,0,0];
+private _infoDummy = "Land_HelipadEmpty_F" createVehicle [0,0,0];
 _infoDummy setPosASL [-10000,-10000,-10000];
-_infoDummyNetID = _infoDummy call BIS_fnc_netId;
+private _infoDummyNetID = _infoDummy call BIS_fnc_netId;
 
 
 //DIAG_LOG format["TUBE: %1 -- _tube: %1", _tube];
@@ -136,11 +74,9 @@ _infoDummyNetID = _infoDummy call BIS_fnc_netId;
 //DIAG_LOG format["TUBE: %1 -- _assetType: %1", _assetType];
 //DIAG_LOG format["TUBE: %1 -- _sheaf: %1", _sheaf];
 //DIAG_LOG format["TUBE: %1 -- _airburstHeight: %1", _airburstHeight];
-//DIAG_LOG format["TUBE: %1 -- _flightTime: %1", _flightTime];
 //DIAG_LOG format["TUBE: %1 -- _asset: %1", _asset];
 //DIAG_LOG format["TUBE: %1 -- _tubeType: %1", _tubeType];
 //DIAG_LOG format["TUBE: %1 -- _gunAngle: %1", _gunAngle];
-//DIAG_LOG format["TUBE: %1 -- _T1AM_SelectedTube: %1", _T1AM_SelectedTube];
 //DIAG_LOG format["TUBE: %1 -- _prePlotted: %1", _prePlotted];
 //DIAG_LOG format["TUBE: %1 -- _sender: %1", _sender];
 //DIAG_LOG format["TUBE: %1 -- _posDisplay: %1", _posDisplay];
@@ -152,6 +88,8 @@ _infoDummyNetID = _infoDummy call BIS_fnc_netId;
 
 
 // Airburst stuff.
+private _elevationMod = 0;
+private _doAirburst = false;
 if (_fuse == "AIRBURST" or {_fuse == "MIXED"}) then {
 	
 	// Airburst.
@@ -169,106 +107,106 @@ if (_fuse == "AIRBURST" or {_fuse == "MIXED"}) then {
 	_pos = [_pos select 0, _pos select 1, (_pos select 2) + _elevationMod];
 	
 } else {
-	
 	// Not airburst.
-	
-	_elevationMod = 0;
-	_doAirburst = false;
 	_infoDummy setVariable ["T1AM_doAirburst", false];	// Tell the guide script NOT to do an airburst.
 };
 
 //DIAG_LOG format["TUBE: %1 - POS AFTER AIRBURST CHECK: %2", _tube, _pos];
 
-_x = _pos select 0;
-_y = _pos select 1;
-_z = _pos select 2;
 
+private _x = _pos select 0;
+private _y = _pos select 1;
+private _z = _pos select 2;
+private _distance = 0;
+private _posTube = getPosASL _tube;
+private _artyAlt = _posTube select 2;
+private _alt = _z - _artyAlt;			// Altitude difference between firing position and target position
+private _chosenTargetPos = [];
 
-// Check what the last firing pos was of the battery.
-_lastFiringPos = _asset getVariable ["T1AM_lastFiringPos", [-30000,-30000,0]];
-_lastGunAngle = _asset getVariable ["T1AM_lastGunAngle", "0"];
+private _ETA = 0;
+private _firstRound = true;
+private _tellAboutAngle = true;
+private _bestCharge = [];
+private _chargesArrayLow = [];
+private _chargesArrayHigh = [];
+private _vel = 0;
+private _unguidedCEP = 0;
 
-
-// Memorize the current firing pos of the battery's group.
-if (_isAnnouncementUnit) then {
-	[_asset, _pos, _gunAngle] spawn {
-		private ["_group","_pos","_gunAngle","_waitTime"];
-		_group = _this select 0;
-		_pos = _this select 1;
-		_gunAngle = _this select 2;
-		_waitTime = time + 10;
-		
-		WaitUntil{sleep 0.1; (_group getVariable ["T1AM_endMission", false]) or (_group getVariable ["T1AM_CheckFire", false]) or (_waitTime < time)};
-		
-		_group setVariable ["T1AM_lastFiringPos", _pos, true];
-		_group setVariable ["T1AM_lastGunAngle", _gunAngle, true];
-	};
-};
-
+private _isMK41 = if (_assetType == "MK41") then {true} else {false}; // Will use vanilla targeting.
 
 // Break down firing profile
-_timeBetweenRounds = _profile select 0;
-_minimumRange = _profile select 1;
-_maximumRange = _profile select 2;
-_longRangeGuided = _profile select 3;		// Is this projectile handled a bit differently than usual?
-_regularMaxRange = _profile select 4;
+private _timeBetweenRounds = _profile select 0;
+private _minimumRange = _profile select 1;
+private _maximumRange = _profile select 2;
+private _longRangeGuided = _profile select 3;		// Is this projectile handled a bit differently than usual?
+private _regularMaxRange = _profile select 4;
 
+// Check what the last firing pos was of the battery.
+private _lastFiringPos = _asset getVariable ["T1AM_lastFiringPos", [-30000,-30000,0]];
+private _lastGunAngle = _asset getVariable ["T1AM_lastGunAngle", "0"];
 
-_highAngle = 0;
-_highETA = 0;
-_lowAngle = 0;
-_lowETA = 0;
-_angle = 0;
-_ETA = 0;
-_dx = 0;
-_dy = 0;
-_distance = 0;
-_tellAboutAngle = true;
-
-if (_isAnnouncementUnit) then {
-	_abortAdd = true;
-} else {
-	_abortAdd = false;
-};
-
-
-// Gravity. Increase to make rounds go farther. Decrease to make rounds go shorter.
-if (_gunAngle == "high") then {_g = 9.79} else {_g = 9.77};
-
-_posTube = getPosASL _tube;
-_artyAlt = _posTube select 2;
-_alt = _z - _artyAlt;			// Altitude difference between firing position and target position
-_vx = _posTube select 0;
-_vy = _posTube select 1;
-
+private _gunner = gunner _tube;
+private _originalAimingSpeed = _gunner skill "aimingSpeed";
+private _originalReloadSpeed = _gunner skill "ReloadSpeed";
+_gunner setSkill ["ReloadSpeed", 1];
+_gunner setSkill ["aimingSpeed", 1];
 
 // Weapon stats.
-_turretPath = (assignedVehicleRole _gunner) select 1;
-_weapon = _tube currentWeaponTurret _turretPath;
-_ammo = getText(configfile >> "CfgMagazines" >> _warheadType >> "ammo");
-_ammoMaxSpeed = (getNumber(configfile >> "CfgAmmo" >> _ammo >> "maxSpeed")) * 0.95;
-
-
-// Check if barrel is on target
-_tubeDir = 0;
-_relative = 0;
-_difference = 999;
-
+private _turretPath = (assignedVehicleRole _gunner) select 1;
+private _weapon = _tube currentWeaponTurret _turretPath;
 
 // Set sheaf size, ie. how much random spread.
-_scatter = 0;
-_scatter2 = 0;
-_scatter = _sheafSize select 0;
-_scatter2 = _sheafSize select 1;
+private _scatter = _sheafSize select 0;
+private _scatter2 = _sheafSize select 1;
 if (_scatter2 == 0) then {_scatter2 = _scatter};
 if (_sheaf == "LINE") then {_scatter = 1};
 if (_missionType == "SPOT") then {_scatter = 0; _sheaf = "POINT"};
 if (_sheaf == "POINT") then {_scatter = 0};
 
+_abortAdd = false;
+if (_isAnnouncementUnit) then {_abortAdd = true};
 
-// SPECIAL EFFECTS: Laser-guided, guided, seeker, airburst, etc).
-_specialEH = -999;
-_action = 0;	// 0 = non-special / 1 = GPS/Laser / 2 = GPS / 3 = GPS/Discriminating / 4 = Laser
+// When using a sheaf, the announcement tube will start by firing one round into the center of the sheaf.
+_fireCenterFirst = false;
+if (_isAnnouncementUnit) then {
+	_fireCenterFirst = true;
+};
+
+private _checkFire = false;			// Player command to cease fire.
+private _endMission = false;		// End mission means the player called for the mission to be ended using the interface. It exits its own loop but does NOT send a message to the players.
+private _abort = false;				// Abort means something bad and unusual happened to the tube, ie. dead or deleted. It exits its own loop and sends a message to the players.
+private _outOfAmmo = false;			// Out of ammo means the tube ran out of the requested ammo. It exits its own loop and sends a message to the players.
+private _impossibleShot = false;	// Impossible shot means the tube couldn't get a firing solution. It exits its own loop and sends a message to the players.
+private _allOutOfAmmo = false;		// The announcement tube checks how many tubes are out of ammo. When all tubes that are doing the fire mission run out, the announcement tube exits its own loop, informs the players and stops the fire mission.
+private _allImpossibleShot = false;	// Same as above, but it checks how many couldn't get a firing solution.
+private _allAborted = false;		// Same as above, but it checks how many aborted (see _abort description) and it ends the fire mission entirely. It assumes the entire group got messed up somehow.
+
+
+private _trackEH = -5893;
+if (T1AM_DEBUG_ShowRounds) then {
+	_trackEH = _tube addEventHandler ["fired",{
+		_this spawn T1AM_Fnc_ProjectileTrack;
+	}];
+};
+
+
+// Memorize the current firing pos of the battery's group.
+if (_isAnnouncementUnit) then {
+	[_asset, _pos, _gunAngle] spawn {
+		params ["_asset", "_pos", "_gunAngle"];
+		private _waitTime = time + 10;
+		
+		WaitUntil{sleep 0.1; (_asset getVariable ["T1AM_endMission", false]) or (_asset getVariable ["T1AM_CheckFire", false]) or (_waitTime < time)};
+		
+		_asset setVariable ["T1AM_lastFiringPos", _pos, true];
+		_asset setVariable ["T1AM_lastGunAngle", _gunAngle, true];
+	};
+};
+
+
+// For special projectiles. Eg. Laser-guided, guided, seeker, airburst, etc.
+private _specialEH = -9583;
+private _action = 0;	// 0 = non-special / 1 = GPS/Laser / 2 = GPS / 3 = GPS/Discriminating / 4 = Laser
 
 switch true do {
 	case (_isMK41) : {
@@ -289,25 +227,24 @@ switch true do {
 		// and then later on, inside the sqf file that is being run, we convert the string back to an object data type.
 		_specialEH = _tube addEventHandler ["fired", compile format ["[_this,%1,%2,'%3','%4','%5',%6,%7,%8,%9] execVM 'T1AM\Special\Fired.sqf'",_action,_pos,_gunAngle,_fuse,_infoDummyNetID,_longRangeGuided,[],_GPSZAdjust,_elevationMod]];
 	};
-
+	
 	case (_warheadType in T1AM_GPSGuidedTypes) : {
 		_sheaf = "POINT";
 		_scatter = 0;
 		_scatter2 = 0;
 		_action = 2;
+		
 		_specialEH = _tube addEventHandler ["fired", compile format ["[_this,%1,%2,'%3','%4','%5',%6,%7,%8,%9] execVM 'T1AM\Special\Fired.sqf'",_action,_pos,_gunAngle,_fuse,_infoDummyNetID,_longRangeGuided,[],_GPSZAdjust,_elevationMod]];
 	};
-
+	
 	case (_warheadType in T1AM_GPSSeekerTypes) : {
-		private "_side";
-		
 		_sheaf = "POINT";
 		_scatter = 0;
 		_scatter2 = 0;
 		_action = 3;
 		
-		_arrayEnemySides = [];
-		_side = (side _sender);
+		private _arrayEnemySides = [];
+		private _side = (side _sender);
 		
 		{
 			if (_side getFriend (_x select 0) < 0.6) then {_arrayEnemySides pushback (_x select 1)};
@@ -315,8 +252,7 @@ switch true do {
 		
 		_specialEH = _tube addEventHandler ["fired", compile format ["[_this,%1,%2,'%3','%4','%5',%6,%7,%8,%9] execVM 'T1AM\Special\Fired.sqf'",_action,_pos,_gunAngle,_fuse,_infoDummyNetID,_longRangeGuided,_arrayEnemySides,_GPSZAdjust,_elevationMod]];
 	};
-
-
+	
 	case (_warheadType in T1AM_LaserTypes) : {
 		_sheaf = "POINT";
 		_scatter = 0;
@@ -328,347 +264,40 @@ switch true do {
 };
 
 
-_airburstEH = -99;
+// More airburst stuff.
+_airburstEH = -2938;
 if (_fuse == "AIRBURST") then {
 	_airburstEH = _tube addEventHandler ["fired",compile format ["[_this,%1,'%2',%3,'%4','%5',%6] execVM 'T1AM\Airburst\AirburstFire.sqf'",_pos,_gunAngle,_action,_infoDummyNetID,_airburstHeight,_GPSZAdjust]];
 };
 
-
-// Alternate airburst for MIXED missions
-_tubesTemp = _tubes;
-_selectedTube = objNull;
-_tubeIndex = 0;
-
-// Abort if taking too long (asset dead or deleted).
-_waitTime = time + 30;
-
 //DIAG_LOG format["TUBE: %1 - POS BEFORE MIXED ALTERNATE: %2", _tube, _pos];
 
-while {(_tubeIndex < (count _tubesTemp)) and (_waitTime > time)} do {
-	_selectedTube = _tubesTemp select _tubeIndex;
-	if (_selectedTube == _tube) then {
-		if ((_tubeIndex mod 2) > 0) then {
+// Alternate airburst for MIXED missions.
+for [{_i = 0}, {_i < count _tubes}, {_i = _i + 1}] do {
+	_unit = _tubes select _i;
+	if (_unit == _tube) exitWith {
+		if (_i mod 2 > 0) then {
 			_doAirburst = false;
 			_infoDummy setVariable ["T1AM_doAirburst", false];	// Tell the guide script NOT to do an airburst.
 			_pos = [_pos select 0, _pos select 1, (_pos select 2) - _elevationMod];	// We're not airbursting, so try to hit the ground.
 		};
-		_tubesTemp = [];
 	};
-	_tubeIndex = _tubeIndex + 1;
 };
 
 //DIAG_LOG format["TUBE: %1 - POS AFTER MIXED ALTERNATE: %2", _tube, _pos];
 
-_loaded = false;
-_magazineClass = "";
-_firstRound = true;
-
-
-// Create unfreeze-gunner eventhandler.
-_unfreezeGunnerEH = _tube addEventHandler ["fired",{
-	[(gunner (_this select 0))] spawn {
+// Create unfreeze-gunner eventhandler. Also used to check if unit has fired or not.
+private _unfreezeGunnerEH = _tube addEventHandler ["fired",{
+	[gunner (_this select 0)] spawn {
 		sleep 0.5;
-		(_this select 0) setSkill ["aimingspeed",1];
+		params["_gunner"];
+		_gunner setSkill ["aimingspeed",1];
+		(vehicle _gunner) setVariable ["T1AM_hasFired", true];
 	};
 }];
 
 
-// When using a sheaf, the announcement tube will start by firing one round into the center of the sheaf.
-if (_isAnnouncementUnit) then {
-	_fireCenterFirst = true;
-} else {
-	_fireCenterFirst = false;
-};
-
-
-// Function to create a list of charges + corresponding Angle and ETA.
-// It will only include charges that can reach the target pos.
-private _getChargesArray = {
-	
-	private _weapon = _this select 0;
-	private _warheadType = _this select 1;
-	
-	private _ammoInitSpeed = getNumber(configfile >> "CfgMagazines" >> _warheadType >> "initSpeed");
-	private _charge = "";
-	private _chargesArrayLow = [];
-	private _chargesArrayHigh = [];
-	
-	//DIAG_LOG format["TUBE: %1 - CHARGES - _warheadType: %2", _tube, _warheadType];
-	//DIAG_LOG format["TUBE: %1 - CHARGES - _ammoInitSpeed: %2", _tube, _ammoInitSpeed];
-	
-	{
-		_charge = _x;
-		
-		if (getNumber (configfile >> "CfgWeapons" >> _weapon >> _charge >> "showToPlayer") == 1) then {
-			
-			_vel = _ammoInitSpeed * getNumber(configfile >> "CfgWeapons" >> _weapon >> _charge >> "artilleryCharge");
-			_calc = (_vel^4-_g*(_g*_distance^2+2*_alt*_vel^2));
-			//DIAG_LOG format["TUBE: %1 - CHARGE: %2 - _calc: %3", _tube, _charge, _calc];
-			if (_calc < 0) exitWith {
-				//DIAG_LOG format ["TUBE: %1 - IMPOSSIBLE _calc - CHARGE: %2 -- VELOCITY: %3 -- _calc: %3", _tube, _charge, _vel, _calc];	
-			};
-			
-			// Angle
-			_hA = atan((_vel^2+sqrt _calc) / (_g*_distance));
-			_lA = atan((_vel^2-sqrt _calc) / (_g*_distance));
-			
-			// ETA
-			_hETA = _distance/(_vel*cos(_hA));
-			_lETA = _distance/(_vel*cos(_lA));
-			
-			_chargesArrayLow pushback [_charge, _lA, _lETA];
-			_chargesArrayHigh pushback [_charge, _hA, _hETA];
-			
-			//DIAG_LOG format ["TUBE: %1 - CHARGE: %2 -- VELOCITY: %3 -- HIGH ANGLE: %4 -- HIGH ETA: %5 -- LOW ANGLE: %6 -- LOW ETA: %7", _tube, _charge, _vel, _hA, _hETA, _lA, _lETA];
-		};
-		
-		sleep 0.1;
-	} forEach (getArray (configfile >> "CfgWeapons" >> _weapon >> "modes"));
-	
-	
-	// Return
-	[_chargesArrayLow, _chargesArrayHigh]
-};
-
-
-// Function to find a firing angle that the unit can actually aim with.
-_findBestCharge = {
-	private _tube = _this select 0;
-	private _veh = _this select 1;
-	private _asset = _this select 2;
-	private _gunner = _this select 3;
-	private _posA =  _this select 4;	// _posTube
-	private _chosenTargetPos = _this select 5;
-	private _gunAngle = _this select 6;
-	private _longRangeGuided = _this select 7;
-	private _chargesArrayLow = _this select 8;
-	private _chargesArrayHigh = _this select 9;
-	
-	private _x1 = _chosenTargetPos select 0;
-	private _y = _chosenTargetPos select 1;
-	private _chosenCharge = ["",0,0];
-	private _chargesArray = [];
-	private _chargeFound = false;
-	private _angleText = "";
-	private _abort = false;
-	
-	if (_gunAngle == "HIGH") then {
-		_chargesArray = _chargesArrayHigh;
-		_angleText = "HIGH";
-	} else {
-		_chargesArray = _chargesArrayLow;
-		_angleText = "LOW";
-	};
-	
-	//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
-	//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _chargesArrayLow: %2", _tube, _chargesArrayLow];
-	//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _chargesArray: %2", _tube, _chargesArray];
-	
-	_checkAbort = {
-		switch true do {
-			case (isNull _gunner):{_abort = true};
-			case (isNull _veh):{_abort = true};
-			case (!(alive _gunner)):{_abort = true};
-			case (!(alive _veh)):{_abort = true};
-			case (vehicle _gunner == _gunner):{_abort = true};
-			case (!(canFire _veh)):{_abort = true};
-		};
-		
-		// End mission if player has ended the mission.
-		if (_asset getVariable ["T1AM_endMission", false]) exitWith {_endMission = true};
-		if (_asset getVariable ["T1AM_CheckFire", false]) exitWith {_checkFire = true};
-	};
-	
-	_findCharge = {
-		
-		{
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - FOREACH START", _tube];
-			
-			// Calculate triangle opposite side. Add that to the height between the triangle and the sea level. 
-			private _angleA = _x select 1;															// Angle A.
-			//      _posA = getPosASL _tube;														// Point of angle A - _angleA.
-			//      _angleC = 90;																	// Angle C.
-			private _posC = [_chosenTargetPos select 0, _chosenTargetPos select 1, _posA select 2];	// Point of angle C - C is always 90 in our case.
-			private _distanceAdj = _posA vectorDistance _posC;										// Adjacent side
-			private _angleB = 180 - 90 - _angleA;													// Angle B.
-			private _distanceOp = (_distanceAdj / sin _angleB) * (sin _angleA);						// Opposite side.
-			private _heightArtyToSeaLvl = _posA select 2;											// Height between triangle and sea level.
-			private _z = _distanceOp + _heightArtyToSeaLvl;											// Add the two height numbers together to get the altitude above sea level.
-			
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - CHARGE: %2", _tube, _x];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _angleA: %2", _tube, _angleA];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _posA: %2", _tube, _posA];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _posC: %2", _tube, _posC];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _distanceAdj: %2", _tube, _distanceAdj];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _angleB: %2", _tube, _angleB];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _distanceOp: %2", _tube, _distanceOp];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _heightArtyToSeaLvl: %2", _tube, _heightArtyToSeaLvl];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _x1: %2", _tube, _x1];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _y: %2", _tube, _y];
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - _z: %2", _tube, _z];
-			
-			private _pos = [_x1,_y,_z];
-			
-			// Aim tube
-			_gunner doWatch (ASLtoAGL _pos);
-			
-			// Wait until the tube stops moving/aiming by comparing its aiming vector every 0.25 second.
-			private _lastWVD = _tube weaponDirection currentWeapon _tube;
-			private _wvd = [];
-			private _removedigits = {
-				// This will remove everything 4 places past the decimal because on a ded server too much accuracy will get the while loop stuck. This is because the AI is constantly aiming lower, but you only notice it in the vector numbers.
-				private _arrayNew = [];
-				{
-					private _str = str _x;
-					private _index = _str find ".";
-					if (_index == -1) then {
-						_arrayNew append [_x];
-					} else {
-						_str = _str select [0, _index + 4];
-						_arrayNew append [parseNumber _str];
-					};
-				} forEach (_this select 0);
-				_arrayNew;
-			};
-			sleep 0.25;
-			private _abortTime = time + 55;
-			while {!_abort} do {
-				_wvd = _tube weaponDirection currentWeapon _tube;
-				_wvd = [_wvd] call _removedigits;
-				_lastWVD = [_lastWVD] call _removedigits;
-				if (_lastWVD isEqualTo _wvd or time > _abortTime) exitWith {
-					//DIAG_LOG format ["TUBE: %1 | FIND CHARGE MOVING LOOP EXIT | Time: %2 | If: %3 | _wvd: %4 | _lastWVD: %5 | Aborted: %6", _tube, time, (_lastWVD isEqualTo _wvd), _wvd, _lastWVD, time > _abortTime];
-				};
-				//DIAG_LOG format ["TUBE: %1 | FIND CHARGE MOVING LOOP | Time: %2 | If: %3 | _wvd: %4 | _lastWVD: %5", _tube, time, (_lastWVD isEqualTo _wvd), _wvd, _lastWVD];
-				_lastWVD = _wvd;
-				sleep 0.25;
-				call _checkAbort;
-			};
-			
-			if (_abort) exitWith {};
-			
-			sleep 0.5;
-			
-			// Calculate the vertical angle of the tube by using triangle calculations.
-			//_wvd = _tube weaponDirection currentWeapon _tube;
-			//private _verDegrees = (_wvd select 2) atan2 ([0,0,0] distance [_wvd select 0, _wvd select 1, 0]);
-			private _turretConfig = [_tube, [0]] call CBA_fnc_getTurret;
-			private _logicStart = "logic" createVehicleLocal [0,0,0];
-			_logicStart attachTo [_tube, [0,0,0], getText(_turretConfig >> "gunBeg")];
-			private _logicEnd = "logic" createVehicleLocal [0,0,0];
-			_logicEnd attachTo [_tube, [0,0,0], getText(_turretConfig >> "gunEnd")];
-			private _posA2 = getPosASL _logicStart;
-			private _posC2 = getPosASL _logicEnd;
-			private _posB2 = [_posC2 select 0, _posC2 select 1, _posA2 select 2];
-			private _adjacent = _posA2 vectorDistance _posB2;
-			private _opposite = _posB2 vectorDistance _posC2;
-			private _hypotenuse = _posA2 vectorDistance _posC2;
-			private _verDegrees = acos((_adjacent^2 + _hypotenuse^2 - _opposite^2) / (2*_adjacent*_hypotenuse));
-			deleteVehicle _logicStart;
-			deleteVehicle _logicEnd;
-			
-			private _maxDifference = 0.15;
-			//if (worldName == "Takistan") then {
-			//	_maxDifference = 4;
-			//};
-			
-			//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - FIND CHARGE - CHARGE: %2 - _angleA: %3 - _verDegrees: %4 - abs(_angleA-_verDegrees): %5", _tube, _x select 0, _angleA, _verDegrees, abs(_angleA - _verDegrees)];
-			//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - FIND CHARGE - WORLD: %2 - _maxDifference: %3", _tube, worldName, _maxDifference];
-			
-			// Check if the tube is aiming with the correct angle.
-			// _angleA is the requested angle that the tube should aim with.
-			// _verDegrees is the actual angle that the tube is aiming with at the moment.
-			// _maxDifference is the maximum allowed difference between the above two.
-			private _difference = abs(_angleA - _verDegrees);
-			if (_difference < _maxDifference and _difference > -_maxDifference) then {
-				_chosenCharge = _x;
-				_chargeFound = true;
-				_chosenCharge pushback _angleText;
-				
-				//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - FIND CHARGE - _chosenCharge: %2", _tube, _chosenCharge];
-				
-				// Check if there's an obstruction.
-				// Draw a line from the arty turret to a point 1000 meters down the barrel.
-				// If target pos is closer than 1000m, then simply use the target pos.
-				private _eyePosTube = eyePos _tube;
-				if (_distanceAdj > 1000) then {
-					private _mult = 1000 / _distanceAdj;
-					private _x2 = ((_eyePosTube select 0) - _x1) * _mult;
-					private _y2 = ((_eyePosTube select 1) - _y) * _mult;
-					private _z2 = ((_eyePosTube select 2) - _z) * _mult;
-					_pos = [(_eyePosTube select 0) - _x2, (_eyePosTube select 1) - _y2, (_eyePosTube select 2) - _z2];
-				};
-				
-				private _obstructed = false;
-				private _lineIntersectsSurfaces = lineIntersectsSurfaces [_eyePosTube, _pos, _tube, objNull, true, 1];
-				
-				//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _pos: %2", _tube, _pos];
-				//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - _lineIntersectsSurfaces: %2", _tube, _lineIntersectsSurfaces];
-				
-				// Obstructed.
-				if (count _lineIntersectsSurfaces > 0) then {
-					_obstructed = true;
-					_chargeFound = false;
-					//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - OBSTRUCTED - _chosenCharge: %2", _tube, _chosenCharge];
-				};
-				
-				_chosenCharge pushback _obstructed;
-			};
-			
-			if (_chargeFound) exitWith {
-				//DIAG_LOG format["TUBE: %1 - FIND CHARGE - CHARGE FOUND", _tube];
-			};
-			
-			//DIAG_LOG format["TUBE: %1 - FIND CHARGE - FOREACH END", _tube];
-			
-		} forEach _chargesArray;
-	};
-	
-	call _findCharge;
-	
-	// If no good charge was found, and not long range guided, then try the other angle type.
-	if (!_chargeFound and !_longRangeGuided and !_abort) then {
-		if (_gunAngle == "HIGH") then {
-			_chargesArray = _chargesArrayLow;
-			_angleText = "LOW";
-		} else {
-			_chargesArray = _chargesArrayHigh;
-			_angleText = "HIGH";
-		};
-		
-		call _findCharge;
-		
-		//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - TRYING OTHER ANGLE - _chargesArray: %2", _tube, _chargesArray];
-	};
-	
-	
-	if (_abort) then {
-		_chosenCharge = ["",0,0,"",false,true];
-		//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - ABORT - _chosenCharge: %2", _tube, _chosenCharge];
-	} else {
-		if (_chosenCharge select 0 == "") then {
-			_chosenCharge = ["",0,0,"",false,false];
-			//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - NOTHING CHOSEN - _chosenCharge: %2", _tube, _chosenCharge];
-		} else {
-			_chosenCharge pushback _abort;
-			//DIAG_LOG format ["TUBE: %1 - FIND BEST CHARGE - END - _chosenCharge: %2", _tube, _chosenCharge];
-		};
-	};
-	
-	_chosenCharge
-};
-
-
-_checkFire = false;
-_endMission = false;		// End mission means the player called for the mission to be ended using the interface. It exits its own loop but does NOT send a message to the players.
-_abort = false;				// Abort means something bad and unusual happened to the tube, ie. dead or deleted. It exits its own loop and sends a message to the players.
-_outOfAmmo = false;			// Out of ammo means the tube ran out of the requested ammo. It exits its own loop and sends a message to the players.
-_impossibleShot = false;	// Impossible shot means the tube couldn't get a firing solution. It exits its own loop and sends a message to the players.
-_allOutOfAmmo = false;		// The announcement tube checks how many tubes are out of ammo. When all tubes that are doing the fire mission run out, the announcement tube exits its own loop, informs the players and stops the fire mission.
-_allImpossibleShot = false;	// Same as above, but it checks how many couldn't get a firing solution.
-_allAborted = false;		// Same as above, but it checks how many aborted (see _abort description) and it ends the fire mission entirely. It assumes the entire group got messed up somehow.
-
-
+// Start main loop.
 while {_rounds > 0} do {
 	
 	// End mission if player ends the mission.
@@ -676,16 +305,8 @@ while {_rounds > 0} do {
 	if (_asset getVariable ["T1AM_CheckFire", false]) exitWith {_checkFire = true};
 	
 	// Abort if there's something wrong with the vehicle/gunner.
-	_veh = vehicle _gunner;
+	_abort = [_tube, _gunner] call T1AM_Fnc_CheckAssetStatus;
 	
-	switch true do {
-		case (isNull _gunner):{_abort = true};
-		case (isNull _veh):{_abort = true};
-		case (!(alive _gunner)):{_abort = true};
-		case (!(alive _veh)):{_abort = true};
-		case (vehicle _gunner == _gunner):{_abort = true};
-		case (!(canFire _veh)):{_abort = true};
-	};
 	if (_abort and !_isAnnouncementUnit) exitWith {};
 	if (_abort and _isAnnouncementUnit and _abortAdd) then {
 		_abortAdd = false;
@@ -693,6 +314,7 @@ while {_rounds > 0} do {
 		_asset setVariable ["T1AM_amountAborted", _amountAborted];
 	};
 	
+	_tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
 	
 	// Only run the next part if the tube can fire.
 	if (_outOfAmmo and !_isAnnouncementUnit) exitWith {};
@@ -702,7 +324,9 @@ while {_rounds > 0} do {
 	
 	if (!_outOfAmmo and !_impossibleShot and !_abort) then {
 		
-		_tube setWeaponReloadingTime [_gunner,(currentMuzzle _gunner), 0];
+		if (!_firstRound) then {
+			[_tube, _warheadType, _assetType] call T1AM_Fnc_LoadMagazine;
+		};
 		
 		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - _fireCenterFirst: %2", _tube, _fireCenterFirst];
 		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - _scatter: %2", _tube, _scatter];
@@ -750,7 +374,7 @@ while {_rounds > 0} do {
 			
 			_distance = _posTube vectorDistance _chosenTargetPos;
 			
-			_scatterSpread = (_distance / 200) + (exp((log _distance)*0.7));
+			private _scatterSpread = (_distance / 200) + (exp((log _distance)*0.7));
 			
 			switch true do {
 				case (_distance <= 0.025 * _maximumRange) : {_scatterSpread = _scatterSpread * 0.25};
@@ -783,7 +407,8 @@ while {_rounds > 0} do {
 			
 			if (_gunAngle == "low") then {_scatterSpread = _scatterSpread * 0.75};
 			if (_assetType == "Mortar") then {_scatterSpread = _scatterSpread * 1.4};
-			if (_assetType == "Rocket" or {_assetType == "BM21"}) then {_scatterSpread = _scatterSpread * 1.6};
+			if (_assetType == "Rocket") then {_scatterSpread = _scatterSpread * 1.6};
+			if (_assetType == "BM21") then {_scatterSpread = 1}; // BM21 has its own spread.
 			
 			//DIAG_LOG format["TUBE: %1 - FIRING LOOP - SPREAD AFTER IFS: %2", _tube, _scatterSpread];
 			
@@ -810,14 +435,14 @@ while {_rounds > 0} do {
 		
 		_artyAlt = _posTube select 2;
 		_alt = (_chosenTargetPos select 2) - _artyAlt;		// Altitude difference
-		_vx = _posTube select 0;
-		_vy = _posTube select 1;
+		private _vx = _posTube select 0;
+		private _vy = _posTube select 1;
 		
 		// Get distance
 		_x = _chosenTargetPos select 0;
 		_y = _chosenTargetPos select 1;
-		_dx = _x - _vx;
-		_dy = _y - _vy;
+		private _dx = _x - _vx;
+		private _dy = _y - _vy;
 		_distance = sqrt((_dx*_dx)+(_dy*_dy));
 		
 		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- _longRangeGuided: %2", _tube, _longRangeGuided];
@@ -830,21 +455,23 @@ while {_rounds > 0} do {
 		
 		if (!_isMK41) then {
 			if (!_longRangeGuided) then {
-				private _array = [_weapon, _warheadType] call _getChargesArray;
+				private _array = [_weapon, _warheadType, _distance, _alt] call T1AM_Fnc_GetAllCharges;
 				_chargesArrayLow = _array select 0;
 				_chargesArrayHigh = _array select 1;
+				_vel = _array select 2;
 				
 				//DIAG_LOG format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
 				//DIAG_LOG format["TUBE: %1 - CHARGE NORMAL -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
 				
 			} else {
 				// If it's long range guided, then fake the distance to get the projectile into the air regardless.
-				_realDistance = _distance;
+				private _realDistance = _distance;
 				_distance = _regularMaxRange;
 				
-				private _array = [_weapon, _warheadType] call _getChargesArray;
+				private _array = [_weapon, _warheadType, _distance, _alt] call T1AM_Fnc_GetAllCharges;
 				_chargesArrayLow = _array select 0;
 				_chargesArrayHigh = _array select 1;
+				_vel = _array select 2;
 				
 				_distance = _realDistance;
 				
@@ -877,187 +504,24 @@ while {_rounds > 0} do {
 	
 	
 	// Calculate how long to wait.
-	_sleepTime = random 1;
-	
-	// Comms/prep time.
-	if (_firstRound) then {
-		
-		// Check if the target pos is nearby one of the TRPs that belong to this group.
-		_closeToTRP = false;
-		_arrayTRP = _asset getVariable ["T1AM_arrayTRP", nil];
-		if (!isNil "_arrayTRP") then {
-			{
-				if (_chosenTargetPos vectorDistance _x < 350) exitWith {_closeToTRP = true};
-			} forEach _arrayTRP;
-		};
-		
-		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- CLOSETOTRP: %2", _tube, _closeToTRP];
-		
-		// Has fired previously on this position or is preplotted or is close to a TRP.
-		if (((_lastFiringPos vectorDistance _chosenTargetPos < 300) and (_lastGunAngle == _gunAngle)) or _prePlotted or _closeToTRP) then {
-			
-			//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
-			
-			switch true do {
-				
-				// Mortar.
-				case (_assetType == "mortar"):{
-					_sleepTime = _sleepTime + 6 + (random 5);
-				};
-				
-				// BM21.
-				case (_assetType == "BM21"):{
-					_sleepTime = _sleepTime + 7 + (random 6);
-				};
-				
-				// Cannons.
-				case (_assetType == "Cannon"):{
-					_sleepTime = _sleepTime + 4 + (random 3);
-				};
-				
-				// MK41 cruise missile.
-				case (_assetType == "MK41"):{
-					_sleepTime = _sleepTime + 3 + (random 3);
-				};
-				
-				// Everything else.
-				default {
-					_sleepTime = _sleepTime + 5 + (random 4);
-				};
-			};
-			
-			// To avoid aiming bugs when firing at pre-plotted targets.
-			if (_prePlotted) then {
-				_sleepTime = _sleepTime max 2;
-			};
-			
-		} else {
-			
-			//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS NOT FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
-			
-			// Firing on new position.
-			switch true do {
-				
-				// Mortar.
-				case (_assetType == "mortar"):{
-					if (_gunAngle == "LOW") then {_sleepTime = _sleepTime + 25 + (random 4);};
-					if (_gunAngle == "HIGH") then {_sleepTime = _sleepTime + 30 + (random 6);};
-				};
-				
-				// BM21.
-				case (_assetType == "BM21"):{
-					if (_gunAngle == "LOW") then {_sleepTime = _sleepTime + 35 + (random 5);};
-					if (_gunAngle == "HIGH") then {_sleepTime = _sleepTime + 40 + (random 7);};
-				};
-				
-				// Cannons.
-				case (_assetType == "Cannon"):{
-					if (_gunAngle == "LOW") then {_sleepTime = _sleepTime + 20 + (random 2);};
-					if (_gunAngle == "HIGH") then {_sleepTime = _sleepTime + 25 + (random 4);};
-				};
-				
-				// MK41 cruise missile.
-				case (_assetType == "MK41"):{
-					_sleepTime = _sleepTime + 17 + (random 2);
-				};
-				
-				// Everything else.
-				default {
-					if (_gunAngle == "LOW") then {_sleepTime = _sleepTime + 22 + (random 3);};
-					if (_gunAngle == "HIGH") then {_sleepTime = _sleepTime + 27 + (random 5);};
-				};
-			};
-		};
-		
-		switch (T1AM_PrepTimes) do {
-			// Realistic setting increases prep time a bit.
-			case 0: {_sleepTime = 1};
-			// No delay setting removes prep time. Requires at least 1 to avoid bug.
-			case 2: {_sleepTime = _sleepTime * 1.75};
-		};
-		
-	} else {
-		
-		// Reload time for follow up shots.
-		_sleepTime = _sleepTime + _timeBetweenRounds;
-		
-		// Random delay.
-		switch true do {
-			// Mortar. Manual reload.
-			case (_assetType == "mortar"):{
-				_sleepTime = _sleepTime + (random 1.5);
-			};
-			
-			// Rocket artillery.
-			case ((_assetType == "Rocket") or (_assetType == "BM21")):{
-				_sleepTime = _sleepTime + 0.1;
-			};
-			
-			// MK41 cruise missile.
-			case (_assetType == "MK41"):{
-				_sleepTime = _sleepTime + 0.1;
-			};
-			
-			// Cannon. Manual reload.
-			case (_assetType == "Cannon"):{
-				_sleepTime = _sleepTime + (random 3);
-			};
-			
-			// Everything else. Manual reload.
-			default {
-				_sleepTime = _sleepTime + (random 3);
-			};
-		};
-	};
-	
-	// Aiming time.
-	switch true do {
-		// Mortar. Manual adjustment.
-		case (_assetType == "mortar"):{
-			if (_sheaf == "POINT") then {
-				_sleepTime = _sleepTime + 0.1;
-			} else {
-				_sleepTime = _sleepTime + 3;
-			};
-		};
-		
-		// Everything else. Automated / rocket artillery. Lowering these numbers may cause aiming errors.
-		default {
-			if (_sheaf == "POINT") then {
-				_sleepTime = _sleepTime + 0.1;
-			} else {
-				_sleepTime = _sleepTime + 1.5;
-			};
-		};
-	};
-	
-	// If this tube had to wait while changing ammo, as a workaround for an aiming bug when switching ammo,
-	// then reduce the waiting time. Use a minimum of 5 to avoid aiming bug.
-	if (_firstRound) then {
-		if (_switchedAmmo) then {
-			_sleepTime = (_sleepTime - _switchedAmmoTime) max 5;
-		};
-	};
-	
-	// Wait at least 1 second to make sure airburst mixed works properly.
-	_sleepTime = _sleepTime max 1;
-	_sleepTime = time + _sleepTime;
+	private _sleepTime = [_tube, _asset, _assetType, _chosenTargetPos, _firstRound, _lastFiringPos, _gunAngle, _lastGunAngle, _prePlotted, _sheaf, _mustWait, _mustWaitTime, _timeBetweenRounds] call T1AM_Fnc_GetPrepTime;
 	
 	
 	if (!_isMK41) then {
 		// Figure out which angle the tube can aim with.
-		_bestCharge = [_tube, _veh, _asset, _gunner, _posTube, _chosenTargetPos, _gunAngle, _longRangeGuided, _chargesArrayLow, _chargesArrayHigh] call _findBestCharge;
+		private _array = [_tube, _asset, _gunner, _posTube, _chosenTargetPos, _gunAngle, _longRangeGuided, _chargesArrayLow, _chargesArrayHigh, _abort, _endMission, _checkFire] call T1AM_Fnc_findBestCharge;
+		_bestCharge = _array select 0;
+		_abort = _array select 1;
+		_endMission = _array select 2;
+		_checkFire = _array select 3;
 		private _obstructed = _bestCharge select 4;
 		
-		// If no angle was returned or the shot is obstructed, inform the player.
-		if (_bestCharge select 0 == "" or _obstructed) then {
-			_impossibleShot = true;
-			_tube setVariable ["T1AM_impossibleShot", true];
-			private _abort = _bestCharge select 5;
+		if (!_abort and !_endMission and !_CheckFire) then {
 			
-			if (!_abort) then {
-				if (_asset getVariable ["T1AM_endMission", false]) exitWith {};
-				if (_asset getVariable ["T1AM_CheckFire", false]) exitWith {};
+			// If no angle was returned or the shot is obstructed, inform the player.
+			if (_bestCharge select 0 == "" or _obstructed) then {
+				_impossibleShot = true;
+				_tube setVariable ["T1AM_impossibleShot", true];
 				
 				if (!_obstructed) then {
 					[_tube,"Unable to get a firing solution - cannot get a valid angle.","beep"] call T1AM_Fnc_SendComms;
@@ -1066,21 +530,23 @@ while {_rounds > 0} do {
 					[_tube,"Unable to get a firing solution - shot obstructed.","beep"] call T1AM_Fnc_SendComms;
 					//DIAG_LOG format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 3 - Check1: %2", _tube, !_obstructed];
 				};
-			};
-			
-		} else {
-			
-			if (_asset getVariable ["T1AM_endMission", false]) exitWith {};
-			if (_asset getVariable ["T1AM_CheckFire", false]) exitWith {};
-			
-			// If the tube switched angles, inform the player.
-			if (_bestCharge select 3 != _gunAngle) then {
-				if (_tellAboutAngle) then {
-					private _text = format["Cannot get firing solution with requested angle - will use %1 angle instead.", _bestCharge select 3];
-					[_tube, _text,"beep"] call T1AM_Fnc_SendComms;
-					_tellAboutAngle = false;	// Only tell the player once, to avoid spamming the chat.
+				
+			} else {
+				
+				if (_asset getVariable ["T1AM_endMission", false]) exitWith {};
+				if (_asset getVariable ["T1AM_CheckFire", false]) exitWith {};
+				
+				// If the tube switched angles, inform the player.
+				if (_bestCharge select 3 != _gunAngle) then {
+					// Switch to new angle for the next shot.
+					if (_gunAngle == "HIGH") then {_gunAngle = "LOW"} else {_gunAngle = "HIGH"};
+					if (_tellAboutAngle) then {
+						private _text = format["Cannot get firing solution with requested angle - will use %1 angle instead.", _bestCharge select 3];
+						[_tube, _text,"beep"] call T1AM_Fnc_SendComms;
+						_tellAboutAngle = false;	// Only tell the player once, to avoid spamming the chat.
+					};
+					//DIAG_LOG format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 4 - SWITCHED ANGLE - Check1: %2 - Check2: %3", _tube, _bestCharge select 3, _gunAngle];
 				};
-				//DIAG_LOG format["TUBE: %1 - ABORT - IMPOSSIBLE SHOT 4 - Check1: %2 - Check2: %3", _tube, _bestCharge select 3, _gunAngle];
 			};
 		};
 		
@@ -1096,16 +562,16 @@ while {_rounds > 0} do {
 	if (_asset getVariable ["T1AM_amountAborted", 0] >= count _tubes and _isAnnouncementUnit) exitWith {_allAborted = true};
 	
 	// If everyone is out of ammo, exit out of this loop.
-	if ({_x getVariable ["T1AM_outOfAmmo", false]} count _tubes == count _tubes) exitWith {_allOutOfAmmo = true};
+	if ({_x getVariable ["T1AM_outOfAmmo", false]} count _tubes >= count _tubes) exitWith {_allOutOfAmmo = true};
 	
 	
 	// If everyone has an impossible shot, exit out of this loop.
-	if ({_x getVariable ["T1AM_impossibleShot", false]} count _tubes == count _tubes) exitWith {_allImpossibleShot = true};
+	if ({_x getVariable ["T1AM_impossibleShot", false]} count _tubes >= count _tubes) exitWith {_allImpossibleShot = true};
 	
 	
 	// ETA stuff.
 	if (_firstRound and {!_outOfAmmo and !_impossibleShot and !_abort}) then {
-		_angle = _bestCharge select 1;
+		private _angle = _bestCharge select 1;
 		_ETA = _bestCharge select 2;
 		
 		//DIAG_LOG format["TUBE: %1 - CHOSEN CHARGE -- _angle: %2", _tube, _angle];
@@ -1118,6 +584,8 @@ while {_rounds > 0} do {
 				//DIAG_LOG format["TUBE: %1 - CHANGING ETA LONG RANGE GUIDED -- _ETA: %2", _tube, _ETA];
 			};
 			case (_isMK41): {
+				private _ammo = getText(configfile >> "CfgMagazines" >> _warheadType >> "ammo");
+				private _ammoMaxSpeed = (getNumber(configfile >> "CfgAmmo" >> _ammo >> "maxSpeed")) * 0.95;
 				_ETA = (_distance / _ammoMaxSpeed) max 1;
 			};
 			default {
@@ -1144,14 +612,17 @@ while {_rounds > 0} do {
 	// Move on regardless after waiting for longer than 70 seconds.
 	if (_firstRound) then {
 		_tube setVariable ["T1AM_readyToFire", true];
-		_waitTime = time + 70;		// If it takes longer than this, then proceed on regardless.
-		_wait = true;
+		private _waitTime = time + 70;		// If it takes longer than this, then proceed on regardless.
+		private _wait = true;
 		
 		while {_wait and {time < _waitTime}} do {
 			_wait = false;
 			{
 				if (!(_x getVariable ["T1AM_readyToFire", true])) exitWith {_wait = true};
 			} forEach _tubes;
+			
+			if (_asset getVariable ["T1AM_endMission", false]) exitWith {_endMission = true};
+			if (_asset getVariable ["T1AM_CheckFire", false]) exitWith {_checkFire = true};
 			
 			if (_wait) then {
 				sleep 2;
@@ -1171,24 +642,15 @@ while {_rounds > 0} do {
 	if (_asset getVariable ["T1AM_CheckFire", false]) exitWith {_checkFire = true};
 	
 	// If everyone is out of ammo, exit out of this loop.
-	if ({_x getVariable ["T1AM_outOfAmmo", false]} count _tubes == count _tubes) exitWith {_allOutOfAmmo = true};
+	if ({_x getVariable ["T1AM_outOfAmmo", false]} count _tubes >= count _tubes) exitWith {_allOutOfAmmo = true};
 	
 	
 	// If everyone has an impossible shot, exit out of this loop.
-	if ({_x getVariable ["T1AM_impossibleShot", false]} count _tubes == count _tubes) exitWith {_allImpossibleShot = true};
+	if ({_x getVariable ["T1AM_impossibleShot", false]} count _tubes >= count _tubes) exitWith {_allImpossibleShot = true};
 	
 	
 	// Abort if there's something wrong with the vehicle/gunner.
-	_veh = vehicle _gunner;
-	
-	switch true do {
-		case (isNull _gunner):{_abort = true};
-		case (isNull _veh):{_abort = true};
-		case (!(alive _gunner)):{_abort = true};
-		case (!(alive _veh)):{_abort = true};
-		case (vehicle _gunner == _gunner):{_abort = true};
-		case (!(canFire _veh)):{_abort = true};
-	};
+	_abort = [_tube, _gunner] call T1AM_Fnc_CheckAssetStatus;
 	if (_abort and !_isAnnouncementUnit) exitWith {};
 	if (_abort and _isAnnouncementUnit and _abortAdd) then {
 		_abortAdd = false;
@@ -1236,8 +698,8 @@ while {_rounds > 0} do {
 		
 		//DIAG_LOG format["TUBE: %1 - FIRING LOOP - POS AFTER AIRBURST IF: %2", _tube, _pos];
 		
-		// If the right magazine is loaded, then go on and fire.
-		if ((currentMagazine _tube) == _warheadType) then {
+		// If the right magazine is loaded and the magazine contains ammo, then go on and fire.
+		if ((currentMagazine _tube) == _warheadType and _tube ammo (currentMuzzle _gunner) > 0) then {
 			
 			// Non-GPS only.
 			if (_action != 1 and {_action != 2 and {_action != 3}}) then {
@@ -1304,7 +766,7 @@ while {_rounds > 0} do {
 			if (!_isMK41) then {
 				_tube setWeaponReloadingTime [_gunner,(currentMuzzle _gunner), 0];
 				_tube fire [_tubeType, _bestCharge select 0];
-			
+				
 			// MK41 fire.
 			} else {
 				
@@ -1343,7 +805,8 @@ while {_rounds > 0} do {
 		
 		} else {
 			
-			// If the right magazine is not loaded, then assume the tube is out of ammo, and mark it as such.
+			// If the right magazine is not loaded or the magazine is empty,
+			// then assume the tube is out of ammo, and mark it as such.
 			_tube setVariable ["T1AM_outOfAmmo", true];
 			//DIAG_LOG format["TUBE: %1 - ABORT - WRONG MAG LOADED - CURMAG: %2 - _warheadType: %3", _tube, currentMagazine _tube, _warheadType];
 			
@@ -1359,6 +822,7 @@ while {_rounds > 0} do {
 	// Only run the next part if the tube can fire.
 	if (_outOfAmmo and !_isAnnouncementUnit) exitWith {};
 	
+	
 	//DIAG_LOG format["TUBE: %1 - FIRING LOOP END -- _firstRound: %2", _tube, _firstRound];
 	//DIAG_LOG format["TUBE: %1 - FIRING LOOP END -- _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
 	
@@ -1367,18 +831,35 @@ while {_rounds > 0} do {
 		
 		if (_outOfAmmo and count _tubes == 1) exitWith {};
 		
-		private _lowestETA = 9999;
-		
-		{
-			if (_x getVariable ["T1AM_ETA", 9999] < _lowestETA) then {
-				_lowestETA = _x getVariable ["T1AM_ETA", 9999];
+		[_tubes, _asset] spawn {
+			params ["_tubes", "_asset"];
+			private _lowestETA = 9999;
+			private _abort = false;
+			
+			// Wait until somebody has fired or abort if mission is over for some reason.
+			for [{_i = 0}, {_i < 60}, {_i = _i + 1}] do {
+				if ({_x getVariable ["T1AM_hasFired", false]}count _tubes > 0) exitWith {};
+				switch true do {
+					case (_asset getVariable ["T1AM_endMission", false]) : {_abort = true};
+					case (_asset getVariable ["T1AM_CheckFire", false]) : {_abort = true};
+					case (_asset getVariable ["T1AM_amountAborted", 0] >= count _tubes) : {_abort = true};
+				};
+				if (_abort) exitWith {};
+				sleep 1;
 			};
-		} forEach _tubes;
-		
-		_message = format ["Shot. ETA %1 seconds.", _lowestETA];
-		
-		[_asset,_message,"Shot"] call T1AM_Fnc_SendComms;
-		[_lowestETA,_asset] execVM "T1AM\Control\Splash.sqf";
+			if (_abort) exitWith {};
+			
+			{
+				if (_x getVariable ["T1AM_ETA", 9999] < _lowestETA) then {
+					_lowestETA = _x getVariable ["T1AM_ETA", 9999];
+				};
+			} forEach _tubes;
+			
+			private _message = format ["Shot. ETA %1 seconds.", _lowestETA];
+			
+			[_asset,_message,"Shot"] call T1AM_Fnc_SendComms;
+			[_lowestETA,_asset] spawn T1AM_Fnc_Splash;
+		};
 	};
 	_firstRound = false;
 	
@@ -1448,6 +929,7 @@ if (_abort and !_isAnnouncementUnit) exitWith {
 	_amountAborted = (_asset getVariable ["T1AM_amountAborted", 0]) + 1;
 	_asset setVariable ["T1AM_amountAborted", _amountAborted];
 	sleep 2;
+	private _txt = "";
 	if (_amountAborted == 1) then {
 		_txt = format["%1 unit is inoperable.", _amountAborted];
 	} else {
@@ -1461,14 +943,14 @@ if (_abort and !_isAnnouncementUnit) exitWith {
 
 if (_isAnnouncementUnit) then {
 	// Wait until all tubes are done.
-	_timeout = time + 130;
+	private _timeout = time + 130;
 	while {time < _timeout} do {
-		if ({_x getVariable ["T1AM_concludingMission", false]} count _tubes == count _tubes) exitWith {};
+		if ({_x getVariable ["T1AM_concludingMission", false]} count _tubes >= count _tubes) exitWith {};
 		sleep 2;
 	};
 
 	// Check if everyone is out of ammo.
-	if ({_x getVariable ["T1AM_outOfAmmo", false]} count _tubes == count _tubes) then {_allOutOfAmmo = true};
+	if ({_x getVariable ["T1AM_outOfAmmo", false]} count _tubes >= count _tubes) then {_allOutOfAmmo = true};
 };
 
 
@@ -1509,7 +991,12 @@ if (_isAnnouncementUnit) then {
 					//DIAG_LOG format["TUBE END - NORMAL ENDING: %2", _tube, !_allOutOfAmmo];
 				} else {
 					// Ended mission because everyone ran out of the requested ammo.
-					[_asset,"Out of ammo on all units - Rounds complete.","RoundsComplete"] call T1AM_Fnc_SendComms;
+					if ({_x getVariable ["T1AM_hasFired", false]}count _tubes > 0) then {
+						[_asset,"Out of ammo on all units - Rounds complete.","RoundsComplete"] call T1AM_Fnc_SendComms;
+					} else {
+						// Nobody has fired.
+						[_asset,"Requested ammo not available - Unable to fire.","RoundsComplete"] call T1AM_Fnc_SendComms;
+					};
 					//DIAG_LOG format["TUBE END - RAN OUT OF AMMO ENDING: %2", _tube, !_allOutOfAmmo];
 				};
 			};

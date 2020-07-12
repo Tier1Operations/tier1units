@@ -20,7 +20,7 @@ while {!isNull _dialog} do {
 	// Assets
 	private _assets = [(side player)] call T1AM_Fnc_ArtilleryGroupsBySide;
 	
-	// Check if one of the processed assets is not available anymore, if so. Refresh the whole list.
+	// Check if one of the processed assets is not available anymore. If so, refresh the whole list.
 	{
 		if (!((_x select 0) in _assets)) exitWith {
 			lbClear 101;

@@ -1,4 +1,4 @@
-// Code originally created by PabstMirror.
+// Code originally created by PabstMirror. Edited by BlackAlpha.
 
 private ["_inputStringArray","_getCenterOfGrid"];
 

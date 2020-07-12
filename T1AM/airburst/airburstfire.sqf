@@ -56,7 +56,7 @@ _falloff = 0;
 
 
 _tubeType = "UNKNOWN";
-_tubeType = _tube call T1AM_Fnc_TubeType;
+_tubeType = [_tube] call T1AM_Fnc_TubeType;
 
 
 // Check if the projectile has submunition.

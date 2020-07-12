@@ -1,6 +1,6 @@
 params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile","_gunner"];
 
-systemChat format ["Round velocity:  %1",((velocity _projectile) select 2)];
+if (!local _unit) exitWith {};
 
 private _markerName = format ["%1%2%3",_projectile,time,(random 999)];
 private _marker = createMarker [_markerName,(getPosASL _projectile)];
@@ -10,9 +10,9 @@ _marker setMarkerType "mil_dot";
 _marker setMarkerColor "ColorGreen";
 
 while {(alive _projectile)} do {
-	if (alive _projectile) then {_marker setMarkerPos (getPosASL _projectile)};
+	_marker setMarkerPos (getPosASL _projectile);
 	sleep 0.1;
-	if (T1AM_Debug_Mode) then {_projectile spawn T1AM_Fnc_Track};
+	if (T1AM_Debug_Mode) then {_projectile spawn T1AM_Fnc_ProjectileTrail};
 };
 
 _marker setMarkerColor "ColorRed";

@@ -9,8 +9,8 @@ _warheadType = _this select 0;
 _distance = _this select 1;
 
 // Minumum delay before firing a shot
-_timeBetweenRounds = 1;
-_minimumRange = 50;
+_timeBetweenRounds = 0.3;
+_minimumRange = 100;
 _maximumRange = 30000;
 _regularMaxRange = _maximumRange;
 

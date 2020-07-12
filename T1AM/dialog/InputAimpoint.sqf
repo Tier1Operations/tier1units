@@ -1,9 +1,9 @@
 // X coordinate
 private _str = ctrlText 402;
 _str = [_str] call T1AM_Fnc_GridToPos;
-private _x = [_str, 6] call T1AM_Fnc_ParseNumber;
+private _x = [_str, 5] call T1AM_Fnc_ParseNumber;
 if (_x == -9999999) exitWith {
-	hint "Invalid X coordinate.\n\nUse numbers only. Max 6 characters allowed.";
+	hint "Invalid X coordinate.\n\nUse numbers only. Max 5 characters allowed.";
 	[false] call T1AM_Fnc_EndMission;
 };
 
@@ -11,9 +11,9 @@ if (_x == -9999999) exitWith {
 // Y coordinate
 _str = ctrlText 403;
 _str = [_str] call T1AM_Fnc_GridToPos;
-private _y = [_str, 6] call T1AM_Fnc_ParseNumber;
+private _y = [_str, 5] call T1AM_Fnc_ParseNumber;
 if (_y == -9999999) exitWith {
-	hint "Invalid Y coordinate.\n\nUse numbers only. Max 6 characters allowed.";
+	hint "Invalid Y coordinate.\n\nUse numbers only. Max 5 characters allowed.";
 	[false] call T1AM_Fnc_EndMission;
 };
 

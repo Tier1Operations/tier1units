@@ -2,7 +2,7 @@ class CfgPatches
 {
 	class T1AM
 	{
-		units[] = {};
+		units[] = {"I_MBT_01_arty_F","I_MBT_01_mlrs_F"};
 		weapons[] = {};
 		requiredAddons[] = {"A3_Data_F_Oldman_Loadorder","A3_Data_F_Mod_Loadorder","cba_main"};
 		author[]= {"BlackAlpha"};
@@ -29,74 +29,103 @@ class CfgFunctions
 {
 	class T1AM
 	{
-		class Functions
+		class Firemission
 		{
-			class Splash {file = "T1AM\Control\Splash.sqf"};
-			class Tube {file = "T1AM\Control\Tube.sqf"};
-			class ProcessFireMission_Server {file = "T1AM\Control\ProcessFireMission_Server.sqf"};
-			class ProcessFireMission {file = "T1AM\Control\ProcessFireMission.sqf"};
-			class LoadMagazine {file = "T1AM\Control\LoadMagazine.sqf"};
-			class FindBestCharge {file = "T1AM\Control\FindBestCharge.sqf"};
-			class FindCharge {file = "T1AM\Control\FindCharge.sqf"};
-			class RemoveDigits {file = "T1AM\Control\RemoveDigits.sqf"};
-			class GetAllCharges {file = "T1AM\Control\GetAllCharges.sqf"};
-			class GetPrepTime {file = "T1AM\Control\GetPrepTime.sqf"};
-			class DisplayWarheads {file = "T1AM\Dialog\DisplayWarheads.sqf"};
-			class ChangeTube {file = "T1AM\Dialog\ChangeTube.sqf"};
-			class Transmit {file = "T1AM\Dialog\Transmit.sqf"};
-			class SelectFuse {file = "T1AM\Dialog\SelectFuse.sqf"};
-			class CheckForDC {file = "T1AM\Dialog\CheckForDC.sqf"};
-			class CheckFire_Server {file = "T1AM\Dialog\CheckFire_Server.sqf"};
-			class CheckFire_Player {file = "T1AM\Dialog\CheckFire_Player.sqf"};
-			class Aimpoint {file = "T1AM\Dialog\Aimpoint.sqf"};
-			class AimpointHelp {file = "T1AM\Dialog\AimpointHelp.sqf"};
-			class InputAimpoint {file = "T1AM\Dialog\InputAimpoint.sqf"};
-			class InputAimpointMapClick {file = "T1AM\Dialog\InputAimpointMapClick.sqf"};
-			class InputAimpointMapClickProcess {file = "T1AM\Dialog\InputAimpointMapClickProcess.sqf"};
-			class InputAimpointMapClickEffect {file = "T1AM\Dialog\InputAimpointMapClickEffect.sqf"};
-			class Adjust {file = "T1AM\Dialog\Adjust.sqf"};
-			class ControlAsset {file = "T1AM\Dialog\ControlAsset.sqf"};
-			class Assets {file = "T1AM\Dialog\Assets.sqf"};
-			class EndMission {file = "T1AM\Dialog\EndMission.sqf"};
-			class ReleaseAsset {file = "T1AM\Dialog\ReleaseAsset.sqf"};
-			class Control {file = "T1AM\Dialog\Control.sqf"};
-			class CheckAssetStatus {file = "T1AM\Misc\CheckAssetStatus.sqf"};
-			class KeyPressed {file = "T1AM\Misc\KeyPressed.sqf"};
-			class SendComms {file = "T1AM\Misc\SendComms.sqf"};
-			class PlayComms {file = "T1AM\Misc\PlayComms.sqf"};
-			class PosToMapGrid {file = "T1AM\Misc\PosToMapGrid.sqf"};
-			class MapGridToPos {file = "T1AM\Misc\MapGridToPos.sqf"};
-			class GetMapGridData {file = "T1AM\Misc\GetMapGridData.sqf"};
-			class ApproveVehicles {file = "T1AM\Misc\ApproveVehicles.sqf"};
-			class ParseNumber {file = "T1AM\Misc\ParseNumber.sqf"};
-			class PlaceMarker {file = "T1AM\Misc\PlaceMarker.sqf"};
-			class ExcludeVehicleClass {file = "T1AM\Misc\ExcludeVehicleClass.sqf"};
-			class ExcludeVehicle {file = "T1AM\Misc\ExcludeVehicle.sqf"};
-			class ExcludeGroup {file = "T1AM\Misc\ExcludeGroup.sqf"};
-			class AssetType {file = "T1AM\Misc\AssetType.sqf"};
-			class FormatCoordinates {file = "T1AM\Misc\FormatCoordinates.sqf"};
-			class TubeType {file = "T1AM\Misc\TubeType.sqf"};
-			class AmmoType {file = "T1AM\Misc\AmmoType.sqf"};
-			class GroupType {file = "T1AM\Misc\GroupType.sqf"};
-			class TrimGroupName {file = "T1AM\Misc\TrimGroupName.sqf"};
-			class VehicleName {file = "T1AM\Misc\VehicleName.sqf"};
-			class GroupVehicles {file = "T1AM\Misc\GroupVehicles.sqf"};
-			class ArtilleryGroupsBySide {file = "T1AM\Misc\ArtilleryGroupsBySide.sqf"};
-			class HasRadio {file = "T1AM\Misc\HasRadio.sqf"};
-			class GridToPos {file = "T1AM\Misc\GridToPos.sqf"};
-			class LineSheaf {file = "T1AM\Sheafs\LineSheaf.sqf"};
-			class BoxSheaf {file = "T1AM\Sheafs\BoxSheaf.sqf"};
-			class CircularSheaf {file = "T1AM\Sheafs\CircularSheaf.sqf"};
-			class ProfileBM21 {file = "T1AM\Profiles\ProfileBM21.sqf"};
-			class ProfileRocketsHA {file = "T1AM\Profiles\ProfileRocketsHA.sqf"};
-			class ProfileRocketsLA {file = "T1AM\Profiles\ProfileRocketsLA.sqf"};
-			class ProfileCannonHA {file = "T1AM\Profiles\ProfileCannonHA.sqf"};
-			class ProfileCannonLA {file = "T1AM\Profiles\ProfileCannonLA.sqf"};
-			class ProfileMortar {file = "T1AM\Profiles\ProfileMortar.sqf"};
-			class ProfileMK41 {file = "T1AM\Profiles\ProfileMK41.sqf"};
-			class DebugStart {file = "T1AM\Debug\DebugStart.sqf"};
-			class ProjectileTrack {file = "T1AM\Debug\ProjectileTrack.sqf"};
-			class ProjectileTrail {file = "T1AM\Debug\ProjectileTrail.sqf"};
+			class Splash {file = "T1AM\Functions\Firemission\Splash.sqf"};
+			class Tube {file = "T1AM\Functions\Firemission\Tube.sqf"};
+			class ProcessFireMission_Server {file = "T1AM\Functions\Firemission\ProcessFireMission_Server.sqf"};
+			class ProcessFireMission {file = "T1AM\Functions\Firemission\ProcessFireMission.sqf"};
+			class LoadMagazine {file = "T1AM\Functions\Firemission\LoadMagazine.sqf"};
+			class FindBestCharge {file = "T1AM\Functions\Firemission\FindBestCharge.sqf"};
+			class FindCharge {file = "T1AM\Functions\Firemission\FindCharge.sqf"};
+			class RemoveDigits {file = "T1AM\Functions\Firemission\RemoveDigits.sqf"};
+			class GetAllCharges {file = "T1AM\Functions\Firemission\GetAllCharges.sqf"};
+			class GetPrepTime {file = "T1AM\Functions\Firemission\GetPrepTime.sqf"};
+		};
+		class Dialog
+		{
+			class DisplayWarheads {file = "T1AM\Functions\Dialog\DisplayWarheads.sqf"};
+			class ChangeTube {file = "T1AM\Functions\Dialog\ChangeTube.sqf"};
+			class Transmit {file = "T1AM\Functions\Dialog\Transmit.sqf"};
+			class SelectFuse {file = "T1AM\Functions\Dialog\SelectFuse.sqf"};
+			class CheckForDC {file = "T1AM\Functions\Dialog\CheckForDC.sqf"};
+			class CheckFire_Server {file = "T1AM\Functions\Dialog\CheckFire_Server.sqf"};
+			class CheckFire_Player {file = "T1AM\Functions\Dialog\CheckFire_Player.sqf"};
+			class Aimpoint {file = "T1AM\Functions\Dialog\Aimpoint.sqf"};
+			class ShowMessage {file = "T1AM\Functions\Dialog\ShowMessage.sqf"};
+			class InputAimpoint {file = "T1AM\Functions\Dialog\InputAimpoint.sqf"};
+			class InputAimpointMapClick {file = "T1AM\Functions\Dialog\InputAimpointMapClick.sqf"};
+			class InputAimpointMapClickEffect {file = "T1AM\Functions\Dialog\InputAimpointMapClickEffect.sqf"};
+			class Adjust {file = "T1AM\Functions\Dialog\Adjust.sqf"};
+			class ControlAsset {file = "T1AM\Functions\Dialog\ControlAsset.sqf"};
+			class Assets {file = "T1AM\Functions\Dialog\Assets.sqf"};
+			class EndMission {file = "T1AM\Functions\Dialog\EndMission.sqf"};
+			class ReleaseAsset {file = "T1AM\Functions\Dialog\ReleaseAsset.sqf"};
+			class OpenDisplay {file = "T1AM\Functions\Dialog\OpenDisplay.sqf"};
+			class Control {file = "T1AM\Functions\Dialog\Control.sqf"};
+			class CloseDisplays {file = "T1AM\Functions\Dialog\CloseDisplays.sqf"};
+		};
+		class Misc
+		{
+			class CheckAssetStatus {file = "T1AM\Functions\Misc\CheckAssetStatus.sqf"};
+			class SendComms {file = "T1AM\Functions\Misc\SendComms.sqf"};
+			class PlayComms {file = "T1AM\Functions\Misc\PlayComms.sqf"};
+			class PosToMapGrid {file = "T1AM\Functions\Misc\PosToMapGrid.sqf"};
+			class MapGridToPos {file = "T1AM\Functions\Misc\MapGridToPos.sqf"};
+			class GetMapGridData {file = "T1AM\Functions\Misc\GetMapGridData.sqf"};
+			class ApproveVehicles {file = "T1AM\Functions\Misc\ApproveVehicles.sqf"};
+			class ParseNumber {file = "T1AM\Functions\Misc\ParseNumber.sqf"};
+			class PlaceMarker {file = "T1AM\Functions\Misc\PlaceMarker.sqf"};
+			class ExcludeVehicleClass {file = "T1AM\Functions\Misc\ExcludeVehicleClass.sqf"};
+			class ExcludeVehicle {file = "T1AM\Functions\Misc\ExcludeVehicle.sqf"};
+			class ExcludeGroup {file = "T1AM\Functions\Misc\ExcludeGroup.sqf"};
+			class AssetType {file = "T1AM\Functions\Misc\AssetType.sqf"};
+			class FormatCoordinates {file = "T1AM\Functions\Misc\FormatCoordinates.sqf"};
+			class TubeType {file = "T1AM\Functions\Misc\TubeType.sqf"};
+			class AmmoType {file = "T1AM\Functions\Misc\AmmoType.sqf"};
+			class GroupType {file = "T1AM\Functions\Misc\GroupType.sqf"};
+			class TrimGroupName {file = "T1AM\Functions\Misc\TrimGroupName.sqf"};
+			class VehicleName {file = "T1AM\Functions\Misc\VehicleName.sqf"};
+			class GroupVehicles {file = "T1AM\Functions\Misc\GroupVehicles.sqf"};
+			class ArtilleryGroupsBySide {file = "T1AM\Functions\Misc\ArtilleryGroupsBySide.sqf"};
+			class HasRadio {file = "T1AM\Functions\Misc\HasRadio.sqf"};
+			class GridToPos {file = "T1AM\Functions\Misc\GridToPos.sqf"};
+			class GetRandomSpread {file = "T1AM\Functions\Misc\GetRandomSpread.sqf"};
+			class LoadingScreen {file = "T1AM\Functions\Misc\LoadingScreen.sqf"};
+		};
+		class Sheafs
+		{
+			class LineSheaf {file = "T1AM\Functions\Sheafs\LineSheaf.sqf"};
+			class BoxSheaf {file = "T1AM\Functions\Sheafs\BoxSheaf.sqf"};
+			class CircularSheaf {file = "T1AM\Functions\Sheafs\CircularSheaf.sqf"};
+		};
+		class Profiles
+		{
+			class ProfileBM21 {file = "T1AM\Functions\Profiles\ProfileBM21.sqf"};
+			class ProfileRocketsHA {file = "T1AM\Functions\Profiles\ProfileRocketsHA.sqf"};
+			class ProfileRocketsLA {file = "T1AM\Functions\Profiles\ProfileRocketsLA.sqf"};
+			class ProfileCannonHA {file = "T1AM\Functions\Profiles\ProfileCannonHA.sqf"};
+			class ProfileCannonLA {file = "T1AM\Functions\Profiles\ProfileCannonLA.sqf"};
+			class ProfileMortar {file = "T1AM\Functions\Profiles\ProfileMortar.sqf"};
+			class ProfileMK41 {file = "T1AM\Functions\Profiles\ProfileMK41.sqf"};
+		};
+		class Debug
+		{
+			class DebugStart {file = "T1AM\Functions\Debug\DebugStart.sqf"};
+			class ProjectileTrack {file = "T1AM\Functions\Debug\ProjectileTrack.sqf"};
+			class ProjectileTrail {file = "T1AM\Functions\Debug\ProjectileTrail.sqf"};
+		};
+		class Airburst
+		{
+			class AirburstInit {file = "T1AM\Functions\Airburst\AirburstInit.sqf"};
+			class AirburstFrag {file = "T1AM\Functions\Airburst\AirburstFrag.sqf"};
+			class MK41Airburst {file = "T1AM\Functions\Airburst\MK41Airburst.sqf"};
+		};
+		class Special
+		{
+			class Fired {file = "T1AM\Functions\Special\SpecialFired.sqf"};
+			class Guided {file = "T1AM\Functions\Special\Guided.sqf"};
+			class GuideProjectile {file = "T1AM\Functions\Special\GuideProjectile.sqf"};
 		};
 	};
 	
@@ -104,8 +133,8 @@ class CfgFunctions
 	{
 		class Functions
 		{
-			class fired_m119 {file = "T1AM\Misc\Empty.sqf"};
-			class fired_D30 {file = "T1AM\Misc\Empty.sqf"};
+			class fired_m119 {file = "T1AM\Functions\RHS\Empty.sqf"};
+			class fired_D30 {file = "T1AM\Functions\RHS\Empty.sqf"};
 		};
 	};
 };
@@ -257,43 +286,43 @@ class CfgSounds
 	class T1AM_Beep
 	{
 		name = "T1AM_Beep";
-		sound[] ={"\T1AM\Sounds\beep.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\beep.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	// US radio
 	class T1AM_AdjustFireUS
 	{
 		name = "T1AM_AdjustFireUS";
-		sound[] ={"\T1AM\Sounds\US\AdjustFire.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\US\AdjustFire.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_MTOUS
 	{
 		name = "T1AM_MTOIS";
-		sound[] ={"\T1AM\Sounds\US\MTO.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\US\MTO.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_ShotUS
 	{
 		name = "T1AM_ShotUS";
-		sound[] ={"\T1AM\Sounds\US\Shot.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\US\Shot.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_SplashUS
 	{
 		name = "T1AM_SplashUS";
-		sound[] ={"\T1AM\Sounds\US\Splash.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\US\Splash.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_EndOfMissionUS
 	{
 		name = "T1AM_EndOfMissionUS";
-		sound[] ={"\T1AM\Sounds\US\EndOfMission.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\US\EndOfMission.ogg",db-10,1.0};
 		titles[] = {};
 	};
 	
@@ -301,113 +330,113 @@ class CfgSounds
 	class T1AM_AffirmativePER
 	{
 		name = "T1AM_AffirmativePER";
-		sound[] ={"\T1AM\Sounds\PER\Confirmation.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\PER\Confirmation.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_NegativePER
 	{
 		name = "T1AM_NegativePER";
-		sound[] ={"\T1AM\Sounds\PER\Negative.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\PER\Negative.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_FireMissionReadyPER
 	{
 		name = "T1AM_FireMissionReadyPER";
-		sound[] ={"\T1AM\Sounds\PER\ReadyToFire.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\PER\ReadyToFire.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_AdjustFirePER
 	{
 		name = "T1AM_AdjustFirePER";
-		sound[] ={"\T1AM\Sounds\PER\ReadyForOrders.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\PER\ReadyForOrders.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_MTOPER
 	{
 		name = "T1AM_MTOIS";
-		sound[] ={"\T1AM\Sounds\PER\RequestAcknowledged.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\PER\RequestAcknowledged.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_ShotPER
 	{
 		name = "T1AM_ShotPER";
-		sound[] ={"\T1AM\Sounds\PER\Fire_1.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\PER\Fire_1.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_SplashPER
 	{
 		name = "T1AM_SplashPER";
-		sound[] ={"\T1AM\Sounds\PER\Splash.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\PER\Splash.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_EndOfMissionPER
 	{
 		name = "T1AM_EndOfMissionPER";
-		sound[] ={"\T1AM\Sounds\PER\RoundsComplete.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\PER\RoundsComplete.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	// Greek radio
 	class T1AM_AffirmativeGRE
 	{
 		name = "T1AM_AffirmativeGRE";
-		sound[] ={"\T1AM\Sounds\GRE\Confirmation.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GRE\Confirmation.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_NegativeGRE
 	{
 		name = "T1AM_NegativeGRE";
-		sound[] ={"\T1AM\Sounds\GRE\Negative.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GRE\Negative.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_AdjustFireGRE
 	{
 		name = "T1AM_AdjustFireGRE";
-		sound[] ={"\T1AM\Sounds\GRE\AdjustFire.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GRE\AdjustFire.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_MTOGRE
 	{
 		name = "T1AM_MTOIS";
-		sound[] ={"\T1AM\Sounds\GRE\MTO.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GRE\MTO.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_ShotGRE
 	{
 		name = "T1AM_ShotGRE";
-		sound[] ={"\T1AM\Sounds\GRE\Shot.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GRE\Shot.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_SplashGRE
 	{
 		name = "T1AM_SplashGRE";
-		sound[] ={"\T1AM\Sounds\GRE\Splash.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GRE\Splash.ogg",db-10,1.0};
 		titles[] = {};
 	};
-
+	
 	class T1AM_EndOfMissionGRE
 	{
 		name = "T1AM_EndOfMissionGRE";
-		sound[] ={"\T1AM\Sounds\GRE\RoundsComplete.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GRE\RoundsComplete.ogg",db-10,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_FireMissionReadyGRE
 	{
 		name = "T1AM_FireMissionReadyGRE";
-		sound[] ={"\T1AM\Sounds\GRE\FireMissionReady.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GRE\FireMissionReady.ogg",db-10,1.0};
 		titles[] = {};
 	};	
 };
@@ -511,7 +540,7 @@ class CfgAmmo
 		hit = 35;
 		airFriction = "(-0.01)*0.35";
 		caliber = 2.0;
-		indirectHit = 4;
+		indirectHit = 5;
 		indirectHitRange = 0.25;
 	};
 	
@@ -520,105 +549,40 @@ class CfgAmmo
 		hit = 40;
 		airFriction = "(-0.01)*0.25";
 		caliber = 3.0;
-		indirectHit = 5;
+		indirectHit = 6;
 		indirectHitRange = 0.5;
 	};
 	
 	
-	
-	class Grenade;
-	class T1AM_Airburst_Mortar: Grenade
+	class B_127x99_Ball;
+	class ACE_frag_T1AM_HE_AIRBURST_S1: B_127x99_Ball
 	{
-		hit = 75;
-		indirectHit = 50;
-		indirectHitRange = 25;
-		explosive = 1;
+		timeToLive = 12;
+		typicalSpeed = 1500;
+		deflecting = 65;
 		
-		ace_frag_enabled = 1;
-		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3"};
-		ace_frag_metal = 36000;
-		ace_frag_charge = 9979;
-		ace_frag_gurney_c = 2440;
-		ace_frag_gurney_k = "1/2";
-		
-		CraterEffects = "ArtyShellCrater";
-		explosionEffects = "MortarExplosion";
-		
-		typicalSpeed = 100;
-		cost = 300;
-		model = "\A3\Weapons_f\empty";
-		airFriction = 0;
-		timeToLive = 1;
-		explosionTime = 0.001;
-		soundHit[] = {"A3\Sounds_F\weapons\Rockets\explosion_missile_01",db20,1,1200};
-		soundFly[] = {"",1,1};
-		soundEngine[] = {"",1,4};
+		airFriction = -0.0003;
+		caliber = 6.0;
+		hit = 50;
 	};
-	
-	class T1AM_Airburst_Cannon: Grenade
+	class ACE_frag_T1AM_HE_AIRBURST_S2: B_127x99_Ball
 	{
-		hit = 175;
-		indirectHit = 60;
-		indirectHitRange = 30;
-		explosive = 1;
+		timeToLive = 12;
+		typicalSpeed = 1500;
+		deflecting = 65;
 		
-		ace_frag_enabled = 1;
-		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3"};
-		ace_frag_metal = 36000;
-		ace_frag_charge = 9979;
-		ace_frag_gurney_c = 2440;
-		ace_frag_gurney_k = "1/2";
-		
-		CraterEffects = "ImpactEffectsMedium";
-		explosionEffects = "MortarExplosion";
-		
-		typicalSpeed = 100;
-		cost = 300;
-		model = "\A3\Weapons_f\empty";
-		airFriction = 0;
-		timeToLive = 1;
-		explosionTime = 0.001;
-		soundHit[] = {"A3\Sounds_F\weapons\Rockets\explosion_missile_01",db20,1,1200};
-		soundFly[] = {"",1,1};
-		soundEngine[] = {"",1,4};
+		airFriction = -0.0006;
+		caliber = 3.0;
+		hit = 30;
 	};
-	
-	class T1AM_Airburst_Rocket: Grenade
-	{
-		hit = 200;
-		indirectHit = 200;
-		indirectHitRange = 35;
-		explosive = 1;
-		
-		ace_frag_enabled = 1;
-		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3"};
-		ace_frag_metal = 36000;
-		ace_frag_charge = 9979;
-		ace_frag_gurney_c = 2440;
-		ace_frag_gurney_k = "1/2";
-		
-		CraterEffects = "ImpactEffectsMedium";
-		explosionEffects = "MortarExplosion";
-		
-		typicalSpeed = 100;
-		cost = 300;
-		model = "\A3\Weapons_f\empty";
-		airFriction = 0;
-		timeToLive = 1;
-		explosionTime = 0.001;
-		soundHit[] = {"A3\Sounds_F\weapons\Rockets\explosion_missile_01",db20,1,1200};
-		soundFly[] = {"",1,1};
-		soundEngine[] = {"",1,4};
-	};
-	
 	
 	
 	class SubmunitionBase;
 	class Sh_82mm_AMOS_guided: SubmunitionBase
 	{
 		hit = 450;
-		indirectHit = 47;
-		indirectHitRange = 10;
+		indirectHit = 55;
+		indirectHitRange = 8;
 		
 		ace_frag_charge = 320;
 		ace_frag_classes[] = {"ace_frag_medium_HD_T1AM_Copy","ace_frag_medium_HD_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy"};
@@ -632,8 +596,8 @@ class CfgAmmo
 	class Sh_82mm_AMOS_LG: Sh_82mm_AMOS_guided
 	{
 		hit = 450;
-		indirectHit = 47;
-		indirectHitRange = 10;
+		indirectHit = 55;
+		indirectHitRange = 8;
 		
 		ace_frag_charge = 320;
 		ace_frag_classes[] = {"ace_frag_medium_HD_T1AM_Copy","ace_frag_medium_HD_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy"};
@@ -649,8 +613,8 @@ class CfgAmmo
 	{
 
 		hit = 450;
-		indirectHit = 47;
-		indirectHitRange = 10;
+		indirectHit = 55;
+		indirectHitRange = 8;
 		
 		ace_frag_charge = 320;
 		ace_frag_classes[] = {"ace_frag_medium_HD_T1AM_Copy","ace_frag_medium_HD_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy"};
@@ -664,8 +628,8 @@ class CfgAmmo
 	{
 
 		hit = 450;
-		indirectHit = 47;
-		indirectHitRange = 10;
+		indirectHit = 55;
+		indirectHitRange = 8;
 		
 		ace_frag_charge = 320;
 		ace_frag_classes[] = {"ace_frag_medium_HD_T1AM_Copy","ace_frag_medium_HD_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy"};
@@ -679,8 +643,8 @@ class CfgAmmo
 	class Sh_155mm_AMOS: ShellBase
 	{
 		hit = 375;
-		indirectHit = 120;
-		indirectHitRange = 25;
+		indirectHit = 150;
+		indirectHitRange = 18;
 		
 		ace_frag_charge = 420;
 		ace_frag_classes[] = {"ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_huge_HD_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy"};
@@ -695,8 +659,8 @@ class CfgAmmo
 	class Sh_82mm_AMOS: Sh_155mm_AMOS
 	{
 		hit = 275;
-		indirectHit = 52;
-		indirectHitRange = 18;
+		indirectHit = 65;
+		indirectHitRange = 10;
 		
 		ace_frag_charge = 320;
 		ace_frag_classes[] = {"ace_frag_medium_HD_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_medium_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_huge_T1AM_Copy"};
@@ -710,7 +674,7 @@ class CfgAmmo
 	{
 		hit = 1100;
 		indirectHit = 100;
-		indirectHitRange = 16;
+		indirectHitRange = 15;
 		
 		ace_frag_charge = 420;
 		ace_frag_classes[] = {"ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy"};
@@ -725,7 +689,7 @@ class CfgAmmo
 	{
 		hit = 1100;
 		indirectHit = 100;
-		indirectHitRange = 16;
+		indirectHitRange = 15;
 		
 		ace_frag_charge = 420;
 		ace_frag_classes[] = {"ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy"};
@@ -741,7 +705,7 @@ class CfgAmmo
 	{
 		hit = 1100;
 		indirectHit = 100;
-		indirectHitRange = 16;
+		indirectHitRange = 15;
 		
 		ace_frag_charge = 420;
 		ace_frag_classes[] = {"ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy"};
@@ -756,7 +720,7 @@ class CfgAmmo
 	{
 		hit = 1100;
 		indirectHit = 100;
-		indirectHitRange = 16;
+		indirectHitRange = 15;
 		
 		ace_frag_charge = 420;
 		ace_frag_classes[] = {"ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy"};
@@ -770,7 +734,7 @@ class CfgAmmo
 	{
 		hit = 1200;
 		indirectHit = 400;
-		indirectHitRange = 30;
+		indirectHitRange = 25;
 		
 		ace_frag_charge = 420;
 		ace_frag_classes[] = {"ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_huge_HD_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy"};
@@ -784,7 +748,7 @@ class CfgAmmo
 	{
 		hit = 1200;
 		indirectHit = 400;
-		indirectHitRange = 30;
+		indirectHitRange = 25;
 		
 		ace_frag_classes[] = {"ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_huge_HD_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy"};
 		ace_frag_metal = 40000;
@@ -820,15 +784,13 @@ class CfgAmmo
 		missileLockMaxSpeed = 150;
 		missileLockMinDistance = 0.1;
 		
-		ace_frag_classes[] = {"ace_frag_huge2_T1AM_Copy"};
-		ace_frag_metal = 45000;
-		ace_frag_charge = 6000;
-		ace_frag_gurney_c = 3000;
-		ace_frag_gurney_k = "1/2";
+		hit = 6000;
+		indirectHit = 700;
+		indirectHitRange = 35;
 		
 		class Cruise
 		{
-			lockDistanceToTarget = 800;
+			lockDistanceToTarget = 400;
 			preferredFlightAltitude = 100;
 		};
 		
@@ -921,10 +883,17 @@ class CfgAmmo
 		missileLockMaxSpeed = 150;
 		missileLockMinDistance = 0.1;
 		
+		submunitionConeAngle = 19;
+		submunitionConeType[] = {"poissondisc",55};
+		
+		hit = 6000;
+		indirectHit = 450;
+		indirectHitRange = 30;
+		
 		class Cruise
 		{
-			lockDistanceToTarget = 800;
-			preferredFlightAltitude = 100;
+			lockDistanceToTarget = 400;
+			preferredFlightAltitude = 175;
 		};
 		
 		class Components
@@ -1007,6 +976,329 @@ class CfgAmmo
 				};
 			};
 		};
+	};
+	
+	class Mo_cluster_AP: ShellBase
+	{
+		hit = 200;
+		indirectHit = 350;
+		indirectHitRange = 10;
+	};
+	
+	
+	
+	class T1AM_Airburst_MortarL: Sh_82mm_AMOS
+	{
+		hit = 275;
+		indirectHit = 65;
+		indirectHitRange = 12;
+		explosive = 1;
+		
+		ace_frag_enabled = 1;
+		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_3"};
+		ace_frag_metal = 36000;
+		ace_frag_charge = 9979;
+		ace_frag_gurney_c = 2440;
+		ace_frag_gurney_k = "1/2";
+		
+		CraterEffects = "T1AM_Airburst_Crater";
+		craterShape = "\A3\weapons_f\empty.p3d";
+		explosionEffects = "T1AM_Airburst_Effect_Mortar";
+		
+		typicalSpeed = 100;
+		cost = 300;
+		model = "\A3\Weapons_f\empty";
+		airFriction = 0;
+		timeToLive = 1;
+		explosionTime = 0.001;
+	};
+	class T1AM_Airburst_MortarM: Sh_82mm_AMOS
+	{
+		hit = 325;
+		indirectHit = 80;
+		indirectHitRange = 14;
+		explosive = 1;
+		
+		ace_frag_enabled = 1;
+		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_3"};
+		ace_frag_metal = 36000;
+		ace_frag_charge = 9979;
+		ace_frag_gurney_c = 2440;
+		ace_frag_gurney_k = "1/2";
+		
+		CraterEffects = "T1AM_Airburst_Crater";
+		craterShape = "\A3\weapons_f\empty.p3d";
+		explosionEffects = "T1AM_Airburst_Effect_Mortar";
+		
+		typicalSpeed = 100;
+		cost = 300;
+		model = "\A3\Weapons_f\empty";
+		airFriction = 0;
+		timeToLive = 1;
+		explosionTime = 0.001;
+	};
+	
+	
+	class T1AM_Airburst_CannonL: Sh_155mm_AMOS
+	{
+		hit = 350;
+		indirectHit = 120;
+		indirectHitRange = 17;
+		explosive = 1;
+		
+		ace_frag_enabled = 1;
+		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3"};
+		ace_frag_metal = 36000;
+		ace_frag_charge = 9979;
+		ace_frag_gurney_c = 2440;
+		ace_frag_gurney_k = "1/2";
+		
+		CraterEffects = "T1AM_Airburst_Crater";
+		craterShape = "\A3\weapons_f\empty.p3d";
+		explosionEffects = "T1AM_Airburst_Effect_Cannon";
+		
+		typicalSpeed = 100;
+		cost = 300;
+		model = "\A3\Weapons_f\empty";
+		airFriction = 0;
+		timeToLive = 1;
+		explosionTime = 0.001;
+	};
+	class T1AM_Airburst_CannonM: Sh_155mm_AMOS
+	{
+		hit = 375;
+		indirectHit = 150;
+		indirectHitRange = 20;
+		explosive = 1;
+		
+		ace_frag_enabled = 1;
+		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3"};
+		ace_frag_metal = 36000;
+		ace_frag_charge = 9979;
+		ace_frag_gurney_c = 2440;
+		ace_frag_gurney_k = "1/2";
+		
+		CraterEffects = "T1AM_Airburst_Crater";
+		craterShape = "\A3\weapons_f\empty.p3d";
+		explosionEffects = "T1AM_Airburst_Effect_Cannon";
+		
+		typicalSpeed = 100;
+		cost = 300;
+		model = "\A3\Weapons_f\empty";
+		airFriction = 0;
+		timeToLive = 1;
+		explosionTime = 0.001;
+	};
+	
+	
+	class T1AM_Airburst_RocketL: R_230mm_fly
+	{
+		hit = 550;
+		indirectHit = 200;
+		indirectHitRange = 23;
+		explosive = 1;
+		
+		ace_frag_enabled = 1;
+		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_1","ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3"};
+		ace_frag_metal = 36000;
+		ace_frag_charge = 9979;
+		ace_frag_gurney_c = 2440;
+		ace_frag_gurney_k = "1/2";
+		
+		CraterEffects = "T1AM_Airburst_Crater";
+		craterShape = "\A3\weapons_f\empty.p3d";
+		explosionEffects = "T1AM_Airburst_Effect_Rocket";
+		
+		typicalSpeed = 100;
+		cost = 300;
+		model = "\A3\Weapons_f\empty";
+		airFriction = 0;
+		timeToLive = 1;
+		explosionTime = 0.001;
+	};
+	class T1AM_Airburst_RocketM: R_230mm_fly
+	{
+		hit = 1000;
+		indirectHit = 400;
+		indirectHitRange = 27;
+		explosive = 1;
+		
+		ace_frag_enabled = 1;
+		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_2","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3"};
+		ace_frag_metal = 36000;
+		ace_frag_charge = 9979;
+		ace_frag_gurney_c = 2440;
+		ace_frag_gurney_k = "1/2";
+		
+		CraterEffects = "T1AM_Airburst_Crater";
+		craterShape = "\A3\weapons_f\empty.p3d";
+		explosionEffects = "T1AM_Airburst_Effect_Rocket";
+		
+		typicalSpeed = 100;
+		cost = 300;
+		model = "\A3\Weapons_f\empty";
+		airFriction = 0;
+		timeToLive = 1;
+		explosionTime = 0.001;
+	};
+	class T1AM_Airburst_RocketH: R_230mm_fly
+	{
+		hit = 1500;
+		indirectHit = 550;
+		indirectHitRange = 30;
+		explosive = 1;
+		
+		ace_frag_enabled = 1;
+		ace_frag_classes[] = {"ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3","ACE_frag_T1AM_HE_AIRBURST_3"};
+		ace_frag_metal = 36000;
+		ace_frag_charge = 9979;
+		ace_frag_gurney_c = 2440;
+		ace_frag_gurney_k = "1/2";
+		
+		CraterEffects = "T1AM_Airburst_Crater";
+		craterShape = "\A3\weapons_f\empty.p3d";
+		explosionEffects = "T1AM_Airburst_Effect_Rocket";
+		
+		typicalSpeed = 100;
+		cost = 300;
+		model = "\A3\Weapons_f\empty";
+		airFriction = 0;
+		timeToLive = 1;
+		explosionTime = 0.001;
+	};
+	class T1AM_Airburst_RocketMK41: T1AM_Airburst_RocketH
+	{
+		ace_frag_enabled = 0;
+		hit = 1;
+		indirectHit = 1;
+		indirectHitRange = 1;
+		CraterEffects = "";
+		craterShape = "\A3\weapons_f\empty.p3d";
+		explosionEffects = "";
+		SoundSetExplosion[] = {};
+		soundHit1[] = {};
+		soundHit2[] = {};
+		soundHit3[] = {};
+	};
+};
+
+
+
+class T1AM_Airburst_Crater
+{
+	class CircleDust
+	{
+		enabled = "distToWater interpolate [0.0,0.01,-1,1]";
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.25;
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "CircleDustSmall";
+	};
+	class ExploAmmoStones
+	{
+		intensity = 0;
+		interval = 1;
+		lifeTime = 0;
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "DirtSmall";
+	};
+};
+
+
+
+class T1AM_Airburst_Effect_Mortar
+{
+	class Explosion1
+	{
+		intensity = 3;
+		interval = 1;
+		lifeTime = 0.08;
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "ExplosionParticles";
+	};
+	class LightExp
+	{
+		intensity = 0.001;
+		interval = 1;
+		lifeTime = 0.25;
+		position[] = {0,1.5,0};
+		simulation = "light";
+		type = "ExploLight";
+	};
+	class SmallSmoke1
+	{
+		intensity = 1;
+		interval = 1;
+		lifeTime = 1;
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "CloudBigLight";
+	};
+};
+
+class T1AM_Airburst_Effect_Cannon
+{
+	class Explosion1
+	{
+		intensity = 3;
+		interval = 1;
+		lifeTime = 0.25;
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "ExplosionParticles";
+	};
+	class LightExp
+	{
+		intensity = 0.001;
+		interval = 1;
+		lifeTime = 0.25;
+		position[] = {0,1.5,0};
+		simulation = "light";
+		type = "ExploLight";
+	};
+	class SmallSmoke1
+	{
+		intensity = 1;
+		interval = 1;
+		lifeTime = 1;
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "CloudMedDark";
+	};
+};
+
+class T1AM_Airburst_Effect_Rocket
+{
+	class Explosion1
+	{
+		intensity = 3;
+		interval = 1;
+		lifeTime = 0.25;
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "ExplosionParticles";
+	};
+	class LightExp
+	{
+		intensity = 0.001;
+		interval = 1;
+		lifeTime = 0.25;
+		position[] = {0,1.5,0};
+		simulation = "light";
+		type = "ExploLight";
+	};
+	class SmallSmoke1
+	{
+		intensity = 1;
+		interval = 1;
+		lifeTime = 1;
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "CloudMedLight";
 	};
 };
 
@@ -1095,17 +1387,17 @@ class cfgWeapons
 		
 		class Single1: Mode_SemiAuto
 		{
-			artilleryDispersion = 0.25;
+			artilleryDispersion = 0.50;
 		};
 		class Burst1: Mode_Burst
 		{
-			artilleryDispersion = 0.25;
+			artilleryDispersion = 0.50;
 		};
 		
 		class Single3;
 		class Single4: Single3
 		{
-			artilleryDispersion = 0.25;
+			artilleryDispersion = 0.50;
 			artilleryCharge = 1.45;
 			displayName = "Semi (very far)";
 		};
@@ -1113,7 +1405,7 @@ class cfgWeapons
 		class Burst3;
 		class Burst4: Burst3
 		{
-			artilleryDispersion = 0.25;
+			artilleryDispersion = 0.50;
 			artilleryCharge = 1.45;
 			maxRange = 6500;
 			maxRangeProbab = 0.3;
@@ -1143,19 +1435,19 @@ class cfgWeapons
 	{
 		class Close: RocketPods
 		{
-			artilleryDispersion = 0.15;
+			artilleryDispersion = 0.30;
 		};
 		class Medium: Close
 		{
-			artilleryDispersion = 0.15;
+			artilleryDispersion = 0.30;
 		};
 		class Far: Close
 		{
-			artilleryDispersion = 0.15;
+			artilleryDispersion = 0.30;
 		};
 		class Full: Close
 		{
-			artilleryDispersion = 0.15;
+			artilleryDispersion = 0.30;
 		};
 	};
 	

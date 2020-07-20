@@ -11,26 +11,22 @@ if (isNil "T1AM_DEBUG_DisableRandomSpread") then {T1AM_DEBUG_DisableRandomSpread
 if (isNil "T1AM_DEBUG_DisableInitialMiss") then {T1AM_DEBUG_DisableInitialMiss = false};
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
-["Tier 1 Artillery", "Show Dialog", ["Show Computer", "Tool Tip"], {[] call T1AM_Fnc_KeyPressed}, "", [DIK_UP, [false, false, false]]] call cba_fnc_addKeybind;
+["Tier 1 Artillery", "Show Dialog", ["Show Computer", "Opens the artillery computer."], {[0, [], 0] spawn T1AM_Fnc_LoadingScreen}, "", [DIK_UP, [false, false, false]]] call cba_fnc_addKeybind;
 
 T1AM_Pos = [0,0];
 T1AM_X = 0;
 T1AM_Y = 0;
 T1AM_AdjustX = 0;
 T1AM_AdjustY = 0;
-T1AM_Elevation = 0;
-// Has an aimpoint been entered?
 T1AM_HaveAimpoint = false;
-// The x/y values that are displayed to the player (not necessarily the true x/y value used by the system)
-T1AM_Xdisplay = 0;
-T1AM_Ydisplay = 0;
-// The real (BIS) values
-// Elevation ASL
-T1AM_Elevation = 0;
+T1AM_Xdisplay = 0;	// The X and Y target coordinates displayed to the player. May not be accurate, on purpose.
+T1AM_Ydisplay = 0;	// The X and Y target coordinates displayed to the player. May not be accurate, on purpose.
+T1AM_Elevation = 0; // ASL elevation.
 
 // Parent classes that show a unit inherits from an artillery piece
 T1AM_ArtyParents = ["StaticMortar","StaticCannon","MBT_01_mlrs_base_F","MBT_01_arty_base_F","B_MBT_01_mlrs_base_F","B_MBT_01_arty_base_F","O_MBT_02_arty_base_F","O_MBT_02_arty_F","I_MBT_01_arty_F","I_MBT_01_mlrs_F","rhs_2s3_tv","rhs_bm21_msv_01"];
-// Acceptable radio types
+
+// Items that count as a radio.
 T1AM_RadioTypes = ["ItemRadio"];
 
 T1AM_SelectedAsset = grpNull;
@@ -47,14 +43,13 @@ T1AM_LastAirburstHeight = "";
 T1AM_LastSheaf = "";
 T1AM_LastSheafX = 100;
 T1AM_LastSheafY = 100;
-T1AM_LastSheafLineDir = 0;
-T1AM_LastSheafLineDist = 0;
+T1AM_LastSheafDir = 0;
+T1AM_LastSheafDist = 0;
 T1AM_LastGPSX = -999999;
 T1AM_LastGPSY = -999999;
 T1AM_LastGPSZ_AGL = 0;
 T1AM_LastAdjustX = 0;
 T1AM_LastAdjustY = 0;
-T1AM_ControlRunning = false;
 T1AM_LastAimpointX = "";
 T1AM_LastAimpointY = "";
 
@@ -67,13 +62,13 @@ if (isNil "T1AM_ApproveVehiclesOverride") then {
 
 // Rounds that can be used for airburst fire.
 if (isNil "T1AM_AirburstRounds") then {
-	T1AM_AirburstRounds = ["8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_guided","8Rnd_82mm_Mo_LG","32Rnd_155mm_Mo_shells","2Rnd_155mm_Mo_guided","2Rnd_155mm_Mo_LG","32Rnd_155mm_Mo_shells_O","2Rnd_155mm_Mo_guided_O","4Rnd_155mm_Mo_LG_O","12Rnd_230mm_rockets","RHS_mag_m1_he_12","rhs_mag_HE_2a33","rhs_mag_3vo18_10","rhs_mag_3of56_10","rhs_mag_155mm_m795_28"];
+	T1AM_AirburstRounds = ["8Rnd_82mm_Mo_shells","8Rnd_82mm_Mo_guided","8Rnd_82mm_Mo_LG","32Rnd_155mm_Mo_shells","2Rnd_155mm_Mo_guided","2Rnd_155mm_Mo_LG","32Rnd_155mm_Mo_shells_O","2Rnd_155mm_Mo_guided_O","4Rnd_155mm_Mo_LG_O","12Rnd_230mm_rockets","RHS_mag_m1_he_12","rhs_mag_HE_2a33","rhs_mag_3vo18_10","rhs_mag_3of56_10","rhs_mag_155mm_m795_28","rhs_mag_m31_6"];
 };
 
 
 // GPS guided. Will go for the chosen target pos.
 if (isNil "T1AM_GPSGuidedTypes") then {
-	T1AM_GPSGuidedTypes = ["8Rnd_82mm_Mo_guided"];
+	T1AM_GPSGuidedTypes = ["8Rnd_82mm_Mo_guided","rhs_mag_m30_6","rhs_mag_m31_6","rhs_mag_mgm140b_1","rhs_mag_mgm164_block2_1","rhs_mag_mgm164_block4_1"];
 };
 
 
@@ -112,31 +107,40 @@ if (isNil "T1AM_LaserTypes") then {
 if (isNil "T1AM_Exclude") then {T1AM_Exclude = ["rhsgref_cdf_b_reg_d30_at","rhsgref_ins_d30_at","rhs_D30_at_msv","rhs_D30_at_vdv","rhs_D30_at_vmf","rhsgref_cdf_reg_d30_at","rhsgref_ins_g_d30_at","rhsgref_nat_d30_at","rhs_9k79","rhs_9k79_K","rhs_9k79_B"]};
 
 
-// New controlled asset
+// New controlled asset.
 T1AM_ControlledAsset = grpNull;
-// Which asset is the player currently controlling
+
+// Which asset is the player currently controlling.
 T1AM_ControlledAssetLocal = grpNull;
-// All controlled assets
+
+// All controlled assets.
 if (isNil "T1AM_ControlledAssets") then {T1AM_ControlledAssets = []};
-// All busy assets
+
+// All busy assets.
 if (isNil "T1AM_AssetsBusy") then {T1AM_AssetsBusy = []};
-// Array to be processed on the server
+
+// Array to be processed on the server.
 T1AM_NewFireMission = [];
+
 // Which dialog should be opened by default? ("Assets","Aimpoint","Control")
 T1AM_LastDialog = "Assets";
-// Which tube of the selected asset is being used
+
+// Which tube of the selected asset is being used.
 T1AM_SelectedTube = objNull;
 T1AM_SelectedTubeIndex = 0;
 
-// Fire mission the player is currently working on
+// Fire mission the player is currently working on.
 T1AM_FireMissionCurrent = [];
 
 // What type of mission.
 T1AM_MissionType = "";
+
 // All fire missions performed so far (except spotting rounds).
 if (isNil "T1AM_AllMissions") then {T1AM_AllMissions = []};
-// Cut down plotting time for repeast or pre-plotted missions.
+
+// Cut down plotting time for repeat or pre-plotted missions.
 T1AM_PrePlotted = false;
+
 // Selected pre-plotted mission.
 T1AM_SelectedPrePlotted = [];
 

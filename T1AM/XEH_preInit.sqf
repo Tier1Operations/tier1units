@@ -80,7 +80,7 @@
 [
 	"T1AM_DEBUG_DisableInitialMiss",
 	"CHECKBOX",
-	["Disable Initial Miss","Artillery has a chance to miss on their first shot, the further out the target is. This will make artillery always hit the aiming point."],
+	["Disable Initial Miss","Disable missing with the first shot. This will make it so the exact target position is always hit."],
 	["Tier 1 Artillery Mod","Debug"],
 	[false],
 	true
@@ -89,7 +89,7 @@
 [
 	"T1AM_DEBUG_DisableRandomSpread",
 	"CHECKBOX",
-	["Disable Random Spread","The accuracy of shots gets reduced exponentially the further out the target is. This will make shots almost pin point accurate."],
+	["Disable Random Spread","Disable accuracy reduction caused by distance. This will make shots almost pin point accurate."],
 	["Tier 1 Artillery Mod","Debug"],
 	[false],
 	true

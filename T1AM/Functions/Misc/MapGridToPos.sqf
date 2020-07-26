@@ -43,4 +43,8 @@ if (_index != -1) then {
 	_yPos = parseNumber _str;
 };
 
+// If it's a negative number, we need to decrement by 1.
+if (_xPos < 0) then {_xPos = _xPos - 1};
+if (_yPos < 0) then {_yPos = _yPos - 1};
+
 [_xPos, _yPos, 0]

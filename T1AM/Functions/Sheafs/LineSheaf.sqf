@@ -1,16 +1,9 @@
-private["_tube","_asset","_pos","_sheafDir","_sheafDist","_elevation","_height","_nrOfSectors"];
+params ["_tube","_asset","_pos","_sheafDir","_sheafDist"];
 
-_tube = _this select 0;
-_asset = _this select 1;
-_pos = _this select 2;
-_sheafDir = _this select 3;
-_sheafDist = _this select 4;
-
-if (_sheafDir < 1) then {_sheafDir = 1};
-if (_sheafDir > 360) then {_sheafDir = 360};
+if (_sheafDir <= 0 or _sheafDir > 360) then {_sheafDir = 360};
 
 _pos = ASLtoAGL _pos;
-_elevation = _pos select 2;		// Remember the height above ground for airburst.
+private _elevation = _pos select 2;		// Remember the height above ground for airburst.
 
 // Divide the target area into multiple sectors along a line.
 // Max 40 sectors in total.
@@ -21,6 +14,7 @@ _elevation = _pos select 2;		// Remember the height above ground for airburst.
 
 private _spread = 33;
 
+private _nrOfSectors = 2;
 if (_sheafDist > _spread) then {
 	_nrOfSectors = 1;
 	while {_sheafDist > 0} do {
@@ -28,9 +22,6 @@ if (_sheafDist > _spread) then {
 		_nrOfSectors = _nrOfSectors + 1;
 	};
 	_nrOfSectors = _nrOfSectors min 40;
-	
-} else {
-	_nrOfSectors = 2;
 };
 
 // Get sector data.   true = has been fired at / false = not fired at yet
@@ -308,6 +299,6 @@ _allSectors = [_sector1,_sector2,_sector3,_sector4,_sector5,_sector6,_sector7,_s
 // Save the new sector data onto the unit's group.
 _asset setVariable ["T1AM_sheafSectorsLine", _allSectors];
 
-_height = ((AGLtoASL [_pos select 0, _pos select 1, 0]) select 2) max 0;
+private _height = ((AGLtoASL [_pos select 0, _pos select 1, 0]) select 2) max 0;
 
 [_pos select 0, _pos select 1, _height + _elevation]

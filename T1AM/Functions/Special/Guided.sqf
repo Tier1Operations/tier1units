@@ -42,14 +42,16 @@ if (_action == 1 or _action == 4) then {_radius = 500};
 private _distanceCheck = (((getPosASL _projectile) vectorDistance _pos) * 0.5) max 2000; // When low angle, let the projectile get a bit closer.
 
 
-if (_gunAngle == "High") then {
+if (_gunAngle == "HIGH") then {
 	// High angle shot - Wait until the projectile starts descending.
 	private _altitudeHighest = -100000;
 	
 	while {alive _projectile} do {
 		private _altitude = (getPosASL _projectile) select 2;
 		// Add 7 to avoid bug.
-		if (_altitude + 7 < _altitudeHighest) exitWith {};
+		if (_altitude + 7 < _altitudeHighest) exitWith {
+			//DIAG_LOG format ["GUIDED | _altitude + 7 < _altitudeHighest: %1 | _altitude: %2 | _altitudeHighest: %3", _altitude + 7 < _altitudeHighest, _altitude, _altitudeHighest];
+		};
 		_altitudeHighest = _altitude;
 		sleep 0.2;
 	};
@@ -58,13 +60,17 @@ if (_gunAngle == "High") then {
 	private _startPos = getPosASL _projectile;
 	while {true} do {
 		sleep 0.025;
-		if (_startPos vectorDistance (getPosASL _projectile) > 20 or !alive _projectile) exitWith {};
+		if (_startPos vectorDistance (getPosASL _projectile) > 20 or !alive _projectile) exitWith {
+			//DIAG_LOG format ["GUIDED | _startPos vectorDistance (getPosASL _projectile) > 20 or !alive _projectile: %1 | _startPos vectorDistance (getPosASL _projectile): %2 | !alive _projectile: %3", _startPos vectorDistance (getPosASL _projectile) > 20 or !alive _projectile, _startPos vectorDistance (getPosASL _projectile), !alive _projectile];
+		};
 	};
 	
 	// Wait until projectile is a bit closer to the target.
 	while {true} do {
 		sleep 0.025;
-		if (_pos vectorDistance (getPosASL _projectile) < _distanceCheck or !alive _projectile) exitWith {};
+		if (_pos vectorDistance (getPosASL _projectile) < _distanceCheck or !alive _projectile) exitWith {
+			//DIAG_LOG format ["GUIDED | _pos vectorDistance (getPosASL _projectile) < _distanceCheck or !alive _projectile: %1 | _pos vectorDistance (getPosASL _projectile): %2 | _distanceCheck: %3 | !alive _projectile: %4", _pos vectorDistance (getPosASL _projectile) < _distanceCheck or !alive _projectile, _pos vectorDistance (getPosASL _projectile), _distanceCheck, !alive _projectile];
+		};
 	};
 };
 
@@ -74,12 +80,16 @@ if (_gunAngle == "High") then {
 if (!_longRangeGuided) then {
 	// Wait until the distance to target is less than 1500.
 	while {true} do {
-		sleep 0.01;
-		if (_pos vectorDistance (getPosASL _projectile) < 1500 or !alive _projectile) exitWith {};
+		sleep 0.02;
+		if (_pos vectorDistance (getPosASL _projectile) < 1500 or !alive _projectile) exitWith {
+			//DIAG_LOG format ["GUIDED | _pos vectorDistance (getPosASL _projectile) < 1500 or !alive _projectile: %1 | _pos vectorDistance (getPosASL _projectile): %2 | !alive _projectile: %3", _pos vectorDistance (getPosASL _projectile) < 1500 or !alive _projectile, _pos vectorDistance (getPosASL _projectile), !alive _projectile];
+		};
 	};
 };
 
-if (!alive _projectile) exitWith {};
+if (!alive _projectile) exitWith {
+	//DIAG_LOG format ["GUIDED | !alive _projectile: %1", !alive _projectile];
+};
 
 // Start guiding the projectile.
 if (T1AM_Debug_Mode) then {hint "shell guiding";systemChat "shell guiding"};

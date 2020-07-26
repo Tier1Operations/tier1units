@@ -7,8 +7,7 @@ params ["_tube","_asset","_pos","_sizeX","_sizeY","_sheafDir"];
 //DIAG_LOG format["BOX SHEAF - _sizeY: %1", _sizeY];
 //DIAG_LOG format["BOX SHEAF - _sheafDir: %1", _sheafDir];
 
-if (_sheafDir < 1) then {_sheafDir = 1};
-if (_sheafDir > 360) then {_sheafDir = 360};
+if (_sheafDir <= 0 or _sheafDir > 360) then {_sheafDir = 360};
 
 _pos = ASLtoAGL _pos;
 private _elevation = _pos select 2;		// Remember the height above ground for airburst.
@@ -96,7 +95,7 @@ private _MpY = _position select 1;
 private _trans = _pos distance [_MpX,_MpY,0];
 private _angleI = (_MpX - _pX) atan2 (_MpY - _pY);
 
-private _dX =_trans * (sin (_angleI + _sheafDir));
+private _dX = _trans * (sin (_angleI + _sheafDir));
 private _dY = _trans * (cos (_angleI + _sheafDir));
 _MpX = _pX + _dX;
 _MpY = _pY + _dY;

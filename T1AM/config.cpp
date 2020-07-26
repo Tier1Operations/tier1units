@@ -32,7 +32,7 @@ class CfgFunctions
 		class Firemission
 		{
 			class Splash {file = "T1AM\Functions\Firemission\Splash.sqf"};
-			class Tube {file = "T1AM\Functions\Firemission\Tube.sqf"};
+			class StartFireMission {file = "T1AM\Functions\Firemission\StartFireMission.sqf"};
 			class ProcessFireMission_Server {file = "T1AM\Functions\Firemission\ProcessFireMission_Server.sqf"};
 			class ProcessFireMission {file = "T1AM\Functions\Firemission\ProcessFireMission.sqf"};
 			class LoadMagazine {file = "T1AM\Functions\Firemission\LoadMagazine.sqf"};
@@ -41,20 +41,20 @@ class CfgFunctions
 			class RemoveDigits {file = "T1AM\Functions\Firemission\RemoveDigits.sqf"};
 			class GetAllCharges {file = "T1AM\Functions\Firemission\GetAllCharges.sqf"};
 			class GetPrepTime {file = "T1AM\Functions\Firemission\GetPrepTime.sqf"};
+			class FailedToFireCheck {file = "T1AM\Functions\Firemission\FailedToFireCheck.sqf"};
+			class UpdateGuiTargetPos {file = "T1AM\Functions\Firemission\UpdateGuiTargetPos.sqf"};
 		};
 		class Dialog
 		{
 			class DisplayWarheads {file = "T1AM\Functions\Dialog\DisplayWarheads.sqf"};
 			class ChangeTube {file = "T1AM\Functions\Dialog\ChangeTube.sqf"};
 			class Transmit {file = "T1AM\Functions\Dialog\Transmit.sqf"};
-			class SelectFuse {file = "T1AM\Functions\Dialog\SelectFuse.sqf"};
 			class CheckForDC {file = "T1AM\Functions\Dialog\CheckForDC.sqf"};
 			class CheckFire_Server {file = "T1AM\Functions\Dialog\CheckFire_Server.sqf"};
 			class CheckFire_Player {file = "T1AM\Functions\Dialog\CheckFire_Player.sqf"};
 			class Aimpoint {file = "T1AM\Functions\Dialog\Aimpoint.sqf"};
 			class ShowMessage {file = "T1AM\Functions\Dialog\ShowMessage.sqf"};
 			class InputAimpoint {file = "T1AM\Functions\Dialog\InputAimpoint.sqf"};
-			class InputAimpointMapClick {file = "T1AM\Functions\Dialog\InputAimpointMapClick.sqf"};
 			class InputAimpointMapClickEffect {file = "T1AM\Functions\Dialog\InputAimpointMapClickEffect.sqf"};
 			class Adjust {file = "T1AM\Functions\Dialog\Adjust.sqf"};
 			class ControlAsset {file = "T1AM\Functions\Dialog\ControlAsset.sqf"};
@@ -63,7 +63,28 @@ class CfgFunctions
 			class ReleaseAsset {file = "T1AM\Functions\Dialog\ReleaseAsset.sqf"};
 			class OpenDisplay {file = "T1AM\Functions\Dialog\OpenDisplay.sqf"};
 			class Control {file = "T1AM\Functions\Dialog\Control.sqf"};
+			class LoadingScreen {file = "T1AM\Functions\Dialog\LoadingScreen.sqf"};
 			class CloseDisplays {file = "T1AM\Functions\Dialog\CloseDisplays.sqf"};
+			class ResetVars {file = "T1AM\Functions\Dialog\ResetVars.sqf"};
+		};
+		class ControlEvents
+		{
+			class ListSheafEvent {file = "T1AM\Functions\Dialog\ControlEvents\ListSheafEvent.sqf"};
+			class ListWarheadTypeEvent {file = "T1AM\Functions\Dialog\ControlEvents\ListWarheadTypeEvent.sqf"};
+			class ListFuseEvent {file = "T1AM\Functions\Dialog\ControlEvents\ListFuseEvent.sqf"};
+			class ListAngleEvent {file = "T1AM\Functions\Dialog\ControlEvents\ListAngleEvent.sqf"};
+			class EditAdjustGPSEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAdjustGPSEvent.sqf"};
+			class EditNumberEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditNumberEvent.sqf"};
+			class ListMissionsEvent {file = "T1AM\Functions\Dialog\ControlEvents\ListMissionsEvent.sqf"};
+			class EditAdjustCheckboxEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAdjustCheckboxEvent.sqf"};
+			class EditAdjustSpotterPosEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAdjustSpotterPosEvent.sqf"};
+			class ButtonAdjustSpotterMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonAdjustSpotterMapclickEvent.sqf"};
+			class EditAdjustImpactPosEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAdjustImpactPosEvent.sqf"};
+			class ButtonAdjustImpactMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonAdjustImpactMapclickEvent.sqf"};
+			class ButtonInputAimpointMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonInputAimpointMapclickEvent.sqf"};
+			class ListMissionTypeEvent {file = "T1AM\Functions\Dialog\ControlEvents\ListMissionTypeEvent.sqf"};
+			class EditAdjustImpactRefPosEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAdjustImpactRefPosEvent.sqf"};
+			class ButtonAdjustImpactRefMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonAdjustImpactRefMapclickEvent.sqf"};
 		};
 		class Misc
 		{
@@ -91,7 +112,6 @@ class CfgFunctions
 			class HasRadio {file = "T1AM\Functions\Misc\HasRadio.sqf"};
 			class GridToPos {file = "T1AM\Functions\Misc\GridToPos.sqf"};
 			class GetRandomSpread {file = "T1AM\Functions\Misc\GetRandomSpread.sqf"};
-			class LoadingScreen {file = "T1AM\Functions\Misc\LoadingScreen.sqf"};
 		};
 		class Sheafs
 		{
@@ -119,13 +139,13 @@ class CfgFunctions
 		{
 			class AirburstInit {file = "T1AM\Functions\Airburst\AirburstInit.sqf"};
 			class AirburstFrag {file = "T1AM\Functions\Airburst\AirburstFrag.sqf"};
-			class MK41Airburst {file = "T1AM\Functions\Airburst\MK41Airburst.sqf"};
 		};
 		class Special
 		{
-			class Fired {file = "T1AM\Functions\Special\SpecialFired.sqf"};
+			class SpecialFired {file = "T1AM\Functions\Special\SpecialFired.sqf"};
 			class Guided {file = "T1AM\Functions\Special\Guided.sqf"};
 			class GuideProjectile {file = "T1AM\Functions\Special\GuideProjectile.sqf"};
+			class MK41Frag {file = "T1AM\Functions\Special\MK41Frag.sqf"};
 		};
 	};
 	
@@ -454,6 +474,17 @@ class CfgMagazines
 	class 8Rnd_82mm_Mo_LG: 8Rnd_82mm_Mo_shells
 	{
 		count = 2;
+	};
+	
+	class 14Rnd_80mm_rockets;
+	class 12Rnd_230mm_rockets: 14Rnd_80mm_rockets
+	{
+		
+	};
+	
+	class 12Rnd_230mm_rockets_cluster: 12Rnd_230mm_rockets
+	{
+		
 	};
 };
 
@@ -1433,6 +1464,8 @@ class cfgWeapons
 
 	class rockets_230mm_GAT: RocketPods
 	{
+		magazineReloadTime = 46;
+		
 		class Close: RocketPods
 		{
 			artilleryDispersion = 0.30;

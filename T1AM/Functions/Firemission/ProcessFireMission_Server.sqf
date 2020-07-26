@@ -20,10 +20,11 @@ private _badTubes = [];
 				//DIAG_LOG format["PFM SERVER -- WRONG LOCALITY OF TUBE | !isNull _group: %1", !isNull _group];
 				private _locked = locked _tube;
 				_tube lock 2;
+				sleep 0.1;
 				_group setGroupOwner 2;
 				sleep 10;
-				_timesWaited = _timesWaited + 1;
 				_tube lock _locked;
+				_timesWaited = _timesWaited + 1;
 			};
 		};
 	};
@@ -34,21 +35,32 @@ private _badTubes = [];
 				//DIAG_LOG format["PFM SERVER -- WRONG LOCALITY OF MEMBER: %1 in %2", _x, _tube];
 				private _locked = locked _tube;
 				_tube lock 2;
+				sleep 0.1;
 				(group _x) setGroupOwner 2;
 				sleep 10;
-				_timesWaited = _timesWaited + 1;
 				_tube lock _locked;
+				_timesWaited = _timesWaited + 1;
 			};
 		};
 	} forEach crew _tube;
+	
+	// For vehicles that only have a gunner.
+	if (alive _tube and !local _tube) then {
+		private _locked = locked _tube;
+		_tube lock 2;
+		sleep 0.1;
+		_tube setOwner 2;
+		sleep 5;
+		_tube lock _locked;
+		_timesWaited = _timesWaited + 0.5;
+	};
 	
 	// Remember the waiting time.
 	_tube setVariable ["T1AM_waitingTime", _timesWaited * 10];
 } forEach _tubes;
 
-// Check locality again and mark the tube as bad if it couldn't change locality.
+// Check locality again and mark the tube as bad if the locality still hasn't changed to the server.
 {
-	
 	private _tube = _x;
 	if (alive _tube) then {
 		if (!local _tube) exitWith {
@@ -62,14 +74,11 @@ private _badTubes = [];
 			_badTubes pushback _tube;
 		};
 		
-		private _abort = false;
 		{
-			if (alive _x and !local _x) then {
+			if (alive _x and !local _x) exitWith {
 				//DIAG_LOG format["PFM SERVER -- BAD CREW: %1 in %2", _x, _tube];
 				_badTubes pushback _tube;
-				_abort = true;
 			};
-			if (_abort) exitWith {};
 		} forEach crew _tube;
 	};
 } forEach _tubes;
@@ -203,6 +212,7 @@ private _waitingTime = 0;
 	_tube setVariable ["T1AM_ETA", 9999];
 	_tube setVariable ["T1AM_concludingMission", false];
 	_tube setVariable ["T1AM_hasFired", false];
+	_tube setVariable ["T1AM_failedToFire", false];
 	
 	private _isAnnouncementUnit = false;
 	if (_tube == _announcementUnit) then {
@@ -213,6 +223,6 @@ private _waitingTime = 0;
 	
 	//DIAG_LOG format["PFM SERVER -- UNIT: %1 - _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
 	
-	[_tubes,_rounds,_profile,_pos,_warheadType,_missionType,_sheafSize,_fuse,_assetType,_sheaf,_airburstHeight,_asset,_tubeType,_angle,_prePlotted,_sender,_posDisplay,_tube,_isAnnouncementUnit,_GPSZAdjust,_posGPS,_sheafDir,_sheafDist,_waitingTime] spawn T1AM_Fnc_Tube;
+	[_tubes,_rounds,_profile,_pos,_warheadType,_missionType,_sheafSize,_fuse,_assetType,_sheaf,_airburstHeight,_asset,_tubeType,_angle,_prePlotted,_sender,_posDisplay,_tube,_isAnnouncementUnit,_GPSZAdjust,_posGPS,_sheafDir,_sheafDist,_waitingTime] spawn T1AM_Fnc_StartFireMission;
 	
 } forEach _tubes;

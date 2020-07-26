@@ -1,69 +1,40 @@
 disableSerialization;
 
-params ["_manualInput","_pos"];
-
 private _x = 0;
 private _y = 0;
-private _abort = false;
 
-if (_manualInput) then {
-	
-	// Process coordinates received from the player.
-	private _dialog = findDisplay 47400;
-	
-	// X coordinate
-	private _str = ctrlText (_dialog displayCtrl 47402);
-	_str = [_str] call T1AM_Fnc_GridToPos;
-	_x = [_str, 5] call T1AM_Fnc_ParseNumber;
-	if (_x == -9999999) exitWith {
-		private _str = "Invalid X coordinate.\n\nUse numbers only. Max 5 numbers allowed.";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-		_abort = true;
-	};
-	
-	if (_abort) exitWith {};
-	
-	// Y coordinate
-	_str = ctrlText (_dialog displayCtrl 47403);
-	_str = [_str] call T1AM_Fnc_GridToPos;
-	_y = [_str, 5] call T1AM_Fnc_ParseNumber;
-	if (_y == -9999999) exitWith {
-		private _str = "Invalid Y coordinate.\n\nUse numbers only. Max 5 numbers allowed.";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-		_abort = true;
-	};
-	
-	if (_abort) exitWith {};
-	
-	_x = [_x] call T1AM_Fnc_FormatCoordinates;
-	_y = [_y] call T1AM_Fnc_FormatCoordinates;
-	private _posReal = [[_x, _y]] call T1AM_Fnc_MapGridToPos;
-	_x = _posReal select 0;
-	_y = _posReal select 1;
-	
-	T1AM_Elevation = ((AGLtoASL [_x,_y,0]) select 2) max 0;
-	
-	//DIAG_LOG format["AIMPOINT MANUAL -- _x: %1", _x];
-	//DIAG_LOG format["AIMPOINT MANUAL -- _y: %1", _y];
-	//DIAG_LOG format["AIMPOINT MANUAL -- T1AM_Elevation: %1", T1AM_Elevation];
-	
-} else {
-	
-	// Processes the coordinates received from the mapclick.
-	
-	[_pos] spawn T1AM_Fnc_InputAimpointMapclickEffect;
-	
-	_x = _pos select 0;
-	_y = _pos select 1;
-	
-	T1AM_Elevation = ((AGLtoASL [_x,_y,0]) select 2) max 0;
-	
-	//DIAG_LOG format["AIMPOINT MAPCLICK -- _x: %1", _x];
-	//DIAG_LOG format["AIMPOINT MAPCLICK -- _y: %1", _y];
-	//DIAG_LOG format["AIMPOINT MAPCLICK -- T1AM_Elevation: %1", T1AM_Elevation];
+// Process coordinates received from the player.
+private _dialog = findDisplay 47400;
+
+// X coordinate
+private _str = ctrlText (_dialog displayCtrl 47402);
+_str = [_str] call T1AM_Fnc_GridToPos;
+_x = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+if (_x == -9999999) exitWith {
+	private _str = "INVALID INPUT:\nX COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
 
-if (_abort) exitWith {};
+// Y coordinate
+_str = ctrlText (_dialog displayCtrl 47403);
+_str = [_str] call T1AM_Fnc_GridToPos;
+_y = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+if (_y == -9999999) exitWith {
+	private _str = "INVALID INPUT:\nY COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
+_x = [_x] call T1AM_Fnc_FormatCoordinates;
+_y = [_y] call T1AM_Fnc_FormatCoordinates;
+private _posReal = [[_x, _y]] call T1AM_Fnc_MapGridToPos;
+_x = _posReal select 0;
+_y = _posReal select 1;
+
+T1AM_Elevation = ((AGLtoASL [_x,_y,0]) select 2) max 0;
+
+//DIAG_LOG format["AIMPOINT MANUAL -- _x: %1", _x];
+//DIAG_LOG format["AIMPOINT MANUAL -- _y: %1", _y];
+//DIAG_LOG format["AIMPOINT MANUAL -- T1AM_Elevation: %1", T1AM_Elevation];
 
 T1AM_X = _x;
 T1AM_Y = _y;
@@ -71,10 +42,10 @@ T1AM_Y = _y;
 T1AM_Xdisplay = T1AM_X;
 T1AM_Ydisplay = T1AM_Y;
 
-T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", [T1AM_X, T1AM_Y, T1AM_Elevation], true];
+T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", [T1AM_X, T1AM_Y, T1AM_Elevation]];
 
 // Add some initial error to the target pos to simulate natural errors
-_pos = [T1AM_X,T1AM_Y,T1AM_Elevation];
+private _pos = [T1AM_X,T1AM_Y,T1AM_Elevation];
 private _vehicle = vehicle leader T1AM_SelectedAsset;
 private _distance = (getPosASL _vehicle) vectorDistance _pos;
 

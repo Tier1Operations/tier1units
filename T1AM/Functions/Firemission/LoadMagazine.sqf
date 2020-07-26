@@ -85,10 +85,12 @@ while {time < _timeout or count (magazinesAmmo _tube) != 0} do {
 	sleep 0.05;
 };
 
+
 private _addWeapon = true;
 {
 	_tube addMagazine _x;
 	if (_addWeapon) then {
+		_tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
 		_tube addWeaponTurret [_weapon, _turretPath];
 		_addWeapon = false;
 	};

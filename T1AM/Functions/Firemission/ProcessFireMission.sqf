@@ -21,7 +21,7 @@ if (_assetType == "") exitWith {
 private _profile = [];
 switch (_assetType) do {
 	case ("Cannon") : {
-		if (_angle == "Low") then {
+		if (_angle == "LOW") then {
 			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonLA;
 		} else {
 			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonHA;
@@ -31,7 +31,7 @@ switch (_assetType) do {
 		_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMortar;
 	};
 	case ("Rocket") : {
-		if (_angle == "Low") then {
+		if (_angle == "LOW") then {
 			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsLA;
 		} else {
 			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsHA;
@@ -40,26 +40,20 @@ switch (_assetType) do {
 	case ("MK41") : {
 		_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMK41;
 	};
-	case (BM21) : {
+	case ("BM21") : {
 		_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileBM21;
 	};
 };
 
-diag_log "TEST123 START";
-diag_log str _distance;
-diag_log str _warheadType;
-diag_log str _assetType;
-diag_log str _profile;
-diag_log "TEST123 END";
-
 private _tubeType = weapons _vehicle select 0;
 private _ammoType = getText (configFile >> "CfgMagazines" >> _warHeadType >> "displayName");
+private _playerCallsign = [group _sender] call T1AM_Fnc_TrimGroupName;
 private _assetCallsign = [_asset] call T1AM_Fnc_TrimGroupName;
 private _displayName = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
 
 
-private _message = format ["%1 this is %2. %3 x %4 firing %5, %6 rounds, %7 sheaf, %8 %9 fuse, over.",_sender,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_sheaf,_fuse];
-if (_missionType == "SPOT") then {_message = format ["%1 this is %2. %3 x %4 firing %5, %6 round, %7 %8 fuse, over.",_sender,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_fuse]};
+private _message = format ["%1 this is %2. %3 x %4 firing %5, %6 rounds, %7 sheaf, %8 %9 fuse, over.",_playerCallsign,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_sheaf,_fuse];
+if (_missionType == "SPOT") then {_message = format ["%1 this is %2. Plot, %3 x %4 firing %5, %6 round, %7 %8 fuse, over.",_playerCallsign,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_fuse]};
 
 private _timeBetweenRounds = _profile select 0;
 private _minimumRange = _profile select 1;

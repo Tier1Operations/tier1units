@@ -127,6 +127,9 @@ _finalApproachTarget setPosASL _basicPos;
 private _secondaryTarget = "Land_HelipadEmpty_F" createVehicleLocal [0,0,0];
 _secondaryTarget setPosASL _basicPos;
 
+// Set target that the projectile will try to hit. This one can changes to different targets.
+private _target = _secondaryTarget;
+
 
 while {alive _missile} do {
 	
@@ -136,7 +139,7 @@ while {alive _missile} do {
 	
 	//DIAG_LOG format ["GUIDEPROJ LOOP1 -- _target: %1 -- TARGET POS: %2", _target, getPosASL _target];
 	
-	private _target = _secondaryTarget;
+	_target = _secondaryTarget;
 	private _distance = (getPosASL _missile) vectorDistance (getPosASL _target);
 	_posMissile = getPosASL _missile;
 	
@@ -510,7 +513,7 @@ while {alive _missile} do {
 	
 	//DIAG_LOG format ["GUIDEPROJ LOOP2 -- _target: %1 -- TARGET POS: %2", _target, getPosASL _target];
 	
-	private _target = _secondaryTarget;
+	_target = _secondaryTarget;
 	private _distance = (getPosASL _missile) vectorDistance (getPosASL _target);
 	_posMissile = getPosASL _missile;
 	

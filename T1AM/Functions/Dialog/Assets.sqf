@@ -47,12 +47,10 @@ while {!isNull (findDisplay 47100)} do {
 			private _spotter = _asset getVariable ["T1AM_controlledBy", nil];
 			if (!isNil "_spotter" and {alive _spotter}) then {_status = format["BSY - %1", name _spotter]} else {_status = "BSY"};
 		};
-		
 		if (_asset == T1AM_ControlledAssetLocal) then {
 			private _spotter = _asset getVariable ["T1AM_controlledBy", nil];
 			if (!isNil "_spotter" and {alive _spotter}) then {_status = format["CON - %1", name _spotter]} else {_status = "CON"};
 		};
-		
 		if (_asset in T1AM_AssetsBusy) then {
 			private  _spotter = _asset getVariable ["T1AM_controlledBy", nil];
 			if (!isNil "_spotter" and {alive _spotter}) then {_status = format["BSY - %1", name _spotter]} else {_status = "BSY"};
@@ -71,7 +69,7 @@ while {!isNull (findDisplay 47100)} do {
 		
 		private _zText = round _z;
 		private  _tubes = [_asset] call T1AM_Fnc_GroupVehicles;
-		private _str = format["%1 | %2 x %3  [%4 %5 %6] (%7)",_asset,_name,(count _tubes),_xText,_yText,_zText,_status];
+		private _str = format["%1 | %2 x%3  [%4 %5 %6] (%7)",_asset,_name,(count _tubes),_xText,_yText,_zText,_status];
 		
 		// If asset hasn't been processed before, add a new entry. Otherwise, edit existing entry.
 		private _add = true;
@@ -90,18 +88,6 @@ while {!isNull (findDisplay 47100)} do {
 		if (_lbSize == 0) then {_controlAssets lbSetCurSel 0};
 	} forEach _assets;
 	
-	// Check text of selected entry. Grab group name. Compare to processed group names. Then set T1AM_SelectedAsset.
-	if (lbSize _controlAssets > 0) then {
-		private _str = _controlAssets lbText (lbCurSel _controlAssets);
-		private _index = _str find " |";
-		if (_index != -1) then {
-			_str = _str select [0, _index];
-			{
-				if (str(_x select 0) == _str) then {T1AM_SelectedAsset = _x select 0};
-			} forEach _addedAssets;
-		};
-	};	
-	
 	
 	
 	// Missions
@@ -110,8 +96,8 @@ while {!isNull (findDisplay 47100)} do {
 		private _mission = _x;
 		if ((_mission select 0) == T1AM_SelectedAsset) then {
 			private _timeStamp = _mission select 8;
-			private _hour = format ["%1",(_timeStamp select 0)];
-			private _min = format ["%1",(_timeStamp select 1)];
+			private _hour = str (_timeStamp select 0);
+			private _min = str (_timeStamp select 1);
 			if ((_timeStamp select 0) < 10) then {_hour = format ["0%1",(_timeStamp select 0)]};
 			if ((_timeStamp select 1) < 10) then {_min = format ["0%1",(_timeStamp select 1)]};
 			private _timeText = format ["%1%2",_hour,_min];
@@ -157,5 +143,5 @@ while {!isNull (findDisplay 47100)} do {
 	};
 	
 	
-	sleep 0.15;
+	sleep 0.2;
 };

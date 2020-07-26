@@ -21,10 +21,9 @@ private _tube = (vehicle (leader T1AM_SelectedAsset));
 private _gunner = gunner _tube;
 private _abort = [_tube, _gunner] call T1AM_Fnc_CheckAssetStatus;
 if (_abort) exitWith {
+	[false] call T1AM_Fnc_EndMission;
 	private _str = "ASSET NOT RESPONDING";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	sleep 3;
-	[false] call T1AM_Fnc_EndMission;
 };
 
 if (_prePlotted) then {T1AM_PrePlotted = true};
@@ -100,8 +99,6 @@ if (configNull != (configFile >> "CfgPatches" >> "ace_medical")) then {
 };
 
 
-if (_prePlotted) then {T1AM_PrePlotted = true};
-
 //DIAG_LOG format["CONTROLASSET - IF _prePlotted: %1 - T1AM_PrePlotted: %2", _prePlotted, T1AM_PrePlotted];
 
 private _assetCallsign = [T1AM_SelectedAsset] call T1AM_Fnc_TrimGroupName;
@@ -114,7 +111,7 @@ if ((T1AM_HaveAimpoint) or (T1AM_PrePlotted)) then {
 		T1AM_LastDialog = "Control";
 		[0, [_prePlotted], 0] spawn T1AM_Fnc_LoadingScreen;
 		sleep (1 + random 2);
-		private _message = format ["%2 this is %1, adjust fire, out", _assetCallsign, _playerCallsign];
+		private _message = format ["%1 this is %2, adjust fire, out", _playerCallsign, _assetCallsign];
 		[_asset, _message, "AdjustFire"] call T1AM_Fnc_SendComms;
 	};
 } else {

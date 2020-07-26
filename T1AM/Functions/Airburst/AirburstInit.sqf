@@ -108,7 +108,7 @@ if (!_submun) then {
 	
 	// No submunition.
 	
-	if (_gunAngle == "High") then {
+	if (_gunAngle == "HIGH") then {
 		
 		// High angle shot
 		// Wait until projectile starts descending.
@@ -224,7 +224,7 @@ if (!_submun) then {
 		};
 	};
 	
-	if (_gunAngle == "High" and !_laserMode) then {
+	if (_gunAngle == "HIGH" and !_laserMode) then {
 		
 		// Wait until projectile is very close to the ground.
 		while {true} do {

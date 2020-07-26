@@ -7,6 +7,8 @@ if (!alive player or player getVariable ["ACE_isUnconscious", false]) exitWith {
 
 params ["_minWaitTime", "_params", "_mode"];
 
+onMapSingleClick "";
+
 // Minimum time is required to allow all scripts to exit and reset properly.
 if (_minWaitTime < 0.5) then {_minWaitTime = 0.5};
 

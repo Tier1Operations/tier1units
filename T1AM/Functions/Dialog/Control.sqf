@@ -60,21 +60,89 @@ T1AM_LastDialog = "Control";
 
 private _dialog = findDisplay 47200;
 
+
+// Hide GPS/Adjust stuff to make the screen look less buggy when it's starting up.
+(_dialog displayCtrl 47226) ctrlShow false;
+(_dialog displayCtrl 47226) ctrlEnable false;
+(_dialog displayCtrl 47227) ctrlShow false;
+(_dialog displayCtrl 47227) ctrlEnable false;
+(_dialog displayCtrl 47228) ctrlShow false;
+(_dialog displayCtrl 47228) ctrlEnable false;
+(_dialog displayCtrl 47232) ctrlShow false;
+(_dialog displayCtrl 47232) ctrlEnable false;
+
+(_dialog displayCtrl 47222) ctrlShow false;
+(_dialog displayCtrl 47222) ctrlEnable false;
+(_dialog displayCtrl 47223) ctrlShow false;
+(_dialog displayCtrl 47223) ctrlEnable false;
+(_dialog displayCtrl 47221) ctrlShow false;
+(_dialog displayCtrl 47221) ctrlEnable false;
+
+
+
+(_dialog displayCtrl 47229) ctrlShow false;
+(_dialog displayCtrl 47229) ctrlEnable false;
+(_dialog displayCtrl 47230) ctrlShow false;
+(_dialog displayCtrl 47230) ctrlEnable false;
+(_dialog displayCtrl 47231) ctrlShow false;
+(_dialog displayCtrl 47231) ctrlEnable false;
+(_dialog displayCtrl 47238) ctrlShow false;
+(_dialog displayCtrl 47238) ctrlEnable false;
+(_dialog displayCtrl 47241) ctrlShow false;
+(_dialog displayCtrl 47241) ctrlEnable false;
+(_dialog displayCtrl 47242) ctrlShow false;
+(_dialog displayCtrl 47242) ctrlEnable false;
+(_dialog displayCtrl 47243) ctrlShow false;
+(_dialog displayCtrl 47243) ctrlEnable false;
+(_dialog displayCtrl 47247) ctrlShow false;
+(_dialog displayCtrl 47247) ctrlEnable false;
+(_dialog displayCtrl 47248) ctrlShow false;
+(_dialog displayCtrl 47248) ctrlEnable false;
+(_dialog displayCtrl 47249) ctrlShow false;
+(_dialog displayCtrl 47249) ctrlEnable false;
+(_dialog displayCtrl 47257) ctrlShow false;
+(_dialog displayCtrl 47257) ctrlEnable false;
+(_dialog displayCtrl 47258) ctrlShow false;
+(_dialog displayCtrl 47258) ctrlEnable false;
+(_dialog displayCtrl 47259) ctrlShow false;
+(_dialog displayCtrl 47259) ctrlEnable false;
+
+(_dialog displayCtrl 47204) ctrlShow false;
+(_dialog displayCtrl 47204) ctrlEnable false;
+(_dialog displayCtrl 47205) ctrlShow false;
+(_dialog displayCtrl 47205) ctrlEnable false;
+(_dialog displayCtrl 47237) ctrlShow false;
+(_dialog displayCtrl 47237) ctrlEnable false;
+(_dialog displayCtrl 47239) ctrlShow false;
+(_dialog displayCtrl 47239) ctrlEnable false;
+(_dialog displayCtrl 47240) ctrlShow false;
+(_dialog displayCtrl 47240) ctrlEnable false;
+(_dialog displayCtrl 47244) ctrlShow false;
+(_dialog displayCtrl 47244) ctrlEnable false;
+(_dialog displayCtrl 47245) ctrlShow false;
+(_dialog displayCtrl 47245) ctrlEnable false;
+(_dialog displayCtrl 47246) ctrlShow false;
+(_dialog displayCtrl 47246) ctrlEnable false;
+(_dialog displayCtrl 47250) ctrlShow false;
+(_dialog displayCtrl 47250) ctrlEnable false;
+(_dialog displayCtrl 47254) ctrlShow false;
+(_dialog displayCtrl 47254) ctrlEnable false;
+(_dialog displayCtrl 47255) ctrlShow false;
+(_dialog displayCtrl 47255) ctrlEnable false;
+(_dialog displayCtrl 47256) ctrlShow false;
+(_dialog displayCtrl 47256) ctrlEnable false;
+
+
+
 // Required for pre-plotted missions
 private _fireMission = [];
 private _rounds = 0;
-private _sheafSize = [];
-private _newMission = false;
 private _lastPos = [];
 private _lastAngle = "";
 private _lastSheaf = "";
 private _lastFuse = "";
 private _lastAirburstHeight = "";
 private _lastWarheadType = "";
-private _lastMissionTypeIndex = 0;
-private _lastAngleIndex = 0;
-private _lastSheafIndex = 0;
-private _lastFuseIndex = 0;
 private _lastSheafDir = 0;
 private _lastSheafDist = 0;
 
@@ -86,10 +154,9 @@ if (_prePlotted) then {
 	_lastAngle = _fireMission select 6;
 	_lastSheaf = _fireMission select 10;
 	_lastFuse = _fireMission select 11;
-	_sheafSize = _fireMission select 12;
+	private _sheafSize = _fireMission select 12;
 	private _lastPosDisplay = _fireMission select 13;
 	_lastAirburstHeight = _fireMission select 14;
-	_newMission = _fireMission select 16;
 	_lastSheafDir = _fireMission select 18;
 	_lastSheafDist = _fireMission select 19;
 	
@@ -107,14 +174,24 @@ if (_prePlotted) then {
 	T1AM_LastSheafDist = _lastSheafDist;
 	
 	// If it's a preplotted mission, put the adjust values to 0.
+	T1AM_LastAdjustCheckbox = 0;
 	T1AM_LastAdjustX = 0;
 	T1AM_LastAdjustY = 0;
+	T1AM_LastAdjustSpotterX = 0;
+	T1AM_LastAdjustSpotterY = 0;
+	T1AM_LastAdjustImpactX = 0;
+	T1AM_LastAdjustImpactY = 0;
+	T1AM_LastAdjustImpactRefX = 0;
+	T1AM_LastAdjustImpactRefY = 0;
 	
 	T1AM_FireMissionCurrent = [];
 	
-	T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", _lastPosDisplay, true];
-	T1AM_LastGPSX = _lastPosDisplay select 0;
-	T1AM_LastGPSY = _lastPosDisplay select 1;
+	T1AM_LastGPSX = (_fireMission select 17) select 0;
+	T1AM_LastGPSY = (_fireMission select 17) select 1;
+	
+	//T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", _lastPosDisplay];
+	//T1AM_LastGPSX = _lastPosDisplay select 0;
+	//T1AM_LastGPSY = _lastPosDisplay select 1;
 	
 	T1AM_LastPos = _lastPos;
 	
@@ -146,10 +223,15 @@ private _lastSheafSizeX = T1AM_LastSheafX;
 private _lastSheafSizeY = T1AM_LastSheafY;
 private _lastGPSX = T1AM_LastGPSX;
 private _lastGPSY = T1AM_LastGPSY;
+private _lastAdjustSpotterX = T1AM_LastAdjustSpotterX;
+private _lastAdjustSpotterY = T1AM_LastAdjustSpotterY;
+private _lastAdjustImpactX = T1AM_LastAdjustImpactX;
+private _lastAdjustImpactY = T1AM_LastAdjustImpactY;
+private _lastAdjustImpactRefX = T1AM_LastAdjustImpactRefX;
+private _lastAdjustImpactRefY = T1AM_LastAdjustImpactRefY;
 private _lastGPSZ_AGL = T1AM_LastGPSZ_AGL;
 _lastAngle = T1AM_LastAngle;
 _rounds = T1AM_LastRounds;
-_lastWarheadType = T1AM_LastWarhead;
 _lastFuse = T1AM_LastFuse;
 _lastAirburstHeight = T1AM_LastAirburstHeight;
 _lastSheaf = T1AM_LastSheaf;
@@ -161,24 +243,26 @@ _lastSheafDist = T1AM_LastSheafDist;
 
 // Sheaf size X
 if (_lastSheafSizeX != 0) then {
-	(_dialog displayCtrl 47213) ctrlSetText format ["%1",_lastSheafSizeX];
+	(_dialog displayCtrl 47213) ctrlSetText (str _lastSheafSizeX);
 };
 
 // Sheaf size Y
 if (_lastSheafSizeY != 0) then {
-	(_dialog displayCtrl 47214) ctrlSetText format ["%1",_lastSheafSizeY];
+	(_dialog displayCtrl 47214) ctrlSetText (str _lastSheafSizeY);
 };
 
 // Sheaf dir
 if (_lastSheafDir != 0) then {
-	(_dialog displayCtrl 47224) ctrlSetText format ["%1",_lastSheafDir];
+	(_dialog displayCtrl 47224) ctrlSetText (str _lastSheafDir);
 };
 
 // Sheaf dist
 if (_lastSheafDist != 0) then {
-	(_dialog displayCtrl 47225) ctrlSetText format ["%1",_lastSheafDist];
+	(_dialog displayCtrl 47225) ctrlSetText (str _lastSheafDist);
 };
 
+
+// GPS pos
 private _posMap = [[_lastGPSX, _lastGPSY]] call T1AM_Fnc_PosToMapGrid;
 private _xMap = parseNumber (_posMap select 0);
 private _yMap = parseNumber (_posMap select 1);
@@ -188,21 +272,51 @@ private _yMap = parseNumber (_posMap select 1);
 //DIAG_LOG format["CONTROL GPSY 2: %1", _posMap select 1];
 //DIAG_LOG format["CONTROL GPSY 3: %1", _yMap];
 
-// GPS X
-private _posGPSX = [_xMap] call T1AM_Fnc_FormatCoordinates;
-(_dialog displayCtrl 47222) ctrlSetText format ["%1",_posGPSX];
+_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+(_dialog displayCtrl 47222) ctrlSetText _xMap;
+_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+(_dialog displayCtrl 47223) ctrlSetText _yMap;
 
-// GPS Y
-private _posGPSY = [_yMap] call T1AM_Fnc_FormatCoordinates;
-(_dialog displayCtrl 47223) ctrlSetText format ["%1",_posGPSY];
-
-//DIAG_LOG format["CONTROL GPSX 4: %1", _posGPSX];
-//DIAG_LOG format["CONTROL GPSY 4: %1", _posGPSY];
+//DIAG_LOG format["CONTROL GPSX 4: %1", _xMap];
+//DIAG_LOG format["CONTROL GPSY 4: %1", _yMap];
 
 // GPS Z
 if (_lastGPSZ_AGL != 0) then {
-	(_dialog displayCtrl 47221) ctrlSetText format ["%1",_lastGPSZ_AGL];
+	(_dialog displayCtrl 47221) ctrlSetText (str _lastGPSZ_AGL);
 };
+
+
+// Adjust spotter pos
+_posMap = [[_lastAdjustSpotterX, _lastAdjustSpotterY]] call T1AM_Fnc_PosToMapGrid;
+_xMap = parseNumber (_posMap select 0);
+_yMap = parseNumber (_posMap select 1);
+
+_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+(_dialog displayCtrl 47239) ctrlSetText _xMap;
+_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+(_dialog displayCtrl 47240) ctrlSetText _yMap;
+
+
+// Adjust impact pos
+_posMap = [[_lastAdjustImpactX, _lastAdjustImpactY]] call T1AM_Fnc_PosToMapGrid;
+_xMap = parseNumber (_posMap select 0);
+_yMap = parseNumber (_posMap select 1);
+
+_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+(_dialog displayCtrl 47245) ctrlSetText _xMap;
+_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+(_dialog displayCtrl 47246) ctrlSetText _yMap;
+
+
+// Adjust impact target pos
+_posMap = [[_lastAdjustImpactRefX, _lastAdjustImpactRefY]] call T1AM_Fnc_PosToMapGrid;
+_xMap = parseNumber (_posMap select 0);
+_yMap = parseNumber (_posMap select 1);
+
+_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+(_dialog displayCtrl 47254) ctrlSetText _xMap;
+_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+(_dialog displayCtrl 47255) ctrlSetText _yMap;
 
 
 onMapSingleClick "";
@@ -212,6 +326,7 @@ private _tubes = [_asset] call T1AM_Fnc_GroupVehicles;
 private _vehicle = vehicle (leader _asset);
 private _assetType = [_vehicle] call T1AM_Fnc_AssetType;
 _assetName = [_asset] call T1AM_Fnc_TrimGroupName;
+
 
 // Gun-Target line
 private _elev = ((AGLtoASL [T1AM_Xdisplay,T1AM_Ydisplay,0]) select 2) max 0;
@@ -230,7 +345,6 @@ T1AM_Elevation = round T1AM_Elevation;
 _posMap = [[_posArty select 0, _posArty select 1]] call T1AM_Fnc_PosToMapGrid;
 _xMap = parseNumber (_posMap select 0);
 _yMap = parseNumber (_posMap select 1);
-
 private _xText = [_xMap] call T1AM_Fnc_FormatCoordinates;
 private _yText = [_yMap] call T1AM_Fnc_FormatCoordinates;
 
@@ -242,36 +356,53 @@ private _Xtext2 = [_xMap] call T1AM_Fnc_FormatCoordinates;
 private _Ytext2 = [_yMap] call T1AM_Fnc_FormatCoordinates;
 
 
-(_dialog displayCtrl 47201) ctrlSetText format ["%1: %2 x%3  [%4 %5 %6]",_assetName,_name,(count _tubes),_xText,_yText,_artyElev];
-(_dialog displayCtrl 47202) ctrlSetText format ["%1", _Xtext2];
-(_dialog displayCtrl 47203) ctrlSetText format ["%1", _Ytext2];
-(_dialog displayCtrl 47204) ctrlSetText format ["%1", T1AM_LastAdjustX];
-(_dialog displayCtrl 47205) ctrlSetText format ["%1", T1AM_LastAdjustY];
-(_dialog displayCtrl 47207) ctrlSetText format ["%1", _rounds];
+private _status = "RDY";
+if (_asset in T1AM_AssetsBusy) then {_status = "BSY"};
+(_dialog displayCtrl 47201) ctrlSetText format ["%1: %2 x%3  [%4 %5 %6]",_assetName,_name,(count _tubes),_xText,_yText,_artyElev,_status];
 
 
-// Active tube
+(_dialog displayCtrl 47202) ctrlSetText _Xtext2;
+(_dialog displayCtrl 47203) ctrlSetText _Ytext2;
+(_dialog displayCtrl 47204) ctrlSetText (str T1AM_LastAdjustX);
+(_dialog displayCtrl 47205) ctrlSetText (str T1AM_LastAdjustY);
+(_dialog displayCtrl 47207) ctrlSetText (str _rounds);
+
+
+// Show amount of units.
 (_dialog displayCtrl 47218) ctrlSetText format ["Unit: %1/%2",(T1AM_SelectedTubeIndex + 1),(count _tubes)];
 
 T1AM_SelectedTube = _tubes select T1AM_SelectedTubeIndex;
+
+
+// Adjust stuff.
+(_dialog displayCtrl 47237) lbSetCurSel T1AM_LastAdjustCheckbox;
 
 
 // Update list with available ammo.
 private _controlWarheads = _dialog displayCtrl 47206;
 lbClear _controlWarheads;
 private _addedWarheads = [];
-private _addedWarheadsTimeout = 25;
+private _addedWarheadsTimeout = 9;
 private _array = [_addedWarheads, _addedWarheadsTimeout, _controlWarheads] call T1AM_Fnc_DisplayWarheads;
 _addedWarheads = _array select 0;
 _addedWarheadsTimeout = _array select 1;
 private _warheadType = _controlWarheads lbData (lbCurSel _controlWarheads);
+
+
+// This will update the GUI and show/hide things depending on what ammo is selected.
+[_controlWarheads, lbCurSel _controlWarheads] spawn T1AM_Fnc_ListWarheadTypeEvent;
+
+
+_GPSGuidedTypes = _warheadType in T1AM_GPSGuidedTypes;
+_GPSLaserTypes = _warheadType in T1AM_GPSLaserTypes;
+_GPSSeekerTypes = _warheadType in T1AM_GPSSeekerTypes;
 
 //DIAG_LOG format["CONTROL - _warheadType: %1", _warheadType];
 
 // Distance
 private _distance = 0;
 private _posGPS = [];
-if ((_warheadType in T1AM_GPSGuidedTypes) or {_warheadType in T1AM_GPSLaserTypes} or {_warheadType in T1AM_GPSSeekerTypes}) then {
+if (_GPSGuidedTypes or _GPSLaserTypes or _GPSSeekerTypes) then {
 	_posGPS = AGLtoASL [_lastGPSX, _lastGPSY, _lastGPSZ_AGL];
 	_distance = round ((getPosASL (vehicle (leader _asset))) vectorDistance  _posGPS);
 	(_dialog displayCtrl 47216) ctrlSetText format ["%1 m (GPS)", _distance];
@@ -285,8 +416,8 @@ if ((_warheadType in T1AM_GPSGuidedTypes) or {_warheadType in T1AM_GPSLaserTypes
 private _control = _dialog displayCtrl 47208;
 lbClear _control;
 private _missionTypes = ["SPOT","FFE","PLOT"];
-if (_prePlotted) then {_missionTypes = ["SPOT","FFE"]};
 
+private _lastMissionTypeIndex = 0;
 private _count = 0;
 {
 	private _missionType = _x;
@@ -302,11 +433,10 @@ _control lbSetCurSel _lastMissionTypeIndex;
 _control = _dialog displayCtrl 47209;
 lbClear _control;
 private _angleTypes = ["HIGH","LOW"];
-//if (_prePlotted) then {_angleTypes = [_lastAngle]};
-if (_assetType == "Mortar") then {_angleTypes = ["HIGH"]};
-if (_assetType == "MK41") then {_angleTypes = ["HIGH"]};
+if (_assetType == "Mortar" or _assetType == "MK41") then {_angleTypes = ["HIGH"]};
 
 private _angle = "";
+private _lastAngleIndex = 0;
 _count = 0;
 {
 	_angle = _x;
@@ -320,47 +450,55 @@ _control lbSetCurSel _lastAngleIndex;
 
 // Get profile and max range.
 private _profile = [];
-if (_assetType == "Mortar") then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMortar};
-if ((_assetType == "Cannon") and {_angle == "Low"}) then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonLA};
-if ((_assetType == "Cannon") and {_angle == "High"}) then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonHA};
-if ((_assetType == "Rocket") and {_angle == "Low"}) then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsLA};
-if ((_assetType == "Rocket") and {_angle == "High"}) then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsHA};
-if (_assetType == "MK41") then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMK41};
-if (_assetType == "BM21") then {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileBM21};
+switch true do {
+	case (_assetType == "Mortar") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMortar};
+	case ((_assetType == "Cannon") and {_angle == "LOW"}) : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonLA};
+	case ((_assetType == "Cannon") and {_angle == "HIGH"}) : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonHA};
+	case ((_assetType == "Rocket") and {_angle == "LOW"}) : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsLA};
+	case ((_assetType == "Rocket") and {_angle == "HIGH"}) : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsHA};
+	case (_assetType == "MK41") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMK41};
+	case (_assetType == "BM21") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileBM21};
+};
 private _maximumRange = _profile select 2;
 
 
 // CEP
 private _scatterSpread = [_distance, _maximumRange] call T1AM_Fnc_GetRandomSpread;
+switch (_assetType) do {
+	case ("Mortar") : {_scatterSpread = _scatterSpread * 1.4};
+	case ("Rocket") : {_scatterSpread = _scatterSpread * 1.6};
+	case ("BM21") : {_scatterSpread = _distance / 20}; //BM21 has its own spread.
+};
 
-if (_assetType == "Mortar") then {_scatterSpread = _scatterSpread * 1.4};
-if (_assetType == "Rocket") then {_scatterSpread = _scatterSpread * 1.6};
-if (_assetType == "BM21") then {_scatterSpread = _distance / 20}; //BM21 has its own spread.
-
-
-private _scatterSpreadHigh = round(_scatterSpread max 1);
-private _scatterSpreadLow = round((_scatterSpread * 0.75) max 1);
-private _scatterSpread2 = "";
+T1AM_scatterSpreadHigh = round(_scatterSpread max 1);
+T1AM_scatterSpreadLow = round((_scatterSpread * 0.75) max 1);
+private _cep = "";
 
 switch true do {
-	case (_warheadType in T1AM_GPSLaserTypes or {_warheadType in T1AM_GPSSeekerTypes}) : {
-		_scatterSpread2 = format ["%1 m (GPS)", 3];
+	case (_GPSLaserTypes or _GPSSeekerTypes) : {
+		_cep = "3 m (GPS)";
 	};
 	
-	case (_warheadType in T1AM_GPSGuidedTypes) : {
-		_scatterSpread2 = format ["%1 m (GPS)", 5];
+	case (_GPSGuidedTypes) : {
+		_cep = "5 m (GPS)";
 	};
 	
 	default {
-		if (_angle == "High") then {_scatterSpread2 = format ["%1 m", _scatterSpreadHigh]};
-		if (_angle == "Low") then {_scatterSpread2 = format ["%1 m", _scatterSpreadLow]};
-		if (_warheadType in T1AM_LaserTypes) then {
-			_scatterSpread2 = _scatterSpread2 + format [" | %1 m (LASER)", 5];
+		switch (_lastAngle) do {
+			case ("HIGH") : {
+				_cep = format ["%1 m", T1AM_scatterSpreadHigh];
+			};
+			case ("LOW") : {
+				_cep = format ["%1 m", T1AM_scatterSpreadLow];
+			};
+		};
+		if (T1AM_LastWarhead in T1AM_LaserTypes) then {
+			_cep = _cep + " | 5 m (LASER)";
 		};
 	};
 };
 
-(_dialog displayCtrl 47220) ctrlSetText _scatterSpread2;
+(_dialog displayCtrl 47220) ctrlSetText _cep;
 
 
 // Sheaf type
@@ -373,6 +511,7 @@ switch (_assetType) do {
 	default {_sheafTypes = ["POINT","CIRCLE","BOX","LINE"]};
 };
 
+private _lastSheafIndex = 0;
 _count = 0;
 {
 	private _sheafType = _x;
@@ -383,18 +522,14 @@ _count = 0;
 } forEach _sheafTypes;
 _control lbSetCurSel _lastSheafIndex;
 
-
 // Fuse
-private _fuseTypes = [];
-if (_warheadType in T1AM_AirburstRounds) then {
-	_fuseTypes = ["IMPACT","AIRBURST","MIXED"];
-} else {
-	_fuseTypes = ["IMPACT"];
-};
+private _fuseTypes = ["IMPACT"];
+if (_warheadType in T1AM_AirburstRounds) then {_fuseTypes = ["IMPACT","AIRBURST","MIXED"]};
 
 _control = _dialog displayCtrl 47212;
 lbClear _control;
 
+private _lastFuseIndex = 0;
 _count = 0;
 {
 	private _fuseType = _x;
@@ -405,304 +540,60 @@ _count = 0;
 } forEach _fuseTypes;
 _control lbSetCurSel _lastFuseIndex;
 
+_control = _dialog displayCtrl 47215;
+lbClear _control;
 
-// Save current settings so that the settings will automatically be filled in when the player opens the menu.
-// Cancel loop when this interface display cannot be found.
+private _lastAirburstIndex = 1;
+_count = 0;
+private _airburstHeights = ["LOW","MED","HIGH"];
+{
+	private _airburstHeight = _x;
+	_control lbAdd format["%1",_airburstHeight];
+	_control lbSetData [(lbSize _control)-1,_airburstHeight];
+	if (_airburstHeight == _lastAirburstHeight) then {_lastAirburstIndex = _count};
+	_count = _count + 1;
+} forEach _airburstHeights;
+_control lbSetCurSel _lastAirburstIndex;
+
+
+
 while {!isNull (findDisplay 47200)} do {
 	
 	_dialog = findDisplay 47200;
 	
-	T1AM_LastMission = (_dialog displayCtrl 47208) lbData (lbCurSel (_dialog displayCtrl 47208));
-	T1AM_LastAngle = (_dialog displayCtrl 47209) lbData (lbCurSel (_dialog displayCtrl 47209));
-	T1AM_LastRounds = [ctrlText (_dialog displayCtrl 47207), 0] call T1AM_Fnc_ParseNumber;
-	T1AM_LastWarhead = (_dialog displayCtrl 47206) lbData (lbCurSel (_dialog displayCtrl 47206));
-	T1AM_LastFuse = (_dialog displayCtrl 47212) lbData (lbCurSel (_dialog displayCtrl 47212));
-	T1AM_LastSheaf = (_dialog displayCtrl 47211) lbData (lbCurSel (_dialog displayCtrl 47211));
-	T1AM_LastSheafX = [ctrlText (_dialog displayCtrl 47213), 0] call T1AM_Fnc_ParseNumber;
-	T1AM_LastSheafY = [ctrlText (_dialog displayCtrl 47214), 0] call T1AM_Fnc_ParseNumber;
-	T1AM_LastAdjustX = [ctrlText (_dialog displayCtrl 47204), 0] call T1AM_Fnc_ParseNumber;
-	T1AM_LastAdjustY = [ctrlText (_dialog displayCtrl 47205), 0] call T1AM_Fnc_ParseNumber;
-	T1AM_LastGPSZ_AGL = [ctrlText (_dialog displayCtrl 47221), 0] call T1AM_Fnc_ParseNumber;
-	T1AM_LastSheafDir = [ctrlText (_dialog displayCtrl 47224), 0] call T1AM_Fnc_ParseNumber;
-	T1AM_LastSheafDist = [ctrlText (_dialog displayCtrl 47225), 0] call T1AM_Fnc_ParseNumber;
-	
-	private _str = ctrlText (_dialog displayCtrl 47222);
-	_str = [_str] call T1AM_Fnc_GridToPos;
-	T1AM_LastGPSX = [_str, 5] call T1AM_Fnc_ParseNumber;
-	private _str = ctrlText (_dialog displayCtrl 47223);
-	_str = [_str] call T1AM_Fnc_GridToPos;
-	T1AM_LastGPSY = [_str, 6] call T1AM_Fnc_ParseNumber;
-	
-	// The T1AM_LastAirburstHeight will be used by the displayWarheads script to show us the previously selected airburst height.
-	private _height = (_dialog displayCtrl 47215) lbData (lbCurSel (_dialog displayCtrl 47215));
-	if (_height != "") then {
-		T1AM_LastAirburstHeight = _height;
-	};
-	
-	//DIAG_LOG format["CONTROL LOOP GPSX 1: %1", ctrlText (_dialog displayCtrl 47222)];
-	//DIAG_LOG format["CONTROL LOOP GPSX 2: %1", T1AM_LastGPSX];
-	//DIAG_LOG format["CONTROL LOOP GPSY 1: %1", ctrlText (_dialog displayCtrl 47223)];
-	//DIAG_LOG format["CONTROL LOOP GPSY 2: %1", T1AM_LastGPSY];
-	
-	// If player has input a wrong value, then reset the value.
-	if (T1AM_LastGPSX == -9999999) then {
-		T1AM_LastGPSX = 0;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47222) ctrlSetText format ["%1",T1AM_LastGPSX];
-		};
-		private _str = "INVALID INPUT:\nGPS X COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 CHARACTERS ALLOWED";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	if (T1AM_LastGPSY == -9999999) then {
-		T1AM_LastGPSY = 0;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47223) ctrlSetText format ["%1",T1AM_LastGPSY];
-		};
-		private _str = "INVALID INPUT:\nGPS Y COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 CHARACTERS ALLOWED";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	if (T1AM_LastGPSZ_AGL == -9999999) then {
-		T1AM_LastGPSZ_AGL = 0;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47221) ctrlSetText format ["%1",T1AM_LastGPSZ_AGL];
-		};
-		private _str = "INVALID INPUT:\nGPS Z COORDINATE\n\nUSE NUMBERS ONLY";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	if (T1AM_LastAdjustX == -9999999) then {
-		T1AM_LastAdjustX = 0;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47204) ctrlSetText format ["%1",T1AM_LastAdjustX];
-		};
-		private _str = "INVALID INPUT:\nADJUST Z\n\nUSE NUMBERS ONLY";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	if (T1AM_LastAdjustY == -9999999) then {
-		T1AM_LastAdjustY = 0;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47205) ctrlSetText format ["%1",T1AM_LastAdjustY];
-		};
-		private _str = "INVALID INPUT:\nADJUST Y\n\nUSE NUMBERS ONLY";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	if (T1AM_LastSheafX < 1) then {
-		T1AM_LastSheafX = 100;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47213) ctrlSetText format ["%1",T1AM_LastSheafX];
-		};
-		private _str = "INVALID INPUT:\nSHEAF SIZE X\n\nUSE NUMBERS ONLY. MUST BE 1 OR HIGHER";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	if (T1AM_LastSheafY < 1) then {
-		T1AM_LastSheafY = 100;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47214) ctrlSetText format ["%1",T1AM_LastSheafY];
-		};
-		private _str = "INVALID INPUT:\nSHEAF SIZE Y\n\nUSE NUMBERS ONLY. MUST BE 1 OR HIGHER";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	if (T1AM_LastRounds < 1) then {
-		T1AM_LastRounds = 1;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47207) ctrlSetText format ["%1",T1AM_LastRounds];
-		};
-		private _str = "INVALID INPUT:\nNUMBER OF ROUNDS\n\nUSE NUMBERS ONLY. MUST BE 1 OR HIGHER";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	if (T1AM_LastSheafDir < 1 or T1AM_LastSheafDir > 360) then {
-		T1AM_LastSheafDir = 360;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47224) ctrlSetText format ["%1",T1AM_LastSheafDir];
-		};
-		private _str = "INVALID INPUT:\nSHEAF DIR\n\nUSE NUMBERS ONLY. MUST BE BETWEEN 1 AND 360";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	if (T1AM_LastSheafDist < 1 or T1AM_LastSheafDist > 1000) then {
-		T1AM_LastSheafDist = 100;
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47225) ctrlSetText format ["%1",T1AM_LastSheafDist];
-		};
-		private _str = "INVALID INPUT:\nSHEAF DIST\n\nUSE NUMBERS ONLY. MUST BE BETWEEN 1 AND 1000";
-		[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	};
-	
-	private _xTemp = [T1AM_LastGPSX] call T1AM_Fnc_FormatCoordinates;
-	private _yTemp = [T1AM_LastGPSY] call T1AM_Fnc_FormatCoordinates;
-	
-	//DIAG_LOG format["CONTROL LOOP GPSX 3: %1", T1AM_LastGPSX];
-	//DIAG_LOG format["CONTROL LOOP GPSX 4: %1", _xTemp];
-	//DIAG_LOG format["CONTROL LOOP GPSY 3: %1", T1AM_LastGPSY];
-	//DIAG_LOG format["CONTROL LOOP GPSY 4: %1", _yTemp];
-	
-	private _posReal = [[_xTemp, _yTemp]] call T1AM_Fnc_MapGridToPos;
-	T1AM_LastGPSX = _posReal select 0;
-	T1AM_LastGPSY = _posReal select 1;
-	
-	//DIAG_LOG format["CONTROL LOOP GPSX 5: %1", T1AM_LastGPSX];
-	//DIAG_LOG format["CONTROL LOOP GPSY 5: %1", T1AM_LastGPSY];
-	
-	// Adjust certain vars to clean them up and make sure the numbers are not too small or too big.
-	T1AM_LastSheafX = (round T1AM_LastSheafX) max 1;
-	T1AM_LastSheafY = (round T1AM_LastSheafY) max 1;
-	T1AM_LastGPSZ_AGL = round T1AM_LastGPSZ_AGL;
-	T1AM_LastRounds = (round T1AM_LastRounds) max 1;
-	T1AM_LastSheafDir = ((round T1AM_LastSheafDir) max 1) min 360;
-	T1AM_LastSheafDist = ((round T1AM_LastSheafDist) max 1) min 1000;
-	
-	
-	// When GPS pos changes, save the new settings and update the exactPos var.
-	private _newExactPos = false;
-	if (_lastGPSX != T1AM_LastGPSX) then {
-		_lastGPSX = T1AM_LastGPSX;
-		_newExactPos = true;
-	};
-	if (_lastGPSY != T1AM_LastGPSY) then {
-		_lastGPSY = T1AM_LastGPSY;
-		_newExactPos = true;
-	};
-	if (_newExactPos) then {
-		private _posGPS = AGLtoASL [T1AM_LastGPSX,T1AM_LastGPSY,T1AM_LastGPSZ_AGL];
-		T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", _posGPS, true];
-		
-		// Update distance.
-		if ((T1AM_LastWarhead in T1AM_GPSGuidedTypes) or {T1AM_LastWarhead in T1AM_GPSLaserTypes} or {T1AM_LastWarhead in T1AM_GPSSeekerTypes}) then {
-			_distance = round ((getPosASL (vehicle (leader _asset))) vectorDistance _posGPS);
-			if (!isNull _dialog) then {
-				(_dialog displayCtrl 47216) ctrlSetText format ["%1 m (GPS)", _distance];
-			};
-		};
-	};
-	
-	
-	// If the selected angle has changed, then we want to update the CEP.
-	if (_angle != T1AM_LastAngle) then {
-		
-		_angle = T1AM_LastAngle;
-		
-		// CEP
-		switch true do {
-			case (_warheadType in T1AM_GPSLaserTypes or {_warheadType in T1AM_GPSSeekerTypes}) : {
-				_scatterSpread2 = format ["%1 m (GPS)", 3];
-			};
-			
-			case (_warheadType in T1AM_GPSGuidedTypes) : {
-				_scatterSpread2 = format ["%1 m (GPS)", 5];
-			};
-			
-			default {
-				if (_angle == "High") then {_scatterSpread2 = format ["%1 m", _scatterSpreadHigh]};
-				if (_angle == "Low") then {_scatterSpread2 = format ["%1 m", _scatterSpreadLow]};
-				if (_warheadType in T1AM_LaserTypes) then {
-					_scatterSpread2 = _scatterSpread2 + format [" | %1 m (LASER)", 5];
-				};
-			};
-		};
-		
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47220) ctrlSetText _scatterSpread2;
-		};
-	};
-	
-	
-	// If the player selects a new magazine type, then we want to update the CEP and airburst settings.
-	// We won't show the airburst settings if the magazine type doesn't support it.
-	if (_warheadType != T1AM_LastWarhead) then {
-	
-		_warheadType = T1AM_LastWarhead;
-		
-		// CEP
-		switch true do {
-			case (_warheadType in T1AM_GPSLaserTypes or {_warheadType in T1AM_GPSSeekerTypes}) : {
-				_scatterSpread2 = format ["%1 m (GPS)", 3];
-			};
-			
-			case (_warheadType in T1AM_GPSGuidedTypes) : {
-				_scatterSpread2 = format ["%1 m (GPS)", 5];
-			};
-			
-			default {
-				if (_angle == "High") then {_scatterSpread2 = format ["%1 m", _scatterSpreadHigh]};
-				if (_angle == "Low") then {_scatterSpread2 = format ["%1 m", _scatterSpreadLow]};
-				if (_warheadType in T1AM_LaserTypes) then {
-					_scatterSpread2 = _scatterSpread2 + format [" | %1 m (LASER)", 5];
-				};
-			};
-		};
-		
-		if (!isNull _dialog) then {
-			(_dialog displayCtrl 47220) ctrlSetText _scatterSpread2;
-		};
-		
-		
-		// Fuse
-		_lastFuse = (_dialog displayCtrl 47212) lbData (lbCurSel (_dialog displayCtrl 47212));
-		
-		if (_warheadType in T1AM_AirburstRounds) then {
-			_fuseTypes = ["IMPACT","AIRBURST","MIXED"];
-		} else {
-			_fuseTypes = ["IMPACT"];
-		};
-		
-		_control = _dialog displayCtrl 47212;
-		lbClear _control;
-		
-		_count = 0;
-		{
-			private _fuseType = _x;
-			_control lbAdd format["%1",_fuseType];
-			_control lbSetData [(lbSize _control)-1,_fuseType];
-			if (_fuseType == _lastFuse) then {_lastFuseIndex = _count};
-			_count = _count + 1;
-		} forEach _fuseTypes;
-		_control lbSetCurSel _lastFuseIndex;
-		
-		
-		// Update distance.
-		if ((T1AM_LastWarhead in T1AM_GPSGuidedTypes) or {T1AM_LastWarhead in T1AM_GPSLaserTypes} or {T1AM_LastWarhead in T1AM_GPSSeekerTypes}) then {
-			private _posGPS = T1AM_ControlledAssetLocal getVariable ["T1AM_exactPos", [0,0,0]];
-			if (_posGPS isEqualTo [0,0,0]) then {_posGPS = [T1AM_Xdisplay,T1AM_Ydisplay,T1AM_Elevation]};
-			_distance = round ((getPosASL (vehicle (leader _asset))) vectorDistance _posGPS);
-			if (!isNull _dialog) then {
-				(_dialog displayCtrl 47216) ctrlSetText format ["%1 m (GPS)", _distance];
-			};
-		} else {
-			_distance = round ((getPosASL (vehicle (leader _asset))) vectorDistance _pos);
-			if (!isNull _dialog) then {
-				(_dialog displayCtrl 47216) ctrlSetText format ["%1 m", _distance];
-			};
-		};
-	};
+	// Update general info/status.
+	_status = "RDY";
+	if (_asset in T1AM_AssetsBusy) then {_status = "BSY"};
+	_name = [(vehicle (leader _asset))] call T1AM_Fnc_VehicleName;
+	_assetName = [_asset] call T1AM_Fnc_TrimGroupName;
+	_tubes = [_asset] call T1AM_Fnc_GroupVehicles;
+	_posArty = getPosASL (vehicle (leader _asset));
+	_posMap = [[_posArty select 0, _posArty select 1]] call T1AM_Fnc_PosToMapGrid;
+	_xMap = parseNumber (_posMap select 0);
+	_yMap = parseNumber (_posMap select 1);
+	_artyElev = round(_posArty select 2);
+	_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+	_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+	(_dialog displayCtrl 47201) ctrlSetText format ["%1: %2 x%3  [%4 %5 %6] (%7)",_assetName,_name,(count _tubes),_xMap,_yMap,_artyElev,_status];
 	
 	
 	// Update display pos.
 	_posMap = [[T1AM_Xdisplay, T1AM_Ydisplay]] call T1AM_Fnc_PosToMapGrid;
 	_xMap = parseNumber (_posMap select 0);
 	_yMap = parseNumber (_posMap select 1);
-	
-	_Xtext2 = [_xMap] call T1AM_Fnc_FormatCoordinates;
-	_Ytext2 = [_yMap] call T1AM_Fnc_FormatCoordinates;
-	
-	if (!isNull _dialog) then {
-		(_dialog displayCtrl 47202) ctrlSetText format ["%1", _Xtext2];
-		(_dialog displayCtrl 47203) ctrlSetText format ["%1", _Ytext2];
-	};
+	_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+	_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+	(_dialog displayCtrl 47202) ctrlSetText _xMap;
+	(_dialog displayCtrl 47203) ctrlSetText _yMap;
 	
 	
-	// Check what the currently selected settings are for certain things,
-	// so we know if they have changed next time we run the loop. We then need to change some stuff for them.
-	_angle = T1AM_LastAngle;
-	_warheadType = T1AM_LastWarhead;
-	_lastGPSX = T1AM_LastGPSX;
-	_lastGPSY = T1AM_LastGPSY;
-	
-	
-	// Update list with available ammo. Wait until that script has done its job (wait for the call), then move on.
+	// Update list with available ammo.
 	_array = [_addedWarheads, _addedWarheadsTimeout, _controlWarheads] call T1AM_Fnc_DisplayWarheads;
 	_addedWarheads = _array select 0;
 	_addedWarheadsTimeout = _array select 1;
 	
 	
-	sleep 0.2;
+	sleep 0.5;
 };
 
 //DIAG_LOG "CONTROL END";

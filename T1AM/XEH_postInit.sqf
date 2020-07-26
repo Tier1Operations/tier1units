@@ -33,9 +33,8 @@ T1AM_SelectedAsset = grpNull;
 T1AM_WarheadTypes = ["HE","Flare","Smoke","Guided","Cluster","Laser.G","Mine","AT mine","Rocket","WP","Chemical","Nuclear"];
 T1AM_WarheadType = "";
 T1AM_Dispersion = 0;
-T1AM_Angle = "Low";
-T1AM_LastMission = "";
-T1AM_LastAngle = "";
+T1AM_LastMission = "SPOT";
+T1AM_LastAngle = "HIGH";
 T1AM_LastRounds = 1;
 T1AM_LastWarhead = "";
 T1AM_LastFuse = "";
@@ -45,13 +44,20 @@ T1AM_LastSheafX = 100;
 T1AM_LastSheafY = 100;
 T1AM_LastSheafDir = 0;
 T1AM_LastSheafDist = 0;
+T1AM_LastAdjustSpotterX = 0;
+T1AM_LastAdjustSpotterY = 0;
+T1AM_LastAdjustImpactX = 0;
+T1AM_LastAdjustImpactY = 0;
+T1AM_LastAdjustImpactRefX = 0;
+T1AM_LastAdjustImpactRefY = 0;
 T1AM_LastGPSX = -999999;
 T1AM_LastGPSY = -999999;
 T1AM_LastGPSZ_AGL = 0;
+T1AM_LastAdjustCheckbox = 0;
 T1AM_LastAdjustX = 0;
 T1AM_LastAdjustY = 0;
-T1AM_LastAimpointX = "";
-T1AM_LastAimpointY = "";
+T1AM_LastAimpointX = 0;
+T1AM_LastAimpointY = 0;
 
 
 // Units that will be added to the arty computer, even though they normally wouldn't be added. Used for special units.
@@ -119,9 +125,6 @@ if (isNil "T1AM_ControlledAssets") then {T1AM_ControlledAssets = []};
 // All busy assets.
 if (isNil "T1AM_AssetsBusy") then {T1AM_AssetsBusy = []};
 
-// Array to be processed on the server.
-T1AM_NewFireMission = [];
-
 // Which dialog should be opened by default? ("Assets","Aimpoint","Control")
 T1AM_LastDialog = "Assets";
 
@@ -131,9 +134,6 @@ T1AM_SelectedTubeIndex = 0;
 
 // Fire mission the player is currently working on.
 T1AM_FireMissionCurrent = [];
-
-// What type of mission.
-T1AM_MissionType = "";
 
 // All fire missions performed so far (except spotting rounds).
 if (isNil "T1AM_AllMissions") then {T1AM_AllMissions = []};

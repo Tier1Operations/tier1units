@@ -4,7 +4,7 @@ if (!local _unit) exitWith {};
 
 private _markerName = format ["%1%2%3",_projectile,time,(random 999)];
 private _marker = createMarker [_markerName,(getPosASL _projectile)];
-_marker setMarkerText format ["%1",time];
+_marker setMarkerText (str time);
 _marker setMarkerSize [1,1];
 _marker setMarkerType "mil_dot";
 _marker setMarkerColor "ColorGreen";

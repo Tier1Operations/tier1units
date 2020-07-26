@@ -1,13 +1,23 @@
 // Check for illegal characters. Return -9999999 if something illegal happened.
 // Second parameter is a max number of characters that are allowed.
 
-params ["_nr","_maxChar"];
+params ["_nr","_maxChar","_removeDecimal"];
 
 //DIAG_LOG format ["PARSENUMBER - START - _nr: %1", _nr];
 
 private _illegal = false;
 
 if (_nr isEqualType "" and count _nr > 0) then {
+	
+	if (_removeDecimal) then {
+		// Remove decimal.
+		private _str = str _nr;
+		private _index = _str find ".";
+		if (_index != -1) then {
+			_str = _str select [0, _index];
+			_nr = parseNumber _str;
+		};
+	};
 	
 	private _isNegative = false;
 	if (_nr select [0, 1] == "-") then {

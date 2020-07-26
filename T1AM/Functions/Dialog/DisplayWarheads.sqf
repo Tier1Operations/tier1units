@@ -24,7 +24,7 @@ private _magazineTypesAmmo = [];
 // Check if one of the processed magazines is not available anymore.
 // If so, refresh the whole list. Also refresh if nothing is selected (safety check).
 if (count _magazineTypes > 0 and _addedWarheadsTimeout < 0) then {
-	_addedWarheadsTimeout = 25;
+	_addedWarheadsTimeout = 9;
 	//DIAG_LOG format["DISPLAY WARHEADS | RESET TIMEOUT | count _magazineTypes: %1 | _addedWarheadsTimeout: %2", count _magazineTypes, _addedWarheadsTimeout];
 };
 if (lbCurSel _controlWarheads == -1) then {
@@ -37,17 +37,19 @@ if (lbCurSel _controlWarheads == -1) then {
 		if (!(_x in _magazineTypes)) then {
 			_found = false;
 			_addedWarheadsTimeout = _addedWarheadsTimeout - 1;
+			[_controlWarheads, lbCurSel _controlWarheads] spawn T1AM_Fnc_ListWarheadTypeEvent; // Refresh GUI.
 			//DIAG_LOG format["DISPLAY WARHEADS | DECREMENT _addedWarheadsTimeout: %1", _addedWarheadsTimeout];
+			
 			if (_addedWarheadsTimeout < 0) then {
 				lbClear _controlWarheads;
 				_addedWarheads = [];
-				_addedWarheadsTimeout = 25;
+				_addedWarheadsTimeout = 9;
 				//DIAG_LOG format["DISPLAY WARHEADS | RESET BY ARRAY"];
 			};
 		};
 		if (!_found) exitWith {};
 	} forEach _addedWarheads;
-	if (_found) then {_addedWarheadsTimeout = 25};
+	if (_found) then {_addedWarheadsTimeout = 9};
 };
 
 //DIAG_LOG format["DISPLAY WARHEADS | AFTER RESET CHECK | _addedWarheadsTimeout: %1", _addedWarheadsTimeout];
@@ -66,6 +68,7 @@ private _count = 0;
 
 //DIAG_LOG format["DISPLAY WARHEADS | AMMO CHECKED | _magazineTypesAmmo: %1", _magazineTypesAmmo];
 //DIAG_LOG format["DISPLAY WARHEADS | LOOP START | count _magazineTypes: %1", count _magazineTypes];
+
 
 for [{_i = 0}, {_i < count _magazineTypes}, {_i = _i + 1}] do {
 	// Figure out what text to show.
@@ -109,18 +112,19 @@ for [{_i = 0}, {_i < count _magazineTypes}, {_i = _i + 1}] do {
 	if (!_alreadyAdded) then {
 		_controlWarheads lbAdd _magazineName;
 		_controlWarheads lbSetData [(lbSize _controlWarheads)-1, _magazine];
-		private _dialog = findDisplay 47200;
-		if (_lbSize == 0) then {
-			(_dialog displayCtrl 47206) lbSetCurSel 0;
-			//DIAG_LOG format["DISPLAY WARHEADS | SELECT FIRST ENTRY | _lbSize: %1", _lbSize];
-		};
 		if (_magazine == T1AM_LastWarhead) then {
-			(_dialog displayCtrl 47206) lbSetCurSel _lbSize;
-			//DIAG_LOG format["DISPLAY WARHEADS | SELECT LAST SELECTED | T1AM_LastWarhead: %1", T1AM_LastWarhead];
+			((findDisplay 47200) displayCtrl 47206) lbSetCurSel _lbSize;
+			//DIAG_LOG format["DISPLAY WARHEADS | SELECT PREVIOUS | T1AM_LastWarhead: %1", T1AM_LastWarhead];
 		};
 		_addedWarheads pushback _magazine;
 		//DIAG_LOG format["DISPLAY WARHEADS | ADD ENTRY | _magazine: %1 | _magazineName: %2", _magazine, _magazineName];
 	};
+};
+
+// If nothing selected, select the first entry.
+if (lbSize _controlWarheads > 0 and lbCurSel _controlWarheads == -1) then {
+	((findDisplay 47200) displayCtrl 47206) lbSetCurSel 0;
+	//DIAG_LOG format["DISPLAY WARHEADS | SELECT FIRST | T1AM_LastWarhead: %1", T1AM_LastWarhead];
 };
 
 //DIAG_LOG format["DISPLAY WARHEADS | END | _addedWarheads: %1 | _addedWarheadsTimeout: %2", _addedWarheads, _addedWarheadsTimeout];

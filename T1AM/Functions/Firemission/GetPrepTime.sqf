@@ -95,9 +95,9 @@ if (_firstRound) then {
 	};
 	
 	switch (T1AM_PrepTimes) do {
-		// Realistic setting increases prep time a bit.
-		case 0: {_sleepTime = 2};
 		// No delay setting removes prep time. Requires at least 2 to avoid bug.
+		case 0: {_sleepTime = 2};
+		// Realistic setting increases prep time a bit.
 		case 2: {_sleepTime = _sleepTime * 1.75};
 	};
 	
@@ -167,6 +167,10 @@ if (_firstRound) then {
 
 // Wait at least 1 second to make sure airburst mixed works properly.
 _sleepTime = _sleepTime max 1;
+
+// Wait no longer than 130 seconds. Other scripts will not wait longer than 130 seconds (as a safety precaution).
+_sleepTime = _sleepTime min 130;
+
 _sleepTime = time + _sleepTime;
 
 _sleepTime

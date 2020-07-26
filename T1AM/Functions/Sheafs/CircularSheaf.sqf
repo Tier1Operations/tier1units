@@ -1,14 +1,9 @@
-private["_tube","_asset","_pos","_radius","_elevation","_height"];
-
-_tube = _this select 0;
-_asset = _this select 1;
-_pos = _this select 2;
-_radius = _this select 3;
+params ["_tube","_asset","_pos","_radius"];
 
 //DIAG_LOG format["CIRCLE SHEAF - RADIUS: %1", _radius];
 
 _pos = ASLtoAGL _pos;
-_elevation = _pos select 2;		// Remember the height above ground for airburst.
+private _elevation = _pos select 2;		// Remember the height above ground for airburst.
 _radius = random _radius;
 
 //DIAG_LOG format["CIRCLE SHEAF - FINAL RADIUS: %1", _radius];
@@ -20,11 +15,11 @@ if (!isNull _asset) then {
 	// This will spread out the fire more evenly over the target area.
 	
 	// Get sector data. true = has been fired at / false = not fired at yet
-	_sectors = _asset getVariable ["T1AM_sheafSectorsCircle", [false, false, false, false]];
-	_sector1 = _sectors select 0;
-	_sector2 = _sectors select 1;
-	_sector3 = _sectors select 2;
-	_sector4 = _sectors select 3;
+	private _sectors = _asset getVariable ["T1AM_sheafSectorsCircle", [false, false, false, false]];
+	private _sector1 = _sectors select 0;
+	private _sector2 = _sectors select 1;
+	private _sector3 = _sectors select 2;
+	private _sector4 = _sectors select 3;
 	
 	// All sectors have been fired at, so reset.
 	if (_sector1 and _sector2 and _sector3 and _sector4) then {
@@ -36,7 +31,7 @@ if (!isNull _asset) then {
 	};
 	
 	// Pick all sectors that haven't been fired at yet.
-	_arraySectors = [];
+	private _arraySectors = [];
 	if (!_sector1) then {_arraySectors pushback 1};
 	if (!_sector2) then {_arraySectors pushback 2};
 	if (!_sector3) then {_arraySectors pushback 3};
@@ -78,6 +73,6 @@ if (!isNull _asset) then {
 	_pos = [_pos select 0, _pos select 1] getPos [_radius, random 360];
 };
 
-_height = ((AGLtoASL [_pos select 0, _pos select 1, 0]) select 2) max 0;
+private _height = ((AGLtoASL [_pos select 0, _pos select 1, 0]) select 2) max 0;
 
 [_pos select 0, _pos select 1, _height + _elevation]

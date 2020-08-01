@@ -896,13 +896,13 @@ class CfgAmmo
 	};
 	class rhs_ammo_12g_HE: rhs_ammo_12g_FRAG
 	{
-		hit = 30.0;
+		hit = 10.0;
 		airFriction = -0.0015;
 		typicalSpeed = 50;
 		caliber = 0.25;
-		indirectHit = 1;
+		indirectHit = 4;
 		indirectHitRange = 0.1667;
-		explosive = 0.69;
+		explosive = 1;
 		fuseDistance = 1.5;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
 		nvgOnly = 0;
@@ -919,8 +919,8 @@ class CfgAmmo
 	};
 	class rhs_ammo_12gHEAP_penetrator: BulletBase
 	{
-		hit = 20;
-		caliber = 0.9;
+		hit = 90;
+		caliber = 15;
 		class HitEffects
 		{
 			hitMetal = "ImpactMetal";
@@ -1256,13 +1256,13 @@ class CfgAmmo
 	};
 	class rhsusf_ammo_127x99_mk211: rhsusf_ammo_127x99_M33_Ball
 	{
-		hit = 75;
+		hit = 10;
 		airFriction = -0.00058;
 		typicalSpeed = 900;
-		caliber = 4.5;
-		explosive = 0.1;
+		caliber = 0.2;
+		explosive = 1;
 		indirectHit = 4;
-		indirectHitRange = 0.6;
+		indirectHitRange = 0.1;
 		audibleFire = 120;
 		visibleFire = 6;
 		visibleFireTime = 2;
@@ -1270,6 +1270,46 @@ class CfgAmmo
 		suppressionRadiusHit = 16;
 		dangerRadiusBulletClose = 16;
 		dangerRadiusHit = 16;
+		
+		submunitionAmmo = "ammo_Penetrator_T1_Mk211_HEAT";
+		submunitionDirectionType = "SubmunitionModelDirection";
+		submunitionInitialOffset[] = {0,0,-0.2};
+		submunitionInitSpeed = 1000;
+		submunitionParentSpeedCoef = 0;
+		triggerOnImpact = 1;
+		deleteParentWhenTriggered = 0;
+		warheadName = "HEAT";
+		explosionEffects = "RHSUSF_12gExplosion";
+	};
+	class ammo_Penetrator_Base;
+	class ammo_Penetrator_T1_Mk211_HEAT: ammo_Penetrator_Base
+	{
+		caliber = 10;
+		hit = 85;
+		warheadName = "HEAT";
+		class HitEffects
+		{
+			hitMetal = "ImpactMetal";
+			hitMetalPlate = "ImpactMetal";
+			hitBuilding = "ImpactPlaster";
+			hitConcrete = "ImpactConcrete";
+			hitGroundSoft = "ImpactEffectsSmall";
+			hitGroundHard = "ImpactEffectsHardGround";
+			Hit_Foliage_green = "ImpactLeavesGreen";
+			Hit_Foliage_Dead = "ImpactLeavesDead";
+			Hit_Foliage_Green_big = "ImpactLeavesGreenBig";
+			Hit_Foliage_Palm = "ImpactLeavesPalm";
+			Hit_Foliage_Pine = "ImpactLeavesPine";
+			hitFoliage = "ImpactLeaves";
+			hitGlass = "ImpactGlass";
+			hitGlassArmored = "ImpactGlassThin";
+			hitWood = "ImpactWood";
+			hitPlastic = "ImpactPlastic";
+			hitRubber = "ImpactRubber";
+			hitMan = "ImpactEffectsBlood";
+			hitWater = "ImpactEffectsWater";
+			default_mat = "ImpactEffectsHardGround";
+		};
 	};
 	
 	

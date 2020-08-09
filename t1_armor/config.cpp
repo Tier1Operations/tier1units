@@ -14,7 +14,6 @@ class CfgPatches
 			"T1_Sentinel_Commander_Standard_F",
 			"T1_Sentinel_Gunner_Standard_F",
 			"T1_Sentinel_Driver_Standard_F",
-//			"t1_apc",
 			"t1_ifv_wheeled",
 			"t1_tank",
 			"t1_support_heavy"
@@ -451,6 +450,8 @@ class cfgVehicles
 	class B_APC_Wheeled_01_cannon_F;
 	class t1_ifv_wheeled : B_APC_Wheeled_01_cannon_F
 	{
+		scope = 2;
+		scopeCurator = 2;
 		faction = "T1_Units";
 		crew = "T1_Crewman_Standard_F";
 		transportmaxmagazines = 99999;

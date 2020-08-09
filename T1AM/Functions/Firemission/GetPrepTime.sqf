@@ -16,12 +16,12 @@ if (_firstRound) then {
 		} forEach _arrayTRP;
 	};
 	
-	DIAG_LOG format["TUBE: %1 - FIRING LOOP -- CLOSETOTRP: %2", _tube, _closeToTRP];
+	//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- CLOSETOTRP: %2", _tube, _closeToTRP];
 	
 	// Has fired previously on this position or is preplotted or is close to a TRP.
 	if (((_lastFiringPos vectorDistance _chosenTargetPos < 300) and (_lastGunAngle == _gunAngle)) or _prePlotted or _closeToTRP) then {
 		
-		DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
 		
 		switch (_assetType) do {
 			
@@ -58,7 +58,7 @@ if (_firstRound) then {
 		
 	} else {
 		
-		DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS NOT FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS NOT FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
 		
 		// Firing on new position.
 		switch (_assetType) do {

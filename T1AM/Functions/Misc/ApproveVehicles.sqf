@@ -40,11 +40,11 @@ private _check = {
 						_unit enableSimulationGlobal false;
 					};
 				};
-				DIAG_LOG format ["APPROVE VEH: %1 - TYPEOF: %2", _x, typeOf _x];
+				//DIAG_LOG format ["APPROVE VEH: %1 - TYPEOF: %2", _x, typeOf _x];
 				
 			} else {
 				_x setVariable ["T1AM_suitableVehicle", false, true];
-				DIAG_LOG format ["APPROVE VEH - NOT SUITABLE: %1 - TYPEOF: %2", _x, typeOf _x];
+				//DIAG_LOG format ["APPROVE VEH - NOT SUITABLE: %1 - TYPEOF: %2", _x, typeOf _x];
 			};
 		};
 		

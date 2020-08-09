@@ -2,18 +2,18 @@ if (!hasInterface) exitWith {};
 
 params ["_asset","_messageCode","_audio"];
 
-DIAG_LOG format["COMMSPLAY - _asset: %1", _asset];
-DIAG_LOG format["COMMSPLAY - _messageCode: %1", _messageCode];
-DIAG_LOG format["COMMSPLAY - _audio: %1", _audio];
+//DIAG_LOG format["COMMSPLAY - _asset: %1", _asset];
+//DIAG_LOG format["COMMSPLAY - _messageCode: %1", _messageCode];
+//DIAG_LOG format["COMMSPLAY - _audio: %1", _audio];
 
 private _side = (side (leader _asset));
 if (_side != (side player)) exitWith {
-	DIAG_LOG format["COMMSPLAY - EXITING BECAUSE SIDE - _side: %1 - side player: %2", _side, side player];
+	//DIAG_LOG format["COMMSPLAY - EXITING BECAUSE SIDE - _side: %1 - side player: %2", _side, side player];
 };
 
 // Check if the player has a radio
 if (!(call T1AM_Fnc_HasRadio)) exitWith {
-	DIAG_LOG format["COMMSPLAY - EXITING BECAUSE RADIO - hasRadio: %1", call T1AM_Fnc_HasRadio];
+	//DIAG_LOG format["COMMSPLAY - EXITING BECAUSE RADIO - hasRadio: %1", call T1AM_Fnc_HasRadio];
 };
 
 // Which set of audio files should be used?
@@ -70,10 +70,10 @@ if (_audio == "BEEP") then {
 	};
 };
 
-DIAG_LOG format["COMMSPLAY - _soundFile: %1", _soundFile];
+//DIAG_LOG format["COMMSPLAY - _soundFile: %1", _soundFile];
 
 if (_asset isEqualType objNull) then {
-	DIAG_LOG format["COMMSPLAY - ASSET IS OBJECT - _asset: %1", _asset];
+	//DIAG_LOG format["COMMSPLAY - ASSET IS OBJECT - _asset: %1", _asset];
 	
 	if (!isPlayer (effectiveCommander _asset)) then {
 		private _nr = 1;
@@ -83,17 +83,17 @@ if (_asset isEqualType objNull) then {
 			_nr = _nr + 1;
 		} forEach ([group _asset] call T1AM_Fnc_GroupVehicles);
 		
-		DIAG_LOG format["COMMSPLAY - ASSET IS AI - ORIG MESSAGE: %1", _messageCode];
+		//DIAG_LOG format["COMMSPLAY - ASSET IS AI - ORIG MESSAGE: %1", _messageCode];
 		_messageCode = format["UNIT %1: ", _nr] + _messageCode;
-		DIAG_LOG format["COMMSPLAY - ASSET IS AI - NEW MESSAGE: %1", _messageCode];
+		//DIAG_LOG format["COMMSPLAY - ASSET IS AI - NEW MESSAGE: %1", _messageCode];
 	};
 	_asset sideChat _messageCode;
 	
 } else {
-	DIAG_LOG format["COMMSPLAY - ASSET IS GROUP - _asset: %1", _asset];
+	//DIAG_LOG format["COMMSPLAY - ASSET IS GROUP - _asset: %1", _asset];
 	(leader _asset) sideChat _messageCode;
 };
 
 playSound _soundFile;
 
-DIAG_LOG "COMMSPLAY END";
+//DIAG_LOG "COMMSPLAY END";

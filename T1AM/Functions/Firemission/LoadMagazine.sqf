@@ -5,16 +5,16 @@
 
 params ["_tube","_magazineType","_assetType"];
 
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - START", _tube];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - START", _tube];
 
 sleep 0.05;
 
 private _alreadyLoaded = false;
 if ((currentMagazine _tube) == _magazineType) then {
 	_alreadyLoaded = true;
-	//DIAG_LOG format ["LOADMAG - TUBE: %1 - MAG ALREADY LOADED", _tube];
+	DIAG_LOG format ["LOADMAG - TUBE: %1 - MAG ALREADY LOADED", _tube];
 };
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - CURMAG: %2 - REQMAG: %3", _tube, currentMagazine _tube, _magazineType];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - CURMAG: %2 - REQMAG: %3", _tube, currentMagazine _tube, _magazineType];
 
 
 // Find the requested ammo and count the amount of rounds.
@@ -32,7 +32,7 @@ private _otherMags = [];
 // If tube doesn't have the requested ammo, then abort.
 if (_nrRounds < 1) exitWith {
 	_tube setVariable ["T1AM_outOfAmmo", true];
-	//DIAG_LOG format ["LOADMAG - TUBE: %1 - ABORT - NO AMMO",  _tube];
+	DIAG_LOG format ["LOADMAG - TUBE: %1 - ABORT - NO AMMO",  _tube];
 };
 
 
@@ -43,7 +43,7 @@ private _weapon = _tube currentWeaponTurret _turretPath;
 
 // The BM21 uses a pylon system and is therefore handled differently.
 // BM21 using multiple ammo types at the same time is not supported.
-if (_assetType == "BM21") exitWith {
+if (_assetType == "RHS_BM21") exitWith {
 	_tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
 	if (needReload _tube == 1) then {reload _tube};
 	_tube loadMagazine [_turretPath , _tube currentWeaponTurret _turretPath, _magazineType];
@@ -51,7 +51,7 @@ if (_assetType == "BM21") exitWith {
 	_tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
 	if (needReload _tube == 1) then {reload _tube};
 	_tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
-	//DIAG_LOG format ["LOADMAG - TUBE: %1 - ABORT - _assetType: %2", _tube, _assetType];
+	DIAG_LOG format ["LOADMAG - TUBE: %1 - ABORT - _assetType: %2", _tube, _assetType];
 };
 
 
@@ -67,11 +67,11 @@ for [{_i = _nrRounds - _magCap}, {true}, {_i = _i - _magCap}] do {
 	_magsToAdd pushback [_magazineType, _magCap];
 };
 
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _allMags: %2", _tube, _allMags];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _otherMags: %2", _tube, _otherMags];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _nrRounds: %2", _tube, _nrRounds];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _magCap: %2", _tube, _magCap];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _magsToAdd: %2", _tube, _magsToAdd];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - _allMags: %2", _tube, _allMags];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - _otherMags: %2", _tube, _otherMags];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - _nrRounds: %2", _tube, _nrRounds];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - _magCap: %2", _tube, _magCap];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - _magsToAdd: %2", _tube, _magsToAdd];
 
 
 // Remove weapon, remove mags. Add 1 mag, add weapon to load it instantly. Then add other mags.
@@ -92,6 +92,7 @@ private _addWeapon = true;
 	if (_addWeapon) then {
 		_tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
 		_tube addWeaponTurret [_weapon, _turretPath];
+		_gunner selectWeapon _weapon;
 		_addWeapon = false;
 	};
 } forEach _magsToAdd;
@@ -102,9 +103,9 @@ sleep 0.05;
 _tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
 
 
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - NEW LOADED WEAP: %2", _tube, _tube currentWeaponTurret _turretPath];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - NEW LOADED AMMO: %2", _tube, currentMagazine _tube];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - NEW ALLMAGS: %2", _tube, magazinesAmmo _tube];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - NEW LOADED WEAP: %2", _tube, _tube currentWeaponTurret _turretPath];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - NEW LOADED AMMO: %2", _tube, currentMagazine _tube];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - NEW ALLMAGS: %2", _tube, magazinesAmmo _tube];
 
 if (!_alreadyLoaded) then {
 	private _reloadTime = getNumber(configfile >> "CfgWeapons" >> _weapon >> "magazineReloadTime");
@@ -116,8 +117,8 @@ if (!_alreadyLoaded) then {
 	_tube setVariable ["T1AM_waitingTime", _waitingTime];
 	
 	if (_waitingTime > 45) then {
-		[_tube, format["Preparing the required ammo will take a while: %1 seconds.",_reloadTime], "beep"] call T1AM_Fnc_SendComms;
+		[_tube, format["Preparing the required ammo will take a while: %1 seconds.",_reloadTime], "BEEP"] call T1AM_Fnc_SendComms;
 	};
 };
 
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - END", _tube];
+DIAG_LOG format ["LOADMAG - TUBE: %1 - END", _tube];

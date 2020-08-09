@@ -6,8 +6,8 @@ disableSerialization;
 
 params ["_prePlotted"];
 
-//DIAG_LOG format["CONTROLASSET - _prePlotted: %1", _prePlotted];
-//DIAG_LOG format["CONTROLASSET - ABORTING: %1", ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0))];
+DIAG_LOG format["CONTROLASSET - _prePlotted: %1", _prePlotted];
+DIAG_LOG format["CONTROLASSET - ABORTING: %1", ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0))];
 
 if ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0)) exitWith {
 	private _str = "NO MISSION SELECTED";
@@ -28,13 +28,13 @@ if (_abort) exitWith {
 
 if (_prePlotted) then {T1AM_PrePlotted = true};
 
-//DIAG_LOG format["CONTROLASSET - (_asset == T1AM_ControlledAssetLocal): %1", (_asset == T1AM_ControlledAssetLocal)];
+DIAG_LOG format["CONTROLASSET - (_asset == T1AM_ControlledAssetLocal): %1", (_asset == T1AM_ControlledAssetLocal)];
 
 // If asset is already being controlled by player, close interface and then open control menu.
 if (_asset == T1AM_ControlledAssetLocal) exitWith {
 	[_prePlotted] spawn {
 		params ["_prePlotted"];
-		T1AM_LastDialog = "Control";
+		T1AM_LastDialog = "CONTROL";
 		[0, [_prePlotted], 0] spawn T1AM_Fnc_LoadingScreen;
 	};
 };
@@ -79,8 +79,8 @@ if (configNull != (configFile >> "CfgPatches" >> "ace_medical")) then {
 			while {!isNull T1AM_ControlledAssetLocal} do {
 				if (player getVariable ["ACE_isUnconscious", false]) then {
 					if (_timeOut > 60) then {
-						hint format["Observer not respnding.\n\nEnding mission."];
-						[true] call T1AM_Fnc_EndMission;
+						[_asset, "Observer not respnding. Ending mission.", "BEEP"] call T1AM_Fnc_SendComms;
+						[false] call T1AM_Fnc_EndMission;
 						_abort = true;
 					};
 					_timeOut = _timeout + 15;
@@ -99,7 +99,7 @@ if (configNull != (configFile >> "CfgPatches" >> "ace_medical")) then {
 };
 
 
-//DIAG_LOG format["CONTROLASSET - IF _prePlotted: %1 - T1AM_PrePlotted: %2", _prePlotted, T1AM_PrePlotted];
+DIAG_LOG format["CONTROLASSET - IF _prePlotted: %1 - T1AM_PrePlotted: %2", _prePlotted, T1AM_PrePlotted];
 
 private _assetCallsign = [T1AM_SelectedAsset] call T1AM_Fnc_TrimGroupName;
 private _playerCallsign = [(group player)] call T1AM_Fnc_TrimGroupName;
@@ -108,14 +108,20 @@ private _playerCallsign = [(group player)] call T1AM_Fnc_TrimGroupName;
 if ((T1AM_HaveAimpoint) or (T1AM_PrePlotted)) then {
 	[_assetCallsign, _playerCallsign, _prePlotted, _asset] spawn {
 		params ["_assetCallsign", "_playerCallsign", "_prePlotted", "_asset"];
-		T1AM_LastDialog = "Control";
+		
+		// Increment fire mission number.
+		private _fireMissionNr = _asset getVariable ["T1AM_FireMissionNr", 0]; 
+		_fireMissionNr = _fireMissionNr + 1;
+		_asset setVariable ["T1AM_FireMissionNr", _fireMissionNr, true];
+		
+		T1AM_LastDialog = "CONTROL";
 		[0, [_prePlotted], 0] spawn T1AM_Fnc_LoadingScreen;
 		sleep (1 + random 2);
 		private _message = format ["%1 this is %2, adjust fire, out", _playerCallsign, _assetCallsign];
-		[_asset, _message, "AdjustFire"] call T1AM_Fnc_SendComms;
+		[_asset, _message, "ADJUSTFIRE"] call T1AM_Fnc_SendComms;
 	};
 } else {
 	// Open aimpoint menu.
-	T1AM_LastDialog = "Aimpoint";
+	T1AM_LastDialog = "AIMPOINT";
 	[0, [_prePlotted], 0] spawn T1AM_Fnc_LoadingScreen;
 };

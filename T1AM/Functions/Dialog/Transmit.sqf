@@ -9,7 +9,7 @@ if (T1AM_ControlledAssetLocal in T1AM_AssetsBusy) exitWith {
 
 private _prePlotted = T1AM_PrePlotted;
 
-//DIAG_LOG format["TRANSMIT - _prePlotted: %1", _prePlotted];
+DIAG_LOG format["TRANSMIT - _prePlotted: %1", _prePlotted];
 
 private _dialog = findDisplay 47200;
 
@@ -27,6 +27,7 @@ private _sheafDist = [ctrlText (_dialog displayCtrl 47225), 0, true] call T1AM_F
 private _missionType = (_dialog displayCtrl 47208) lbData (lbCurSel (_dialog displayCtrl 47208));
 private _adjustX = [ctrlText (_dialog displayCtrl 47204), 0, true] call T1AM_Fnc_ParseNumber;
 private _adjustY = [ctrlText (_dialog displayCtrl 47205), 0, true] call T1AM_Fnc_ParseNumber;
+private _remarks = ctrlText (_dialog displayCtrl 47267);
 
 private _GPSZ = [ctrlText (_dialog displayCtrl 47221), 0, false] call T1AM_Fnc_ParseNumber;
 
@@ -61,6 +62,19 @@ private _adjustImpactRefX = [_str, 5, true] call T1AM_Fnc_ParseNumber;
 _str = ctrlText (_dialog displayCtrl 47255);
 _str = [_str] call T1AM_Fnc_GridToPos;
 private _adjustImpactRefY = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+
+_str = ctrlText (_dialog displayCtrl 47263);
+_str = [_str] call T1AM_Fnc_GridToPos;
+private _TRPX = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+
+_str = ctrlText (_dialog displayCtrl 47264);
+_str = [_str] call T1AM_Fnc_GridToPos;
+private _TRPY = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+
+if (_TRPX == 0 and _TRPY == 0) then {
+	_TRPX = T1AM_Xdisplay;
+	_TRPY = T1AM_Ydisplay;
+};
 
 private _adjustMode = lbCurSel (_dialog displayCtrl 47237);
 
@@ -189,6 +203,36 @@ if (_adjustMode == 2 and _adjustImpactRefX == 0 and _adjustImpactRefY == 0) exit
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
 
+if (_missionType == "PLOT" and _TRPX == -9999999) exitWith {
+	T1AM_LastTRPX = 0;
+	if (!isNull _dialog) then {
+		(_dialog displayCtrl 47264) ctrlSetText (str T1AM_LastTRPX);
+	};
+	private _str = "INVALID INPUT:\TRP X COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
+if (_missionType == "PLOT" and _TRPY == -9999999) exitWith {
+	T1AM_LastTRPY = 0;
+	if (!isNull _dialog) then {
+		(_dialog displayCtrl 47265) ctrlSetText (str T1AM_LastTRPY);
+	};
+	private _str = "INVALID INPUT:\TRP Y COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
+// Check if a TRP doesn't exist already on the requested spot.
+private _TrpExists = false;
+if (_missionType == "PLOT") then {
+	{
+		if (T1AM_ControlledAssetLocal == _x select 0 and _x select 5 == "PLOT" and _TRPX == _x select 20 and _TRPY == _x select 21) exitWith {_TrpExists = true};
+	} forEach T1AM_AllMissions;
+};
+if (_TrpExists) exitWith {
+	private _str = "INVALID INPUT:\nTRP COORDINATES\n\nTRP ALREADY EXISTS AT REQUESTED COORDINATES";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
 if (_sizeX < 1) exitWith {
 	T1AM_LastSheafX = 100;
 	if (!isNull _dialog) then {
@@ -235,7 +279,7 @@ if (_sheafDist < 1 or _sheafDist > 1000) exitWith {
 };
 
 // getGPS pos.
-private _posGPS = [];
+private _posGPS = [-999999,-999999,0];
 if (_isGPS) then {
 	_posGPS = T1AM_ControlledAssetLocal getVariable ["T1AM_exactPos", [0,0,0]];
 };
@@ -245,7 +289,9 @@ if (_posGPS isEqualTo [0,0,0]) exitWith {
 };
 
 
+
 // End of exitWiths.
+
 
 
 // If the player has requested an adjust, change the pos vars.
@@ -260,24 +306,24 @@ if (_prePlotted) then {
 	T1AM_Y = T1AM_LastPos select 1;
 	T1AM_Elevation = T1AM_LastPos select 2;
 	_pos = T1AM_LastPos;
-	//DIAG_LOG format["TRANSMIT - PREPLOTTED - _pos: %1", _pos];
+	DIAG_LOG format["TRANSMIT - PREPLOTTED - _pos: %1", _pos];
 	
 } else {
 	
 	_pos = [T1AM_X, T1AM_Y, T1AM_Elevation];
-	//DIAG_LOG format["TRANSMIT - NOT PLOTTED - _pos: %1", _pos];
+	DIAG_LOG format["TRANSMIT - NOT PLOTTED - _pos: %1", _pos];
 };
 
 
 // Distance
 private _pos2 = getPosASL (vehicle (leader T1AM_SelectedAsset));
-private _distance = [];
-
+private _distance = 0;
 if (_isGPS) then {
 	_distance = _pos2 vectorDistance _posGPS;
 } else {
-	_distance = _pos vectorDistance _pos2;
+	_distance = _pos2 vectorDistance _pos;
 };
+_distance = floor _distance;
 
 
 if (!(_warheadType in T1AM_AirburstRounds)) then {
@@ -286,14 +332,13 @@ if (!(_warheadType in T1AM_AirburstRounds)) then {
 };
 
 
-private _plotNr = 1;
+private _fireMissionNr = T1AM_ControlledAssetLocal getVariable ["T1AM_FireMissionNr", 0]; 
+
+
+private _plotNr = T1AM_ControlledAssetLocal getVariable ["T1AM_plotNr", 0]; 
 if (_missionType == "PLOT") then {
-	{
-		if ((_x select 0) == T1AM_ControlledAssetLocal and {_x select 5 == "PLOT"}) then {
-			_plotNr = _plotNr + 1;
-		};
-		
-	} forEach T1AM_AllMissions;
+	_plotNr = _plotNr + 1;
+	T1AM_ControlledAssetLocal setVariable ["T1AM_plotNr", _plotNr, true];
 };
 
 
@@ -305,12 +350,13 @@ private _timeStamp = [(date select 3),(date select 4)];
 private _posDisplay = [T1AM_Xdisplay, T1AM_Ydisplay, T1AM_Elevation];
 
 
-T1AM_FireMissionCurrent = [T1AM_ControlledAssetLocal,_pos,_warheadType,_rounds,_distance,_missionType,_angle,_sender,_timeStamp,_prePlotted,_sheaf,_fuse,_sheafSize,_posDisplay,_airburstHeight,_plotNr,_GPSZ,_posGPS,_sheafDir,_sheafDist];
+T1AM_FireMissionCurrent = [T1AM_ControlledAssetLocal,_pos,_warheadType,_rounds,_distance,_missionType,_angle,_sender,_timeStamp,_prePlotted,_sheaf,_fuse,_sheafSize,_posDisplay,_airburstHeight,_plotNr,_GPSZ,_posGPS,_sheafDir,_sheafDist,_TRPX,_TRPY,_remarks,_fireMissionNr];
 
 T1AM_FireMissionCurrent call T1AM_Fnc_ProcessFireMission;
 
 T1AM_PrePlotted = false;
 
+T1AM_LastAdjustCheckbox = 0;
 
 // Only allow the player to open the arty menu after at least 5 seconds have expired.
 // It's a workaround for ammo selection resetting after transmitting, caused by the arty unit getting new mags.

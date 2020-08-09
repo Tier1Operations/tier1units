@@ -16,7 +16,7 @@ onMapSingleClick "
 	
 	[] spawn {
 		sleep 0.3;
-		T1AM_LastDialog = 'Control';
+		T1AM_LastDialog = 'CONTROL';
 		[0, [false], 0] spawn T1AM_Fnc_LoadingScreen;
 	};
 	

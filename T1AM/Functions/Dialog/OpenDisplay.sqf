@@ -57,10 +57,10 @@ if (!T1AM_AuthorizeEveryone and !_authorized) exitWith {
 
 private _haveRadio = call T1AM_Fnc_HasRadio;
 if (_haveRadio) then {
-	switch true do {
-		case (T1AM_LastDialog == "Assets") : {_params spawn T1AM_Fnc_Assets};
-		case (T1AM_LastDialog == "Aimpoint") : {_params spawn T1AM_Fnc_Aimpoint};
-		case (T1AM_LastDialog == "Control") : {_params spawn T1AM_Fnc_Control};
+	switch (T1AM_LastDialog) do {
+		case ("ASSETS") : {_params spawn T1AM_Fnc_Assets};
+		case ("AIMPOINT") : {_params spawn T1AM_Fnc_Aimpoint};
+		case ("CONTROL") : {_params spawn T1AM_Fnc_Control};
 	};
 	
 } else {

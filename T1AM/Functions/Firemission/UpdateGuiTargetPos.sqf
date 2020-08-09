@@ -9,7 +9,7 @@ private _nr = _group getVariable ["T1AM_missionNr", 0];
 private _spotter = _group getVariable ["T1AM_controlledBy", nil];
 
 if (isNil "_spotter") exitWith {
-	//DIAG_LOG format["SFM: %1 - UPDATE TARGET POS - ABORT1 - CHECK1: %2", _tube, _spotter];
+	DIAG_LOG format["SFM: %1 - UPDATE TARGET POS - ABORT1 - CHECK1: %2", _tube, _spotter];
 };
 
 while {alive _proj} do {
@@ -20,7 +20,7 @@ while {alive _proj} do {
 
 private _spotter2 = _group getVariable ["T1AM_controlledBy", nil];
 if (isNil "_spotter" or {isNil "_spotter2" or {_spotter != _spotter2}}) exitWith {
-	//DIAG_LOG format["SFM: %1 - UPDATE TARGET POS - ABORT2 - CHECK1: %2 - CHECK2: %3", _tube, isNil "_spotter", isNil "_spotter2"];
+	DIAG_LOG format["SFM: %1 - UPDATE TARGET POS - ABORT2 - CHECK1: %2 - CHECK2: %3", _tube, isNil "_spotter", isNil "_spotter2"];
 };
 
 if (!_abort and {_nr == (_group getVariable ["T1AM_missionNr", -1])} and {getPosASL _tube vectorDistance _chosenTargetPos < 1500}) then {
@@ -31,4 +31,4 @@ if (!_abort and {_nr == (_group getVariable ["T1AM_missionNr", -1])} and {getPos
 	_owner publicVariableClient "T1AM_Ydisplay";
 };
 
-//DIAG_LOG format["SFM: %1 - UPDATE TARGET POS - END - POS: %2 - SPOTTER: %3", _tube, _pos, _spotter2];
+DIAG_LOG format["SFM: %1 - UPDATE TARGET POS - END - POS: %2 - SPOTTER: %3", _tube, _pos, _spotter2];

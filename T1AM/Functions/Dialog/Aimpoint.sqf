@@ -2,7 +2,7 @@
 
 disableSerialization;
 
-T1AM_LastDialog = "Aimpoint";
+T1AM_LastDialog = "AIMPOINT";
 (findDisplay 47100) closeDisplay 0;
 (findDisplay 47200) closeDisplay 0;
 (findDisplay 47300) closeDisplay 0;

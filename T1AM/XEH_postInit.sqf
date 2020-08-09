@@ -10,29 +10,24 @@ if (isNil "T1AM_Debug_Mode") then {T1AM_Debug_Mode = false};
 if (isNil "T1AM_DEBUG_DisableRandomSpread") then {T1AM_DEBUG_DisableRandomSpread = false};
 if (isNil "T1AM_DEBUG_DisableInitialMiss") then {T1AM_DEBUG_DisableInitialMiss = false};
 
+// Assign button.
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 ["Tier 1 Artillery", "Show Dialog", ["Show Computer", "Opens the artillery computer."], {[0, [], 0] spawn T1AM_Fnc_LoadingScreen}, "", [DIK_UP, [false, false, false]]] call cba_fnc_addKeybind;
-
-T1AM_Pos = [0,0];
-T1AM_X = 0;
-T1AM_Y = 0;
-T1AM_AdjustX = 0;
-T1AM_AdjustY = 0;
-T1AM_HaveAimpoint = false;
-T1AM_Xdisplay = 0;	// The X and Y target coordinates displayed to the player. May not be accurate, on purpose.
-T1AM_Ydisplay = 0;	// The X and Y target coordinates displayed to the player. May not be accurate, on purpose.
-T1AM_Elevation = 0; // ASL elevation.
-
-// Parent classes that show a unit inherits from an artillery piece
-T1AM_ArtyParents = ["StaticMortar","StaticCannon","MBT_01_mlrs_base_F","MBT_01_arty_base_F","B_MBT_01_mlrs_base_F","B_MBT_01_arty_base_F","O_MBT_02_arty_base_F","O_MBT_02_arty_F","I_MBT_01_arty_F","I_MBT_01_mlrs_F","rhs_2s3_tv","rhs_bm21_msv_01"];
 
 // Items that count as a radio.
 T1AM_RadioTypes = ["ItemRadio"];
 
+// Init vars.
+T1AM_X = 0;			// Actual X pos where the shots will go.
+T1AM_Y = 0;			// Actual Y pos where the shots will go.
+T1AM_Xdisplay = 0;	// The X target coordinates displayed to the player. May not be accurate, on purpose.
+T1AM_Ydisplay = 0;	// The Y target coordinates displayed to the player. May not be accurate, on purpose.
+T1AM_Elevation = 0; // ASL elevation.
+T1AM_HaveAimpoint = false;	// Used to decide if player has already picked a target pos when starting a new mission.
 T1AM_SelectedAsset = grpNull;
-T1AM_WarheadTypes = ["HE","Flare","Smoke","Guided","Cluster","Laser.G","Mine","AT mine","Rocket","WP","Chemical","Nuclear"];
-T1AM_WarheadType = "";
-T1AM_Dispersion = 0;
+
+// Vars used to remember what the player had selected in the arty computer,
+// so that the same options can automatically be selected when closing and re-opening the arty computer.
 T1AM_LastMission = "SPOT";
 T1AM_LastAngle = "HIGH";
 T1AM_LastRounds = 1;
@@ -50,6 +45,8 @@ T1AM_LastAdjustImpactX = 0;
 T1AM_LastAdjustImpactY = 0;
 T1AM_LastAdjustImpactRefX = 0;
 T1AM_LastAdjustImpactRefY = 0;
+T1AM_LastTRPX = 0;
+T1AM_LastTRPY = 0;
 T1AM_LastGPSX = -999999;
 T1AM_LastGPSY = -999999;
 T1AM_LastGPSZ_AGL = 0;
@@ -58,9 +55,11 @@ T1AM_LastAdjustX = 0;
 T1AM_LastAdjustY = 0;
 T1AM_LastAimpointX = 0;
 T1AM_LastAimpointY = 0;
+T1AM_LastRemarks = "";
 
 
-// Units that will be added to the arty computer, even though they normally wouldn't be added. Used for special units.
+// Units that will be added to the arty computer, even though they normally wouldn't be added because of incompatibility.
+// Used for special units that have been given custom code for support.
 if (isNil "T1AM_ApproveVehiclesOverride") then {
 	T1AM_ApproveVehiclesOverride = ["B_Ship_MRLS_01_F"];
 };
@@ -125,8 +124,8 @@ if (isNil "T1AM_ControlledAssets") then {T1AM_ControlledAssets = []};
 // All busy assets.
 if (isNil "T1AM_AssetsBusy") then {T1AM_AssetsBusy = []};
 
-// Which dialog should be opened by default? ("Assets","Aimpoint","Control")
-T1AM_LastDialog = "Assets";
+// Which dialog should be opened by default? ("ASSETS","AIMPOINT","CONTROL")
+T1AM_LastDialog = "ASSETS";
 
 // Which tube of the selected asset is being used.
 T1AM_SelectedTube = objNull;

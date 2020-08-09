@@ -288,7 +288,7 @@ class T1AM_ButtonCloseComputer: T1AM_RscButtonMenu
 	onButtonClick = "[] spawn {sleep 0.3; [0] call T1AM_Fnc_CloseDisplays}";
 };
 
-class T1AM_ButtonGoToAssets: T1AM_ButtonCloseComputer
+class T1AM_ButtonStart: T1AM_ButtonCloseComputer
 {
 	x = 0.75;
 	y = 1.095;
@@ -298,7 +298,7 @@ class T1AM_ButtonGoToAssets: T1AM_ButtonCloseComputer
 	tooltipColorText[] = {1,1,1,1};
 	tooltipColorBox[] = {1,1,1,1};
 	tooltipColorShade[] = {0,0,0,0.65};
-	onButtonClick = "T1AM_LastDialog = ""Assets""; [0, [], 0] spawn T1AM_Fnc_LoadingScreen";
+	onButtonClick = "call T1AM_Fnc_ButtonStartEvent";
 };
 
 class T1AM_ButtonEscapeMenu: T1AM_ButtonCloseComputer
@@ -341,7 +341,7 @@ class T1AM_DialogMain
 	{
 		class T1AM_ButtonCloseComputer1: T1AM_ButtonCloseComputer{};
 		class T1AM_ButtonEscapeMenuDummy1: T1AM_ButtonEscapeMenuDummy{};
-		class T1AM_ButtonGoToAssets1: T1AM_ButtonGoToAssets{};
+		class T1AM_ButtonStart1: T1AM_ButtonStart{};
 	};
 };
 
@@ -382,9 +382,9 @@ class T1AM_DialogAssets
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL;
 			y = T1AM_ROW;
-			w = T1AM_BUTTON_W  + (T1AM_COLINC * 2);
+			w = (T1AM_BUTTON_W * 0.6);
 			h = T1AM_BUTTON_H;
-			tooltip = "List of artillery assets that can be controlled";
+			tooltip = "List of artillery assets that can be controlled.";
 		};
 		
 		class T1AM_TextMissions: T1AM_RscText
@@ -394,9 +394,9 @@ class T1AM_DialogAssets
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL;
 			y = T1AM_ROW + (T1AM_ROWINC * 8);
-			w = T1AM_BUTTON_W  + (T1AM_COLINC * 2);
+			w = (T1AM_BUTTON_W * 1.9);
 			h = T1AM_BUTTON_H;
-			tooltip = "A list of previous Fire For Effect missions and plotted missions";
+			tooltip = "A list of previous Fire For Effect missions and plotted missions.\nYou can load these missions.\nA loaded mission is executed faster than a new mission.\nThe following info is shown for each mission:\n- Time\n- Person who called in the mission\n- Mission type and number\n- Coordinates of aimpoint\n- Ammo type and number\n- Fuze\n- Angle\n- Sheaf\n- Remarks";
 		};
 		
 		
@@ -430,7 +430,7 @@ class T1AM_DialogAssets
 			x = T1AM_COL + (T1AM_COLINC * 0);
 			y = T1AM_ROW + (T1AM_ROWINC * 7);
 			onButtonClick = "[false] call T1AM_Fnc_ControlAsset";
-			tooltip = "Take control of the selected artillery unit";
+			tooltip = "Take control of the selected artillery unit.";
 		};
 		
 		class T1AM_ButtonReleaseAsset: T1AM_RscButtonMenu
@@ -440,7 +440,7 @@ class T1AM_DialogAssets
 			x = T1AM_COL + (T1AM_COLINC * 1);
 			y = T1AM_ROW + (T1AM_ROWINC * 7);
 			onButtonClick = "call T1AM_Fnc_ReleaseAsset";
-			tooltip = "Relinquish control of currently controlled artillery unit";
+			tooltip = "Relinquish control of currently controlled artillery unit.";
 		};
 		
 		class T1AM_ButtonControlMission: T1AM_RscButtonMenu
@@ -451,12 +451,12 @@ class T1AM_DialogAssets
 			y = T1AM_ROW + (T1AM_ROWINC * 14);
 			h = T1AM_BUTTON_H * 1.3;
 			onButtonClick = "[true] call T1AM_Fnc_ControlAsset";
-			tooltip = "Take control of artillery unit\nand load up a previously saved fire mission";
+			tooltip = "Take control of artillery unit\nand load up a previously saved fire mission.";
 		};
 		
 		class T1AM_ButtonCloseComputer1: T1AM_ButtonCloseComputer{};
 		class T1AM_ButtonEscapeMenuDummy1: T1AM_ButtonEscapeMenuDummy{};
-		class T1AM_ButtonGoToAssets1: T1AM_ButtonGoToAssets{};
+		class T1AM_ButtonStart1: T1AM_ButtonStart{};
 	};
 };
 
@@ -519,9 +519,9 @@ class T1AM_DialogControl
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 0);
 			y = T1AM_ROW + (T1AM_ROWINC * 1);
-			w = T1AM_BUTTON_W  + (T1AM_COLINC * 1);
+			w = (T1AM_BUTTON_W * 0.7);
 			h = T1AM_BUTTON_H;
-			tooltip = "Target position that the artillery unit is using to aim";
+			tooltip = "Coordinates that the artillery unit is using to aim.\nUsed for unguided (non-GPS) munition.\nThe artillery unit might not hit this exact position but somewhere nearby.";
 		};
 		
 		class T1AM_TextPosX: T1AM_RscText
@@ -533,7 +533,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 2);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
-			tooltip = "X coordinate of target position";
+			tooltip = "X coordinate of the aimpoint.";
 		};
 		
 		class T1AM_TextPosY: T1AM_RscText
@@ -545,19 +545,19 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 3);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
-			tooltip = "Y coordinate of target position";
+			tooltip = "Y coordinate of the aimpoint.";
 		};
 		
 		class T1AM_TextPosZ: T1AM_RscText
 		{
 			idc = -1;
-			text = "Z:";
+			text = "Z (ASL):";
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 0);
 			y = T1AM_ROW + (T1AM_ROWINC * 4);
-			w = (T1AM_BUTTON_W * 0.5);
+			w = (T1AM_BUTTON_W * 0.6);
 			h = T1AM_BUTTON_H;
-			tooltip = "Z coordinate of target position";
+			tooltip = "Z coordinate of the aimpoint, Above Sea Level.";
 		};
 		
 		class T1AM_TextDistance: T1AM_RscText
@@ -569,7 +569,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 5);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
-			tooltip = "Distance from artillery unit to target position";
+			tooltip = "Distance from artillery unit to target position.\nWith unguided munition, it's the distance to the aimpoint.\nWith GPS munition, it's the distance to the GPS target position.";
 		};
 		
 		class T1AM_TextCEP: T1AM_RscText
@@ -581,7 +581,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 6);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
-			tooltip = "50% of shots will land within this radius\n44% of shots will land at twice the radius\n6% will land at further distances";
+			tooltip = "The precision of the shots.\nThe CEP goes up when the distance to the target increases.\nThe CEP can be seen as a radius:\n- 50% of shots will land within this radius.\n- 44% of shots will land at twice the radius.\n- 6% will land at further distances.";
 		};
 		
 		class T1AM_TextGTL: T1AM_RscText
@@ -593,7 +593,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 7);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
-			tooltip = "Direction from which the shots will come\nUnadjusted shots tend to impact in a line along the Gun Target Line";
+			tooltip = "The direction the shots will take.\nIf you draw a line in this direction over the target area,\nyou'll get the Gun Target Line.\nUnadjusted shots tend to impact somewhere along this line.";
 		};
 		
 		class T1AM_TextAdjust: T1AM_RscText
@@ -605,7 +605,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 9.3);
 			w = (T1AM_BUTTON_W * 1.45);
 			h = T1AM_BUTTON_H;
-			tooltip = "Call for adjust fire mission\nUsed to guide the artillery on target";
+			tooltip = "Call for adjust fire mission.\nUse these options to guide the artillery on target.\nTwo adjust modes are available.\nTurn off if you don't wish to adjust.";
 		};
 		
 		class T1AM_TextAdjust2: T1AM_RscText
@@ -617,7 +617,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
 			w = (T1AM_BUTTON_W * 0.8);
 			h = T1AM_BUTTON_H;
-			tooltip = "Adjust the target position from\nthe point of view of the spotter";
+			tooltip = "Adjust fire from the point of view of the spotter.\nDefine how much the impact position should move right/left and forwards/backwards.";
 		};
 		
 		class T1AM_TextAdjustLeftRight: T1AM_RscText
@@ -629,7 +629,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 12.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "How much to adjust left/right\nPositive numbers for right and negative for left";
+			tooltip = "How many meters to adjust right/left.\nPositive numbers for right and negative for left.";
 		};
 		
 		class T1AM_TextAdjustAddDrop: T1AM_RscText
@@ -641,7 +641,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 13.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "How much to adjust up/down\nPositive numbers for up and negative for down";
+			tooltip = "How many meters to add/drop.\nPositive numbers for add and negative for drop.";
 		};
 		
 		class T1AM_TextAdjustSpotter: T1AM_RscText
@@ -653,7 +653,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
 			w = (T1AM_BUTTON_W * 1.25);
 			h = T1AM_BUTTON_H;
-			tooltip = "Coordinates of the spotter position";
+			tooltip = "Coordinates of the spotter position.\nThe adjustments will happen from the point of view of this position.";
 		};
 		
 		class T1AM_TextAdjustSpotterX: T1AM_RscText
@@ -665,7 +665,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 12.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "X coordinate of spotter position";
+			tooltip = "X coordinate of spotter position.";
 		};
 		
 		class T1AM_TextAdjustSpotterY: T1AM_RscText
@@ -677,7 +677,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 13.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "Y coordinate of spotter position";
+			tooltip = "Y coordinate of spotter position.";
 		};
 		
 		class T1AM_TextAdjustImpact: T1AM_RscText
@@ -689,7 +689,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
 			w = (T1AM_BUTTON_W * 1.1);
 			h = T1AM_BUTTON_H;
-			tooltip = "Adjust fire using the impact position";
+			tooltip = "Adjust fire using the impact position.\nInput the position where the round has impacted.";
 		};
 		
 		class T1AM_TextAdjustImpactX: T1AM_RscText
@@ -701,7 +701,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 12.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "X coordinate of impact position";
+			tooltip = "X coordinate of impact position.";
 		};
 		
 		class T1AM_TextAdjustImpactY: T1AM_RscText
@@ -713,7 +713,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 13.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "Y coordinate of impact position";
+			tooltip = "Y coordinate of impact position.";
 		};
 		
 		class T1AM_TextAdjustImpactRef: T1AM_RscText
@@ -723,9 +723,9 @@ class T1AM_DialogControl
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 2.25);
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
-			w = (T1AM_BUTTON_W * 1.1);
+			w = (T1AM_BUTTON_W * 1.15);
 			h = T1AM_BUTTON_H;
-			tooltip = "Target position coordinates";
+			tooltip = "Target position coordinates.\nInput the position where you're trying to hit.";
 		};
 		
 		class T1AM_TextAdjustImpactRefX: T1AM_RscText
@@ -737,7 +737,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 12.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "X coordinate of target position";
+			tooltip = "X coordinate of target position.";
 		};
 		
 		class T1AM_TextAdjustImpactRefY: T1AM_RscText
@@ -749,7 +749,43 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 13.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "Y coordinate of target position";
+			tooltip = "Y coordinate of target position.";
+		};
+		
+		class T1AM_TextTRPPos: T1AM_RscText
+		{
+			idc = 47260;
+			text = "TRP POSITION";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 2.05);
+			y = T1AM_ROW + (T1AM_ROWINC * 7);
+			w = (T1AM_BUTTON_W * 1);
+			h = T1AM_BUTTON_H;
+			tooltip = "Target Reference Point marker position.\nWhen TRP X and TRP Y are both zero, the TRP marker is created on the Aimpoint.\nThis is done because the artillery unit doesn't know where the rounds have landed.\nYou can manually input the position where you want the marker to be created.\nIt's recommended to input the position where the shots have landed.\nThe marker that is shown on the map is a visual aid for you.\nThe artillery unit might place the actual TRP on a slightly different location.";
+		};
+		
+		class T1AM_TextTRPPosX: T1AM_RscText
+		{
+			idc = 47261;
+			text = "X:";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 2);
+			y = T1AM_ROW + (T1AM_ROWINC * 8);
+			w = (T1AM_BUTTON_W * 1);
+			h = T1AM_BUTTON_H;
+			tooltip = "X coordinate of TRP position.";
+		};
+		
+		class T1AM_TextTRPPosY: T1AM_RscText
+		{
+			idc = 47262;
+			text = "Y:";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 2);
+			y = T1AM_ROW + (T1AM_ROWINC * 9);
+			w = (T1AM_BUTTON_W * 1);
+			h = T1AM_BUTTON_H;
+			tooltip = "Y coordinate of TRP position.";
 		};
 		
 		class T1AM_TextPosGPS: T1AM_RscText
@@ -761,7 +797,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 9.3);
 			w = (T1AM_BUTTON_W * 1.8);
 			h = T1AM_BUTTON_H;
-			tooltip = "Target coordinates for GPS guided munitions";
+			tooltip = "Coordinates for GPS guided munitions.\nGPS guided munitions will hit this position very accurately.";
 		};
 		
 		class T1AM_TextPosXGPS: T1AM_RscText
@@ -773,7 +809,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 10.2);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
-			tooltip = "X coordinate of GPS target position";
+			tooltip = "X coordinate of GPS position.";
 		};
 		
 		class T1AM_TextPosYGPS: T1AM_RscText
@@ -785,7 +821,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
-			tooltip = "Y coordinate of GPS target position";
+			tooltip = "Y coordinate of GPS position.";
 		};
 		
 		class T1AM_TextAdjustElevGPS: T1AM_RscText
@@ -797,19 +833,31 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 12.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "Height above ground level for GPS target position";
+			tooltip = "Height for GPS position, Above Ground Level.";
+		};
+		
+		class T1AM_TextRemarks: T1AM_RscText
+		{
+			idc = 47266;
+			text = "REMARKS:";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 3.7);
+			y = T1AM_ROW + (T1AM_ROWINC * 9);
+			w = (T1AM_BUTTON_W * 1);
+			h = T1AM_BUTTON_H;
+			tooltip = "A brief remark (optional).\nIt will be shown on the mission selection screen.\nIf you intend to load the mission at a later time,\nyou can use this to more easily identify the mission in the missions list.\nA maximum of 15 characters can be used.";
 		};
 		
 		class T1AM_TextRounds: T1AM_RscText
 		{
 			idc = 47252;
-			text = "RNDS:";
+			text = "ROUNDS:";
 			sizeEx = T1AM_TEXTSIZE;
-			x = T1AM_COL + (T1AM_COLINC * 3.9);
-			y = T1AM_ROW + (T1AM_ROWINC * 8);
-			w = T1AM_BUTTON_W / 2;
+			x = T1AM_COL + (T1AM_COLINC * 3.7);
+			y = T1AM_ROW + (T1AM_ROWINC * 7);
+			w = (T1AM_BUTTON_W * 0.6);
 			h = T1AM_BUTTON_H;
-			tooltip = "How many salvoes to fire\nEach unit will fire this amount of rounds";
+			tooltip = "How many salvoes to fire.\nEach unit will fire this amount of rounds.";
 		};
 		
 		class T1AM_TextMissionParameters: T1AM_RscText
@@ -819,11 +867,10 @@ class T1AM_DialogControl
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 5);
 			y = T1AM_ROW + (T1AM_ROWINC * 1.1);
-			//w = (T1AM_BUTTON_W * 0.6);
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			style = 2;
-			tooltip = "Spotting mission will fire a single round.\nFire For Effect will fire in salvoes\nPlotting will save a mission - it can be loaded from the start screen and executed more quickly";
+			tooltip = "Spotting mission will fire a single round.\nFire For Effect will fire in salvoes.\nPlotting will save a mission that can be loaded from the start screen.\nAdjusting fire before plotting will save the adjustments.\nPlotting will also create a Target Reference Point.\nA TRP will allow for quicker reaction times for all nearby missions.";
 		};
 		
 		class T1AM_TextAngleParameters: T1AM_RscText
@@ -833,25 +880,23 @@ class T1AM_DialogControl
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 6);
 			y = T1AM_ROW + (T1AM_ROWINC * 1.1);
-			//w = (T1AM_BUTTON_W * 0.5);
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			style = 2;
-			tooltip = "Angle at which the artillery unit will fire";
+			tooltip = "Angle at which the artillery unit will fire.\nHigh will avoid obstacles but has a long flight time and is less accurate.\nLow has a low flight time and is more accurate but might hit an obstacle.";
 		};
 		
 		class T1AM_TextAirburstParameters: T1AM_RscText
 		{
 			idc = -1;
-			text = "FUSE";
+			text = "FUZE";
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 5);
 			y = T1AM_ROW + (T1AM_ROWINC * 5.1);
-			//w = (T1AM_BUTTON_W * 0.4);
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			style = 2;
-			tooltip = "Impact will detonate on impact\nAirburst will detonate in the air moments before impact";
+			tooltip = "Changes how the round detonates.\nImpact will detonate on impact.\nImpact is useful against hard targets, like vehicles and buildings.\nAirburst will detonate in the air, moments before impact.\nAirburst is useful against infantry.";
 		};
 		
 		class T1AM_TextHeightParameters: T1AM_RscText
@@ -861,11 +906,10 @@ class T1AM_DialogControl
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 6);
 			y = T1AM_ROW + (T1AM_ROWINC * 5.1);
-			//w = (T1AM_BUTTON_W * 0.6);
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			style = 2;
-			tooltip = "Low: 0.9\nMedium: 9\nHigh: 18";
+			tooltip = "Height of airburst.\nLow: 0.9\nMedium: 9\nHigh: 18";
 		};
 		
 		class T1AM_TextSheafParameters: T1AM_RscText
@@ -877,7 +921,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 10.3);
 			w = (T1AM_BUTTON_W * 1.4);
 			h = T1AM_BUTTON_H;
-			tooltip = "Spread of shots on the target area";
+			tooltip = "Spread of shots on the target area.\nIt gives you control over where the rounds will land.";
 		};
 		
 		class T1AM_TextSheafSizeX: T1AM_RscText
@@ -890,7 +934,7 @@ class T1AM_DialogControl
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
 			style = 1;
-			tooltip = "The width radius of the sheaf";
+			tooltip = "The width radius of the sheaf.";
 		};
 		
 		class T1AM_TextSheafSizeY: T1AM_RscText
@@ -903,7 +947,7 @@ class T1AM_DialogControl
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
 			style = 1;
-			tooltip = "The length radius of the sheaf";
+			tooltip = "The length radius of the sheaf.";
 		};
 		
 		class T1AM_TextSheafDir: T1AM_RscText
@@ -916,7 +960,7 @@ class T1AM_DialogControl
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
 			style = 1;
-			tooltip = "The starting direction of the sheaf\nfrom which the X, Y and DISTANCE are calculated";
+			tooltip = "The starting direction of the sheaf from\nwhich the X, Y and DISTANCE are calculated.";
 		};
 		
 		class T1AM_TextSheafDist: T1AM_RscText
@@ -929,7 +973,7 @@ class T1AM_DialogControl
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
 			style = 1;
-			tooltip = "The length of the sheaf";
+			tooltip = "The length of the sheaf.";
 		};
 		
 		
@@ -941,7 +985,7 @@ class T1AM_DialogControl
 			action = "[""PREVIOUS""] call T1AM_Fnc_ChangeTube";
 			x = T1AM_COL + (T1AM_COLINC * 3);
 			y = T1AM_ROW + (T1AM_ROWINC * 0);
-			w = T1AM_BUTTON_W / 2;
+			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
 			colorDisabled[] = {1,1,1,0.25};
 			tooltip = "Previous unit";
@@ -954,7 +998,7 @@ class T1AM_DialogControl
 			action = "[""NEXT""] call T1AM_Fnc_ChangeTube";
 			x = T1AM_COL + (T1AM_COLINC * 3.9);
 			y = T1AM_ROW + (T1AM_ROWINC * 0);
-			w = T1AM_BUTTON_W / 2;
+			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
 			colorDisabled[] = {1,1,1,0.25};
 			tooltip = "Next unit";
@@ -1088,7 +1132,7 @@ class T1AM_DialogControl
 			w = (T1AM_BUTTON_W * 0.21);
 			h = T1AM_BUTTON_H * 0.69;
 			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustSpotterMapclickEvent}";
-			tooltip = "Use map click to input spotter position coordinates";
+			tooltip = "Use map click to input spotter position coordinates.";
 		};
 		
 		class T1AM_EditAdjustImpactPosX: T1AM_RscEdit
@@ -1122,7 +1166,7 @@ class T1AM_DialogControl
 			w = (T1AM_BUTTON_W * 0.21);
 			h = T1AM_BUTTON_H * 0.69;
 			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustImpactMapclickEvent}";
-			tooltip = "Use map click to input impact position coordinates";
+			tooltip = "Use map click to input impact position coordinates.";
 		};
 		
 		class T1AM_EditAdjustImpactRefPosX: T1AM_RscEdit
@@ -1156,7 +1200,41 @@ class T1AM_DialogControl
 			w = (T1AM_BUTTON_W * 0.21);
 			h = T1AM_BUTTON_H * 0.69;
 			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustImpactRefMapclickEvent}";
-			tooltip = "Use map click to input target position coordinates";
+			tooltip = "Use map click to input target position coordinates.";
+		};
+		
+		class T1AM_EditTRPPosX: T1AM_RscEdit
+		{
+			idc = 47263;
+			x = T1AM_COL + (T1AM_COLINC * 2.4);
+			y = T1AM_ROW + (T1AM_ROWINC * 8);
+			w = T1AM_BUTTON_W;
+			h = T1AM_BUTTON_H;
+			text = "0";
+			onKeyUp = "_this pushback 0; _this call T1AM_Fnc_EditTRPPosEvent";
+		};
+		
+		class T1AM_EditTRPPosY: T1AM_RscEdit
+		{
+			idc = 47264;
+			x = T1AM_COL + (T1AM_COLINC * 2.4);
+			y = T1AM_ROW + (T1AM_ROWINC * 9);
+			w = T1AM_BUTTON_W;
+			h = T1AM_BUTTON_H;
+			text = "0";
+			onKeyUp = "_this pushback 1; _this call T1AM_Fnc_EditTRPPosEvent";
+		};
+		
+		class T1AM_ButtonTRPMapclick: T1AM_RscButtonMenu
+		{
+			idc = 47265;
+			x = T1AM_COL + (T1AM_COLINC * 3.4);
+			y = T1AM_ROW + (T1AM_ROWINC * 8.6);
+			text = "M";
+			w = (T1AM_BUTTON_W * 0.21);
+			h = T1AM_BUTTON_H * 0.69;
+			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonTRPMapclickEvent}";
+			tooltip = "Use map click to input TRP coordinates.";
 		};
 		
 		class T1AM_EditAdjustXGPS: T1AM_RscEdit
@@ -1199,15 +1277,26 @@ class T1AM_DialogControl
 			x = T1AM_COL + (T1AM_COLINC * 2);
 			y = T1AM_ROW + (T1AM_ROWINC * 1);
 			w = T1AM_BUTTON_W + (T1AM_COLINC * 2);
-			h = (T1AM_BUTTON_H * 8);
+			h = (T1AM_BUTTON_H * 7);
 			onLBSelChanged = "_this call T1AM_Fnc_ListWarheadTypeEvent";
+		};
+		
+		class T1AM_EditRemarks: T1AM_RscEdit
+		{
+			idc = 47267;
+			x = T1AM_COL + (T1AM_COLINC * 4.5);
+			y = T1AM_ROW + (T1AM_ROWINC * 9);
+			w = (T1AM_BUTTON_W * 1.2);
+			h = T1AM_BUTTON_H;
+			text = "";
+			onKeyUp = "_this call T1AM_Fnc_EditRemarksEvent";
 		};
 		
 		class T1AM_EditRounds: T1AM_RscEdit
 		{
 			idc = 47207;
 			x = T1AM_COL + (T1AM_COLINC * 4.4);
-			y = T1AM_ROW + (T1AM_ROWINC * 8);
+			y = T1AM_ROW + (T1AM_ROWINC * 7);
 			w = (T1AM_BUTTON_W / 2);
 			h = T1AM_BUTTON_H;
 			text = "1";
@@ -1242,9 +1331,9 @@ class T1AM_DialogControl
 			text = "TRANSMIT";
 			x = T1AM_COL + (T1AM_COLINC * 0);
 			y = T1AM_ROW + (T1AM_ROWINC * 15);
-			w = T1AM_BUTTON_W * 1.5;
+			w = (T1AM_BUTTON_W * 1.5);
 			onButtonClick = "call T1AM_Fnc_Transmit";
-			tooltip = "Call in fire mission";
+			tooltip = "Call in fire mission.";
 		};
 		
 		class T1AM_ButtonCheckFire: T1AM_RscButtonMenu
@@ -1253,9 +1342,9 @@ class T1AM_DialogControl
 			text = "CHECK FIRE";
 			x = T1AM_COL + (T1AM_COLINC * 1.83);
 			y = T1AM_ROW + (T1AM_ROWINC * 15);
-			w = T1AM_BUTTON_W * 1.5;
+			w = (T1AM_BUTTON_W * 1.5);
 			onButtonClick = "call T1AM_Fnc_CheckFire_Player;";
-			tooltip = "Tell the artillery unit to cease fire immediately";
+			tooltip = "Tell the artillery unit to cease fire immediately.";
 		};
 		
 		class T1AM_ListSheaf: T1AM_RscListBox 
@@ -1274,7 +1363,7 @@ class T1AM_DialogControl
 			idc = 47213;
 			x = T1AM_COL + (T1AM_COLINC * 6);
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
-			w = (T1AM_BUTTON_W);
+			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "100";
 			onKeyUp = "_this pushback 3; _this call T1AM_Fnc_EditNumberEvent";
@@ -1285,7 +1374,7 @@ class T1AM_DialogControl
 			idc = 47214;
 			x = T1AM_COL + (T1AM_COLINC * 6);
 			y = T1AM_ROW + (T1AM_ROWINC * 12.2);
-			w = (T1AM_BUTTON_W);
+			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "100";
 			onKeyUp = "_this pushback 4; _this call T1AM_Fnc_EditNumberEvent";
@@ -1296,7 +1385,7 @@ class T1AM_DialogControl
 			idc = 47224;
 			x = T1AM_COL + (T1AM_COLINC * 6);
 			y = T1AM_ROW + (T1AM_ROWINC * 13.2);
-			w = (T1AM_BUTTON_W);
+			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "360";
 			onKeyUp = "_this pushback 5; _this call T1AM_Fnc_EditNumberEvent";
@@ -1307,7 +1396,7 @@ class T1AM_DialogControl
 			idc = 47225;
 			x = T1AM_COL + (T1AM_COLINC * 6);
 			y = T1AM_ROW + (T1AM_ROWINC * 12.2);
-			w = (T1AM_BUTTON_W);
+			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "100";
 			onKeyUp = "_this pushback 6; _this call T1AM_Fnc_EditNumberEvent";
@@ -1342,8 +1431,8 @@ class T1AM_DialogControl
 			x = T1AM_COL + (T1AM_COLINC * 5.5);
 			y = T1AM_ROW + (T1AM_ROWINC * 15);
 			w = T1AM_BUTTON_W * 1.5;
-			onButtonClick = "T1AM_LastDialog = ""Assets""; [0, [], 0] spawn T1AM_Fnc_LoadingScreen";
-			tooltip = "Go back to the start screen, asset selection,\nwithout relinquishing control of the artillery unit";
+			onButtonClick = "T1AM_LastDialog = ""ASSETS""; [0, [], 0] spawn T1AM_Fnc_LoadingScreen";
+			tooltip = "Go back to the start screen, asset selection,\nwithout relinquishing control of the artillery unit.";
 		};
 		
 		class T1AM_ButtonControlEndMission: T1AM_RscButtonMenu
@@ -1354,12 +1443,12 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 15);
 			w = T1AM_BUTTON_W * 1.5;
 			onButtonClick = "[true] call T1AM_Fnc_EndMission";
-			tooltip = "End the mission and relinquish control of the artillery unit";
+			tooltip = "End the mission and relinquish control of the artillery unit.";
 		};
 		
 		class T1AM_ButtonCloseComputer1: T1AM_ButtonCloseComputer{};
 		class T1AM_ButtonEscapeMenuDummy1: T1AM_ButtonEscapeMenuDummy{};
-		class T1AM_ButtonGoToAssets1: T1AM_ButtonGoToAssets{};
+		class T1AM_ButtonStart1: T1AM_ButtonStart{};
 	};
 };
 
@@ -1407,7 +1496,7 @@ class T1AM_DialogLoading
 		
 		class T1AM_ButtonCloseComputer1: T1AM_ButtonCloseComputer{};
 		class T1AM_ButtonEscapeMenuDummy1: T1AM_ButtonEscapeMenuDummy{};
-		class T1AM_ButtonGoToAssets1: T1AM_ButtonGoToAssets{};
+		class T1AM_ButtonStart1: T1AM_ButtonStart{};
 	};
 };
 
@@ -1448,12 +1537,12 @@ class T1AM_DialogAimpoint
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 2.8);
 			y = T1AM_ROW + (T1AM_ROWINC * 3);
-			w = T1AM_BUTTON_W  + (T1AM_COLINC * 6);
+			w = (T1AM_BUTTON_W * 1.95);
 			h = T1AM_BUTTON_H;
-			tooltip = "Coordinates of the target position";
+			tooltip = "Coordinates of the target position.";
 		};
 		
-		class T1AM_TextPosXaimpoint: T1AM_RscText
+		class T1AM_TextPosAimpointX: T1AM_RscText
 		{
 			idc = -1;
 			text = "X:";
@@ -1462,10 +1551,10 @@ class T1AM_DialogAimpoint
 			y = T1AM_ROW + (T1AM_ROWINC * 4);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
-			tooltip = "X coordinate of target position";
+			tooltip = "X coordinate of target position.";
 		};
 		
-		class T1AM_TextPosYaimpoint: T1AM_RscText
+		class T1AM_TextPosAimpointY: T1AM_RscText
 		{
 			idc = -1;
 			text = "Y:";
@@ -1474,12 +1563,12 @@ class T1AM_DialogAimpoint
 			y = T1AM_ROW + (T1AM_ROWINC * 5);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
-			tooltip = "Y coordinate of target position";
+			tooltip = "Y coordinate of target position.";
 		};
 		
 		
 		
-		class T1AM_EditXaimpoint: T1AM_RscEdit
+		class T1AM_EditAimpointX: T1AM_RscEdit
 		{
 			idc = 47402;
 			x = T1AM_COL + (T1AM_COLINC * 3);
@@ -1487,10 +1576,10 @@ class T1AM_DialogAimpoint
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "";
-			onKeyUp = "_this pushback 7; _this call T1AM_Fnc_EditNumberEvent";
+			onKeyUp = "_this pushback 0; _this call T1AM_Fnc_EditAimpointEvent";
 		};
 		
-		class T1AM_EditYaimpoint: T1AM_RscEdit
+		class T1AM_EditAimpointY: T1AM_RscEdit
 		{
 			idc = 47403;
 			x = T1AM_COL + (T1AM_COLINC * 3);
@@ -1498,7 +1587,7 @@ class T1AM_DialogAimpoint
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "";
-			onKeyUp = "_this pushback 8; _this call T1AM_Fnc_EditNumberEvent";
+			onKeyUp = "_this pushback 1; _this call T1AM_Fnc_EditAimpointEvent";
 		};
 		
 		class T1AM_ButtonInputAimpoint: T1AM_RscButtonMenu
@@ -1508,7 +1597,7 @@ class T1AM_DialogAimpoint
 			x = T1AM_COL + (T1AM_COLINC * 3);
 			y = T1AM_ROW + (T1AM_ROWINC * 6);
 			onButtonClick = "call T1AM_Fnc_InputAimpoint";
-			tooltip = "Apply coordinates";
+			tooltip = "Apply coordinates.";
 		};
 		
 		class T1AM_ButtonInputAimpointMapclick: T1AM_RscButtonMenu
@@ -1520,7 +1609,7 @@ class T1AM_DialogAimpoint
 			w = (T1AM_BUTTON_W * 0.21);
 			h = T1AM_BUTTON_H * 0.69;
 			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonInputAimpointMapclickEvent}";
-			tooltip = "Use map click to input target position coordinates";
+			tooltip = "Use map click to input target position coordinates.";
 		};
 		
 		class T1AM_ButtonAimpointAssets: T1AM_RscButtonMenu
@@ -1529,8 +1618,8 @@ class T1AM_DialogAimpoint
 			text = "ASSETS";
 			x = T1AM_COL + (T1AM_COLINC * 3);
 			y = T1AM_ROW + (T1AM_ROWINC * 8);
-			onButtonClick = "T1AM_LastDialog = ""Assets""; [0, [], 0] spawn T1AM_Fnc_LoadingScreen";
-			tooltip = "Go back to the start screen, asset selection,\nwithout relinquishing control of the artillery unit";
+			onButtonClick = "T1AM_LastDialog = ""ASSETS""; [0, [], 0] spawn T1AM_Fnc_LoadingScreen";
+			tooltip = "Go back to the start screen, asset selection,\nwithout relinquishing control of the artillery unit.";
 		};
 		
 		class T1AM_ButtonAimpointHelp: T1AM_RscButtonMenu
@@ -1539,14 +1628,14 @@ class T1AM_DialogAimpoint
 			text = "HELP";
 			x = T1AM_COL + (T1AM_COLINC * 4.4);
 			y = T1AM_ROW + (T1AM_ROWINC * 8);
-			w = T1AM_BUTTON_W / 2;
+			w = (T1AM_BUTTON_W * 0.5);
 			onButtonClick = "[2,"""", 15] spawn T1AM_Fnc_ShowMessage";
-			tooltip = "Learn more about the coordinates system";
+			tooltip = "Learn more about the coordinates system.";
 		};
 		
 		class T1AM_ButtonCloseComputer1: T1AM_ButtonCloseComputer{};
 		class T1AM_ButtonEscapeMenuDummy1: T1AM_ButtonEscapeMenuDummy{};
-		class T1AM_ButtonGoToAssets1: T1AM_ButtonGoToAssets{};
+		class T1AM_ButtonStart1: T1AM_ButtonStart{};
 	};
 };
 
@@ -1597,15 +1686,15 @@ class T1AM_DialogMessage
 			idc = 47502;
 			text = "";
 			sizeEx = T1AM_TEXTSIZE;
-			x = T1AM_COL + (T1AM_COLINC * 0);
+			x = T1AM_COL + (T1AM_COLINC * 1.75);
 			y = T1AM_ROW + (T1AM_ROWINC * 0) + 0.01;
-			w = T1AM_BUTTON_W  + (T1AM_COLINC * 6);
+			w = T1AM_BUTTON_W  + (T1AM_COLINC * 2.5);
 			h = T1AM_BUTTON_H + (T1AM_ROWINC * 15);
 			style = 16 + 2 + 512;
 		};
 		
 		class T1AM_ButtonCloseComputer1: T1AM_ButtonCloseComputer{};
 		class T1AM_ButtonEscapeMenu1: T1AM_ButtonEscapeMenu{};
-		class T1AM_ButtonGoToAssets1: T1AM_ButtonGoToAssets{};
+		class T1AM_ButtonStart1: T1AM_ButtonStart{};
 	};
 };

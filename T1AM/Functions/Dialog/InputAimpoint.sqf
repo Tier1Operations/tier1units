@@ -1,15 +1,14 @@
 disableSerialization;
 
-private _x = 0;
-private _y = 0;
-
 // Process coordinates received from the player.
 private _dialog = findDisplay 47400;
+
+
 
 // X coordinate
 private _str = ctrlText (_dialog displayCtrl 47402);
 _str = [_str] call T1AM_Fnc_GridToPos;
-_x = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+private _x = [_str, 5, true] call T1AM_Fnc_ParseNumber;
 if (_x == -9999999) exitWith {
 	private _str = "INVALID INPUT:\nX COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
@@ -18,11 +17,18 @@ if (_x == -9999999) exitWith {
 // Y coordinate
 _str = ctrlText (_dialog displayCtrl 47403);
 _str = [_str] call T1AM_Fnc_GridToPos;
-_y = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+private _y = [_str, 5, true] call T1AM_Fnc_ParseNumber;
 if (_y == -9999999) exitWith {
 	private _str = "INVALID INPUT:\nY COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
+
+if (_x == 0 and _y == 0) exitWith {
+	private _str = "INVALID INPUT:\nAIMPOINT COORDINATES\n\nCANNOT BOTH BE ZERO";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
+
 
 _x = [_x] call T1AM_Fnc_FormatCoordinates;
 _y = [_y] call T1AM_Fnc_FormatCoordinates;
@@ -32,9 +38,9 @@ _y = _posReal select 1;
 
 T1AM_Elevation = ((AGLtoASL [_x,_y,0]) select 2) max 0;
 
-//DIAG_LOG format["AIMPOINT MANUAL -- _x: %1", _x];
-//DIAG_LOG format["AIMPOINT MANUAL -- _y: %1", _y];
-//DIAG_LOG format["AIMPOINT MANUAL -- T1AM_Elevation: %1", T1AM_Elevation];
+DIAG_LOG format["AIMPOINT MANUAL -- _x: %1", _x];
+DIAG_LOG format["AIMPOINT MANUAL -- _y: %1", _y];
+DIAG_LOG format["AIMPOINT MANUAL -- T1AM_Elevation: %1", T1AM_Elevation];
 
 T1AM_X = _x;
 T1AM_Y = _y;
@@ -44,12 +50,12 @@ T1AM_Ydisplay = T1AM_Y;
 
 T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", [T1AM_X, T1AM_Y, T1AM_Elevation]];
 
-// Add some initial error to the target pos to simulate natural errors
+// Add some initial error to the target pos to simulate natural aiming errors.
 private _pos = [T1AM_X,T1AM_Y,T1AM_Elevation];
 private _vehicle = vehicle leader T1AM_SelectedAsset;
 private _distance = (getPosASL _vehicle) vectorDistance _pos;
 
-//DIAG_LOG format["AIMPOINT MANUAL -- POS BEFORE RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
+DIAG_LOG format["AIMPOINT MANUAL -- POS BEFORE RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
 
 private _initialMiss = true;
 if (_distance <= 750) then {_initialMiss = false};
@@ -126,8 +132,15 @@ if (_initialMiss) then {
 	T1AM_X = _errorPos select 0;
 	T1AM_Y = _errorPos select 1;
 	
-	//DIAG_LOG format["AIMPOINT MANUAL -- POS AFTER RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
+	DIAG_LOG format["AIMPOINT MANUAL -- POS AFTER RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
 };
+
+
+// Increment fire mission number.
+private _fireMissionNr = T1AM_ControlledAssetLocal getVariable ["T1AM_FireMissionNr", 0]; 
+_fireMissionNr = _fireMissionNr + 1;
+T1AM_ControlledAssetLocal setVariable ["T1AM_FireMissionNr", _fireMissionNr, true];
+
 
 T1AM_HaveAimpoint = true;
 [false] call T1AM_Fnc_ControlAsset;

@@ -1,6 +1,3 @@
-// This allows the player to click on the map to choose the coordinates.
-// After the player clicks, it will run the next part of the script (InputAimpoint).
-
 if (!T1AM_AllowMapClick) exitWith {
 	private _str = "MAP CLICK OPTION IS DISABLED";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
@@ -14,12 +11,12 @@ onMapSingleClick "
 	
 	[_pos] spawn T1AM_Fnc_InputAimpointMapclickEffect;
 	
-	T1AM_LastAimpointX = _pos select 0;
-	T1AM_LastAimpointY = _pos select 1;
+	T1AM_LastTRPX = _pos select 0;
+	T1AM_LastTRPY = _pos select 1;
 	
 	[] spawn {
 		sleep 0.3;
-		T1AM_LastDialog = 'AIMPOINT';
+		T1AM_LastDialog = 'CONTROL';
 		[0, [false], 0] spawn T1AM_Fnc_LoadingScreen;
 	};
 	

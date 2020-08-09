@@ -1,12 +1,12 @@
 params ["_tube","_asset","_pos","_radius"];
 
-//DIAG_LOG format["CIRCLE SHEAF - RADIUS: %1", _radius];
+DIAG_LOG format["CIRCLE SHEAF - RADIUS: %1", _radius];
 
 _pos = ASLtoAGL _pos;
 private _elevation = _pos select 2;		// Remember the height above ground for airburst.
 _radius = random _radius;
 
-//DIAG_LOG format["CIRCLE SHEAF - FINAL RADIUS: %1", _radius];
+DIAG_LOG format["CIRCLE SHEAF - FINAL RADIUS: %1", _radius];
 
 // If asset is not null, it means we want to use the complex code.
 if (!isNull _asset) then {

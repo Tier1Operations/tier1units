@@ -85,6 +85,11 @@ class CfgFunctions
 			class ListMissionTypeEvent {file = "T1AM\Functions\Dialog\ControlEvents\ListMissionTypeEvent.sqf"};
 			class EditAdjustImpactRefPosEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAdjustImpactRefPosEvent.sqf"};
 			class ButtonAdjustImpactRefMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonAdjustImpactRefMapclickEvent.sqf"};
+			class EditAimpointEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAimpointEvent.sqf"};
+			class ButtonStartEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonStartEvent.sqf"};
+			class EditTRPPosEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditTRPPosEvent.sqf"};
+			class ButtonTRPMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonTRPMapclickEvent.sqf"};
+			class EditRemarksEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditRemarksEvent.sqf"};
 		};
 		class Misc
 		{
@@ -104,7 +109,6 @@ class CfgFunctions
 			class FormatCoordinates {file = "T1AM\Functions\Misc\FormatCoordinates.sqf"};
 			class TubeType {file = "T1AM\Functions\Misc\TubeType.sqf"};
 			class AmmoType {file = "T1AM\Functions\Misc\AmmoType.sqf"};
-			class GroupType {file = "T1AM\Functions\Misc\GroupType.sqf"};
 			class TrimGroupName {file = "T1AM\Functions\Misc\TrimGroupName.sqf"};
 			class VehicleName {file = "T1AM\Functions\Misc\VehicleName.sqf"};
 			class GroupVehicles {file = "T1AM\Functions\Misc\GroupVehicles.sqf"};
@@ -112,6 +116,7 @@ class CfgFunctions
 			class HasRadio {file = "T1AM\Functions\Misc\HasRadio.sqf"};
 			class GridToPos {file = "T1AM\Functions\Misc\GridToPos.sqf"};
 			class GetRandomSpread {file = "T1AM\Functions\Misc\GetRandomSpread.sqf"};
+			class ChangeLocality {file = "T1AM\Functions\Misc\ChangeLocality.sqf"};
 		};
 		class Sheafs
 		{
@@ -346,14 +351,6 @@ class CfgSounds
 		titles[] = {};
 	};
 	
-	// Iranian radio	
-	class T1AM_AffirmativePER
-	{
-		name = "T1AM_AffirmativePER";
-		sound[] ={"\T1AM\Data\Sounds\PER\Confirmation.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
 	class T1AM_NegativePER
 	{
 		name = "T1AM_NegativePER";
@@ -404,13 +401,6 @@ class CfgSounds
 	};
 	
 	// Greek radio
-	class T1AM_AffirmativeGRE
-	{
-		name = "T1AM_AffirmativeGRE";
-		sound[] ={"\T1AM\Data\Sounds\GRE\Confirmation.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
 	class T1AM_NegativeGRE
 	{
 		name = "T1AM_NegativeGRE";
@@ -446,7 +436,7 @@ class CfgSounds
 		titles[] = {};
 	};
 	
-	class T1AM_EndOfMissionGRE
+	class T1AM_RoundsCompleteGRE
 	{
 		name = "T1AM_EndOfMissionGRE";
 		sound[] ={"\T1AM\Data\Sounds\GRE\RoundsComplete.ogg",db-10,1.0};
@@ -479,12 +469,12 @@ class CfgMagazines
 	class 14Rnd_80mm_rockets;
 	class 12Rnd_230mm_rockets: 14Rnd_80mm_rockets
 	{
-		
+		muzzleImpulseFactor[]={0.02,0.02};
 	};
 	
 	class 12Rnd_230mm_rockets_cluster: 12Rnd_230mm_rockets
 	{
-		
+		muzzleImpulseFactor[]={0.02,0.02};
 	};
 };
 
@@ -701,11 +691,18 @@ class CfgAmmo
 		ace_frag_metal = 3200;
 	};
 	
+	class ammo_Penetrator_Base;
+	class ammo_Penetrator_T1AM_155mm_HEAT: ammo_Penetrator_Base
+	{
+		caliber = 65;
+		hit = 850;
+		warheadName = "HEAT";
+	};
 	class Sh_155mm_AMOS_guided: Sh_82mm_AMOS_guided
 	{
-		hit = 1100;
-		indirectHit = 100;
-		indirectHitRange = 15;
+		hit = 500;
+		indirectHit = 75;
+		indirectHitRange = 10;
 		
 		ace_frag_charge = 420;
 		ace_frag_classes[] = {"ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_large_T1AM_Copy"};
@@ -714,11 +711,20 @@ class CfgAmmo
 		ace_frag_gurney_k = "1/2";
 		ace_frag_metal = 3200;
 		ace_frag_skip = 1;
+		
+		submunitionAmmo = "ammo_Penetrator_T1AM_155mm_HEAT";
+		submunitionDirectionType = "SubmunitionModelDirection";
+		submunitionInitialOffset[] = {0,0,-0.2};
+		submunitionInitSpeed = 1000;
+		submunitionParentSpeedCoef = 0;
+		triggerOnImpact = 1;
+		deleteParentWhenTriggered = 0;
+		warheadName = "HEAT";
 	};
 	
 	class Sh_155mm_AMOS_LG: Sh_82mm_AMOS_LG
 	{
-		hit = 1100;
+		hit = 1300;
 		indirectHit = 100;
 		indirectHitRange = 15;
 		
@@ -734,7 +740,7 @@ class CfgAmmo
 	class M_Mo_120mm_AT;
 	class M_Mo_155mm_AT: M_Mo_120mm_AT
 	{
-		hit = 1100;
+		hit = 1300;
 		indirectHit = 100;
 		indirectHitRange = 15;
 		
@@ -749,7 +755,7 @@ class CfgAmmo
 	class M_Mo_120mm_AT_LG;
 	class M_Mo_155mm_AT_LG: M_Mo_120mm_AT_LG
 	{
-		hit = 1100;
+		hit = 1300;
 		indirectHit = 100;
 		indirectHitRange = 15;
 		
@@ -763,7 +769,7 @@ class CfgAmmo
 	
 	class R_230mm_fly: ShellBase
 	{
-		hit = 1200;
+		hit = 2000;
 		indirectHit = 400;
 		indirectHitRange = 25;
 		
@@ -777,7 +783,7 @@ class CfgAmmo
 	
 	class R_230mm_HE: SubmunitionBase
 	{
-		hit = 1200;
+		hit = 2000;
 		indirectHit = 400;
 		indirectHitRange = 25;
 		

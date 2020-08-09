@@ -19,12 +19,12 @@ if (_nr == -9999999) exitWith {
 	private _str = "";
 	switch (_mode) do {
 		case (0) : {
-			_displayorcontrol ctrlSetText (str T1AM_LastAdjustImpactRefX);
-			_str = "INVALID INPUT:\nTARGET X COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+			_displayorcontrol ctrlSetText (str T1AM_LastAimpointX);
+			_str = "INVALID INPUT:\nAIMPOINT X COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
 		};
 		case (1) : {
-			_displayorcontrol ctrlSetText (str T1AM_LastAdjustImpactRefY);
-			_str = "INVALID INPUT:\nTARGET Y COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+			_displayorcontrol ctrlSetText (str T1AM_LastAimpointY);
+			_str = "INVALID INPUT:\nAIMPOINT Y COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
 		};
 	};
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
@@ -36,14 +36,14 @@ DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT 3 | _nr: %1", _nr];
 switch (_mode) do {
 	case (0) : {
 		_nr = [_nr] call T1AM_Fnc_FormatCoordinates;
-		private _pos = [[_nr, str T1AM_LastAdjustImpactRefY]] call T1AM_Fnc_MapGridToPos;
-		T1AM_LastAdjustImpactRefX = _pos select 0;
+		private _pos = [[_nr, str T1AM_LastAimpointY]] call T1AM_Fnc_MapGridToPos;
+		T1AM_LastAimpointX = _pos select 0;
 	};
 	case (1) : {
 		_nr = [_nr] call T1AM_Fnc_FormatCoordinates;
-		private _pos = [[str T1AM_LastAdjustImpactRefX, _nr]] call T1AM_Fnc_MapGridToPos;
-		T1AM_LastAdjustImpactRefY = _pos select 1;
+		private _pos = [[str T1AM_LastAimpointX, _nr]] call T1AM_Fnc_MapGridToPos;
+		T1AM_LastAimpointY = _pos select 1;
 	};
 };
 
-DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT END | T1AM_LastAdjustImpactRefX: %1 | T1AM_LastAdjustImpactRefY: %2", T1AM_LastAdjustImpactRefX, T1AM_LastAdjustImpactRefY];
+DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT END | T1AM_LastAimpointX: %1 | T1AM_LastAimpointY: %2", T1AM_LastAimpointX, T1AM_LastAimpointY];

@@ -9,13 +9,35 @@ params["_tubes","_rounds","_profile","_pos","_warheadType","_missionType","_shea
 	_x setVariable ["T1AM_aiAutoTarget", _x checkAIFeature "AUTOTARGET"];
 	_x disableAI "TARGET";
 	_x disableAI "AUTOTARGET";
-} forEach (crew _tube);
+	_x getVariable ["lambs_danger_DisableGroupAI", true];
+} forEach crew _tube;
 
 private _driver = driver _tube;
 if (!isNull _driver) then {
 	_driver setVariable ["T1AM_aiMove", _driver checkAIFeature "MOVE"];
 	_driver disableAI "MOVE";
 };
+
+
+// Disable LAMBS Danger AI mod on this unit.
+private _lambsRunning = configNull != (configFile >> "CfgPatches" >> "lambs_danger");
+private _lambsDisableAI = false;
+private _lambsDisableGroupAI = false;
+if (_lambsRunning) then {
+	{
+		if (_x getVariable ["lambs_danger_DisableAI", false]) then {_lambsDisableAI = true};
+		_x setVariable ["lambs_danger_DisableAI", true];
+	} forEach crew _tube;
+	_lambsDisableGroupAI = _asset getVariable ["lambs_danger_DisableGroupAI", false];
+	_asset setVariable ["lambs_danger_DisableGroupAI", true];
+};
+
+
+// Make AI unstuck. Due to various bugs, the AI can sometimes get stuck.
+// Giving them this command will get the AI unstuck.
+_tube doArtilleryFire [_pos, _warheadType, 0];
+sleep 0.15;
+_tube doWatch objNull;	// Stop firing before the unit manages to fire.
 
 
 // If there's a waitingTime set, wait that long, so that everyone starts at the same time.
@@ -29,14 +51,14 @@ if (_waitingTime > 0) then {
 	waitUntil {sleep 3; (time > _waitingTime) or (time > _timeout)};
 };
 
-//DIAG_LOG format["SFM: %1 - POS BEFORE PRECISE CHECK: %2", _tube, _pos];
+DIAG_LOG format["SFM: %1 - POS BEFORE PRECISE CHECK: %2", _tube, _pos];
 
 // If GPS guided, then use the displayed target pos instead of the randomized one.
 if ((_warheadType in T1AM_GPSGuidedTypes) or {_warheadType in T1AM_GPSLaserTypes} or {_warheadType in T1AM_GPSSeekerTypes}) then {
 	_pos = _posGPS;
 };
 
-//DIAG_LOG format["SFM: %1 - POS BEFORE GROUND CHECK: %2", _tube, _pos];
+DIAG_LOG format["SFM: %1 - POS BEFORE GROUND CHECK: %2", _tube, _pos];
 
 // Make sure the given target pos is on the ground and not in the air.
 // This will make low angle shots a bit more accurate.
@@ -50,7 +72,7 @@ if (_posAGL select 2 > 0.2) then {
 	_pos = AGLtoASL [_posAGL select 0, _posAGL select 1, _alt];
 };
 
-//DIAG_LOG format["SFM: %1 - POS AFTER GROUND CHECK: %2", _tube, _pos];
+DIAG_LOG format["SFM: %1 - POS AFTER GROUND CHECK: %2", _tube, _pos];
 
 // Create a temporary dummy object that can be used to store and send information between two threads.
 // We cannot save the variables on the tube because it might overwrite the variables of a mission that is still in progress,
@@ -60,30 +82,30 @@ _infoDummy setPosASL [-10000,-10000,-10000];
 private _infoDummyNetID = _infoDummy call BIS_fnc_netId;
 
 
-//DIAG_LOG format["SFM | _tube: %1", _tube];
-//DIAG_LOG format["SFM | typeOf: %1", typeOf _tube];
-//DIAG_LOG format["SFM | _tubes: %1", _tubes];
-//DIAG_LOG format["SFM | _rounds: %1", _rounds];
-//DIAG_LOG format["SFM | _profile: %1", _profile];
-//DIAG_LOG format["SFM | _pos: %1", _pos];
-//DIAG_LOG format["SFM | _warheadType: %1", _warheadType];
-//DIAG_LOG format["SFM | _missionType: %1", _missionType];
-//DIAG_LOG format["SFM | _sheafSize: %1", _sheafSize];
-//DIAG_LOG format["SFM | _fuse: %1", _fuse];
-//DIAG_LOG format["SFM | _assetType: %1", _assetType];
-//DIAG_LOG format["SFM | _sheaf: %1", _sheaf];
-//DIAG_LOG format["SFM | _airburstHeight: %1", _airburstHeight];
-//DIAG_LOG format["SFM | _asset: %1", _asset];
-//DIAG_LOG format["SFM | _tubeType: %1", _tubeType];
-//DIAG_LOG format["SFM | _gunAngle: %1", _gunAngle];
-//DIAG_LOG format["SFM | _prePlotted: %1", _prePlotted];
-//DIAG_LOG format["SFM | _sender: %1", _sender];
-//DIAG_LOG format["SFM | _posDisplay: %1", _posDisplay];
-//DIAG_LOG format["SFM | _infoDummyNetID: %1", _infoDummyNetID];
-//DIAG_LOG format["SFM | _isAnnouncementUnit: %1", _isAnnouncementUnit];
-//DIAG_LOG format["SFM | _GPSZAdjust: %1", _GPSZAdjust];
-//DIAG_LOG format["SFM | _sheafDir: %1", _sheafDir];
-//DIAG_LOG format["SFM | _sheafDist: %1", _sheafDist];
+DIAG_LOG format["SFM | _tube: %1", _tube];
+DIAG_LOG format["SFM | typeOf: %1", typeOf _tube];
+DIAG_LOG format["SFM | _tubes: %1", _tubes];
+DIAG_LOG format["SFM | _rounds: %1", _rounds];
+DIAG_LOG format["SFM | _profile: %1", _profile];
+DIAG_LOG format["SFM | _pos: %1", _pos];
+DIAG_LOG format["SFM | _warheadType: %1", _warheadType];
+DIAG_LOG format["SFM | _missionType: %1", _missionType];
+DIAG_LOG format["SFM | _sheafSize: %1", _sheafSize];
+DIAG_LOG format["SFM | _fuse: %1", _fuse];
+DIAG_LOG format["SFM | _assetType: %1", _assetType];
+DIAG_LOG format["SFM | _sheaf: %1", _sheaf];
+DIAG_LOG format["SFM | _airburstHeight: %1", _airburstHeight];
+DIAG_LOG format["SFM | _asset: %1", _asset];
+DIAG_LOG format["SFM | _tubeType: %1", _tubeType];
+DIAG_LOG format["SFM | _gunAngle: %1", _gunAngle];
+DIAG_LOG format["SFM | _prePlotted: %1", _prePlotted];
+DIAG_LOG format["SFM | _sender: %1", _sender];
+DIAG_LOG format["SFM | _posDisplay: %1", _posDisplay];
+DIAG_LOG format["SFM | _infoDummyNetID: %1", _infoDummyNetID];
+DIAG_LOG format["SFM | _isAnnouncementUnit: %1", _isAnnouncementUnit];
+DIAG_LOG format["SFM | _GPSZAdjust: %1", _GPSZAdjust];
+DIAG_LOG format["SFM | _sheafDir: %1", _sheafDir];
+DIAG_LOG format["SFM | _sheafDist: %1", _sheafDist];
 
 
 // Airburst stuff.
@@ -97,15 +119,15 @@ if (_fuse == "AIRBURST" or {_fuse == "MIXED"}) then {
 	_infoDummy setVariable ["T1AM_doAirburst", true];	// Tell the guide script to do an airburst.
 	
 	// Set the target pos above the ground. This is also the airburst height.
-	switch true do {
-		case (_airburstHeight == "LOW"): {_elevationMod = 0.9};
-		case (_airburstHeight == "MED"): {_elevationMod = 9};
-		case (_airburstHeight == "HIGH"): {_elevationMod = 18};
+	switch (_airburstHeight) do {
+		case ("LOW"): {_elevationMod = 0.9};
+		case ("MED"): {_elevationMod = 9};
+		case ("HIGH"): {_elevationMod = 18};
 	};
 	
 	_pos = [_pos select 0, _pos select 1, (_pos select 2) + _elevationMod];
 	
-	//DIAG_LOG format["SFM: %1 - POS BEFORE MIXED ALTERNATE: %2", _tube, _pos];
+	DIAG_LOG format["SFM: %1 - POS BEFORE MIXED ALTERNATE: %2", _tube, _pos];
 	
 	if (_fuse == "MIXED") then {
 		// Alternate the airburst for MIXED missions. Tell some units not to do an airburst.
@@ -121,14 +143,14 @@ if (_fuse == "AIRBURST" or {_fuse == "MIXED"}) then {
 		};
 	};
 	
-	//DIAG_LOG format["SFM: %1 - POS AFTER MIXED ALTERNATE: %2", _tube, _pos];
+	DIAG_LOG format["SFM: %1 - POS AFTER MIXED ALTERNATE: %2", _tube, _pos];
 	
 } else {
 	// Not airburst.
 	_infoDummy setVariable ["T1AM_doAirburst", false];	// Tell the guide script NOT to do an airburst.
 };
 
-//DIAG_LOG format["SFM: %1 - POS AFTER AIRBURST CHECK: %2", _tube, _pos];
+DIAG_LOG format["SFM: %1 - POS AFTER AIRBURST CHECK: %2", _tube, _pos];
 
 
 private _x = _pos select 0;
@@ -231,7 +253,7 @@ switch true do {
 		_scatter = 0;
 		_scatter2 = 0;
 		_action = 2;
-		//DIAG_LOG "SFM | ACTION _isMK41";
+		DIAG_LOG "SFM | ACTION _isMK41";
 		
 		_specialEH = _tube addEventHandler ["fired", compile format ["[_this,%1] spawn T1AM_Fnc_MK41Frag",_pos]];
 	};
@@ -241,7 +263,7 @@ switch true do {
 		_scatter = 0;
 		_scatter2 = 0;
 		_action = 1;
-		//DIAG_LOG "SFM | ACTION T1AM_GPSLaserTypes";
+		DIAG_LOG "SFM | ACTION T1AM_GPSLaserTypes";
 		
 		// We use BIS_fnc_netId on the infoDummy so that we can turn the object data type into a unique string,
 		// then we can make it part of the code that we dynamically generate,
@@ -254,7 +276,7 @@ switch true do {
 		_scatter = 0;
 		_scatter2 = 0;
 		_action = 2;
-		//DIAG_LOG "SFM | ACTION T1AM_GPSGuidedTypes";
+		DIAG_LOG "SFM | ACTION T1AM_GPSGuidedTypes";
 		
 		_specialEH = _tube addEventHandler ["fired", compile format ["[_this,%1,%2,'%3','%4','%5',%6,%7,%8,%9] call T1AM_Fnc_SpecialFired",_action,_pos,_gunAngle,_fuse,_infoDummyNetID,_longRangeGuided,[],_GPSZAdjust,_elevationMod]];
 	};
@@ -264,7 +286,7 @@ switch true do {
 		_scatter = 0;
 		_scatter2 = 0;
 		_action = 3;
-		//DIAG_LOG "SFM | ACTION T1AM_GPSSeekerTypes";
+		DIAG_LOG "SFM | ACTION T1AM_GPSSeekerTypes";
 		
 		private _arrayEnemySides = [];
 		private _side = (side _sender);
@@ -281,14 +303,14 @@ switch true do {
 		_scatter = 0;
 		_scatter2 = 0;
 		_action = 4;
-		//DIAG_LOG "SFM | ACTION T1AM_LaserTypes";
+		DIAG_LOG "SFM | ACTION T1AM_LaserTypes";
 		
 		_specialEH = _tube addEventHandler ["fired", compile format ["[_this,%1,%2,'%3','%4','%5',%6,%7,%8,%9] call T1AM_Fnc_SpecialFired",_action,_pos,_gunAngle,_fuse,_infoDummyNetID,_longRangeGuided,[],_GPSZAdjust,_elevationMod]];
 	};
 };
 
 
-//DIAG_LOG format["SFM: %1 - _action: %2", _tube, _action];
+DIAG_LOG format["SFM: %1 - _action: %2", _tube, _action];
 
 
 // More airburst stuff.
@@ -310,7 +332,7 @@ if (_action != 1 and _action != 2 and _action != 3 and _isAnnouncementUnit) then
 			[_tube, _this select 6] spawn T1_Fnc_UpdateGuiTargetPos;
 		};
 		_tube setVariable ["T1AM_hasFired", true];
-		//DIAG_LOG format["SFM: %1 | FIRE EH TRIGGERED", _this select 0];
+		DIAG_LOG format["SFM: %1 | FIRE EH TRIGGERED", _this select 0];
 		[_tube] spawn {
 			sleep 0.5;
 			(gunner (_this select 0)) setSkill ["aimingspeed",1];
@@ -323,7 +345,7 @@ if (_action != 1 and _action != 2 and _action != 3 and _isAnnouncementUnit) then
 	_fireEH = _tube addEventHandler ["fired",{
 		private _tube = _this select 0;
 		_tube setVariable ["T1AM_hasFired", true];
-		//DIAG_LOG format["SFM: %1 | FIRE EH TRIGGERED", _this select 0];
+		DIAG_LOG format["SFM: %1 | FIRE EH TRIGGERED", _this select 0];
 		[_tube] spawn {
 			sleep 0.5;
 			(gunner (_this select 0)) setSkill ["aimingspeed",1];
@@ -364,41 +386,41 @@ while {_rounds > 0} do {
 			[_tube, _warheadType, _assetType] call T1AM_Fnc_LoadMagazine;
 		};
 		
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP - _fireCenterFirst: %2", _tube, _fireCenterFirst];
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP - _scatter: %2", _tube, _scatter];
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP - _scatter2: %2", _tube, _scatter2];
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP - POS BEFORE SHEAF: %2", _tube, _pos];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP - _fireCenterFirst: %2", _tube, _fireCenterFirst];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP - _scatter: %2", _tube, _scatter];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP - _scatter2: %2", _tube, _scatter2];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP - POS BEFORE SHEAF: %2", _tube, _pos];
 		
 		// Get appropriate sheaf.
 		if (_scatter > 0) then {
 			
 			// Tube marked as fireCenterFirst will ignore the sheaf with the first shot it fires.
 			if (!_fireCenterFirst) then {
-				switch true do {
-					case (_sheaf == "CIRCLE") : {_chosenTargetPos = [_tube,_asset,_pos,_scatter] call T1AM_Fnc_CircularSheaf};
-					case (_sheaf == "BOX") : {_chosenTargetPos = [_tube,_asset,_pos,_scatter,_scatter2,_sheafDir] call T1AM_Fnc_BoxSheaf};
-					case (_sheaf == "LINE") : {_chosenTargetPos = [_tube,_asset,_pos,_sheafDir,_sheafDist] call T1AM_Fnc_LineSheaf};
+				switch (_sheaf) do {
+					case ("CIRCLE") : {_chosenTargetPos = [_tube,_asset,_pos,_scatter] call T1AM_Fnc_CircularSheaf};
+					case ("BOX") : {_chosenTargetPos = [_tube,_asset,_pos,_scatter,_scatter2,_sheafDir] call T1AM_Fnc_BoxSheaf};
+					case ("LINE") : {_chosenTargetPos = [_tube,_asset,_pos,_sheafDir,_sheafDist] call T1AM_Fnc_LineSheaf};
 					
 					default {_chosenTargetPos = _pos};
 				};
 				sleep 0.1;
-				//DIAG_LOG format["SFM: %1 - FIRING LOOP - SHEAF NORMAL - _chosenTargetPos: %2 - _sheaf: %3", _tube, _chosenTargetPos, _sheaf];
+				DIAG_LOG format["SFM: %1 - FIRING LOOP - SHEAF NORMAL - _chosenTargetPos: %2 - _sheaf: %3", _tube, _chosenTargetPos, _sheaf];
 				
 			} else {
 				
 				// If marked as fireCenterFirst, make all next shots use the sheaf.
 				_fireCenterFirst = false;
 				_chosenTargetPos = _pos;
-				//DIAG_LOG format["SFM: %1 - FIRING LOOP - SHEAF FIRECENTERFIRST - _chosenTargetPos: %2", _tube, _chosenTargetPos];
+				DIAG_LOG format["SFM: %1 - FIRING LOOP - SHEAF FIRECENTERFIRST - _chosenTargetPos: %2", _tube, _chosenTargetPos];
 			};
 			
 		} else {
 			
 			_chosenTargetPos = _pos;
-			//DIAG_LOG format["SFM: %1 - FIRING LOOP - NO SHEAF - _chosenTargetPos: %2", _tube, _chosenTargetPos];
+			DIAG_LOG format["SFM: %1 - FIRING LOOP - NO SHEAF - _chosenTargetPos: %2", _tube, _chosenTargetPos];
 		};
 		
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP - CHOSENTARGETPOS AFTER SHEAF: %2", _tube, _chosenTargetPos];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP - CHOSENTARGETPOS AFTER SHEAF: %2", _tube, _chosenTargetPos];
 		
 		_posTube = getPosASL _tube;
 		
@@ -413,11 +435,13 @@ while {_rounds > 0} do {
 			private _scatterSpread = [_distance, _maximumRange] call T1AM_Fnc_GetRandomSpread;
 			
 			if (_gunAngle == "LOW") then {_scatterSpread = _scatterSpread * 0.75};
-			if (_assetType == "Mortar") then {_scatterSpread = _scatterSpread * 1.4};
-			if (_assetType == "Rocket") then {_scatterSpread = _scatterSpread * 1.6};
-			if (_assetType == "BM21") then {_scatterSpread = 1}; // BM21 has its own spread.
+			switch (_assetType) do {
+				case ("MORTAR") : {_scatterSpread = _scatterSpread * 1.4};
+				case ("ROCKET") : {_scatterSpread = _scatterSpread * 1.8};
+				case ("RHS_BM21") : {_scatterSpread = 1}; // RHS BM21 has its own spread.
+			};
 			
-			//DIAG_LOG format["SFM: %1 - FIRING LOOP - SPREAD AFTER IFS: %2", _tube, _scatterSpread];
+			DIAG_LOG format["SFM: %1 - FIRING LOOP - SPREAD AFTER IFS: %2", _tube, _scatterSpread];
 			
 			_scatterSpread = (_scatterSpread * 2) min 1000;
 			
@@ -425,7 +449,7 @@ while {_rounds > 0} do {
 			
 			_scatterSpread = _scatterSpread * ((random [0, 1, 2]) max 0.01);
 			
-			//DIAG_LOG format["SFM: %1 - FIRING LOOP - SPREAD AFTER CALC: %2", _tube, _scatterSpread];
+			DIAG_LOG format["SFM: %1 - FIRING LOOP - SPREAD AFTER CALC: %2", _tube, _scatterSpread];
 			
 			_chosenTargetPos = [objNull,objNull,_chosenTargetPos,_scatterSpread] call T1AM_Fnc_CircularSheaf;
 			_tube setVariable ["T1AM_chosenTargetPos", _chosenTargetPos];
@@ -435,7 +459,7 @@ while {_rounds > 0} do {
 			_unguidedCEP = 0.01;
 		};
 		
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP - CHOSENTARGETPOS AFTER RANDOM SPREAD: %2", _tube, _chosenTargetPos];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP - CHOSENTARGETPOS AFTER RANDOM SPREAD: %2", _tube, _chosenTargetPos];
 		
 		
 		if (T1AM_Debug_Mode) then {[_chosenTargetPos, 60, "ColorGreen"] spawn T1AM_Fnc_PlaceMarker};
@@ -452,12 +476,12 @@ while {_rounds > 0} do {
 		private _dy = _y - _vy;
 		_distance = sqrt((_dx*_dx)+(_dy*_dy));
 		
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP -- _longRangeGuided: %2", _tube, _longRangeGuided];
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP -- _distance: %2", _tube, _distance];
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP -- VECTORDISTANCE: %2", _tube, _chosenTargetPos vectorDistance (getPosASL _tube)];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP -- _longRangeGuided: %2", _tube, _longRangeGuided];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP -- _distance: %2", _tube, _distance];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP -- VECTORDISTANCE: %2", _tube, _chosenTargetPos vectorDistance (getPosASL _tube)];
 		
-		//DIAG_LOG format["SFM: %1 - CHARGES START", _tube];
-		//DIAG_LOG format["SFM: %1 - CHARGES -- MODES: %2", _tube, (getArray (configfile >> "CfgWeapons" >> _weapon >> "modes"))];
+		DIAG_LOG format["SFM: %1 - CHARGES START", _tube];
+		DIAG_LOG format["SFM: %1 - CHARGES -- MODES: %2", _tube, (getArray (configfile >> "CfgWeapons" >> _weapon >> "modes"))];
 		
 		
 		if (!_isMK41) then {
@@ -467,8 +491,8 @@ while {_rounds > 0} do {
 				_chargesArrayHigh = _array select 1;
 				_vel = _array select 2;
 				
-				//DIAG_LOG format["SFM: %1 - CHARGE NORMAL -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
-				//DIAG_LOG format["SFM: %1 - CHARGE NORMAL -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
+				DIAG_LOG format["SFM: %1 - CHARGE NORMAL -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
+				DIAG_LOG format["SFM: %1 - CHARGE NORMAL -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
 				
 			} else {
 				// If it's long range guided, then fake the distance to get the projectile into the air regardless.
@@ -482,16 +506,16 @@ while {_rounds > 0} do {
 				
 				_distance = _realDistance;
 				
-				//DIAG_LOG format["SFM: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
-				//DIAG_LOG format["SFM: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
+				DIAG_LOG format["SFM: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayLow: %2", _tube, _chargesArrayLow];
+				DIAG_LOG format["SFM: %1 - CHARGE LONG RANGE GUIDED -- _chargesArrayHigh: %2", _tube, _chargesArrayHigh];
 			};
 			
 			// If no charge was chosen, we will assume it's an impossible shot, so exit out of this loop.
 			if (count _chargesArrayLow == 0 and {count _chargesArrayHigh == 0}) then {
 				_impossibleShot = true;
 				_tube setVariable ["T1AM_impossibleShot", true];
-				[_tube,"Unable to get a firing solution - impossible shot.","beep"] call T1AM_Fnc_SendComms;
-				//DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 1 - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
+				[_tube,"Unable to get a firing solution - impossible shot.","BEEP"] call T1AM_Fnc_SendComms;
+				DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 1 - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
 			};
 			
 			// Vanilla targeting.
@@ -499,8 +523,8 @@ while {_rounds > 0} do {
 			if (_distance >= _maximumRange) then {
 				_impossibleShot = true;
 				_tube setVariable ["T1AM_impossibleShot", true];
-				[_tube,"Unable to get a firing solution - out of range.","beep"] call T1AM_Fnc_SendComms;
-				//DIAG_LOG format["SFM: %1 - ABORT - OUT OF RANGE - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
+				[_tube,"Unable to get a firing solution - out of range.","BEEP"] call T1AM_Fnc_SendComms;
+				DIAG_LOG format["SFM: %1 - ABORT - OUT OF RANGE - Check1: %2 - Check2: %3", _tube, count _chargesArrayLow, count _chargesArrayHigh];
 			};
 		};
 	};
@@ -531,11 +555,11 @@ while {_rounds > 0} do {
 				_tube setVariable ["T1AM_impossibleShot", true];
 				
 				if (!_obstructed) then {
-					[_tube,"Unable to get a firing solution - cannot get a valid angle.","beep"] call T1AM_Fnc_SendComms;
-					//DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 2 - Check1: %2", _tube, !_obstructed];
+					[_tube,"Unable to get a firing solution - cannot get a valid angle.","BEEP"] call T1AM_Fnc_SendComms;
+					DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 2 - Check1: %2", _tube, !_obstructed];
 				} else {
-					[_tube,"Unable to get a firing solution - shot obstructed.","beep"] call T1AM_Fnc_SendComms;
-					//DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 3 - Check1: %2", _tube, !_obstructed];
+					[_tube,"Unable to get a firing solution - shot obstructed.","BEEP"] call T1AM_Fnc_SendComms;
+					DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 3 - Check1: %2", _tube, !_obstructed];
 				};
 				
 			} else {
@@ -549,10 +573,10 @@ while {_rounds > 0} do {
 					if (_gunAngle == "HIGH") then {_gunAngle = "LOW"} else {_gunAngle = "HIGH"};
 					if (_tellAboutAngle) then {
 						private _text = format["Cannot get firing solution with requested angle - will use %1 angle instead.", _bestCharge select 3];
-						[_tube, _text,"beep"] call T1AM_Fnc_SendComms;
+						[_tube, _text,"BEEP"] call T1AM_Fnc_SendComms;
 						_tellAboutAngle = false;	// Only tell the player once, to avoid spamming the chat.
 					};
-					//DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 4 - SWITCHED ANGLE - Check1: %2 - Check2: %3", _tube, _bestCharge select 3, _gunAngle];
+					DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 4 - SWITCHED ANGLE - Check1: %2 - Check2: %3", _tube, _bestCharge select 3, _gunAngle];
 				};
 			};
 		};
@@ -581,14 +605,14 @@ while {_rounds > 0} do {
 		private _angle = _bestCharge select 1;
 		_ETA = _bestCharge select 2;
 		
-		//DIAG_LOG format["SFM: %1 - CHOSEN CHARGE -- _angle: %2", _tube, _angle];
-		//DIAG_LOG format["SFM: %1 - CHOSEN CHARGE -- _ETA: %2", _tube, _ETA];
+		DIAG_LOG format["SFM: %1 - CHOSEN CHARGE -- _angle: %2", _tube, _angle];
+		DIAG_LOG format["SFM: %1 - CHOSEN CHARGE -- _ETA: %2", _tube, _ETA];
 		
 		// When using the guided script, the ETA times need to change a bit.
 		switch true do {
 			case (_longRangeGuided): {
 				_ETA = (_ETA/2) + ((_distance-(_regularMaxRange/2))/(_vel*0.4));
-				//DIAG_LOG format["SFM: %1 - CHANGING ETA LONG RANGE GUIDED -- _ETA: %2", _tube, _ETA];
+				DIAG_LOG format["SFM: %1 - CHANGING ETA LONG RANGE GUIDED -- _ETA: %2", _tube, _ETA];
 			};
 			case (_isMK41): {
 				private _ammo = getText(configfile >> "CfgMagazines" >> _warheadType >> "ammo");
@@ -598,7 +622,7 @@ while {_rounds > 0} do {
 			default {
 				if (_action == 1 or {_action == 2} or {_action == 3}) then {
 					_ETA = _ETA * 1.05;
-					//DIAG_LOG format["SFM: %1 - CHANGING ETA FOR ACTION 1,2,3 -- _ETA: %2", _tube, _ETA];
+					DIAG_LOG format["SFM: %1 - CHANGING ETA FOR ACTION 1,2,3 -- _ETA: %2", _tube, _ETA];
 				};
 			};
 		};
@@ -606,7 +630,7 @@ while {_rounds > 0} do {
 		_ETA = round _ETA;
 		_tube setVariable ["T1AM_ETA", _ETA];
 		
-		//DIAG_LOG format["SFM: %1 - T1AM_ETA: %2", _tube, _tube getVariable ["T1AM_ETA", 9999]];
+		DIAG_LOG format["SFM: %1 - T1AM_ETA: %2", _tube, _tube getVariable ["T1AM_ETA", 9999]];
 	};
 	
 	
@@ -668,7 +692,7 @@ while {_rounds > 0} do {
 	
 	if (_asset getVariable ["T1AM_amountAborted", 0] >= count _tubes and _isAnnouncementUnit) exitWith {_allAborted = true};
 	
-	//DIAG_LOG format["SFM: %1 - FIRING LOOP - POS BEFORE AIRBURST IF: %2", _tube, _pos];
+	DIAG_LOG format["SFM: %1 - FIRING LOOP - POS BEFORE AIRBURST IF: %2", _tube, _pos];
 	
 	if (!_outOfAmmo and !_impossibleShot and !_abort) then {
 		
@@ -704,7 +728,7 @@ while {_rounds > 0} do {
 			sleep 0.1;	// Must wait a bit after adding/removing the eventhandler to make sure it works properly.
 		};
 		
-		//DIAG_LOG format["SFM: %1 - FIRING LOOP - POS AFTER AIRBURST IF: %2", _tube, _pos];
+		DIAG_LOG format["SFM: %1 - FIRING LOOP - POS AFTER AIRBURST IF: %2", _tube, _pos];
 		
 		// If the right magazine is loaded and the magazine contains ammo, then go on and fire.
 		if ((currentMagazine _tube) == _warheadType and _tube ammo (currentMuzzle _gunner) > 0) then {
@@ -712,13 +736,15 @@ while {_rounds > 0} do {
 			// Freeze the gunner to circumvent an aiming bug. The unfreeze eventhandler will unfreeze the gunner as soon as he fires.
 			// Wait a bit to make sure the skill setting kicks in before we move on.
 			_gunner setSkill ["aimingSpeed",0];
+			
+			_gunner selectWeapon _weapon;
 			sleep 0.5;
 			
 			// Fire.
 			if (!_isMK41) then {
 				_tube setWeaponReloadingTime [_gunner,(currentMuzzle _gunner), 0];
 				_tube fire [_tubeType, _bestCharge select 0];
-				//DIAG_LOG format["SFM: %1 - FIRE COMMAND", _tube];
+				DIAG_LOG format["SFM: %1 - FIRE COMMAND", _tube];
 				if (_firstRound) then {[_tube,_asset] spawn T1AM_Fnc_FailedToFireCheck};
 				
 			// MK41 fire.
@@ -747,7 +773,7 @@ while {_rounds > 0} do {
 				(side _gunner) reportRemoteTarget [_target, _ETA * 1.3];
 				_tube setWeaponReloadingTime [_gunner,(currentMuzzle _gunner), 0];
 				_tube fireAtTarget [_target];
-				//DIAG_LOG format["SFM: %1 - FIRE COMMAND MK41", _tube];
+				DIAG_LOG format["SFM: %1 - FIRE COMMAND MK41", _tube];
 				
 				if (_firstRound) then {[_tube,_asset] spawn T1AM_Fnc_FailedToFireCheck};
 				
@@ -766,12 +792,12 @@ while {_rounds > 0} do {
 			// If the right magazine is not loaded or the magazine is empty,
 			// then assume the tube is out of ammo, and mark it as such.
 			_tube setVariable ["T1AM_outOfAmmo", true];
-			//DIAG_LOG format["SFM: %1 - ABORT - WRONG MAG LOADED - CURMAG: %2 - _warheadType: %3", _tube, currentMagazine _tube, _warheadType];
+			DIAG_LOG format["SFM: %1 - ABORT - WRONG MAG LOADED - CURMAG: %2 - _warheadType: %3", _tube, currentMagazine _tube, _warheadType];
 			
 			if (!_outOfAmmo) then {
-				//DIAG_LOG format["SFM: %1 - ABORT - OUT OF AMMO - Check1: %2", _tube, !_outOfAmmo];
+				DIAG_LOG format["SFM: %1 - ABORT - OUT OF AMMO - Check1: %2", _tube, !_outOfAmmo];
 				_outOfAmmo = true;
-				[_tube,"Out of ammo.","beep"] call T1AM_Fnc_SendComms;
+				[_tube,"Out of ammo.","BEEP"] call T1AM_Fnc_SendComms;
 			};
 		};
 	};
@@ -781,8 +807,8 @@ while {_rounds > 0} do {
 	if (_outOfAmmo and !_isAnnouncementUnit) exitWith {};
 	
 	
-	//DIAG_LOG format["SFM: %1 - FIRING LOOP END -- _firstRound: %2", _tube, _firstRound];
-	//DIAG_LOG format["SFM: %1 - FIRING LOOP END -- _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
+	DIAG_LOG format["SFM: %1 - FIRING LOOP END -- _firstRound: %2", _tube, _firstRound];
+	DIAG_LOG format["SFM: %1 - FIRING LOOP END -- _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
 	
 	// Show first round message.
 	if (_firstRound and _isAnnouncementUnit) then {
@@ -815,7 +841,7 @@ while {_rounds > 0} do {
 			
 			private _message = format ["Shot. ETA %1 seconds.", _lowestETA];
 			
-			[_asset,_message,"Shot"] call T1AM_Fnc_SendComms;
+			[_asset,_message,"SHOT"] call T1AM_Fnc_SendComms;
 			[_lowestETA,_asset] spawn T1AM_Fnc_Splash;
 		};
 	};
@@ -825,15 +851,15 @@ while {_rounds > 0} do {
 	_rounds = _rounds - 1;
 };
 
-//DIAG_LOG format["SFM: %1 - ENDING -- _endMission: %2", _tube, _endMission];
-//DIAG_LOG format["SFM: %1 - ENDING -- _abort: %2", _tube, _abort];
-//DIAG_LOG format["SFM: %1 - ENDING -- _outOfAmmo: %2", _tube, _outOfAmmo];
-//DIAG_LOG format["SFM: %1 - ENDING -- _impossibleShot: %2", _tube, _impossibleShot];
-//DIAG_LOG format["SFM: %1 - ENDING -- _allOutOfAmmo: %2", _tube, _allOutOfAmmo];
-//DIAG_LOG format["SFM: %1 - ENDING -- _allImpossibleShot: %2", _tube, _allImpossibleShot];
-//DIAG_LOG format["SFM: %1 - ENDING -- _allAborted: %2", _tube, _allAborted];
-//DIAG_LOG format["SFM: %1 - ENDING -- _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
-//DIAG_LOG format["SFM: %1 - ENDING -- _asset: %2", _tube, _asset];
+DIAG_LOG format["SFM: %1 - ENDING -- _endMission: %2", _tube, _endMission];
+DIAG_LOG format["SFM: %1 - ENDING -- _abort: %2", _tube, _abort];
+DIAG_LOG format["SFM: %1 - ENDING -- _outOfAmmo: %2", _tube, _outOfAmmo];
+DIAG_LOG format["SFM: %1 - ENDING -- _impossibleShot: %2", _tube, _impossibleShot];
+DIAG_LOG format["SFM: %1 - ENDING -- _allOutOfAmmo: %2", _tube, _allOutOfAmmo];
+DIAG_LOG format["SFM: %1 - ENDING -- _allImpossibleShot: %2", _tube, _allImpossibleShot];
+DIAG_LOG format["SFM: %1 - ENDING -- _allAborted: %2", _tube, _allAborted];
+DIAG_LOG format["SFM: %1 - ENDING -- _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
+DIAG_LOG format["SFM: %1 - ENDING -- _asset: %2", _tube, _asset];
 
 
 // Mark tube to indicate it is ending its mission.
@@ -867,6 +893,19 @@ if (!isNull _driver) then {
 };
 
 
+// Re-enable LAMBS Danger AI mod on this unit.
+if (_lambsRunning) then {
+	if (!_lambsDisableAI) then {
+		{
+			_x setVariable ["lambs_danger_DisableAI", false];
+		} forEach crew _tube;
+	};
+	if (!_lambsDisableGroupAI) then {
+		_asset setVariable ["lambs_danger_DisableGroupAI", false];
+	};
+};
+
+
 if (T1AM_DEBUG_ShowRounds) then {_tube removeEventHandler ["fired",_trackEH]};
 
 // Remove the airburst EH
@@ -894,8 +933,8 @@ if (_abort and !_isAnnouncementUnit) exitWith {
 		_txt = format["%1 units are inoperable.", _amountAborted];
 	};
 	
-	[_asset,_txt,"beep"] call T1AM_Fnc_SendComms;
-	//DIAG_LOG format["TUBE END - TUBES INOPERABLE: %2", _tube, _amountAborted];
+	[_asset,_txt,"BEEP"] call T1AM_Fnc_SendComms;
+	DIAG_LOG format["TUBE END - TUBES INOPERABLE: %2", _tube, _amountAborted];
 };
 
 
@@ -919,7 +958,7 @@ if (_allAborted and _isAnnouncementUnit) exitWith {
 	publicVariable "T1AM_AssetsBusy";
 	sleep 3;
 	[false] call T1AM_Fnc_EndMission;
-	//DIAG_LOG format["SFM: %1 | FINAL ANNOUNCEMENT | ALL ABORTED | _asset: %2", _tube, _asset];
+	DIAG_LOG format["SFM: %1 | FINAL ANNOUNCEMENT | ALL ABORTED | _asset: %2", _tube, _asset];
 };
 
 
@@ -928,13 +967,13 @@ if (_isAnnouncementUnit) then {
 	
 	sleep 1;
 	
-	//DIAG_LOG format["SFM: %1 - FINAL ANNOUNCEMENT - T1AM_AssetsBusy: %2", _tube, T1AM_AssetsBusy];
-	//DIAG_LOG format["SFM: %1 - FINAL ANNOUNCEMENT - _asset: %2", _tube, _asset];
+	DIAG_LOG format["SFM: %1 - FINAL ANNOUNCEMENT - T1AM_AssetsBusy: %2", _tube, T1AM_AssetsBusy];
+	DIAG_LOG format["SFM: %1 - FINAL ANNOUNCEMENT - _asset: %2", _tube, _asset];
 	
 	T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
 	publicVariable "T1AM_AssetsBusy";
 	
-	//DIAG_LOG format["SFM: %1 - FINAL ANNOUNCEMENT - T1AM_AssetsBusy: %2", _tube, T1AM_AssetsBusy];
+	DIAG_LOG format["SFM: %1 - FINAL ANNOUNCEMENT - T1AM_AssetsBusy: %2", _tube, T1AM_AssetsBusy];
 	
 	if (!_endMission and !_checkFire) then {
 		
@@ -945,26 +984,26 @@ if (_isAnnouncementUnit) then {
 			if (_missionType == "FFE") then {
 				if (!_allOutOfAmmo) then {
 					// Ended mission with at least 1 tube still having ammo.
-					[_asset,"Rounds complete.","RoundsComplete"] call T1AM_Fnc_SendComms;
-					//DIAG_LOG format["TUBE END - NORMAL ENDING: %2", _tube, !_allOutOfAmmo];
+					[_asset,"Rounds complete.","ROUNDSCOMPLETE"] call T1AM_Fnc_SendComms;
+					DIAG_LOG format["TUBE END - NORMAL ENDING: %2", _tube, !_allOutOfAmmo];
 				} else {
 					// Ended mission because everyone ran out of the requested ammo.
 					if ({_x getVariable ["T1AM_hasFired", false]}count _tubes > 0) then {
-						[_asset,"Out of ammo on all units - Rounds complete.","RoundsComplete"] call T1AM_Fnc_SendComms;
+						[_asset,"Out of ammo on all units - Rounds complete.","ROUNDSCOMPLETE"] call T1AM_Fnc_SendComms;
 					} else {
 						// Nobody has fired.
-						[_asset,"Requested ammo not available - Unable to fire.","RoundsComplete"] call T1AM_Fnc_SendComms;
+						[_asset,"Requested ammo not available - Unable to fire.","ROUNDSCOMPLETE"] call T1AM_Fnc_SendComms;
 					};
-					//DIAG_LOG format["TUBE END - RAN OUT OF AMMO ENDING: %2", _tube, !_allOutOfAmmo];
+					DIAG_LOG format["TUBE END - RAN OUT OF AMMO ENDING: %2", _tube, !_allOutOfAmmo];
 				};
 			};
 			
 		} else {
 			// Everyone had an impossible shot.
-			[_asset,"Holding fire, all units are reporting an impossible firing solution.","Negative"] call T1AM_Fnc_SendComms;
-			//DIAG_LOG format["TUBE END - IMPOSSIBLE SHOT ENDING: %2", _tube, !_allImpossibleShot];
+			[_asset,"Holding fire, all units are reporting an impossible firing solution.","NEGATIVE"] call T1AM_Fnc_SendComms;
+			DIAG_LOG format["TUBE END - IMPOSSIBLE SHOT ENDING: %2", _tube, !_allImpossibleShot];
 		};
 	};
 };
 
-//DIAG_LOG format["SFM: %1 - END", _tube];
+DIAG_LOG format["SFM: %1 - END", _tube];

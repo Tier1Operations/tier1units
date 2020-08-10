@@ -1,18 +1,18 @@
 
 class CfgPatches
 {
-	class A3_Soft_F_Crusher_UGV_T1
+	class T1_Units_Faction1_Drones
 	{
 		units[] = {"B_UGV_T1_Camo_F","B_UGV_T1_Camo_rcws_F","B_UGV_T1_Desert_F","B_UGV_T1_Desert_rcws_F"};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"t1_units"};
+		requiredAddons[] = {"T1_Units_Faction1"};
 	};
 };
 class CfgFactionClasses
 {
-	class T1_Units;
-	class T1_Units_Desert;
+	class T1_Units_Faction1;
+	class T1_Units_Faction1_Desert;
 };
 class CfgVehicles
 {
@@ -23,11 +23,11 @@ class CfgVehicles
 		scope = 2;
 		side = 1;
 		cargoCanControlUAV = 1;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		displayName = "T1 UGV";
 		author = "Vasilyevich";
 		hiddenSelections[] = {"Camo1","Camo2"};
-		hiddenSelectionsTextures[] = {"\t1_drones\wood\normal_ugv_01_ext_co.paa","\t1_drones\wood\t1_ugv_01_int_co.paa"};
+		hiddenSelectionsTextures[] = {"\T1_Units_Faction1_Drones\wood\normal_ugv_01_ext_co.paa","\T1_Units_Faction1_Drones\wood\t1_ugv_01_int_co.paa"};
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
@@ -251,11 +251,11 @@ class CfgVehicles
 		scope = 2;
 		side = 1;
 		cargoCanControlUAV = 1;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		displayName = "T1 UGV RCWS";
 		author = "Vasilyevich";
 		hiddenSelections[] = {"Camo1","Camo2","Camo3"};
-		hiddenSelectionsTextures[] = {"\t1_drones\wood\normal_ugv_01_ext_co.paa","\t1_drones\wood\t1_ugv_01_int_co.paa","\t1_drones\wood\t1_ugv_01_turret_co.paa"};
+		hiddenSelectionsTextures[] = {"\T1_Units_Faction1_Drones\wood\normal_ugv_01_ext_co.paa","\T1_Units_Faction1_Drones\wood\t1_ugv_01_int_co.paa","\T1_Units_Faction1_Drones\wood\t1_ugv_01_turret_co.paa"};
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
 		transportmaxbackpacks = 99;
@@ -485,11 +485,11 @@ class CfgVehicles
 		scope = 2;
 		side = 1;
 		cargoCanControlUAV = 1;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		displayName = "T1 UGV";
 		author = "Vasilyevich";
 		hiddenSelections[] = {"Camo1","Camo2"};
-		hiddenSelectionsTextures[] = {"\t1_drones\desert\normal_ugv_01_ext_co.paa","\t1_drones\desert\t1_ugv_01_int_co.paa"};
+		hiddenSelectionsTextures[] = {"\T1_Units_Faction1_Drones\desert\normal_ugv_01_ext_co.paa","\T1_Units_Faction1_Drones\desert\t1_ugv_01_int_co.paa"};
 
 		reportOwnPosition = 1;
 	};
@@ -498,11 +498,11 @@ class CfgVehicles
 		scope = 2;
 		side = 1;
 		cargoCanControlUAV = 1;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		displayName = "T1 UGV RCWS";
 		author = "Vasilyevich";
 		hiddenSelections[] = {"Camo1","Camo2","Camo3"};
-		hiddenSelectionsTextures[] = {"\t1_drones\desert\normal_ugv_01_ext_co.paa","\t1_drones\desert\t1_ugv_01_int_co.paa","\t1_drones\desert\t1_ugv_01_turret_co.paa"};
+		hiddenSelectionsTextures[] = {"\T1_Units_Faction1_Drones\desert\normal_ugv_01_ext_co.paa","\T1_Units_Faction1_Drones\desert\t1_ugv_01_int_co.paa","\T1_Units_Faction1_Drones\desert\t1_ugv_01_turret_co.paa"};
 		reportOwnPosition = 1;
 	};
 };

@@ -5,7 +5,7 @@
 
 class CfgPatches
 {
-    class t1_air
+    class T1_Units_Faction1_Air
     {
         units[] = {
             "T1_Pilot_Standard_F",
@@ -31,7 +31,7 @@ class CfgPatches
         magazines[] = {};
         requiredVersion = 0.1;
         requiredAddons[] = {
-            "t1_units",
+            "T1_Units_Faction1",
 			"Extended_Eventhandlers"
         };
     };
@@ -41,11 +41,11 @@ class Extended_Init_Eventhandlers
 {
 	class t1_heli_medium_attack
 	{
-		init = "_null = _this execVM 't1_air\AddFRIES.sqf'";
+		init = "_null = _this execVM 'T1_Units_Faction1_Air\AddFRIES.sqf'";
 	};
 	class t1_heli_medium_rockets
 	{
-		init = "_null = _this execVM 't1_air\AddFRIES.sqf'";
+		init = "_null = _this execVM 'T1_Units_Faction1_Air\AddFRIES.sqf'";
 	};
 };
 
@@ -152,7 +152,7 @@ class cfgVehicles
     class T1_Pilot_Standard_F : B_Helipilot_F
     {
         scope = 2;
-        faction = "T1_Units";
+        faction = "T1_Units_Faction1";
         vehicleClass = "Pilot";
         displayName = "T1 Pilot";
         model = "\A3\Characters_F\Common\coveralls.p3d";
@@ -248,7 +248,7 @@ class cfgVehicles
     class RHS_MELB_MH6M;
     class t1_heli_light_trans : RHS_MELB_MH6M
     {
-        faction = "T1_Units";
+        faction = "T1_Units_Faction1";
         crew = "T1_Pilot_Camo_F";
         reportOwnPosition = 1;
         class TransportBackpacks {
@@ -262,7 +262,7 @@ class cfgVehicles
     class t1_heli_medium_attack : I_Heli_light_03_dynamicLoadout_F
     {
         scope = 2;
-        faction = "T1_Units";
+        faction = "T1_Units_Faction1";
         crew = "T1_Pilot_Camo_F";
         reportOwnPosition = 1;
 		side = 1;
@@ -289,7 +289,7 @@ class cfgVehicles
     };
     class t1_heli_medium_rockets : rhs_uh60m_esss
     {
-        faction = "T1_Units";
+        faction = "T1_Units_Faction1";
         crew = "T1_Pilot_Camo_F";
         reportOwnPosition = 1;
         class Components : Components
@@ -329,7 +329,7 @@ class cfgVehicles
     class RHS_CH_47F;
     class t1_heli_heavy_trans : RHS_CH_47F
     {
-        faction = "T1_Units";
+        faction = "T1_Units_Faction1";
         crew = "T1_Pilot_Camo_F";
         vehicleClass = "Air";
         reportOwnPosition = 1;
@@ -347,7 +347,7 @@ class cfgVehicles
     class UK3CB_BAF_Apache_AH1_DynamicLoadout;
     class t1_heli_heavy_attack : UK3CB_BAF_Apache_AH1_DynamicLoadout
     {
-        faction = "T1_Units";
+        faction = "T1_Units_Faction1";
         crew = "T1_Pilot_Camo_F";
         class TransportBackpacks {
             class repairkit {
@@ -361,7 +361,7 @@ class cfgVehicles
     };
     class B_Plane_Fighter_01_F;
     class t1_fighterjet_oneseat : B_Plane_Fighter_01_F {
-        faction = "T1_Units";
+        faction = "T1_Units_Faction1";
         crew = "T1_Pilot_Camo_F";
         reportRemoteTargets = 1;
         reportOwnPosition = 1;

@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class t1_vehicles
+	class T1_Units_Faction1_Vehicles
 	{
 		units[] = {
 			"t1_car_light",
@@ -25,7 +25,7 @@ class CfgPatches
 		magazines[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {
-			"t1_units",
+			"T1_Units_Faction1",
 			"rhsusf_c_hmmwv",
 			"rhsusf_c_RG33L",
 			"rhsusf_c_Caiman",
@@ -72,7 +72,7 @@ class CfgVehicles {
 	class rhsusf_m1025_w_s;
 	class t1_car_light : rhsusf_m1025_w_s 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -181,7 +181,7 @@ class CfgVehicles {
 	class rhsusf_m1025_w_s_m2;
 	class t1_car_light_mg : rhsusf_m1025_w_s_m2 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -289,7 +289,7 @@ class CfgVehicles {
 	
 	class t1_car_light_MAT : rhsusf_m1025_w_s_m2 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -381,7 +381,7 @@ class CfgVehicles {
 	class rhsusf_m1025_w_s_Mk19;
 	class t1_car_light_gl : rhsusf_m1025_w_s_Mk19 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -489,7 +489,7 @@ class CfgVehicles {
 	class rhsusf_m1025_d_s;
 	class t1_car_light_d : rhsusf_m1025_d_s 
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		crew = "T1_Soldier_F_D";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -598,7 +598,7 @@ class CfgVehicles {
 	class rhsusf_m1025_d_s_m2;
 	class t1_car_light_mg_d : rhsusf_m1025_d_s_m2 
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		crew = "T1_Soldier_F_D";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -706,7 +706,7 @@ class CfgVehicles {
 	
 	class t1_car_light_MAT_d : rhsusf_m1025_d_s_m2 
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		crew = "T1_Soldier_F_D";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -798,7 +798,7 @@ class CfgVehicles {
 	class rhsusf_m1025_d_s_Mk19;
 	class t1_car_light_gl_d : rhsusf_m1025_d_s_Mk19 
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		crew = "T1_Soldier_F_D";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -947,7 +947,7 @@ class CfgVehicles {
 	class rhsusf_M1232_usarmy_wd;
 	class t1_mrap : rhsusf_M1232_usarmy_wd 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -1053,7 +1053,7 @@ class CfgVehicles {
 	};
 	class t1_mrap_mg : rhsusf_M1230_M2_usarmy_wd 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -1166,7 +1166,7 @@ class CfgVehicles {
 	};
 	class t1_mrap_gl : rhsusf_M1230_MK19_usarmy_wd 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -1281,7 +1281,7 @@ class CfgVehicles {
 	class rhsusf_M1232_usarmy_d;
 	class t1_mrap_d : rhsusf_M1232_usarmy_d 
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		crew = "T1_Soldier_F_D";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -1388,7 +1388,7 @@ class CfgVehicles {
 	};
 	class t1_mrap_mg_d : rhsusf_M1230_M2_usarmy_d 
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		crew = "T1_Soldier_F_D";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -1498,7 +1498,7 @@ class CfgVehicles {
 	};
 	class t1_mrap_gl_d : rhsusf_M1230_MK19_usarmy_d 
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		crew = "T1_Soldier_F_D";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -1613,7 +1613,7 @@ class CfgVehicles {
 	class UK3CB_BAF_Coyote_Logistics_L134A1_W;
 	class t1_support_light : UK3CB_BAF_Coyote_Logistics_L134A1_W 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		editorSubcategory = "T1_EdSubcat_Support";
 		reportOwnPosition = 1;

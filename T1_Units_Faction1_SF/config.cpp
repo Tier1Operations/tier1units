@@ -5,7 +5,7 @@
 #define MEDICALITEMS2 "ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_packingBandage","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_splint","ACE_splint" 
 
 class CfgPatches {
-    class t1_sf {
+    class T1_Units_Faction1_SF {
 		units[] = {
 			"T1_AssaultPack_Lead_SF",
 			"T1_SF_FTL_Standard_F",
@@ -34,7 +34,7 @@ class CfgPatches {
 		};
 		requiredVersion = 0.1;
 		requiredAddons[] = {
-			"t1_units",	// and nested dependencies
+			"T1_Units_Faction1",	// and nested dependencies
 			"rhsusf_c_mrzr",
 			"A3_Soft_F_Exp_LSV_02"
 		};
@@ -182,7 +182,7 @@ class CfgVehicles {
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "SF";
 		attendant = 1;
 		displayName = "T1 SF FTL";
@@ -368,7 +368,7 @@ class CfgVehicles {
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "SF";
 		attendant = 1;
 		displayName = "T1 SF AR";
@@ -442,7 +442,7 @@ class CfgVehicles {
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "SF";
 		attendant = 1;
 		displayName = "T1 SF DM";
@@ -609,7 +609,7 @@ class CfgVehicles {
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "SF";
 		attendant = 1;
 		displayName = "T1 SF Rifleman AT";
@@ -689,7 +689,7 @@ class CfgVehicles {
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "SF";
 		displayName = "T1 SF Explosive Specialist";
 		weapons[] = {
@@ -844,7 +844,7 @@ class CfgVehicles {
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_m81";
 		t1_DutyMod = 0.95;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "SF";
 		displayName = "T1 SF Medic";
 		T1_NoMedicIcon = 0;
@@ -998,7 +998,7 @@ class CfgVehicles {
 	class rhsusf_mrzr4_d;
 	class t1_mrzr_d: rhsusf_mrzr4_d 
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		crew = "T1_Soldier_F_D";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -1138,7 +1138,7 @@ class CfgVehicles {
 	
 	class t1_mrzr: t1_mrzr_d 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		reportOwnPosition = 1;
 
@@ -1177,7 +1177,7 @@ class CfgVehicles {
 			class CargoTurret_05: CargoTurret_05{};
 		};
 		
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Soldier_F";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;

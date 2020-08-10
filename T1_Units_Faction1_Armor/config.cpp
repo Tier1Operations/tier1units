@@ -5,7 +5,7 @@
 
 class CfgPatches
 {
-	class t1_armor
+	class T1_Units_Faction1_Armor
 	{
 		units[] =
 		{
@@ -23,7 +23,7 @@ class CfgPatches
 		requiredVersion = 0.1;
 		requiredAddons[] =
 		{
-			"t1_units"
+			"T1_Units_Faction1"
 		};
 	};
 };
@@ -33,7 +33,7 @@ class cfgVehicles
 	class T1_Crewman_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 Crewman";
 		uniformClass = "T1_U_Pilot_Camo";
@@ -116,7 +116,7 @@ class cfgVehicles
 	class T1_Crew_Commander_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 Crew Commander";
 		uniformClass = "T1_U_Pilot_Camo";
@@ -203,7 +203,7 @@ class cfgVehicles
 	class T1_Sentinel_Commander_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 Sentinel Commander";
 		uniformClass = "T1_U_Pilot_Camo";
@@ -284,7 +284,7 @@ class cfgVehicles
 	class T1_Sentinel_Gunner_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 Sentinel Gunner";
 		uniformClass = "T1_U_Pilot_Camo";
@@ -361,7 +361,7 @@ class cfgVehicles
 	class T1_Sentinel_Driver_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 Sentinel Driver Medic";
 		uniformClass = "T1_U_Pilot_Camo";
@@ -452,7 +452,7 @@ class cfgVehicles
 	{
 		scope = 2;
 		scopeCurator = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Crewman_Standard_F";
 		transportmaxmagazines = 99999;
 		transportmaxweapons = 9999;
@@ -579,14 +579,14 @@ class cfgVehicles
 	class Leopard_2_wd;
 	class t1_tank : Leopard_2_wd
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Crewman_Standard_F";
 		reportOwnPosition = 1;
 	};
 	class B_APC_Tracked_01_CRV_F;
 	class t1_support_heavy : B_APC_Tracked_01_CRV_F 
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		crew = "T1_Crewman_Standard_F";
 		editorSubcategory = "T1_EdSubcat_Support";
 		ace_repair_canRepair = 1;

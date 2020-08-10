@@ -6,7 +6,7 @@ class CfgPatches
 		weapons[] = {};
 		magazines[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"t1_recoilFix","t1_silencer_ammo_fix","rhsusf_c_weapons","t1_units"};
+		requiredAddons[] = {"t1_recoilFix","t1_silencer_ammo_fix","rhsusf_c_weapons","T1_Units_Faction1"};
 	};
 };
 

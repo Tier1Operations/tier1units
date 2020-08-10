@@ -5,7 +5,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {"T1_FB_Ghillie_Camo","T1_FB_Ghillie_Desert","T1_FB_Ghillie_Snow"};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"T1_Units"};
+		requiredAddons[] = {"T1_Units_Faction1"};
 		version = 0.1;
 	};
 };

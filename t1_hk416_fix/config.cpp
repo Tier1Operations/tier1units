@@ -6,7 +6,7 @@ class CfgPatches
 		weapons[] = {};
 		magazines[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Weapons_F", "t1_recoilFix","ace_ballistics","t1_units"};
+		requiredAddons[] = {"A3_Weapons_F", "t1_recoilFix","ace_ballistics","T1_Units_Faction1"};
 	};
 };
 

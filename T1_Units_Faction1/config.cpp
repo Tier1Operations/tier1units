@@ -9,7 +9,7 @@
 
 class CfgPatches
 {
-	class t1_units
+	class T1_Units_Faction1
 	{
 		units[] = {
 			"T1_Kitbag_camo",
@@ -73,7 +73,7 @@ class CfgPatches
 			"T1_Platoon_Medic_Standard_F",
 			"T1_Platoon_CE_Standard_F",
 			"T1_Platoon_Sgt_Standard_F",
-			"T1_charlie_assault",	// charlie 1 is 6x assault
+			"T1_charlie_assault",
 			"T1_charlie_marksman",
 			"T1_charlie_grenadier",
 			"T1_charlie_machinegunner",
@@ -143,16 +143,16 @@ class CfgEditorSubcategories
 };
 class CfgFactionClasses
 {
-	class T1_Units
+	class T1_Units_Faction1
 	{
-		displayName = "T1 Units";
+		displayName = "T1 Units Faction 1";
 		side = 1;
 		priority = 10;
 		icon = "\t1_textures\cfgFactionClasses_T1_ca.paa";
 	};
-	class T1_Units_Desert
+	class T1_Units_Faction1_Desert
     {
-        displayName = "T1 Units (Desert)";
+        displayName = "T1 Units Faction 1 (Desert)";
         side = 1;
         priority = 10;
         icon = "\t1_textures\cfgFactionClasses_T1_ca.paa";
@@ -1261,7 +1261,7 @@ class CfgVehicles
 	class B_RangeMaster_F;
 	class T1_Instructor_Polo_Black_F: B_RangeMaster_F
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		attendant = 1;
 		displayName = "T1 Instructor";
@@ -1336,7 +1336,7 @@ class CfgVehicles
 	};
 	class T1_Instructor_Polo_Orange_F: T1_Instructor_Polo_Black_F	
 	{
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		attendant = 1;
 		displayName = "T1 Instructor";
@@ -1438,7 +1438,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		attendant = 1;
 		T1_NoMedicIcon = 0;
@@ -1531,7 +1531,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		attendant = 1;
 		T1_NoMedicIcon = 0;
@@ -1641,7 +1641,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		attendant = 1;
 		T1_NoMedicIcon = 0;
@@ -1732,7 +1732,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		attendant = 1;
 		displayName = "T1 Sniper Light";
@@ -1844,7 +1844,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 AT Specialist";
 		weapons[] = {
@@ -1905,7 +1905,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 AAT Specialist";
 		weapons[] = {
@@ -1968,7 +1968,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 Medium AT Specialist";
 		weapons[] = {
@@ -2030,7 +2030,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 Medium AAT Specialist";
 		weapons[] = {
@@ -2089,7 +2089,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 AA Specialist";
 		weapons[] = {
@@ -2149,7 +2149,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 AAA Specialist";
 		weapons[] = {
@@ -2214,7 +2214,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 MG Specialist";
 		weapons[] = {
@@ -2270,7 +2270,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		displayName = "T1 AMG Specialist";
 		weapons[] = {
@@ -2345,7 +2345,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		attendant = 1;
 		displayName = "T1 Scout TL";
@@ -2464,7 +2464,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Special";
 		attendant = 1;
 		displayName = "T1 Scout [MM DLC]";
@@ -2556,7 +2556,7 @@ class CfgVehicles
 	class T1_Section_Lead_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Section Leader";
 		weapons[] = {
@@ -2655,7 +2655,7 @@ class CfgVehicles
 	class T1_Section_Sgt_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Section Sergeant";
 		weapons[] = {
@@ -2764,7 +2764,7 @@ class CfgVehicles
 	class T1_Section_CLS_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Combat Life Saver";
 		weapons[] = {
@@ -2865,7 +2865,7 @@ class CfgVehicles
 	class T1_Section_AR_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Automatic Rifleman";
 		weapons[] = {
@@ -2922,7 +2922,7 @@ class CfgVehicles
 	class T1_Section_AR_Alt_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Automatic Rifleman Light";
 		weapons[] = {
@@ -2981,7 +2981,7 @@ class CfgVehicles
 	class T1_Section_AAR_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Asst. Automatic Rifleman";
 		weapons[] = {
@@ -3053,7 +3053,7 @@ class CfgVehicles
 	class T1_Section_AT_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Rifleman AT";
 		weapons[] = {
@@ -3139,7 +3139,7 @@ class CfgVehicles
 	class T1_Section_AT_DM_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Rifleman AT DM";
 		weapons[] = {
@@ -3221,7 +3221,7 @@ class CfgVehicles
 	class T1_Platoon_Lead_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Lead";
 		weapons[] = {
@@ -3318,7 +3318,7 @@ class CfgVehicles
 	class T1_Platoon_Medic_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Medic";
 		weapons[] = {
@@ -3437,7 +3437,7 @@ class CfgVehicles
 	class T1_Platoon_CE_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Combat Engineer";
 		weapons[] = {
@@ -3515,7 +3515,7 @@ class CfgVehicles
 	class T1_Platoon_Sgt_Standard_F: T1_Soldier_F
 	{
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Sergeant";
 		weapons[] = {
@@ -3604,7 +3604,7 @@ class CfgVehicles
 	};
 	class T1_charlie_assault : T1_Soldier_F {	// Charlie 1 is 6 of these guys.
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Charlie Assault";
 		weapons[] = {
@@ -3697,7 +3697,7 @@ class CfgVehicles
 	};
 	class T1_charlie22 : T1_Soldier_F {	// grenadier
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Charlie Grenadier";
 		weapons[] = {
@@ -3761,7 +3761,7 @@ class CfgVehicles
 	};
 	class T1_charlie23 : T1_Soldier_F { // marksman
 		scope = 2;
-		faction = "T1_Units";
+		faction = "T1_Units_Faction1";
 		vehicleClass = "Section";
 		displayName = "Charlie Marksman";
 		weapons[] = {

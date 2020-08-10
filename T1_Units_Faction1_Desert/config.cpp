@@ -3,7 +3,7 @@
 
 class CfgPatches
 {
-	class t1_units_desert
+	class T1_Units_Faction1_Desert
 	{
 		units[] = {
 			"T1_SF_Marksman_SOS_Standard_F_D",
@@ -80,7 +80,7 @@ class CfgPatches
 			"T1_weap_sierra_desert"
 		};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"t1_units"};
+		requiredAddons[] = {"T1_Units_Faction1"};
 	};
 };
 class CfgVehicleClasses
@@ -309,7 +309,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_tan";
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 
 		backpack = "T1_B_AssaultPack_SF_DM_Desert";
 		weapons[] = {
@@ -344,7 +344,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_tan";
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		backpack = "T1_B_AssaultPack_Exp_SF_Desert";
 		weapons[] = {
 			"T1_SF_m4a1_blockII_SD_D",
@@ -381,7 +381,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_tan";
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 
 		backpack = "T1_AssaultPack_medic_sf_Desert";
 		weapons[] = {
@@ -418,7 +418,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_tan";
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 
 		backpack = "T1_AssaultPack_Lead_SF_Desert";
 
@@ -442,7 +442,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_tan";
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		
 		backpack = "T1_B_AssaultPack_AT_SF";
 		weapons[] = {
@@ -479,7 +479,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		uniformClass = "t1_rhs_uniform_g3_tan";
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		weapons[] = {
 			"T1_weap_mmg_sf_d",
 			"T1_SF_pistol",
@@ -514,7 +514,7 @@ class CfgVehicles
 	class T1_Spotter_Standard_F;
 	class T1_Spotter_Standard_F_D: T1_Spotter_Standard_F
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		uniformClass = "T1_U_B_FullGhillie_ard";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
@@ -535,7 +535,7 @@ class CfgVehicles
 	class T1_Sniper_Standard_F;
 	class T1_Sniper_Standard_F_D: T1_Sniper_Standard_F
 	{
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		uniformClass = "T1_U_B_FullGhillie_ard";
 		model = "\Ghillie\ghillie.p3d";
 		modelSides[] = {3,1};
@@ -573,7 +573,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 Spotter Light";
 		uniformClass = "T1_U_B_FullGhillie_ard";
@@ -610,7 +610,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 Sniper Light";
 		uniformClass = "T1_U_B_FullGhillie_ard";
@@ -671,7 +671,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 AT Specialist";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -697,7 +697,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 AAT Specialist";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -723,7 +723,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 Medium AT Specialist";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -749,7 +749,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 Medium AAT Specialist";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -775,7 +775,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 AA Specialist";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -801,7 +801,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 AAA Specialist";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -827,7 +827,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 MG Specialist";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -853,7 +853,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 AMG Specialist";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -879,7 +879,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 Scout TL";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -908,7 +908,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		t1_DutyMod = 0.965;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Special";
 		displayName = "T1 Scout [MM DLC]";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -947,7 +947,7 @@ class CfgVehicles
 	class T1_Section_Lead_Standard_F_D: T1_Section_Lead_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Section";
 		displayName = "Section Leader";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -973,7 +973,7 @@ class CfgVehicles
 	class T1_Section_Sgt_Standard_F_D: T1_Section_Sgt_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Section";
 		displayName = "Section Sergeant";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -998,7 +998,7 @@ class CfgVehicles
 	class T1_Section_CLS_Standard_F_D: T1_Section_CLS_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Section";
 		displayName = "Combat Life Saver";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -1024,7 +1024,7 @@ class CfgVehicles
 	class T1_Section_AR_Standard_F_D: T1_Section_AR_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Section";
 		displayName = "Automatic Rifleman";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -1049,7 +1049,7 @@ class CfgVehicles
 	class T1_Section_AR_Alt_F_D: T1_Section_AR_Alt_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Section";
 		displayName = "Automatic Rifleman Light";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -1074,7 +1074,7 @@ class CfgVehicles
 	class T1_Section_AAR_Standard_F_D: T1_Section_AAR_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Section";
 		displayName = "Asst. Automatic Rifleman";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -1099,7 +1099,7 @@ class CfgVehicles
 	class T1_Section_AT_Standard_F_D: T1_Section_AT_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Section";
 		displayName = "Rifleman AT";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -1123,7 +1123,7 @@ class CfgVehicles
 	class T1_Section_AT_DM_F_D: T1_Section_AT_DM_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Section";
 		displayName = "Rifleman AT DM";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -1147,7 +1147,7 @@ class CfgVehicles
 	class T1_Platoon_Lead_Standard_F_D: T1_Platoon_Lead_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Lead";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -1172,7 +1172,7 @@ class CfgVehicles
 	class T1_Platoon_Medic_Standard_F_D: T1_Platoon_Medic_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Medic";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -1197,7 +1197,7 @@ class CfgVehicles
 	class T1_Platoon_CE_Standard_F_D: T1_Platoon_CE_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Combat Engineer";
 		uniformClass = "t1_rhs_uniform_FROG01_d";
@@ -1222,7 +1222,7 @@ class CfgVehicles
 	class T1_Platoon_Sgt_Standard_F_D: T1_Platoon_Sgt_Standard_F
 	{
 		scope = 2;
-		faction = "T1_Units_Desert";
+		faction = "T1_Units_Faction1_Desert";
 		vehicleClass = "Platoon";
 		displayName = "Platoon Sergeant";
 		uniformClass = "t1_rhs_uniform_FROG01_d";

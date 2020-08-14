@@ -12,7 +12,7 @@ private _cannonM = ["B_MBT_01_arty_F","B_T_MBT_01_arty_F","I_MBT_01_arty_F","O_T
 
 private _rocketL = ["LOP_AA_BM21","LOP_CDF_BM21","LOP_IA_BM21","LOP_IA_BM21_C","LOP_PESH_BM21","rhsgref_cdf_b_reg_BM21","LOP_ChDKZ_BM21","LOP_AM_OPF_BM21","RHS_BM21_MSV_01","RHS_BM21_VDV_01","RHS_BM21_VMF_01","RHS_BM21_VV_01","LOP_SYR_BM21","LOP_TKA_BM21","LOP_US_BM21","rhsgref_cdf_reg_BM21","rhsgref_ins_g_BM21","LOP_IRAN_BM21","LOP_PESH_IND_BM21","LOP_AM_BM21","LOP_UKR_BM21","LOP_UA_BM21","LOP_UN_BM21","min_rf_2b26","min_rf_2b26_desert","min_rf_2b26_winter"];
 
-private _rocketM = ["B_MBT_01_mlrs_F","B_T_MBT_01_mlrs_F","I_MBT_01_mlrs_F","I_E_Truck_02_MRL_F","I_Truck_02_MRL_F","rhsusf_M142_usarmy_D","rhsusf_M142_usarmy_WD","rhsusf_M142_usmc_WD"];
+private _rocketM = ["B_MBT_01_mlrs_F","B_T_MBT_01_mlrs_F","I_MBT_01_mlrs_F","I_E_Truck_02_MRL_F","I_Truck_02_MRL_F","O_Truck_02_MRL_F","O_T_Truck_02_MRL_F","O_R_Truck_02_MRL_ard_F","O_R_Truck_02_MRL_F","rhsusf_M142_usarmy_D","rhsusf_M142_usarmy_WD","rhsusf_M142_usmc_WD"];
 
 private _rocketH = ["B_Ship_MRLS_01_F"];
 

@@ -3,7 +3,7 @@
 
 params ["_nr","_maxChar","_removeDecimal"];
 
-//DIAG_LOG format ["PARSENUMBER - START - _nr: %1", _nr];
+DIAG_LOG format ["PARSENUMBER - START - _nr: %1", _nr];
 
 private _illegal = false;
 
@@ -80,7 +80,7 @@ if (_nr isEqualType "" and count _nr > 0) then {
 			};
 			
 			if (_abort) exitWith {
-				//DIAG_LOG format ["PARSENUMBER - ABORTING - CHAR: %1", _nr select [_i, 1]];
+				DIAG_LOG format ["PARSENUMBER - ABORTING - CHAR: %1", _nr select [_i, 1]];
 			};
 		};
 		
@@ -90,10 +90,10 @@ if (_nr isEqualType "" and count _nr > 0) then {
 } else {_illegal = true};
 
 if (_illegal) then {
-	//DIAG_LOG format["PARSENUMBER - IF FALSE - CHECK1: %1 - CHECK2: %2 - CHECK3: %3 - CHECK4: %4", _nr isEqualType "", count _nr, count _nr <= _maxChar, _maxChar == 0];
+	DIAG_LOG format["PARSENUMBER - IF FALSE - CHECK1: %1 - CHECK2: %2 - CHECK3: %3 - CHECK4: %4", _nr isEqualType "", count _nr, count _nr <= _maxChar, _maxChar == 0];
 	_nr = -9999999;
 };
 
-//DIAG_LOG format ["PARSENUMBER END - _nr: %1", _nr];
+DIAG_LOG format ["PARSENUMBER END - _nr: %1", _nr];
 
 _nr

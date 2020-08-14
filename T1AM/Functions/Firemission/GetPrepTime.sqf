@@ -2,7 +2,7 @@
 
 params ["_tube", "_asset", "_assetType", "_chosenTargetPos", "_firstRound", "_lastFiringPos", "_gunAngle", "_lastGunAngle", "_prePlotted", "_sheaf", "_mustWait", "_mustWaitTime", "_timeBetweenRounds"];
 
-_sleepTime = random 0.5;
+_sleepTime = random 0.25;
 
 // Comms/prep time.
 if (_firstRound) then {
@@ -16,12 +16,12 @@ if (_firstRound) then {
 		} forEach _arrayTRP;
 	};
 	
-	//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- CLOSETOTRP: %2", _tube, _closeToTRP];
+	DIAG_LOG format["TUBE: %1 - FIRING LOOP -- CLOSETOTRP: %2", _tube, _closeToTRP];
 	
 	// Has fired previously on this position or is preplotted or is close to a TRP.
 	if (((_lastFiringPos vectorDistance _chosenTargetPos < 300) and (_lastGunAngle == _gunAngle)) or _prePlotted or _closeToTRP) then {
 		
-		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
+		DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
 		
 		switch (_assetType) do {
 			
@@ -30,8 +30,13 @@ if (_firstRound) then {
 				_sleepTime = _sleepTime + 6 + (random 5);
 			};
 			
-			// BM21.
+			// RHS BM21.
 			case ("RHS_BM21"):{
+				_sleepTime = _sleepTime + 7 + (random 6);
+			};
+			
+			// 2035RAF BM21.
+			case ("2035RAF_BM21"):{
 				_sleepTime = _sleepTime + 7 + (random 6);
 			};
 			
@@ -58,7 +63,7 @@ if (_firstRound) then {
 		
 	} else {
 		
-		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS NOT FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
+		DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS NOT FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
 		
 		// Firing on new position.
 		switch (_assetType) do {
@@ -69,8 +74,14 @@ if (_firstRound) then {
 				if (_gunAngle == "HIGH") then {_sleepTime = _sleepTime + 30 + (random 6);};
 			};
 			
-			// BM21.
+			// RHS BM21.
 			case ("RHS_BM21"):{
+				if (_gunAngle == "LOW") then {_sleepTime = _sleepTime + 35 + (random 5);};
+				if (_gunAngle == "HIGH") then {_sleepTime = _sleepTime + 40 + (random 7);};
+			};
+			
+			// 2035RAF BM21.
+			case ("2035RAF_BM21"):{
 				if (_gunAngle == "LOW") then {_sleepTime = _sleepTime + 35 + (random 5);};
 				if (_gunAngle == "HIGH") then {_sleepTime = _sleepTime + 40 + (random 7);};
 			};
@@ -128,13 +139,13 @@ if (_firstRound) then {
 		
 		// Rocket artillery.
 		case ("ROCKETL"):{
-			_sleepTime = _sleepTime + (random 0.3);
+			_sleepTime = _sleepTime + (random 0.1);
 		};
 		case ("ROCKETM"):{
-			_sleepTime = _sleepTime + (random 0.6);
+			_sleepTime = _sleepTime + (random 0.3);
 		};
 		case ("ROCKETH"):{
-			_sleepTime = _sleepTime + (random 2);
+			_sleepTime = _sleepTime + (random 1);
 		};
 		
 		// Everything else.
@@ -151,7 +162,7 @@ switch (_assetType) do {
 		if (_sheaf == "POINT") then {
 			_sleepTime = _sleepTime + 0.1;
 		} else {
-			_sleepTime = _sleepTime + 3;
+			_sleepTime = _sleepTime + 2;
 		};
 	};
 	
@@ -160,7 +171,7 @@ switch (_assetType) do {
 		if (_sheaf == "POINT") then {
 			_sleepTime = _sleepTime + 0.1;
 		} else {
-			_sleepTime = _sleepTime + 1.5;
+			_sleepTime = _sleepTime + 1.0;
 		};
 	};
 };
@@ -179,6 +190,8 @@ _sleepTime = _sleepTime max 1;
 
 // Wait no longer than 130 seconds. Other scripts will not wait longer than 130 seconds (as a safety precaution).
 _sleepTime = _sleepTime min 130;
+
+DIAG_LOG format["GET PREP TIME: %1 | _sleepTime: %2", _tube, _sleepTime];
 
 _sleepTime = time + _sleepTime;
 

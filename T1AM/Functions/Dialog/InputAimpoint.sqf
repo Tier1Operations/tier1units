@@ -38,9 +38,9 @@ _y = _posReal select 1;
 
 T1AM_Elevation = ((AGLtoASL [_x,_y,0]) select 2) max 0;
 
-//DIAG_LOG format["AIMPOINT MANUAL -- _x: %1", _x];
-//DIAG_LOG format["AIMPOINT MANUAL -- _y: %1", _y];
-//DIAG_LOG format["AIMPOINT MANUAL -- T1AM_Elevation: %1", T1AM_Elevation];
+DIAG_LOG format["AIMPOINT MANUAL -- _x: %1", _x];
+DIAG_LOG format["AIMPOINT MANUAL -- _y: %1", _y];
+DIAG_LOG format["AIMPOINT MANUAL -- T1AM_Elevation: %1", T1AM_Elevation];
 
 T1AM_X = _x;
 T1AM_Y = _y;
@@ -55,7 +55,7 @@ private _pos = [T1AM_X,T1AM_Y,T1AM_Elevation];
 private _vehicle = vehicle leader T1AM_SelectedAsset;
 private _distance = (getPosASL _vehicle) vectorDistance _pos;
 
-//DIAG_LOG format["AIMPOINT MANUAL -- POS BEFORE RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
+DIAG_LOG format["AIMPOINT MANUAL -- POS BEFORE RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
 
 private _initialMiss = true;
 if (_distance <= 750) then {_initialMiss = false};
@@ -132,7 +132,7 @@ if (_initialMiss) then {
 	T1AM_X = _errorPos select 0;
 	T1AM_Y = _errorPos select 1;
 	
-	//DIAG_LOG format["AIMPOINT MANUAL -- POS AFTER RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
+	DIAG_LOG format["AIMPOINT MANUAL -- POS AFTER RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
 };
 
 

@@ -1,12 +1,12 @@
-// RHS BM21 Rockets
-// Low angle
+// 2035 RAF BM21 Rockets
+// High angle
 
 params ["_warheadType","_distance"];
 
 // Minumum delay before firing a shot
-private _timeBetweenRounds = 0.5;
-private _minimumRange = 100;
-private _maximumRange = 30000;
+private _timeBetweenRounds = 0.25;
+private _minimumRange = 1100;
+private _maximumRange = 17000;
 private _regularMaxRange = _maximumRange;
 
 // Special long range guiding not allowed.

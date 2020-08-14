@@ -126,13 +126,15 @@ class CfgFunctions
 		};
 		class Profiles
 		{
-			class ProfileBM21 {file = "T1AM\Functions\Profiles\ProfileBM21.sqf"};
 			class ProfileRocketsHA {file = "T1AM\Functions\Profiles\ProfileRocketsHA.sqf"};
 			class ProfileRocketsLA {file = "T1AM\Functions\Profiles\ProfileRocketsLA.sqf"};
 			class ProfileCannonHA {file = "T1AM\Functions\Profiles\ProfileCannonHA.sqf"};
 			class ProfileCannonLA {file = "T1AM\Functions\Profiles\ProfileCannonLA.sqf"};
 			class ProfileMortar {file = "T1AM\Functions\Profiles\ProfileMortar.sqf"};
 			class ProfileMK41 {file = "T1AM\Functions\Profiles\ProfileMK41.sqf"};
+			class ProfileRHSBM21 {file = "T1AM\Functions\Profiles\ProfileRHSBM21.sqf"};
+			class Profile2035RAFBM21LA {file = "T1AM\Functions\Profiles\Profile2035RAFBM21LA.sqf"};
+			class Profile2035RAFBM21HA {file = "T1AM\Functions\Profiles\Profile2035RAFBM21HA.sqf"};
 		};
 		class Debug
 		{

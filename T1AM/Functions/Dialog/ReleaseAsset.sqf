@@ -2,14 +2,14 @@
 
 private _asset = str T1AM_ControlledAssetLocal;
 
-//DIAG_LOG format["RELEASE ASSET START | _asset: %1", _asset];
+DIAG_LOG format["RELEASE ASSET START | _asset: %1", _asset];
 
 if (_asset == "<NULL-group>" or _asset == "any") exitWith {
 	T1AM_HaveAimpoint = false;
 	T1AM_PrePlotted = false;
 	private _str = "NO ASSET UNDER CONTROL";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
-	//DIAG_LOG format["RELEASE ASSET EXITWITH | _asset: %1 | _asset == ""<NULL-group>"": %2 | _asset == ""any"": %3", _asset, _asset == "<NULL-group>", _asset == "any"];
+	DIAG_LOG format["RELEASE ASSET EXITWITH | _asset: %1 | _asset == ""<NULL-group>"": %2 | _asset == ""any"": %3", _asset, _asset == "<NULL-group>", _asset == "any"];
 };
 
 // If asset has performed at least 1 one mission, send an End Mission message.
@@ -17,7 +17,7 @@ private _asset = T1AM_ControlledAssetLocal;
 private _endMission = _asset getVariable ["T1AM_endMission", true];
 if (!_endMission) then {
 	[4, [], 2] spawn T1AM_Fnc_LoadingScreen;
-	//DIAG_LOG format["RELEASE ASSET 1 | _asset: %1 | !_endMission: %2", _asset, !_endMission];
+	DIAG_LOG format["RELEASE ASSET 1 | _asset: %1 | !_endMission: %2", _asset, !_endMission];
 	
 	[_asset] spawn {
 		params ["_asset"];
@@ -26,10 +26,10 @@ if (!_endMission) then {
 	};
 	
 } else {
-	//DIAG_LOG format["RELEASE ASSET 2 | _asset: %1 | !_endMission: %2", _asset, !_endMission];
+	DIAG_LOG format["RELEASE ASSET 2 | _asset: %1 | !_endMission: %2", _asset, !_endMission];
 	[4, [], 3] spawn T1AM_Fnc_LoadingScreen;
 };
 
 call T1AM_Fnc_ResetVars;
 
-//DIAG_LOG format["RELEASE ASSET END | _asset: %1", _asset];
+DIAG_LOG format["RELEASE ASSET END | _asset: %1", _asset];

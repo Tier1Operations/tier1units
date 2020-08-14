@@ -4,7 +4,7 @@ disableSerialization;
 
 params [["_prePlotted", false, [true]]];
 
-//DIAG_LOG "CONTROL START";
+DIAG_LOG "CONTROL START";
 
 
 // Abort if there's something wrong with the leader's vehicle/gunner.
@@ -18,7 +18,7 @@ if (_abort) exitWith {
 	[false] call T1AM_Fnc_EndMission;
 };
 
-//DIAG_LOG format["CONTROL - _prePlotted: %1", _prePlotted];
+DIAG_LOG format["CONTROL - _prePlotted: %1", _prePlotted];
 
 if (_prePlotted and {count T1AM_SelectedPrePlotted < 1}) exitWith {
 	private _str = "NO MISSION SELECTED";
@@ -224,7 +224,7 @@ if (_prePlotted) then {
 	
 	T1AM_LastPos = _lastPos;
 	
-	//DIAG_LOG format["CONTROL - PREPLOTTED MISSION - T1AM_LastPos: %1", T1AM_LastPos];
+	DIAG_LOG format["CONTROL - PREPLOTTED MISSION - T1AM_LastPos: %1", T1AM_LastPos];
 };
 
 
@@ -233,7 +233,7 @@ if ((count T1AM_FireMissionCurrent) > 0) then {
 	_fireMission = T1AM_FireMissionCurrent;
 	_lastPos = _fireMission select 1;
 	T1AM_LastPos = _lastPos;
-	//DIAG_LOG format["CONTROL - CURRENT FIRE MISSION - T1AM_LastPos: %1", T1AM_LastPos];
+	DIAG_LOG format["CONTROL - CURRENT FIRE MISSION - T1AM_LastPos: %1", T1AM_LastPos];
 };
 
 
@@ -276,8 +276,8 @@ _lastSheafDir = T1AM_LastSheafDir;
 _lastSheafDist = T1AM_LastSheafDist;
 _lastRemarks = T1AM_LastRemarks;
 
-//DIAG_LOG format["CONTROL GPSX 1: %1", _lastGPSX];
-//DIAG_LOG format["CONTROL GPSY 1: %1", _lastGPSY];
+DIAG_LOG format["CONTROL GPSX 1: %1", _lastGPSX];
+DIAG_LOG format["CONTROL GPSY 1: %1", _lastGPSY];
 
 // Sheaf size X
 if (_lastSheafSizeX != 0) then {
@@ -310,18 +310,18 @@ private _posMap = [[_lastGPSX, _lastGPSY]] call T1AM_Fnc_PosToMapGrid;
 private _xMap = parseNumber (_posMap select 0);
 private _yMap = parseNumber (_posMap select 1);
 
-//DIAG_LOG format["CONTROL GPSX 2: %1", _posMap select 0];
-//DIAG_LOG format["CONTROL GPSX 3: %1", _xMap];
-//DIAG_LOG format["CONTROL GPSY 2: %1", _posMap select 1];
-//DIAG_LOG format["CONTROL GPSY 3: %1", _yMap];
+DIAG_LOG format["CONTROL GPSX 2: %1", _posMap select 0];
+DIAG_LOG format["CONTROL GPSX 3: %1", _xMap];
+DIAG_LOG format["CONTROL GPSY 2: %1", _posMap select 1];
+DIAG_LOG format["CONTROL GPSY 3: %1", _yMap];
 
 _xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 (_dialog displayCtrl 47222) ctrlSetText _xMap;
 _yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
 (_dialog displayCtrl 47223) ctrlSetText _yMap;
 
-//DIAG_LOG format["CONTROL GPSX 4: %1", _xMap];
-//DIAG_LOG format["CONTROL GPSY 4: %1", _yMap];
+DIAG_LOG format["CONTROL GPSX 4: %1", _xMap];
+DIAG_LOG format["CONTROL GPSY 4: %1", _yMap];
 
 // GPS Z
 if (_lastGPSZ_AGL != 0) then {
@@ -451,7 +451,7 @@ _GPSGuidedTypes = _warheadType in T1AM_GPSGuidedTypes;
 _GPSLaserTypes = _warheadType in T1AM_GPSLaserTypes;
 _GPSSeekerTypes = _warheadType in T1AM_GPSSeekerTypes;
 
-//DIAG_LOG format["CONTROL - _warheadType: %1", _warheadType];
+DIAG_LOG format["CONTROL - _warheadType: %1", _warheadType];
 
 // Distance
 private _distance = 0;
@@ -504,14 +504,45 @@ _control lbSetCurSel _lastAngleIndex;
 
 // Get profile and max range.
 private _profile = [];
-switch true do {
-	case (_assetType == "MORTAR") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMortar};
-	case ((_assetType == "CANNON") and {_angle == "LOW"}) : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonLA};
-	case ((_assetType == "CANNON") and {_angle == "HIGH"}) : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonHA};
-	case ((_assetType == "ROCKET") and {_angle == "LOW"}) : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsLA};
-	case ((_assetType == "ROCKET") and {_angle == "HIGH"}) : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsHA};
-	case (_assetType == "MK41") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMK41};
-	case (_assetType == "RHS_BM21") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileBM21};
+switch (_assetType) do {
+	
+	case ("MORTAR") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMortar};
+	
+	case ("CANNON") : {
+		if (_angle == "LOW") then {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonLA;
+		} else {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonHA;
+		};
+	};
+	
+	case ("ROCKET") : {
+		if (_angle == "LOW") then {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsLA;
+		} else {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsHA;
+		};
+	};
+	
+	case ("MRLTRUCK") : {
+		if (_angle == "LOW") then {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsLA;
+		} else {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsHA;
+		};
+	};
+	
+	case ("MK41") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMK41};
+	
+	case ("RHS_BM21") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRHSBM21};
+	
+	case ("2035RAF_BM21") : {
+		if (_angle == "LOW") then {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_Profile2035RAFBM21LA;
+		} else {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_Profile2035RAFBM21HA;
+		};
+	};
 };
 private _maximumRange = _profile select 2;
 
@@ -520,8 +551,10 @@ private _maximumRange = _profile select 2;
 private _scatterSpread = [_distance, _maximumRange] call T1AM_Fnc_GetRandomSpread;
 switch (_assetType) do {
 	case ("MORTAR") : {_scatterSpread = _scatterSpread * 1.4};
-	case ("ROCKET") : {_scatterSpread = _scatterSpread * 1.8};
+	case ("ROCKET") : {_scatterSpread = _scatterSpread * 1.7};
+	case ("MRLTRUCK") : {_scatterSpread = _scatterSpread * 1.8};
 	case ("RHS_BM21") : {_scatterSpread = _distance / 20}; //RHS BM21 has its own spread.
+	case ("2035RAF_BM21") : {_scatterSpread = _scatterSpread * 1.4};
 };
 
 T1AM_scatterSpreadHigh = round(_scatterSpread max 1);
@@ -650,4 +683,4 @@ while {!isNull (findDisplay 47200)} do {
 	sleep 0.5;
 };
 
-//DIAG_LOG "CONTROL END";
+DIAG_LOG "CONTROL END";

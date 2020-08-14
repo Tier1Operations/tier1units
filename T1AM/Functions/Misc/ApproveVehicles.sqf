@@ -9,7 +9,7 @@ private _check = {
 		private _typeOf = typeOf _x;
 		private _approveOverride = if (_typeOf in T1AM_ApproveVehiclesOverride) then {true} else {false};
 		if (((getNumber (configFile >> "CfgVehicles" >> _typeOf >> "artilleryScanner")) == 1) or _approveOverride) then {
-			if (!unitIsUAV _x or _approveOverride) then {
+			if ((!unitIsUAV _x or _approveOverride) and {{isPlayer _x and alive _x} count (crew _x) == 0}) then {
 				_x setVariable ["T1AM_suitableVehicle", true, true];
 				
 				if (time > _x getVariable ["T1AM_localityTimer", 0]) then {
@@ -40,11 +40,11 @@ private _check = {
 						_unit enableSimulationGlobal false;
 					};
 				};
-				//DIAG_LOG format ["APPROVE VEH: %1 - TYPEOF: %2", _x, typeOf _x];
+				DIAG_LOG format ["APPROVE VEH: %1 - TYPEOF: %2", _x, typeOf _x];
 				
 			} else {
 				_x setVariable ["T1AM_suitableVehicle", false, true];
-				//DIAG_LOG format ["APPROVE VEH - NOT SUITABLE: %1 - TYPEOF: %2", _x, typeOf _x];
+				DIAG_LOG format ["APPROVE VEH - NOT SUITABLE: %1 - TYPEOF: %2", _x, typeOf _x];
 			};
 		};
 		

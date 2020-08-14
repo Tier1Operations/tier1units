@@ -20,6 +20,9 @@ if (_assetType == "") exitWith {
 
 private _profile = [];
 switch (_assetType) do {
+	
+	case ("MORTAR") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMortar};
+	
 	case ("CANNON") : {
 		if (_angle == "LOW") then {
 			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonLA;
@@ -27,9 +30,7 @@ switch (_assetType) do {
 			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileCannonHA;
 		};
 	};
-	case ("MORTAR") : {
-		_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMortar;
-	};
+	
 	case ("ROCKET") : {
 		if (_angle == "LOW") then {
 			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsLA;
@@ -37,11 +38,25 @@ switch (_assetType) do {
 			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsHA;
 		};
 	};
-	case ("MK41") : {
-		_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMK41;
+	
+	case ("MRLTRUCK") : {
+		if (_angle == "LOW") then {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsLA;
+		} else {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRocketsHA;
+		};
 	};
-	case ("RHS_BM21") : {
-		_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileBM21;
+	
+	case ("MK41") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileMK41};
+	
+	case ("RHS_BM21") : {_profile = [_warheadType, _distance] call T1AM_Fnc_ProfileRHSBM21};
+	
+	case ("2035RAF_BM21") : {
+		if (_angle == "LOW") then {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_Profile2035RAFBM21LA;
+		} else {
+			_profile = [_warheadType, _distance] call T1AM_Fnc_Profile2035RAFBM21HA;
+		};
 	};
 };
 

@@ -4,8 +4,8 @@
 params ["_warheadType","_distance"];
 
 // Minumum delay before firing a shot
-private _timeBetweenRounds = 0.5;
-private _minimumRange = 50;
+private _timeBetweenRounds = 0.25;
+private _minimumRange = 1100;
 private _maximumRange = 40000;
 private _regularMaxRange = _maximumRange;
 

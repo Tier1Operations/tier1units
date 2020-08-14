@@ -55,6 +55,6 @@ if (_isNegative) then {
 	_output = "-" + _output;
 };
 
-//DIAG_LOG format["FORMAT COORDINATES - _nr: %1 - _isNegative: %2 - _affix: %3 - _output: %4", _nr, _isNegative, _affix, _output];
+DIAG_LOG format["FORMAT COORDINATES - _nr: %1 - _isNegative: %2 - _affix: %3 - _output: %4", _nr, _isNegative, _affix, _output];
 
 _output

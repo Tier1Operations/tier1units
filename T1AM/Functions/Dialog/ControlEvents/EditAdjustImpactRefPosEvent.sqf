@@ -3,17 +3,17 @@
 
 params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt", "_mode"];
 
-DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT START | _this: %1", _this];
+//DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT START | _this: %1", _this];
 
 private _nr = ctrlText _displayorcontrol;
 if (_nr == "") exitWith {};
 
-DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT 1 | _nr: %1", _nr];
+//DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT 1 | _nr: %1", _nr];
 
 _nr = [_nr] call T1AM_Fnc_GridToPos;
 _nr = [_nr, 5, true] call T1AM_Fnc_ParseNumber;
 
-DIAG_LOG "EDIT ADJUST IMPACT REF POS EVENT 2";
+//DIAG_LOG "EDIT ADJUST IMPACT REF POS EVENT 2";
 
 if (_nr == -9999999) exitWith {
 	private _str = "";
@@ -30,7 +30,7 @@ if (_nr == -9999999) exitWith {
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
 
-DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT 3 | _nr: %1", _nr];
+//DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT 3 | _nr: %1", _nr];
 
 
 switch (_mode) do {
@@ -46,4 +46,4 @@ switch (_mode) do {
 	};
 };
 
-DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT END | T1AM_LastAdjustImpactRefX: %1 | T1AM_LastAdjustImpactRefY: %2", T1AM_LastAdjustImpactRefX, T1AM_LastAdjustImpactRefY];
+//DIAG_LOG format ["EDIT ADJUST IMPACT REF POS EVENT END | T1AM_LastAdjustImpactRefX: %1 | T1AM_LastAdjustImpactRefY: %2", T1AM_LastAdjustImpactRefX, T1AM_LastAdjustImpactRefY];

@@ -883,7 +883,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			style = 2;
-			tooltip = "Angle at which the artillery unit will fire.\nHigh will avoid obstacles but has a long flight time and is less accurate.\nLow has a low flight time and is more accurate but might hit an obstacle.";
+			tooltip = "Angle at which the artillery unit will fire.\nHigh angle will avoid obstacles but has a long flight time and is less accurate.\nDPICM often works best with a high angle.\nLow angle has a low flight time and is more accurate but might hit an obstacle.";
 		};
 		
 		class T1AM_TextAirburstParameters: T1AM_RscText

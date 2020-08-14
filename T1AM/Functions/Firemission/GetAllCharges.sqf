@@ -8,8 +8,8 @@ private _chargesArrayLow = [];
 private _chargesArrayHigh = [];
 private _vel = 0;
 
-DIAG_LOG format["TUBE: %1 - CHARGES - _warheadType: %2", _tube, _warheadType];
-DIAG_LOG format["TUBE: %1 - CHARGES - _ammoInitSpeed: %2", _tube, _ammoInitSpeed];
+//DIAG_LOG format["TUBE: %1 - CHARGES - _warheadType: %2", _tube, _warheadType];
+//DIAG_LOG format["TUBE: %1 - CHARGES - _ammoInitSpeed: %2", _tube, _ammoInitSpeed];
 
 {
 	private _charge = _x;
@@ -19,9 +19,9 @@ DIAG_LOG format["TUBE: %1 - CHARGES - _ammoInitSpeed: %2", _tube, _ammoInitSpeed
 		_vel = _ammoInitSpeed * getNumber(configfile >> "CfgWeapons" >> _weapon >> _charge >> "artilleryCharge");
 		private _g = 9.78;
 		private _calc = _vel^4-_g*(_g*_distance^2+2*_alt*_vel^2);
-		DIAG_LOG format["TUBE: %1 - CHARGE: %2 - _calc: %3", _tube, _charge, _calc];
+		//DIAG_LOG format["TUBE: %1 - CHARGE: %2 - _calc: %3", _tube, _charge, _calc];
 		if (_calc < 0) exitWith {
-			DIAG_LOG format ["TUBE: %1 | IMPOSSIBLE _calc | _charge: %2 | _vel: %3 | _calc: %4", _tube, _charge, _vel, _calc];	
+			//DIAG_LOG format ["TUBE: %1 | IMPOSSIBLE _calc | _charge: %2 | _vel: %3 | _calc: %4", _tube, _charge, _vel, _calc];	
 		};
 		
 		// Angle
@@ -35,7 +35,7 @@ DIAG_LOG format["TUBE: %1 - CHARGES - _ammoInitSpeed: %2", _tube, _ammoInitSpeed
 		_chargesArrayLow pushback [_charge, _lA, _lETA];
 		_chargesArrayHigh pushback [_charge, _hA, _hETA];
 		
-		DIAG_LOG format ["TUBE: %1 - CHARGE: %2 -- VELOCITY: %3 -- HIGH ANGLE: %4 -- HIGH ETA: %5 -- LOW ANGLE: %6 -- LOW ETA: %7", _tube, _charge, _vel, _hA, _hETA, _lA, _lETA];
+		//DIAG_LOG format ["TUBE: %1 - CHARGE: %2 -- VELOCITY: %3 -- HIGH ANGLE: %4 -- HIGH ETA: %5 -- LOW ANGLE: %6 -- LOW ETA: %7", _tube, _charge, _vel, _hA, _hETA, _lA, _lETA];
 	};
 	
 	sleep 0.05;

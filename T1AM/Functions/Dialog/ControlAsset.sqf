@@ -6,8 +6,8 @@ disableSerialization;
 
 params ["_prePlotted"];
 
-DIAG_LOG format["CONTROLASSET - _prePlotted: %1", _prePlotted];
-DIAG_LOG format["CONTROLASSET - ABORTING: %1", ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0))];
+//DIAG_LOG format["CONTROLASSET - _prePlotted: %1", _prePlotted];
+//DIAG_LOG format["CONTROLASSET - ABORTING: %1", ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0))];
 
 if ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0)) exitWith {
 	private _str = "NO MISSION SELECTED";
@@ -28,7 +28,7 @@ if (_abort) exitWith {
 
 if (_prePlotted) then {T1AM_PrePlotted = true};
 
-DIAG_LOG format["CONTROLASSET - (_asset == T1AM_ControlledAssetLocal): %1", (_asset == T1AM_ControlledAssetLocal)];
+//DIAG_LOG format["CONTROLASSET - (_asset == T1AM_ControlledAssetLocal): %1", (_asset == T1AM_ControlledAssetLocal)];
 
 // If asset is already being controlled by player, close interface and then open control menu.
 if (_asset == T1AM_ControlledAssetLocal) exitWith {
@@ -99,7 +99,7 @@ if (configNull != (configFile >> "CfgPatches" >> "ace_medical")) then {
 };
 
 
-DIAG_LOG format["CONTROLASSET - IF _prePlotted: %1 - T1AM_PrePlotted: %2", _prePlotted, T1AM_PrePlotted];
+//DIAG_LOG format["CONTROLASSET - IF _prePlotted: %1 - T1AM_PrePlotted: %2", _prePlotted, T1AM_PrePlotted];
 
 private _assetCallsign = [T1AM_SelectedAsset] call T1AM_Fnc_TrimGroupName;
 private _playerCallsign = [(group player)] call T1AM_Fnc_TrimGroupName;

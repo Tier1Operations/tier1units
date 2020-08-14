@@ -4,7 +4,7 @@ disableSerialization;
 
 params [["_prePlotted", false, [true]]];
 
-DIAG_LOG "CONTROL START";
+//DIAG_LOG "CONTROL START";
 
 
 // Abort if there's something wrong with the leader's vehicle/gunner.
@@ -18,7 +18,7 @@ if (_abort) exitWith {
 	[false] call T1AM_Fnc_EndMission;
 };
 
-DIAG_LOG format["CONTROL - _prePlotted: %1", _prePlotted];
+//DIAG_LOG format["CONTROL - _prePlotted: %1", _prePlotted];
 
 if (_prePlotted and {count T1AM_SelectedPrePlotted < 1}) exitWith {
 	private _str = "NO MISSION SELECTED";
@@ -224,7 +224,7 @@ if (_prePlotted) then {
 	
 	T1AM_LastPos = _lastPos;
 	
-	DIAG_LOG format["CONTROL - PREPLOTTED MISSION - T1AM_LastPos: %1", T1AM_LastPos];
+	//DIAG_LOG format["CONTROL - PREPLOTTED MISSION - T1AM_LastPos: %1", T1AM_LastPos];
 };
 
 
@@ -233,7 +233,7 @@ if ((count T1AM_FireMissionCurrent) > 0) then {
 	_fireMission = T1AM_FireMissionCurrent;
 	_lastPos = _fireMission select 1;
 	T1AM_LastPos = _lastPos;
-	DIAG_LOG format["CONTROL - CURRENT FIRE MISSION - T1AM_LastPos: %1", T1AM_LastPos];
+	//DIAG_LOG format["CONTROL - CURRENT FIRE MISSION - T1AM_LastPos: %1", T1AM_LastPos];
 };
 
 
@@ -276,8 +276,8 @@ _lastSheafDir = T1AM_LastSheafDir;
 _lastSheafDist = T1AM_LastSheafDist;
 _lastRemarks = T1AM_LastRemarks;
 
-DIAG_LOG format["CONTROL GPSX 1: %1", _lastGPSX];
-DIAG_LOG format["CONTROL GPSY 1: %1", _lastGPSY];
+//DIAG_LOG format["CONTROL GPSX 1: %1", _lastGPSX];
+//DIAG_LOG format["CONTROL GPSY 1: %1", _lastGPSY];
 
 // Sheaf size X
 if (_lastSheafSizeX != 0) then {
@@ -310,18 +310,18 @@ private _posMap = [[_lastGPSX, _lastGPSY]] call T1AM_Fnc_PosToMapGrid;
 private _xMap = parseNumber (_posMap select 0);
 private _yMap = parseNumber (_posMap select 1);
 
-DIAG_LOG format["CONTROL GPSX 2: %1", _posMap select 0];
-DIAG_LOG format["CONTROL GPSX 3: %1", _xMap];
-DIAG_LOG format["CONTROL GPSY 2: %1", _posMap select 1];
-DIAG_LOG format["CONTROL GPSY 3: %1", _yMap];
+//DIAG_LOG format["CONTROL GPSX 2: %1", _posMap select 0];
+//DIAG_LOG format["CONTROL GPSX 3: %1", _xMap];
+//DIAG_LOG format["CONTROL GPSY 2: %1", _posMap select 1];
+//DIAG_LOG format["CONTROL GPSY 3: %1", _yMap];
 
 _xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 (_dialog displayCtrl 47222) ctrlSetText _xMap;
 _yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
 (_dialog displayCtrl 47223) ctrlSetText _yMap;
 
-DIAG_LOG format["CONTROL GPSX 4: %1", _xMap];
-DIAG_LOG format["CONTROL GPSY 4: %1", _yMap];
+//DIAG_LOG format["CONTROL GPSX 4: %1", _xMap];
+//DIAG_LOG format["CONTROL GPSY 4: %1", _yMap];
 
 // GPS Z
 if (_lastGPSZ_AGL != 0) then {
@@ -451,7 +451,7 @@ _GPSGuidedTypes = _warheadType in T1AM_GPSGuidedTypes;
 _GPSLaserTypes = _warheadType in T1AM_GPSLaserTypes;
 _GPSSeekerTypes = _warheadType in T1AM_GPSSeekerTypes;
 
-DIAG_LOG format["CONTROL - _warheadType: %1", _warheadType];
+//DIAG_LOG format["CONTROL - _warheadType: %1", _warheadType];
 
 // Distance
 private _distance = 0;
@@ -553,8 +553,8 @@ switch (_assetType) do {
 	case ("MORTAR") : {_scatterSpread = _scatterSpread * 1.4};
 	case ("ROCKET") : {_scatterSpread = _scatterSpread * 1.7};
 	case ("MRLTRUCK") : {_scatterSpread = _scatterSpread * 1.8};
-	case ("RHS_BM21") : {_scatterSpread = _distance / 20}; //RHS BM21 has its own spread.
-	case ("2035RAF_BM21") : {_scatterSpread = _scatterSpread * 1.4};
+	case ("RHS_BM21") : {_scatterSpread = _distance / 20}; //Has its own spread.
+	case ("2035RAF_BM21") : {_scatterSpread = _distance / 30}; //Has its own spread.
 };
 
 T1AM_scatterSpreadHigh = round(_scatterSpread max 1);
@@ -593,8 +593,9 @@ _control = _dialog displayCtrl 47211;
 lbClear _control;
 private _sheafTypes = [];
 switch (_assetType) do {
-	case ("RHS_BM21") : {_sheafTypes = ["POINT"]};
 	case ("MK41") : {_sheafTypes = ["POINT"]};
+	case ("RHS_BM21") : {_sheafTypes = ["POINT"]};
+	case ("2035RAF_BM21") : {_sheafTypes = ["POINT"]};
 	default {_sheafTypes = ["POINT","CIRCLE","BOX","LINE"]};
 };
 
@@ -683,4 +684,4 @@ while {!isNull (findDisplay 47200)} do {
 	sleep 0.5;
 };
 
-DIAG_LOG "CONTROL END";
+//DIAG_LOG "CONTROL END";

@@ -2,8 +2,8 @@ class cfgPatches
 {
   class T1_Units_Faction3_Desert
   {
-    units[]={"T1_Units_Faction3_Desert_Mission_Maker","T1_Units_Faction3_Desert_Element_Leader","T1_Units_Faction3_Desert_JTAC","T1_Units_Faction3_Desert_Operator_Lead","T1_Units_Faction3_Desert_Operator_AR","T1_Units_Faction3_Desert_Operator_AT","T1_Units_Faction3_Desert_Operator_Asst_AT","T1_Units_Faction3_Desert_Operator_Saboteur","T1_Units_Faction3_Desert_Operator_CLS","T1_Units_Faction3_Desert_Recon_Spotter","T1_Units_Faction3_Desert_Recon_Marksman","T1_Crew_CLS","T1_Crew_Engineer","T1_Pilot","T1_T15_Armata_IFV","T1_Gaz2330","T1_Gaz2330_HMG","T1_T14_Armata_MBT","T1_Mi48_Kajman","T1_Units_Faction3_Desert_supplyCrate"};
-    weapons[]={"T1_arifle_AK12U_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","T1_hgun_Rook40_F","T1_arifle_AK12_GL_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","T1_arifle_AK12_GL_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","T1_arifle_RPK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","T1_arifle_AK12U_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","T1_45KO_RPG32_beige_F","T1_arifle_AK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","T1_arifle_AK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","T1_srifle_DMR_05_tan_f_muzzle_snds_93mmg_tanacc_pointer_IRoptic_KHS_tanbipod_02_F_tan","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F"};
+    units[]={"T1_Units_Faction3_Desert_Mission_Maker","T1_Units_Faction3_Desert_Element_Leader","T1_Units_Faction3_Desert_JTAC","T1_Units_Faction3_Desert_Operator_Lead","T1_Units_Faction3_Desert_Operator_AR","T1_Units_Faction3_Desert_Operator_AT","T1_Units_Faction3_Desert_Operator_Asst_AT","T1_Units_Faction3_Desert_Operator_Saboteur","T1_Units_Faction3_Desert_Operator_CLS","T1_Units_Faction3_Desert_Recon_Spotter","T1_Units_Faction3_Desert_Recon_Marksman","T1_Units_Faction3_Crew_CLS","T1_Units_Faction3_Crew_Engineer","T1_Units_Faction3_Pilot","T1_Units_Faction3_T15_Armata_IFV","T1_Units_Faction3_Gaz2330","T1_Units_Faction3_Gaz2330_HMG","T1_Units_Faction3_T14_Armata_MBT","T1_Units_Faction3_Mi48_Kajman","T1_Units_Faction3_Desert_supplyCrate"};
+    weapons[]={"T1_Units_Faction3_AR_AK12U","T1_Units_Faction3_P_Rook40","T1_Units_Faction3_AR_AK12_GL","T1_Units_Faction3_SAW_RPK12","T1_arifle_AK12U_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","T1_45KO_RPG32_beige_F","T1_arifle_AK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","T1_arifle_AK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","T1_srifle_DMR_05_tan_f_muzzle_snds_93mmg_tanacc_pointer_IRoptic_KHS_tanbipod_02_F_tan","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F"};
     requiredVersion=0.1;
     requiredAddons[]={"acre_sys_prc343","A3_Weapons_F_Enoch","acre_sys_prc117f","ace_medical_treatment","A3_Weapons_F","A3_Weapons_F_Enoch_Rifles_AK12","A3_Weapons_F_Pistols_Rook40","A3_Characters_F_Enoch","A3_Characters_F_Enoch_Vests","A3_Characters_F_Enoch_Headgear","ace_hearing","ace_maptools","ace_attach","ace_captives","ace_microdagr","ace_flashlights","ace_vector","acre_sys_prc152","ace_explosives","A3_Weapons_F_Exp","A3_Characters_F","ace_rangecard","A3_Weapons_F_Mark_LongRangeRifles_DMR_05","A3_Weapons_F_Items","A3_Weapons_F_SMGs_SMG_02","CuratorOnly_Characters_F_OPFOR"};
   };
@@ -33,7 +33,7 @@ class cfgWeapons
   class arifle_AK12U_F;
   class SMG_02_F;
 
-  class T1_arifle_AK12U_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F: arifle_AK12U_arid_F
+  class T1_Units_Faction3_AR_AK12U: arifle_AK12U_arid_F
   {
     displayName="AK-15K (Arid)";
     scope=1;
@@ -57,7 +57,7 @@ class cfgWeapons
     };
   };
 
-  class T1_hgun_Rook40_F: hgun_Rook40_F
+  class T1_Units_Faction3_P_Rook40: hgun_Rook40_F
   {
     displayName="MP-443 Grach";
     scope=1;
@@ -66,7 +66,7 @@ class cfgWeapons
     };
   };
 
-  class T1_arifle_AK12_GL_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F: arifle_AK12_GL_arid_F
+  class T1_Units_Faction3_AR_AK12_GL: arifle_AK12_GL_arid_F
   {
     displayName="AK-15 GL (Arid)";
     scope=1;
@@ -90,31 +90,7 @@ class cfgWeapons
     };
   };
 
-  class T1_arifle_AK12_GL_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F: arifle_AK12_GL_arid_F
-  {
-    displayName="AK-15 GL (Arid)";
-    scope=1;
-    class LinkedItems
-    {
-      class LinkedItemsMuzzle
-      {
-        slot="MuzzleSlot";
-        item="muzzle_snds_B_arid_F";
-      };
-      class LinkedItemsOptic
-      {
-        slot="CowsSlot";
-        item="optic_Arco_AK_arid_F";
-      };
-      class LinkedItemsAcc
-      {
-        slot="PointerSlot";
-        item="acc_pointer_IR";
-      };
-    };
-  };
-
-  class T1_arifle_RPK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F: arifle_RPK12_arid_F
+  class T1_Units_Faction3_SAW_RPK12: arifle_RPK12_arid_F
   {
     displayName="RPK (Arid)";
     scope=1;
@@ -318,8 +294,8 @@ class cfgVehicles
 	attendant = 1;
     displayName="Mission Maker";
     uniformClass="U_O_R_Gorka_01_brown_F";
-    weapons[]={"Laserdesignator","T1_arifle_AK12U_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","T1_hgun_Rook40_F","Put","Throw"};
-    respawnWeapons[]={"Laserdesignator","T1_arifle_AK12U_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","T1_hgun_Rook40_F","Put","Throw"};
+    weapons[]={"Laserdesignator","T1_Units_Faction3_AR_AK12U","T1_Units_Faction3_P_Rook40","Put","Throw"};
+    respawnWeapons[]={"Laserdesignator","T1_Units_Faction3_AR_AK12U","T1_Units_Faction3_P_Rook40","Put","Throw"};
     items[]={ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","O_NVGoggles_grn_F"};
     respawnItems[]={ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","O_NVGoggles_grn_F"};
     magazines[]={"16Rnd_9x21_Mag","16Rnd_9x21_Mag","Laserbatteries","SmokeShellYellow","SmokeShellOrange","SmokeShellRed","SmokeShell","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F"};
@@ -338,8 +314,8 @@ class cfgVehicles
 	attendant = 1;
     displayName="Element Leader";
     uniformClass="U_O_R_Gorka_01_brown_F";
-    weapons[]={"Laserdesignator","T1_arifle_AK12U_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","Put","Throw"};
-    respawnWeapons[]={"Laserdesignator","T1_arifle_AK12U_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","Put","Throw"};
+    weapons[]={"Laserdesignator","T1_Units_Faction3_AR_AK12U","Put","Throw"};
+    respawnWeapons[]={"Laserdesignator","T1_Units_Faction3_AR_AK12U","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343"};
     respawnItems[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343"};
     magazines[]={"MiniGrenade","MiniGrenade","Laserbatteries","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","SmokeShell","SmokeShell","SmokeShellGreen","SmokeShellGreen","SmokeShellOrange","SmokeShellOrange","SmokeShellPurple","SmokeShellPurple","SmokeShellRed","SmokeShellRed","SmokeShellYellow","SmokeShellYellow"};
@@ -358,8 +334,8 @@ class cfgVehicles
 	attendant = 1;
     displayName="JTAC";
     uniformClass="U_O_R_Gorka_01_brown_F";
-    weapons[]={"Laserdesignator","T1_arifle_AK12_GL_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","Put","Throw"};
-    respawnWeapons[]={"Laserdesignator","T1_arifle_AK12_GL_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","Put","Throw"};
+    weapons[]={"Laserdesignator","T1_Units_Faction3_AR_AK12_GL","Put","Throw"};
+    respawnWeapons[]={"Laserdesignator","T1_Units_Faction3_AR_AK12_GL","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343"};
     respawnItems[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343"};
     magazines[]={"Laserbatteries","SmokeShellPurple","SmokeShellPurple","30rnd_762x39_AK12_Arid_Mag_Tracer_F","30rnd_762x39_AK12_Arid_Mag_Tracer_F","30rnd_762x39_AK12_Arid_Mag_Tracer_F","30rnd_762x39_AK12_Arid_Mag_Tracer_F","30rnd_762x39_AK12_Arid_Mag_Tracer_F","30rnd_762x39_AK12_Arid_Mag_Tracer_F","30rnd_762x39_AK12_Arid_Mag_Tracer_F","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell"};
@@ -378,8 +354,8 @@ class cfgVehicles
 	attendant = 1;
     displayName="Operator Leader";
     uniformClass="U_O_R_Gorka_01_brown_F";
-    weapons[]={"ACE_Vector","T1_arifle_AK12_GL_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","Put","Throw"};
-    respawnWeapons[]={"ACE_Vector","T1_arifle_AK12_GL_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","Put","Throw"};
+    weapons[]={"ACE_Vector","T1_Units_Faction3_AR_AK12_GL","Put","Throw"};
+    respawnWeapons[]={"ACE_Vector","T1_Units_Faction3_AR_AK12_GL","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343"};
     respawnItems[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","30rnd_762x39_AK12_Arid_Mag_Tracer_F","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F","30rnd_762x39_AK12_Arid_Mag_F"};
@@ -398,8 +374,8 @@ class cfgVehicles
 	attendant = 1;
     displayName="Operator AR";
     uniformClass="U_O_R_Gorka_01_brown_F";
-    weapons[]={"ACE_Vector","T1_arifle_RPK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","Put","Throw"};
-    respawnWeapons[]={"ACE_Vector","T1_arifle_RPK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","Put","Throw"};
+    weapons[]={"ACE_Vector","T1_Units_Faction3_SAW_RPK12","Put","Throw"};
+    respawnWeapons[]={"ACE_Vector","T1_Units_Faction3_SAW_RPK12","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"HandGrenade","SmokeShellRed","SmokeShell","SmokeShell","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F"};
@@ -501,11 +477,11 @@ class cfgVehicles
 	camouflage = 0.6;
     displayName="Spotter";
     uniformClass="U_O_GhillieSuit";
-    weapons[]={"Laserdesignator","T1_arifle_RPK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","Put","Throw"};
-    respawnWeapons[]={"Laserdesignator","T1_arifle_RPK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","Put","Throw"};
+    weapons[]={"Laserdesignator","T1_Units_Faction3_SAW_RPK12","Put","Throw"};
+    respawnWeapons[]={"Laserdesignator","T1_Units_Faction3_SAW_RPK12","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","O_NVGoggles_grn_F"};
     respawnItems[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","O_NVGoggles_grn_F"};
-    magazines[]={"SmokeShell","Laserbatteries","SmokeShell","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F",u"75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F"};
+    magazines[]={"SmokeShell","Laserbatteries","SmokeShell","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F"};
     respawnMagazines[]={"SmokeShell","Laserbatteries","SmokeShell","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F","75rnd_762x39_AK12_Arid_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetAggressor_cover_taiga_F","V_CarrierRigKBT_01_light_Olive_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetAggressor_cover_taiga_F","V_CarrierRigKBT_01_light_Olive_F"};
@@ -533,7 +509,7 @@ class cfgVehicles
     backpack="T1_Units_Faction3_Desert_Recon_Marksman_pack";
   };
 
-  class T1_Crew_CLS: O_R_Soldier_LAT_F
+  class T1_Units_Faction3_Crew_CLS: O_R_Soldier_LAT_F
   {
     faction="T1_Units_Faction3_Desert";
     side=0;
@@ -542,18 +518,18 @@ class cfgVehicles
 	attendant = 1;
     displayName="Crew (CLS)";
     uniformClass="U_O_R_Gorka_01_F";
-    weapons[]={"ACE_Vector","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_hgun_Rook40_F","Put","Throw"};
-    respawnWeapons[]={"ACE_Vector","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_hgun_Rook40_F","Put","Throw"};
+    weapons[]={"ACE_Vector","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction3_P_Rook40","Put","Throw"};
+    respawnWeapons[]={"ACE_Vector","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction3_P_Rook40","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","O_NVGoggles_grn_F"};
     respawnItems[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","O_NVGoggles_grn_F"};
     magazines[]={"HandGrenade","SmokeShell","SmokeShell","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","16Rnd_9x21_Mag","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"HandGrenade","SmokeShell","SmokeShell","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","16Rnd_9x21_Mag","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O","V_SmershVest_01_radio_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O","V_SmershVest_01_radio_F"};
-    backpack="T1_Crew_CLS_pack";
+    backpack="T1_Units_Faction3_Crew_CLS_pack";
   };
 
-  class T1_Crew_Engineer: O_R_Soldier_LAT_F
+  class T1_Units_Faction3_Crew_Engineer: O_R_Soldier_LAT_F
   {
     faction="T1_Units_Faction3_Desert";
     side=0;
@@ -562,18 +538,18 @@ class cfgVehicles
 	engineer = 1;
     displayName="Crew (Engineer)";
     uniformClass="U_O_R_Gorka_01_F";
-    weapons[]={"ACE_Vector","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_hgun_Rook40_F","Put","Throw"};
-    respawnWeapons[]={"ACE_Vector","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_hgun_Rook40_F","Put","Throw"};
+    weapons[]={"ACE_Vector","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction3_P_Rook40","Put","Throw"};
+    respawnWeapons[]={"ACE_Vector","T1_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction3_P_Rook40","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","O_NVGoggles_grn_F"};
     respawnItems[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","O_NVGoggles_grn_F"};
     magazines[]={"HandGrenade","SmokeShell","SmokeShell","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"HandGrenade","SmokeShell","SmokeShell","16Rnd_9x21_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O","V_SmershVest_01_radio_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O","V_SmershVest_01_radio_F"};
-    backpack="T1_Crew_Engineer_pack";
+    backpack="T1_Units_Faction3_Crew_Engineer_pack";
   };
 
-  class T1_Pilot: O_helipilot_F
+  class T1_Units_Faction3_Pilot: O_helipilot_F
   {
     faction="T1_Units_Faction3_Desert";
     side=0;
@@ -581,18 +557,18 @@ class cfgVehicles
 	t1_DutyMod = 0.965;
     displayName="Pilot";
     uniformClass="U_O_PilotCoveralls";
-    weapons[]={"ACE_Vector","T1_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F","T1_hgun_Rook40_F","Put","Throw"};
-    respawnWeapons[]={"ACE_Vector","T1_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F","T1_hgun_Rook40_F","Put","Throw"};
+    weapons[]={"ACE_Vector","T1_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F","T1_Units_Faction3_P_Rook40","Put","Throw"};
+    respawnWeapons[]={"ACE_Vector","T1_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F","T1_Units_Faction3_P_Rook40","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343_ID_1"};
     respawnItems[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343_ID_1"};
     magazines[]={"16Rnd_9x21_Mag","30Rnd_9x21_Mag_SMG_02","16Rnd_9x21_Mag","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02"};
     respawnMagazines[]={"16Rnd_9x21_Mag","30Rnd_9x21_Mag_SMG_02","16Rnd_9x21_Mag","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02","30Rnd_9x21_Mag_SMG_02"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","O_NVGoggles_grn_F","ACE_Vector","H_PilotHelmetHeli_O","V_Rangemaster_belt","G_Tactical_Black","O_NVGoggles_grn_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","O_NVGoggles_grn_F","ACE_Vector","H_PilotHelmetHeli_O","V_Rangemaster_belt","G_Tactical_Black","O_NVGoggles_grn_F"};
-    backpack="T1_Pilot_pack";
+    backpack="T1_Units_Faction3_Pilot_pack";
   };
 
-  class T1_T15_Armata_IFV: min_rf_t_15_desert
+  class T1_Units_Faction3_T15_Armata_IFV: min_rf_t_15_desert
   {
     faction="T1_Units_Faction3_Desert";
     side=0;		
@@ -605,8 +581,8 @@ class cfgVehicles
 	transportMaxItems = 9999;
     displayName="T-15 Armata - IFV";
     hiddenSelectionsTextures[]={"min_rf_vehicle\data\t_14_body_1_desert_co.paa","min_rf_vehicle\data\t_14_body_2_desert_co.paa","min_rf_vehicle\data\t_14_body_3_co.paa","min_rf_vehicle\data\t_15_body_desert_co.paa","min_rf_vehicle\data\numbers\black\2_ca.paa","min_rf_vehicle\data\numbers\black\1_ca.paa","min_rf_vehicle\data\numbers\black\4_ca.paa"};
-    crew="T1_Crew_Engineer";
-    typicalCargo[]={"T1_Crew_Engineer"};
+    crew="T1_Units_Faction3_Crew_Engineer";
+    typicalCargo[]={"T1_Units_Faction3_Crew_Engineer"};
     class TransportMagazines
 		{
 			class _xx_30rnd_762x39_AK12_Arid_Mag_F {magazine="30rnd_762x39_AK12_Arid_Mag_F";count=64;};
@@ -640,7 +616,7 @@ class cfgVehicles
 		{
 			class _xx_T1_45KO_RPG32_beige_F {weapon="T1_45KO_RPG32_beige_F";count=2;};	
 			class _xx_T1_arifle_AK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F {weapon="T1_arifle_AK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F";count=2;};		
-			class _xx_T1_arifle_RPK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F {weapon="T1_arifle_RPK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F";count=1;};		
+			class _xx_T1_Units_Faction3_SAW_RPK12 {weapon="T1_Units_Faction3_SAW_RPK12";count=1;};		
 		};
 		
 		class TransportBackpacks
@@ -648,7 +624,7 @@ class cfgVehicles
 			class _xx_B_FieldPack_khk {count=4;backpack="B_FieldPack_khk";};
 		};	
 	};	
-  class T1_Gaz2330: min_rf_gaz_2330_desert
+  class T1_Units_Faction3_Gaz2330: min_rf_gaz_2330_desert
   {
     faction="T1_Units_Faction3_Desert";
     side=0;		
@@ -704,7 +680,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Gaz2330_HMG: min_rf_gaz_2330_HMG_desert
+  class T1_Units_Faction3_Gaz2330_HMG: min_rf_gaz_2330_HMG_desert
   {
     faction="T1_Units_Faction3_Desert";
     side=0;		
@@ -760,7 +736,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_T14_Armata_MBT: min_rf_t_14_desert
+  class T1_Units_Faction3_T14_Armata_MBT: min_rf_t_14_desert
   {
     faction="T1_Units_Faction3_Desert";
     side=0;		
@@ -773,8 +749,8 @@ class cfgVehicles
 	transportMaxItems = 9999;
     displayName="T-14 Armata - MBT";
     hiddenSelectionsTextures[]={"min_rf_vehicle\data\t_14_body_1_desert_co.paa","min_rf_vehicle\data\t_14_body_2_desert_co.paa","min_rf_vehicle\data\t_14_body_3_co.paa","min_rf_vehicle\data\numbers\black\6_ca.paa","min_rf_vehicle\data\numbers\black\5_ca.paa","min_rf_vehicle\data\numbers\black\1_ca.paa"};
-    crew="T1_Crew_Engineer";
-    typicalCargo[]={"T1_Crew_Engineer"};
+    crew="T1_Units_Faction3_Crew_Engineer";
+    typicalCargo[]={"T1_Units_Faction3_Crew_Engineer"};
   class TransportMagazines
 		{
 			class _xx_30rnd_762x39_AK12_Arid_Mag_F {magazine="30rnd_762x39_AK12_Arid_Mag_F";count = 12;};
@@ -801,7 +777,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Mi48_Kajman: O_Heli_Attack_02_dynamicLoadout_F
+  class T1_Units_Faction3_Mi48_Kajman: O_Heli_Attack_02_dynamicLoadout_F
   {
     faction="T1_Units_Faction3_Desert";
     side=0;		
@@ -814,13 +790,13 @@ class cfgVehicles
 	transportMaxItems = 9999;
     displayName="Mi48 Kajman";
     hiddenSelectionsTextures[]={"a3\air_f_beta\heli_attack_02\data\heli_attack_02_body1_black_co.paa","a3\air_f_beta\heli_attack_02\data\heli_attack_02_body2_black_co.paa"};
-    crew="T1_Pilot";
-    typicalCargo[]={"T1_Pilot"};
+    crew="T1_Units_Faction3_Pilot";
+    typicalCargo[]={"T1_Units_Faction3_Pilot"};
     class TransportMagazines
 		{
-			class _xx_30rnd_762x39_AK12_Arid_Mag_F {magazine="30rnd_762x39_AK12_Arid_Mag_F";count = 22;};
-			class _xx_75rnd_762x39_AK12_Arid_Mag_F {magazine="75rnd_762x39_AK12_Arid_Mag_F";= 80;};
-			class _xx_10Rnd_93x64_DMR_05_Mag {magazine="10Rnd_93x64_DMR_05_Mag";count = 8;};
+			class _xx_30rnd_762x39_AK12_Arid_Mag_F {magazine="30rnd_762x39_AK12_Arid_Mag_F";count=22;};
+			class _xx_75rnd_762x39_AK12_Arid_Mag_F {magazine="75rnd_762x39_AK12_Arid_Mag_F";count=8;};
+			class _xx_10Rnd_93x64_DMR_05_Mag {magazine="10Rnd_93x64_DMR_05_Mag";count=8;};
 			class _xx_HandGrenade {magazine="HandGrenade";count=8;};
 			class _xx_1Rnd_HE_Grenade_shell {magazine="1Rnd_HE_Grenade_shell";count=6;};
 			class _xx_SmokeShell {magazine="SmokeShell";count=8;};		
@@ -1118,7 +1094,7 @@ class cfgVehicles
   };
 
 
-  class T1_Crew_CLS_pack: B_FieldPack_green_F
+  class T1_Units_Faction3_Crew_CLS_pack: B_FieldPack_green_F
   {
     scope=1;
     class TransportMagazines{};
@@ -1136,7 +1112,7 @@ class cfgVehicles
   };
 
 
-  class T1_Crew_Engineer_pack: B_FieldPack_green_F
+  class T1_Units_Faction3_Crew_Engineer_pack: B_FieldPack_green_F
   {
     scope=1;
     class TransportMagazines{};
@@ -1149,7 +1125,7 @@ class cfgVehicles
   };
 
 
-  class T1_Pilot_pack: B_AssaultPack_rgr
+  class T1_Units_Faction3_Pilot_pack: B_AssaultPack_rgr
   {
     scope=1;
     class TransportMagazines

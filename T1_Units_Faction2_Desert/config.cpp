@@ -405,7 +405,6 @@ class cfgVehicles
 	class rhsusf_m1240a1_m240_usmc_d;
 	class rhsusf_m1240a1_m2_usmc_d;
 	class rhsusf_m1240a1_usmc_d;
-	class rhsusf_m1240a1_usmc_d;	
 
 	class T1_Faction2_Mission_Maker: B_Soldier_F
 	{

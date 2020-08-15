@@ -285,7 +285,7 @@ class T1AM_ButtonCloseComputer: T1AM_RscButtonMenu
 	tooltipColorText[] = {1,1,1,1};
 	tooltipColorBox[] = {1,1,1,1};
 	tooltipColorShade[] = {0,0,0,0.65};
-	onButtonClick = "[] spawn {sleep 0.3; [0] call T1AM_Fnc_CloseDisplays}";
+	onButtonClick = "[] spawn {[1] call T1AM_Fnc_PlaySoundGUI; sleep 0.3; [0] call T1AM_Fnc_CloseDisplays}";
 };
 
 class T1AM_ButtonStart: T1AM_ButtonCloseComputer
@@ -298,7 +298,7 @@ class T1AM_ButtonStart: T1AM_ButtonCloseComputer
 	tooltipColorText[] = {1,1,1,1};
 	tooltipColorBox[] = {1,1,1,1};
 	tooltipColorShade[] = {0,0,0,0.65};
-	onButtonClick = "call T1AM_Fnc_ButtonStartEvent";
+	onButtonClick = "[1] call T1AM_Fnc_PlaySoundGUI; call T1AM_Fnc_ButtonStartEvent";
 };
 
 class T1AM_ButtonEscapeMenu: T1AM_ButtonCloseComputer
@@ -311,11 +311,11 @@ class T1AM_ButtonEscapeMenu: T1AM_ButtonCloseComputer
 	tooltipColorText[] = {1,1,1,1};
 	tooltipColorBox[] = {1,1,1,1};
 	tooltipColorShade[] = {0,0,0,0.65};
-	onButtonClick = "[] spawn {sleep 0.1; closeDialog 0}";
+	onButtonClick = "[] spawn {[1] call T1AM_Fnc_PlaySoundGUI; sleep 0.1; closeDialog 0}";
 };
 class T1AM_ButtonEscapeMenuDummy: T1AM_ButtonEscapeMenu
 {
-	onButtonClick = "";
+	onButtonClick = "[1] call T1AM_Fnc_PlaySoundGUI";
 };
 
 
@@ -409,7 +409,7 @@ class T1AM_DialogAssets
 			y = T1AM_ROW + (T1AM_ROWINC * 1);
 			w = T1AM_BUTTON_W + (T1AM_COLINC * 6);
 			h = (T1AM_BUTTON_H * 7) - T1AM_SPACE;
-			onLBSelChanged = "_this call T1AM_Fnc_ListMissionsEvent";
+			onLBSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; _this call T1AM_Fnc_ListMissionsEvent";
 		};
 		
 		class T1AM_ListMissions: T1AM_RscListBox 
@@ -420,7 +420,7 @@ class T1AM_DialogAssets
 			y = T1AM_ROW + (T1AM_ROWINC * 9);
 			w = T1AM_BUTTON_W + (T1AM_COLINC * 6);
 			h = (T1AM_BUTTON_H * 6) - T1AM_SPACE;
-			onLBSelChanged = "";
+			onLBSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI";
 		};
 		
 		class T1AM_ButtonControlAsset: T1AM_RscButtonMenu
@@ -429,7 +429,7 @@ class T1AM_DialogAssets
 			text = "CONTROL";
 			x = T1AM_COL + (T1AM_COLINC * 0);
 			y = T1AM_ROW + (T1AM_ROWINC * 7);
-			onButtonClick = "[false] call T1AM_Fnc_ControlAsset";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [false] call T1AM_Fnc_ControlAsset";
 			tooltip = "Take control of the selected artillery unit.";
 		};
 		
@@ -439,7 +439,7 @@ class T1AM_DialogAssets
 			text = "RELEASE";
 			x = T1AM_COL + (T1AM_COLINC * 1);
 			y = T1AM_ROW + (T1AM_ROWINC * 7);
-			onButtonClick = "call T1AM_Fnc_ReleaseAsset";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; call T1AM_Fnc_ReleaseAsset";
 			tooltip = "Relinquish control of currently controlled artillery unit.";
 		};
 		
@@ -450,7 +450,7 @@ class T1AM_DialogAssets
 			x = T1AM_COL + (T1AM_COLINC * 0);
 			y = T1AM_ROW + (T1AM_ROWINC * 14);
 			h = T1AM_BUTTON_H * 1.3;
-			onButtonClick = "[true] call T1AM_Fnc_ControlAsset";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [true] call T1AM_Fnc_ControlAsset";
 			tooltip = "Take control of artillery unit\nand load up a previously saved fire mission.";
 		};
 		
@@ -605,7 +605,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 9.3);
 			w = (T1AM_BUTTON_W * 1.45);
 			h = T1AM_BUTTON_H;
-			tooltip = "Call for adjust fire mission.\nUse these options to guide the artillery on target.\nTwo adjust modes are available.\nTurn off if you don't wish to adjust.";
+			tooltip = "Call for adjust fire mission.\nUse these options to guide the artillery on target.\nTwo adjust modes are available:\n- Adjust from point of view of the observer.\n- Adjust by marking the impact point.\nTurn off if you don't wish to adjust.";
 		};
 		
 		class T1AM_TextAdjust2: T1AM_RscText
@@ -617,7 +617,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
 			w = (T1AM_BUTTON_W * 0.8);
 			h = T1AM_BUTTON_H;
-			tooltip = "Adjust fire from the point of view of the spotter.\nDefine how much the impact position should move right/left and forwards/backwards.";
+			tooltip = "Adjust fire from the point of view of the observer.\nDefine how much the impact position should move right/left and forwards/backwards.";
 		};
 		
 		class T1AM_TextAdjustLeftRight: T1AM_RscText
@@ -647,13 +647,13 @@ class T1AM_DialogControl
 		class T1AM_TextAdjustSpotter: T1AM_RscText
 		{
 			idc = 47241;
-			text = "SPOTTER POSITION";
+			text = "OBSERVER POSITION";
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 2.15);
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
-			w = (T1AM_BUTTON_W * 1.25);
+			w = (T1AM_BUTTON_W * 1.35);
 			h = T1AM_BUTTON_H;
-			tooltip = "Coordinates of the spotter position.\nThe adjustments will happen from the point of view of this position.";
+			tooltip = "Coordinates of the observer position.\nThe adjustments will happen from the point of view of this position.";
 		};
 		
 		class T1AM_TextAdjustSpotterX: T1AM_RscText
@@ -665,7 +665,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 12.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "X coordinate of spotter position.";
+			tooltip = "X coordinate of observer position.";
 		};
 		
 		class T1AM_TextAdjustSpotterY: T1AM_RscText
@@ -677,7 +677,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 13.2);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
-			tooltip = "Y coordinate of spotter position.";
+			tooltip = "Y coordinate of observer position.";
 		};
 		
 		class T1AM_TextAdjustImpact: T1AM_RscText
@@ -757,7 +757,7 @@ class T1AM_DialogControl
 			idc = 47260;
 			text = "TRP POSITION";
 			sizeEx = T1AM_TEXTSIZE;
-			x = T1AM_COL + (T1AM_COLINC * 2.05);
+			x = T1AM_COL + (T1AM_COLINC * 2.25);
 			y = T1AM_ROW + (T1AM_ROWINC * 7);
 			w = (T1AM_BUTTON_W * 1);
 			h = T1AM_BUTTON_H;
@@ -883,7 +883,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			style = 2;
-			tooltip = "Angle at which the artillery unit will fire.\nHigh angle will avoid obstacles but has a long flight time and is less accurate.\nDPICM often works best with a high angle.\nLow angle has a low flight time and is more accurate but might hit an obstacle.";
+			tooltip = "Angle at which the artillery unit will fire.\nHigh angle will avoid obstacles but has a long flight time and is less accurate.\nCluster munition often works best with a high angle.\nLow angle has a low flight time and is more accurate but might hit an obstacle.";
 		};
 		
 		class T1AM_TextAirburstParameters: T1AM_RscText
@@ -909,7 +909,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			style = 2;
-			tooltip = "Height of airburst.\nLow: 0.9\nMedium: 9\nHigh: 18";
+			tooltip = "Height of airburst.\nLow: 0.9 m\nMedium: 9 m\nHigh: 18 m";
 		};
 		
 		class T1AM_TextSheafParameters: T1AM_RscText
@@ -989,6 +989,7 @@ class T1AM_DialogControl
 			h = T1AM_BUTTON_H;
 			colorDisabled[] = {1,1,1,0.25};
 			tooltip = "Previous unit";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI";
 		};
 
 		class T1AM_ButtonTubeNext: T1AM_ActiveText
@@ -1002,6 +1003,7 @@ class T1AM_DialogControl
 			h = T1AM_BUTTON_H;
 			colorDisabled[] = {1,1,1,0.25};
 			tooltip = "Next unit";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI";
 		};
 		
 		class T1AM_EditX: T1AM_RscText
@@ -1072,7 +1074,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 0; _this call T1AM_Fnc_EditNumberEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 0; _this call T1AM_Fnc_EditNumberEvent";
 		};
 		
 		class T1AM_EditAdjustAddDrop: T1AM_RscEdit
@@ -1083,7 +1085,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 1; _this call T1AM_Fnc_EditNumberEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 1; _this call T1AM_Fnc_EditNumberEvent";
 		};
 		
 		class T1AM_EditAdjustCheckbox: T1AM_RscCheckbox
@@ -1095,10 +1097,10 @@ class T1AM_DialogControl
 			h = 0.05;
 			rows = 1;
 			columns = 3;
-			strings[] = {"OFF","SPOTTER","IMPACT"};
+			strings[] = {"OFF","OBSERVER","IMPACT"};
 			checked_strings[] = {};
 			values[] = {0,0,0};
-			onToolBoxSelChanged = "_this spawn T1AM_Fnc_EditAdjustCheckboxEvent";
+			onToolBoxSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; _this spawn T1AM_Fnc_EditAdjustCheckboxEvent";
 		};
 		
 		class T1AM_EditAdjustSpotterPosX: T1AM_RscEdit
@@ -1109,7 +1111,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 0; _this call T1AM_Fnc_EditAdjustSpotterPosEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 0; _this call T1AM_Fnc_EditAdjustSpotterPosEvent";
 		};
 		
 		class T1AM_EditAdjustSpotterPosY: T1AM_RscEdit
@@ -1120,7 +1122,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 1; _this call T1AM_Fnc_EditAdjustSpotterPosEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 1; _this call T1AM_Fnc_EditAdjustSpotterPosEvent";
 		};
 		
 		class T1AM_ButtonAdjustSpotterMapclick: T1AM_RscButtonMenu
@@ -1131,8 +1133,8 @@ class T1AM_DialogControl
 			text = "M";
 			w = (T1AM_BUTTON_W * 0.21);
 			h = T1AM_BUTTON_H * 0.69;
-			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustSpotterMapclickEvent}";
-			tooltip = "Use map click to input spotter position coordinates.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustSpotterMapclickEvent}";
+			tooltip = "Use map click to input observer position coordinates.";
 		};
 		
 		class T1AM_EditAdjustImpactPosX: T1AM_RscEdit
@@ -1143,7 +1145,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 0; _this call T1AM_Fnc_EditAdjustImpactPosEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 0; _this call T1AM_Fnc_EditAdjustImpactPosEvent";
 		};
 		
 		class T1AM_EditAdjustImpactPosY: T1AM_RscEdit
@@ -1154,7 +1156,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 1; _this call T1AM_Fnc_EditAdjustImpactPosEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 1; _this call T1AM_Fnc_EditAdjustImpactPosEvent";
 		};
 		
 		class T1AM_ButtonAdjustImpactMapclick: T1AM_RscButtonMenu
@@ -1165,7 +1167,7 @@ class T1AM_DialogControl
 			text = "M";
 			w = (T1AM_BUTTON_W * 0.21);
 			h = T1AM_BUTTON_H * 0.69;
-			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustImpactMapclickEvent}";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustImpactMapclickEvent}";
 			tooltip = "Use map click to input impact position coordinates.";
 		};
 		
@@ -1177,7 +1179,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 0; _this call T1AM_Fnc_EditAdjustImpactRefPosEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 0; _this call T1AM_Fnc_EditAdjustImpactRefPosEvent";
 		};
 		
 		class T1AM_EditAdjustImpactRefPosY: T1AM_RscEdit
@@ -1188,7 +1190,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 1; _this call T1AM_Fnc_EditAdjustImpactRefPosEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 1; _this call T1AM_Fnc_EditAdjustImpactRefPosEvent";
 		};
 		
 		class T1AM_ButtonAdjustImpactRefMapclick: T1AM_RscButtonMenu
@@ -1199,7 +1201,7 @@ class T1AM_DialogControl
 			text = "M";
 			w = (T1AM_BUTTON_W * 0.21);
 			h = T1AM_BUTTON_H * 0.69;
-			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustImpactRefMapclickEvent}";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustImpactRefMapclickEvent}";
 			tooltip = "Use map click to input target position coordinates.";
 		};
 		
@@ -1211,7 +1213,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 0; _this call T1AM_Fnc_EditTRPPosEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 0; _this call T1AM_Fnc_EditTRPPosEvent";
 		};
 		
 		class T1AM_EditTRPPosY: T1AM_RscEdit
@@ -1222,7 +1224,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 1; _this call T1AM_Fnc_EditTRPPosEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 1; _this call T1AM_Fnc_EditTRPPosEvent";
 		};
 		
 		class T1AM_ButtonTRPMapclick: T1AM_RscButtonMenu
@@ -1233,7 +1235,7 @@ class T1AM_DialogControl
 			text = "M";
 			w = (T1AM_BUTTON_W * 0.21);
 			h = T1AM_BUTTON_H * 0.69;
-			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonTRPMapclickEvent}";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonTRPMapclickEvent}";
 			tooltip = "Use map click to input TRP coordinates.";
 		};
 		
@@ -1245,7 +1247,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 0; _this call T1AM_Fnc_EditAdjustGPSEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 0; _this call T1AM_Fnc_EditAdjustGPSEvent";
 		};
 		
 		class T1AM_EditAdjustYGPS: T1AM_RscEdit
@@ -1256,7 +1258,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 1; _this call T1AM_Fnc_EditAdjustGPSEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 1; _this call T1AM_Fnc_EditAdjustGPSEvent";
 		};
 		
 		class T1AM_EditAdjustElevGPS: T1AM_RscEdit
@@ -1267,7 +1269,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "0";
-			onKeyUp = "_this pushback 2; _this call T1AM_Fnc_EditAdjustGPSEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 2; _this call T1AM_Fnc_EditAdjustGPSEvent";
 		};
 		
 		class T1AM_ListWarheadType: T1AM_RscListBox 
@@ -1278,7 +1280,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 1);
 			w = T1AM_BUTTON_W + (T1AM_COLINC * 2);
 			h = (T1AM_BUTTON_H * 7);
-			onLBSelChanged = "_this call T1AM_Fnc_ListWarheadTypeEvent";
+			onLBSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; _this call T1AM_Fnc_ListWarheadTypeEvent";
 		};
 		
 		class T1AM_EditRemarks: T1AM_RscEdit
@@ -1286,10 +1288,10 @@ class T1AM_DialogControl
 			idc = 47267;
 			x = T1AM_COL + (T1AM_COLINC * 4.5);
 			y = T1AM_ROW + (T1AM_ROWINC * 9);
-			w = (T1AM_BUTTON_W * 1.2);
+			w = (T1AM_BUTTON_W * 1.3);
 			h = T1AM_BUTTON_H;
 			text = "";
-			onKeyUp = "_this call T1AM_Fnc_EditRemarksEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this call T1AM_Fnc_EditRemarksEvent";
 		};
 		
 		class T1AM_EditRounds: T1AM_RscEdit
@@ -1300,7 +1302,7 @@ class T1AM_DialogControl
 			w = (T1AM_BUTTON_W / 2);
 			h = T1AM_BUTTON_H;
 			text = "1";
-			onKeyUp = "_this pushback 2; _this call T1AM_Fnc_EditNumberEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 2; _this call T1AM_Fnc_EditNumberEvent";
 		};
 		
 		class T1AM_ListAngle: T1AM_RscListBox 
@@ -1311,7 +1313,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 2);
 			w = T1AM_BUTTON_W;
 			h = (T1AM_BUTTON_H * 3);
-			onLBSelChanged = "_this call T1AM_Fnc_ListAngleEvent";
+			onLBSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; _this call T1AM_Fnc_ListAngleEvent";
 		};
 		
 		class T1AM_ListMissionType: T1AM_RscListBox 
@@ -1322,29 +1324,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 2);
 			w = T1AM_BUTTON_W;
 			h = (T1AM_BUTTON_H * 3);
-			onLBSelChanged = "_this call T1AM_Fnc_ListMissionTypeEvent";
-		};
-		
-		class T1AM_ButtonTransmit: T1AM_RscButtonMenu
-		{
-			idc = -1;
-			text = "TRANSMIT";
-			x = T1AM_COL + (T1AM_COLINC * 0);
-			y = T1AM_ROW + (T1AM_ROWINC * 15);
-			w = (T1AM_BUTTON_W * 1.5);
-			onButtonClick = "call T1AM_Fnc_Transmit";
-			tooltip = "Call in fire mission.";
-		};
-		
-		class T1AM_ButtonCheckFire: T1AM_RscButtonMenu
-		{
-			idc = -1;
-			text = "CHECK FIRE";
-			x = T1AM_COL + (T1AM_COLINC * 1.83);
-			y = T1AM_ROW + (T1AM_ROWINC * 15);
-			w = (T1AM_BUTTON_W * 1.5);
-			onButtonClick = "call T1AM_Fnc_CheckFire_Player;";
-			tooltip = "Tell the artillery unit to cease fire immediately.";
+			onLBSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; _this call T1AM_Fnc_ListMissionTypeEvent";
 		};
 		
 		class T1AM_ListSheaf: T1AM_RscListBox 
@@ -1355,7 +1335,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
 			w = T1AM_BUTTON_W;
 			h = (T1AM_BUTTON_H * 3.5);
-			onLBSelChanged = "_this call T1AM_Fnc_ListSheafEvent";
+			onLBSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; _this call T1AM_Fnc_ListSheafEvent";
 		};
 		
 		class T1AM_EditSheafSizeX: T1AM_RscEdit
@@ -1366,7 +1346,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "100";
-			onKeyUp = "_this pushback 3; _this call T1AM_Fnc_EditNumberEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 3; _this call T1AM_Fnc_EditNumberEvent";
 		};
 		
 		class T1AM_EditSheafSizeY: T1AM_RscEdit
@@ -1377,7 +1357,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "100";
-			onKeyUp = "_this pushback 4; _this call T1AM_Fnc_EditNumberEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 4; _this call T1AM_Fnc_EditNumberEvent";
 		};
 		
 		class T1AM_EditSheafDir: T1AM_RscEdit
@@ -1388,7 +1368,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "360";
-			onKeyUp = "_this pushback 5; _this call T1AM_Fnc_EditNumberEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this call T1AM_Fnc_EditSheafDirEvent";
 		};
 		
 		class T1AM_EditSheafDist: T1AM_RscEdit
@@ -1399,7 +1379,7 @@ class T1AM_DialogControl
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
 			text = "100";
-			onKeyUp = "_this pushback 6; _this call T1AM_Fnc_EditNumberEvent";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 5; _this call T1AM_Fnc_EditNumberEvent";
 		};
 		
 		class T1AM_ListFuse: T1AM_RscListBox
@@ -1410,7 +1390,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 6);
 			w = T1AM_BUTTON_W;
 			h = (T1AM_BUTTON_H * 3);
-			onLBSelChanged = "call T1AM_Fnc_ListFuseEvent";
+			onLBSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; call T1AM_Fnc_ListFuseEvent";
 		};
 		
 		class T1AM_ListAirburstHeight: T1AM_RscListBox 
@@ -1421,29 +1401,51 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 6);
 			w = T1AM_BUTTON_W;
 			h = (T1AM_BUTTON_H * 3);
-			onLBSelChanged = "_this spawn {params[""_control"",""_selectedIndex""]; T1AM_LastAirburstHeight = _control lbData _selectedIndex}";
+			onLBSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; _this spawn {params[""_control"",""_selectedIndex""]; T1AM_LastAirburstHeight = _control lbData _selectedIndex}";
+		};
+		
+		class T1AM_ButtonTransmit: T1AM_RscButtonMenu
+		{
+			idc = -1;
+			text = "TRANSMIT";
+			x = T1AM_COL + (T1AM_COLINC * 5.5);
+			y = T1AM_ROW + (T1AM_ROWINC * 15);
+			w = (T1AM_BUTTON_W * 1.5);
+			tooltip = "Call in a fire mission.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; call T1AM_Fnc_Transmit";
+		};
+		
+		class T1AM_ButtonCheckFire: T1AM_RscButtonMenu
+		{
+			idc = -1;
+			text = "CHECK FIRE";
+			x = T1AM_COL + (T1AM_COLINC * 3.66);
+			y = T1AM_ROW + (T1AM_ROWINC * 15);
+			w = (T1AM_BUTTON_W * 1.5);
+			tooltip = "Tell the artillery unit to cease fire immediately.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; call T1AM_Fnc_CheckFire_Player;";
 		};
 		
 		class T1AM_ButtonControlAssets: T1AM_RscButtonMenu
 		{
 			idc = -1;
 			text = "ASSETS";
-			x = T1AM_COL + (T1AM_COLINC * 5.5);
+			x = T1AM_COL + (T1AM_COLINC * 1.83);
 			y = T1AM_ROW + (T1AM_ROWINC * 15);
 			w = T1AM_BUTTON_W * 1.5;
-			onButtonClick = "T1AM_LastDialog = ""ASSETS""; [0, [], 0] spawn T1AM_Fnc_LoadingScreen";
 			tooltip = "Go back to the start screen, asset selection,\nwithout relinquishing control of the artillery unit.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; T1AM_LastDialog = ""ASSETS""; [0, [], 0] spawn T1AM_Fnc_LoadingScreen";
 		};
 		
 		class T1AM_ButtonControlEndMission: T1AM_RscButtonMenu
 		{
 			idc = -1;
 			text = "END MISSION";
-			x = T1AM_COL + (T1AM_COLINC * 3.66);
+			x = T1AM_COL + (T1AM_COLINC * 0);
 			y = T1AM_ROW + (T1AM_ROWINC * 15);
 			w = T1AM_BUTTON_W * 1.5;
-			onButtonClick = "[true] call T1AM_Fnc_EndMission";
 			tooltip = "End the mission and relinquish control of the artillery unit.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [true] call T1AM_Fnc_EndMission";
 		};
 		
 		class T1AM_ButtonCloseComputer1: T1AM_ButtonCloseComputer{};
@@ -1487,7 +1489,7 @@ class T1AM_DialogLoading
 			idc = 47301;
 			text = "LOADING";
 			sizeEx = T1AM_TEXTSIZE;
-			x = 0.45;
+			x = 0.44;
 			y = 0.48;
 			w = T1AM_BUTTON_W  + (T1AM_COLINC * 2);
 			h = T1AM_BUTTON_H;
@@ -1532,62 +1534,229 @@ class T1AM_DialogAimpoint
 		
 		class T1AM_TextAimpoint: T1AM_RscText
 		{
-			idc = 47401;
-			text = "INPUT AIMPOINT (10-DIGIT GRID)";
+			idc = -1;
+			text = "AIMPOINT PARAMETERS";
 			sizeEx = T1AM_TEXTSIZE;
-			x = T1AM_COL + (T1AM_COLINC * 2.8);
-			y = T1AM_ROW + (T1AM_ROWINC * 3);
-			w = (T1AM_BUTTON_W * 1.95);
+			x = T1AM_COL + (T1AM_COLINC * 2.7);
+			y = T1AM_ROW + (T1AM_ROWINC * 3.1);
+			w = (T1AM_BUTTON_W * 1.55);
+			h = T1AM_BUTTON_H;
+			tooltip = "Choose the aimpoint that the artillery unit should aim at.\nTwo modes are available:\n- Position from point of view of the observer.\n- Grid coordinates of the target position.";
+		};
+		
+		class T1AM_TextAimpointGrid: T1AM_RscText
+		{
+			idc = 47401;
+			text = "TARGET POSITION (10-DIGIT GRID)";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 2.5);
+			y = T1AM_ROW + (T1AM_ROWINC * 5.15);
+			w = (T1AM_BUTTON_W * 2.1);
 			h = T1AM_BUTTON_H;
 			tooltip = "Coordinates of the target position.";
 		};
 		
-		class T1AM_TextPosAimpointX: T1AM_RscText
+		class T1AM_TextAimpointGridX: T1AM_RscText
 		{
-			idc = -1;
+			idc = 47410;
 			text = "X:";
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 2.5);
-			y = T1AM_ROW + (T1AM_ROWINC * 4);
+			y = T1AM_ROW + (T1AM_ROWINC * 6);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
 			tooltip = "X coordinate of target position.";
 		};
 		
-		class T1AM_TextPosAimpointY: T1AM_RscText
+		class T1AM_TextAimpointGridY: T1AM_RscText
 		{
-			idc = -1;
+			idc = 47411;
 			text = "Y:";
 			sizeEx = T1AM_TEXTSIZE;
 			x = T1AM_COL + (T1AM_COLINC * 2.5);
-			y = T1AM_ROW + (T1AM_ROWINC * 5);
+			y = T1AM_ROW + (T1AM_ROWINC * 7);
 			w = (T1AM_BUTTON_W * 0.5);
 			h = T1AM_BUTTON_H;
 			tooltip = "Y coordinate of target position.";
 		};
 		
+		class T1AM_TextAimpointSpotter: T1AM_RscText
+		{
+			idc = 47406;
+			text = "OBSERVER POSITION (10-DIGIT GRID)";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 1.25);
+			y = T1AM_ROW + (T1AM_ROWINC * 5.15);
+			w = (T1AM_BUTTON_W * 2.25);
+			h = T1AM_BUTTON_H;
+			tooltip = "Coordinates of the observer position.";
+		};
+		
+		class T1AM_TextSpotterX: T1AM_RscText
+		{
+			idc = 47412;
+			text = "X:";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 1.25);
+			y = T1AM_ROW + (T1AM_ROWINC * 6);
+			w = (T1AM_BUTTON_W * 0.5);
+			h = T1AM_BUTTON_H;
+			tooltip = "X coordinate of observer position.";
+		};
+		
+		class T1AM_TextSpotterY: T1AM_RscText
+		{
+			idc = 47413;
+			text = "Y:";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 1.25);
+			y = T1AM_ROW + (T1AM_ROWINC * 7);
+			w = (T1AM_BUTTON_W * 0.5);
+			h = T1AM_BUTTON_H;
+			tooltip = "Y coordinate of observer position.";
+		};
+		
+		class T1AM_TextAimpointPolar: T1AM_RscText
+		{
+			idc = 47414;
+			text = "DIRECTION / DISTANCE";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 4.05);
+			y = T1AM_ROW + (T1AM_ROWINC * 5.15);
+			w = (T1AM_BUTTON_W * 1.45);
+			h = T1AM_BUTTON_H;
+			tooltip = "The direction and distance from the\nobserver position to the target position.";
+		};
+		
+		class T1AM_TextAimpointPolarDir: T1AM_RscText
+		{
+			idc = 47415;
+			text = "DIR";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 3.75);
+			y = T1AM_ROW + (T1AM_ROWINC * 6);
+			w = (T1AM_BUTTON_W * 0.5);
+			h = T1AM_BUTTON_H;
+			tooltip = "Direction to the target position.";
+		};
+		
+		class T1AM_TextAimpointPolarDist: T1AM_RscText
+		{
+			idc = 47416;
+			text = "DIST";
+			sizeEx = T1AM_TEXTSIZE;
+			x = T1AM_COL + (T1AM_COLINC * 3.75);
+			y = T1AM_ROW + (T1AM_ROWINC * 7);
+			w = (T1AM_BUTTON_W * 0.5);
+			h = T1AM_BUTTON_H;
+			tooltip = "Distance to the target position.";
+		};
 		
 		
-		class T1AM_EditAimpointX: T1AM_RscEdit
+		
+		class T1AM_EditAimpointCheckbox: T1AM_RscCheckbox
+		{
+			idc = 47405;
+			x = T1AM_COL + (T1AM_COLINC * 2.8);
+			y = T1AM_ROW + (T1AM_ROWINC * 4);
+			w = 0.17;
+			h = 0.05;
+			rows = 1;
+			columns = 2;
+			strings[] = {"POLAR","GRID"};
+			checked_strings[] = {};
+			values[] = {0,0};
+			onToolBoxSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; _this spawn T1AM_Fnc_EditAimpointCheckboxEvent";
+		};
+		
+		class T1AM_EditAimpointGridX: T1AM_RscEdit
 		{
 			idc = 47402;
 			x = T1AM_COL + (T1AM_COLINC * 3);
-			y = T1AM_ROW + (T1AM_ROWINC * 4);
+			y = T1AM_ROW + (T1AM_ROWINC * 6);
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
-			text = "";
-			onKeyUp = "_this pushback 0; _this call T1AM_Fnc_EditAimpointEvent";
+			text = "0";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 0; _this call T1AM_Fnc_EditAimpointGridEvent";
 		};
 		
-		class T1AM_EditAimpointY: T1AM_RscEdit
+		class T1AM_EditAimpointGridY: T1AM_RscEdit
 		{
 			idc = 47403;
 			x = T1AM_COL + (T1AM_COLINC * 3);
-			y = T1AM_ROW + (T1AM_ROWINC * 5);
+			y = T1AM_ROW + (T1AM_ROWINC * 7);
 			w = T1AM_BUTTON_W;
 			h = T1AM_BUTTON_H;
-			text = "";
-			onKeyUp = "_this pushback 1; _this call T1AM_Fnc_EditAimpointEvent";
+			text = "0";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 1; _this call T1AM_Fnc_EditAimpointGridEvent";
+		};
+		
+		class T1AM_EditAimpointSpotterX: T1AM_RscEdit
+		{
+			idc = 47407;
+			x = T1AM_COL + (T1AM_COLINC * 1.75);
+			y = T1AM_ROW + (T1AM_ROWINC * 6);
+			w = T1AM_BUTTON_W;
+			h = T1AM_BUTTON_H;
+			text = "0";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 0; _this call T1AM_Fnc_EditAimpointSpotterEvent";
+		};
+		
+		class T1AM_EditAimpointSpotterY: T1AM_RscEdit
+		{
+			idc = 47408;
+			x = T1AM_COL + (T1AM_COLINC * 1.75);
+			y = T1AM_ROW + (T1AM_ROWINC * 7);
+			w = T1AM_BUTTON_W;
+			h = T1AM_BUTTON_H;
+			text = "0";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 1; _this call T1AM_Fnc_EditAimpointSpotterEvent";
+		};
+		
+		class T1AM_EditAimpointPolarDir: T1AM_RscEdit
+		{
+			idc = 47409;
+			x = T1AM_COL + (T1AM_COLINC * 4.25);
+			y = T1AM_ROW + (T1AM_ROWINC * 6);
+			w = T1AM_BUTTON_W;
+			h = T1AM_BUTTON_H;
+			text = "360";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this call T1AM_Fnc_EditAimpointPolarDirEvent";
+		};
+		
+		class T1AM_EditAimpointPolarDist: T1AM_RscEdit
+		{
+			idc = 47418;
+			x = T1AM_COL + (T1AM_COLINC * 4.25);
+			y = T1AM_ROW + (T1AM_ROWINC * 7);
+			w = T1AM_BUTTON_W;
+			h = T1AM_BUTTON_H;
+			text = "500";
+			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 6; _this call T1AM_Fnc_EditNumberEvent";
+		};
+		
+		class T1AM_ButtonInputAimpointMapclick: T1AM_RscButtonMenu
+		{
+			idc = 47404;
+			x = T1AM_COL + (T1AM_COLINC * 4);
+			y = T1AM_ROW + (T1AM_ROWINC * 6.6);
+			text = "M";
+			w = (T1AM_BUTTON_W * 0.21);
+			h = T1AM_BUTTON_H * 0.69;
+			tooltip = "Use map click to input target position coordinates.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonInputAimpointMapclickEvent}";
+		};
+		
+		class T1AM_ButtonInputAimpointSpotterMapclick: T1AM_RscButtonMenu
+		{
+			idc = 47417;
+			x = T1AM_COL + (T1AM_COLINC * 2.75);
+			y = T1AM_ROW + (T1AM_ROWINC * 6.6);
+			text = "M";
+			w = (T1AM_BUTTON_W * 0.21);
+			h = T1AM_BUTTON_H * 0.69;
+			tooltip = "Use map click to input observer position coordinates.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonInputAimpointSpotterMapclickEvent}";
 		};
 		
 		class T1AM_ButtonInputAimpoint: T1AM_RscButtonMenu
@@ -1595,21 +1764,9 @@ class T1AM_DialogAimpoint
 			idc = -1;
 			text = "INPUT";
 			x = T1AM_COL + (T1AM_COLINC * 3);
-			y = T1AM_ROW + (T1AM_ROWINC * 6);
-			onButtonClick = "call T1AM_Fnc_InputAimpoint";
-			tooltip = "Apply coordinates.";
-		};
-		
-		class T1AM_ButtonInputAimpointMapclick: T1AM_RscButtonMenu
-		{
-			idc = 47404;
-			x = T1AM_COL + (T1AM_COLINC * 4);
-			y = T1AM_ROW + (T1AM_ROWINC * 4.6);
-			text = "M";
-			w = (T1AM_BUTTON_W * 0.21);
-			h = T1AM_BUTTON_H * 0.69;
-			onButtonClick = "[] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonInputAimpointMapclickEvent}";
-			tooltip = "Use map click to input target position coordinates.";
+			y = T1AM_ROW + (T1AM_ROWINC * 8.5);
+			tooltip = "Apply target position.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; call T1AM_Fnc_InputAimpoint";
 		};
 		
 		class T1AM_ButtonAimpointAssets: T1AM_RscButtonMenu
@@ -1617,20 +1774,20 @@ class T1AM_DialogAimpoint
 			idc = -1;
 			text = "ASSETS";
 			x = T1AM_COL + (T1AM_COLINC * 3);
-			y = T1AM_ROW + (T1AM_ROWINC * 8);
-			onButtonClick = "T1AM_LastDialog = ""ASSETS""; [0, [], 0] spawn T1AM_Fnc_LoadingScreen";
+			y = T1AM_ROW + (T1AM_ROWINC * 10);
 			tooltip = "Go back to the start screen, asset selection,\nwithout relinquishing control of the artillery unit.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; T1AM_LastDialog = ""ASSETS""; [0, [], 0] spawn T1AM_Fnc_LoadingScreen";
 		};
 		
 		class T1AM_ButtonAimpointHelp: T1AM_RscButtonMenu
 		{
 			idc = -1;
 			text = "HELP";
-			x = T1AM_COL + (T1AM_COLINC * 4.4);
-			y = T1AM_ROW + (T1AM_ROWINC * 8);
+			x = T1AM_COL + (T1AM_COLINC * 4.1);
+			y = T1AM_ROW + (T1AM_ROWINC * 10);
 			w = (T1AM_BUTTON_W * 0.5);
-			onButtonClick = "[2,"""", 15] spawn T1AM_Fnc_ShowMessage";
 			tooltip = "Learn more about the coordinates system.";
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [2,"""", 15] spawn T1AM_Fnc_ShowMessage";
 		};
 		
 		class T1AM_ButtonCloseComputer1: T1AM_ButtonCloseComputer{};

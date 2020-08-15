@@ -1,3 +1,5 @@
+#include "\T1AM\Defines.hpp"
+
 params ["_side"];
 
 private _out = [];

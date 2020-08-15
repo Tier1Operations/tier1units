@@ -1,6 +1,8 @@
 // 155mm Howitzer
 // Low Angle
 
+#include "\T1AM\Defines.hpp"
+
 params ["_warheadType","_distance"];
 
 // Minumum delay before firing a shot

@@ -1,5 +1,7 @@
 // Process more stuff before sending it to the server.
 
+#include "\T1AM\Defines.hpp"
+
 if (T1AM_Debug_Mode) then {systemChat "Process Fire Mission"};
 
 params["_asset","_pos","_warheadType","_rounds","_distance","_missionType","_angle","_sender","_timeStamp","_prePlotted","_sheaf","_fuse","_sheafSize","_posDisplay","_airburstHeight","_plotNr","_GPSZAdjust","_posGPS","_sheafDir","_sheafDist","_TRPX","_TRPY","_remarks"];
@@ -13,9 +15,10 @@ private _tubes = [_asset] call T1AM_Fnc_GroupVehicles;
 private _vehicle = T1AM_SelectedTube;
 private _assetType = [_vehicle] call T1AM_Fnc_AssetType;
 if (_assetType == "") exitWith {
-	[_asset,"Invalid asset type.","NEGATIVE"] call T1AM_Fnc_SendComms;
 	T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
 	publicVariable "T1AM_AssetsBusy";
+	private _str = "ERROR:\nINVALID ASSET TYPE";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
 
 private _profile = [];
@@ -99,7 +102,7 @@ if (_distance > _maximumRange) exitWith {
 if (_missionType != "PLOT") then {
 	[_asset, _message] spawn {
 		params ["_asset","_message"];
-		sleep (2 + random 3);
+		sleep (3 + random 3);
 		[_asset,_message,"MTO"] call T1AM_Fnc_SendComms;
 	};
 };

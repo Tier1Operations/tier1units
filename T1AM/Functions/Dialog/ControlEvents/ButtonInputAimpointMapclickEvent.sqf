@@ -1,5 +1,6 @@
 // This allows the player to click on the map to choose the coordinates.
-// After the player clicks, it will run the next part of the script (InputAimpoint).
+
+#include "\T1AM\Defines.hpp"
 
 if (!T1AM_AllowMapClick) exitWith {
 	private _str = "MAP CLICK OPTION IS DISABLED";

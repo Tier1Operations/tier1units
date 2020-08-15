@@ -1,5 +1,7 @@
 // Transmits comms to all clients.
 
+#include "\T1AM\Defines.hpp"
+
 if (!T1AM_ModEnabled) exitWith {};
 
 params ["_asset","_messageCode","_audio"];

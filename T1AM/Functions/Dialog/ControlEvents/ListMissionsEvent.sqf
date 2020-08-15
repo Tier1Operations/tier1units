@@ -1,3 +1,5 @@
+#include "\T1AM\Defines.hpp"
+
 params ["_control", "_selectedIndex"];
 
 private _dialog = findDisplay 47100;

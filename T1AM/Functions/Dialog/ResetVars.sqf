@@ -1,5 +1,7 @@
 // Reset vars when ending mission.
 
+#include "\T1AM\Defines.hpp"
+
 T1AM_ControlledAssetLocal setVariable ["T1AM_endMission", true, true];
 T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", nil, true];
 T1AM_ControlledAssetLocal setVariable ["T1AM_controlledBy", nil, true];
@@ -13,7 +15,7 @@ T1AM_FireMissionCurrent = [];
 T1AM_SelectedTube = objNull;
 T1AM_SelectedTubeIndex = 0;
 T1AM_LastMission = "SPOT";
-T1AM_LastAngle = "HIGH";
+T1AM_LastAngle = "LOW";
 T1AM_LastRounds = 1;
 T1AM_LastWarhead = "";
 T1AM_LastFuse = "";

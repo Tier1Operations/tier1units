@@ -1,3 +1,5 @@
+#include "\T1AM\Defines.hpp"
+
 disableSerialization;
 
 if (!T1AM_ModEnabled) exitWith {};
@@ -27,6 +29,13 @@ if (isNull (findDisplay 47050)) then {
 hint "";
 private _dialog = findDisplay 47300;
 private _control = _dialog displayCtrl 47301;
+
+if (_mode == 0) then {
+	playSound "T1AM_Sounds_Load1";
+} else {
+	playSound "T1AM_Sounds_Load3";
+};
+
 
 private _waitTime = time + ((random[0.5,1,5]) max _minWaitTime);
 private _i = 0;

@@ -85,11 +85,16 @@ class CfgFunctions
 			class ListMissionTypeEvent {file = "T1AM\Functions\Dialog\ControlEvents\ListMissionTypeEvent.sqf"};
 			class EditAdjustImpactRefPosEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAdjustImpactRefPosEvent.sqf"};
 			class ButtonAdjustImpactRefMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonAdjustImpactRefMapclickEvent.sqf"};
-			class EditAimpointEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAimpointEvent.sqf"};
+			class EditAimpointGridEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAimpointGridEvent.sqf"};
 			class ButtonStartEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonStartEvent.sqf"};
 			class EditTRPPosEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditTRPPosEvent.sqf"};
 			class ButtonTRPMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonTRPMapclickEvent.sqf"};
 			class EditRemarksEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditRemarksEvent.sqf"};
+			class EditAimpointCheckboxEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAimpointCheckboxEvent.sqf"};
+			class ButtonInputAimpointSpotterMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonInputAimpointSpotterMapclickEvent.sqf"};
+			class EditAimpointSpotterEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAimpointSpotterEvent.sqf"};
+			class EditAimpointPolarDirEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAimpointPolarDirEvent.sqf"};
+			class EditSheafDirEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditSheafDirEvent.sqf"};
 		};
 		class Misc
 		{
@@ -117,6 +122,7 @@ class CfgFunctions
 			class GridToPos {file = "T1AM\Functions\Misc\GridToPos.sqf"};
 			class GetRandomSpread {file = "T1AM\Functions\Misc\GetRandomSpread.sqf"};
 			class ChangeLocality {file = "T1AM\Functions\Misc\ChangeLocality.sqf"};
+			class PlaySoundGUI {file = "T1AM\Functions\Misc\PlaySoundGUI.sqf"};
 		};
 		class Sheafs
 		{
@@ -450,7 +456,84 @@ class CfgSounds
 		name = "T1AM_FireMissionReadyGRE";
 		sound[] ={"\T1AM\Data\Sounds\GRE\FireMissionReady.ogg",db-10,1.0};
 		titles[] = {};
-	};	
+	};
+	
+	class T1AM_Sounds_Button1
+	{
+		name = "T1AM_Sounds_Button1";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Button1.ogg",db-10,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Button2
+	{
+		name = "T1AM_Sounds_Button2";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Button2.ogg",db-10,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Button3
+	{
+		name = "T1AM_Sounds_Button3";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Button3.ogg",db-10,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Click1
+	{
+		name = "T1AM_Sounds_Click1";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Click1.ogg",db-5,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Click2
+	{
+		name = "T1AM_Sounds_Click2";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Click2.ogg",db-5,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Type1
+	{
+		name = "T1AM_Sounds_Type1";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Type1.ogg",db-2,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Type2
+	{
+		name = "T1AM_Sounds_Type2";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Type2.ogg",db-2,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Error1
+	{
+		name = "T1AM_Sounds_Error1";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Error1.ogg",db-5,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Load1
+	{
+		name = "T1AM_Sounds_Load1";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Load1.ogg",db-10,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Load2
+	{
+		name = "T1AM_Sounds_Load2";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Load2.ogg",db-10,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Load3
+	{
+		name = "T1AM_Sounds_Load3";
+		sound[] ={"\T1AM\Data\Sounds\GUI\Load3.ogg",db-5,1.0};
+		titles[] = {};
+	};
 };
 
 

@@ -1,46 +1,116 @@
+#include "\T1AM\Defines.hpp"
+
 disableSerialization;
 
 // Process coordinates received from the player.
 private _dialog = findDisplay 47400;
 
+private _mode = T1AM_LastAimpointCheckbox;
+DEBUGLOG format["INPUT AIMPOINT -- _mode: %1", _mode];
 
 
-// X coordinate
-private _str = ctrlText (_dialog displayCtrl 47402);
+// X spotter coordinate
+private _str = ctrlText (_dialog displayCtrl 47407);
 _str = [_str] call T1AM_Fnc_GridToPos;
-private _x = [_str, 5, true] call T1AM_Fnc_ParseNumber;
-if (_x == -9999999) exitWith {
-	private _str = "INVALID INPUT:\nX COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+private _spotterX = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+if (_mode == 0 and _spotterX == -9999999) exitWith {
+	private _str = "INVALID INPUT:\nX OBSERVER COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
 
-// Y coordinate
+// Y spotter coordinate
+_str = ctrlText (_dialog displayCtrl 47408);
+_str = [_str] call T1AM_Fnc_GridToPos;
+private _spotterY = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+if (_mode == 0 and _spotterY == -9999999) exitWith {
+	private _str = "INVALID INPUT:\nY OBSERVER COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
+if (_mode == 0 and _spotterX == 0 and _spotterY == 0) exitWith {
+	private _str = "INVALID INPUT:\nOBSERVER COORDINATES\n\nCANNOT BOTH BE ZERO";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
+// Direction
+private _dir = [ctrlText (_dialog displayCtrl 47409), 0, false] call T1AM_Fnc_ParseNumber;
+if (_mode == 0 and (_dir < 0 or _dir > 360)) exitWith {
+	T1AM_LastAimpointDir = 360;
+	if (!isNull _dialog) then {
+		(_dialog displayCtrl 47409) ctrlSetText (str T1AM_LastAimpointDir);
+	};
+	private _str = "INVALID INPUT:\nDIR\n\nUSE NUMBERS ONLY. MUST BE BETWEEN 0 AND 360";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
+// Distance
+private _dist = [ctrlText (_dialog displayCtrl 47418), 0, true] call T1AM_Fnc_ParseNumber;
+if (_mode == 0 and _dist < 1) exitWith {
+	T1AM_LastAimpointDist = 500;
+	if (!isNull _dialog) then {
+		(_dialog displayCtrl 47418) ctrlSetText (str T1AM_LastAimpointDist);
+	};
+	private _str = "INVALID INPUT:\nDIST\n\nUSE NUMBERS ONLY. MUST BE HIGHER THAN 0";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
+// X target coordinate
+_str = ctrlText (_dialog displayCtrl 47402);
+_str = [_str] call T1AM_Fnc_GridToPos;
+private _targetX = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+if (_mode == 1 and _targetX == -9999999) exitWith {
+	private _str = "INVALID INPUT:\nX TARGET COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
+};
+
+// Y target coordinate
 _str = ctrlText (_dialog displayCtrl 47403);
 _str = [_str] call T1AM_Fnc_GridToPos;
-private _y = [_str, 5, true] call T1AM_Fnc_ParseNumber;
-if (_y == -9999999) exitWith {
-	private _str = "INVALID INPUT:\nY COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
+private _targetY = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+if (_mode == 1 and _targetY == -9999999) exitWith {
+	private _str = "INVALID INPUT:\nY TARGET COORDINATE\n\nUSE NUMBERS ONLY. MAX 5 NUMBERS ALLOWED";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
 
-if (_x == 0 and _y == 0) exitWith {
-	private _str = "INVALID INPUT:\nAIMPOINT COORDINATES\n\nCANNOT BOTH BE ZERO";
+if (_mode == 1 and _targetX == 0 and _targetY == 0) exitWith {
+	private _str = "INVALID INPUT:\nTARGET COORDINATES\n\nCANNOT BOTH BE ZERO";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
 
 
+if (_mode == 0) then {
+	DEBUGLOG format["INPUT AIMPOINT -- _spotterX: %1", _spotterX];
+	DEBUGLOG format["INPUT AIMPOINT -- _spotterY: %1", _spotterY];
+	DEBUGLOG format["INPUT AIMPOINT -- _dir: %1", _dir];
+	DEBUGLOG format["INPUT AIMPOINT -- _dist: %1", _dist];
+} else {
+	DEBUGLOG format["INPUT AIMPOINT -- _targetX: %1", _targetX];
+	DEBUGLOG format["INPUT AIMPOINT -- _targetY: %1", _targetY];
+};
 
-_x = [_x] call T1AM_Fnc_FormatCoordinates;
-_y = [_y] call T1AM_Fnc_FormatCoordinates;
-private _posReal = [[_x, _y]] call T1AM_Fnc_MapGridToPos;
-_x = _posReal select 0;
-_y = _posReal select 1;
+
+private _pos = [];
+if (_mode == 0) then {
+	_spotterX = [_spotterX] call T1AM_Fnc_FormatCoordinates;
+	_spotterY = [_spotterY] call T1AM_Fnc_FormatCoordinates;
+	_pos = [[_spotterX, _spotterY]] call T1AM_Fnc_MapGridToPos;
+	_pos = _pos getPos [_dist, _dir];
+	
+} else {
+	
+	_targetX = [_targetX] call T1AM_Fnc_FormatCoordinates;
+	_targetY = [_targetY] call T1AM_Fnc_FormatCoordinates;
+	_pos = [[_targetX, _targetY]] call T1AM_Fnc_MapGridToPos;
+};
+
+private _x = _pos select 0;
+private _y = _pos select 1;
 
 T1AM_Elevation = ((AGLtoASL [_x,_y,0]) select 2) max 0;
 
-//DIAG_LOG format["AIMPOINT MANUAL -- _x: %1", _x];
-//DIAG_LOG format["AIMPOINT MANUAL -- _y: %1", _y];
-//DIAG_LOG format["AIMPOINT MANUAL -- T1AM_Elevation: %1", T1AM_Elevation];
+DEBUGLOG format["INPUT AIMPOINT -- _x: %1", _x];
+DEBUGLOG format["INPUT AIMPOINT -- _y: %1", _y];
+DEBUGLOG format["INPUT AIMPOINT -- T1AM_Elevation: %1", T1AM_Elevation];
 
 T1AM_X = _x;
 T1AM_Y = _y;
@@ -50,12 +120,13 @@ T1AM_Ydisplay = T1AM_Y;
 
 T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", [T1AM_X, T1AM_Y, T1AM_Elevation]];
 
+
 // Add some initial error to the target pos to simulate natural aiming errors.
-private _pos = [T1AM_X,T1AM_Y,T1AM_Elevation];
+_pos = [T1AM_X,T1AM_Y,T1AM_Elevation];
 private _vehicle = vehicle leader T1AM_SelectedAsset;
 private _distance = (getPosASL _vehicle) vectorDistance _pos;
 
-//DIAG_LOG format["AIMPOINT MANUAL -- POS BEFORE RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
+DEBUGLOG format["INPUT AIMPOINT -- POS BEFORE RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
 
 private _initialMiss = true;
 if (_distance <= 750) then {_initialMiss = false};
@@ -132,14 +203,13 @@ if (_initialMiss) then {
 	T1AM_X = _errorPos select 0;
 	T1AM_Y = _errorPos select 1;
 	
-	//DIAG_LOG format["AIMPOINT MANUAL -- POS AFTER RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
+	DEBUGLOG format["INPUT AIMPOINT -- POS AFTER RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
 };
 
 
 // Increment fire mission number.
 private _fireMissionNr = T1AM_ControlledAssetLocal getVariable ["T1AM_FireMissionNr", 0]; 
-_fireMissionNr = _fireMissionNr + 1;
-T1AM_ControlledAssetLocal setVariable ["T1AM_FireMissionNr", _fireMissionNr, true];
+T1AM_ControlledAssetLocal setVariable ["T1AM_FireMissionNr", _fireMissionNr + 1, true];
 
 
 T1AM_HaveAimpoint = true;

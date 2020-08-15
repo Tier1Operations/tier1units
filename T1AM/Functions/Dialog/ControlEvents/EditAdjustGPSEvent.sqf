@@ -2,14 +2,16 @@
 // Mode 1 = Y
 // Mode 2 = Z
 
+#include "\T1AM\Defines.hpp"
+
 params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt", "_mode"];
 
-//DIAG_LOG format ["EDIT ADJUST GPS EVENT START | _this: %1", _this];
+DEBUGLOG format ["EDIT ADJUST GPS EVENT START | _this: %1", _this];
 
 private _nr = ctrlText _displayorcontrol;
 if (_nr == "") exitWith {};
 
-//DIAG_LOG format ["EDIT ADJUST GPS EVENT 1 | _nr: %1", _nr];
+DEBUGLOG format ["EDIT ADJUST GPS EVENT 1 | _nr: %1", _nr];
 
 if (_mode == 0 or _mode == 1) then {
 	_nr = [_nr] call T1AM_Fnc_GridToPos;
@@ -18,7 +20,7 @@ if (_mode == 0 or _mode == 1) then {
 	_nr = [_nr, 0, false] call T1AM_Fnc_ParseNumber;
 };
 
-//DIAG_LOG "EDIT ADJUST GPS EVENT 2";
+DEBUGLOG "EDIT ADJUST GPS EVENT 2";
 
 if (_nr == -9999999) exitWith {
 	private _str = "";
@@ -39,7 +41,7 @@ if (_nr == -9999999) exitWith {
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
 
-//DIAG_LOG format ["EDIT ADJUST GPS EVENT 3 | _nr: %1", _nr];
+DEBUGLOG format ["EDIT ADJUST GPS EVENT 3 | _nr: %1", _nr];
 
 
 switch (_mode) do {
@@ -58,7 +60,7 @@ switch (_mode) do {
 	};
 };
 
-//DIAG_LOG format ["EDIT ADJUST GPS EVENT 4 | T1AM_LastGPSX: %1 | T1AM_LastGPSY: %2 | T1AM_LastGPSZ_AGL: %3", T1AM_LastGPSX, T1AM_LastGPSY, T1AM_LastGPSZ_AGL];
+DEBUGLOG format ["EDIT ADJUST GPS EVENT 4 | T1AM_LastGPSX: %1 | T1AM_LastGPSY: %2 | T1AM_LastGPSZ_AGL: %3", T1AM_LastGPSX, T1AM_LastGPSY, T1AM_LastGPSZ_AGL];
 
 private _posGPS = AGLtoASL [T1AM_LastGPSX,T1AM_LastGPSY,T1AM_LastGPSZ_AGL];
 T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", _posGPS];
@@ -76,7 +78,7 @@ if (_GPSGuidedTypes or _GPSLaserTypes or _GPSSeekerTypes) then {
 	((findDisplay 47200) displayCtrl 47216) ctrlSetText format ["%1 m (GPS)", _distance];
 };
 
-//DIAG_LOG "EDIT ADJUST GPS EVENT 5";
+DEBUGLOG "EDIT ADJUST GPS EVENT 5";
 
 // Update CEP
 private _cep = "";
@@ -92,4 +94,4 @@ switch true do {
 
 ((findDisplay 47200) displayCtrl 47220) ctrlSetText _cep;
 
-//DIAG_LOG "EDIT ADJUST GPS EVENT END";
+DEBUGLOG "EDIT ADJUST GPS EVENT END";

@@ -1,6 +1,8 @@
 // Approve vehicles that are supported.
 // Vehicles are approved by setting the variable T1AM_suitableVehicle to true.
 
+#include "\T1AM\Defines.hpp"
+
 if (!isServer) exitWith {};
 
 private _check = {
@@ -40,11 +42,11 @@ private _check = {
 						_unit enableSimulationGlobal false;
 					};
 				};
-				//DIAG_LOG format ["APPROVE VEH: %1 - TYPEOF: %2", _x, typeOf _x];
+				DEBUGLOG format ["APPROVE VEH: %1 - TYPEOF: %2", _x, typeOf _x];
 				
 			} else {
 				_x setVariable ["T1AM_suitableVehicle", false, true];
-				//DIAG_LOG format ["APPROVE VEH - NOT SUITABLE: %1 - TYPEOF: %2", _x, typeOf _x];
+				DEBUGLOG format ["APPROVE VEH - NOT SUITABLE: %1 - TYPEOF: %2", _x, typeOf _x];
 			};
 		};
 		

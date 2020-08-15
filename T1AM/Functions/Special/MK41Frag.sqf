@@ -1,3 +1,5 @@
+#include "\T1AM\Defines.hpp"
+
 params ["_params","_pos"];
 
 private _projectile = _params select 6;

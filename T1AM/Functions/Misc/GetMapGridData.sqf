@@ -1,5 +1,7 @@
 // Code originally created by PabstMirror.
 
+#include "\T1AM\Defines.hpp"
+
 T1AM_mapGridData = [];
 
 //--- Extract grid values from world config (Borrowed from BIS_fnc_gridToPos)

@@ -1,5 +1,7 @@
 // Takes a group name and returns the group code and colour without the side in front.
 
+#include "\T1AM\Defines.hpp"
+
 disableSerialization;
 
 params ["_group"];

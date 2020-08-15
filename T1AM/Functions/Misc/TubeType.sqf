@@ -1,5 +1,7 @@
 // Figure out what kind of weapon the unit has.
 
+#include "\T1AM\Defines.hpp"
+
 params ["_tube"];
 
 private _mortarL = ["I_Mortar_01_F","I_G_Mortar_01_F","I_E_Mortar_01_F","O_Mortar_01_F","O_T_Support_Mort_F","O_G_Mortar_01_F","B_G_Mortar_01_F","B_Mortar_01_F","B_T_Mortar_01_F","RHS_M252_D","rhsgref_cdf_b_reg_M252","RHS_M252_WD","RHS_M252_USMC_D","RHS_M252_USMC_WD","rhssaf_army_o_m252","rhsgref_cdf_reg_M252","rhssaf_army_m252","rhsgref_ins_2b14","rhs_2b14_82mm_msv","rhs_2b14_82mm_vdv","rhs_2b14_82mm_vmf","rhsgref_tla_2b14","rhsgref_ins_g_2b14","rhsgref_nat_2b14","min_rf_Mortar","min_rf_Mortar_desert","min_rf_Mortar_winter"];

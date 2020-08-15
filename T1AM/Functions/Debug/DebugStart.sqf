@@ -1,5 +1,7 @@
 // Debug mode is enabled. Mark all artillery units.
 
+#include "\T1AM\Defines.hpp"
+
 waitUntil {sleep 1; T1AM_Ready};
 sleep 1;
 

@@ -1,5 +1,7 @@
 // Start processing the fire mission.
 
+#include "\T1AM\Defines.hpp"
+
 disableSerialization;
 
 if (T1AM_ControlledAssetLocal in T1AM_AssetsBusy) exitWith {
@@ -9,7 +11,7 @@ if (T1AM_ControlledAssetLocal in T1AM_AssetsBusy) exitWith {
 
 private _prePlotted = T1AM_PrePlotted;
 
-//DIAG_LOG format["TRANSMIT - _prePlotted: %1", _prePlotted];
+DEBUGLOG format["TRANSMIT - _prePlotted: %1", _prePlotted];
 
 private _dialog = findDisplay 47200;
 
@@ -22,7 +24,7 @@ private _fuse = (_dialog displayCtrl 47212) lbData (lbCurSel (_dialog displayCtr
 private _sheaf = (_dialog displayCtrl 47211) lbData (lbCurSel (_dialog displayCtrl 47211));
 private _sizeX = [ctrlText (_dialog displayCtrl 47213), 0, true] call T1AM_Fnc_ParseNumber;
 private _sizeY = [ctrlText (_dialog displayCtrl 47214), 0, true] call T1AM_Fnc_ParseNumber;
-private _sheafDir = [ctrlText (_dialog displayCtrl 47224), 0, true] call T1AM_Fnc_ParseNumber;
+private _sheafDir = [ctrlText (_dialog displayCtrl 47224), 0, false] call T1AM_Fnc_ParseNumber;
 private _sheafDist = [ctrlText (_dialog displayCtrl 47225), 0, true] call T1AM_Fnc_ParseNumber;
 private _missionType = (_dialog displayCtrl 47208) lbData (lbCurSel (_dialog displayCtrl 47208));
 private _adjustX = [ctrlText (_dialog displayCtrl 47204), 0, true] call T1AM_Fnc_ParseNumber;
@@ -265,7 +267,7 @@ if (_sheafDir < 0 or _sheafDir > 360) exitWith {
 	if (!isNull _dialog) then {
 		(_dialog displayCtrl 47224) ctrlSetText (str T1AM_LastSheafDir);
 	};
-	private _str = "INVALID INPUT:\nSHEAF DIR\n\nUSE NUMBERS ONLY. MUST BE BETWEEN 1 AND 360";
+	private _str = "INVALID INPUT:\nSHEAF DIR\n\nUSE NUMBERS ONLY. MUST BE BETWEEN 0 AND 360";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;
 };
 
@@ -306,12 +308,12 @@ if (_prePlotted) then {
 	T1AM_Y = T1AM_LastPos select 1;
 	T1AM_Elevation = T1AM_LastPos select 2;
 	_pos = T1AM_LastPos;
-	//DIAG_LOG format["TRANSMIT - PREPLOTTED - _pos: %1", _pos];
+	DEBUGLOG format["TRANSMIT - PREPLOTTED - _pos: %1", _pos];
 	
 } else {
 	
 	_pos = [T1AM_X, T1AM_Y, T1AM_Elevation];
-	//DIAG_LOG format["TRANSMIT - NOT PLOTTED - _pos: %1", _pos];
+	DEBUGLOG format["TRANSMIT - NOT PLOTTED - _pos: %1", _pos];
 };
 
 

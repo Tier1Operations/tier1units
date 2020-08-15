@@ -1,3 +1,5 @@
+#include "\T1AM\Defines.hpp"
+
 disableSerialization;
 
 params ["_mode", "_message", "_waitTime"];
@@ -24,6 +26,8 @@ switch (_mode) do {
 };
 
 _control ctrlSetText _message;
+
+playSound "T1AM_Sounds_Error1";
 
 private _waitTime = time + _waitTime;
 while {!isNull (findDisplay 47500) and time < _waitTime} do {

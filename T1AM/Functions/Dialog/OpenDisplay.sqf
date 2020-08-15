@@ -1,5 +1,7 @@
 // Checks if the artillery dialog can be shown
 
+#include "\T1AM\Defines.hpp"
+
 disableSerialization;
 
 params ["_params"];
@@ -57,6 +59,7 @@ if (!T1AM_AuthorizeEveryone and !_authorized) exitWith {
 
 private _haveRadio = call T1AM_Fnc_HasRadio;
 if (_haveRadio) then {
+	T1AM_PlaySoundGUI = false;
 	switch (T1AM_LastDialog) do {
 		case ("ASSETS") : {_params spawn T1AM_Fnc_Assets};
 		case ("AIMPOINT") : {_params spawn T1AM_Fnc_Aimpoint};

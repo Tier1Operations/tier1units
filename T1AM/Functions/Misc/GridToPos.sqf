@@ -2,6 +2,8 @@
 // Useful for transforming player input into actual pos that can be used by code.
 // For example: 1 = 10000; 235 = 23500; 053 = 5300; 0015 = 150; 00075 = 75.
 
+#include "\T1AM\Defines.hpp"
+
 params ["_str"];
 
 if (count _str > 0) then {

@@ -1,5 +1,7 @@
 // Code originally created by PabstMirror. Edited by BlackAlpha.
 
+#include "\T1AM\Defines.hpp"
+
 private ["_inputStringArray","_getCenterOfGrid"];
 
 _inputStringArray = _this select 0;

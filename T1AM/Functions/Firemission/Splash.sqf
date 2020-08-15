@@ -1,3 +1,5 @@
+#include "\T1AM\Defines.hpp"
+
 params ["_ETA","_asset"];
 
 _ETA = (_ETA - 5) max 1;

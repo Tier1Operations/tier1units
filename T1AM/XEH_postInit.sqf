@@ -24,12 +24,13 @@ T1AM_Xdisplay = 0;	// The X target coordinates displayed to the player. May not 
 T1AM_Ydisplay = 0;	// The Y target coordinates displayed to the player. May not be accurate, on purpose.
 T1AM_Elevation = 0; // ASL elevation.
 T1AM_HaveAimpoint = false;	// Used to decide if player has already picked a target pos when starting a new mission.
+T1AM_PlaySoundGUI = false;	// Used to stop sounds when the menu has just loaded, so that they don't all play at the same time.
 T1AM_SelectedAsset = grpNull;
 
 // Vars used to remember what the player had selected in the arty computer,
 // so that the same options can automatically be selected when closing and re-opening the arty computer.
 T1AM_LastMission = "SPOT";
-T1AM_LastAngle = "HIGH";
+T1AM_LastAngle = "LOW";
 T1AM_LastRounds = 1;
 T1AM_LastWarhead = "";
 T1AM_LastFuse = "";
@@ -53,9 +54,14 @@ T1AM_LastGPSZ_AGL = 0;
 T1AM_LastAdjustCheckbox = 0;
 T1AM_LastAdjustX = 0;
 T1AM_LastAdjustY = 0;
+T1AM_LastRemarks = "";
 T1AM_LastAimpointX = 0;
 T1AM_LastAimpointY = 0;
-T1AM_LastRemarks = "";
+T1AM_LastAimpointSpotterX = 0;
+T1AM_LastAimpointSpotterY = 0;
+T1AM_LastAimpointDir = 0;
+T1AM_LastAimpointDist = 0;
+T1AM_LastAimpointCheckbox = 0;
 
 
 // Units that will be added to the arty computer, even though they normally wouldn't be added because of incompatibility.

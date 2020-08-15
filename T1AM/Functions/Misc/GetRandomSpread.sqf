@@ -1,3 +1,5 @@
+#include "\T1AM\Defines.hpp"
+
 params ["_distance", "_maximumRange"];
 
 private _scatterSpread = (_distance / 200) + (exp((log _distance)*0.7));

@@ -1,11 +1,13 @@
+#include "\T1AM\Defines.hpp"
+
 params ["_tube","_asset","_pos","_sizeX","_sizeY","_sheafDir"];
 
-//DIAG_LOG format["BOX SHEAF - _tube: %1", _tube];
-//DIAG_LOG format["BOX SHEAF - _asset: %1", _asset];
-//DIAG_LOG format["BOX SHEAF - _pos: %1", _pos];
-//DIAG_LOG format["BOX SHEAF - _sizeX: %1", _sizeX];
-//DIAG_LOG format["BOX SHEAF - _sizeY: %1", _sizeY];
-//DIAG_LOG format["BOX SHEAF - _sheafDir: %1", _sheafDir];
+DEBUGLOG format["BOX SHEAF - _tube: %1", _tube];
+DEBUGLOG format["BOX SHEAF - _asset: %1", _asset];
+DEBUGLOG format["BOX SHEAF - _pos: %1", _pos];
+DEBUGLOG format["BOX SHEAF - _sizeX: %1", _sizeX];
+DEBUGLOG format["BOX SHEAF - _sizeY: %1", _sizeY];
+DEBUGLOG format["BOX SHEAF - _sheafDir: %1", _sheafDir];
 
 if (_sheafDir <= 0 or _sheafDir > 360) then {_sheafDir = 360};
 

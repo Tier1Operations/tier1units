@@ -13,6 +13,7 @@
 // 11 - Elevation difference used for airburst.
 // 12 - CEP setting for when there's no lock and no GPS.
 
+#include "\T1AM\Defines.hpp"
 
 params["_firedEHArray","_primaryTarget","_missile","_basicPos","_radius","_action","_fuse","_infoDummy","_doAirburst","_arrayEnemySides","_GPSZAdjust","_elevationMod","_unguidedCEP"];
 
@@ -20,19 +21,19 @@ private _unguidedCEPHalf = _unguidedCEP / 2;
 private _basicPosAGL = ASLtoAGL _basicPos;
 
 
-//DIAG_LOG format ["GUIDEPROJ -- _firedEHArray: %1", _firedEHArray];
-//DIAG_LOG format ["GUIDEPROJ -- _primaryTarget: %1", _primaryTarget];
-//DIAG_LOG format ["GUIDEPROJ -- _missile: %1", _missile];
-//DIAG_LOG format ["GUIDEPROJ -- _basicPos: %1", _basicPos];
-//DIAG_LOG format ["GUIDEPROJ -- _radius: %1", _radius];
-//DIAG_LOG format ["GUIDEPROJ -- _action: %1", _action];
-//DIAG_LOG format ["GUIDEPROJ -- _fuse: %1", _fuse];
-//DIAG_LOG format ["GUIDEPROJ -- _infoDummy: %1", _infoDummy];
-//DIAG_LOG format ["GUIDEPROJ -- _arrayEnemySides: %1", _arrayEnemySides];
-//DIAG_LOG format ["GUIDEPROJ -- _GPSZAdjust: %1", _GPSZAdjust];
-//DIAG_LOG format ["GUIDEPROJ -- _elevationMod: %1", _elevationMod];
-//DIAG_LOG format ["GUIDEPROJ -- _unguidedCEP: %1", _unguidedCEP];
-//DIAG_LOG format ["GUIDEPROJ -- _basicPosAGL: %1", _basicPosAGL];
+DEBUGLOG format ["GUIDEPROJ -- _firedEHArray: %1", _firedEHArray];
+DEBUGLOG format ["GUIDEPROJ -- _primaryTarget: %1", _primaryTarget];
+DEBUGLOG format ["GUIDEPROJ -- _missile: %1", _missile];
+DEBUGLOG format ["GUIDEPROJ -- _basicPos: %1", _basicPos];
+DEBUGLOG format ["GUIDEPROJ -- _radius: %1", _radius];
+DEBUGLOG format ["GUIDEPROJ -- _action: %1", _action];
+DEBUGLOG format ["GUIDEPROJ -- _fuse: %1", _fuse];
+DEBUGLOG format ["GUIDEPROJ -- _infoDummy: %1", _infoDummy];
+DEBUGLOG format ["GUIDEPROJ -- _arrayEnemySides: %1", _arrayEnemySides];
+DEBUGLOG format ["GUIDEPROJ -- _GPSZAdjust: %1", _GPSZAdjust];
+DEBUGLOG format ["GUIDEPROJ -- _elevationMod: %1", _elevationMod];
+DEBUGLOG format ["GUIDEPROJ -- _unguidedCEP: %1", _unguidedCEP];
+DEBUGLOG format ["GUIDEPROJ -- _basicPosAGL: %1", _basicPosAGL];
 
 
 // Check if the projectile has submunition.
@@ -56,9 +57,9 @@ if (_doAirburst and {_fuse != ""} and {_action == 1 or {_action == 4}}) then {
 	_triggerDistance = (getNumber (configFile >> "CfgAmmo" >> _ammoType >> "triggerDistance")) + 500;
 };
 
-//DIAG_LOG format ["GUIDEPROJ -- _submun: %1", _submun];
-//DIAG_LOG format ["GUIDEPROJ -- _airburstLaser: %1", _airburstLaser];
-//DIAG_LOG format ["GUIDEPROJ -- _triggerDistance: %1", _triggerDistance];
+DEBUGLOG format ["GUIDEPROJ -- _submun: %1", _submun];
+DEBUGLOG format ["GUIDEPROJ -- _airburstLaser: %1", _airburstLaser];
+DEBUGLOG format ["GUIDEPROJ -- _triggerDistance: %1", _triggerDistance];
 
 // If the primary target disappeared while this script was starting up, then create a dummy static target.
 if (isNull _primarytarget) then {
@@ -137,17 +138,17 @@ while {alive _missile} do {
 	// If laser guided, guide by laser. If the laser disappears, guide to last known position of laser.
 	// If it's a seeker, it will automatically try to lock on to a suitable target. If no target, then it will go to the target pos.
 	
-	//DIAG_LOG format ["GUIDEPROJ LOOP1 -- _target: %1 -- TARGET POS: %2", _target, getPosASL _target];
+	DEBUGLOG format ["GUIDEPROJ LOOP1 -- _target: %1 -- TARGET POS: %2", _target, getPosASL _target];
 	
 	_target = _secondaryTarget;
 	private _distance = (getPosASL _missile) vectorDistance (getPosASL _target);
 	_posMissile = getPosASL _missile;
 	
 	
-	//DIAG_LOG format ["GUIDEPROJ LOOP1 -- _distance: %1", _distance];
-	//DIAG_LOG format ["GUIDEPROJ LOOP1 -- _posMissile: %1", _posMissile];
-	//DIAG_LOG format ["GUIDEPROJ LOOP1 -- _finalApproach: %1", _finalApproach];
-	//DIAG_LOG format ["GUIDEPROJ LOOP1 -- _fixedSpeed: %1", _fixedSpeed];
+	DEBUGLOG format ["GUIDEPROJ LOOP1 -- _distance: %1", _distance];
+	DEBUGLOG format ["GUIDEPROJ LOOP1 -- _posMissile: %1", _posMissile];
+	DEBUGLOG format ["GUIDEPROJ LOOP1 -- _finalApproach: %1", _finalApproach];
+	DEBUGLOG format ["GUIDEPROJ LOOP1 -- _fixedSpeed: %1", _fixedSpeed];
 	
 	
 	// When speed drops too much, set a fixed speed number.
@@ -383,7 +384,7 @@ while {alive _missile} do {
 		_missile setPosASL _posMissile;
 		_airburstLaserGivePos = true;
 		_airburstLaser = false;
-		//DIAG_LOG format ["GUIDEPROJ AIRBURST LASER - CREATING DUMMY: %1", _missile];
+		DEBUGLOG format ["GUIDEPROJ AIRBURST LASER - CREATING DUMMY: %1", _missile];
 		
 		// Give the airburst script some time to locate this new projectile.
 		// The projectile will be invisible and suspended in the air until it gets a velocity assigned to it.
@@ -411,13 +412,13 @@ while {alive _missile} do {
 	// Tell the airburst system what target pos the laser guided projectile is using.
 	if (_airburstLaserGivePos) then {
 		private _pos = getPosASL _target;
-		//DIAG_LOG format ["GUIDEPROJ LOOP1 - GIVE AIRBURST POS BEFORE: %1", _pos];
+		DEBUGLOG format ["GUIDEPROJ LOOP1 - GIVE AIRBURST POS BEFORE: %1", _pos];
 		if (_laser) then {
 			// If we have locked on to a laser, we need to adjust the elevation to get above the laser.
 			_pos = [_pos select 0, _pos select 1, (_pos select 2) + _elevationMod];
 		};
 		
-		//DIAG_LOG format ["GUIDEPROJ LOOP1 - GIVE AIRBURST POS AFTER: %1", _pos];
+		DEBUGLOG format ["GUIDEPROJ LOOP1 - GIVE AIRBURST POS AFTER: %1", _pos];
 		_secondaryTarget setPosASL _pos;
 		_target = _secondaryTarget;
 		_infoDummy setVariable ["T1AM_posLaser", _pos];
@@ -456,7 +457,7 @@ if (!_submun) exitWith {
 	if (_primaryTargetIsDummy) then {deleteVehicle _primaryTargetDummy};
 	deleteVehicle _secondaryTarget;
 	deleteVehicle _finalApproachTarget;
-	//DIAG_LOG format ["GUIDEPROJ - END1 - _hasSeenLaser: %1", _hasSeenLaser];
+	DEBUGLOG format ["GUIDEPROJ - END1 - _hasSeenLaser: %1", _hasSeenLaser];
 };
 
 
@@ -466,7 +467,7 @@ if (!_submun) exitWith {
 // Try to locate the submunition so that we can manipulate it.
 private _list = (ASLtoAGL _posMissile) nearObjects [_submunType, 250];
 
-//DIAG_LOG format ["GUIDEPROJ INTERLUDE -- _list: %1", _list];
+DEBUGLOG format ["GUIDEPROJ INTERLUDE -- _list: %1", _list];
 
 // Exit if no corresponding submunition objects found.
 if ((count _list) < 1) exitWith {};
@@ -477,9 +478,9 @@ private _missile = _list select 0;
 	if ((getPosASL _x) vectorDistance _posMissile < (getPosASL _missile) vectorDistance _posMissile) then {_missile = _x};
 } forEach _list;
 
-//DIAG_LOG format ["GUIDEPROJ INTERLUDE -- _missile: %1", _missile];
-//DIAG_LOG format ["GUIDEPROJ INTERLUDE -- typeOf _missile: %1", typeOf _missile];
-//DIAG_LOG format ["GUIDEPROJ INTERLUDE -- alive _missile: %1", alive _missile];
+DEBUGLOG format ["GUIDEPROJ INTERLUDE -- _missile: %1", _missile];
+DEBUGLOG format ["GUIDEPROJ INTERLUDE -- typeOf _missile: %1", typeOf _missile];
+DEBUGLOG format ["GUIDEPROJ INTERLUDE -- alive _missile: %1", alive _missile];
 
 // Something went wrong if the chosen projectile is not alive at this point, so abort.
 if (!alive _missile) exitWith {};
@@ -511,16 +512,16 @@ while {alive _missile} do {
 	// Guide projectile to target.
 	// If there's a laser, guide by laser. If the laser disappears, guide to last known position of laser.
 	
-	//DIAG_LOG format ["GUIDEPROJ LOOP2 -- _target: %1 -- TARGET POS: %2", _target, getPosASL _target];
+	DEBUGLOG format ["GUIDEPROJ LOOP2 -- _target: %1 -- TARGET POS: %2", _target, getPosASL _target];
 	
 	_target = _secondaryTarget;
 	private _distance = (getPosASL _missile) vectorDistance (getPosASL _target);
 	_posMissile = getPosASL _missile;
 	
-	//DIAG_LOG format ["GUIDEPROJ LOOP2 -- _distance: %1", _distance];
-	//DIAG_LOG format ["GUIDEPROJ LOOP2 -- _posMissile: %1", _posMissile];
-	//DIAG_LOG format ["GUIDEPROJ LOOP2 -- _finalApproach: %1", _finalApproach];
-	//DIAG_LOG format ["GUIDEPROJ LOOP2 -- _fixedSpeed: %1", _fixedSpeed];
+	DEBUGLOG format ["GUIDEPROJ LOOP2 -- _distance: %1", _distance];
+	DEBUGLOG format ["GUIDEPROJ LOOP2 -- _posMissile: %1", _posMissile];
+	DEBUGLOG format ["GUIDEPROJ LOOP2 -- _finalApproach: %1", _finalApproach];
+	DEBUGLOG format ["GUIDEPROJ LOOP2 -- _fixedSpeed: %1", _fixedSpeed];
 	
 	
 	// When speed drops too much, set a fixed speed number.
@@ -752,4 +753,4 @@ sleep 1;
 if (_primaryTargetIsDummy) then {deleteVehicle _primaryTargetDummy};
 deleteVehicle _secondaryTarget;
 deleteVehicle _finalApproachTarget;
-//DIAG_LOG "GUIDEPROJ - END2";
+DEBUGLOG "GUIDEPROJ - END2";

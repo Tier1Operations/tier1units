@@ -1,9 +1,11 @@
+#include "\T1AM\Defines.hpp"
+
 params ["_control", "_selectedIndex"];
 
 private _dialog = findDisplay 47200;
 private _mag = _control lbData _selectedIndex;
 
-//DIAG_LOG format ["LIST WARHEAD TYPE EVENT START | _selectedIndex: %1 | _mag: %2", _selectedIndex, _mag];
+DEBUGLOG format ["LIST WARHEAD TYPE EVENT START | _selectedIndex: %1 | _mag: %2", _selectedIndex, _mag];
 
 T1AM_LastWarhead = _mag;
 
@@ -228,4 +230,4 @@ if (_GPSGuidedTypes or _GPSLaserTypes or _GPSSeekerTypes) then {
 	(_dialog displayCtrl 47216) ctrlSetText format ["%1 m", _distance];
 };
 
-//DIAG_LOG format ["LIST WARHEAD TYPE EVENT END | _selectedIndex: %1 | _mag: %2", _selectedIndex, _mag];
+DEBUGLOG format ["LIST WARHEAD TYPE EVENT END | _selectedIndex: %1 | _mag: %2", _selectedIndex, _mag];

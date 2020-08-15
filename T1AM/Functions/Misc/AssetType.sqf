@@ -1,3 +1,5 @@
+#include "\T1AM\Defines.hpp"
+
 params["_vehicle"];
 
 private _parents = [configfile >> "CfgVehicles" >> (typeOf _vehicle), true] call BIS_fnc_returnParents;

@@ -1,5 +1,7 @@
 // Shows the assets list.
 
+#include "\T1AM\Defines.hpp"
+
 disableSerialization;
 
 if (!T1AM_ModEnabled) exitWith {};
@@ -11,6 +13,12 @@ T1AM_LastDialog = "ASSETS";
 (findDisplay 47400) closeDisplay 0;
 (findDisplay 47500) closeDisplay 0;
 (findDisplay 47050) createDisplay "T1AM_DialogAssets";
+
+[] spawn {
+	sleep 0.5;
+	T1AM_PlaySoundGUI = true;
+};
+playSound "T1AM_Sounds_Load2";
 
 T1AM_SelectedPrePlotted = [];
 onMapSingleClick "";
@@ -111,7 +119,7 @@ while {!isNull (findDisplay 47100)} do {
 					for [{_i = 0}, {_i < count _oldMission}, {_i = _i + 1}] do {
 						private _itemOld = _oldMission select _i;
 						private _itemNew = _mission select _i;
-						//DIAG_LOG format ["ASSETS | MISSION LIST | _itemOld: %1 | _itemNew: %2 | _itemOld isEqualTo _itemNew: %3 | _i: %4", _itemOld, _itemNew, _itemOld isEqualTo _itemNew, _i];
+						DEBUGLOG format ["ASSETS | MISSION LIST | _itemOld: %1 | _itemNew: %2 | _itemOld isEqualTo _itemNew: %3 | _i: %4", _itemOld, _itemNew, _itemOld isEqualTo _itemNew, _i];
 						
 						// Check if this old mission has an item with different values. If so, stop checking this old mission and move on to the next old mission.
 						// Ignore changes in values of: rounds, time, preplotted, airburst height, TRP X and TRP Y.

@@ -1,12 +1,14 @@
 // End mission and/or relinquish control of asset. Reset asset.
 
+#include "\T1AM\Defines.hpp"
+
 params ["_playMessage"];
 
 private _asset = T1AM_ControlledAssetLocal;
 
 [4, [], 2] spawn T1AM_Fnc_LoadingScreen;
 
-//DIAG_LOG format["END MISSION | _asset: %1 | _playMessage: %2", _asset, _playMessage];
+DEBUGLOG format["END MISSION | _asset: %1 | _playMessage: %2", _asset, _playMessage];
 
 [_playMessage, _asset] spawn {
 	params ["_playMessage", "_asset"];

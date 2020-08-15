@@ -1,3 +1,5 @@
+#include "\T1AM\Defines.hpp"
+
 params ["_action"];
 
 private _tubes = [T1AM_ControlledAssetLocal] call T1AM_Fnc_GroupVehicles;

@@ -5,6 +5,8 @@
 // 3 Range at which a projectile will try not to miss. Past this range, the projectile will randomly miss.
 // 4 Fragment max range.
 
+#include "\T1AM\Defines.hpp"
+
 params ["_pos","_airburstClass","_concentration","_effectiveRange","_maxRange"];
 
 private _airburst = _airburstClass createVehicle [0,0,0];

@@ -3,18 +3,20 @@
 // It does this by removing all mags, removing the weapon, adding 1 mag, adding the weapon, then adding remaining mags.
 // It is a clumsy workaround, but Arma does not have a command to do this or to check the status of mag reloads.
 
+#include "\T1AM\Defines.hpp"
+
 params ["_tube","_magazineType","_assetType"];
 
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - START", _tube];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - START", _tube];
 
 sleep 0.05;
 
 private _alreadyLoaded = false;
 if ((currentMagazine _tube) == _magazineType) then {
 	_alreadyLoaded = true;
-	//DIAG_LOG format ["LOADMAG - TUBE: %1 - MAG ALREADY LOADED", _tube];
+	DEBUGLOG format ["LOADMAG - TUBE: %1 - MAG ALREADY LOADED", _tube];
 };
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - CURMAG: %2 - REQMAG: %3", _tube, currentMagazine _tube, _magazineType];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - CURMAG: %2 - REQMAG: %3", _tube, currentMagazine _tube, _magazineType];
 
 
 // Find the requested ammo and count the amount of rounds.
@@ -32,7 +34,7 @@ private _otherMags = [];
 // If tube doesn't have the requested ammo, then abort.
 if (_nrRounds < 1) exitWith {
 	_tube setVariable ["T1AM_outOfAmmo", true];
-	//DIAG_LOG format ["LOADMAG - TUBE: %1 - ABORT - NO AMMO",  _tube];
+	DEBUGLOG format ["LOADMAG - TUBE: %1 - ABORT - NO AMMO",  _tube];
 };
 
 
@@ -51,7 +53,7 @@ if (_assetType == "RHS_BM21") exitWith {
 	_tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
 	if (needReload _tube == 1) then {reload _tube};
 	_tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
-	//DIAG_LOG format ["LOADMAG - TUBE: %1 - ABORT - _assetType: %2", _tube, _assetType];
+	DEBUGLOG format ["LOADMAG - TUBE: %1 - ABORT - _assetType: %2", _tube, _assetType];
 };
 
 
@@ -67,11 +69,11 @@ for [{_i = _nrRounds - _magCap}, {true}, {_i = _i - _magCap}] do {
 	_magsToAdd pushback [_magazineType, _magCap];
 };
 
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _allMags: %2", _tube, _allMags];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _otherMags: %2", _tube, _otherMags];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _nrRounds: %2", _tube, _nrRounds];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _magCap: %2", _tube, _magCap];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - _magsToAdd: %2", _tube, _magsToAdd];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - _allMags: %2", _tube, _allMags];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - _otherMags: %2", _tube, _otherMags];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - _nrRounds: %2", _tube, _nrRounds];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - _magCap: %2", _tube, _magCap];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - _magsToAdd: %2", _tube, _magsToAdd];
 
 
 // Remove weapon, remove mags. Add 1 mag, add weapon to load it instantly. Then add other mags.
@@ -103,9 +105,9 @@ sleep 0.05;
 _tube setWeaponReloadingTime [_gunner, (currentMuzzle _gunner), 0];
 
 
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - NEW LOADED WEAP: %2", _tube, _tube currentWeaponTurret _turretPath];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - NEW LOADED AMMO: %2", _tube, currentMagazine _tube];
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - NEW ALLMAGS: %2", _tube, magazinesAmmo _tube];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - NEW LOADED WEAP: %2", _tube, _tube currentWeaponTurret _turretPath];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - NEW LOADED AMMO: %2", _tube, currentMagazine _tube];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - NEW ALLMAGS: %2", _tube, magazinesAmmo _tube];
 
 if (!_alreadyLoaded) then {
 	private _reloadTime = getNumber(configfile >> "CfgWeapons" >> _weapon >> "magazineReloadTime");
@@ -121,4 +123,4 @@ if (!_alreadyLoaded) then {
 	};
 };
 
-//DIAG_LOG format ["LOADMAG - TUBE: %1 - END", _tube];
+DEBUGLOG format ["LOADMAG - TUBE: %1 - END", _tube];

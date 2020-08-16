@@ -1,7 +1,5 @@
 // Create a temporary marker where the player has clicked to provide feedback.
 
-#include "\T1AM\Defines.hpp"
-
 params ["_pos"];
 
 [0] call T1AM_Fnc_PlaySoundGUI;

@@ -1,7 +1,5 @@
 // Excludes a vehicle classname from the artillery system.
 
-#include "\T1AM\Defines.hpp"
-
 params ["_vehicleClass"];
 
 while {(time < 4)} do {

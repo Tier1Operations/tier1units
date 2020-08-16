@@ -1,7 +1,5 @@
 // Takes a group and returns an array of the vehicles in a group.
 
-#include "\T1AM\Defines.hpp"
-
 params ["_group"];
 
 private _vehArray = [];

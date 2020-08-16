@@ -1,7 +1,5 @@
 // Shows the assets list.
 
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 if (!T1AM_ModEnabled) exitWith {};
@@ -60,7 +58,7 @@ while {!isNull (findDisplay 47100)} do {
 			if (!isNil "_spotter" and {alive _spotter}) then {_status = format["CON - %1", name _spotter]} else {_status = "CON"};
 		};
 		if (_asset in T1AM_AssetsBusy) then {
-			private  _spotter = _asset getVariable ["T1AM_controlledBy", nil];
+			private _spotter = _asset getVariable ["T1AM_controlledBy", nil];
 			if (!isNil "_spotter" and {alive _spotter}) then {_status = format["BSY - %1", name _spotter]} else {_status = "BSY"};
 		};
 		
@@ -119,7 +117,7 @@ while {!isNull (findDisplay 47100)} do {
 					for [{_i = 0}, {_i < count _oldMission}, {_i = _i + 1}] do {
 						private _itemOld = _oldMission select _i;
 						private _itemNew = _mission select _i;
-						DEBUGLOG format ["ASSETS | MISSION LIST | _itemOld: %1 | _itemNew: %2 | _itemOld isEqualTo _itemNew: %3 | _i: %4", _itemOld, _itemNew, _itemOld isEqualTo _itemNew, _i];
+						//DIAG_LOG format ["ASSETS | MISSION LIST | _itemOld: %1 | _itemNew: %2 | _itemOld isEqualTo _itemNew: %3 | _i: %4", _itemOld, _itemNew, _itemOld isEqualTo _itemNew, _i];
 						
 						// Check if this old mission has an item with different values. If so, stop checking this old mission and move on to the next old mission.
 						// Ignore changes in values of: rounds, time, preplotted, airburst height, TRP X and TRP Y.

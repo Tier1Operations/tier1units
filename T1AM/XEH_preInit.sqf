@@ -1,7 +1,7 @@
 [
 	"T1AM_ModEnabled",
 	"CHECKBOX",
-	["Mod Enabled","This allows you to enable/disable the mod. If you disable it, it will keep running in the background but it won't do anything."],
+	["Mod Enabled","This allows you to enable/disable the mod. If you disable it, it will still be there in the background but it won't do anything."],
 	"Tier 1 Artillery Mod",
 	[true],
 	true

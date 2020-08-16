@@ -1,7 +1,5 @@
 // Open aimpoint menu where the player can choose the target pos.
 
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 T1AM_LastDialog = "AIMPOINT";
@@ -46,4 +44,13 @@ if (T1AM_lastAimpointDir != 0) then {
 
 if (T1AM_lastAimpointDist != 0) then {
 	(_dialog displayCtrl 47418) ctrlSetText (str T1AM_lastAimpointDist);
+};
+
+if (!T1AM_AllowMapClick) then {
+	(_dialog displayCtrl 47417) ctrlShow false;
+	(_dialog displayCtrl 47417) ctrlEnable false;
+};
+if (!T1AM_AllowMapClick) then {
+	(_dialog displayCtrl 47404) ctrlShow false;
+	(_dialog displayCtrl 47404) ctrlEnable false;
 };

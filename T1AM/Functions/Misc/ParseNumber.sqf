@@ -1,11 +1,9 @@
 // Check for illegal characters. Return -9999999 if something illegal happened.
 // Second parameter is a max number of characters that are allowed.
 
-#include "\T1AM\Defines.hpp"
-
 params ["_nr","_maxChar","_removeDecimal"];
 
-DEBUGLOG format ["PARSENUMBER | START | _nr: %1 | _maxChar: %2 | _removeDecimal: %3", _nr, _maxChar, _removeDecimal];
+//DIAG_LOG format ["PARSENUMBER | START | _nr: %1 | _maxChar: %2 | _removeDecimal: %3", _nr, _maxChar, _removeDecimal];
 
 private _illegal = false;
 
@@ -20,7 +18,7 @@ if (_nr isEqualType "" and count _nr > 0) then {
 		};
 	};
 	
-	DEBUGLOG format ["PARSENUMBER | AFTER DECIMAL | _nr: %1 | _removeDecimal: %2", _nr, _removeDecimal];
+	//DIAG_LOG format ["PARSENUMBER | AFTER DECIMAL | _nr: %1 | _removeDecimal: %2", _nr, _removeDecimal];
 	
 	private _isNegative = false;
 	if (_nr select [0, 1] == "-") then {
@@ -83,7 +81,7 @@ if (_nr isEqualType "" and count _nr > 0) then {
 			};
 			
 			if (_abort) exitWith {
-				DEBUGLOG format ["PARSENUMBER | ABORTING | CHAR: %1", _nr select [_i, 1]];
+				//DIAG_LOG format ["PARSENUMBER | ABORTING | CHAR: %1", _nr select [_i, 1]];
 			};
 		};
 		
@@ -93,10 +91,10 @@ if (_nr isEqualType "" and count _nr > 0) then {
 } else {_illegal = true};
 
 if (_illegal) then {
-	DEBUGLOG format["PARSENUMBER | IF FALSE | _nr isEqualType "": %1 | count _nr: %2 | count _nr <= _maxChar: %3 | _maxChar == 0: %4", _nr isEqualType "", count _nr, count _nr <= _maxChar, _maxChar == 0];
+	//DIAG_LOG format["PARSENUMBER | IF FALSE | _nr isEqualType "": %1 | count _nr: %2 | count _nr <= _maxChar: %3 | _maxChar == 0: %4", _nr isEqualType "", count _nr, count _nr <= _maxChar, _maxChar == 0];
 	_nr = -9999999;
 };
 
-DEBUGLOG format ["PARSENUMBER END | _nr: %1", _nr];
+//DIAG_LOG format ["PARSENUMBER END | _nr: %1", _nr];
 
 _nr

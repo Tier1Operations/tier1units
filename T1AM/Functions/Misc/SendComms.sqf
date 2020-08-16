@@ -1,9 +1,7 @@
 // Transmits comms to all clients.
 
-#include "\T1AM\Defines.hpp"
-
 if (!T1AM_ModEnabled) exitWith {};
 
-params ["_asset","_messageCode","_audio"];
+params ["_asset","_spotter","_message","_audio"];
 
-[_asset,_messageCode,_audio] remoteExec ["T1AM_Fnc_PlayComms", 0];
+[_asset,_spotter,_message,_audio] remoteExec ["T1AM_Fnc_PlayComms", 0];

@@ -1,5 +1,3 @@
-#include "\T1AM\Defines.hpp"
-
 params ["_tube","_asset","_pos","_sheafDir","_sheafDist"];
 
 if (_sheafDir <= 0 or _sheafDir > 360) then {_sheafDir = 360};

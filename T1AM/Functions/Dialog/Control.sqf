@@ -1,12 +1,10 @@
 // This is the arty menu in which the player can select various options before transmitting the fire mission.
 
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 params [["_prePlotted", false, [true]]];
 
-DEBUGLOG "CONTROL START";
+//DIAG_LOG "CONTROL START";
 
 
 // Abort if there's something wrong with the leader's vehicle/gunner.
@@ -20,7 +18,7 @@ if (_abort) exitWith {
 	[false] call T1AM_Fnc_EndMission;
 };
 
-DEBUGLOG format["CONTROL - _prePlotted: %1", _prePlotted];
+//DIAG_LOG format["CONTROL - _prePlotted: %1", _prePlotted];
 
 if (_prePlotted and {count T1AM_SelectedPrePlotted < 1}) exitWith {
 	private _str = "NO MISSION SELECTED";
@@ -232,7 +230,7 @@ if (_prePlotted) then {
 	
 	T1AM_LastPos = _lastPos;
 	
-	DEBUGLOG format["CONTROL - PREPLOTTED MISSION - T1AM_LastPos: %1", T1AM_LastPos];
+	//DIAG_LOG format["CONTROL - PREPLOTTED MISSION - T1AM_LastPos: %1", T1AM_LastPos];
 };
 
 
@@ -241,7 +239,7 @@ if ((count T1AM_FireMissionCurrent) > 0) then {
 	_fireMission = T1AM_FireMissionCurrent;
 	_lastPos = _fireMission select 1;
 	T1AM_LastPos = _lastPos;
-	DEBUGLOG format["CONTROL - CURRENT FIRE MISSION - T1AM_LastPos: %1", T1AM_LastPos];
+	//DIAG_LOG format["CONTROL - CURRENT FIRE MISSION - T1AM_LastPos: %1", T1AM_LastPos];
 };
 
 
@@ -251,6 +249,14 @@ if (T1AM_LastGPSX == -999999 or T1AM_LastGPSY == -999999) then {
 	T1AM_LastGPSX = T1AM_Xdisplay;
 	T1AM_LastGPSY = T1AM_Ydisplay;
 	T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", [T1AM_Xdisplay,T1AM_Ydisplay,T1AM_Elevation]];
+};
+
+
+// If observer pos not set, and aimpoint checkbox is polar, and not preplotted,
+// then set observer pos on the aimpoint observer pos.
+if (!_prePlotted and T1AM_LastAdjustSpotterX == 0 and T1AM_LastAdjustSpotterY == 0 and T1AM_LastAimpointCheckbox == 0) then {
+	T1AM_LastAdjustSpotterX = T1AM_LastAimpointSpotterX;
+	T1AM_LastAdjustSpotterY = T1AM_LastAimpointSpotterY;
 };
 
 
@@ -284,8 +290,8 @@ _lastSheafDir = T1AM_LastSheafDir;
 _lastSheafDist = T1AM_LastSheafDist;
 _lastRemarks = T1AM_LastRemarks;
 
-DEBUGLOG format["CONTROL GPSX 1: %1", _lastGPSX];
-DEBUGLOG format["CONTROL GPSY 1: %1", _lastGPSY];
+//DIAG_LOG format["CONTROL GPSX 1: %1", _lastGPSX];
+//DIAG_LOG format["CONTROL GPSY 1: %1", _lastGPSY];
 
 // Sheaf size X
 if (_lastSheafSizeX != 0) then {
@@ -318,18 +324,18 @@ private _posMap = [[_lastGPSX, _lastGPSY]] call T1AM_Fnc_PosToMapGrid;
 private _xMap = parseNumber (_posMap select 0);
 private _yMap = parseNumber (_posMap select 1);
 
-DEBUGLOG format["CONTROL GPSX 2: %1", _posMap select 0];
-DEBUGLOG format["CONTROL GPSX 3: %1", _xMap];
-DEBUGLOG format["CONTROL GPSY 2: %1", _posMap select 1];
-DEBUGLOG format["CONTROL GPSY 3: %1", _yMap];
+//DIAG_LOG format["CONTROL GPSX 2: %1", _posMap select 0];
+//DIAG_LOG format["CONTROL GPSX 3: %1", _xMap];
+//DIAG_LOG format["CONTROL GPSY 2: %1", _posMap select 1];
+//DIAG_LOG format["CONTROL GPSY 3: %1", _yMap];
 
 _xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 (_dialog displayCtrl 47222) ctrlSetText _xMap;
 _yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
 (_dialog displayCtrl 47223) ctrlSetText _yMap;
 
-DEBUGLOG format["CONTROL GPSX 4: %1", _xMap];
-DEBUGLOG format["CONTROL GPSY 4: %1", _yMap];
+//DIAG_LOG format["CONTROL GPSX 4: %1", _xMap];
+//DIAG_LOG format["CONTROL GPSY 4: %1", _yMap];
 
 // GPS Z
 if (_lastGPSZ_AGL != 0) then {
@@ -459,7 +465,7 @@ _GPSGuidedTypes = _warheadType in T1AM_GPSGuidedTypes;
 _GPSLaserTypes = _warheadType in T1AM_GPSLaserTypes;
 _GPSSeekerTypes = _warheadType in T1AM_GPSSeekerTypes;
 
-DEBUGLOG format["CONTROL - _warheadType: %1", _warheadType];
+//DIAG_LOG format["CONTROL - _warheadType: %1", _warheadType];
 
 // Distance
 private _distance = 0;
@@ -692,4 +698,4 @@ while {!isNull (findDisplay 47200)} do {
 	sleep 0.5;
 };
 
-DEBUGLOG "CONTROL END";
+//DIAG_LOG "CONTROL END";

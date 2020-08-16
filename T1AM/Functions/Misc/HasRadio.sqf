@@ -1,7 +1,5 @@
 // Checks if the artillery dialog can be shown
 
-#include "\T1AM\Defines.hpp"
-
 private _haveRadio = false;
 private _items = assignedItems player;
 

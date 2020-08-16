@@ -1,5 +1,3 @@
-#include "\T1AM\Defines.hpp"
-
 params ["_pos","_delay","_color"];
 
 private _markerName = format ["%1%2%3", _pos, _delay, random 9999];

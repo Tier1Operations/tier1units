@@ -1,5 +1,3 @@
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 if (!T1AM_ModEnabled) exitWith {};

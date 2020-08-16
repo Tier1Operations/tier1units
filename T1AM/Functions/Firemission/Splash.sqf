@@ -1,7 +1,14 @@
-#include "\T1AM\Defines.hpp"
+params ["_ETA","_asset","_action"];
 
-params ["_ETA","_asset"];
+private _spotter = _asset getVariable ["T1AM_controlledBy", objNull];
 
-_ETA = (_ETA - 5) max 1;
-sleep _ETA;
-[_asset,"Splash, out.","SPLASH"] call T1AM_Fnc_SendComms;
+private _sleepDesignate = (_ETA - 20) max 0;
+private _sleepSplash = (_ETA - _sleepDesignate - 5) max 1;
+
+if (_sleepDesignate > 0) then {
+	sleep _sleepDesignate;
+	[_asset,_spotter,"Designate, over.",14] call T1AM_Fnc_SendComms;
+};
+
+sleep _sleepSplash;
+[_asset,_spotter,"Splash, over.",11] call T1AM_Fnc_SendComms;

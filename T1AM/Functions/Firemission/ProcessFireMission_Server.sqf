@@ -2,10 +2,9 @@
 // If not local to server, change locality to server.
 // Then tell each tube to start the fire mission.
 
-#include "\T1AM\Defines.hpp"
-
 params["_tubes","_rounds","_profile","_pos","_warheadType","_missionType","_sheafSize","_fuse","_assetType","_sheaf","_airburstHeight","_asset","_tubeType","_angle","_prePlotted","_sender","_posDisplay","_GPSZAdjust","_posGPS","_sheafDir","_sheafDist"];
 
+private _spotter = _sender;
 
 {
 	_x setVariable ["T1AM_waitingTime", 0];
@@ -48,7 +47,7 @@ private _emptyTubes = [];
 private _highestAmount = -999;
 private _tubesTemp = _tubes;
 
-DEBUGLOG format["PFM SERVER -- TUBES BEFORE LOOP: %1", _tubes];
+//DIAG_LOG format["PFM SERVER -- TUBES BEFORE LOOP: %1", _tubes];
 
 {
 	private _tube = _x;
@@ -59,11 +58,11 @@ DEBUGLOG format["PFM SERVER -- TUBES BEFORE LOOP: %1", _tubes];
 	switch true do {
 		case (isNull _gunner) : {
 			_noGunner = true;
-			DEBUGLOG format["PFM SERVER LOOP | NO GUNNER | _gunner: %1 | isNull _gunner: %2", _gunner, isNull _gunner];
+			//DIAG_LOG format["PFM SERVER LOOP | NO GUNNER | _gunner: %1 | isNull _gunner: %2", _gunner, isNull _gunner];
 		};
 		case (isPlayer _gunner) : {
 			_noGunner = true;
-			DEBUGLOG format["PFM SERVER LOOP | GUNNER IS PLAYER | _gunner: %1 | isPlayer _gunner: %2", _gunner, isPlayer _gunner];
+			//DIAG_LOG format["PFM SERVER LOOP | GUNNER IS PLAYER | _gunner: %1 | isPlayer _gunner: %2", _gunner, isPlayer _gunner];
 		};
 	};
 	
@@ -73,7 +72,7 @@ DEBUGLOG format["PFM SERVER -- TUBES BEFORE LOOP: %1", _tubes];
 		// Remove it from the list of tubes that will participate in this mission. Add it to the inoperable (empty) list.
 		_tubes = _tubes - [_tube];
 		_emptyTubes = _emptyTubes + [_tube];
-		DEBUGLOG format["PFM SERVER LOOP -- NO AMMO OR NO GUNNER - CHECK1: %1 - CHECK2: %2", _tube getVariable ["T1AM_outOfAmmo", false], _noGunner];
+		//DIAG_LOG format["PFM SERVER LOOP -- NO AMMO OR NO GUNNER - CHECK1: %1 - CHECK2: %2", _tube getVariable ["T1AM_outOfAmmo", false], _noGunner];
 		
 	} else {
 		
@@ -100,7 +99,7 @@ DEBUGLOG format["PFM SERVER -- TUBES BEFORE LOOP: %1", _tubes];
 	
 } forEach _tubesTemp;
 
-DEBUGLOG format["PFM SERVER -- TUBES AFTER LOOP: %1", _tubes];
+//DIAG_LOG format["PFM SERVER -- TUBES AFTER LOOP: %1", _tubes];
 
 private _countLoaded = count _tubes;
 
@@ -110,9 +109,9 @@ if (_countLoaded == 0) exitWith {
 	sleep 2;
 	T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
 	publicVariable "T1AM_AssetsBusy";
-	[_asset,"Unable to comply - requested ammo not available or units are inoperable.","BEEP"] call T1AM_Fnc_SendComms;
+	[_asset,_spotter,"Unable to comply - requested ammo not available or units are inoperable, out.",8] call T1AM_Fnc_SendComms;
 	
-	DEBUGLOG format["PFM SERVER ABORT - NO VIABLE TUBES FOUND -- _countLoaded: %1", _countLoaded];
+	//DIAG_LOG format["PFM SERVER ABORT - NO VIABLE TUBES FOUND -- _countLoaded: %1", _countLoaded];
 };
 
 
@@ -139,11 +138,11 @@ if (_countEmpty > 0) then {
 	};
 	
 	switch true do {
-		case (_countEmpty == 1) : {_text2 = format["%1 unit is empty or inoperable.", _countEmpty]};
-		case (_countEmpty > 1) : {_text2 = format["%1 units are empty or inoperable.", _countEmpty]};
+		case (_countEmpty == 1) : {_text2 = format["%1 unit is empty or inoperable. Out.", _countEmpty]};
+		case (_countEmpty > 1) : {_text2 = format["%1 units are empty or inoperable. Out.", _countEmpty]};
 	};
 	
-	[_asset, (_text1 + _text2), "BEEP"] call T1AM_Fnc_SendComms;
+	[_asset, _spotter, (_text1 + _text2), -1] call T1AM_Fnc_SendComms;
 	sleep 4;
 };
 
@@ -155,13 +154,13 @@ private _waitingTime = 0;
 	if (_wait > _waitingTime) then {_waitingTime = _wait};
 } forEach _tubes;
 if (_waitingTime > 45) then {
-	[_asset, format["Preparations will take: %1 seconds.",_waitingTime], "BEEP"] call T1AM_Fnc_SendComms;
+	[_asset, _spotter, format["Preparations will take: %1 seconds. Out.",_waitingTime], 7] call T1AM_Fnc_SendComms;
 };
 
-DEBUGLOG format["PFM SERVER -- _waitingTime: %1", _waitingTime];
-DEBUGLOG format["PFM SERVER -- _countLoaded: %1", _countLoaded];
-DEBUGLOG format["PFM SERVER -- _countEmpty: %1", _countEmpty];
-DEBUGLOG format["PFM SERVER -- _announcementUnit: %1", _announcementUnit];
+//DIAG_LOG format["PFM SERVER -- _waitingTime: %1", _waitingTime];
+//DIAG_LOG format["PFM SERVER -- _countLoaded: %1", _countLoaded];
+//DIAG_LOG format["PFM SERVER -- _countEmpty: %1", _countEmpty];
+//DIAG_LOG format["PFM SERVER -- _announcementUnit: %1", _announcementUnit];
 
 // Give orders to tubes that will participate in this mission.
 {
@@ -180,7 +179,7 @@ DEBUGLOG format["PFM SERVER -- _announcementUnit: %1", _announcementUnit];
 		_isAnnouncementUnit = false;
 	};
 	
-	DEBUGLOG format["PFM SERVER -- UNIT: %1 - _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
+	//DIAG_LOG format["PFM SERVER -- UNIT: %1 - _isAnnouncementUnit: %2", _tube, _isAnnouncementUnit];
 	
 	[_tubes,_rounds,_profile,_pos,_warheadType,_missionType,_sheafSize,_fuse,_assetType,_sheaf,_airburstHeight,_asset,_tubeType,_angle,_prePlotted,_sender,_posDisplay,_tube,_isAnnouncementUnit,_GPSZAdjust,_posGPS,_sheafDir,_sheafDist,_waitingTime] spawn T1AM_Fnc_StartFireMission;
 	

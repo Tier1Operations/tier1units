@@ -149,11 +149,6 @@ T1AM_PrePlotted = false;
 // Selected pre-plotted mission.
 T1AM_SelectedPrePlotted = [];
 
-// Which audio set should each side use (US, Greek, Persian, None).
-T1AM_AudioBLUFOR = "US";
-T1AM_AudioREDFOR = "PER";
-T1AM_AudioINDEP = "GRE";
-
 // Restrict artillery users to certain types and classes?
 if (isNil "T1AM_AuthorizeEveryone") then {T1AM_AuthorizeEveryone = true};
 // If so, vehicle classes that are authorized (config classes).

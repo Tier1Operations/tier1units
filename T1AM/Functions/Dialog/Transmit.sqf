@@ -1,7 +1,5 @@
 // Start processing the fire mission.
 
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 if (T1AM_ControlledAssetLocal in T1AM_AssetsBusy) exitWith {
@@ -11,7 +9,7 @@ if (T1AM_ControlledAssetLocal in T1AM_AssetsBusy) exitWith {
 
 private _prePlotted = T1AM_PrePlotted;
 
-DEBUGLOG format["TRANSMIT - _prePlotted: %1", _prePlotted];
+//DIAG_LOG format["TRANSMIT - _prePlotted: %1", _prePlotted];
 
 private _dialog = findDisplay 47200;
 
@@ -308,12 +306,12 @@ if (_prePlotted) then {
 	T1AM_Y = T1AM_LastPos select 1;
 	T1AM_Elevation = T1AM_LastPos select 2;
 	_pos = T1AM_LastPos;
-	DEBUGLOG format["TRANSMIT - PREPLOTTED - _pos: %1", _pos];
+	//DIAG_LOG format["TRANSMIT - PREPLOTTED - _pos: %1", _pos];
 	
 } else {
 	
 	_pos = [T1AM_X, T1AM_Y, T1AM_Elevation];
-	DEBUGLOG format["TRANSMIT - NOT PLOTTED - _pos: %1", _pos];
+	//DIAG_LOG format["TRANSMIT - NOT PLOTTED - _pos: %1", _pos];
 };
 
 

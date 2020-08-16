@@ -1,7 +1,5 @@
 // Reset vars when ending mission.
 
-#include "\T1AM\Defines.hpp"
-
 T1AM_ControlledAssetLocal setVariable ["T1AM_endMission", true, true];
 T1AM_ControlledAssetLocal setVariable ["T1AM_exactPos", nil, true];
 T1AM_ControlledAssetLocal setVariable ["T1AM_controlledBy", nil, true];

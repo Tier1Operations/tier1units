@@ -2,14 +2,12 @@
 // Then open menu where the player can choose the aimpoint (target pos).
 // If pre-plotted, skip ahead to the next part (control menu).
 
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 params ["_prePlotted"];
 
-DEBUGLOG format["CONTROLASSET - _prePlotted: %1", _prePlotted];
-DEBUGLOG format["CONTROLASSET - ABORTING: %1", ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0))];
+//DIAG_LOG format["CONTROLASSET - _prePlotted: %1", _prePlotted];
+//DIAG_LOG format["CONTROLASSET - ABORTING: %1", ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0))];
 
 if ((_prePlotted) and ((count T1AM_SelectedPrePlotted) == 0)) exitWith {
 	private _str = "NO MISSION SELECTED";
@@ -30,7 +28,7 @@ if (_abort) exitWith {
 
 if (_prePlotted) then {T1AM_PrePlotted = true};
 
-DEBUGLOG format["CONTROLASSET - (_asset == T1AM_ControlledAssetLocal): %1", (_asset == T1AM_ControlledAssetLocal)];
+//DIAG_LOG format["CONTROLASSET - (_asset == T1AM_ControlledAssetLocal): %1", (_asset == T1AM_ControlledAssetLocal)];
 
 // If asset is already being controlled by player, close interface and then open control menu.
 if (_asset == T1AM_ControlledAssetLocal) exitWith {
@@ -81,7 +79,8 @@ if (configNull != (configFile >> "CfgPatches" >> "ace_medical")) then {
 			while {!isNull T1AM_ControlledAssetLocal} do {
 				if (player getVariable ["ACE_isUnconscious", false]) then {
 					if (_timeOut > 60) then {
-						[_asset, "Observer not respnding. Ending mission.", "BEEP"] call T1AM_Fnc_SendComms;
+						private _spotter = _asset getVariable ["T1AM_controlledBy", objNull];
+						[_asset, _spotter, "Observer not responding. Ending mission, out.", 4] call T1AM_Fnc_SendComms;
 						[false] call T1AM_Fnc_EndMission;
 						_abort = true;
 					};
@@ -101,7 +100,7 @@ if (configNull != (configFile >> "CfgPatches" >> "ace_medical")) then {
 };
 
 
-DEBUGLOG format["CONTROLASSET - IF _prePlotted: %1 - T1AM_PrePlotted: %2", _prePlotted, T1AM_PrePlotted];
+//DIAG_LOG format["CONTROLASSET - IF _prePlotted: %1 - T1AM_PrePlotted: %2", _prePlotted, T1AM_PrePlotted];
 
 private _assetCallsign = [T1AM_SelectedAsset] call T1AM_Fnc_TrimGroupName;
 private _playerCallsign = [(group player)] call T1AM_Fnc_TrimGroupName;
@@ -118,9 +117,6 @@ if ((T1AM_HaveAimpoint) or (T1AM_PrePlotted)) then {
 		
 		T1AM_LastDialog = "CONTROL";
 		[0, [_prePlotted], 0] spawn T1AM_Fnc_LoadingScreen;
-		sleep (1 + random 2);
-		private _message = format ["%1 this is %2, adjust fire, out", _playerCallsign, _assetCallsign];
-		[_asset, _message, "ADJUSTFIRE"] call T1AM_Fnc_SendComms;
 	};
 } else {
 	// Open aimpoint menu.

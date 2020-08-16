@@ -4,8 +4,6 @@
 // Useful for code position that is turned into coordinates shown to the player.
 // For example, 23.6 becomes "00023", 913 becomes "00913".
 
-#include "\T1AM\Defines.hpp"
-
 params ["_nr"];
 
 private _output = "";
@@ -57,6 +55,6 @@ if (_isNegative) then {
 	_output = "-" + _output;
 };
 
-DEBUGLOG format["FORMAT COORDINATES - _nr: %1 - _isNegative: %2 - _affix: %3 - _output: %4", _nr, _isNegative, _affix, _output];
+//DIAG_LOG format["FORMAT COORDINATES - _nr: %1 - _isNegative: %2 - _affix: %3 - _output: %4", _nr, _isNegative, _affix, _output];
 
 _output

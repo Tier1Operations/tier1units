@@ -1,7 +1,5 @@
 // Code originally created by PabstMirror and VKing.
 
-#include "\T1AM\Defines.hpp"
-
 private ["_pos","_returnSingleString"];
 
 _pos = _this select 0;

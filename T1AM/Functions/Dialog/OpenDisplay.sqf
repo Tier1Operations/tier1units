@@ -1,7 +1,5 @@
 // Checks if the artillery dialog can be shown
 
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 params ["_params"];

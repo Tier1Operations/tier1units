@@ -1,5 +1,3 @@
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 params ["_mode", "_message", "_waitTime"];

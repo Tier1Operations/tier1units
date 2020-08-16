@@ -1,7 +1,5 @@
 // This allows the player to click on the map to choose the coordinates.
 
-#include "\T1AM\Defines.hpp"
-
 if (!T1AM_AllowMapClick) exitWith {
 	private _str = "MAP CLICK OPTION IS DISABLED";
 	[0, _str, 5] spawn T1AM_Fnc_ShowMessage;

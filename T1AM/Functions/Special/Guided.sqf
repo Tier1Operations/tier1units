@@ -1,5 +1,3 @@
-#include "\T1AM\Defines.hpp"
-
 params["_firedEHArray","_pos","_gunAngle","_action","_fuse","_infoDummy","_doAirburst","_longRangeGuided","_arrayEnemySides","_GPSZAdjust","_elevationMod"];
 
 private _projectile = _firedEHArray select 6;
@@ -12,19 +10,19 @@ if (_action == 4) then {
 };
 
 
-DEBUGLOG format ["GUIDED -- _firedEHArray: %1", _firedEHArray];
-DEBUGLOG format ["GUIDED -- _pos: %1", _pos];
-DEBUGLOG format ["GUIDED -- _gunAngle: %1", _gunAngle];
-DEBUGLOG format ["GUIDED -- _action: %1", _action];
-DEBUGLOG format ["GUIDED -- _fuse: %1", _fuse];
-DEBUGLOG format ["GUIDED -- _infoDummy: %1", _infoDummy];
-DEBUGLOG format ["GUIDED -- _doAirburst: %1", _doAirburst];
-DEBUGLOG format ["GUIDED -- _longRangeGuided: %1", _longRangeGuided];
-DEBUGLOG format ["GUIDED -- _arrayEnemySides: %1", _arrayEnemySides];
-DEBUGLOG format ["GUIDED -- _GPSZAdjust: %1", _GPSZAdjust];
-DEBUGLOG format ["GUIDED -- _elevationMod: %1", _elevationMod];
-DEBUGLOG format ["GUIDED -- _projectile: %1", _projectile];
-DEBUGLOG format ["GUIDED -- _unguidedCEP: %1", _unguidedCEP];
+//DIAG_LOG format ["GUIDED -- _firedEHArray: %1", _firedEHArray];
+//DIAG_LOG format ["GUIDED -- _pos: %1", _pos];
+//DIAG_LOG format ["GUIDED -- _gunAngle: %1", _gunAngle];
+//DIAG_LOG format ["GUIDED -- _action: %1", _action];
+//DIAG_LOG format ["GUIDED -- _fuse: %1", _fuse];
+//DIAG_LOG format ["GUIDED -- _infoDummy: %1", _infoDummy];
+//DIAG_LOG format ["GUIDED -- _doAirburst: %1", _doAirburst];
+//DIAG_LOG format ["GUIDED -- _longRangeGuided: %1", _longRangeGuided];
+//DIAG_LOG format ["GUIDED -- _arrayEnemySides: %1", _arrayEnemySides];
+//DIAG_LOG format ["GUIDED -- _GPSZAdjust: %1", _GPSZAdjust];
+//DIAG_LOG format ["GUIDED -- _elevationMod: %1", _elevationMod];
+//DIAG_LOG format ["GUIDED -- _projectile: %1", _projectile];
+//DIAG_LOG format ["GUIDED -- _unguidedCEP: %1", _unguidedCEP];
 
 
 // If not airbursting, set the target pos altitude close to the ground.
@@ -52,7 +50,7 @@ if (_gunAngle == "HIGH") then {
 		private _altitude = (getPosASL _projectile) select 2;
 		// Add 7 to avoid bug.
 		if (_altitude + 7 < _altitudeHighest) exitWith {
-			DEBUGLOG format ["GUIDED | _altitude + 7 < _altitudeHighest: %1 | _altitude: %2 | _altitudeHighest: %3", _altitude + 7 < _altitudeHighest, _altitude, _altitudeHighest];
+			//DIAG_LOG format ["GUIDED | _altitude + 7 < _altitudeHighest: %1 | _altitude: %2 | _altitudeHighest: %3", _altitude + 7 < _altitudeHighest, _altitude, _altitudeHighest];
 		};
 		_altitudeHighest = _altitude;
 		sleep 0.2;
@@ -63,7 +61,7 @@ if (_gunAngle == "HIGH") then {
 	while {true} do {
 		sleep 0.025;
 		if (_startPos vectorDistance (getPosASL _projectile) > 20 or !alive _projectile) exitWith {
-			DEBUGLOG format ["GUIDED | _startPos vectorDistance (getPosASL _projectile) > 20 or !alive _projectile: %1 | _startPos vectorDistance (getPosASL _projectile): %2 | !alive _projectile: %3", _startPos vectorDistance (getPosASL _projectile) > 20 or !alive _projectile, _startPos vectorDistance (getPosASL _projectile), !alive _projectile];
+			//DIAG_LOG format ["GUIDED | _startPos vectorDistance (getPosASL _projectile) > 20 or !alive _projectile: %1 | _startPos vectorDistance (getPosASL _projectile): %2 | !alive _projectile: %3", _startPos vectorDistance (getPosASL _projectile) > 20 or !alive _projectile, _startPos vectorDistance (getPosASL _projectile), !alive _projectile];
 		};
 	};
 	
@@ -71,7 +69,7 @@ if (_gunAngle == "HIGH") then {
 	while {true} do {
 		sleep 0.025;
 		if (_pos vectorDistance (getPosASL _projectile) < _distanceCheck or !alive _projectile) exitWith {
-			DEBUGLOG format ["GUIDED | _pos vectorDistance (getPosASL _projectile) < _distanceCheck or !alive _projectile: %1 | _pos vectorDistance (getPosASL _projectile): %2 | _distanceCheck: %3 | !alive _projectile: %4", _pos vectorDistance (getPosASL _projectile) < _distanceCheck or !alive _projectile, _pos vectorDistance (getPosASL _projectile), _distanceCheck, !alive _projectile];
+			//DIAG_LOG format ["GUIDED | _pos vectorDistance (getPosASL _projectile) < _distanceCheck or !alive _projectile: %1 | _pos vectorDistance (getPosASL _projectile): %2 | _distanceCheck: %3 | !alive _projectile: %4", _pos vectorDistance (getPosASL _projectile) < _distanceCheck or !alive _projectile, _pos vectorDistance (getPosASL _projectile), _distanceCheck, !alive _projectile];
 		};
 	};
 };
@@ -84,13 +82,13 @@ if (!_longRangeGuided) then {
 	while {true} do {
 		sleep 0.02;
 		if (_pos vectorDistance (getPosASL _projectile) < 1500 or !alive _projectile) exitWith {
-			DEBUGLOG format ["GUIDED | _pos vectorDistance (getPosASL _projectile) < 1500 or !alive _projectile: %1 | _pos vectorDistance (getPosASL _projectile): %2 | !alive _projectile: %3", _pos vectorDistance (getPosASL _projectile) < 1500 or !alive _projectile, _pos vectorDistance (getPosASL _projectile), !alive _projectile];
+			//DIAG_LOG format ["GUIDED | _pos vectorDistance (getPosASL _projectile) < 1500 or !alive _projectile: %1 | _pos vectorDistance (getPosASL _projectile): %2 | !alive _projectile: %3", _pos vectorDistance (getPosASL _projectile) < 1500 or !alive _projectile, _pos vectorDistance (getPosASL _projectile), !alive _projectile];
 		};
 	};
 };
 
 if (!alive _projectile) exitWith {
-	DEBUGLOG format ["GUIDED | !alive _projectile: %1", !alive _projectile];
+	//DIAG_LOG format ["GUIDED | !alive _projectile: %1", !alive _projectile];
 };
 
 // Start guiding the projectile.
@@ -191,4 +189,4 @@ if (_action == 1 or {_action == 3}) then {
 
 [_firedEHArray,_target,_projectile,_pos,_radius,_action,_fuse,_infoDummy,_doAirburst,_arrayEnemySides,_GPSZAdjust,_elevationMod,_unguidedCEP] spawn T1AM_Fnc_GuideProjectile;
 
-DEBUGLOG "GUIDED - END";
+//DIAG_LOG "GUIDED - END";

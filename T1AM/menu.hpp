@@ -605,7 +605,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 9.3);
 			w = (T1AM_BUTTON_W * 1.45);
 			h = T1AM_BUTTON_H;
-			tooltip = "Call for adjust fire mission.\nUse these options to guide the artillery on target.\nTwo adjust modes are available:\n- Adjust from point of view of the observer.\n- Adjust by marking the impact point.\nTurn off if you don't wish to adjust.";
+			tooltip = "Call for adjust fire mission.\nUse these options to guide the artillery on target.\nTwo adjust modes are available:\n- Adjust from point of view of the observer position.\n- Adjust by marking the impact point.\nTurn off if you don't wish to adjust.";
 		};
 		
 		class T1AM_TextAdjust2: T1AM_RscText
@@ -617,7 +617,7 @@ class T1AM_DialogControl
 			y = T1AM_ROW + (T1AM_ROWINC * 11.2);
 			w = (T1AM_BUTTON_W * 0.8);
 			h = T1AM_BUTTON_H;
-			tooltip = "Adjust fire from the point of view of the observer.\nDefine how much the impact position should move right/left and forwards/backwards.";
+			tooltip = "Adjust fire from the point of view of the observer position.\nDefine how much the impact position should move right/left and forwards/backwards.";
 		};
 		
 		class T1AM_TextAdjustLeftRight: T1AM_RscText
@@ -1097,7 +1097,7 @@ class T1AM_DialogControl
 			h = 0.05;
 			rows = 1;
 			columns = 3;
-			strings[] = {"OFF","OBSERVER","IMPACT"};
+			strings[] = {"OFF","POLAR","IMPACT"};
 			checked_strings[] = {};
 			values[] = {0,0,0};
 			onToolBoxSelChanged = "[0] call T1AM_Fnc_PlaySoundGUI; _this spawn T1AM_Fnc_EditAdjustCheckboxEvent";
@@ -1541,7 +1541,7 @@ class T1AM_DialogAimpoint
 			y = T1AM_ROW + (T1AM_ROWINC * 3.1);
 			w = (T1AM_BUTTON_W * 1.55);
 			h = T1AM_BUTTON_H;
-			tooltip = "Choose the aimpoint that the artillery unit should aim at.\nTwo modes are available:\n- Position from point of view of the observer.\n- Grid coordinates of the target position.";
+			tooltip = "Choose the aimpoint that the artillery unit should aim at.\nTwo modes are available:\n- Position from point of view of the observer position.\n- Grid coordinates of the target position.";
 		};
 		
 		class T1AM_TextAimpointGrid: T1AM_RscText

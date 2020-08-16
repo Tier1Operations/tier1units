@@ -1,16 +1,14 @@
-#include "\T1AM\Defines.hpp"
-
 params ["_displayorcontrol", "_key", "_shift", "_ctrl", "_alt", "_mode"];
 
-DEBUGLOG format ["EDIT NUMBER EVENT | START | _this: %1", _this];
+//DIAG_LOG format ["EDIT NUMBER EVENT | START | _this: %1", _this];
 
 private _nr = [ctrlText _displayorcontrol, 0, true] call T1AM_Fnc_ParseNumber;
 
-DEBUGLOG format ["EDIT NUMBER EVENT 1 | _nr: %1", _nr];
+//DIAG_LOG format ["EDIT NUMBER EVENT 1 | _nr: %1", _nr];
 
 if (_nr == -9999999) exitWith {};
 
-DEBUGLOG "EDIT NUMBER EVENT 2";
+//DIAG_LOG "EDIT NUMBER EVENT 2";
 
 switch (_mode) do {
 	case (0) : {T1AM_LastAdjustX = _nr};
@@ -22,4 +20,4 @@ switch (_mode) do {
 	case (6) : {T1AM_LastAimpointDist = _nr};
 };
 
-DEBUGLOG "EDIT NUMBER EVENT END";
+//DIAG_LOG "EDIT NUMBER EVENT END";

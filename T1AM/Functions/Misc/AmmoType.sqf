@@ -1,7 +1,5 @@
 // Returns the type of ammo in a short text-friendly form
 
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 params ["_ammo"];

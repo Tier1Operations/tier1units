@@ -1,5 +1,3 @@
-#include "\T1AM\Defines.hpp"
-
 params ["_tubes","_returnBadTubes"];
 
 // Check locality and change it to the server.
@@ -9,10 +7,10 @@ params ["_tubes","_returnBadTubes"];
 	
 	if (alive _tube) then {
 		if (!local _tube) then {
-			DEBUGLOG format["PFM SERVER -- WRONG LOCALITY OF TUBE: %1", _tube];
+			//DIAG_LOG format["PFM SERVER -- WRONG LOCALITY OF TUBE: %1", _tube];
 			private _group = group _tube;
 			if (!isNull _group) then {
-				DEBUGLOG format["PFM SERVER -- WRONG LOCALITY OF TUBE | !isNull _group: %1", !isNull _group];
+				//DIAG_LOG format["PFM SERVER -- WRONG LOCALITY OF TUBE | !isNull _group: %1", !isNull _group];
 				private _locked = locked _tube;
 				_tube lock 2;
 				sleep 0.1;
@@ -28,7 +26,7 @@ params ["_tubes","_returnBadTubes"];
 	{
 		if (alive _x) then {
 			if (!local _x) then {
-				DEBUGLOG format["PFM SERVER -- WRONG LOCALITY OF MEMBER: %1 in %2", _x, _tube];
+				//DIAG_LOG format["PFM SERVER -- WRONG LOCALITY OF MEMBER: %1 in %2", _x, _tube];
 				private _locked = locked _tube;
 				_tube lock 2;
 				sleep 0.1;
@@ -72,25 +70,25 @@ if (_returnBadTubes) then {
 		private _tube = _x;
 		if (alive _tube) then {
 			if (!local _tube) exitWith {
-				DEBUGLOG format["PFM SERVER -- BAD TUBE: %1", _tube];
+				//DIAG_LOG format["PFM SERVER -- BAD TUBE: %1", _tube];
 				_badTubes pushback _tube;
 			};
 			
 			private _gunner = gunner _tube;
 			if (!isNull _gunner and {isPlayer _gunner}) exitWith {
-				DEBUGLOG format["PFM SERVER -- BAD GUNNER: %1", _tube];
+				//DIAG_LOG format["PFM SERVER -- BAD GUNNER: %1", _tube];
 				_badTubes pushback _tube;
 			};
 			
 			{
 				if (alive _x and !local _x) exitWith {
-					DEBUGLOG format["PFM SERVER -- BAD CREW: %1 in %2", _x, _tube];
+					//DIAG_LOG format["PFM SERVER -- BAD CREW: %1 in %2", _x, _tube];
 					_badTubes pushback _tube;
 				};
 			} forEach crew _tube;
 		};
 	} forEach _tubes;
-	DEBUGLOG format["PFM SERVER -- BAD TUBES: %1", _badTubes];
+	//DIAG_LOG format["PFM SERVER -- BAD TUBES: %1", _badTubes];
 };
 
 

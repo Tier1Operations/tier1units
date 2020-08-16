@@ -1,5 +1,3 @@
-#include "\T1AM\Defines.hpp"
-
 params ["_exitCode"];
 
 if (_exitCode == 0 or _exitCode == 2) then {

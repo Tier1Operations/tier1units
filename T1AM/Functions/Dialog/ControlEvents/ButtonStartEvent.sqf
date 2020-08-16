@@ -1,5 +1,3 @@
-#include "\T1AM\Defines.hpp"
-
 switch true do {
 	case (!isNull (findDisplay 47200)) : {T1AM_LastDialog = "ASSETS"};
 	case (!isNull (findDisplay 47400)) : {T1AM_LastDialog = "ASSETS"};

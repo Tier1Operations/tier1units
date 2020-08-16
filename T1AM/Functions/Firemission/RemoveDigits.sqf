@@ -2,8 +2,6 @@
 // will get the FindCharge while loop stuck. This is because the AI is usually constantly changing aim,
 // but it's only noticeable in the vector numbers.
 
-#include "\T1AM\Defines.hpp"
-
 params ["_array"];
 
 private _arrayNew = [];

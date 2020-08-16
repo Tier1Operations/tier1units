@@ -1,8 +1,6 @@
-#include "\T1AM\Defines.hpp"
-
 params ["_x","_y","_adjustMode","_adjustSpotterX","_adjustSpotterY","_adjustImpactX","_adjustImpactY","_adjustSpotterRefX","_adjustSpotterRefY"];
 
-// Safety check. Will make sure no errors popup when the DEBUGLOG runs.
+// Safety check. Will make sure no errors popup when the //DIAG_LOG runs.
 if (_adjustMode != 1) then {
 	_x = -1;
 	_y = -1;
@@ -16,7 +14,7 @@ if (_adjustMode != 2) then {
 	_adjustImpactRefY = -1;
 };
 
-DEBUGLOG format["ADJUST START | _x: %1 | _y: %2 | _adjustMode: %3 | _adjustSpotterX: %4 | _adjustSpotterY: %5 | _adjustSpotterRefX: %6 | _adjustSpotterRefY: %7", _x, _y, _adjustMode, _adjustSpotterX, _adjustSpotterY, _adjustSpotterRefX, _adjustSpotterRefY];
+//DIAG_LOG format["ADJUST START | _x: %1 | _y: %2 | _adjustMode: %3 | _adjustSpotterX: %4 | _adjustSpotterY: %5 | _adjustSpotterRefX: %6 | _adjustSpotterRefY: %7", _x, _y, _adjustMode, _adjustSpotterX, _adjustSpotterY, _adjustSpotterRefX, _adjustSpotterRefY];
 
 
 switch (_adjustMode) do {
@@ -35,58 +33,58 @@ switch (_adjustMode) do {
 		private _dir = _spotterPos2D getDir _targetPos2D_1;
 		private _distance2D = _spotterPos2D distance2D _targetPos2D_1;
 		
-		DEBUGLOG format ["ADJUST | _x: %1", _x];
-		DEBUGLOG format ["ADJUST | _y: %1", _y];
-		DEBUGLOG format ["ADJUST | _targetPos2D_1: %1", _targetPos2D_1];
-		DEBUGLOG format ["ADJUST | _targetPos2D_2: %1", _targetPos2D_2];
-		DEBUGLOG format ["ADJUST | _dir: %1", _dir];
-		DEBUGLOG format ["ADJUST | _distance2D: %1", _distance2D];
+		//DIAG_LOG format ["ADJUST | _x: %1", _x];
+		//DIAG_LOG format ["ADJUST | _y: %1", _y];
+		//DIAG_LOG format ["ADJUST | _targetPos2D_1: %1", _targetPos2D_1];
+		//DIAG_LOG format ["ADJUST | _targetPos2D_2: %1", _targetPos2D_2];
+		//DIAG_LOG format ["ADJUST | _dir: %1", _dir];
+		//DIAG_LOG format ["ADJUST | _distance2D: %1", _distance2D];
 		
 		// Adjust _y.
 		if (_y != 0) then {
-			DEBUGLOG "ADJUST Y";
+			//DIAG_LOG "ADJUST Y";
 			private _targetPos2D_1_y = _spotterPos2D getPos [_distance2D + _y, _dir];
-			DEBUGLOG format ["ADJUST | _targetPos2D_1_y: %1", _targetPos2D_1_y];
+			//DIAG_LOG format ["ADJUST | _targetPos2D_1_y: %1", _targetPos2D_1_y];
 			_targetPos2D_1_y = [_targetPos2D_1_y select 0,_targetPos2D_1_y select 1,0];
-			DEBUGLOG format ["ADJUST | _targetPos2D_1_y: %1", _targetPos2D_1_y];
+			//DIAG_LOG format ["ADJUST | _targetPos2D_1_y: %1", _targetPos2D_1_y];
 			_targetPos2D_2 = _targetPos2D_2 vectorAdd (_targetPos2D_1_y vectorDiff _targetPos2D_1);
-			DEBUGLOG format ["ADJUST | (_targetPos2D_1_y vectorDiff _targetPos2D_1): %1", (_targetPos2D_1_y vectorDiff _targetPos2D_1)];
-			DEBUGLOG format ["ADJUST | _targetPos2D_2: %1", _targetPos2D_2];
+			//DIAG_LOG format ["ADJUST | (_targetPos2D_1_y vectorDiff _targetPos2D_1): %1", (_targetPos2D_1_y vectorDiff _targetPos2D_1)];
+			//DIAG_LOG format ["ADJUST | _targetPos2D_2: %1", _targetPos2D_2];
 			_targetPos2D_1 = _targetPos2D_1_y;
-			DEBUGLOG format ["ADJUST | _targetPos2D_1: %1", _targetPos2D_1];
+			//DIAG_LOG format ["ADJUST | _targetPos2D_1: %1", _targetPos2D_1];
 		};
 		
 		// Adjust _x.
 		if (_x != 0) then {
-			DEBUGLOG "ADJUST X";
+			//DIAG_LOG "ADJUST X";
 			switch (true) do {
 				case (_dir > 270 and _x > 0) : {
 					_dir = _dir - 270;
-					DEBUGLOG format ["ADJUST | _dir - 270: %1", _dir];
+					//DIAG_LOG format ["ADJUST | _dir - 270: %1", _dir];
 				};
 				case (_dir < 90 and _x < 0) : {
 					_dir = _dir + 270;
-					DEBUGLOG format ["ADJUST | _dir + 270: %1", _dir];
+					//DIAG_LOG format ["ADJUST | _dir + 270: %1", _dir];
 				};
 				case (_x > 0) : {
 					_dir = _dir + 90;
-					DEBUGLOG format ["ADJUST | _dir + 90: %1", _dir];
+					//DIAG_LOG format ["ADJUST | _dir + 90: %1", _dir];
 				};
 				case (_x < 0) : {
 					_dir = _dir - 90;
-					DEBUGLOG format ["ADJUST | _dir - 90: %1", _dir];
+					//DIAG_LOG format ["ADJUST | _dir - 90: %1", _dir];
 				};
 			};
 			
 			private _targetPos2D_1_x = _targetPos2D_1 getPos [abs _x, _dir];
-			DEBUGLOG format ["ADJUST | _targetPos2D_1_x: %1", _targetPos2D_1_x];
+			//DIAG_LOG format ["ADJUST | _targetPos2D_1_x: %1", _targetPos2D_1_x];
 			_targetPos2D_1_x = [_targetPos2D_1_x select 0,_targetPos2D_1_x select 1,0];
-			DEBUGLOG format ["ADJUST | _targetPos2D_1_x: %1", _targetPos2D_1_x];
+			//DIAG_LOG format ["ADJUST | _targetPos2D_1_x: %1", _targetPos2D_1_x];
 			_targetPos2D_2 = _targetPos2D_2 vectorAdd (_targetPos2D_1_x vectorDiff _targetPos2D_1);
-			DEBUGLOG format ["ADJUST | (_targetPos2D_1_x vectorDiff _targetPos2D_1): %1", (_targetPos2D_1_x vectorDiff _targetPos2D_1)];
-			DEBUGLOG format ["ADJUST | _targetPos2D_2: %1", _targetPos2D_2];
+			//DIAG_LOG format ["ADJUST | (_targetPos2D_1_x vectorDiff _targetPos2D_1): %1", (_targetPos2D_1_x vectorDiff _targetPos2D_1)];
+			//DIAG_LOG format ["ADJUST | _targetPos2D_2: %1", _targetPos2D_2];
 			_targetPos2D_1 = _targetPos2D_1_x;
-			DEBUGLOG format ["ADJUST | _targetPos2D_1: %1", _targetPos2D_1];
+			//DIAG_LOG format ["ADJUST | _targetPos2D_1: %1", _targetPos2D_1];
 		};
 		
 		T1AM_X = _targetPos2D_1 select 0;
@@ -95,13 +93,13 @@ switch (_adjustMode) do {
 		T1AM_Xdisplay = _targetPos2D_2 select 0;
 		T1AM_Ydisplay = _targetPos2D_2 select 1;
 		
-		DEBUGLOG format["ADJUST | _targetPos2D_1: %1", _targetPos2D_1];
-		DEBUGLOG format["ADJUST | _targetPos2D_2: %1", _targetPos2D_2];
+		//DIAG_LOG format["ADJUST | _targetPos2D_1: %1", _targetPos2D_1];
+		//DIAG_LOG format["ADJUST | _targetPos2D_2: %1", _targetPos2D_2];
 		
 		if (T1AM_Debug_Mode) then {[_targetPos2D_1, 120, "ColorRed"] spawn T1AM_Fnc_PlaceMarker};
 		if (T1AM_Debug_Mode) then {[_targetPos2D_2, 120, "ColorBrown"] spawn T1AM_Fnc_PlaceMarker};		
 		
-		DEBUGLOG "ADJUST END";
+		//DIAG_LOG "ADJUST END";
 	};
 	
 	case (2) : {

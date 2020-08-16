@@ -1,12 +1,10 @@
-#include "\T1AM\Defines.hpp"
-
 disableSerialization;
 
 // Process coordinates received from the player.
 private _dialog = findDisplay 47400;
 
 private _mode = T1AM_LastAimpointCheckbox;
-DEBUGLOG format["INPUT AIMPOINT -- _mode: %1", _mode];
+//DIAG_LOG format["INPUT AIMPOINT -- _mode: %1", _mode];
 
 
 // X spotter coordinate
@@ -79,13 +77,13 @@ if (_mode == 1 and _targetX == 0 and _targetY == 0) exitWith {
 
 
 if (_mode == 0) then {
-	DEBUGLOG format["INPUT AIMPOINT -- _spotterX: %1", _spotterX];
-	DEBUGLOG format["INPUT AIMPOINT -- _spotterY: %1", _spotterY];
-	DEBUGLOG format["INPUT AIMPOINT -- _dir: %1", _dir];
-	DEBUGLOG format["INPUT AIMPOINT -- _dist: %1", _dist];
+	//DIAG_LOG format["INPUT AIMPOINT -- _spotterX: %1", _spotterX];
+	//DIAG_LOG format["INPUT AIMPOINT -- _spotterY: %1", _spotterY];
+	//DIAG_LOG format["INPUT AIMPOINT -- _dir: %1", _dir];
+	//DIAG_LOG format["INPUT AIMPOINT -- _dist: %1", _dist];
 } else {
-	DEBUGLOG format["INPUT AIMPOINT -- _targetX: %1", _targetX];
-	DEBUGLOG format["INPUT AIMPOINT -- _targetY: %1", _targetY];
+	//DIAG_LOG format["INPUT AIMPOINT -- _targetX: %1", _targetX];
+	//DIAG_LOG format["INPUT AIMPOINT -- _targetY: %1", _targetY];
 };
 
 
@@ -108,9 +106,9 @@ private _y = _pos select 1;
 
 T1AM_Elevation = ((AGLtoASL [_x,_y,0]) select 2) max 0;
 
-DEBUGLOG format["INPUT AIMPOINT -- _x: %1", _x];
-DEBUGLOG format["INPUT AIMPOINT -- _y: %1", _y];
-DEBUGLOG format["INPUT AIMPOINT -- T1AM_Elevation: %1", T1AM_Elevation];
+//DIAG_LOG format["INPUT AIMPOINT -- _x: %1", _x];
+//DIAG_LOG format["INPUT AIMPOINT -- _y: %1", _y];
+//DIAG_LOG format["INPUT AIMPOINT -- T1AM_Elevation: %1", T1AM_Elevation];
 
 T1AM_X = _x;
 T1AM_Y = _y;
@@ -126,7 +124,7 @@ _pos = [T1AM_X,T1AM_Y,T1AM_Elevation];
 private _vehicle = vehicle leader T1AM_SelectedAsset;
 private _distance = (getPosASL _vehicle) vectorDistance _pos;
 
-DEBUGLOG format["INPUT AIMPOINT -- POS BEFORE RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
+//DIAG_LOG format["INPUT AIMPOINT -- POS BEFORE RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
 
 private _initialMiss = true;
 if (_distance <= 750) then {_initialMiss = false};
@@ -203,7 +201,7 @@ if (_initialMiss) then {
 	T1AM_X = _errorPos select 0;
 	T1AM_Y = _errorPos select 1;
 	
-	DEBUGLOG format["INPUT AIMPOINT -- POS AFTER RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
+	//DIAG_LOG format["INPUT AIMPOINT -- POS AFTER RANDOM: %1", [T1AM_X,T1AM_Y,T1AM_Elevation]];
 };
 
 

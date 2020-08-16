@@ -1,8 +1,6 @@
 // 82mm mortar
 // High Angle (Low angle not possible)
 
-#include "\T1AM\Defines.hpp"
-
 params ["_warheadType","_distance"];
 
 // Minumum delay before firing a shot

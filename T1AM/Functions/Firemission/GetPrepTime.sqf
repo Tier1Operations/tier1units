@@ -1,7 +1,5 @@
 // Calculate how long the prep time should be.
 
-#include "\T1AM\Defines.hpp"
-
 params ["_tube", "_asset", "_assetType", "_chosenTargetPos", "_firstRound", "_lastFiringPos", "_gunAngle", "_lastGunAngle", "_prePlotted", "_sheaf", "_mustWait", "_mustWaitTime", "_timeBetweenRounds"];
 
 _sleepTime = random 0.25;
@@ -18,12 +16,12 @@ if (_firstRound) then {
 		} forEach _arrayTRP;
 	};
 	
-	DEBUGLOG format["TUBE: %1 - FIRING LOOP -- CLOSETOTRP: %2", _tube, _closeToTRP];
+	//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- CLOSETOTRP: %2", _tube, _closeToTRP];
 	
 	// Has fired previously on this position or is preplotted or is close to a TRP.
 	if (((_lastFiringPos vectorDistance _chosenTargetPos < 300) and (_lastGunAngle == _gunAngle)) or _prePlotted or _closeToTRP) then {
 		
-		DEBUGLOG format["TUBE: %1 - FIRING LOOP -- HAS FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
 		
 		switch (_assetType) do {
 			
@@ -65,7 +63,7 @@ if (_firstRound) then {
 		
 	} else {
 		
-		DEBUGLOG format["TUBE: %1 - FIRING LOOP -- HAS NOT FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
+		//DIAG_LOG format["TUBE: %1 - FIRING LOOP -- HAS NOT FIRED PREVIOUSLY ON POS - CHECK1: %2 - CHECK2: %3 - CHECK3: %4 - CHECK4: %5 - CHECK5: %6", _tube, _lastFiringPos vectorDistance _chosenTargetPos, _lastGunAngle, _gunAngle, _prePlotted, _closeToTRP];
 		
 		// Firing on new position.
 		switch (_assetType) do {
@@ -193,7 +191,7 @@ _sleepTime = _sleepTime max 1;
 // Wait no longer than 130 seconds. Other scripts will not wait longer than 130 seconds (as a safety precaution).
 _sleepTime = _sleepTime min 130;
 
-DEBUGLOG format["GET PREP TIME: %1 | _sleepTime: %2", _tube, _sleepTime];
+//DIAG_LOG format["GET PREP TIME: %1 | _sleepTime: %2", _tube, _sleepTime];
 
 _sleepTime = time + _sleepTime;
 

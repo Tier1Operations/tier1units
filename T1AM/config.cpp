@@ -316,148 +316,6 @@ class CfgGroups
 
 class CfgSounds
 {
-	class T1AM_Beep
-	{
-		name = "T1AM_Beep";
-		sound[] ={"\T1AM\Data\Sounds\beep.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	// US radio
-	class T1AM_AdjustFireUS
-	{
-		name = "T1AM_AdjustFireUS";
-		sound[] ={"\T1AM\Data\Sounds\US\AdjustFire.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_MTOUS
-	{
-		name = "T1AM_MTOIS";
-		sound[] ={"\T1AM\Data\Sounds\US\MTO.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_ShotUS
-	{
-		name = "T1AM_ShotUS";
-		sound[] ={"\T1AM\Data\Sounds\US\Shot.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_SplashUS
-	{
-		name = "T1AM_SplashUS";
-		sound[] ={"\T1AM\Data\Sounds\US\Splash.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_EndOfMissionUS
-	{
-		name = "T1AM_EndOfMissionUS";
-		sound[] ={"\T1AM\Data\Sounds\US\EndOfMission.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_NegativePER
-	{
-		name = "T1AM_NegativePER";
-		sound[] ={"\T1AM\Data\Sounds\PER\Negative.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_FireMissionReadyPER
-	{
-		name = "T1AM_FireMissionReadyPER";
-		sound[] ={"\T1AM\Data\Sounds\PER\ReadyToFire.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_AdjustFirePER
-	{
-		name = "T1AM_AdjustFirePER";
-		sound[] ={"\T1AM\Data\Sounds\PER\ReadyForOrders.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_MTOPER
-	{
-		name = "T1AM_MTOIS";
-		sound[] ={"\T1AM\Data\Sounds\PER\RequestAcknowledged.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_ShotPER
-	{
-		name = "T1AM_ShotPER";
-		sound[] ={"\T1AM\Data\Sounds\PER\Fire_1.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_SplashPER
-	{
-		name = "T1AM_SplashPER";
-		sound[] ={"\T1AM\Data\Sounds\PER\Splash.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_EndOfMissionPER
-	{
-		name = "T1AM_EndOfMissionPER";
-		sound[] ={"\T1AM\Data\Sounds\PER\RoundsComplete.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	// Greek radio
-	class T1AM_NegativeGRE
-	{
-		name = "T1AM_NegativeGRE";
-		sound[] ={"\T1AM\Data\Sounds\GRE\Negative.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_AdjustFireGRE
-	{
-		name = "T1AM_AdjustFireGRE";
-		sound[] ={"\T1AM\Data\Sounds\GRE\AdjustFire.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_MTOGRE
-	{
-		name = "T1AM_MTOIS";
-		sound[] ={"\T1AM\Data\Sounds\GRE\MTO.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_ShotGRE
-	{
-		name = "T1AM_ShotGRE";
-		sound[] ={"\T1AM\Data\Sounds\GRE\Shot.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_SplashGRE
-	{
-		name = "T1AM_SplashGRE";
-		sound[] ={"\T1AM\Data\Sounds\GRE\Splash.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_RoundsCompleteGRE
-	{
-		name = "T1AM_EndOfMissionGRE";
-		sound[] ={"\T1AM\Data\Sounds\GRE\RoundsComplete.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
-	class T1AM_FireMissionReadyGRE
-	{
-		name = "T1AM_FireMissionReadyGRE";
-		sound[] ={"\T1AM\Data\Sounds\GRE\FireMissionReady.ogg",db-10,1.0};
-		titles[] = {};
-	};
-	
 	class T1AM_Sounds_Button1
 	{
 		name = "T1AM_Sounds_Button1";
@@ -517,14 +375,14 @@ class CfgSounds
 	class T1AM_Sounds_Load1
 	{
 		name = "T1AM_Sounds_Load1";
-		sound[] ={"\T1AM\Data\Sounds\GUI\Load1.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GUI\Load1.ogg",db-13,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_Load2
 	{
 		name = "T1AM_Sounds_Load2";
-		sound[] ={"\T1AM\Data\Sounds\GUI\Load2.ogg",db-10,1.0};
+		sound[] ={"\T1AM\Data\Sounds\GUI\Load2.ogg",db-13,1.0};
 		titles[] = {};
 	};
 	
@@ -532,6 +390,181 @@ class CfgSounds
 	{
 		name = "T1AM_Sounds_Load3";
 		sound[] ={"\T1AM\Data\Sounds\GUI\Load3.ogg",db-5,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Beep
+	{
+		name = "T1AM_Sounds_Beep";
+		sound[] ={"\T1AM\Data\Sounds\Radio\Beep.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_CheckingFire
+	{
+		name = "T1AM_Sounds_CheckingFire";
+		sound[] ={"\T1AM\Data\Sounds\Radio\CheckingFire.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Designate
+	{
+		name = "T1AM_Sounds_Designate";
+		sound[] ={"\T1AM\Data\Sounds\Radio\Designate.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_EndOfMission
+	{
+		name = "T1AM_Sounds_EndOfMission";
+		sound[] ={"\T1AM\Data\Sounds\Radio\EndOfMission.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_FireMissionRegistered
+	{
+		name = "T1AM_Sounds_FireMissionRegistered";
+		sound[] ={"\T1AM\Data\Sounds\Radio\FireMissionRegistered.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_HoldingFireImpossibleFiringSolution
+	{
+		name = "T1AM_Sounds_HoldingFireImpossibleFiringSolution";
+		sound[] ={"\T1AM\Data\Sounds\Radio\HoldingFireImpossibleFiringSolution.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Mto10dGPSAdjustFire
+	{
+		name = "T1AM_Sounds_Mto10dGPSAdjustFire";
+		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dGPSAdjustFire.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Mto10dGPSFFE
+	{
+		name = "T1AM_Sounds_Mto10dGPSFFE";
+		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dGPSFFE.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Mto10dImpactAdjustFire
+	{
+		name = "T1AM_Sounds_Mto10dImpactAdjustFire";
+		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dImpactAdjustFire.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Mto10dImpactCorrectFFE
+	{
+		name = "T1AM_Sounds_Mto10dImpactCorrectFFE";
+		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dImpactCorrectFFE.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_MtoAdjustFire
+	{
+		name = "T1AM_Sounds_MtoAdjustFire";
+		sound[] ={"\T1AM\Data\Sounds\Radio\MtoAdjustFire.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_MtoFFE
+	{
+		name = "T1AM_Sounds_MtoFFE";
+		sound[] ={"\T1AM\Data\Sounds\Radio\MtoFFE.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_MtoPolarAdjustFire
+	{
+		name = "T1AM_Sounds_MtoPolarAdjustFire";
+		sound[] ={"\T1AM\Data\Sounds\Radio\MtoPolarAdjustFire.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_MtoPolarCorrectFFE
+	{
+		name = "T1AM_Sounds_MtoPolarCorrectFFE";
+		sound[] ={"\T1AM\Data\Sounds\Radio\MtoPolarCorrectFFE.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_ObserverNotResponding
+	{
+		name = "T1AM_Sounds_ObserverNotResponding";
+		sound[] ={"\T1AM\Data\Sounds\Radio\ObserverNotResponding.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_OutOfAmmoRoundsComplete
+	{
+		name = "T1AM_Sounds_OutOfAmmoRoundsComplete";
+		sound[] ={"\T1AM\Data\Sounds\Radio\OutOfAmmoRoundsComplete.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_OutOfRange
+	{
+		name = "T1AM_Sounds_OutOfRange";
+		sound[] ={"\T1AM\Data\Sounds\Radio\OutOfRange.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_PreparingTakeAWhile
+	{
+		name = "T1AM_Sounds_PreparingTakeAWhile";
+		sound[] ={"\T1AM\Data\Sounds\Radio\PreparingTakeAWhile.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_RequestedAmmoNotAvailable
+	{
+		name = "T1AM_Sounds_RequestedAmmoNotAvailable";
+		sound[] ={"\T1AM\Data\Sounds\Radio\RequestedAmmoNotAvailable.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_RequestedAmmoNotAvailable2
+	{
+		name = "T1AM_Sounds_RequestedAmmoNotAvailable2";
+		sound[] ={"\T1AM\Data\Sounds\Radio\RequestedAmmoNotAvailable2.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_RoundsComplete
+	{
+		name = "T1AM_Sounds_RoundsComplete";
+		sound[] ={"\T1AM\Data\Sounds\Radio\RoundsComplete.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Shot
+	{
+		name = "T1AM_Sounds_Shot";
+		sound[] ={"\T1AM\Data\Sounds\Radio\Shot.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_ShotDesignate
+	{
+		name = "T1AM_Sounds_ShotDesignate";
+		sound[] ={"\T1AM\Data\Sounds\Radio\ShotDesignate.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_Splash
+	{
+		name = "T1AM_Sounds_Splash";
+		sound[] ={"\T1AM\Data\Sounds\Radio\Splash.ogg",db+15,1.0};
+		titles[] = {};
+	};
+	
+	class T1AM_Sounds_UnderMinimumRange
+	{
+		name = "T1AM_Sounds_UnderMinimumRange";
+		sound[] ={"\T1AM\Data\Sounds\Radio\UnderMinimumRange.ogg",db+15,1.0};
 		titles[] = {};
 	};
 };

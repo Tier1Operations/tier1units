@@ -1,8 +1,6 @@
 // Let the server monitor if the controlling player is still connected.
 // If the player dies or disconnects, reset the arty asset.
 
-#include "\T1AM\Defines.hpp"
-
 if (!isServer) exitWith {};
 
 params ["_group"];

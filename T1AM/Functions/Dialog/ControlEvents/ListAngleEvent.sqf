@@ -1,5 +1,3 @@
-#include "\T1AM\Defines.hpp"
-
 params ["_control", "_selectedIndex"];
 
 private _angle = _control lbData _selectedIndex;

@@ -1,12 +1,11 @@
 // Process more stuff before sending it to the server.
 
-#include "\T1AM\Defines.hpp"
-
 if (T1AM_Debug_Mode) then {systemChat "Process Fire Mission"};
 
 params["_asset","_pos","_warheadType","_rounds","_distance","_missionType","_angle","_sender","_timeStamp","_prePlotted","_sheaf","_fuse","_sheafSize","_posDisplay","_airburstHeight","_plotNr","_GPSZAdjust","_posGPS","_sheafDir","_sheafDist","_TRPX","_TRPY","_remarks"];
 
 private _fireMission = _this;
+private _spotter = _sender;
 
 T1AM_AssetsBusy = T1AM_AssetsBusy + [_asset];
 publicVariable "T1AM_AssetsBusy";
@@ -69,10 +68,6 @@ private _playerCallsign = [group _sender] call T1AM_Fnc_TrimGroupName;
 private _assetCallsign = [_asset] call T1AM_Fnc_TrimGroupName;
 private _displayName = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
 
-
-private _message = format ["%1 this is %2. %3 x %4 firing %5, %6 rounds, %7 sheaf, %8 %9 fuze, over.",_playerCallsign,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_sheaf,_fuse];
-if (_missionType == "SPOT") then {_message = format ["%1 this is %2. Plot, %3 x %4 firing %5, %6 round, %7 %8 fuze, over.",_playerCallsign,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_fuse]};
-
 private _timeBetweenRounds = _profile select 0;
 private _minimumRange = _profile select 1;
 private _maximumRange = _profile select 2;
@@ -81,36 +76,29 @@ private _sleepTime = 6 + (random 5);
 if (T1AM_Debug_Mode) then {_sleepTime = 0};
 
 if (_distance < _minimumRange) exitWith {
-	[_asset,_sleepTime] spawn {
-		params ["_asset","_sleepTime"];
+	[_asset,_sleepTime,_spotter] spawn {
+		params ["_asset","_sleepTime","_spotter"];
 		sleep _sleepTime;
-		[_asset,"Negative, under minimum range.","NEGATIVE"] call T1AM_Fnc_SendComms;
+		[_asset,_spotter,"Negative, under minimum range, out.",12] call T1AM_Fnc_SendComms;
 		T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
 		publicVariable "T1AM_AssetsBusy";
 	};
 };
 if (_distance > _maximumRange) exitWith {
-	[_asset,_sleepTime] spawn {
-		params ["_asset","_sleepTime"];
+	[_asset,_sleepTime,_spotter] spawn {
+		params ["_asset","_sleepTime","_spotter"];
 		sleep _sleepTime;
-		[_asset,"Negative, out of range.","NEGATIVE"] call T1AM_Fnc_SendComms;
+		[_asset,_spotter,"Negative, out of range, out.",6] call T1AM_Fnc_SendComms;
 		T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
 		publicVariable "T1AM_AssetsBusy";
 	};
 };
 
-if (_missionType != "PLOT") then {
-	[_asset, _message] spawn {
-		params ["_asset","_message"];
-		sleep (3 + random 3);
-		[_asset,_message,"MTO"] call T1AM_Fnc_SendComms;
-	};
-};
 
 // Perform plotting.
 if (_missionType == "PLOT") exitWith {
-	[_asset,_fireMission,_plotNr,_TRPX,_TRPY] spawn {
-		params ["_asset","_fireMission","_plotNr","_TRPX","_TRPY"];
+	[_asset,_fireMission,_plotNr,_TRPX,_TRPY,_spotter] spawn {
+		params ["_asset","_fireMission","_plotNr","_TRPX","_TRPY","_spotter"];
 		
 		private _pos = [_TRPX,_TRPY,0];
 		
@@ -132,7 +120,7 @@ if (_missionType == "PLOT") exitWith {
 		};
 		
 		sleep _waitTime;
-		[_asset, format["Fire mission registered: TRP-%1", _plotNr], "FIREMISSIONREADY"] call T1AM_Fnc_SendComms;
+		[_asset, _spotter, format["Fire mission registered: TRP-%1. Out.", _plotNr], 2] call T1AM_Fnc_SendComms;
 		T1AM_AllMissions = T1AM_AllMissions + [_fireMission];
 		publicVariable "T1AM_AllMissions";
 		T1AM_AssetsBusy = T1AM_AssetsBusy - [_asset];
@@ -161,6 +149,167 @@ if (_missionType == "PLOT") exitWith {
 		};
 	};
 };
+
+
+private _audio = -1;
+private _message = "";
+private _isGPS = _warheadType in T1AM_GPSGuidedTypes or {_warheadType in T1AM_GPSLaserTypes} or {_warheadType in T1AM_GPSSeekerTypes};
+
+if (_missionType == "SPOT") then {
+	if (_isGPS) exitWith {
+		private _pos2 = [[_posGPS select 0, _posGPS select 1]] call T1AM_Fnc_PosToMapGrid;
+		private _xMap = parseNumber (_pos2 select 0);
+		private _yMap = parseNumber (_pos2 select 1);
+		_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+		_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+		private _pos2 = [_xMap, _yMap, _GPSZAdjust];
+		
+		_message = format ["%1 this is %2. GPS grid: %3. Adjust fire. %4. %5. %6 fuze, out.",_playerCallsign,_assetCallsign,_pos2,_displayName,_ammoType,_fuse];
+		_audio = 15;
+	};
+	
+	switch (T1AM_LastAdjustCheckbox) do {
+		case (0) : {
+			private _pos2 = [[_pos select 0, _pos select 1]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap = parseNumber (_pos2 select 0);
+			private _yMap = parseNumber (_pos2 select 1);
+			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+			private _pos2 = [_xMap, _yMap, _GPSZAdjust];
+			
+			_message = format ["%1 this is %2. Adjust fire. %3. %4. %5 fuze. Aimpoint %6, out.",_playerCallsign,_assetCallsign,_displayName,_ammoType,_fuse,_pos2];
+			_audio = 19;
+		};
+		case (1) : {
+			private _pos2 = [[T1AM_LastAdjustSpotterX, T1AM_LastAdjustSpotterY]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap = parseNumber (_pos2 select 0);
+			private _yMap = parseNumber (_pos2 select 1);
+			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+			
+			private _adjustText = format ["Polar [%1,%2],", _xMap, _yMap];
+			if (T1AM_LastAdjustX > 0) then {_adjustText = _adjustText + " right " + str abs T1AM_LastAdjustX};
+			if (T1AM_LastAdjustX < 0) then {_adjustText = _adjustText + " left " + str abs T1AM_LastAdjustX};
+			if (T1AM_LastAdjustY > 0) then {_adjustText = _adjustText + " add " + str abs T1AM_LastAdjustY};
+			if (T1AM_LastAdjustY < 0) then {_adjustText = _adjustText + " drop " + str abs T1AM_LastAdjustY};
+			
+			private _pos2 = [[_pos select 0, _pos select 1]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap = parseNumber (_pos2 select 0);
+			private _yMap = parseNumber (_pos2 select 1);
+			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+			private _pos2 = [_xMap, _yMap, _GPSZAdjust];
+			
+			_message = format ["%1 this is %2. %3. Adjust fire. %4. %5. %6 fuze. Aimpoint %7, out.",_playerCallsign,_assetCallsign,_adjustText,_displayName,_ammoType,_fuse,_pos2];
+			_audio = 21;
+		};
+		case (2) : {
+			private _pos2 = [[T1AM_LastAdjustImpactX, T1AM_LastAdjustImpactY]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap = parseNumber (_pos2 select 0);
+			private _yMap = parseNumber (_pos2 select 1);
+			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+			
+			private _pos2 = [[T1AM_LastAdjustImpactRefX, T1AM_LastAdjustImpactRefY]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap2 = parseNumber (_pos2 select 0);
+			private _yMap2 = parseNumber (_pos2 select 1);
+			_xMap2 = [_xMap2] call T1AM_Fnc_FormatCoordinates;
+			_yMap2 = [_yMap2] call T1AM_Fnc_FormatCoordinates;
+			
+			_message = format ["%1 this is %2. Impact grid [%3,%4], target [%5,%6]. Adjust fire. %7. %8. %9 fuze, out.",_playerCallsign,_assetCallsign,_xMap,_yMap,_xMap2,_yMap2,_displayName,_ammoType,_fuse];
+			_audio = 17;
+		};
+	};
+	
+} else {
+	
+	if (_isGPS) exitWith {
+		private _pos2 = [[_posGPS select 0, _posGPS select 1]] call T1AM_Fnc_PosToMapGrid;
+		private _xMap = parseNumber (_pos2 select 0);
+		private _yMap = parseNumber (_pos2 select 1);
+		_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+		_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+		private _pos2 = [_xMap, _yMap, _GPSZAdjust];
+		
+		_message = format ["%1 this is %2. GPS grid: %3. Fire for effect. %4x %5. %6, %7 rounds. %8 fuze, out.",_playerCallsign,_assetCallsign,_pos2,(count _tubes),_displayName,_ammoType,_rounds,_fuse];
+		_audio = 16;
+	};
+	
+	private _sheafText = "";
+	switch (_sheaf) do {
+		case ("POINT") : {
+			_sheafText = "POINT";
+		};
+		case ("CIRCLE") : {
+			_sheafText = format ["CIRCLE: %1", _sheafSize select 0];
+		};
+		case ("BOX") : {
+			_sheafText = format ["BOX: %1-%2-%3", _sheafSize select 0, _sheafSize select 1, _sheafDir];
+		};
+		case ("LINE") : {
+			_sheafText = format ["LINE: %1-%2", _sheafDist, _sheafDir];
+		};
+	};
+	switch (T1AM_LastAdjustCheckbox) do {
+		case (0) : {
+			private _pos2 = [[_pos select 0, _pos select 1]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap = parseNumber (_pos2 select 0);
+			private _yMap = parseNumber (_pos2 select 1);
+			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+			private _pos2 = [_xMap, _yMap, _GPSZAdjust];
+			
+			_message = format ["%1 this is %2. Fire for effect. %3x %4. %5, %6 rounds. %7 fuze. %8. Aimpoint %9, out.",_playerCallsign,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_fuse,_sheafText,_pos2];
+			_audio = 20;
+		};
+		case (1) : {
+			private _pos2 = [[T1AM_LastAdjustSpotterX, T1AM_LastAdjustSpotterY]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap = parseNumber (_pos2 select 0);
+			private _yMap = parseNumber (_pos2 select 1);
+			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+			
+			private _adjustText = format ["Polar [%1,%2],", _xMap, _yMap];
+			if (T1AM_LastAdjustX > 0) then {_adjustText = _adjustText + " right " + str abs T1AM_LastAdjustX};
+			if (T1AM_LastAdjustX < 0) then {_adjustText = _adjustText + " left " + str abs T1AM_LastAdjustX};
+			if (T1AM_LastAdjustY > 0) then {_adjustText = _adjustText + " add " + str abs T1AM_LastAdjustY};
+			if (T1AM_LastAdjustY < 0) then {_adjustText = _adjustText + " drop " + str abs T1AM_LastAdjustY};
+			
+			private _pos2 = [[_pos select 0, _pos select 1]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap = parseNumber (_pos2 select 0);
+			private _yMap = parseNumber (_pos2 select 1);
+			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+			private _pos2 = [_xMap, _yMap, _GPSZAdjust];
+			
+			_message = format ["%1 this is %2. %3. Correct Fire For Effect. %4x %5. %6, %7 rounds. %8 fuze. %9. Aimpoint  %10, out.",_playerCallsign,_assetCallsign,_adjustText,(count _tubes),_displayName,_ammoType,_rounds,_fuse,_sheafText,_pos2];
+			_audio = 22;
+		};
+		case (2) : {
+			private _pos2 = [[T1AM_LastAdjustImpactX, T1AM_LastAdjustImpactY]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap = parseNumber (_pos2 select 0);
+			private _yMap = parseNumber (_pos2 select 1);
+			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
+			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
+			
+			private _pos2 = [[T1AM_LastAdjustImpactRefX, T1AM_LastAdjustImpactRefY]] call T1AM_Fnc_PosToMapGrid;
+			private _xMap2 = parseNumber (_pos2 select 0);
+			private _yMap2 = parseNumber (_pos2 select 1);
+			_xMap2 = [_xMap2] call T1AM_Fnc_FormatCoordinates;
+			_yMap2 = [_yMap2] call T1AM_Fnc_FormatCoordinates;
+			
+			_message = format ["%1 this is %2. Impact grid [%3,%4], target [%5,%6]. Correct fire for effect. %7x %8. %9, %10 rounds. %11 fuze. %12, out.",_playerCallsign,_assetCallsign,_xMap,_yMap,_xMap2,_yMap2,(count _tubes),_displayName,_ammoType,_rounds,_fuse,_sheafText];
+			_audio = 18;
+		};
+	};
+};
+
+[_asset, _spotter,_message,_audio] spawn {
+	params ["_asset","_spotter","_message","_audio"];
+	sleep (3 + random 3);
+	[_asset,_spotter,_message,_audio] call T1AM_Fnc_SendComms;
+};
+
 
 // All tubes for FFE missions
 _tubes = [_asset] call T1AM_Fnc_GroupVehicles;

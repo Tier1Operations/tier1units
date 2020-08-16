@@ -1,7 +1,5 @@
 // MK41 Cruise Missile
 
-#include "\T1AM\Defines.hpp"
-
 params ["_warheadType","_distance"];
 
 // Minumum delay before firing a shot

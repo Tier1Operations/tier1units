@@ -29,8 +29,6 @@ private _adjustX = [ctrlText (_dialog displayCtrl 47204), 0, true] call T1AM_Fnc
 private _adjustY = [ctrlText (_dialog displayCtrl 47205), 0, true] call T1AM_Fnc_ParseNumber;
 private _remarks = ctrlText (_dialog displayCtrl 47267);
 
-private _GPSZ = [ctrlText (_dialog displayCtrl 47221), 0, false] call T1AM_Fnc_ParseNumber;
-
 private _str = ctrlText (_dialog displayCtrl 47222);
 _str = [_str] call T1AM_Fnc_GridToPos;
 private _GPSX = [_str, 5, true] call T1AM_Fnc_ParseNumber;
@@ -38,6 +36,8 @@ private _GPSX = [_str, 5, true] call T1AM_Fnc_ParseNumber;
 _str = ctrlText (_dialog displayCtrl 47223);
 _str = [_str] call T1AM_Fnc_GridToPos;
 private _GPSY = [_str, 5, true] call T1AM_Fnc_ParseNumber;
+
+private _GPSZ = [ctrlText (_dialog displayCtrl 47221), 0, false] call T1AM_Fnc_ParseNumber;
 
 _str = ctrlText (_dialog displayCtrl 47239);
 _str = [_str] call T1AM_Fnc_GridToPos;

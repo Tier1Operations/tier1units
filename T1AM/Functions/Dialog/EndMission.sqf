@@ -2,6 +2,8 @@
 
 params ["_playMessage"];
 
+onMapSingleClick "";
+
 private _asset = T1AM_ControlledAssetLocal;
 
 [4, [], 2] spawn T1AM_Fnc_LoadingScreen;

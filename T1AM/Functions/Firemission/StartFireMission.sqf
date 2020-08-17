@@ -33,8 +33,11 @@ if (_lambsRunning) then {
 
 
 // Make AI unstuck. Due to various bugs, the AI can sometimes get stuck.
-// Giving them this command will get the AI unstuck.
-// It's important to run it twice to increase the chances of the AI getting unstuck.
+// Giving them these commands will get the AI unstuck.
+(gunner _tube) doWatch [0,0,0]; // Move barrel, so that the next commands don't get the chance to fire.
+sleep 1;
+_tube doWatch objNull;
+sleep 0.1;
 _tube doArtilleryFire [_pos, _warheadType, 0];
 sleep 0.15;
 _tube doWatch objNull;	// Stop firing before the unit manages to fire.
@@ -57,8 +60,8 @@ if (_waitingTime > 0) then {
 
 
 // Tell player if tube is inoperable. It can happen sometimes if the tube is deleted while waiting above this code.
-private _spotter = _sender;
 private _gunner = gunner _tube;
+private _spotter = _sender;
 if ([_tube, _gunner] call T1AM_Fnc_CheckAssetStatus) exitWith {
 	_amountAborted = (_asset getVariable ["T1AM_amountAborted", 0]) + 1;
 	_asset setVariable ["T1AM_amountAborted", _amountAborted];
@@ -193,6 +196,7 @@ private _chargesArrayLow = [];
 private _chargesArrayHigh = [];
 private _vel = 0;
 private _unguidedCEP = 0;
+private _origGunAngle = _gunAngle;	// Remember what the original angle was.
 
 private _isMK41 = if (_assetType == "MK41") then {true} else {false}; // Will use vanilla targeting.
 
@@ -577,6 +581,8 @@ while {_rounds > 0} do {
 		_checkFire = _array select 3;
 		private _obstructed = _bestCharge select 4;
 		
+		//DIAG_LOG format["SFM: %1 - AFTER FINDING BEST CHARGE - _bestCharge: %2", _tube, _bestCharge];
+		
 		if (!_abort and !_endMission and !_CheckFire) then {
 			
 			// If no angle was returned or the shot is obstructed, inform the player.
@@ -601,12 +607,12 @@ while {_rounds > 0} do {
 				// If the tube switched angles, inform the player.
 				if (_bestCharge select 3 != _gunAngle) then {
 					// Switch to new angle for the next shot.
+					//DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 4 - SWITCHED ANGLE - _bestCharge select 3: %2 - _gunAngle: %3", _tube, _bestCharge select 3, _gunAngle];
 					if (_gunAngle == "HIGH") then {_gunAngle = "LOW"} else {_gunAngle = "HIGH"};
 					if (_firstRound) then {
 						private _nr = _asset getVariable ["T1AM_amountSwitchedAngle", 0];
 						_asset setVariable ["T1AM_amountSwitchedAngle", _nr + 1];
 					};
-					//DIAG_LOG format["SFM: %1 - ABORT - IMPOSSIBLE SHOT 4 - SWITCHED ANGLE - Check1: %2 - Check2: %3", _tube, _bestCharge select 3, _gunAngle];
 				};
 			};
 		};
@@ -848,8 +854,10 @@ while {_rounds > 0} do {
 		
 		if (_outOfAmmo and count _tubes == 1) exitWith {};
 		
-		[_tubes, _asset, _bestCharge select 3, _spotter, _action] spawn {
-			params ["_tubes", "_asset", "_newAngle", "_spotter", "_action"];
+		//DIAG_LOG format["SFM: %1 - BEFORE SPLASH/ANGLE SPAWN -- _bestCharge select 3: %2", _tube, _bestCharge select 3];
+		
+		[_tube, _tubes, _asset, _origGunAngle, _spotter, _action] spawn {
+			params ["_tube","_tubes", "_asset", "_origGunAngle", "_spotter", "_action"];
 			private _lowestETA = 9999;
 			private _abort = false;
 			
@@ -874,12 +882,18 @@ while {_rounds > 0} do {
 			
 			private _nr = _asset getVariable ["T1AM_amountSwitchedAngle", 0];
 			if (_nr > 0) then {
+				//DIAG_LOG format["SFM: %1 - SWITCHED ANGLE TEXT -- _origGunAngle: %2", _tube, _origGunAngle];
+				
+				private _newAngle = "HIGH";
+				if (_origGunAngle == "HIGH") then {_newAngle = "LOW"};
+				
 				private _message = "";
 				if (_nr == 1) then {
-					_message = format ["%1 unit cannot get a firing solution with requested angle and will use %2 angle instead, out.", _nr, _newAngle];
+					_message = format ["1 unit cannot get a firing solution with requested angle and will use %1 angle instead, out.", _newAngle];
 				} else {
 					_message = format ["%1 units cannot get a firing solution with requested angle and will use %2 angle instead, out.", _nr, _newAngle];
 				};
+				
 				[_asset,_spotter,_message,-1] call T1AM_Fnc_SendComms;
 				sleep 2;
 			};

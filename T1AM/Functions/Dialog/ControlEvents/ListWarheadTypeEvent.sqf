@@ -31,6 +31,10 @@ switch true do {
 		(_dialog displayCtrl 47223) ctrlEnable true;
 		(_dialog displayCtrl 47221) ctrlShow true;
 		(_dialog displayCtrl 47221) ctrlEnable true;
+		if (T1AM_AllowMapClick) then {
+			(_dialog displayCtrl 47268) ctrlShow true;
+			(_dialog displayCtrl 47268) ctrlEnable true;
+		};
 		
 		
 		
@@ -130,6 +134,8 @@ switch true do {
 		(_dialog displayCtrl 47223) ctrlEnable false;
 		(_dialog displayCtrl 47221) ctrlShow false;
 		(_dialog displayCtrl 47221) ctrlEnable false;
+		(_dialog displayCtrl 47268) ctrlShow false;
+		(_dialog displayCtrl 47268) ctrlEnable false;
 		
 		
 		

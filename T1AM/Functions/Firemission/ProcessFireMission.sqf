@@ -162,9 +162,8 @@ if (_missionType == "SPOT") then {
 		private _yMap = parseNumber (_pos2 select 1);
 		_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 		_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
-		private _pos2 = [_xMap, _yMap, _GPSZAdjust];
 		
-		_message = format ["%1 this is %2. GPS grid: %3. Adjust fire. %4. %5. %6 fuze, out.",_playerCallsign,_assetCallsign,_pos2,_displayName,_ammoType,_fuse];
+		_message = format ["%1 this is %2. GPS grid: [%3-%4-%5]. Adjust fire. %6. %7. %8 fuze, out.",_playerCallsign,_assetCallsign,_xMap,_yMap,_GPSZAdjust,_displayName,_ammoType,_fuse];
 		_audio = 15;
 	};
 	
@@ -175,9 +174,8 @@ if (_missionType == "SPOT") then {
 			private _yMap = parseNumber (_pos2 select 1);
 			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
-			private _pos2 = [_xMap, _yMap, _GPSZAdjust];
 			
-			_message = format ["%1 this is %2. Adjust fire. %3. %4. %5 fuze. Aimpoint %6, out.",_playerCallsign,_assetCallsign,_displayName,_ammoType,_fuse,_pos2];
+			_message = format ["%1 this is %2. Adjust fire. %3. %4. %5 fuze. Aimpoint [%6-%7], out.",_playerCallsign,_assetCallsign,_displayName,_ammoType,_fuse,_xMap,_yMap];
 			_audio = 19;
 		};
 		case (1) : {
@@ -187,20 +185,19 @@ if (_missionType == "SPOT") then {
 			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
 			
-			private _adjustText = format ["Polar [%1,%2],", _xMap, _yMap];
-			if (T1AM_LastAdjustX > 0) then {_adjustText = _adjustText + " right " + str abs T1AM_LastAdjustX};
-			if (T1AM_LastAdjustX < 0) then {_adjustText = _adjustText + " left " + str abs T1AM_LastAdjustX};
-			if (T1AM_LastAdjustY > 0) then {_adjustText = _adjustText + " add " + str abs T1AM_LastAdjustY};
-			if (T1AM_LastAdjustY < 0) then {_adjustText = _adjustText + " drop " + str abs T1AM_LastAdjustY};
+			private _adjustText = format ["Polar [%1-%2]", _xMap, _yMap];
+			if (T1AM_LastAdjustX > 0) then {_adjustText = _adjustText + ", right " + str abs T1AM_LastAdjustX};
+			if (T1AM_LastAdjustX < 0) then {_adjustText = _adjustText + ", left " + str abs T1AM_LastAdjustX};
+			if (T1AM_LastAdjustY > 0) then {_adjustText = _adjustText + ", add " + str abs T1AM_LastAdjustY};
+			if (T1AM_LastAdjustY < 0) then {_adjustText = _adjustText + ", drop " + str abs T1AM_LastAdjustY};
 			
 			private _pos2 = [[_pos select 0, _pos select 1]] call T1AM_Fnc_PosToMapGrid;
 			private _xMap = parseNumber (_pos2 select 0);
 			private _yMap = parseNumber (_pos2 select 1);
 			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
-			private _pos2 = [_xMap, _yMap, _GPSZAdjust];
 			
-			_message = format ["%1 this is %2. %3. Adjust fire. %4. %5. %6 fuze. Aimpoint %7, out.",_playerCallsign,_assetCallsign,_adjustText,_displayName,_ammoType,_fuse,_pos2];
+			_message = format ["%1 this is %2. %3. Adjust fire. %4. %5. %6 fuze. Aimpoint [%7-%8], out.",_playerCallsign,_assetCallsign,_adjustText,_displayName,_ammoType,_fuse,_xMap,_yMap];
 			_audio = 21;
 		};
 		case (2) : {
@@ -216,7 +213,7 @@ if (_missionType == "SPOT") then {
 			_xMap2 = [_xMap2] call T1AM_Fnc_FormatCoordinates;
 			_yMap2 = [_yMap2] call T1AM_Fnc_FormatCoordinates;
 			
-			_message = format ["%1 this is %2. Impact grid [%3,%4], target [%5,%6]. Adjust fire. %7. %8. %9 fuze, out.",_playerCallsign,_assetCallsign,_xMap,_yMap,_xMap2,_yMap2,_displayName,_ammoType,_fuse];
+			_message = format ["%1 this is %2. Impact grid [%3-%4], target [%5-%6]. Adjust fire. %7. %8. %9 fuze, out.",_playerCallsign,_assetCallsign,_xMap,_yMap,_xMap2,_yMap2,_displayName,_ammoType,_fuse];
 			_audio = 17;
 		};
 	};
@@ -229,9 +226,8 @@ if (_missionType == "SPOT") then {
 		private _yMap = parseNumber (_pos2 select 1);
 		_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 		_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
-		private _pos2 = [_xMap, _yMap, _GPSZAdjust];
 		
-		_message = format ["%1 this is %2. GPS grid: %3. Fire for effect. %4x %5. %6, %7 rounds. %8 fuze, out.",_playerCallsign,_assetCallsign,_pos2,(count _tubes),_displayName,_ammoType,_rounds,_fuse];
+		_message = format ["%1 this is %2. GPS grid: [%3-%4-%5]. Fire for effect. %6x %7. %8, %9 rounds. %10 fuze, out.",_playerCallsign,_assetCallsign,_xMap,_yMap,_GPSZAdjust,(count _tubes),_displayName,_ammoType,_rounds,_fuse];
 		_audio = 16;
 	};
 	
@@ -257,9 +253,8 @@ if (_missionType == "SPOT") then {
 			private _yMap = parseNumber (_pos2 select 1);
 			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
-			private _pos2 = [_xMap, _yMap, _GPSZAdjust];
 			
-			_message = format ["%1 this is %2. Fire for effect. %3x %4. %5, %6 rounds. %7 fuze. %8. Aimpoint %9, out.",_playerCallsign,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_fuse,_sheafText,_pos2];
+			_message = format ["%1 this is %2. Fire for effect. %3x %4. %5, %6 rounds. %7 fuze. %8. Aimpoint [%9-%10], out.",_playerCallsign,_assetCallsign,(count _tubes),_displayName,_ammoType,_rounds,_fuse,_sheafText,_xMap,_yMap];
 			_audio = 20;
 		};
 		case (1) : {
@@ -269,20 +264,19 @@ if (_missionType == "SPOT") then {
 			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
 			
-			private _adjustText = format ["Polar [%1,%2],", _xMap, _yMap];
-			if (T1AM_LastAdjustX > 0) then {_adjustText = _adjustText + " right " + str abs T1AM_LastAdjustX};
-			if (T1AM_LastAdjustX < 0) then {_adjustText = _adjustText + " left " + str abs T1AM_LastAdjustX};
-			if (T1AM_LastAdjustY > 0) then {_adjustText = _adjustText + " add " + str abs T1AM_LastAdjustY};
-			if (T1AM_LastAdjustY < 0) then {_adjustText = _adjustText + " drop " + str abs T1AM_LastAdjustY};
+			private _adjustText = format ["Polar [%1-%2]", _xMap, _yMap];
+			if (T1AM_LastAdjustX > 0) then {_adjustText = _adjustText + ", right " + str abs T1AM_LastAdjustX};
+			if (T1AM_LastAdjustX < 0) then {_adjustText = _adjustText + ", left " + str abs T1AM_LastAdjustX};
+			if (T1AM_LastAdjustY > 0) then {_adjustText = _adjustText + ", add " + str abs T1AM_LastAdjustY};
+			if (T1AM_LastAdjustY < 0) then {_adjustText = _adjustText + ", drop " + str abs T1AM_LastAdjustY};
 			
 			private _pos2 = [[_pos select 0, _pos select 1]] call T1AM_Fnc_PosToMapGrid;
 			private _xMap = parseNumber (_pos2 select 0);
 			private _yMap = parseNumber (_pos2 select 1);
 			_xMap = [_xMap] call T1AM_Fnc_FormatCoordinates;
 			_yMap = [_yMap] call T1AM_Fnc_FormatCoordinates;
-			private _pos2 = [_xMap, _yMap, _GPSZAdjust];
 			
-			_message = format ["%1 this is %2. %3. Correct Fire For Effect. %4x %5. %6, %7 rounds. %8 fuze. %9. Aimpoint  %10, out.",_playerCallsign,_assetCallsign,_adjustText,(count _tubes),_displayName,_ammoType,_rounds,_fuse,_sheafText,_pos2];
+			_message = format ["%1 this is %2. %3. Correct Fire For Effect. %4x %5. %6, %7 rounds. %8 fuze. %9. Aimpoint [%10-%11], out.",_playerCallsign,_assetCallsign,_adjustText,(count _tubes),_displayName,_ammoType,_rounds,_fuse,_sheafText,_xMap,_yMap];
 			_audio = 22;
 		};
 		case (2) : {
@@ -298,7 +292,7 @@ if (_missionType == "SPOT") then {
 			_xMap2 = [_xMap2] call T1AM_Fnc_FormatCoordinates;
 			_yMap2 = [_yMap2] call T1AM_Fnc_FormatCoordinates;
 			
-			_message = format ["%1 this is %2. Impact grid [%3,%4], target [%5,%6]. Correct fire for effect. %7x %8. %9, %10 rounds. %11 fuze. %12, out.",_playerCallsign,_assetCallsign,_xMap,_yMap,_xMap2,_yMap2,(count _tubes),_displayName,_ammoType,_rounds,_fuse,_sheafText];
+			_message = format ["%1 this is %2. Impact grid [%3-%4], target [%5-%6]. Correct fire for effect. %7x %8. %9, %10 rounds. %11 fuze. %12, out.",_playerCallsign,_assetCallsign,_xMap,_yMap,_xMap2,_yMap2,(count _tubes),_displayName,_ammoType,_rounds,_fuse,_sheafText];
 			_audio = 18;
 		};
 	};

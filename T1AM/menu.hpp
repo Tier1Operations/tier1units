@@ -1272,6 +1272,18 @@ class T1AM_DialogControl
 			onKeyUp = "[2] call T1AM_Fnc_PlaySoundGUI; _this pushback 2; _this call T1AM_Fnc_EditAdjustGPSEvent";
 		};
 		
+		class T1AM_ButtonAdjustGPSMapclick: T1AM_RscButtonMenu
+		{
+			idc = 47268;
+			x = T1AM_COL + (T1AM_COLINC * 2);
+			y = T1AM_ROW + (T1AM_ROWINC * 10.8);
+			text = "M";
+			w = (T1AM_BUTTON_W * 0.21);
+			h = T1AM_BUTTON_H * 0.69;
+			onButtonClick = "[0] call T1AM_Fnc_PlaySoundGUI; [] spawn {[0] call T1AM_Fnc_CloseDisplays; sleep 0.2; call T1AM_Fnc_ButtonAdjustGPSMapclickEvent}";
+			tooltip = "Use map click to input GPS position coordinates.";
+		};
+		
 		class T1AM_ListWarheadType: T1AM_RscListBox 
 		{
 			idc = 47206;

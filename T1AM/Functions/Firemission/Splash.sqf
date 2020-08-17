@@ -7,7 +7,9 @@ private _sleepSplash = (_ETA - _sleepDesignate - 5) max 1;
 
 if (_sleepDesignate > 0) then {
 	sleep _sleepDesignate;
-	[_asset,_spotter,"Designate, over.",14] call T1AM_Fnc_SendComms;
+	if (_action == 1 or _action == 4) then {
+		[_asset,_spotter,"Designate, over.",14] call T1AM_Fnc_SendComms;
+	};
 };
 
 sleep _sleepSplash;

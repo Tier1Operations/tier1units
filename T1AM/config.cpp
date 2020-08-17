@@ -95,6 +95,7 @@ class CfgFunctions
 			class EditAimpointSpotterEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAimpointSpotterEvent.sqf"};
 			class EditAimpointPolarDirEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditAimpointPolarDirEvent.sqf"};
 			class EditSheafDirEvent {file = "T1AM\Functions\Dialog\ControlEvents\EditSheafDirEvent.sqf"};
+			class ButtonAdjustGPSMapclickEvent {file = "T1AM\Functions\Dialog\ControlEvents\ButtonAdjustGPSMapclickEvent.sqf"};
 		};
 		class Misc
 		{
@@ -396,175 +397,175 @@ class CfgSounds
 	class T1AM_Sounds_Beep
 	{
 		name = "T1AM_Sounds_Beep";
-		sound[] ={"\T1AM\Data\Sounds\Radio\Beep.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\Beep.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_CheckingFire
 	{
 		name = "T1AM_Sounds_CheckingFire";
-		sound[] ={"\T1AM\Data\Sounds\Radio\CheckingFire.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\CheckingFire.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_Designate
 	{
 		name = "T1AM_Sounds_Designate";
-		sound[] ={"\T1AM\Data\Sounds\Radio\Designate.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\Designate.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_EndOfMission
 	{
 		name = "T1AM_Sounds_EndOfMission";
-		sound[] ={"\T1AM\Data\Sounds\Radio\EndOfMission.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\EndOfMission.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_FireMissionRegistered
 	{
 		name = "T1AM_Sounds_FireMissionRegistered";
-		sound[] ={"\T1AM\Data\Sounds\Radio\FireMissionRegistered.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\FireMissionRegistered.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_HoldingFireImpossibleFiringSolution
 	{
 		name = "T1AM_Sounds_HoldingFireImpossibleFiringSolution";
-		sound[] ={"\T1AM\Data\Sounds\Radio\HoldingFireImpossibleFiringSolution.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\HoldingFireImpossibleFiringSolution.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_Mto10dGPSAdjustFire
 	{
 		name = "T1AM_Sounds_Mto10dGPSAdjustFire";
-		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dGPSAdjustFire.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dGPSAdjustFire.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_Mto10dGPSFFE
 	{
 		name = "T1AM_Sounds_Mto10dGPSFFE";
-		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dGPSFFE.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dGPSFFE.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_Mto10dImpactAdjustFire
 	{
 		name = "T1AM_Sounds_Mto10dImpactAdjustFire";
-		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dImpactAdjustFire.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dImpactAdjustFire.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_Mto10dImpactCorrectFFE
 	{
 		name = "T1AM_Sounds_Mto10dImpactCorrectFFE";
-		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dImpactCorrectFFE.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\Mto10dImpactCorrectFFE.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_MtoAdjustFire
 	{
 		name = "T1AM_Sounds_MtoAdjustFire";
-		sound[] ={"\T1AM\Data\Sounds\Radio\MtoAdjustFire.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\MtoAdjustFire.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_MtoFFE
 	{
 		name = "T1AM_Sounds_MtoFFE";
-		sound[] ={"\T1AM\Data\Sounds\Radio\MtoFFE.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\MtoFFE.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_MtoPolarAdjustFire
 	{
 		name = "T1AM_Sounds_MtoPolarAdjustFire";
-		sound[] ={"\T1AM\Data\Sounds\Radio\MtoPolarAdjustFire.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\MtoPolarAdjustFire.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_MtoPolarCorrectFFE
 	{
 		name = "T1AM_Sounds_MtoPolarCorrectFFE";
-		sound[] ={"\T1AM\Data\Sounds\Radio\MtoPolarCorrectFFE.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\MtoPolarCorrectFFE.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_ObserverNotResponding
 	{
 		name = "T1AM_Sounds_ObserverNotResponding";
-		sound[] ={"\T1AM\Data\Sounds\Radio\ObserverNotResponding.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\ObserverNotResponding.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_OutOfAmmoRoundsComplete
 	{
 		name = "T1AM_Sounds_OutOfAmmoRoundsComplete";
-		sound[] ={"\T1AM\Data\Sounds\Radio\OutOfAmmoRoundsComplete.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\OutOfAmmoRoundsComplete.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_OutOfRange
 	{
 		name = "T1AM_Sounds_OutOfRange";
-		sound[] ={"\T1AM\Data\Sounds\Radio\OutOfRange.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\OutOfRange.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_PreparingTakeAWhile
 	{
 		name = "T1AM_Sounds_PreparingTakeAWhile";
-		sound[] ={"\T1AM\Data\Sounds\Radio\PreparingTakeAWhile.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\PreparingTakeAWhile.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_RequestedAmmoNotAvailable
 	{
 		name = "T1AM_Sounds_RequestedAmmoNotAvailable";
-		sound[] ={"\T1AM\Data\Sounds\Radio\RequestedAmmoNotAvailable.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\RequestedAmmoNotAvailable.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_RequestedAmmoNotAvailable2
 	{
 		name = "T1AM_Sounds_RequestedAmmoNotAvailable2";
-		sound[] ={"\T1AM\Data\Sounds\Radio\RequestedAmmoNotAvailable2.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\RequestedAmmoNotAvailable2.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_RoundsComplete
 	{
 		name = "T1AM_Sounds_RoundsComplete";
-		sound[] ={"\T1AM\Data\Sounds\Radio\RoundsComplete.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\RoundsComplete.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_Shot
 	{
 		name = "T1AM_Sounds_Shot";
-		sound[] ={"\T1AM\Data\Sounds\Radio\Shot.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\Shot.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_ShotDesignate
 	{
 		name = "T1AM_Sounds_ShotDesignate";
-		sound[] ={"\T1AM\Data\Sounds\Radio\ShotDesignate.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\ShotDesignate.ogg",db+18,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_Splash
 	{
 		name = "T1AM_Sounds_Splash";
-		sound[] ={"\T1AM\Data\Sounds\Radio\Splash.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\Splash.ogg",db+17,1.0};
 		titles[] = {};
 	};
 	
 	class T1AM_Sounds_UnderMinimumRange
 	{
 		name = "T1AM_Sounds_UnderMinimumRange";
-		sound[] ={"\T1AM\Data\Sounds\Radio\UnderMinimumRange.ogg",db+15,1.0};
+		sound[] ={"\T1AM\Data\Sounds\Radio\UnderMinimumRange.ogg",db+17,1.0};
 		titles[] = {};
 	};
 };

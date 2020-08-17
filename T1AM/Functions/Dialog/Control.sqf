@@ -83,6 +83,8 @@ private _dialog = findDisplay 47200;
 (_dialog displayCtrl 47223) ctrlEnable false;
 (_dialog displayCtrl 47221) ctrlShow false;
 (_dialog displayCtrl 47221) ctrlEnable false;
+(_dialog displayCtrl 47268) ctrlShow false;
+(_dialog displayCtrl 47268) ctrlEnable false;
 
 
 

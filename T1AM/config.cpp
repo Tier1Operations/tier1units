@@ -905,12 +905,7 @@ class CfgAmmo
 		hit = 2000;
 		indirectHit = 400;
 		indirectHitRange = 25;
-		
-		ace_frag_classes[] = {"ace_frag_large_HD_T1AM_Copy","ace_frag_large_T1AM_Copy","ace_frag_huge_HD_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy","ace_frag_huge_T1AM_Copy"};
-		ace_frag_metal = 40000;
-		ace_frag_charge = 10000;
-		ace_frag_gurney_c = 2500;
-		ace_frag_gurney_k = "1/2";
+		ace_frag_enabled = 0;
 	};
 	
 	class Smoke_120mm_AMOS_White: SubmunitionBase

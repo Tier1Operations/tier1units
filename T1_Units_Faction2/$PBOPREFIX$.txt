@@ -1,0 +1,5 @@
+///<'T1_Units_Faction2_Desert.pbo' properties via Mikero's dos tools, dll version 6.44>///
+prefix=T1_Units_Faction2_Desert
+//Pbo Type is: Arma Addon
+//Sha: '5962EB02EB950A1449117DBC8C97753CC75DBA57'
+//////</properties>//////

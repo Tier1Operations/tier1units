@@ -11,7 +11,7 @@ class cfgPatches
 {
 	class T1_Units_Faction2_Desert
 	{
-		units[] = {"T1_Faction2_Mission_Maker","T1_Faction2_Platoon_Hitman","T1_Faction2_Platoon_Combat_Engineer","T1_Faction2_Platoon_Medic","T1_Faction2_Fireteam_Leader","T1_Faction2_Fireteam_AT","T1_Faction2_Fireteam_AR","T1_Faction2_Fireteam_CLS","T1_Faction2_MMG_Assist","T1_Faction2_MMG_Gunner","T1_Faction2_MAT_Assist","T1_Faction2_MAT_Gunner","T1_Faction2_Spotter","T1_Faction2_Sniper","T1_Faction2_Shadow_Leader","T1_Faction2_Shadow_AR","T1_Faction2_Shadow_DMR","T1_Faction2_Shadow_AT","T1_Faction2_Shadow_Saboteur","T1_Faction2_Shadow_CLS","T1_Faction2_Pilot","T1_Faction2_Crew_Commander","T1_Faction2_Crew_Engineer","T1_Faction2_Crew_Medic","T1_Faction2_Jackal_HMG_SF","T1_Faction2_Husky_HMG_Section","T1_Faction2_Husky_MG_Section","T1_Faction2_Husky_GMG_Section","T1_Faction2_AMV7_Marshall_IFV","T1_Faction2_FV510_Warrior_IFV","T1_Faction2_Merkava_MK_IV_MBT_IFV","T1_Faction2_Rooikat_120_UP","T1_Faction2_M1240_M240_SF","T1_Faction2_M1240_M2_SF","T1_Faction2_M1240_SF","T1_Faction2_section_ammobox_Desert","T1_Faction2_shadow_ammobox_Desert","T1_Faction2_FV510_Warrior_IFV_SF","T1_Faction2_Strider_Section"};
+		units[] = {"T1_Faction2_Desert_Mission_Maker","T1_Faction2_Desert_Platoon_Hitman","T1_Faction2_Desert_Platoon_Combat_Engineer","T1_Faction2_Desert_Platoon_Medic","T1_Faction2_Desert_Fireteam_Leader","T1_Faction2_Desert_Fireteam_AT","T1_Faction2_Desert_Fireteam_AR","T1_Faction2_Desert_Fireteam_CLS","T1_Faction2_Desert_MMG_Assist","T1_Faction2_Desert_MMG_Gunner","T1_Faction2_Desert_MAT_Assist","T1_Faction2_Desert_MAT_Gunner","T1_Faction2_Desert_Spotter","T1_Faction2_Desert_Sniper","T1_Faction2_Desert_Shadow_Leader","T1_Faction2_Desert_Shadow_AR","T1_Faction2_Desert_Shadow_DMR","T1_Faction2_Desert_Shadow_AT","T1_Faction2_Desert_Shadow_Saboteur","T1_Faction2_Desert_Shadow_CLS","T1_Faction2_Desert_Pilot","T1_Faction2_Desert_Crew_Commander","T1_Faction2_Desert_Crew_Engineer","T1_Faction2_Desert_Crew_Medic","T1_Faction2_Desert_Jackal_HMG_SF","T1_Faction2_Desert_Husky_HMG_Section","T1_Faction2_Desert_Husky_MG_Section","T1_Faction2_Desert_Husky_GMG_Section","T1_Faction2_Desert_AMV7_Marshall_IFV","T1_Faction2_Desert_FV510_Warrior_IFV","T1_Faction2_Desert_Merkava_MK_IV_MBT_IFV","T1_Faction2_Desert_Rooikat_120_UP","T1_Faction2_Desert_M1240_M240_SF","T1_Faction2_Desert_M1240_M2_SF","T1_Faction2_Desert_M1240_SF","T1_Faction2_Desert_section_ammobox_Desert","T1_Faction2_Desert_shadow_ammobox_Desert","T1_Faction2_Desert_FV510_Warrior_IFV_SF","T1_Faction2_Desert_Strider_Section"};
 		weapons[] = {"T1_SMG_01_F_muzzle_snds_acpoptic_Aco_smg","T1_hgun_Pistol_heavy_02_F","T1_arifle_SPAR_01_snd_F_acc_pointer_IRoptic_Holosight","T1_arifle_SPAR_01_GL_snd_F_acc_pointer_IRoptic_Holosight","T1_45KO_RPG32_beige_F","T1_lmg_03_F_acc_pointer_IRoptic_Holosight_blk_F","T1_MMG_02_sand_F_acc_pointer_IRoptic_Arcobipod_01_F_blk","T1_launch_MRAWS_sand_F","T1_arifle_SPAR_03_snd_F_muzzle_snds_B_snd_Facc_pointer_IRoptic_AMS_sndbipod_01_F_snd","T1_srifle_DMR_02_sniper_F_muzzle_snds_338_sandacc_pointer_IRoptic_LRPSbipod_01_F_snd","T1_hgun_Pistol_heavy_01_F_muzzle_snds_acpoptic_MRD_black","T1_arifle_MSBS65_sand_F_muzzle_snds_H_snd_Facc_pointer_IRoptic_Hamr","T1_LMG_Mk200_F_muzzle_snds_H_MG_blk_Facc_pointer_IRoptic_Hamrbipod_01_F_blk","T1_arifle_SPAR_03_snd_F_muzzle_snds_B_snd_Foptic_AMS_sndbipod_01_F_snd","T1_arifle_MSBS65_GL_sand_F_muzzle_snds_H_snd_Facc_pointer_IRoptic_Hamr","T1_arifle_MSBS65_Mark_sand_F_muzzle_snds_H_snd_Facc_pointer_IRoptic_Hamr","T1_hgun_PDW2000_F_optic_Aco_smg","T1_arifle_SPAR_01_blk_F_acc_pointer_IRoptic_Holosight_blk_F"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"ace_hearing","ace_microdagr","A3_Weapons_F_Enoch","acre_sys_prc343","ace_medical_treatment","acre_sys_prc117f","A3_Weapons_F","A3_Drones_F_Weapons_F_Gamma_Items","A3_Weapons_F_Exp","A3_Weapons_F_SMGs_SMG_01","A3_Weapons_F_Pistols_Pistol_Heavy_02","A3_Characters_F","A3_Characters_F_Enoch_Vests","T1_Units_Faction1","ace_maptools","ace_attach","ace_captives","ace_flashlights","A3_Weapons_F_Mark","A3_Weapons_F_Exp_Rifles_SPAR_01","acre_sys_prc152","ace_explosives","A3_Weapons_F_Items","ace_vector","A3_Aegis_Characters_F_Aegis_Headgear","A3_Weapons_F_Exp_Machineguns_LMG_03","A3_Weapons_F_Mark_Machineguns_MMG_02","A3_Weapons_F_Tank_Launchers_MRAWS","ace_rangecard","A3_Weapons_F_Exp_Rifles_SPAR_03","A3_Weapons_F_Mark_LongRangeRifles_DMR_02","A3_Weapons_F_Enoch_Pistols_Pistol_Heavy_01","ace_mx2a","A3_Weapons_F_Enoch_Rifles_MSBS","T1_Units_Faction1_SF","A3_Weapons_F_Machineguns_M200","A3_Weapons_F_SMGs_Pdw2000","T1_Units_Faction1_Air","A3_Characters_F_Exp_Vests","T1_Units_Faction1_Armor"};
@@ -406,7 +406,7 @@ class cfgVehicles
 	class rhsusf_m1240a1_m2_usmc_d;
 	class rhsusf_m1240a1_usmc_d;
 
-	class T1_Faction2_Mission_Maker: B_Soldier_F
+	class T1_Faction2_Desert_Mission_Maker: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -417,6 +417,7 @@ class cfgVehicles
 		canDeactivateMines = 1;
 		engineer = 1;
 		attendant = 1;
+		T1_NoMedicIcon = 1;
 		weapons[] = {"Laserdesignator","T1_SMG_01_F_muzzle_snds_acpoptic_Aco_smg","T1_hgun_Pistol_heavy_02_F","Put","Throw"};
 		respawnWeapons[] = {"Laserdesignator","T1_SMG_01_F_muzzle_snds_acpoptic_Aco_smg","T1_hgun_Pistol_heavy_02_F","Put","Throw"};
 		items[] = {"ACE_EarPlugs","ACE_microDAGR","ACRE_PRC343_ID_1"};
@@ -425,9 +426,9 @@ class cfgVehicles
 		respawnMagazines[] = {"6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","6Rnd_45ACP_Cylinder","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01","Laserbatteries","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","B_UavTerminal","Laserdesignator","H_Beret_Colonel","V_CarrierRigKBT_01_Olive_F","G_Tactical_Black"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","B_UavTerminal","Laserdesignator","H_Beret_Colonel","V_CarrierRigKBT_01_Olive_F","G_Tactical_Black"};
-		backpack = "T1_Faction2_Platoon_Hitman_pack";
+		backpack = "T1_Faction2_Desert_Platoon_Hitman_pack";
 	};
-	class T1_Faction2_Platoon_Hitman: B_Soldier_F
+	class T1_Faction2_Desert_Platoon_Hitman: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -443,9 +444,9 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","HandGrenade","30Rnd_556x45_Stanag_Sand_red","30Rnd_556x45_Stanag_Sand_red","30Rnd_556x45_Stanag_Sand_red","30Rnd_556x45_Stanag_Sand_red","30Rnd_556x45_Stanag_Sand_red","30Rnd_556x45_Stanag_Sand_red","30Rnd_556x45_Stanag_Sand_red","30Rnd_556x45_Stanag_Sand_red","30Rnd_556x45_Stanag_Sand_red","Laserbatteries"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator_03","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator_03","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Platoon_Hitman_pack";
+		backpack = "T1_Faction2_Desert_Platoon_Hitman_pack";
 	};
-	class T1_Faction2_Platoon_Combat_Engineer: B_Soldier_F
+	class T1_Faction2_Desert_Platoon_Combat_Engineer: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -463,9 +464,9 @@ class cfgVehicles
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_snakeskin","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_snakeskin","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Platoon_Combat_Engineer_pack";
+		backpack = "T1_Faction2_Desert_Platoon_Combat_Engineer_pack";
 	};
-	class T1_Faction2_Platoon_Medic: B_Soldier_F
+	class T1_Faction2_Desert_Platoon_Medic: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -482,9 +483,9 @@ class cfgVehicles
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Platoon_Medic_pack";
+		backpack = "T1_Faction2_Desert_Platoon_Medic_pack";
 	};
-	class T1_Faction2_Fireteam_Leader: B_Soldier_F
+	class T1_Faction2_Desert_Fireteam_Leader: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -499,9 +500,9 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Fireteam_Leader_pack";
+		backpack = "T1_Faction2_Desert_Fireteam_Leader_pack";
 	};
-	class T1_Faction2_Fireteam_AT: B_Soldier_F
+	class T1_Faction2_Desert_Fireteam_AT: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -516,9 +517,9 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade","RPG32_F","RPG32_F"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Fireteam_AT_pack";
+		backpack = "T1_Faction2_Desert_Fireteam_AT_pack";
 	};
-	class T1_Faction2_Fireteam_AR: B_Soldier_F
+	class T1_Faction2_Desert_Fireteam_AR: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -533,9 +534,9 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","HandGrenade","200Rnd_556x45_Box_Tracer_Red_F","200Rnd_556x45_Box_Tracer_Red_F","200Rnd_556x45_Box_Tracer_Red_F"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Fireteam_AR_pack";
+		backpack = "T1_Faction2_Desert_Fireteam_AR_pack";
 	};
-	class T1_Faction2_Fireteam_CLS: B_Soldier_F
+	class T1_Faction2_Desert_Fireteam_CLS: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -551,9 +552,9 @@ class cfgVehicles
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade","HandGrenade"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Fireteam_CLS_pack";
+		backpack = "T1_Faction2_Desert_Fireteam_CLS_pack";
 	};
-	class T1_Faction2_MMG_Assist: B_Soldier_F
+	class T1_Faction2_Desert_MMG_Assist: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -569,9 +570,9 @@ class cfgVehicles
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","SmokeShellBlue","Laserbatteries"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_MMG_Assist_pack";
+		backpack = "T1_Faction2_Desert_MMG_Assist_pack";
 	};
-	class T1_Faction2_MMG_Gunner: B_Soldier_F
+	class T1_Faction2_Desert_MMG_Gunner: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -587,9 +588,9 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_MMG_Gunner_pack";
+		backpack = "T1_Faction2_Desert_MMG_Gunner_pack";
 	};
-	class T1_Faction2_MAT_Assist: B_Soldier_F
+	class T1_Faction2_Desert_MAT_Assist: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -605,9 +606,9 @@ class cfgVehicles
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","Laserbatteries"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_MAT_Assist_pack";
+		backpack = "T1_Faction2_Desert_MAT_Assist_pack";
 	};
-	class T1_Faction2_MAT_Gunner: B_Soldier_F
+	class T1_Faction2_Desert_MAT_Gunner: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -623,9 +624,9 @@ class cfgVehicles
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","MRAWS_HE_F","MRAWS_HE_F","MRAWS_HEAT_F","MRAWS_HEAT_F"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_MAT_Gunner_pack";
+		backpack = "T1_Faction2_Desert_MAT_Gunner_pack";
 	};
-	class T1_Faction2_Spotter: B_Soldier_F
+	class T1_Faction2_Desert_Spotter: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -642,9 +643,9 @@ class cfgVehicles
 		respawnMagazines[] = {"ACE_20Rnd_762x51_M993_AP_Mag","ACE_20Rnd_762x51_M993_AP_Mag","ACE_20Rnd_762x51_M993_AP_Mag","ACE_20Rnd_762x51_M993_AP_Mag","ACE_20Rnd_762x51_M993_AP_Mag","ACE_20Rnd_762x51_M993_AP_Mag","ACE_20Rnd_762x51_M993_AP_Mag","SmokeShellBlue","SmokeShellBlue","ACE_20Rnd_762x51_M993_AP_Mag","ACE_20Rnd_762x51_M993_AP_Mag","ACE_20Rnd_762x51_M993_AP_Mag","ACE_20Rnd_762x51_M993_AP_Mag","Laserbatteries"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator_03","H_HelmetB_light_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator_03","H_HelmetB_light_sand","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Spotter_pack";
+		backpack = "T1_Faction2_Desert_Spotter_pack";
 	};
-	class T1_Faction2_Sniper: B_Soldier_F
+	class T1_Faction2_Desert_Sniper: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -661,15 +662,16 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","11Rnd_45ACP_Mag","11Rnd_45ACP_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag","ACE_10Rnd_338_API526_Mag"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetB_light_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetB_light_sand","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Sniper_pack";
+		backpack = "T1_Faction2_Desert_Sniper_pack";
 	};
-	class T1_Faction2_Shadow_Leader: B_Soldier_F
+	class T1_Faction2_Desert_Shadow_Leader: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
 		scope = 2;
 		t1_DutyMod = 0.965;
 		attendant = 1;
+		T1_NoMedicIcon = 1;
 		displayName = "Shadow Leader";
 		uniformClass = "U_B_CombatUniform_mcam";
 		weapons[] = {"ACE_Vector","ACE_MX2A","T1_arifle_MSBS65_sand_F_muzzle_snds_H_snd_Facc_pointer_IRoptic_Hamr","Put","Throw"};
@@ -680,15 +682,16 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Shadow_Leader_pack";
+		backpack = "T1_Faction2_Desert_Shadow_Leader_pack";
 	};
-	class T1_Faction2_Shadow_AR: B_Soldier_F
+	class T1_Faction2_Desert_Shadow_AR: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
 		scope = 2;
 		t1_DutyMod = 0.965;
 		attendant = 1;
+		T1_NoMedicIcon = 1;
 		displayName = "Shadow AR";
 		uniformClass = "U_B_CombatUniform_mcam_tshirt";
 		weapons[] = {"ACE_Vector","T1_LMG_Mk200_F_muzzle_snds_H_MG_blk_Facc_pointer_IRoptic_Hamrbipod_01_F_blk","Put","Throw"};
@@ -699,15 +702,16 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellRed","SmokeShellBlue","SmokeShellBlue","HandGrenade","HandGrenade","SmokeShellBlue","200Rnd_65x39_cased_Box_Tracer","200Rnd_65x39_cased_Box_Tracer","200Rnd_65x39_cased_Box_Tracer","200Rnd_65x39_cased_Box_Tracer","200Rnd_65x39_cased_Box_Tracer"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Shadow_AR_pack";
+		backpack = "T1_Faction2_Desert_Shadow_AR_pack";
 	};
-	class T1_Faction2_Shadow_DMR: B_Soldier_F
+	class T1_Faction2_Desert_Shadow_DMR: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
 		scope = 2;
 		t1_DutyMod = 0.965;
 		attendant = 1;
+		T1_NoMedicIcon = 1;
 		displayName = "Shadow DMR";
 		uniformClass = "U_B_CombatUniform_mcam";
 		weapons[] = {"ACE_Vector","T1_arifle_SPAR_03_snd_F_muzzle_snds_B_snd_Foptic_AMS_sndbipod_01_F_snd","Put","Throw"};
@@ -718,15 +722,16 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","HandGrenade","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","RPG32_F","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag","20Rnd_762x51_Mag"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_snakeskin","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_snakeskin","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Shadow_DMR_pack";
+		backpack = "T1_Faction2_Desert_Shadow_DMR_pack";
 	};
-	class T1_Faction2_Shadow_AT: B_Soldier_F
+	class T1_Faction2_Desert_Shadow_AT: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
 		scope = 2;
 		t1_DutyMod = 0.965;
 		attendant = 1;
+		T1_NoMedicIcon = 1;
 		displayName = "Shadow AT";
 		uniformClass = "U_B_CombatUniform_mcam";
 		weapons[] = {"ACE_Vector","T1_arifle_MSBS65_GL_sand_F_muzzle_snds_H_snd_Facc_pointer_IRoptic_Hamr","T1_45KO_RPG32_beige_F","Put","Throw"};
@@ -737,9 +742,9 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","RPG32_F"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Shadow_AT_pack";
+		backpack = "T1_Faction2_Desert_Shadow_AT_pack";
 	};
-	class T1_Faction2_Shadow_Saboteur: B_Soldier_F
+	class T1_Faction2_Desert_Shadow_Saboteur: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -748,6 +753,7 @@ class cfgVehicles
 		canDeactivateMines = 1;
 		engineer = 1;
 		attendant = 1;
+		T1_NoMedicIcon = 1;
 		displayName = "Shadow Saboteur";
 		uniformClass = "U_B_CombatUniform_mcam";
 		weapons[] = {"ACE_Vector","T1_arifle_MSBS65_sand_F_muzzle_snds_H_snd_Facc_pointer_IRoptic_Hamr","Put","Throw"};
@@ -758,9 +764,9 @@ class cfgVehicles
 		respawnMagazines[] = {"HandGrenade","SmokeShellRed","SmokeShellBlue","SmokeShellBlue","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_snakeskin","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_snakeskin","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Shadow_Saboteur_pack";
+		backpack = "T1_Faction2_Desert_Shadow_Saboteur_pack";
 	};
-	class T1_Faction2_Shadow_CLS: B_Soldier_F
+	class T1_Faction2_Desert_Shadow_CLS: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -777,15 +783,16 @@ class cfgVehicles
 		respawnMagazines[] = {"HandGrenade","HandGrenade","SmokeShellBlue","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","Laserbatteries"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		backpack = "T1_Faction2_Shadow_CLS_pack";
+		backpack = "T1_Faction2_Desert_Shadow_CLS_pack";
 	};
-	class T1_Faction2_Pilot: B_Soldier_F
+	class T1_Faction2_Desert_Pilot: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
 		scope = 2;
 		engineer = 1;
 		attendant = 1;
+		T1_NoMedicIcon = 1;
 		displayName = "Pilot";
 		uniformClass = "U_B_CombatUniform_mcam_vest";
 		weapons[] = {"ACE_Vector","T1_hgun_PDW2000_F_optic_Aco_smg","Put","Throw"};
@@ -796,14 +803,15 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag","30Rnd_9x21_Mag"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_PilotHelmetHeli_B","V_CarrierRigKBT_01_Olive_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_PilotHelmetHeli_B","V_CarrierRigKBT_01_Olive_F"};
-		backpack = "T1_Faction2_Pilot_pack";
+		backpack = "T1_Faction2_Desert_Pilot_pack";
 	};
-	class T1_Faction2_Crew_Commander: B_Soldier_F
+	class T1_Faction2_Desert_Crew_Commander: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
 		scope = 2;
 		attendant = 1;
+		T1_NoMedicIcon = 1;
 		displayName = "Crew Commander";
 		uniformClass = "U_B_CombatUniform_mcam_tshirt";
 		weapons[] = {"ACE_Vector","T1_arifle_SPAR_01_blk_F_acc_pointer_IRoptic_Holosight_blk_F","Put","Throw"};
@@ -814,9 +822,9 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_B","V_TacChestrig_grn_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_B","V_TacChestrig_grn_F"};
-		backpack = "T1_Faction2_Crew_Commander_pack";
+		backpack = "T1_Faction2_Desert_Crew_Commander_pack";
 	};
-	class T1_Faction2_Crew_Engineer: B_Soldier_F
+	class T1_Faction2_Desert_Crew_Engineer: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -832,9 +840,9 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_B","V_TacChestrig_grn_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_B","V_TacChestrig_grn_F"};
-		backpack = "T1_Faction2_Crew_Engineer_pack";
+		backpack = "T1_Faction2_Desert_Crew_Engineer_pack";
 	};
-	class T1_Faction2_Crew_Medic: B_Soldier_F
+	class T1_Faction2_Desert_Crew_Medic: B_Soldier_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -850,9 +858,9 @@ class cfgVehicles
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade"};
 		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_B","V_TacChestrig_grn_F"};
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_B","V_TacChestrig_grn_F"};
-		backpack = "T1_Faction2_Crew_Medic_pack";
+		backpack = "T1_Faction2_Desert_Crew_Medic_pack";
 	};
-	class T1_Faction2_Jackal_HMG_SF: UK3CB_BAF_Jackal2_L111A1_D
+	class T1_Faction2_Desert_Jackal_HMG_SF: UK3CB_BAF_Jackal2_L111A1_D
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -865,8 +873,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 Jackal HMG - SF";
 		hiddenSelectionsTextures[] = {"uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_coyote_jackal\data\jackal_base_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_coyote_jackal\data\jackal_mount_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_coyote_jackal\data\jackal_adds_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_coyote_jackal\data\jackal_bar_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_coyote_jackal\data\number1.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_coyote_jackal\data\number0.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_coyote_jackal\data\number1.paa"};
-		crew = "T1_Faction2_Shadow_Leader";
-		typicalCargo[] = {"T1_Faction2_Shadow_Leader"};
+		crew = "T1_Faction2_Desert_Shadow_Leader";
+		typicalCargo[] = {"T1_Faction2_Desert_Shadow_Leader"};
 		class TransportMagazines
 		{
 			class _xx_UK3CB_BAF_762_100Rnd_T
@@ -1020,7 +1028,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_Husky_HMG_Section: UK3CB_BAF_Husky_Passenger_HMG_Sand
+	class T1_Faction2_Desert_Husky_HMG_Section: UK3CB_BAF_Husky_Passenger_HMG_Sand
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -1033,8 +1041,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 Husky HMG - Section";
 		hiddenSelectionsTextures[] = {"uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\number2_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\number0_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskycab_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyfrontend_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskymisc_heavy_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyrearend_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyunderside_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskytyre_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskydecals_sand_ca.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyseats_sand_co.paa"};
-		crew = "T1_Faction2_Fireteam_Leader";
-		typicalCargo[] = {"T1_Faction2_Fireteam_Leader"};
+		crew = "T1_Faction2_Desert_Fireteam_Leader";
+		typicalCargo[] = {"T1_Faction2_Desert_Fireteam_Leader"};
 		class TransportMagazines
 		{
 			class _xx_UK3CB_BAF_127_100Rnd
@@ -1158,7 +1166,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_Husky_MG_Section: UK3CB_BAF_Husky_Passenger_GPMG_Sand
+	class T1_Faction2_Desert_Husky_MG_Section: UK3CB_BAF_Husky_Passenger_GPMG_Sand
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -1171,8 +1179,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 Husky MG - Section";
 		hiddenSelectionsTextures[] = {"uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\number3_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\number0_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskycab_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyfrontend_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskymisc_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyrearend_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyunderside_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskytyre_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskydecals_sand_ca.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyseats_sand_co.paa"};
-		crew = "T1_Faction2_Fireteam_Leader";
-		typicalCargo[] = {"T1_Faction2_Fireteam_Leader"};
+		crew = "T1_Faction2_Desert_Fireteam_Leader";
+		typicalCargo[] = {"T1_Faction2_Desert_Fireteam_Leader"};
 		class TransportMagazines
 		{
 			class _xx_UK3CB_BAF_762_100Rnd_T
@@ -1296,7 +1304,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_Husky_GMG_Section: UK3CB_BAF_Husky_Passenger_GMG_Sand
+	class T1_Faction2_Desert_Husky_GMG_Section: UK3CB_BAF_Husky_Passenger_GMG_Sand
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -1309,8 +1317,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 Husky GMG - Section";
 		hiddenSelectionsTextures[] = {"uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\number4_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\number0_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskycab_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyfrontend_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskymisc_heavy_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyrearend_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyunderside_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskytyre_sand_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskydecals_sand_ca.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_husky\data\huskyseats_sand_co.paa"};
-		crew = "T1_Faction2_Fireteam_Leader";
-		typicalCargo[] = {"T1_Faction2_Fireteam_Leader"};
+		crew = "T1_Faction2_Desert_Fireteam_Leader";
+		typicalCargo[] = {"T1_Faction2_Desert_Fireteam_Leader"};
 		class TransportMagazines
 		{
 			class _xx_UK3CB_BAF_32Rnd_40mm_G_Box
@@ -1434,7 +1442,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_AMV7_Marshall_IFV: B_APC_Wheeled_01_cannon_v2_F
+	class T1_Faction2_Desert_AMV7_Marshall_IFV: B_APC_Wheeled_01_cannon_v2_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -1447,8 +1455,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 Marshall - IFV Section";
 		hiddenSelectionsTextures[] = {"a3\armor_f_beta\apc_wheeled_01\data\apc_wheeled_01_base_co.paa","a3\armor_f_beta\apc_wheeled_01\data\apc_wheeled_01_adds_co.paa","a3\armor_f_beta\apc_wheeled_01\data\apc_wheeled_01_tows_co.paa","a3\armor_f\data\camonet_nato_desert_co.paa","a3\armor_f\data\cage_sand_co.paa"};
-		crew = "T1_Faction2_Crew_Commander";
-		typicalCargo[] = {"T1_Faction2_Crew_Commander"};
+		crew = "T1_Faction2_Desert_Crew_Commander";
+		typicalCargo[] = {"T1_Faction2_Desert_Crew_Commander"};
 		class TransportMagazines
 		{
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag
@@ -1567,7 +1575,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_FV510_Warrior_IFV: UK3CB_BAF_Warrior_A3_D_Cage_Camo
+	class T1_Faction2_Desert_FV510_Warrior_IFV: UK3CB_BAF_Warrior_A3_D_Cage_Camo
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -1580,8 +1588,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 Warrior - IFV Section";
 		hiddenSelectionsTextures[] = {"uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_warrior_a3\data\apc_tracked_03_ext_baf_desert_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_warrior_a3\data\apc_tracked_03_ext2_baf_desert_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_warrior_a3\data\camonet_baf_desert_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_warrior_a3\data\cage_baf_desert_co.paa"};
-		crew = "T1_Faction2_Crew_Commander";
-		typicalCargo[] = {"T1_Faction2_Crew_Commander"};
+		crew = "T1_Faction2_Desert_Crew_Commander";
+		typicalCargo[] = {"T1_Faction2_Desert_Crew_Commander"};
 		class TransportMagazines
 		{
 			class _xx_UK3CB_BAF_6Rnd_30mm_L21A1_APDS
@@ -1713,7 +1721,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_FV510_Warrior_IFV_SF: UK3CB_BAF_Warrior_A3_D_Cage_Camo
+	class T1_Faction2_Desert_FV510_Warrior_IFV_SF: UK3CB_BAF_Warrior_A3_D_Cage_Camo
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -1726,8 +1734,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 Warrior - IFV SF";
 		hiddenSelectionsTextures[] = {"uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_warrior_a3\data\apc_tracked_03_ext_baf_desert_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_warrior_a3\data\apc_tracked_03_ext2_baf_desert_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_warrior_a3\data\camonet_baf_desert_co.paa","uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_warrior_a3\data\cage_baf_desert_co.paa"};
-		crew = "T1_Faction2_Crew_Commander";
-		typicalCargo[] = {"T1_Faction2_Crew_Commander"};
+		crew = "T1_Faction2_Desert_Crew_Commander";
+		typicalCargo[] = {"T1_Faction2_Desert_Crew_Commander"};
 		class TransportMagazines
 		{
 			class _xx_UK3CB_BAF_6Rnd_30mm_L21A1_APDS
@@ -1884,7 +1892,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_Merkava_MK_IV_MBT_IFV: B_MBT_01_TUSK_F
+	class T1_Faction2_Desert_Merkava_MK_IV_MBT_IFV: B_MBT_01_TUSK_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -1897,8 +1905,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 Merkava - MBT / IFV SF";
 		hiddenSelectionsTextures[] = {"a3\armor_f_gamma\mbt_01\data\mbt_01_body_co.paa","a3\armor_f_gamma\mbt_01\data\mbt_01_tow_co.paa","a3\armor_f_epc\mbt_01\data\mbt_addons_co.paa","a3\armor_f\data\camonet_nato_desert_co.paa"};
-		crew = "T1_Faction2_Crew_Commander";
-		typicalCargo[] = {"T1_Faction2_Crew_Commander"};
+		crew = "T1_Faction2_Desert_Crew_Commander";
+		typicalCargo[] = {"T1_Faction2_Desert_Crew_Commander"};
 		class TransportMagazines
 		{
 			class _xx_30Rnd_65x39_caseless_msbs_mag
@@ -2042,7 +2050,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_Rooikat_120_UP: B_AFV_Wheeled_01_up_cannon_F
+	class T1_Faction2_Desert_Rooikat_120_UP: B_AFV_Wheeled_01_up_cannon_F
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -2055,8 +2063,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 Rooikat 120 UP";
 		hiddenSelectionsTextures[] = {"a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext1_co.paa","a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext2_co.paa","a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_wheel_co.paa","a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_sand_co.paa","a3\armor_f_tank\afv_wheeled_01\data\afv_commander_tow_sand_co.paa","a3\armor_f\data\camonet_nato_desert_co.paa","a3\armor_f_tank\afv_wheeled_01\data\afv_wheeled_01_ext3_sand_co.paa"};
-		crew = "T1_Faction2_Crew_Commander";
-		typicalCargo[] = {"T1_Faction2_Crew_Commander"};
+		crew = "T1_Faction2_Desert_Crew_Commander";
+		typicalCargo[] = {"T1_Faction2_Desert_Crew_Commander"};
 		class TransportMagazines
 		{
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag
@@ -2138,7 +2146,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_M1240_M240_SF: rhsusf_m1240a1_m240_usmc_d
+	class T1_Faction2_Desert_M1240_M240_SF: rhsusf_m1240a1_m240_usmc_d
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -2151,8 +2159,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 M1240 M240 - SF";
 		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_matv\data\rhsusf_matv_ext_co.paa","rhsusf\addons\rhsusf_matv\data\rhsusf_matv_wheel_co.paa","rhsusf\addons\rhsusf_rg33l\data\rg33_turretd_co.paa","rhsusf\addons\rhsusf_matv\data\rhsusf_matv_decal_ca.paa","rhsusf\addons\rhsusf_rg33l\data\rhsusf_camonet_des_co.paa","rhsusf\addons\rhsusf_hmmwv\textures\mk64mount_d_co.paa","rhsusf\addons\rhsusf_caiman\data\m153_co.paa","rhsusf\addons\rhsusf_matv\data\rhsusf_matv_sof_d_co.paa","","a3\map_altis\data\picturemap_ca.paa"};
-		crew = "T1_Faction2_Shadow_Leader";
-		typicalCargo[] = {"T1_Faction2_Shadow_Leader"};
+		crew = "T1_Faction2_Desert_Shadow_Leader";
+		typicalCargo[] = {"T1_Faction2_Desert_Shadow_Leader"};
 		class TransportMagazines
 		{
 			class _xx_30Rnd_65x39_caseless_msbs_mag
@@ -2296,7 +2304,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_M1240_M2_SF: rhsusf_m1240a1_m2_usmc_d
+	class T1_Faction2_Desert_M1240_M2_SF: rhsusf_m1240a1_m2_usmc_d
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -2309,8 +2317,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 M1240 M2 - SF";
 		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_matv\data\rhsusf_matv_ext_co.paa","rhsusf\addons\rhsusf_matv\data\rhsusf_matv_wheel_co.paa","rhsusf\addons\rhsusf_rg33l\data\rg33_turretd_co.paa","rhsusf\addons\rhsusf_matv\data\rhsusf_matv_decal_ca.paa","rhsusf\addons\rhsusf_rg33l\data\rhsusf_camonet_des_co.paa","rhsusf\addons\rhsusf_hmmwv\textures\mk64mount_d_co.paa","rhsusf\addons\rhsusf_caiman\data\m153_co.paa","rhsusf\addons\rhsusf_matv\data\rhsusf_matv_sof_d_co.paa","","a3\map_altis\data\picturemap_ca.paa"};
-		crew = "T1_Faction2_Shadow_Leader";
-		typicalCargo[] = {"T1_Faction2_Shadow_Leader"};
+		crew = "T1_Faction2_Desert_Shadow_Leader";
+		typicalCargo[] = {"T1_Faction2_Desert_Shadow_Leader"};
 		class TransportMagazines
 		{
 			class _xx_30Rnd_65x39_caseless_msbs_mag
@@ -2454,7 +2462,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_M1240_SF: rhsusf_m1240a1_usmc_d
+	class T1_Faction2_Desert_M1240_SF: rhsusf_m1240a1_usmc_d
 	{
 		faction = "T1_Units_Faction2_Desert";
 		side = 1;
@@ -2467,8 +2475,8 @@ class cfgVehicles
 		reportOwnPosition = 1;
 		displayName = "T1 M1240 - SF";
 		hiddenSelectionsTextures[] = {"rhsusf\addons\rhsusf_matv\data\rhsusf_matv_ext_co.paa","rhsusf\addons\rhsusf_matv\data\rhsusf_matv_wheel_co.paa","rhsusf\addons\rhsusf_rg33l\data\rg33_turretd_co.paa","rhsusf\addons\rhsusf_matv\data\rhsusf_matv_decal_ca.paa","rhsusf\addons\rhsusf_rg33l\data\rhsusf_camonet_des_co.paa","rhsusf\addons\rhsusf_hmmwv\textures\mk64mount_d_co.paa","rhsusf\addons\rhsusf_caiman\data\m153_co.paa","rhsusf\addons\rhsusf_matv\data\rhsusf_matv_sof_d_co.paa","","a3\map_altis\data\picturemap_ca.paa"};
-		crew = "T1_Faction2_Shadow_Leader";
-		typicalCargo[] = {"T1_Faction2_Shadow_Leader"};
+		crew = "T1_Faction2_Desert_Shadow_Leader";
+		typicalCargo[] = {"T1_Faction2_Desert_Shadow_Leader"};
 		class TransportMagazines
 		{
 			class _xx_30Rnd_65x39_caseless_msbs_mag
@@ -2613,7 +2621,7 @@ class cfgVehicles
 		};
 	};
 
-  class T1_Faction2_Strider_Section: B_A_MRAP_03_F
+  class T1_Faction2_Desert_Strider_Section: B_A_MRAP_03_F
   {
     faction="T1_Units_Faction2_Desert";
     side=1;
@@ -2626,8 +2634,8 @@ class cfgVehicles
 	reportOwnPosition = 1;
     displayName="T1 Strider - Section";
     hiddenSelectionsTextures[]={"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa","a3\data_f\vehicles\turret_co.paa"};
-    crew="T1_Faction2_Fireteam_Leader";
-    typicalCargo[]={"T1_Faction2_Fireteam_Leader"};
+    crew="T1_Faction2_Desert_Fireteam_Leader";
+    typicalCargo[]={"T1_Faction2_Desert_Fireteam_Leader"};
     class TransportMagazines
 		{
 			class _xx_ACE_30Rnd_556x45_Stanag_Mk318_mag
@@ -2749,7 +2757,7 @@ class cfgVehicles
 	
 	class NATO_Box_Base;
 	class B_supplyCrate_F;
-	class T1_Faction2_section_ammobox_Desert: B_supplyCrate_F
+	class T1_Faction2_Desert_section_ammobox_Desert: B_supplyCrate_F
 	{
 		vehicleClass = "Ammo";
 		displayName = "T1 Faction 2 Section Supply Box Desert";
@@ -2878,7 +2886,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_shadow_ammobox_Desert: B_supplyCrate_F
+	class T1_Faction2_Desert_shadow_ammobox_Desert: B_supplyCrate_F
 	{
 		vehicleClass = "Ammo";
 		displayName = "T1 Faction 2 Shadow Supply Box Desert";
@@ -3032,7 +3040,7 @@ class cfgVehicles
 			};
 		};
 	};
-	class T1_Faction2_Platoon_Hitman_pack: B_RadioBag_01_mtp_F
+	class T1_Faction2_Desert_Platoon_Hitman_pack: B_RadioBag_01_mtp_F
 	{
 		scope = 1;
 		class TransportMagazines{};
@@ -3076,7 +3084,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Platoon_Combat_Engineer_pack: B_Kitbag_mcamo
+	class T1_Faction2_Desert_Platoon_Combat_Engineer_pack: B_Kitbag_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3132,7 +3140,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Platoon_Medic_pack: B_Carryall_mcamo
+	class T1_Faction2_Desert_Platoon_Medic_pack: B_Carryall_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3183,7 +3191,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Fireteam_Leader_pack: B_Kitbag_mcamo
+	class T1_Faction2_Desert_Fireteam_Leader_pack: B_Kitbag_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3244,7 +3252,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Fireteam_AT_pack: B_AssaultPack_mcamo
+	class T1_Faction2_Desert_Fireteam_AT_pack: B_AssaultPack_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3285,7 +3293,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Fireteam_AR_pack: B_AssaultPack_mcamo
+	class T1_Faction2_Desert_Fireteam_AR_pack: B_AssaultPack_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3331,7 +3339,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Fireteam_CLS_pack: B_Kitbag_mcamo
+	class T1_Faction2_Desert_Fireteam_CLS_pack: B_Kitbag_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3392,7 +3400,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_MMG_Assist_pack: B_Carryall_mcamo
+	class T1_Faction2_Desert_MMG_Assist_pack: B_Carryall_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3406,7 +3414,7 @@ class cfgVehicles
 		class TransportItems{};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_MMG_Gunner_pack: B_AssaultPack_mcamo
+	class T1_Faction2_Desert_MMG_Gunner_pack: B_AssaultPack_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3452,7 +3460,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_MAT_Assist_pack: B_Carryall_mcamo
+	class T1_Faction2_Desert_MAT_Assist_pack: B_Carryall_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3471,7 +3479,7 @@ class cfgVehicles
 		class TransportItems{};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_MAT_Gunner_pack: B_FieldPack_cbr
+	class T1_Faction2_Desert_MAT_Gunner_pack: B_FieldPack_cbr
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3490,7 +3498,7 @@ class cfgVehicles
 		class TransportItems{};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Spotter_pack: B_AssaultPack_mcamo
+	class T1_Faction2_Desert_Spotter_pack: B_AssaultPack_mcamo
 	{
 		scope = 1;
 		class TransportMagazines{};
@@ -3509,7 +3517,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Sniper_pack: B_AssaultPack_mcamo
+	class T1_Faction2_Desert_Sniper_pack: B_AssaultPack_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3530,7 +3538,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Shadow_Leader_pack: B_RadioBag_01_mtp_F
+	class T1_Faction2_Desert_Shadow_Leader_pack: B_RadioBag_01_mtp_F
 	{
 		scope = 1;
 		class TransportMagazines{};
@@ -3579,7 +3587,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Shadow_AR_pack: B_FieldPack_cbr
+	class T1_Faction2_Desert_Shadow_AR_pack: B_FieldPack_cbr
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3625,7 +3633,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Shadow_DMR_pack: B_Kitbag_mcamo
+	class T1_Faction2_Desert_Shadow_DMR_pack: B_Kitbag_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3676,7 +3684,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Shadow_AT_pack: B_AssaultPack_mcamo
+	class T1_Faction2_Desert_Shadow_AT_pack: B_AssaultPack_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3727,7 +3735,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Shadow_Saboteur_pack: B_Kitbag_mcamo
+	class T1_Faction2_Desert_Shadow_Saboteur_pack: B_Kitbag_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3783,7 +3791,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Shadow_CLS_pack: B_Kitbag_mcamo
+	class T1_Faction2_Desert_Shadow_CLS_pack: B_Kitbag_mcamo
 	{
 		scope = 1;
 		class TransportMagazines
@@ -3839,7 +3847,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Pilot_pack: B_RadioBag_01_mtp_F
+	class T1_Faction2_Desert_Pilot_pack: B_RadioBag_01_mtp_F
 	{
 		scope = 1;
 		class TransportMagazines{};
@@ -3883,7 +3891,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Crew_Commander_pack: B_AssaultPack_mcamo
+	class T1_Faction2_Desert_Crew_Commander_pack: B_AssaultPack_mcamo
 	{
 		scope = 1;
 		class TransportMagazines{};
@@ -3922,7 +3930,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Crew_Engineer_pack: B_AssaultPack_mcamo
+	class T1_Faction2_Desert_Crew_Engineer_pack: B_AssaultPack_mcamo
 	{
 		scope = 1;
 		class TransportMagazines{};
@@ -3961,7 +3969,7 @@ class cfgVehicles
 		};
 		class TransportWeapons{};
 	};
-	class T1_Faction2_Crew_Medic_pack: B_AssaultPack_mcamo
+	class T1_Faction2_Desert_Crew_Medic_pack: B_AssaultPack_mcamo
 	{
 		scope = 1;
 		class TransportMagazines{};

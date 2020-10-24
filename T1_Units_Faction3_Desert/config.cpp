@@ -312,6 +312,7 @@ class cfgVehicles
 	scope = 2;
 	t1_DutyMod = 0.965;
 	attendant = 1;
+	T1_NoMedicIcon = 1;
     displayName="Element Leader";
     uniformClass="U_O_R_Gorka_01_brown_F";
     weapons[]={"Laserdesignator","T1_Units_Faction3_AR_AK12U","Put","Throw"};
@@ -332,6 +333,7 @@ class cfgVehicles
 	scope = 2;
 	t1_DutyMod = 0.965;
 	attendant = 1;
+	T1_NoMedicIcon = 1;
     displayName="JTAC";
     uniformClass="U_O_R_Gorka_01_brown_F";
     weapons[]={"Laserdesignator","T1_Units_Faction3_AR_AK12_GL","Put","Throw"};
@@ -352,6 +354,7 @@ class cfgVehicles
 	scope = 2;
 	t1_DutyMod = 0.965;
 	attendant = 1;
+	T1_NoMedicIcon = 1;
     displayName="Operator Leader";
     uniformClass="U_O_R_Gorka_01_brown_F";
     weapons[]={"ACE_Vector","T1_Units_Faction3_AR_AK12_GL","Put","Throw"};
@@ -372,6 +375,7 @@ class cfgVehicles
 	scope = 2;
 	t1_DutyMod = 0.965;
 	attendant = 1;
+	T1_NoMedicIcon = 1;
     displayName="Operator AR";
     uniformClass="U_O_R_Gorka_01_brown_F";
     weapons[]={"ACE_Vector","T1_Units_Faction3_SAW_RPK12","Put","Throw"};
@@ -392,6 +396,7 @@ class cfgVehicles
 	scope = 2;
 	t1_DutyMod = 0.965;
 	attendant = 1;
+	T1_NoMedicIcon = 1;
     displayName="Operator AT";
     uniformClass="U_O_R_Gorka_01_brown_F";
     weapons[]={"ACE_Vector","T1_arifle_AK12U_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","T1_45KO_RPG32_beige_F","Put","Throw"};
@@ -412,6 +417,7 @@ class cfgVehicles
 	scope = 2;
 	t1_DutyMod = 0.965;
 	attendant = 1;
+	T1_NoMedicIcon = 1;
     displayName="Operator Asst. AT";
     uniformClass="U_O_R_Gorka_01_brown_F";
     weapons[]={"ACE_Vector","T1_arifle_AK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_arid_F","Put","Throw"};
@@ -434,6 +440,7 @@ class cfgVehicles
 	attendant = 1;
 	canDeactivateMines = 1;
 	engineer = 1;
+	T1_NoMedicIcon = 1;
     displayName="Operator Saboteur";
     uniformClass="U_O_R_Gorka_01_brown_F";
     weapons[]={"ACE_Vector","T1_arifle_AK12_arid_F_muzzle_snds_B_arid_Facc_pointer_IRoptic_Arco_AK_arid_F","Put","Throw"};
@@ -475,6 +482,7 @@ class cfgVehicles
 	t1_DutyMod = 0.965;
 	attendant = 1;
 	camouflage = 0.6;
+	T1_NoMedicIcon = 1;
     displayName="Spotter";
     uniformClass="U_O_GhillieSuit";
     weapons[]={"Laserdesignator","T1_Units_Faction3_SAW_RPK12","Put","Throw"};
@@ -496,6 +504,7 @@ class cfgVehicles
 	t1_DutyMod = 0.965;
 	attendant = 1;
 	camouflage = 0.6;
+	T1_NoMedicIcon = 1;
     displayName="Marksman";
     uniformClass="U_O_GhillieSuit";
     weapons[]={"ACE_Vector","T1_srifle_DMR_05_tan_f_muzzle_snds_93mmg_tanacc_pointer_IRoptic_KHS_tanbipod_02_F_tan","Put","Throw"};

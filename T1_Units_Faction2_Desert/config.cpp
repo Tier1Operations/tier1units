@@ -481,8 +481,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACRE_PRC343","ACRE_PRC152","NVGoggles_INDEP"};
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue"};
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue","SmokeShellBlue"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_Platoon_Medic_pack";
 	};
 	class T1_Faction2_Desert_Fireteam_Leader: B_Soldier_F
@@ -498,8 +498,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152"};
 		magazines[] = {"SmokeShellBlue","SmokeShellBlue","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade"};
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_Fireteam_Leader_pack";
 	};
 	class T1_Faction2_Desert_Fireteam_AT: B_Soldier_F
@@ -515,8 +515,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","NVGoggles_INDEP","ACRE_PRC343","ACRE_PRC152"};
 		magazines[] = {"SmokeShellBlue","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade","RPG32_F","RPG32_F"};
 		respawnMagazines[] = {"SmokeShellBlue","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade","RPG32_F","RPG32_F"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_Fireteam_AT_pack";
 	};
 	class T1_Faction2_Desert_Fireteam_AR: B_Soldier_F
@@ -532,8 +532,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152"};
 		magazines[] = {"SmokeShellBlue","SmokeShellBlue","HandGrenade","200Rnd_556x45_Box_Tracer_Red_F","200Rnd_556x45_Box_Tracer_Red_F","200Rnd_556x45_Box_Tracer_Red_F"};
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","HandGrenade","200Rnd_556x45_Box_Tracer_Red_F","200Rnd_556x45_Box_Tracer_Red_F","200Rnd_556x45_Box_Tracer_Red_F"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_Fireteam_AR_pack";
 	};
 	class T1_Faction2_Desert_Fireteam_CLS: B_Soldier_F
@@ -550,8 +550,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACRE_PRC343","ACRE_PRC152"};
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade","HandGrenade"};
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","HandGrenade","HandGrenade"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_Fireteam_CLS_pack";
 	};
 	class T1_Faction2_Desert_MMG_Assist: B_Soldier_F
@@ -568,8 +568,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_EarPlugs","ACE_MapTools","ACE_CableTie","ACE_CableTie","ACE_Flashlight_XL50","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_epinephrine","ACE_epinephrine","ACE_splint","ACE_splint","ACE_IR_Strobe_Item","ACE_microDAGR","ACRE_PRC343","ACRE_PRC152","NVGoggles_INDEP"};
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","SmokeShellBlue","Laserbatteries"};
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","SmokeShellBlue","Laserbatteries"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_MMG_Assist_pack";
 	};
 	class T1_Faction2_Desert_MMG_Gunner: B_Soldier_F
@@ -586,8 +586,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152","ACE_CableTie","ACE_CableTie"};
 		magazines[] = {"SmokeShellBlue","SmokeShellBlue","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag"};
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag","130Rnd_338_Mag"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_MMG_Gunner_pack";
 	};
 	class T1_Faction2_Desert_MAT_Assist: B_Soldier_F
@@ -604,8 +604,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_CableTie","ACE_CableTie","ACE_splint","ACE_splint","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_epinephrine","ACE_epinephrine","ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","NVGoggles_INDEP","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152"};
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","Laserbatteries"};
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","Laserbatteries"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_MAT_Assist_pack";
 	};
 	class T1_Faction2_Desert_MAT_Gunner: B_Soldier_F
@@ -622,8 +622,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_splint","ACE_splint","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_epinephrine","ACE_epinephrine","ACE_EarPlugs","ACE_MapTools","ACE_microDAGR","ACE_IR_Strobe_Item","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152"};
 		magazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","MRAWS_HE_F","MRAWS_HE_F","MRAWS_HEAT_F","MRAWS_HEAT_F"};
 		respawnMagazines[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","ACE_30Rnd_556x45_Stanag_Mk318_mag","SmokeShellBlue","MRAWS_HE_F","MRAWS_HE_F","MRAWS_HEAT_F","MRAWS_HEAT_F"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_MAT_Gunner_pack";
 	};
 	class T1_Faction2_Desert_Spotter: B_Soldier_F
@@ -740,8 +740,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152"};
 		magazines[] = {"SmokeShellBlue","SmokeShellBlue","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","RPG32_F"};
 		respawnMagazines[] = {"SmokeShellBlue","SmokeShellBlue","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","1Rnd_HE_Grenade_shell","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","RPG32_F"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_Shadow_AT_pack";
 	};
 	class T1_Faction2_Desert_Shadow_Saboteur: B_Soldier_F
@@ -781,8 +781,8 @@ class cfgVehicles
 		respawnItems[] = {"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152"};
 		magazines[] = {"HandGrenade","HandGrenade","SmokeShellBlue","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","Laserbatteries"};
 		respawnMagazines[] = {"HandGrenade","HandGrenade","SmokeShellBlue","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","30Rnd_65x39_caseless_msbs_mag","Laserbatteries"};
-		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
-		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_mcamo","V_CarrierRigKBT_01_light_Olive_F"};
+		linkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
+		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch","Laserdesignator","H_HelmetSpecB_sand","V_CarrierRigKBT_01_light_Olive_F"};
 		backpack = "T1_Faction2_Desert_Shadow_CLS_pack";
 	};
 	class T1_Faction2_Desert_Pilot: B_Soldier_F

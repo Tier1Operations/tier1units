@@ -5,7 +5,7 @@ class cfgPatches
     units[]={"T1_Units_Faction_3_Hex_Platoon_Leader","T1_Units_Faction_3_Hex_Platoon_JTAC","T1_Units_Faction_3_Hex_Platoon_Engineer","T1_Units_Faction_3_Hex_Platoon_Medic","T1_Units_Faction_3_Hex_FireTeam_Lead_AR","T1_Units_Faction_3_Hex_FireTeam_Lead_AT","T1_Units_Faction_3_Hex_FireTeam_AR","T1_Units_Faction_3_Hex_FireTeam_AT","T1_Units_Faction_3_Hex_FireTeam_AT_Assist","T1_Units_Faction_3_Hex_FireTeam_DMR_AR","T1_Units_Faction_3_Hex_MMG_Assist","T1_Units_Faction_3_Hex_MMG_Gunner","T1_Units_Faction_3_Hex_MAT_Assist","T1_Units_Faction_3_Hex_MAT_Gunner","T1_Units_Faction_3_Hex_AA_Assist","T1_Units_Faction_3_Hex_AA_Gunner","T1_Units_Faction_3_Hex_Spotter","T1_Units_Faction_3_Hex_Sniper","T1_Units_Faction_3_Hex_Crew_Commander","T1_Units_Faction_3_Hex_Crew_Engineer","T1_Units_Faction_3_Hex_Crew_CLS","T1_Units_Faction_3_Hex_FireTeam_DMR_AT","T1_Units_Faction_3_Hex_FireTeam_CLS","T1_Units_Faction_3_Hex_Pilot","T1_Units_Faction_3_Hex_BM2T_Stalker","T1_Units_Faction_3_Hex_Takhion_AT","T1_Units_Faction_3_Hex_Takhion_MG","T1_Units_Faction_3_Hex_Takhion","T1_Units_Faction_3_Hex_T140_Angara","T1_Units_Faction_3_Hex_T140K_Angara","T1_Units_Faction_3_Hex_GAZ_2330","T1_Units_Faction_3_Hex_GAZ_2330_CROW","T1_Units_Faction_3_Hex_KA60_Kasatka","T1_Units_Faction_3_Hex_MI48_Kajman","T1_Units_Faction_3_Hex_Takhion_AT_AA","T1_Units_Faction_3_Hex_Takhion_AT_MAT","T1_Units_Faction_3_Hex_Takhion_AT_MMG","T1_Units_Faction3_Hex_supplyCrate","T1_Units_Faction3_Hex_delta_supplyCrate"};
     weapons[]={"T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_arifle_AK12_GL_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_arifle_RPK12_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_launch_RPG32_green_F","T1_Units_Faction_3_Hex_arifle_AK12_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_srifle_DMR_01_black_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","T1_Units_Faction_3_Hex_LMG_min_rf_6p69_optic_MRCO","T1_Units_Faction_3_Hex_launch_O_Vorona_green_F","T1_Units_Faction_3_Hex_launch_B_Titan_olive_F","T1_Units_Faction_3_Hex_arifle_AK12_lush_F_muzzle_snds_B_lush_Foptic_Arco_AK_lush_Fbipod_02_F_lush","T1_Units_Faction_3_Hex_srifle_min_rf_orsis_t5000_muzzle_snds_338_blackoptic_LRPS","T1_Units_Faction_3_Hex_hgun_Rook40_F_muzzle_snds_L","T1_Units_Faction_3_Hex_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F"};
     requiredVersion=0.1;
-    requiredAddons[]={"ace_captives","ace_hearing","ace_flashlights","ace_microdagr","ace_maptools","acre_sys_prc343","ace_medical_treatment","A3_Weapons_F_Exp","acre_sys_prc117f","ace_vector","A3_Weapons_F","A3_Drones_F_Weapons_F_Gamma_Items","A3_Weapons_F_Enoch_Rifles_AK12","A3_Characters_F_Exp","A3_Aegis_Characters_F_Aegis_Vests","A3_Aegis_Characters_F_Aegis_Headgear","A3_Aegis_Characters_F_Aegis","A3_Weapons_F_Exp_Rifles_AK12","acre_sys_prc152","ace_explosives","A3_Weapons_F_Items","ace_tagging","A3_Characters_F_Exp_Vests","A3_Weapons_F_Enoch_Launchers_RPG32","ace_rangecard","A3_Weapons_F_Pistols_Rook40","min_rf_wp","A3_Weapons_F_Tank_Launchers_Vorona","A3_Weapons_F_Enoch_Launchers_Titan","ace_trenches","A3_Characters_F_Enoch_Vests","A3_Characters_F_Exp_Headgear","ace_attach","A3_Weapons_F_Enoch","A3_Weapons_F_SMGs_SMG_02","A3_Aegis_Characters_F_Aegis_Uniforms","A3_Characters_F"};
+    requiredAddons[]={"ace_captives","ace_hearing","ace_flashlights","ace_microdagr","ace_maptools","acre_sys_prc343","ace_medical_treatment","A3_Weapons_F_Exp","acre_sys_prc117f","ace_vector","A3_Weapons_F","A3_Drones_F_Weapons_F_Gamma_Items","A3_Weapons_F_Enoch_Rifles_AK12","A3_Characters_F_Exp","A3_Weapons_F_Exp_Rifles_AK12","acre_sys_prc152","ace_explosives","A3_Weapons_F_Items","ace_tagging","A3_Characters_F_Exp_Vests","A3_Weapons_F_Enoch_Launchers_RPG32","ace_rangecard","A3_Weapons_F_Pistols_Rook40","min_rf_wp","A3_Weapons_F_Tank_Launchers_Vorona","A3_Weapons_F_Enoch_Launchers_Titan","ace_trenches","A3_Characters_F_Enoch_Vests","A3_Characters_F_Exp_Headgear","ace_attach","A3_Weapons_F_Enoch","A3_Weapons_F_SMGs_SMG_02","A3_Characters_F"};
   };
 };
 
@@ -267,23 +267,23 @@ class cfgWeapons
 
 class cfgVehicles
 {
-  class O_R_recon_F;
+  class O_R_Gorka_base_F;
   class B_ViperLightHarness_ghex_F;
   class B_FieldPack_ghex_F;
   class B_Carryall_ghex_F;
   class B_AssaultPack_ghex_F;
-  class O_R_APC_Tracked_02_cannon_F;
-  class O_R_LSV_02_AT_F;
-  class O_R_LSV_02_armed_F;
-  class O_R_LSV_02_unarmed_F;
-  class O_R_MBT_04_cannon_F;
-  class O_R_MBT_04_command_F;
+  class O_T_APC_Tracked_02_cannon_ghex_F;
+  class O_T_LSV_02_AT_F;
+  class O_T_LSV_02_armed_F;
+  class O_T_LSV_02_unarmed_F;
+  class O_T_MBT_04_cannon_F;
+  class O_T_MBT_04_command_F;
   class min_rf_gaz_2330;
   class min_rf_gaz_2330_HMG;
-  class O_R_Heli_Light_02_unarmed_F;
-  class O_R_Heli_Attack_02_dynamicLoadout_F;
+  class O_Heli_Light_02_unarmed_F;
+  class O_Heli_Attack_02_dynamicLoadout_F;
 
-  class T1_Units_Faction_3_Hex_Platoon_Leader: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Platoon_Leader: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -298,12 +298,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343_ID_1"};
     magazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","HandGrenade_East","HandGrenade_East","SmokeShellBlue","SmokeShellBlue","SmokeShellGreen","SmokeShellOrange","SmokeShellPurple","SmokeShellRed","SmokeShellYellow","30Rnd_762x39_AK12_Mag_Tracer_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","HandGrenade_East","HandGrenade_East","SmokeShellBlue","SmokeShellBlue","SmokeShellGreen","SmokeShellOrange","SmokeShellPurple","SmokeShellRed","SmokeShellYellow","30Rnd_762x39_AK12_Mag_Tracer_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F","G_Tactical_Black"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F","G_Tactical_Black"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_Platoon_Leader_pack";
   };
 
-  class T1_Units_Faction_3_Hex_Platoon_JTAC: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Platoon_JTAC: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -318,12 +318,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343"};
     magazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","30Rnd_762x39_AK12_Mag_Tracer_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","30Rnd_762x39_AK12_Mag_Tracer_F","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","30Rnd_762x39_AK12_Mag_Tracer_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_Platoon_JTAC_pack";
   };
 
-  class T1_Units_Faction_3_Hex_Platoon_Engineer: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Platoon_Engineer: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -344,7 +344,7 @@ class cfgVehicles
     backpack="T1_Units_Faction_3_Hex_Platoon_Engineer_pack";
   };
 
-  class T1_Units_Faction_3_Hex_Platoon_Medic: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Platoon_Medic: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -358,12 +358,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_MapTools","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_Flashlight_MX991","ACE_microDAGR","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_Tracer_F"};
     respawnMagazines[]={"30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_Tracer_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_Platoon_Medic_pack";
   };
 
-  class T1_Units_Faction_3_Hex_FireTeam_Lead_AR: O_R_recon_F
+  class T1_Units_Faction_3_Hex_FireTeam_Lead_AR: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -376,12 +376,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_Lead_AR_pack";
   };
 
-  class T1_Units_Faction_3_Hex_FireTeam_Lead_AT: O_R_recon_F
+  class T1_Units_Faction_3_Hex_FireTeam_Lead_AT: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -394,12 +394,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_Lead_AT_pack";
   };
 
-  class T1_Units_Faction_3_Hex_FireTeam_AR: O_R_recon_F
+  class T1_Units_Faction_3_Hex_FireTeam_AR: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -412,12 +412,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_AR_pack";
   };
 
-  class T1_Units_Faction_3_Hex_FireTeam_AT: O_R_recon_F
+  class T1_Units_Faction_3_Hex_FireTeam_AT: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -430,12 +430,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","RPG32_F","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","RPG32_F","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_AT_pack";
   };
 
-  class T1_Units_Faction_3_Hex_FireTeam_AT_Assist: O_R_recon_F
+  class T1_Units_Faction_3_Hex_FireTeam_AT_Assist: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -448,12 +448,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_AT_Assist_pack";
   };
 
-  class T1_Units_Faction_3_Hex_FireTeam_DMR_AR: O_R_recon_F
+  class T1_Units_Faction_3_Hex_FireTeam_DMR_AR: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -466,12 +466,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","HandGrenade_East","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","17Rnd_9x21_Mag","17Rnd_9x21_Mag","10Rnd_762x54_Mag"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","HandGrenade_East","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","17Rnd_9x21_Mag","17Rnd_9x21_Mag","10Rnd_762x54_Mag"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_DMR_AR_pack";
   };
 
-  class T1_Units_Faction_3_Hex_MMG_Assist: O_R_recon_F
+  class T1_Units_Faction_3_Hex_MMG_Assist: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -485,12 +485,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_MMG_Assist_pack";
   };
 
-  class T1_Units_Faction_3_Hex_MMG_Gunner: O_R_recon_F
+  class T1_Units_Faction_3_Hex_MMG_Gunner: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -504,12 +504,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_MMG_Gunner_pack";
   };
 
-  class T1_Units_Faction_3_Hex_MAT_Assist: O_R_recon_F
+  class T1_Units_Faction_3_Hex_MAT_Assist: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -523,12 +523,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_MapTools","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_splint","ACE_splint","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","O_NVGoggles_ghex_F","ACE_microDAGR","ACE_Flashlight_MX991","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_MAT_Assist_pack";
   };
 
-  class T1_Units_Faction_3_Hex_MAT_Gunner: O_R_recon_F
+  class T1_Units_Faction_3_Hex_MAT_Gunner: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -542,12 +542,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_splint","ACE_splint","O_NVGoggles_ghex_F"};
     magazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","Vorona_HEAT","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","Vorona_HEAT","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_MAT_Gunner_pack";
   };
 
-  class T1_Units_Faction_3_Hex_AA_Assist: O_R_recon_F
+  class T1_Units_Faction_3_Hex_AA_Assist: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -561,12 +561,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_MapTools","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_splint","ACE_splint","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","O_NVGoggles_ghex_F","ACE_microDAGR","ACE_Flashlight_MX991","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_AA_Assist_pack";
   };
 
-  class T1_Units_Faction_3_Hex_AA_Gunner: O_R_recon_F
+  class T1_Units_Faction_3_Hex_AA_Gunner: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -580,12 +580,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_splint","ACE_splint","O_NVGoggles_ghex_F"};
     magazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","Titan_AA","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","Titan_AA","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_AA_Gunner_pack";
   };
 
-  class T1_Units_Faction_3_Hex_Spotter: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Spotter: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -602,12 +602,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACE_EntrenchingTool","ACRE_PRC343","O_NVGoggles_ghex_F","ACE_bloodIV","ACE_bloodIV","ACE_bloodIV","ACE_bloodIV","ACE_splint","ACE_splint","ACE_splint","ACE_splint"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","75rnd_762x39_AK12_Lush_Mag_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","75rnd_762x39_AK12_Lush_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_Spotter_pack";
   };
 
-  class T1_Units_Faction_3_Hex_Sniper: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Sniper: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -624,12 +624,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","17Rnd_9x21_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","17Rnd_9x21_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_Sniper_pack";
   };
 
-  class T1_Units_Faction_3_Hex_Crew_Commander: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Crew_Commander: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -650,7 +650,7 @@ class cfgVehicles
     backpack="T1_Units_Faction_3_Hex_Crew_Commander_pack";
   };
 
-  class T1_Units_Faction_3_Hex_Crew_Engineer: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Crew_Engineer: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -671,7 +671,7 @@ class cfgVehicles
     backpack="T1_Units_Faction_3_Hex_Crew_Engineer_pack";
   };
 
-  class T1_Units_Faction_3_Hex_Crew_CLS: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Crew_CLS: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -691,7 +691,7 @@ class cfgVehicles
     backpack="T1_Units_Faction_3_Hex_Crew_CLS_pack";
   };
 
-  class T1_Units_Faction_3_Hex_FireTeam_DMR_AT: O_R_recon_F
+  class T1_Units_Faction_3_Hex_FireTeam_DMR_AT: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -704,12 +704,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","17Rnd_9x21_Mag","17Rnd_9x21_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","17Rnd_9x21_Mag","17Rnd_9x21_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_DMR_AT_pack";
   };
 
-  class T1_Units_Faction_3_Hex_FireTeam_CLS: O_R_recon_F
+  class T1_Units_Faction_3_Hex_FireTeam_CLS: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -723,12 +723,12 @@ class cfgVehicles
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_headset_F","V_HarnessOSpec_ghex_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_CLS_pack";
   };
 
-  class T1_Units_Faction_3_Hex_Pilot: O_R_recon_F
+  class T1_Units_Faction_3_Hex_Pilot: O_R_Gorka_base_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;
@@ -737,7 +737,7 @@ class cfgVehicles
 	engineer = 1;
 	T1_NoMedicIcon = 1;
     displayName="Pilot";
-    uniformClass="U_O_T_Pilot_F";
+    uniformClass="U_O_PilotCoveralls";
     weapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACRE_PRC343","ACE_morphine","ACE_morphine","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_epinephrine","ACE_epinephrine","ACE_splint","ACE_splint","ACE_splint","ACE_splint"};
@@ -749,7 +749,7 @@ class cfgVehicles
     backpack="T1_Units_Faction_3_Hex_Pilot_pack";
   };
 
-  class T1_Units_Faction_3_Hex_BM2T_Stalker: O_R_APC_Tracked_02_cannon_F
+  class T1_Units_Faction_3_Hex_BM2T_Stalker: O_T_APC_Tracked_02_cannon_ghex_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -761,7 +761,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="BM-2T Stalker";
-    hiddenSelectionsTextures[]={"a3_aegis\armor_f_aegis\apc_tracked_02\data\apc_tracked_02_ext_01_rukhk_co.paa","a3_aegis\armor_f_aegis\apc_tracked_02\data\apc_tracked_02_ext_02_rukhk_co.paa","a3_aegis\armor_f_aegis\apc_tracked_02\data\rcws30_rukhk_co.paa","a3_aegis\armor_f_aegis\data\camonet_rus_green_co.paa","a3_aegis\armor_f_aegis\data\cage_rukhk_co.paa"};
+    hiddenSelectionsTextures[]={"a3\armor_f_exp\apc_tracked_02\data\apc_tracked_02_ext_01_ghex_co.paa","a3\armor_f_exp\apc_tracked_02\data\apc_tracked_02_ext_02_ghex_co.paa","a3\armor_f_exp\apc_tracked_02\data\rcws30_ghex_co.paa","a3\armor_f\data\camonet_csat_hex_green_co.paa","a3\armor_f\data\cage_csat_green_co.paa"};
     crew="T1_Units_Faction_3_Hex_Crew_Engineer";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Crew_Engineer"};
 	class TransportMagazines
@@ -800,7 +800,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Units_Faction_3_Hex_Takhion_AT: O_R_LSV_02_AT_F
+  class T1_Units_Faction_3_Hex_Takhion_AT: O_T_LSV_02_AT_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -812,7 +812,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="Takhion (AT)";
-    hiddenSelectionsTextures[]={"a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_01_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_02_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_03_rukhk_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa"};
+    hiddenSelectionsTextures[]={"a3\soft_f_exp\lsv_02\data\csat_lsv_01_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_02_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_03_ghex_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa"};
     crew="T1_Units_Faction_3_Hex_Platoon_Leader";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Platoon_Leader"};
 	class TransportMagazines
@@ -848,7 +848,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Units_Faction_3_Hex_Takhion_MG: O_R_LSV_02_armed_F
+  class T1_Units_Faction_3_Hex_Takhion_MG: O_T_LSV_02_armed_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -860,7 +860,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="Takhion (MG)";
-    hiddenSelectionsTextures[]={"a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_01_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_02_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_03_rukhk_co.paa"};
+    hiddenSelectionsTextures[]={"a3\soft_f_exp\lsv_02\data\csat_lsv_01_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_02_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_03_ghex_co.paa"};
     crew="T1_Units_Faction_3_Hex_Platoon_Leader";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Platoon_Leader"};
 	class TransportMagazines
@@ -896,7 +896,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Units_Faction_3_Hex_Takhion: O_R_LSV_02_unarmed_F
+  class T1_Units_Faction_3_Hex_Takhion: O_T_LSV_02_unarmed_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -908,7 +908,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="Takhion";
-    hiddenSelectionsTextures[]={"a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_01_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_02_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_03_rukhk_co.paa"};
+    hiddenSelectionsTextures[]={"a3\soft_f_exp\lsv_02\data\csat_lsv_01_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_02_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_03_ghex_co.paa"};
     crew="T1_Units_Faction_3_Hex_Platoon_Leader";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Platoon_Leader"};
 	class TransportMagazines
@@ -944,7 +944,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Units_Faction_3_Hex_T140_Angara: O_R_MBT_04_cannon_F
+  class T1_Units_Faction_3_Hex_T140_Angara: O_T_MBT_04_cannon_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -956,7 +956,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="T140 Angara";
-    hiddenSelectionsTextures[]={"a3_aegis\armor_f_aegis\mbt_04\data\mbt_04_exterior_rucamo_1_co.paa","a3_aegis\armor_f_aegis\mbt_04\data\mbt_04_exterior_rucamo_2_co.paa","a3_aegis\armor_f_aegis\data\camonet_rus_green_co.paa"};
+    hiddenSelectionsTextures[]={"a3\armor_f_tank\mbt_04\data\mbt_04_exterior_green_hex_1_co.paa","a3\armor_f_tank\mbt_04\data\mbt_04_exterior_green_hex_2_co.paa","a3\armor_f\data\camonet_csat_hex_green_co.paa"};
     crew="T1_Units_Faction_3_Hex_Crew_Engineer";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Crew_Engineer"};
 	class TransportMagazines
@@ -988,7 +988,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Units_Faction_3_Hex_T140K_Angara: O_R_MBT_04_command_F
+  class T1_Units_Faction_3_Hex_T140K_Angara: O_T_MBT_04_command_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -1000,7 +1000,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="T140K Angara";
-    hiddenSelectionsTextures[]={"a3_aegis\armor_f_aegis\mbt_04\data\mbt_04_exterior_rucamo_1_co.paa","a3_aegis\armor_f_aegis\mbt_04\data\mbt_04_exterior_rucamo_2_co.paa","a3\armor_f_tank\mbt_04\data\mbt_04_command_co.paa","a3_aegis\armor_f_aegis\data\camonet_rus_green_co.paa"};
+    hiddenSelectionsTextures[]={"a3\armor_f_tank\mbt_04\data\mbt_04_exterior_green_hex_1_co.paa","a3\armor_f_tank\mbt_04\data\mbt_04_exterior_green_hex_2_co.paa","a3\armor_f\data\camonet_csat_hex_green_co.paa"};
     crew="T1_Units_Faction_3_Hex_Crew_Engineer";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Crew_Engineer"};
 	class TransportMagazines
@@ -1128,7 +1128,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Units_Faction_3_Hex_KA60_Kasatka: O_R_Heli_Light_02_unarmed_F
+  class T1_Units_Faction_3_Hex_KA60_Kasatka: O_Heli_Light_02_unarmed_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -1140,7 +1140,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="KA60 Kasatka";
-    hiddenSelectionsTextures[]={"a3_aegis\air_f_aegis\heli_light_02\data\heli_light_02_ext_ghex_co.paa"};
+    hiddenSelectionsTextures[]={"a3\air_f\heli_light_02\data\heli_light_02_ext_co.paa"};
     crew="T1_Units_Faction_3_Hex_Pilot";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Pilot"};
 	class TransportMagazines
@@ -1176,7 +1176,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Units_Faction_3_Hex_MI48_Kajman: O_R_Heli_Attack_02_dynamicLoadout_F
+  class T1_Units_Faction_3_Hex_MI48_Kajman: O_Heli_Attack_02_dynamicLoadout_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -1224,7 +1224,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Units_Faction_3_Hex_Takhion_AT_AA: O_R_LSV_02_AT_F
+  class T1_Units_Faction_3_Hex_Takhion_AT_AA: O_T_LSV_02_AT_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -1236,7 +1236,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="Takhion AT (AA)";
-    hiddenSelectionsTextures[]={"a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_01_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_02_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_03_rukhk_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa"};
+    hiddenSelectionsTextures[]={"a3\soft_f_exp\lsv_02\data\csat_lsv_01_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_02_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_03_ghex_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa"};
     crew="T1_Units_Faction_3_Hex_Platoon_Leader";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Platoon_Leader"};
 	class TransportMagazines
@@ -1268,7 +1268,7 @@ class cfgVehicles
 		};		
 	};
   
-  class T1_Units_Faction_3_Hex_Takhion_AT_MAT: O_R_LSV_02_AT_F
+  class T1_Units_Faction_3_Hex_Takhion_AT_MAT: O_T_LSV_02_AT_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -1280,7 +1280,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="Takhion AT (MAT)";
-    hiddenSelectionsTextures[]={"a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_01_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_02_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_03_rukhk_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa"};
+    hiddenSelectionsTextures[]={"a3\soft_f_exp\lsv_02\data\csat_lsv_01_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_02_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_03_ghex_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa"};
     crew="T1_Units_Faction_3_Hex_Platoon_Leader";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Platoon_Leader"};
 	class TransportMagazines
@@ -1312,7 +1312,7 @@ class cfgVehicles
 		};		
 	};
 
-  class T1_Units_Faction_3_Hex_Takhion_AT_MMG: O_R_LSV_02_AT_F
+  class T1_Units_Faction_3_Hex_Takhion_AT_MMG: O_T_LSV_02_AT_F
   {
     faction="T1_Units_Faction_3_Hex_Faction_3";
     side=0;		
@@ -1324,7 +1324,7 @@ class cfgVehicles
 	transportMaxBackpacks = 99;
 	transportMaxItems = 9999;
     displayName="Takhion AT (MMG)";
-    hiddenSelectionsTextures[]={"a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_01_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_02_rukhk_co.paa","a3_aegis\soft_f_aegis\lsv_02\data\csat_lsv_03_rukhk_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa"};
+    hiddenSelectionsTextures[]={"a3\soft_f_exp\lsv_02\data\csat_lsv_01_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_02_ghex_co.paa","a3\soft_f_exp\lsv_02\data\csat_lsv_03_ghex_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa","a3\weapons_f_tank\launchers\vorona\data\vorona_green_f_co.paa"};
     crew="T1_Units_Faction_3_Hex_Platoon_Leader";
     typicalCargo[]={"T1_Units_Faction_3_Hex_Platoon_Leader"};
 	class TransportMagazines

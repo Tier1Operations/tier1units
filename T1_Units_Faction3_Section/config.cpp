@@ -3,7 +3,7 @@ class cfgPatches
   class T1_Units_Faction_3_Hex_Faction_3
   {
     units[]={"T1_Units_Faction_3_Hex_Platoon_Leader","T1_Units_Faction_3_Hex_Platoon_JTAC","T1_Units_Faction_3_Hex_Platoon_Engineer","T1_Units_Faction_3_Hex_Platoon_Medic","T1_Units_Faction_3_Hex_FireTeam_Lead_AR","T1_Units_Faction_3_Hex_FireTeam_Lead_AT","T1_Units_Faction_3_Hex_FireTeam_AR","T1_Units_Faction_3_Hex_FireTeam_AT","T1_Units_Faction_3_Hex_FireTeam_AT_Assist","T1_Units_Faction_3_Hex_FireTeam_DMR_AR","T1_Units_Faction_3_Hex_MMG_Assist","T1_Units_Faction_3_Hex_MMG_Gunner","T1_Units_Faction_3_Hex_MAT_Assist","T1_Units_Faction_3_Hex_MAT_Gunner","T1_Units_Faction_3_Hex_AA_Assist","T1_Units_Faction_3_Hex_AA_Gunner","T1_Units_Faction_3_Hex_Spotter","T1_Units_Faction_3_Hex_Sniper","T1_Units_Faction_3_Hex_Crew_Commander","T1_Units_Faction_3_Hex_Crew_Engineer","T1_Units_Faction_3_Hex_Crew_CLS","T1_Units_Faction_3_Hex_FireTeam_DMR_AT","T1_Units_Faction_3_Hex_FireTeam_CLS","T1_Units_Faction_3_Hex_Pilot","T1_Units_Faction_3_Hex_BM2T_Stalker","T1_Units_Faction_3_Hex_Takhion_AT","T1_Units_Faction_3_Hex_Takhion_MG","T1_Units_Faction_3_Hex_Takhion","T1_Units_Faction_3_Hex_T140_Angara","T1_Units_Faction_3_Hex_T140K_Angara","T1_Units_Faction_3_Hex_GAZ_2330","T1_Units_Faction_3_Hex_GAZ_2330_CROW","T1_Units_Faction_3_Hex_KA60_Kasatka","T1_Units_Faction_3_Hex_MI48_Kajman","T1_Units_Faction_3_Hex_Takhion_AT_AA","T1_Units_Faction_3_Hex_Takhion_AT_MAT","T1_Units_Faction_3_Hex_Takhion_AT_MMG","T1_Units_Faction3_Hex_supplyCrate","T1_Units_Faction3_Hex_delta_supplyCrate"};
-    weapons[]={"T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_arifle_AK12_GL_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_arifle_RPK12_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_launch_RPG32_green_F","T1_Units_Faction_3_Hex_arifle_AK12_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_srifle_DMR_01_black_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","T1_Units_Faction_3_Hex_LMG_min_rf_6p69_optic_MRCO","T1_Units_Faction_3_Hex_launch_O_Vorona_green_F","T1_Units_Faction_3_Hex_launch_B_Titan_olive_F","T1_Units_Faction_3_Hex_arifle_AK12_lush_F_muzzle_snds_B_lush_Foptic_Arco_AK_lush_Fbipod_02_F_lush","T1_Units_Faction_3_Hex_srifle_min_rf_orsis_t5000_muzzle_snds_338_blackoptic_LRPS","T1_Units_Faction_3_Hex_hgun_Rook40_F_muzzle_snds_L","T1_Units_Faction_3_Hex_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F"};
+    weapons[]={"T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_arifle_AK12_GL_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_arifle_RPK12_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_launch_RPG32_green_F","T1_Units_Faction_3_Hex_arifle_AK12_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_srifle_DMR_01_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","T1_Units_Faction_3_Hex_LMG_min_rf_6p69_optic_MRCO","T1_Units_Faction_3_Hex_launch_O_Vorona_green_F","T1_Units_Faction_3_Hex_launch_B_Titan_olive_F","T1_Units_Faction_3_Hex_arifle_AK12_lush_F_muzzle_snds_B_lush_Foptic_Arco_AK_lush_Fbipod_02_F_lush","T1_Units_Faction_3_Hex_srifle_min_rf_orsis_t5000_muzzle_snds_338_blackoptic_LRPS","T1_Units_Faction_3_Hex_hgun_Rook40_F_muzzle_snds_L","T1_Units_Faction_3_Hex_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F"};
     requiredVersion=0.1;
     requiredAddons[]={"ace_captives","ace_hearing","ace_flashlights","ace_microdagr","ace_maptools","acre_sys_prc343","ace_medical_treatment","A3_Weapons_F_Exp","acre_sys_prc117f","ace_vector","A3_Weapons_F","A3_Drones_F_Weapons_F_Gamma_Items","A3_Weapons_F_Enoch_Rifles_AK12","A3_Characters_F_Exp","A3_Weapons_F_Exp_Rifles_AK12","acre_sys_prc152","ace_explosives","A3_Weapons_F_Items","ace_tagging","A3_Characters_F_Exp_Vests","A3_Weapons_F_Enoch_Launchers_RPG32","ace_rangecard","A3_Weapons_F_Pistols_Rook40","min_rf_wp","A3_Weapons_F_Tank_Launchers_Vorona","A3_Weapons_F_Enoch_Launchers_Titan","ace_trenches","A3_Characters_F_Enoch_Vests","A3_Characters_F_Exp_Headgear","ace_attach","A3_Weapons_F_Enoch","A3_Weapons_F_SMGs_SMG_02","A3_Characters_F"};
   };
@@ -28,7 +28,7 @@ class cfgWeapons
   class arifle_RPK12_F;
   class launch_RPG32_green_F;
   class arifle_AK12_F;
-  class srifle_DMR_01_black_F;
+  class srifle_DMR_01_F;
   class hgun_Rook40_F;
   class LMG_min_rf_6p69;
   class launch_O_Vorona_green_F;
@@ -122,7 +122,7 @@ class cfgWeapons
     };
   };
 
-  class T1_Units_Faction_3_Hex_srifle_DMR_01_black_F_acc_pointer_IRoptic_DMSbipod_02_F_blk: srifle_DMR_01_black_F
+  class T1_Units_Faction_3_Hex_srifle_DMR_01_F_acc_pointer_IRoptic_DMSbipod_02_F_blk: srifle_DMR_01_F
   {
     displayName="Rahim 7.62 mm";
     scope=1;
@@ -271,7 +271,7 @@ class cfgVehicles
   class B_ViperLightHarness_ghex_F;
   class B_FieldPack_ghex_F;
   class B_Carryall_ghex_F;
-  class B_AssaultPack_ghex_F;
+  class B_AssaultPack_khk;
   class O_T_APC_Tracked_02_cannon_ghex_F;
   class O_T_LSV_02_AT_F;
   class O_T_LSV_02_armed_F;
@@ -296,8 +296,8 @@ class cfgVehicles
     respawnWeapons[]={"Laserdesignator_02_ghex_F","ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343_ID_1"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343_ID_1"};
-    magazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","HandGrenade_East","HandGrenade_East","SmokeShellBlue","SmokeShellBlue","SmokeShellGreen","SmokeShellOrange","SmokeShellPurple","SmokeShellRed","SmokeShellYellow","30Rnd_762x39_AK12_Mag_Tracer_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","HandGrenade_East","HandGrenade_East","SmokeShellBlue","SmokeShellBlue","SmokeShellGreen","SmokeShellOrange","SmokeShellPurple","SmokeShellRed","SmokeShellYellow","30Rnd_762x39_AK12_Mag_Tracer_F"};
+    magazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","MiniGrenade","MiniGrenade","SmokeShellBlue","SmokeShellBlue","SmokeShellGreen","SmokeShellOrange","SmokeShellPurple","SmokeShellRed","SmokeShellYellow","30Rnd_762x39_AK12_Mag_Tracer_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","MiniGrenade","MiniGrenade","SmokeShellBlue","SmokeShellBlue","SmokeShellGreen","SmokeShellOrange","SmokeShellPurple","SmokeShellRed","SmokeShellYellow","30Rnd_762x39_AK12_Mag_Tracer_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ItemRadioAcreFlagged","O_UavTerminal","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_Platoon_Leader_pack";
@@ -337,10 +337,10 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACRE_PRC343","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC152","ACE_M26_Clacker","MineDetector","ACE_DefusalKit"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACRE_PRC343","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC152","ACE_M26_Clacker","MineDetector","ACE_DefusalKit"};
-    magazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","HandGrenade_East","HandGrenade_East","30Rnd_762x39_AK12_Mag_Tracer_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","HandGrenade_East","HandGrenade_East","30Rnd_762x39_AK12_Mag_Tracer_F"};
-    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_ear_F","V_HarnessOGL_ghex_F"};
-    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetHBK_olive_ear_F","V_HarnessOGL_ghex_F"};
+    magazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","MiniGrenade","MiniGrenade","30Rnd_762x39_AK12_Mag_Tracer_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","MiniGrenade","MiniGrenade","30Rnd_762x39_AK12_Mag_Tracer_F"};
+    linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessOGL_ghex_F"};
+    respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessOGL_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_Platoon_Engineer_pack";
   };
 
@@ -374,8 +374,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12_GL_F_acc_pointer_IRoptic_Holosight_blk_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_Lead_AR_pack";
@@ -392,8 +392,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12_GL_F_acc_pointer_IRoptic_Holosight_blk_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_Lead_AT_pack";
@@ -410,8 +410,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_RPK12_F_acc_pointer_IRoptic_Holosight_blk_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F","75rnd_762x39_AK12_Mag_Tracer_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_AR_pack";
@@ -428,8 +428,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_launch_RPG32_green_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","RPG32_F","30Rnd_762x39_AK12_Mag_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","RPG32_F","30Rnd_762x39_AK12_Mag_F"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","RPG32_F","30Rnd_762x39_AK12_Mag_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","RPG32_F","30Rnd_762x39_AK12_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_AT_pack";
@@ -446,8 +446,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12_F_acc_pointer_IRoptic_Holosight_blk_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_AT_Assist_pack";
@@ -460,12 +460,12 @@ class cfgVehicles
 	scope = 2;
     displayName="FireTeam DMR (AR)";
     uniformClass="U_O_T_Soldier_F";
-    weapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_srifle_DMR_01_black_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
-    respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_srifle_DMR_01_black_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
+    weapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_srifle_DMR_01_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
+    respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_srifle_DMR_01_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","HandGrenade_East","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","17Rnd_9x21_Mag","17Rnd_9x21_Mag","10Rnd_762x54_Mag"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","HandGrenade_East","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","17Rnd_9x21_Mag","17Rnd_9x21_Mag","10Rnd_762x54_Mag"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","MiniGrenade","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","10Rnd_762x54_Mag"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","MiniGrenade","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","10Rnd_762x54_Mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_DMR_AR_pack";
@@ -483,8 +483,8 @@ class cfgVehicles
     respawnWeapons[]={"Laserdesignator_02_ghex_F","T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_MMG_Assist_pack";
@@ -502,8 +502,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_LMG_min_rf_6p69_optic_MRCO","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer","150Rnd_762x54_Box_Tracer"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_MMG_Gunner_pack";
@@ -600,8 +600,8 @@ class cfgVehicles
     respawnWeapons[]={"Laserdesignator_02_ghex_F","ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12_lush_F_muzzle_snds_B_lush_Foptic_Arco_AK_lush_Fbipod_02_F_lush","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACE_EntrenchingTool","ACRE_PRC343","O_NVGoggles_ghex_F","ACE_bloodIV","ACE_bloodIV","ACE_bloodIV","ACE_bloodIV","ACE_splint","ACE_splint","ACE_splint","ACE_splint"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACE_EntrenchingTool","ACRE_PRC343","O_NVGoggles_ghex_F","ACE_bloodIV","ACE_bloodIV","ACE_bloodIV","ACE_bloodIV","ACE_splint","ACE_splint","ACE_splint","ACE_splint"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","75rnd_762x39_AK12_Lush_Mag_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","75rnd_762x39_AK12_Lush_Mag_F"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","75rnd_762x39_AK12_Lush_Mag_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","30rnd_762x39_AK12_Lush_Mag_F","75rnd_762x39_AK12_Lush_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","Laserdesignator_02_ghex_F","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_Spotter_pack";
@@ -622,8 +622,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_srifle_min_rf_orsis_t5000_muzzle_snds_338_blackoptic_LRPS","T1_Units_Faction_3_Hex_hgun_Rook40_F_muzzle_snds_L","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","17Rnd_9x21_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","17Rnd_9x21_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","16Rnd_9x21_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","16Rnd_9x21_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag","5Rnd_min_rf_338_Mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_Sniper_pack";
@@ -643,8 +643,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_splint","ACE_splint","O_NVGoggles_ghex_F"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_fieldDressing","ACE_morphine","ACE_morphine","ACE_morphine","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_tourniquet","ACE_epinephrine","ACE_epinephrine","ACE_epinephrine","ACE_splint","ACE_splint","O_NVGoggles_ghex_F"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","17Rnd_9x21_Mag","17Rnd_9x21_Mag"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","17Rnd_9x21_Mag","17Rnd_9x21_Mag"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","16Rnd_9x21_Mag","16Rnd_9x21_Mag"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","16Rnd_9x21_Mag","16Rnd_9x21_Mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O_ghex_F","V_SmershVest_01_radio_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O_ghex_F","V_SmershVest_01_radio_F"};
     backpack="T1_Units_Faction_3_Hex_Crew_Commander_pack";
@@ -664,8 +664,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","17Rnd_9x21_Mag","17Rnd_9x21_Mag"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","17Rnd_9x21_Mag","17Rnd_9x21_Mag"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","16Rnd_9x21_Mag","16Rnd_9x21_Mag"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","16Rnd_9x21_Mag","16Rnd_9x21_Mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O_ghex_F","V_SmershVest_01_radio_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O_ghex_F","V_SmershVest_01_radio_F"};
     backpack="T1_Units_Faction_3_Hex_Crew_Engineer_pack";
@@ -684,8 +684,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12U_F_acc_pointer_IRoptic_Holosight_blk_F","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","17Rnd_9x21_Mag","17Rnd_9x21_Mag"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","17Rnd_9x21_Mag","17Rnd_9x21_Mag"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","16Rnd_9x21_Mag","16Rnd_9x21_Mag"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","16Rnd_9x21_Mag","16Rnd_9x21_Mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O_ghex_F","V_SmershVest_01_radio_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetCrew_O_ghex_F","V_SmershVest_01_radio_F"};
     backpack="T1_Units_Faction_3_Hex_Crew_CLS_pack";
@@ -698,12 +698,12 @@ class cfgVehicles
 	scope = 2;
     displayName="FireTeam DMR (AT)";
     uniformClass="U_O_T_Soldier_F";
-    weapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_srifle_DMR_01_black_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
-    respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_srifle_DMR_01_black_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
+    weapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_srifle_DMR_01_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
+    respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_srifle_DMR_01_F_acc_pointer_IRoptic_DMSbipod_02_F_blk","T1_Units_Faction_3_Hex_hgun_Rook40_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACE_RangeCard","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","17Rnd_9x21_Mag","17Rnd_9x21_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","17Rnd_9x21_Mag","17Rnd_9x21_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","16Rnd_9x21_Mag","16Rnd_9x21_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag","10Rnd_762x54_Mag"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_DMR_AT_pack";
@@ -721,8 +721,8 @@ class cfgVehicles
     respawnWeapons[]={"ACE_Vector","T1_Units_Faction_3_Hex_arifle_AK12_F_acc_pointer_IRoptic_Holosight_blk_F","Put","Throw"};
     items[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
     respawnItems[]={"ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_EarPlugs","ACE_Flashlight_MX991","ACE_microDAGR","ACE_MapTools","ACRE_PRC343","ACRE_PRC152"};
-    magazines[]={"SmokeShell","SmokeShell","HandGrenade_East","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
-    respawnMagazines[]={"SmokeShell","SmokeShell","HandGrenade_East","HandGrenade_East","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    magazines[]={"SmokeShell","SmokeShell","MiniGrenade","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
+    respawnMagazines[]={"SmokeShell","SmokeShell","MiniGrenade","MiniGrenade","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F","30Rnd_762x39_AK12_Mag_F"};
     linkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     respawnLinkedItems[]={"ItemMap","ItemCompass","ItemWatch","ACE_Vector","H_HelmetLeaderO_ghex_F","V_HarnessO_ghex_F"};
     backpack="T1_Units_Faction_3_Hex_FireTeam_CLS_pack";
@@ -1356,8 +1356,8 @@ class cfgVehicles
 		};		
 	};
 	
-	class O_T_supplyCrate_F;
-	class T1_Units_Faction3_Hex_supplyCrate: O_T_supplyCrate_F
+	class O_supplyCrate_F;
+	class T1_Units_Faction3_Hex_supplyCrate: O_supplyCrate_F
 	{
 		vehicleClass = "Ammo";
 		displayName = "T1 Faction 3 Supply Box - Section";		
@@ -1405,7 +1405,7 @@ class cfgVehicles
 		};		
 	};
 	
-	class T1_Units_Faction3_Hex_delta_supplyCrate: O_T_supplyCrate_F
+	class T1_Units_Faction3_Hex_delta_supplyCrate: O_supplyCrate_F
 	{
 		vehicleClass = "Ammo";
 		displayName = "T1 Faction 3 Supply Box - Delta";		
@@ -1423,7 +1423,7 @@ class cfgVehicles
 			class _xx_Vorona_HEAT {magazine="Vorona_HEAT";count=16;};
 			class _xx_Titan_AA {magazine="Titan_AA";count=16;};
 			class _xx_HandGrenade {magazine="HandGrenade";count=12;};
-			class _xx_17Rnd_9x21_Mag {magazine="17Rnd_9x21_Mag";count=8;};
+			class _xx_16Rnd_9x21_Mag {magazine="16Rnd_9x21_Mag";count=8;};
 			class _xx_5Rnd_min_rf_338_Mag {magazine="5Rnd_min_rf_338_Mag";count=22;};							
 		};
 		class TransportItems
@@ -1711,7 +1711,7 @@ class cfgVehicles
   };
 
 
-  class T1_Units_Faction_3_Hex_MAT_Gunner_pack: B_AssaultPack_ghex_F
+  class T1_Units_Faction_3_Hex_MAT_Gunner_pack: B_AssaultPack_khk
   {
     scope=1;
     class TransportMagazines
@@ -1787,7 +1787,7 @@ class cfgVehicles
   };
 
 
-  class T1_Units_Faction_3_Hex_Crew_Commander_pack: B_AssaultPack_ghex_F
+  class T1_Units_Faction_3_Hex_Crew_Commander_pack: B_AssaultPack_khk
   {
     scope=1;
     class TransportMagazines{};
@@ -1799,7 +1799,7 @@ class cfgVehicles
   };
 
 
-  class T1_Units_Faction_3_Hex_Crew_Engineer_pack: B_AssaultPack_ghex_F
+  class T1_Units_Faction_3_Hex_Crew_Engineer_pack: B_AssaultPack_khk
   {
     scope=1;
     class TransportMagazines{};
@@ -1817,7 +1817,7 @@ class cfgVehicles
   };
 
 
-  class T1_Units_Faction_3_Hex_Crew_CLS_pack: B_AssaultPack_ghex_F
+  class T1_Units_Faction_3_Hex_Crew_CLS_pack: B_AssaultPack_khk
   {
     scope=1;
     class TransportMagazines{};
@@ -1880,7 +1880,7 @@ class cfgVehicles
   };
 
 
-  class T1_Units_Faction_3_Hex_Pilot_pack: B_AssaultPack_ghex_F
+  class T1_Units_Faction_3_Hex_Pilot_pack: B_AssaultPack_khk
   {
     scope=1;
     class TransportMagazines

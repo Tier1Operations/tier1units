@@ -266,7 +266,7 @@ class cfgVehicles
   class O_R_recon_M_F;
   class B_FieldPack_taiga_F;
   class O_helipilot_F;
-  class B_AssaultPack_taiga_F;
+  class B_AssaultPack_sgg;
   class min_rf_t_15;
   class min_rf_gaz_2330;
   class min_rf_gaz_2330_HMG;
@@ -472,7 +472,7 @@ class cfgVehicles
 	camouflage = 0.6;
 	T1_NoMedicIcon = 1;
     displayName="Spotter";
-    uniformClass="U_O_R_GhillieSuit_taiga_F";
+    uniformClass="U_O_T_Sniper_F";
     weapons[]={"Laserdesignator","T1_Units_Faction3_SAW_RPK12","Put","Throw"};
     respawnWeapons[]={"Laserdesignator","T1_Units_Faction3_SAW_RPK12","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","O_NVGoggles_grn_F"};
@@ -494,7 +494,7 @@ class cfgVehicles
 	camouflage = 0.6;
 	T1_NoMedicIcon = 1;
     displayName="Marksman";
-    uniformClass="U_O_R_GhillieSuit_taiga_F";
+    uniformClass="U_O_T_Sniper_F";
     weapons[]={"ACE_Vector","T1_srifle_DMR_05_blk_F_muzzle_snds_93mmg_tanacc_pointer_IRoptic_KHS_tanbipod_02_F_tan","Put","Throw"};
     respawnWeapons[]={"ACE_Vector","T1_srifle_DMR_05_blk_F_muzzle_snds_93mmg_tanacc_pointer_IRoptic_KHS_tanbipod_02_F_tan","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343","ACRE_PRC152"};
@@ -553,7 +553,7 @@ class cfgVehicles
 	scope = 2;
 	t1_DutyMod = 0.965;
     displayName="Pilot";
-    uniformClass="U_O_R_PilotCoveralls";
+    uniformClass="U_O_PilotCoveralls";
     weapons[]={"ACE_Vector","T1_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F","T1_Units_Faction3_P_Rook40","Put","Throw"};
     respawnWeapons[]={"ACE_Vector","T1_SMG_02_F_acc_pointer_IRoptic_Holosight_smg_blk_F","T1_Units_Faction3_P_Rook40","Put","Throw"};
     items[]={"ACE_EarPlugs","ACE_MapTools","ACE_IR_Strobe_Item","ACE_CableTie","ACE_CableTie","ACE_microDAGR","ACE_Flashlight_XL50","ACRE_PRC343_ID_1"};
@@ -623,7 +623,7 @@ class cfgVehicles
 	};	
   class T1_Units_Faction3_Taiga_Gaz2330: min_rf_gaz_2330
   {
-    faction="T1_Units_Faction3_Desert";
+    faction="T1_Units_Faction3_Taiga";
     side=0;		
 	scope = 2;
 	scopeCurator = 2;	
@@ -823,8 +823,8 @@ class cfgVehicles
 		};		
 	};
 
-	class O_R_supplyCrate_F;
-	class T1_Units_Faction3_Taiga_supplyCrate: O_R_supplyCrate_F
+	class O_supplyCrate_F;
+	class T1_Units_Faction3_Taiga_supplyCrate: O_supplyCrate_F
 	{
 		vehicleClass = "Ammo";
 		displayName = "T1 Faction 3 Supply Box - Taiga (SF)";		
@@ -1122,7 +1122,7 @@ class cfgVehicles
   };
 
 
-  class T1_Units_Faction3_Taiga_Pilot_pack: B_AssaultPack_taiga_F
+  class T1_Units_Faction3_Taiga_Pilot_pack: B_AssaultPack_sgg
   {
     scope=1;
     class TransportMagazines

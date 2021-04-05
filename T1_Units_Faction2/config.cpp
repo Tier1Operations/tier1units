@@ -390,9 +390,9 @@ class cfgVehicles
   class UK3CB_BAF_Husky_Passenger_GPMG_Green;
   class UK3CB_BAF_Husky_Passenger_GMG_Green;
   class UK3CB_BAF_Warrior_A3_W_Cage_Camo;
-  class B_W_APC_Wheeled_01_cannon_F;
-  class B_W_MBT_01_TUSK_F;
-  class B_W_AFV_Wheeled_01_up_cannon_F;
+  class B_T_APC_Wheeled_01_cannon_F;
+  class B_T_MBT_01_TUSK_F;
+  class B_T_AFV_Wheeled_01_up_cannon_F;
   class UK3CB_BAF_Husky_Logistics_GPMG_Green;
   class rhsusf_m1245_mk19crows_socom_deploy;
   class rhsusf_m1245_m2crows_socom_deploy;
@@ -1778,7 +1778,7 @@ class cfgVehicles
 		};
 	};
 
-  class T1_Units_Faction2_AMV7_Marshall_IFV_Section: B_W_APC_Wheeled_01_cannon_F
+  class T1_Units_Faction2_AMV7_Marshall_IFV_Section: B_T_APC_Wheeled_01_cannon_F
   {
     faction="T1_Units_Faction2";
     side=1;
@@ -1912,7 +1912,7 @@ class cfgVehicles
 		};
 	};
 
-  class T1_Units_Faction2_Merkava_MK_IV_MBT_IFV_SF: B_W_MBT_01_TUSK_F
+  class T1_Units_Faction2_Merkava_MK_IV_MBT_IFV_SF: B_T_MBT_01_TUSK_F
   {
     faction="T1_Units_Faction2";
     side=1;
@@ -2071,7 +2071,7 @@ class cfgVehicles
 		};
 	};
 
-  class T1_Units_Faction2_Rooikat_120_UP: B_W_AFV_Wheeled_01_up_cannon_F
+  class T1_Units_Faction2_Rooikat_120_UP: B_T_AFV_Wheeled_01_up_cannon_F
   {
     faction="T1_Units_Faction2";
     side=1;

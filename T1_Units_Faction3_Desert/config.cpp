@@ -14,7 +14,7 @@ class cfgFactionClasses
   class T1_Units_Faction3_Desert
   {
     icon="";
-    displayName="T1 Units Faction 3 (Desert)";
+    displayName="T1 Units Faction 3 (Desert - SF)";
     side=0;
     priority=1;
   };

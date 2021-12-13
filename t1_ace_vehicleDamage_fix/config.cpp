@@ -1,8 +1,8 @@
 class CfgPatches
 {
-	class t1_ace_cookOff_fix
+	class t1_ace_vehicleDamage_fix
 	{
-		requiredaddons[] = {"ace_cookoff"};
+		requiredaddons[] = {"ace_cookoff","ace_vehicle_damage"};
 		units[] = {"ace_cookoff_Sound"};
 		weapons[] = {};
 		magazines[] = {};
@@ -13,15 +13,15 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class ace_cookoff
+	class ace_vehicle_damage
 	{
-		class ace_cookoff
+		class ace_vehicle_damage
 		{
-			file = "t1_ace_cookOff_fix\functions";
-			class cookOff;
+			file = "t1_ace_vehicleDamage_fix\functions";
+			class processHit;
+			class t1_disableVehicle;
 			class t1_hitPartEF;
 			class t1_disableRadar;
-			class handleDamage;
 		};
 	};
 };
@@ -103,16 +103,16 @@ class Extended_Init_EventHandlers
 {
 	class Car_F
 	{
-		class t1_ace_cookOff_fix_HitPartEF
+		class t1_ace_vehicleDamage_fix_HitPartEF
 		{
-			init = "_this call ace_cookoff_fnc_t1_hitPartEF";
+			init = "_this call ace_vehicle_damage_fnc_t1_hitPartEF";
 		};
 	};
 	class Tank_F
 	{
-		class t1_ace_cookOff_fix_HitPartEF
+		class t1_ace_vehicleDamage_fix_HitPartEF
 		{
-			init = "_this call ace_cookoff_fnc_t1_hitPartEF";
+			init = "_this call ace_vehicle_damage_fnc_t1_hitPartEF";
 		};
 	};
 };

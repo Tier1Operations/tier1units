@@ -3,7 +3,7 @@
 
 params [
 	"_vehicle",
-	"_ammo",
+	"_ammoHit",
 	["_init", 1, [0]],
 	["_DETONATE_TIME", 3, [0]],
 	["_IGNITE_TIME", 5, [0]],
@@ -25,14 +25,13 @@ params [
 
 
 // Chance to blow up vehicle if this script hasn't run before on this vehicle.
-if (_init == 1 and local _vehicle and {!(_vehicle getVariable ["ace_cookoff_isCookingOff", false])}) then {
-	private _dam = getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit");
-	if (_dam < 30) exitWith {};
+if (_init == 1 and local _vehicle and {!(_vehicle getVariable ["ace_vehicle_damage_beingDisabled", false])}) then {
+	if (_ammoHit < 30) exitWith {};
 	private _chance = 0;
 	switch true do {
-		case (_dam < 150): {_chance = 0.01};
-		case (_dam < 300): {_chance = 0.04};
-		case (_dam < 500): {_chance = 0.10};
+		case (_ammoHit < 150): {_chance = 0.01};
+		case (_ammoHit < 300): {_chance = 0.04};
+		case (_ammoHit < 500): {_chance = 0.10};
 		default {_chance = 0.16};
 	};
 	
@@ -43,16 +42,15 @@ if (_init == 1 and local _vehicle and {!(_vehicle getVariable ["ace_cookoff_isCo
 
 // Chance to blow up vehicle after this script has already been run on this vehicle,
 // but only if X amount of time has passed.
-if (_init == 1 and {_vehicle getVariable ["ace_cookoff_isCookingOff", false]}) exitWith {
+if (_init == 1 and {_vehicle getVariable ["ace_vehicle_damage_beingDisabled", false]}) exitWith {
 	
-	if (local _vehicle and {(_vehicle getVariable ["ace_cookoff_cookingOffTime", 9999999]) < time}) then {
-		private _dam = getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit");
-		if (_dam < 30) exitWith {};
+	if (local _vehicle and {(_vehicle getVariable ["ace_vehicle_damage_cookingOffTime", 9999999]) < time}) then {
+		if (_ammoHit < 30) exitWith {};
 		private _chance = 0;
 		switch true do {
-			case (_dam < 150): {_chance = 0.01};
-			case (_dam < 300): {_chance = 0.04};
-			case (_dam < 500): {_chance = 0.10};
+			case (_ammoHit < 150): {_chance = 0.01};
+			case (_ammoHit < 300): {_chance = 0.04};
+			case (_ammoHit < 500): {_chance = 0.10};
 			default {_chance = 0.16};
 		};
 		
@@ -64,16 +62,16 @@ if (_init == 1 and {_vehicle getVariable ["ace_cookoff_isCookingOff", false]}) e
 
 // Mark vehicle as being under the effect of this script.
 if (_init == 1) then {
-	_vehicle setVariable ["ace_cookoff_isCookingOff", true, true];
-	_vehicle setVariable ["ace_cookoff_cookingOffTime", time + 5, true];
+	_vehicle setVariable ["ace_vehicle_damage_beingDisabled", true, true];
+	_vehicle setVariable ["ace_vehicle_damage_cookingOffTime", time + 5, true];
 };
 
 
 if (!alive _vehicle) exitWith {};
 
 
-[_vehicle, _ammo, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME] spawn {
-	params ["_vehicle", "_ammo", "_init", "_DETONATE_TIME", "_IGNITE_TIME", "_SMOKE_TIME", "_FLAMESTART_TIME", "_FLAME_TIME", "_DISMOUNT_TIME", "_detonate", "_flameJet", "_onFire", "_posArray", "_posHit", "_DAMAGE_TIME"];
+[_vehicle, _ammoHit, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME] spawn {
+	params ["_vehicle", "_ammoHit", "_init", "_DETONATE_TIME", "_IGNITE_TIME", "_SMOKE_TIME", "_FLAMESTART_TIME", "_FLAME_TIME", "_DISMOUNT_TIME", "_detonate", "_flameJet", "_onFire", "_posArray", "_posHit", "_DAMAGE_TIME"];
 	
 	// Initialize values that will be sent to other machines so that all machines will be using the same numbers, which is necessary to keep the effects synced in multiplayer.
 	if (_init == 1) then {
@@ -134,9 +132,9 @@ if (!alive _vehicle) exitWith {};
 		if (random 1 < 0.4) then {
 			
 			private _sleepTime = time + 3;
-			waitUntil {time > _sleepTime or count (_vehicle getVariable ["t1_ace_cookOff_fix_var", []]) > 0};
-			private _position = _vehicle getVariable ["t1_ace_cookOff_fix_var", []];
-			_vehicle setVariable ["t1_ace_cookOff_fix_var", [], true];
+			waitUntil {time > _sleepTime or count (_vehicle getVariable ["t1_ace_vehicle_damage_fix_var", []]) > 0};
+			private _position = _vehicle getVariable ["t1_ace_vehicle_damage_fix_var", []];
+			_vehicle setVariable ["t1_ace_vehicle_damage_fix_var", [], true];
 			
 			private _showFire = call{ if(random 1 < 0.6)then{true}else{false} };
 			
@@ -162,7 +160,7 @@ if (!alive _vehicle) exitWith {};
 		
 		// Chance to have a vehicle without any smoke/fire/detonation.
 		private _showEffects = true;
-		if (random 1 < 0.25) then {
+		if (random 1 < 0.30) then {
 			_showEffects = false;
 			_onFire = false;
 			_flameJet = false;
@@ -222,18 +220,18 @@ if (!alive _vehicle) exitWith {};
 		_init = 2;
 		
 		// Tell other machines to run this code using the numbers we've chosen.
-		["ace_cookoff_cookOff", [_vehicle, _ammo, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME]] call CBA_fnc_remoteEvent;
+		["ace_vehicle_damage_fnc_t1_disableVehicle", [_vehicle, _ammoHit, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME]] call CBA_fnc_remoteEvent;
 	};
 	
 	
 	// Debug stuff.
-	if (isNil "t1_cookoff_debug") then {t1_cookoff_debug = false};
-	if (t1_cookoff_debug) then {
+	if (isNil "t1_vehicle_damage_debug") then {t1_vehicle_damage_debug = false};
+	if (t1_vehicle_damage_debug) then {
 		systemChat format ["DETO: %1 -- FLAM: %2 -- FIRE: %3 -- IGNT: %4 -- DETT: %5 -- SMKT: %6 -- FLMST: %7 -- FLMT: %8 -- DSMT: %9 -- DMGT: %10", _detonate, _flameJet, _onFire, _IGNITE_TIME, _DETONATE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _DAMAGE_TIME];
-		diag_log "TEST123 COOKOFF START";
+		diag_log "TEST123 VEHICLE DAMAGE START";
 		diag_log format["_vehicle: %1 || _DETONATE_TIME: %2 || _IGNITE_TIME: %3 || _SMOKE_TIME: %4 || _FLAMESTART_TIME: %5 || _FLAME_TIME: %6 || _DISMOUNT_TIME: %7 || _DAMAGE_TIME: %8", _vehicle, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _DAMAGE_TIME];
-		diag_log format["_init: %1 || t1_ace_cookOff_fix_var: %2 || _detonate: %3 || _flameJet: %4 || _onFire: %5 || _posHit: %6 || _posArray: %7", _init, _vehicle getVariable ["t1_ace_cookOff_fix_var", "NOT SET"], _detonate, _flameJet, _onFire, _posHit, _posArray];
-		diag_log "TEST123 COOKOFF END";
+		diag_log format["_init: %1 || t1_ace_vehicle_damage_fix_var: %2 || _detonate: %3 || _flameJet: %4 || _onFire: %5 || _posHit: %6 || _posArray: %7", _init, _vehicle getVariable ["t1_ace_vehicle_damage_fix_var", "NOT SET"], _detonate, _flameJet, _onFire, _posHit, _posArray];
+		diag_log "TEST123 VEHICLE DAMAGE END";
 	};
 	
 	
@@ -280,7 +278,7 @@ if (!alive _vehicle) exitWith {};
 			} forEach (listVehicleSensors _vehicle);
 			
 			if (_hasRadar) then {
-				[_vehicle, 0] remoteExec ["ace_cookoff_fnc_t1_disableRadar", 0, false];
+				[_vehicle, 0] remoteExec ["ace_vehicle_damage_fnc_t1_disableRadar", 0, false];
 			};
 		};
 	};
@@ -519,7 +517,11 @@ if (!alive _vehicle) exitWith {};
 			
 		// If not detonate, then set a var that can be used to check if the vehicle is disabled.
 		} else {
-			if (local _vehicle) then {_vehicle setVariable ["ace_cookoff_vehDisabled", true, true]};
+			if (local _vehicle) then {
+				_vehicle setVariable ["ace_vehicle_damage_vehDisabled", true, true];
+				_vehicle setVariable ["ace_vehicle_damage_canShoot", false, true];
+				_vehicle setVariable ["ace_vehicle_damage_canMove", false, true];
+			};
 		};
 	};
 	
@@ -752,7 +754,7 @@ if (!alive _vehicle) exitWith {};
 				} forEach (listVehicleSensors _vehicle);
 				
 				if (_hasRadar) then {
-					[_vehicle, 0] remoteExec ["ace_cookoff_fnc_t1_disableRadar", 0, false];
+					[_vehicle, 0] remoteExec ["ace_vehicle_damage_fnc_t1_disableRadar", 0, false];
 				};
 			};
 			
@@ -784,7 +786,7 @@ if (!alive _vehicle) exitWith {};
 				} forEach (listVehicleSensors _vehicle);
 				
 				if (_hasRadar) then {
-					[_vehicle, 30 + random 60] remoteExec ["ace_cookoff_fnc_t1_disableRadar", 0, false];
+					[_vehicle, 30 + random 60] remoteExec ["ace_vehicle_damage_fnc_t1_disableRadar", 0, false];
 				};
 			};
 		};

@@ -32,7 +32,7 @@ if (_init == 1 and local _vehicle and {!(_vehicle getVariable ["ace_vehicle_dama
 		case (_ammoHit < 150): {_chance = 0.01};
 		case (_ammoHit < 300): {_chance = 0.04};
 		case (_ammoHit < 500): {_chance = 0.10};
-		default {_chance = 0.16};
+		default {_chance = 0.15};
 	};
 	
 	if (random 1 < _chance) then {
@@ -51,7 +51,7 @@ if (_init == 1 and {_vehicle getVariable ["ace_vehicle_damage_beingDisabled", fa
 			case (_ammoHit < 150): {_chance = 0.01};
 			case (_ammoHit < 300): {_chance = 0.04};
 			case (_ammoHit < 500): {_chance = 0.10};
-			default {_chance = 0.16};
+			default {_chance = 0.15};
 		};
 		
 		if (random 1 < _chance) then {
@@ -129,27 +129,26 @@ if (!alive _vehicle) exitWith {};
 		};
 		
 		// Impact effects.
-		if (random 1 < 0.4) then {
-			
+		if (random 1 < 0.3) then {
 			private _sleepTime = time + 3;
-			waitUntil {time > _sleepTime or count (_vehicle getVariable ["t1_ace_vehicle_damage_fix_var", []]) > 0};
-			private _position = _vehicle getVariable ["t1_ace_vehicle_damage_fix_var", []];
-			_vehicle setVariable ["t1_ace_vehicle_damage_fix_var", [], true];
+			waitUntil {time > _sleepTime or count (_vehicle getVariable ["t1_ace_vehicle_damage_fix_impactPos", []]) > 0};
+			private _position = _vehicle getVariable ["t1_ace_vehicle_damage_fix_impactPos", []];
+			_vehicle setVariable ["t1_ace_vehicle_damage_fix_impactPos", [], true];
 			
-			private _showFire = call{ if(random 1 < 0.6)then{true}else{false} };
+			private _showFire = call{ if(random 1 < 0.6) then {true} else {false} };
 			
 			_chance = 0.6;
-			if (_showFire) then {_chance = 0.85};
-			private _showSmoke = call{ if(random 1 < _chance)then{true}else{false} };
+			if (_showFire) then {_chance = 0.90};
+			private _showSmoke = call{ if(random 1 < _chance) then {true} else {false} };
 			
 			// We must have either smoke or fire.
 			if (!_showSmoke and !_showFire) then {
-				if (random 1 < 0.5) then {_showSmoke = true} else {_showFire = true};
+				if (random 1 < 0.7) then {_showSmoke = true} else {_showFire = true};
 			};
 			
 			// If position is too far from vehicle, we'll assume the game gave us a wrong impact position that will result in smoke/fire effects floating in the air.
 			// In which case, we'll skip the effects.
-			if (count _position == 0 or {_position distance _vehicle > 7}) then {
+			if (count _position == 0 or {_position distance (getPosASL _vehicle) > 3}) then {
 				_posHit = [];
 			} else {
 				_posHit pushback _position;
@@ -160,7 +159,7 @@ if (!alive _vehicle) exitWith {};
 		
 		// Chance to have a vehicle without any smoke/fire/detonation.
 		private _showEffects = true;
-		if (random 1 < 0.30) then {
+		if (random 1 < 0.25) then {
 			_showEffects = false;
 			_onFire = false;
 			_flameJet = false;
@@ -188,7 +187,7 @@ if (!alive _vehicle) exitWith {};
 		_posArray pushback [_addEffect];
 		
 		// Add smoke to positions?
-		_chance = call{ if(_onFire)then{0.95}else{0.30} };
+		_chance = call{ if(_onFire)then{0.90}else{0.50} };
 		private _array1 = [];
 		{
 			if (random 1 < _chance and _showEffects) then {_addEffect = true; _fireOrSmoke = true} else {_addEffect = false};
@@ -220,7 +219,7 @@ if (!alive _vehicle) exitWith {};
 		_init = 2;
 		
 		// Tell other machines to run this code using the numbers we've chosen.
-		["ace_vehicle_damage_fnc_t1_disableVehicle", [_vehicle, _ammoHit, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME]] call CBA_fnc_remoteEvent;
+		[_vehicle, _ammoHit, _init, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _detonate, _flameJet, _onFire, _posArray, _posHit, _DAMAGE_TIME] remoteExecCall  ["ace_vehicle_damage_fnc_t1_disableVehicle", -clientOwner];
 	};
 	
 	
@@ -230,7 +229,7 @@ if (!alive _vehicle) exitWith {};
 		systemChat format ["DETO: %1 -- FLAM: %2 -- FIRE: %3 -- IGNT: %4 -- DETT: %5 -- SMKT: %6 -- FLMST: %7 -- FLMT: %8 -- DSMT: %9 -- DMGT: %10", _detonate, _flameJet, _onFire, _IGNITE_TIME, _DETONATE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _DAMAGE_TIME];
 		diag_log "TEST123 VEHICLE DAMAGE START";
 		diag_log format["_vehicle: %1 || _DETONATE_TIME: %2 || _IGNITE_TIME: %3 || _SMOKE_TIME: %4 || _FLAMESTART_TIME: %5 || _FLAME_TIME: %6 || _DISMOUNT_TIME: %7 || _DAMAGE_TIME: %8", _vehicle, _DETONATE_TIME, _IGNITE_TIME, _SMOKE_TIME, _FLAMESTART_TIME, _FLAME_TIME, _DISMOUNT_TIME, _DAMAGE_TIME];
-		diag_log format["_init: %1 || t1_ace_vehicle_damage_fix_var: %2 || _detonate: %3 || _flameJet: %4 || _onFire: %5 || _posHit: %6 || _posArray: %7", _init, _vehicle getVariable ["t1_ace_vehicle_damage_fix_var", "NOT SET"], _detonate, _flameJet, _onFire, _posHit, _posArray];
+		diag_log format["_init: %1 || t1_ace_vehicle_damage_fix_impactPos: %2 || _detonate: %3 || _flameJet: %4 || _onFire: %5 || _posHit: %6 || _posArray: %7", _init, _vehicle getVariable ["t1_ace_vehicle_damage_fix_impactPos", "NOT SET"], _detonate, _flameJet, _onFire, _posHit, _posArray];
 		diag_log "TEST123 VEHICLE DAMAGE END";
 	};
 	
